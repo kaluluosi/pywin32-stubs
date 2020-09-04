@@ -1,0 +1,38 @@
+<HTML>
+
+
+
+<HEAD>
+
+
+
+<TITLE>win32file.GetFileAttributes</TITLE>
+
+
+
+<META NAME="GENERATOR" CONTENT="Autoduck, by erica@microsoft.com">
+
+
+
+<H1><A HREF="win32file.html">win32file</A>.GetFileAttributes</H1><P>
+
+int = <B>GetFileAttributes(<I>fileName</I></B>)<P>Determines a files attributes.<P>
+
+<H3>Parameters</H3><P><DT><I>fileName</I> : <A HREF="PyUnicode.html">PyUnicode</A><P>
+
+<DD>Name of the file to retrieve attributes for.<P><H3>Comments</H3>
+
+The win32file module exposes <A HREF="win32file__GetFileAttributes_meth.html">win32file::GetFileAttributes</A> and 
+
+<A HREF="win32file__GetFileAttributesW_meth.html">win32file::GetFileAttributesW</A> separately - both functions will accept 
+
+either strings or Unicode objects but will always call the named function. 
+
+This is different than <A HREF="win32api__GetFileAttributes_meth.html">win32api::GetFileAttributes</A>, which only exposes 
+
+one Python function and automatically calls the appropriate win32 function 
+
+based on the type of the filename param.<P>
+
+</body>
+</html>
