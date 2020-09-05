@@ -1,5 +1,6 @@
+from pygments.formatters.other import TestcaseFormatter
 from typed_ast.ast27 import Param
-from stub_generator.html_analyzer import Constant, Method, Module, Paramter
+from stub_generator.html_analyzer import Constant, ConstantList, Method, Module, ModuleList, Paramter
 from unittest import TestCase
 from unittest.mock import Mock
 from stub_generator.html_analyzer import Module
@@ -54,25 +55,48 @@ class MethodTest(TestCase):
         param_results = [
             {
                 "name":"exceptionHandler",
-                "type":["object"]
+                "type":["typing.Any"],
+                "desc":"An object which will be called when a win32 \n\nexception occurs."
             },
             {
                 "name":"func",
-                "type":["object"]
+                "type":["typing.Any"],
+                "desc":"The function call call under the protection of the Win32 \n\nexception handler."
             },
             {
                 "name":"args",
-                "type":["tuple"]
+                "type":["tuple"],
+                "desc":"Args for the function."
             },
         ]
         
         for index, param in enumerate(self.method.parameters):
             self.assertEqual(param.name, param_results[index]["name"], "参数名")
             self.assertEqual(param.type, param_results[index]["type"], "类型名")
+            self.assertIsNotNone(param.description, "描述")
 
     def test_return_type(self):
 
-        self.assertEqual(self.method.return_type, "object", '返回类型')
+        self.assertEqual(self.method.return_type, "typing.Any", '返回类型')
+
+    def test_no_return(self):
+        method = Method("win32api__AbortSystemShutdown_meth.html")
+        self.assertEqual(method.return_type, "None","无返回值")
+
+    def test_no_paramlist_method(self):
+
+        method = Method("win32api__DebugBreak_meth.html")
+        self.assertFalse(method.parameters, "参数列表为空")
+
+    def test_paramter_no_type(self):
+        method = Method("win32api__FormatMessage_meth.html")
+        self.assertTrue(method.parameters, "参数解析正常")
+
+    def test_duplicate_paramter(self):
+
+        method = Method("win32api__SetStdHandle_meth.html")
+        for i, p in enumerate(method.parameters):
+            self.assertEqual(p.duplicate_number, i, "重复变量名编号")
 
 
 class ConstantTest(TestCase):
@@ -88,3 +112,22 @@ class ConstantTest(TestCase):
 
     def test_get_module_name(self):
         self.assertEqual(self.constant.module_name, 'mapi')
+
+class ConstantListTest(TestCase):
+
+    def setUp(self) -> None:
+        self.constant_list = ConstantList("constants.html")
+
+    def test_get_constants(self):
+        constant_list = list(self.constant_list)
+        self.assertGreater(len(constant_list), 0, "解析常亮数量正确")
+
+
+class ModuleListTest(TestCase):
+
+    def setUp(self) -> None:
+        self.module_list = ModuleList("win32_modules.html")
+
+    def test_get_modules(self):
+        module_list = list(self.module_list)
+        self.assertEqual(len(module_list), 34, "解析模块数量正确")
