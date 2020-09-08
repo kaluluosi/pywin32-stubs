@@ -70,7 +70,7 @@ class FunctionTest(TestCase):
         func = Function("win32gui__ExtFloodFill_meth.html")
         paramters = list(func.parameters)
         self.assertEqual(len(paramters), 5)
-        self.assertEqual(paramters[0].name, 'Unknow')
+        self.assertEqual(paramters[0].name, 'arg')
         self.assertEqual(paramters[0].type, 'int')
         self.assertEqual(paramters[1].name, 'XStart')
         self.assertEqual(paramters[1].type, 'int')

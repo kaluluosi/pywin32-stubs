@@ -1,6 +1,6 @@
-__all__=['CeRapiInit', 'CeRapiUninit', 'CreateProcess', 'CeRapiInitEx', 'CeCopyFile', 'CeCheckPassword', 'CeCreateFile', 'CeDeleteFile', 'CeMoveFile', 'CeCreateDirectory', 'CeRemoveDirectory', 'CeGetTempPath', 'CeGetSystemInfo', 'CeGetDesktopDeviceCaps', 'CeGetSystemMetrics', 'CeGetSpecialFolderPath', 'CeGetStoreInformation', 'CeGetSystemPowerStatusEx', 'CeSHCreateShortcut', 'CeSHGetShortcutTarget', 'CeGetVersionEx', 'CeGlobalMemoryStatus', 'FindFiles', 'CeGetFileAttributes', 'CeSetFileAttributes', 'CeGetFileSize', 'CeReadFile', 'WriteFile', 'CSIDL_BITBUCKET', 'CSIDL_COMMON_DESKTOPDIRECTORY', 'CSIDL_COMMON_PROGRAMS', 'CSIDL_COMMON_STARTMENU', 'CSIDL_COMMON_STARTUP', 'CSIDL_CONTROLS', 'CSIDL_DESKTOP', 'CSIDL_DESKTOPDIRECTORY', 'CSIDL_DRIVES', 'CSIDL_FONTS', 'CSIDL_NETHOOD', 'CSIDL_NETWORK', 'CSIDL_PERSONAL', 'CSIDL_PRINTERS', 'CSIDL_PROGRAMS', 'CSIDL_RECENT', 'CSIDL_SENDTO', 'CSIDL_STARTMENU', 'CSIDL_STARTUP', 'CSIDL_TEMPLATES']
+__all__=['', 'CeRapiInit', 'CeRapiUninit', 'CreateProcess', 'CeRapiInitEx', 'CeCopyFile', 'CeCheckPassword', 'CeCreateFile', 'CeDeleteFile', 'CeMoveFile', 'CeCreateDirectory', 'CeRemoveDirectory', 'CeGetTempPath', 'CeGetSystemInfo', 'CeGetDesktopDeviceCaps', 'CeGetSystemMetrics', 'CeGetSpecialFolderPath', 'CeGetStoreInformation', 'CeGetSystemPowerStatusEx', 'CeSHCreateShortcut', 'CeSHGetShortcutTarget', 'CeGetVersionEx', 'CeGlobalMemoryStatus', 'FindFiles', 'CeGetFileAttributes', 'CeSetFileAttributes', 'CeGetFileSize', 'CeReadFile', 'WriteFile', 'CSIDL_BITBUCKET', 'CSIDL_COMMON_DESKTOPDIRECTORY', 'CSIDL_COMMON_PROGRAMS', 'CSIDL_COMMON_STARTMENU', 'CSIDL_COMMON_STARTUP', 'CSIDL_CONTROLS', 'CSIDL_DESKTOP', 'CSIDL_DESKTOPDIRECTORY', 'CSIDL_DRIVES', 'CSIDL_FONTS', 'CSIDL_NETHOOD', 'CSIDL_NETWORK', 'CSIDL_PERSONAL', 'CSIDL_PRINTERS', 'CSIDL_PROGRAMS', 'CSIDL_RECENT', 'CSIDL_SENDTO', 'CSIDL_STARTMENU', 'CSIDL_STARTUP', 'CSIDL_TEMPLATES']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module which provides an interface to the win32 CE Remote API"""
 
 
@@ -76,13 +76,13 @@ Returns:
     pass
         
 
-def CeCopyFile(from:'str',to:'str',bFailIfExists:'int') -> 'None':
+def CeCopyFile(_from:'str',to:'str',bFailIfExists:'int') -> 'None':
     """
     Copies a file
 
 Args:
 
-      from(str):The name of the file to copy from
+      _from(str):The name of the file to copy from
       to(str):The name of the file to copy to
       bFailIfExists(int):Indicates if the operation should fail if the file exists.
 

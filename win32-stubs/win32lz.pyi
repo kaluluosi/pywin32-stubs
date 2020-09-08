@@ -1,6 +1,6 @@
-__all__=['GetExpandedName', 'Close', 'Copy', 'Init', 'OpenFile']
+__all__=['', 'GetExpandedName', 'Close', 'Copy', 'Init', 'OpenFile']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module encapsulating the Windows LZ compression routines."""
 
 

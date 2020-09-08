@@ -1,6 +1,6 @@
-__all__=['CreateEnvironmentBlock', 'DeleteProfile', 'ExpandEnvironmentStringsForUser', 'GetAllUsersProfileDirectory', 'GetDefaultUserProfileDirectory', 'GetEnvironmentStrings', 'GetProfilesDirectory', 'GetProfileType', 'GetUserProfileDirectory', 'LoadUserProfile', 'UnloadUserProfile']
+__all__=['', 'CreateEnvironmentBlock', 'DeleteProfile', 'ExpandEnvironmentStringsForUser', 'GetAllUsersProfileDirectory', 'GetDefaultUserProfileDirectory', 'GetEnvironmentStrings', 'GetProfilesDirectory', 'GetProfileType', 'GetUserProfileDirectory', 'LoadUserProfile', 'UnloadUserProfile']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """Wraps functions for dealing with user profiles"""
 
 

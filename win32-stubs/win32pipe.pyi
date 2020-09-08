@@ -1,10 +1,10 @@
-__all__=['GetNamedPipeHandleState', 'SetNamedPipeHandleState', 'ConnectNamedPipe', 'TransactNamedPipe', 'CallNamedPipe', 'CreatePipe', 'FdCreatePipe', 'CreateNamedPipe', 'DisconnectNamedPipe', 'GetOverlappedResult', 'WaitNamedPipe', 'GetNamedPipeInfo', 'PeekNamedPipe', 'GetNamedPipeClientProcessId', 'GetNamedPipeServerProcessId', 'GetNamedPipeClientSessionId', 'GetNamedPipeServerSessionId', 'popen', 'NMPWAIT_NOWAIT', 'NMPWAIT_USE_DEFAULT_WAIT', 'NMPWAIT_WAIT_FOREVER', 'PIPE_ACCESS_DUPLEX', 'PIPE_ACCESS_INBOUND', 'PIPE_ACCESS_OUTBOUND', 'PIPE_NOWAIT', 'PIPE_READMODE_BYTE', 'PIPE_READMODE_MESSAGE', 'PIPE_TYPE_BYTE', 'PIPE_TYPE_MESSAGE', 'PIPE_UNLIMITED_INSTANCES', 'PIPE_WAIT']
+__all__=['', 'GetNamedPipeHandleState', 'SetNamedPipeHandleState', 'ConnectNamedPipe', 'TransactNamedPipe', 'CallNamedPipe', 'CreatePipe', 'FdCreatePipe', 'CreateNamedPipe', 'DisconnectNamedPipe', 'GetOverlappedResult', 'WaitNamedPipe', 'GetNamedPipeInfo', 'PeekNamedPipe', 'GetNamedPipeClientProcessId', 'GetNamedPipeServerProcessId', 'GetNamedPipeClientSessionId', 'GetNamedPipeServerSessionId', 'popen', 'NMPWAIT_NOWAIT', 'NMPWAIT_USE_DEFAULT_WAIT', 'NMPWAIT_WAIT_FOREVER', 'PIPE_ACCESS_DUPLEX', 'PIPE_ACCESS_INBOUND', 'PIPE_ACCESS_OUTBOUND', 'PIPE_NOWAIT', 'PIPE_READMODE_BYTE', 'PIPE_READMODE_MESSAGE', 'PIPE_TYPE_BYTE', 'PIPE_TYPE_MESSAGE', 'PIPE_UNLIMITED_INSTANCES', 'PIPE_WAIT']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """An interface to the win32 pipe API's"""
 
 
-def GetNamedPipeHandleState(hPipe:'int',bGetCollectionData:'int'=0) -> 'Tuple[int, int, Union[None, int], Union[None, int], str]':
+def GetNamedPipeHandleState(hPipe:'int',bGetCollectionData:'int'=0) -> 'Tuple[int, int, Union[int, None], Union[int, None], str]':
     """
     Determines the state of the named pipe.
 
@@ -15,22 +15,22 @@ Args:
 
 Returns:
 
-      Tuple[int, int, Union[None, int], Union[None, int], str]
+      Tuple[int, int, Union[int, None], Union[int, None], str]
         
     """
     pass
         
 
-def SetNamedPipeHandleState(hPipe:'int',Mode:'Union[None, int]',MaxCollectionCount:'Union[None, int]',CollectDataTimeout:'Union[None, int]') -> 'None':
+def SetNamedPipeHandleState(hPipe:'int',Mode:'Union[int, None]',MaxCollectionCount:'Union[int, None]',CollectDataTimeout:'Union[int, None]') -> 'None':
     """
     Sets the state of the named pipe.
 
 Args:
 
       hPipe(int):The handle to the pipe.
-      Mode(Union[None, int]):The pipe read mode.
-      MaxCollectionCount(Union[None, int]):Maximum bytes collected before transmission to the server.
-      CollectDataTimeout(Union[None, int]):Maximum time to wait, in milliseconds, before transmission to server.
+      Mode(Union[int, None]):The pipe read mode.
+      MaxCollectionCount(Union[int, None]):Maximum bytes collected before transmission to the server.
+      CollectDataTimeout(Union[int, None]):Maximum time to wait, in milliseconds, before transmission to server.
 
 Returns:
 
@@ -57,7 +57,7 @@ Returns:
     pass
         
 
-def TransactNamedPipe(pipeName:'Any',writeData:'Union[str, Any]',buffer_bufSize:'Union[int, PyOVERLAPPEDReadBuffer]',overlapped:'PyOVERLAPPED'=None) -> 'Union[str, Any]':
+def TransactNamedPipe(pipeName:'Any',writeData:'Union[Any, str]',buffer_bufSize:'Union[PyOVERLAPPEDReadBuffer, int]',overlapped:'PyOVERLAPPED'=None) -> 'Union[Any, str]':
     """
     Combines the functions that write a 
 
@@ -68,13 +68,13 @@ network operation.
 Args:
 
       pipeName(Any):The name of the pipe.
-      writeData(Union[str, Any]):The data to write to the pipe.
-      buffer_bufSize(Union[int, PyOVERLAPPEDReadBuffer]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
+      writeData(Union[Any, str]):The data to write to the pipe.
+      buffer_bufSize(Union[PyOVERLAPPEDReadBuffer, int]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
       overlapped(PyOVERLAPPED):An overlapped structure or NoneCommentsThis function is modelled on win32file::ReadFile - for overlapped operations you are expected to provide a buffer which will be filled asynchronously.
 
 Returns:
 
-      Union[str, Any]
+      Union[Any, str]
         
     """
     pass

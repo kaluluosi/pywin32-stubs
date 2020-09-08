@@ -1,6 +1,6 @@
-__all__=['DosDateTimeToTime', 'Unicode', 'UnicodeFromRaw', 'IsTextUnicode', 'OVERLAPPED', 'IID', 'Time', 'Time', 'CreateGuid', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'HANDLE', 'HKEY', 'WAVEFORMATEX']
+__all__=['', 'DosDateTimeToTime', 'Unicode', 'UnicodeFromRaw', 'IsTextUnicode', 'OVERLAPPED', 'IID', 'Time', 'Time', 'CreateGuid', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'HANDLE', 'HKEY', 'WAVEFORMATEX']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module which supports common Windows types."""
 
 
@@ -36,13 +36,13 @@ Returns:
     pass
         
 
-def UnicodeFromRaw(str:'Union[str, Any]') -> 'str':
+def UnicodeFromRaw(_str:'Union[Any, str]') -> 'str':
     """
     Creates a new Unicode object from raw binary data
 
 Args:
 
-      str(Union[str, Any]):The string containing the binary data.
+      _str(Union[Any, str]):The string containing the binary data.
 
 Returns:
 
@@ -52,13 +52,13 @@ Returns:
     pass
         
 
-def IsTextUnicode(str:'str',flags:'int') -> 'Tuple[int, int]':
+def IsTextUnicode(_str:'str',flags:'int') -> 'Tuple[int, int]':
     """
     Determines whether a buffer probably contains a form of Unicode text.
 
 Args:
 
-      str(str):The string containing the binary data.
+      _str(str):The string containing the binary data.
       flags(int):Determines the specific tests to makeReturn ValueThe function returns (result, flags), both integers. result is nonzero if the data in the buffer passes the specified tests. result is zero if the data in the buffer does not pass the specified tests. In either case, flags contains the results of the specific tests the function applied to make its determination.
 
 Returns:
@@ -94,13 +94,13 @@ Returns:
     pass
         
 
-def IID(iidString:'Union[str, Any]',is_bytes:'bool'=False) -> 'PyIID':
+def IID(iidString:'Union[Any, str]',is_bytes:'bool'=False) -> 'PyIID':
     """
     Creates a new IID object
 
 Args:
 
-      iidString(Union[str, Any]):A string representation of an IID, or a ProgID.
+      iidString(Union[Any, str]):A string representation of an IID, or a ProgID.
       is_bytes(bool):Indicates if the first param is actually the bytes of an IID structure.
 
 Returns:

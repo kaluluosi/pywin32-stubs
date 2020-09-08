@@ -1,6 +1,6 @@
-__all__=['AddCounter', 'AddEnglishCounter', 'RemoveCounter', 'EnumObjectItems', 'EnumObjects', 'OpenQuery', 'CloseQuery', 'MakeCounterPath', 'GetCounterInfo', 'GetFormattedCounterValue', 'CollectQueryData', 'ValidatePath', 'ExpandCounterPath', 'ParseCounterPath', 'ParseInstanceName', 'SetCounterScaleFactor', 'BrowseCounters', 'ConnectMachine', 'LookupPerfIndexByName', 'LookupPerfNameByIndex']
+__all__=['', 'AddCounter', 'AddEnglishCounter', 'RemoveCounter', 'EnumObjectItems', 'EnumObjects', 'OpenQuery', 'CloseQuery', 'MakeCounterPath', 'GetCounterInfo', 'GetFormattedCounterValue', 'CollectQueryData', 'ValidatePath', 'ExpandCounterPath', 'ParseCounterPath', 'ParseInstanceName', 'SetCounterScaleFactor', 'BrowseCounters', 'ConnectMachine', 'LookupPerfIndexByName', 'LookupPerfNameByIndex']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module, encapsulating the Windows Performance Data Helpers API"""
 
 
@@ -63,7 +63,7 @@ Returns:
     pass
         
 
-def EnumObjectItems(DataSource:'str',machine:'str',object:'str',detailLevel:'int',flags:'int'=0) -> 'tuple':
+def EnumObjectItems(DataSource:'str',machine:'str',_object:'str',detailLevel:'int',flags:'int'=0) -> 'tuple':
     """
     Enumerates an object's items
 
@@ -71,7 +71,7 @@ Args:
 
       DataSource(str):Path of a performance log file, or None for machine counters
       machine(str):The machine to use, or None
-      object(str):The type of object
+      _object(str):The type of object
       detailLevel(int):The level of data required, win32pdh.PERF_DETAIL_*
       flags(int):Flags - must be zero
 
@@ -171,14 +171,14 @@ Returns:
     pass
         
 
-def GetFormattedCounterValue(handle:'int',format:'int') -> 'Tuple[int, Any]':
+def GetFormattedCounterValue(handle:'int',_format:'int') -> 'Tuple[int, Any]':
     """
     Retrieves a formatted counter value
 
 Args:
 
       handle(int):Handle to the counter
-      format(int):Format of result.  Can be PDH_FMT_DOUBLE, PDH_FMT_LARGE, PDH_FMT_LONG and or'd with PDH_FMT_NOSCALE, PDH_FMT_1000
+      _format(int):Format of result.  Can be PDH_FMT_DOUBLE, PDH_FMT_LARGE, PDH_FMT_LONG and or'd with PDH_FMT_NOSCALE, PDH_FMT_1000
 
 Returns:
 

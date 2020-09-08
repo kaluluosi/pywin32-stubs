@@ -1,6 +1,6 @@
-__all__=['CreateTransaction', 'RollbackTransaction', 'RollbackTransactionAsync', 'CommitTransaction', 'CommitTransactionAsync', 'GetTransactionId', 'OpenTransaction']
+__all__=['', 'CreateTransaction', 'RollbackTransaction', 'RollbackTransactionAsync', 'CommitTransaction', 'CommitTransactionAsync', 'GetTransactionId', 'OpenTransaction']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """Module wrapping Kernal Transaction Manager functions, as used with 
 
 transacted NTFS and transacted registry functions."""

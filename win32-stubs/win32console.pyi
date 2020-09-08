@@ -1,6 +1,6 @@
-__all__=['CreateConsoleScreenBuffer', 'GetConsoleDisplayMode', 'AttachConsole', 'AllocConsole', 'FreeConsole', 'GetConsoleProcessList', 'GetConsoleCP', 'GetConsoleOutputCP', 'SetConsoleCP', 'SetConsoleOutputCP', 'GetConsoleSelectionInfo', 'AddConsoleAlias', 'GetConsoleAliases', 'GetConsoleAliasExes', 'GetConsoleWindow', 'GetNumberOfConsoleFonts', 'SetConsoleTitle', 'GetConsoleTitle', 'GenerateConsoleCtrlEvent', 'GetStdHandle']
+__all__=['', 'CreateConsoleScreenBuffer', 'GetConsoleDisplayMode', 'AttachConsole', 'AllocConsole', 'FreeConsole', 'GetConsoleProcessList', 'GetConsoleCP', 'GetConsoleOutputCP', 'SetConsoleCP', 'SetConsoleOutputCP', 'GetConsoleSelectionInfo', 'AddConsoleAlias', 'GetConsoleAliases', 'GetConsoleAliasExes', 'GetConsoleWindow', 'GetNumberOfConsoleFonts', 'SetConsoleTitle', 'GetConsoleTitle', 'GenerateConsoleCtrlEvent', 'GetStdHandle']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """Interface to the Windows Console functions for dealing with character-mode applications"""
 
 

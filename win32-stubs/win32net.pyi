@@ -1,6 +1,6 @@
-__all__=['NetGetJoinInformation', 'NetGroupGetInfo', 'NetGroupGetUsers', 'NetGroupSetUsers', 'NetGroupSetInfo', 'NetGroupAdd', 'NetGroupAddUser', 'NetGroupDel', 'NetGroupDelUser', 'NetGroupEnum', 'NetGroupAdd', 'NetLocalGroupAddMembers', 'NetLocalGroupDelMembers', 'NetGroupDel', 'NetGroupEnum', 'NetGroupGetInfo', 'NetLocalGroupGetMembers', 'NetGroupSetInfo', 'NetLocalGroupSetMembers', 'NetMessageBufferSend', 'NetMessageNameAdd', 'NetMessageNameDel', 'NetMessageNameEnum', 'NetServerEnum', 'NetServerGetInfo', 'NetServerSetInfo', 'NetShareAdd', 'NetShareDel', 'NetShareCheck', 'NetShareEnum', 'NetShareGetInfo', 'NetShareSetInfo', 'NetUserAdd', 'NetUserChangePassword', 'NetUserEnum', 'NetUserGetGroups', 'NetUserGetInfo', 'NetUserGetLocalGroups', 'NetUserSetInfo', 'NetUserDel', 'NetUserModalsGet', 'NetUserModalsSet', 'NetWkstaUserEnum', 'NetWkstaGetInfo', 'NetWkstaSetInfo', 'NetWkstaTransportEnum', 'NetWkstaTransportAdd', 'NetWkstaTransportDel', 'NetServerDiskEnum', 'NetUseAdd', 'NetUseDel', 'NetUseEnum', 'NetUseGetInfo', 'NetGetAnyDCName', 'NetGetDCName', 'NetSessionEnum', 'NetSessionDel', 'NetSessionGetInfo', 'NetFileEnum', 'NetFileClose', 'NetFileGetInfo', 'NetStatisticsGet', 'NetServerComputerNameAdd', 'NetServerComputerNameDel', 'NetValidateName', 'NetValidatePasswordPolicy']
+__all__=['', 'NetGetJoinInformation', 'NetGroupGetInfo', 'NetGroupGetUsers', 'NetGroupSetUsers', 'NetGroupSetInfo', 'NetGroupAdd', 'NetGroupAddUser', 'NetGroupDel', 'NetGroupDelUser', 'NetGroupEnum', 'NetGroupAdd', 'NetLocalGroupAddMembers', 'NetLocalGroupDelMembers', 'NetGroupDel', 'NetGroupEnum', 'NetGroupGetInfo', 'NetLocalGroupGetMembers', 'NetGroupSetInfo', 'NetLocalGroupSetMembers', 'NetMessageBufferSend', 'NetMessageNameAdd', 'NetMessageNameDel', 'NetMessageNameEnum', 'NetServerEnum', 'NetServerGetInfo', 'NetServerSetInfo', 'NetShareAdd', 'NetShareDel', 'NetShareCheck', 'NetShareEnum', 'NetShareGetInfo', 'NetShareSetInfo', 'NetUserAdd', 'NetUserChangePassword', 'NetUserEnum', 'NetUserGetGroups', 'NetUserGetInfo', 'NetUserGetLocalGroups', 'NetUserSetInfo', 'NetUserDel', 'NetUserModalsGet', 'NetUserModalsSet', 'NetWkstaUserEnum', 'NetWkstaGetInfo', 'NetWkstaSetInfo', 'NetWkstaTransportEnum', 'NetWkstaTransportAdd', 'NetWkstaTransportDel', 'NetServerDiskEnum', 'NetUseAdd', 'NetUseDel', 'NetUseEnum', 'NetUseGetInfo', 'NetGetAnyDCName', 'NetGetDCName', 'NetSessionEnum', 'NetSessionDel', 'NetSessionGetInfo', 'NetFileEnum', 'NetFileClose', 'NetFileGetInfo', 'NetStatisticsGet', 'NetServerComputerNameAdd', 'NetServerComputerNameDel', 'NetValidateName', 'NetValidatePasswordPolicy']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module encapsulating the Windows Network API."""
 
 
@@ -452,14 +452,14 @@ Returns:
     pass
         
 
-def NetMessageNameAdd(server:'Union[str, Any]',msgname:'Union[str, Any]') -> 'None':
+def NetMessageNameAdd(server:'Union[Any, str]',msgname:'Union[Any, str]') -> 'None':
     """
     Adds a message alias for specified machine
 
 Args:
 
-      server(Union[str, Any]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
-      msgname(Union[str, Any]):Message alias to add, 15 characters max
+      server(Union[Any, str]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
+      msgname(Union[Any, str]):Message alias to add, 15 characters max
 
 Returns:
 
@@ -469,14 +469,14 @@ Returns:
     pass
         
 
-def NetMessageNameDel(server:'Union[str, Any]',msgname:'Union[str, Any]') -> 'None':
+def NetMessageNameDel(server:'Union[Any, str]',msgname:'Union[Any, str]') -> 'None':
     """
     Removes a message alias for specified machine
 
 Args:
 
-      server(Union[str, Any]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
-      msgname(Union[str, Any]):Message alias to delete for specified machine
+      server(Union[Any, str]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
+      msgname(Union[Any, str]):Message alias to delete for specified machine
 
 Returns:
 
@@ -486,13 +486,13 @@ Returns:
     pass
         
 
-def NetMessageNameEnum(Server:'Union[str, Any]') -> 'None':
+def NetMessageNameEnum(Server:'Union[Any, str]') -> 'None':
     """
     Lists aliases for a computer
 
 Args:
 
-      Server(Union[str, Any]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
+      Server(Union[Any, str]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
 
 Returns:
 
@@ -502,7 +502,7 @@ Returns:
     pass
         
 
-def NetServerEnum(server:'Union[str]',level:'int',type:'int',prefLen:'int',domain:'Union[str]'=None,resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
+def NetServerEnum(server:'Union[str]',level:'int',_type:'int',prefLen:'int',domain:'Union[str]'=None,resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about each server of a 
 
@@ -512,7 +512,7 @@ Args:
 
       server(Union[str]):The name of the server to execute on, or None.
       level(int):The level of data required.
-      type(int):Type of server to return - one of the SV_TYPE_* constants.
+      _type(int):Type of server to return - one of the SV_TYPE_* constants.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       domain(Union[str]):The domain to enumerate, or None for the current domain.
       resumeHandle(int):A resume handle.  See the return description for more information.
@@ -753,7 +753,7 @@ Returns:
     pass
         
 
-def NetUserEnum(server:'Union[str]',level:'int',filter:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
+def NetUserEnum(server:'Union[str]',level:'int',arg:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Enumerates all users.
 
@@ -761,7 +761,7 @@ Args:
 
       server(Union[str]):The name of the server, or None.
       level(int):The level of data required.
-      filter(int):The types of accounts to enumerate.
+      arg(int):The types of accounts to enumerate.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
@@ -789,7 +789,7 @@ returned for the new handle, indicating all the data has been read.
     pass
         
 
-def NetUserGetGroups(serverName:'str',userName:'str') -> 'List[Any]':
+def NetUserGetGroups(serverName:'str',userName:'str') -> 'List[Tuple[Any, Any]]':
     """
     Returns a list of groups,attributes for all groups 
 
@@ -802,7 +802,7 @@ Args:
 
 Returns:
 
-      List[Any]:The name of the user to search for in each group account. To Do This needs to be extended to support the new model, while 
+      List[Tuple[Any, Any]]:The name of the user to search for in each group account. To Do This needs to be extended to support the new model, while 
 
 not breaking existing code.  A default arg would be perfect.
 Return ValueAlways makes the level 1 call and returns all data. 

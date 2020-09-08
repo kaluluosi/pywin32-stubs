@@ -1,6 +1,6 @@
-__all__=['InternetSetCookie', 'InternetGetCookie', 'InternetAttemptConnect', 'InternetCheckConnection', 'InternetGoOnline', 'InternetCloseHandle', 'InternetConnect', 'InternetOpen', 'InternetOpenUrl', 'InternetCanonicalizeUrl', 'InternetGetLastResponseInfo', 'InternetReadFile', 'InternetWriteFile', 'FtpOpenFile', 'FtpCommand', 'InternetQueryOption', 'InternetSetOption', 'FindFirstUrlCacheEntry', 'FindNextUrlCacheEntry', 'FindFirstUrlCacheEntryEx', 'FindNextUrlCacheEntryEx', 'FindCloseUrlCache', 'FindFirstUrlCacheGroup', 'FindNextUrlCacheGroup', 'GetUrlCacheEntryInfo', 'DeleteUrlCacheGroup', 'CreateUrlCacheGroup', 'CreateUrlCacheEntry', 'CommitUrlCacheEntry', 'SetUrlCacheEntryGroup', 'GetUrlCacheGroupAttribute', 'SetUrlCacheGroupAttribute', 'DeleteUrlCacheEntry']
+__all__=['', 'InternetSetCookie', 'InternetGetCookie', 'InternetAttemptConnect', 'InternetCheckConnection', 'InternetGoOnline', 'InternetCloseHandle', 'InternetConnect', 'InternetOpen', 'InternetOpenUrl', 'InternetCanonicalizeUrl', 'InternetGetLastResponseInfo', 'InternetReadFile', 'InternetWriteFile', 'FtpOpenFile', 'FtpCommand', 'InternetQueryOption', 'InternetSetOption', 'FindFirstUrlCacheEntry', 'FindNextUrlCacheEntry', 'FindFirstUrlCacheEntryEx', 'FindNextUrlCacheEntryEx', 'FindCloseUrlCache', 'FindFirstUrlCacheGroup', 'FindNextUrlCacheGroup', 'GetUrlCacheEntryInfo', 'DeleteUrlCacheGroup', 'CreateUrlCacheGroup', 'CreateUrlCacheEntry', 'CommitUrlCacheEntry', 'SetUrlCacheEntryGroup', 'GetUrlCacheGroupAttribute', 'SetUrlCacheGroupAttribute', 'DeleteUrlCacheEntry']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """An interface to the Windows internet (wininet) API"""
 
 

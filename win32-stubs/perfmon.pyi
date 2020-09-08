@@ -1,6 +1,6 @@
-__all__=['LoadPerfCounterTextStrings', 'UnloadPerfCounterTextStrings', 'CounterDefinition', 'ObjectType', 'PerfMonManager']
+__all__=['', 'LoadPerfCounterTextStrings', 'UnloadPerfCounterTextStrings', 'CounterDefinition', 'ObjectType', 'PerfMonManager']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module which wraps Performance Monitor functions."""
 
 

@@ -1,6 +1,6 @@
-__all__=['odbc', 'SQLDataSources']
+__all__=['', 'odbc', 'SQLDataSources']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A Python wrapper around the ODBC API."""
 
 

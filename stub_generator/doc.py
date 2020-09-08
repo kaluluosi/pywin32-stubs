@@ -7,6 +7,7 @@ from bs4.element import Tag
 class Doc:
 
     def __init__(self, html_name:str):
+        self.html_name = html_name
         self.html_path = doc_path(html_name)
         with open(self.html_path) as html:
             self.soup = BeautifulSoup(html, 'lxml')

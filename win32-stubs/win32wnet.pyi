@@ -1,6 +1,6 @@
-__all__=['NCBBuffer', 'Netbios', 'WNetAddConnection2', 'WNetAddConnection3', 'WNetCancelConnection2', 'WNetOpenEnum', 'WNetCloseEnum', 'WNetEnumResource', 'WNetGetUser', 'WNetGetUniversalName', 'WNetGetResourceInformation', 'WNetGetLastError', 'WNetGetResourceParent', 'WNetGetConnection']
+__all__=['', 'NCBBuffer', 'Netbios', 'WNetAddConnection2', 'WNetAddConnection3', 'WNetCancelConnection2', 'WNetOpenEnum', 'WNetCloseEnum', 'WNetEnumResource', 'WNetGetUser', 'WNetGetUniversalName', 'WNetGetResourceInformation', 'WNetGetLastError', 'WNetGetResourceParent', 'WNetGetConnection']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module that exposes the Windows Networking API."""
 
 
@@ -95,14 +95,14 @@ Returns:
     pass
         
 
-def WNetOpenEnum(scope:'int',type:'int',usage:'int',resource:'PyNETRESOURCE') -> 'int':
+def WNetOpenEnum(scope:'int',_type:'int',usage:'int',resource:'PyNETRESOURCE') -> 'int':
     """
     None
 
 Args:
 
       scope(int):Specifies the scope of the enumeration.
-      type(int):Specifies the resource types to enumerate.
+      _type(int):Specifies the resource types to enumerate.
       usage(int):Specifies the resource usage to be enumerated.
       resource(PyNETRESOURCE):Python NETRESOURCE object.CommentsSee the Microsoft SDK  for complete information on WNetOpenEnum.Return ValuePyHANDLE representing the Win32 HANDLE for the open resource. This handle will be automatically be closed via win32wnet::WNetCloseEnum, but good style dictates it still be closed manually.
 

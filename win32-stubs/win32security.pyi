@@ -1,6 +1,6 @@
-__all__=['DsGetSpn', 'DsWriteAccountSpn', 'DsBind', 'DsUnBind', 'DsGetDcName', 'DsCrackNames', 'DsListInfoForServer', 'DsListServersInSite', 'DsListServersInSite', 'DsListServersInSite', 'DsListRoles', 'DsListDomainsInSite', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'ImpersonateNamedPipeClient', 'ImpersonateLoggedOnUser', 'ImpersonateAnonymousToken', 'IsTokenRestricted', 'RevertToSelf', 'LogonUser', 'LogonUserEx', 'LookupAccountName', 'LookupAccountSid', 'GetBinarySid', 'SetSecurityInfo', 'GetSecurityInfo', 'SetNamedSecurityInfo', 'GetNamedSecurityInfo', 'OpenProcessToken', 'LookupPrivilegeValue', 'LookupPrivilegeName', 'LookupPrivilegeDisplayName', 'AdjustTokenPrivileges', 'AdjustTokenGroups', 'GetTokenInformation', 'OpenThreadToken', 'SetThreadToken', 'GetFileSecurity', 'SetFileSecurity', 'GetUserObjectSecurity', 'SetUserObjectSecurity', 'GetKernelObjectSecurity', 'SetKernelObjectSecurity', 'SetTokenInformation', 'LsaOpenPolicy', 'LsaClose', 'LsaQueryInformationPolicy', 'LsaSetInformationPolicy', 'LsaAddAccountRights', 'LsaRemoveAccountRights', 'LsaEnumerateAccountRights', 'LsaEnumerateAccountsWithUserRight', 'ConvertSidToStringSid', 'ConvertStringSidToSid', 'ConvertSecurityDescriptorToStringSecurityDescriptor', 'ConvertStringSecurityDescriptorToSecurityDescriptor', 'LsaStorePrivateData', 'LsaRetrievePrivateData', 'LsaRegisterPolicyChangeNotification', 'LsaUnregisterPolicyChangeNotification', 'CryptEnumProviders', 'EnumerateSecurityPackages', 'AllocateLocallyUniqueId', 'ImpersonateSelf', 'DuplicateToken', 'DuplicateTokenEx', 'CheckTokenMembership', 'CreateRestrictedToken', 'LsaRegisterLogonProcess', 'LsaConnectUntrusted', 'LsaDeregisterLogonProcess', 'LsaLookupAuthenticationPackage', 'LsaEnumerateLogonSessions', 'LsaGetLogonSessionData', 'AcquireCredentialsHandle', 'InitializeSecurityContext', 'AcceptSecurityContext', 'QuerySecurityPackageInfo', 'LsaCallAuthenticationPackage', 'TranslateName', 'CreateWellKnownSid', 'MapGenericMask', 'ACCESS_ALLOWED_ACE_TYPE', 'ACCESS_ALLOWED_OBJECT_ACE_TYPE', 'ACCESS_DENIED_ACE_TYPE', 'ACCESS_DENIED_OBJECT_ACE_TYPE', 'ACL_REVISION', 'ACL_REVISION_DS', 'AuditCategoryAccountLogon', 'AuditCategoryAccountManagement', 'AuditCategoryDetailedTracking', 'AuditCategoryDirectoryServiceAccess', 'AuditCategoryLogon', 'AuditCategoryObjectAccess', 'AuditCategoryPolicyChange', 'AuditCategoryPrivilegeUse', 'AuditCategorySystem', 'CONTAINER_INHERIT_ACE', 'DACL_SECURITY_INFORMATION', 'DENY_ACCESS', 'DISABLE_MAX_PRIVILEGE', 'DS_SPN_ADD_SPN_OP', 'DS_SPN_DELETE_SPN_OP', 'DS_SPN_DN_HOST', 'DS_SPN_DNS_HOST', 'DS_SPN_DOMAIN', 'DS_SPN_NB_DOMAIN', 'DS_SPN_NB_HOST', 'DS_SPN_REPLACE_SPN_OP', 'DS_SPN_SERVICE', 'FAILED_ACCESS_ACE_FLAG', 'GRANT_ACCESS', 'GROUP_SECURITY_INFORMATION', 'INHERIT_ONLY_ACE', 'INHERITED_ACE', 'LABEL_SECURITY_INFORMATION', 'LOGON32_LOGON_BATCH', 'LOGON32_LOGON_INTERACTIVE', 'LOGON32_LOGON_NETWORK', 'LOGON32_LOGON_NETWORK_CLEARTEXT', 'LOGON32_LOGON_NEW_CREDENTIALS', 'LOGON32_LOGON_SERVICE', 'LOGON32_LOGON_UNLOCK', 'LOGON32_PROVIDER_DEFAULT', 'LOGON32_PROVIDER_WINNT35', 'LOGON32_PROVIDER_WINNT40', 'LOGON32_PROVIDER_WINNT50', 'NO_INHERITANCE', 'NO_PROPAGATE_INHERIT_ACE', 'NOT_USED_ACCESS', 'OBJECT_INHERIT_ACE', 'OWNER_SECURITY_INFORMATION', 'POLICY_ALL_ACCESS', 'POLICY_AUDIT_EVENT_FAILURE', 'POLICY_AUDIT_EVENT_NONE', 'POLICY_AUDIT_EVENT_SUCCESS', 'POLICY_AUDIT_EVENT_UNCHANGED', 'POLICY_AUDIT_LOG_ADMIN', 'POLICY_CREATE_ACCOUNT', 'POLICY_CREATE_PRIVILEGE', 'POLICY_CREATE_SECRET', 'POLICY_EXECUTE', 'POLICY_GET_PRIVATE_INFORMATION', 'POLICY_LOOKUP_NAMES', 'POLICY_NOTIFICATION', 'POLICY_READ', 'POLICY_SERVER_ADMIN', 'POLICY_SET_AUDIT_REQUIREMENTS', 'POLICY_SET_DEFAULT_QUOTA_LIMITS', 'POLICY_TRUST_ADMIN', 'POLICY_VIEW_AUDIT_INFORMATION', 'POLICY_VIEW_LOCAL_INFORMATION', 'POLICY_WRITE', 'PolicyAccountDomainInformation', 'PolicyAuditEventsInformation', 'PolicyAuditFullQueryInformation', 'PolicyAuditFullSetInformation', 'PolicyAuditLogInformation', 'PolicyDefaultQuotaInformation', 'PolicyDnsDomainInformation', 'PolicyLsaServerRoleInformation', 'PolicyModificationInformation', 'PolicyNotifyAccountDomainInformation', 'PolicyNotifyAuditEventsInformation', 'PolicyNotifyDnsDomainInformation', 'PolicyNotifyDomainEfsInformation', 'PolicyNotifyDomainKerberosTicketInformation', 'PolicyNotifyMachineAccountPasswordInformation', 'PolicyNotifyServerRoleInformation', 'PolicyPdAccountInformation', 'PolicyPrimaryDomainInformation', 'PolicyReplicaSourceInformation', 'PolicyServerDisabled', 'PolicyServerDisabled', 'PolicyServerEnabled', 'PolicyServerEnabled', 'PolicyServerRoleBackup', 'PolicyServerRolePrimary', 'PROTECTED_DACL_SECURITY_INFORMATION', 'PROTECTED_SACL_SECURITY_INFORMATION', 'REVOKE_ACCESS', 'SACL_SECURITY_INFORMATION', 'SANDBOX_INERT', 'SDDL_REVISION_1', 'SE_DACL_AUTO_INHERITED', 'SE_DACL_DEFAULTED', 'SE_DACL_PRESENT', 'SE_DACL_PROTECTED', 'SE_DS_OBJECT', 'SE_DS_OBJECT_ALL', 'SE_FILE_OBJECT', 'SE_GROUP_DEFAULTED', 'SE_GROUP_ENABLED', 'SE_GROUP_ENABLED_BY_DEFAULT', 'SE_GROUP_LOGON_ID', 'SE_GROUP_MANDATORY', 'SE_GROUP_OWNER', 'SE_GROUP_RESOURCE', 'SE_GROUP_USE_FOR_DENY_ONLY', 'SE_KERNEL_OBJECT', 'SE_LMSHARE', 'SE_OWNER_DEFAULTED', 'SE_PRINTER', 'SE_PRIVILEGE_ENABLED', 'SE_PRIVILEGE_ENABLED_BY_DEFAULT', 'SE_PRIVILEGE_REMOVED', 'SE_PRIVILEGE_USED_FOR_ACCESS', 'SE_PROVIDER_DEFINED_OBJECT', 'SE_REGISTRY_KEY', 'SE_REGISTRY_WOW64_32KEY', 'SE_SACL_AUTO_INHERITED', 'SE_SACL_DEFAULTED', 'SE_SACL_PRESENT', 'SE_SACL_PROTECTED', 'SE_SELF_RELATIVE', 'SE_SERVICE', 'SE_UNKNOWN_OBJECT_TYPE', 'SE_WINDOW_OBJECT', 'SE_WMIGUID_OBJECT', 'SECPKG_CRED_BOTH', 'SECPKG_CRED_INBOUND', 'SECPKG_CRED_OUTBOUND', 'SECPKG_FLAG_ACCEPT_WIN32_NAME', 'SECPKG_FLAG_CLIENT_ONLY', 'SECPKG_FLAG_CONNECTION', 'SECPKG_FLAG_DATAGRAM', 'SECPKG_FLAG_EXTENDED_ERROR', 'SECPKG_FLAG_IMPERSONATION', 'SECPKG_FLAG_INTEGRITY', 'SECPKG_FLAG_MULTI_REQUIRED', 'SECPKG_FLAG_PRIVACY', 'SECPKG_FLAG_STREAM', 'SECPKG_FLAG_TOKEN_ONLY', 'SECURITY_CREATOR_SID_AUTHORITY', 'SECURITY_LOCAL_SID_AUTHORITY', 'SECURITY_NON_UNIQUE_AUTHORITY', 'SECURITY_NT_AUTHORITY', 'SECURITY_NULL_SID_AUTHORITY', 'SECURITY_RESOURCE_MANAGER_AUTHORITY', 'SECURITY_WORLD_SID_AUTHORITY', 'SecurityAnonymous', 'SecurityDelegation', 'SecurityIdentification', 'SecurityImpersonation', 'SET_ACCESS', 'SET_AUDIT_FAILURE', 'SET_AUDIT_SUCCESS', 'SidTypeAlias', 'SidTypeComputer', 'SidTypeDeletedAccount', 'SidTypeDomain', 'SidTypeGroup', 'SidTypeInvalid', 'SidTypeUnknown', 'SidTypeUser', 'SidTypeWellKnownGroup', 'STYPE_DEVICE', 'STYPE_DISKTREE', 'STYPE_IPC', 'STYPE_PRINTQ', 'STYPE_SPECIAL', 'STYPE_TEMPORARY', 'SUB_CONTAINERS_AND_OBJECTS_INHERIT', 'SUB_CONTAINERS_ONLY_INHERIT', 'SUB_OBJECTS_ONLY_INHERIT', 'SUCCESSFUL_ACCESS_ACE_FLAG', 'SYSTEM_AUDIT_ACE_TYPE', 'SYSTEM_AUDIT_OBJECT_ACE_TYPE', 'TOKEN_ADJUST_DEFAULT', 'TOKEN_ADJUST_GROUPS', 'TOKEN_ADJUST_PRIVILEGES', 'TOKEN_ALL_ACCESS', 'TOKEN_ASSIGN_PRIMARY', 'TOKEN_DUPLICATE', 'TOKEN_EXECUTE', 'TOKEN_IMPERSONATE', 'TOKEN_QUERY', 'TOKEN_QUERY_SOURCE', 'TOKEN_READ', 'TOKEN_WRITE', 'TokenImpersonation', 'TokenPrimary', 'TrustedControllersInformation', 'TrustedDomainAuthInformation', 'TrustedDomainAuthInformationInternal', 'TrustedDomainFullInformation', 'TrustedDomainFullInformation2Internal', 'TrustedDomainFullInformationInternal', 'TrustedDomainInformationBasic', 'TrustedDomainInformationEx', 'TrustedDomainInformationEx2Internal', 'TrustedDomainNameInformation', 'TrustedPasswordInformation', 'TrustedPosixOffsetInformation', 'TRUSTEE_BAD_FORM', 'TRUSTEE_IS_ALIAS', 'TRUSTEE_IS_COMPUTER', 'TRUSTEE_IS_DELETED', 'TRUSTEE_IS_DOMAIN', 'TRUSTEE_IS_GROUP', 'TRUSTEE_IS_INVALID', 'TRUSTEE_IS_NAME', 'TRUSTEE_IS_OBJECTS_AND_NAME', 'TRUSTEE_IS_OBJECTS_AND_SID', 'TRUSTEE_IS_SID', 'TRUSTEE_IS_UNKNOWN', 'TRUSTEE_IS_USER', 'TRUSTEE_IS_WELL_KNOWN_GROUP', 'UNPROTECTED_DACL_SECURITY_INFORMATION', 'UNPROTECTED_SACL_SECURITY_INFORMATION']
+__all__=['', 'DsGetSpn', 'DsWriteAccountSpn', 'DsBind', 'DsUnBind', 'DsGetDcName', 'DsCrackNames', 'DsListInfoForServer', 'DsListServersInSite', 'DsListServersInSite', 'DsListServersInSite', 'DsListRoles', 'DsListDomainsInSite', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'ImpersonateNamedPipeClient', 'ImpersonateLoggedOnUser', 'ImpersonateAnonymousToken', 'IsTokenRestricted', 'RevertToSelf', 'LogonUser', 'LogonUserEx', 'LookupAccountName', 'LookupAccountSid', 'GetBinarySid', 'SetSecurityInfo', 'GetSecurityInfo', 'SetNamedSecurityInfo', 'GetNamedSecurityInfo', 'OpenProcessToken', 'LookupPrivilegeValue', 'LookupPrivilegeName', 'LookupPrivilegeDisplayName', 'AdjustTokenPrivileges', 'AdjustTokenGroups', 'GetTokenInformation', 'OpenThreadToken', 'SetThreadToken', 'GetFileSecurity', 'SetFileSecurity', 'GetUserObjectSecurity', 'SetUserObjectSecurity', 'GetKernelObjectSecurity', 'SetKernelObjectSecurity', 'SetTokenInformation', 'LsaOpenPolicy', 'LsaClose', 'LsaQueryInformationPolicy', 'LsaSetInformationPolicy', 'LsaAddAccountRights', 'LsaRemoveAccountRights', 'LsaEnumerateAccountRights', 'LsaEnumerateAccountsWithUserRight', 'ConvertSidToStringSid', 'ConvertStringSidToSid', 'ConvertSecurityDescriptorToStringSecurityDescriptor', 'ConvertStringSecurityDescriptorToSecurityDescriptor', 'LsaStorePrivateData', 'LsaRetrievePrivateData', 'LsaRegisterPolicyChangeNotification', 'LsaUnregisterPolicyChangeNotification', 'CryptEnumProviders', 'EnumerateSecurityPackages', 'AllocateLocallyUniqueId', 'ImpersonateSelf', 'DuplicateToken', 'DuplicateTokenEx', 'CheckTokenMembership', 'CreateRestrictedToken', 'LsaRegisterLogonProcess', 'LsaConnectUntrusted', 'LsaDeregisterLogonProcess', 'LsaLookupAuthenticationPackage', 'LsaEnumerateLogonSessions', 'LsaGetLogonSessionData', 'AcquireCredentialsHandle', 'InitializeSecurityContext', 'AcceptSecurityContext', 'QuerySecurityPackageInfo', 'LsaCallAuthenticationPackage', 'TranslateName', 'CreateWellKnownSid', 'MapGenericMask', 'ACCESS_ALLOWED_ACE_TYPE', 'ACCESS_ALLOWED_OBJECT_ACE_TYPE', 'ACCESS_DENIED_ACE_TYPE', 'ACCESS_DENIED_OBJECT_ACE_TYPE', 'ACL_REVISION', 'ACL_REVISION_DS', 'AuditCategoryAccountLogon', 'AuditCategoryAccountManagement', 'AuditCategoryDetailedTracking', 'AuditCategoryDirectoryServiceAccess', 'AuditCategoryLogon', 'AuditCategoryObjectAccess', 'AuditCategoryPolicyChange', 'AuditCategoryPrivilegeUse', 'AuditCategorySystem', 'CONTAINER_INHERIT_ACE', 'DACL_SECURITY_INFORMATION', 'DENY_ACCESS', 'DISABLE_MAX_PRIVILEGE', 'DS_SPN_ADD_SPN_OP', 'DS_SPN_DELETE_SPN_OP', 'DS_SPN_DN_HOST', 'DS_SPN_DNS_HOST', 'DS_SPN_DOMAIN', 'DS_SPN_NB_DOMAIN', 'DS_SPN_NB_HOST', 'DS_SPN_REPLACE_SPN_OP', 'DS_SPN_SERVICE', 'FAILED_ACCESS_ACE_FLAG', 'GRANT_ACCESS', 'GROUP_SECURITY_INFORMATION', 'INHERIT_ONLY_ACE', 'INHERITED_ACE', 'LABEL_SECURITY_INFORMATION', 'LOGON32_LOGON_BATCH', 'LOGON32_LOGON_INTERACTIVE', 'LOGON32_LOGON_NETWORK', 'LOGON32_LOGON_NETWORK_CLEARTEXT', 'LOGON32_LOGON_NEW_CREDENTIALS', 'LOGON32_LOGON_SERVICE', 'LOGON32_LOGON_UNLOCK', 'LOGON32_PROVIDER_DEFAULT', 'LOGON32_PROVIDER_WINNT35', 'LOGON32_PROVIDER_WINNT40', 'LOGON32_PROVIDER_WINNT50', 'NO_INHERITANCE', 'NO_PROPAGATE_INHERIT_ACE', 'NOT_USED_ACCESS', 'OBJECT_INHERIT_ACE', 'OWNER_SECURITY_INFORMATION', 'POLICY_ALL_ACCESS', 'POLICY_AUDIT_EVENT_FAILURE', 'POLICY_AUDIT_EVENT_NONE', 'POLICY_AUDIT_EVENT_SUCCESS', 'POLICY_AUDIT_EVENT_UNCHANGED', 'POLICY_AUDIT_LOG_ADMIN', 'POLICY_CREATE_ACCOUNT', 'POLICY_CREATE_PRIVILEGE', 'POLICY_CREATE_SECRET', 'POLICY_EXECUTE', 'POLICY_GET_PRIVATE_INFORMATION', 'POLICY_LOOKUP_NAMES', 'POLICY_NOTIFICATION', 'POLICY_READ', 'POLICY_SERVER_ADMIN', 'POLICY_SET_AUDIT_REQUIREMENTS', 'POLICY_SET_DEFAULT_QUOTA_LIMITS', 'POLICY_TRUST_ADMIN', 'POLICY_VIEW_AUDIT_INFORMATION', 'POLICY_VIEW_LOCAL_INFORMATION', 'POLICY_WRITE', 'PolicyAccountDomainInformation', 'PolicyAuditEventsInformation', 'PolicyAuditFullQueryInformation', 'PolicyAuditFullSetInformation', 'PolicyAuditLogInformation', 'PolicyDefaultQuotaInformation', 'PolicyDnsDomainInformation', 'PolicyLsaServerRoleInformation', 'PolicyModificationInformation', 'PolicyNotifyAccountDomainInformation', 'PolicyNotifyAuditEventsInformation', 'PolicyNotifyDnsDomainInformation', 'PolicyNotifyDomainEfsInformation', 'PolicyNotifyDomainKerberosTicketInformation', 'PolicyNotifyMachineAccountPasswordInformation', 'PolicyNotifyServerRoleInformation', 'PolicyPdAccountInformation', 'PolicyPrimaryDomainInformation', 'PolicyReplicaSourceInformation', 'PolicyServerDisabled', 'PolicyServerDisabled', 'PolicyServerEnabled', 'PolicyServerEnabled', 'PolicyServerRoleBackup', 'PolicyServerRolePrimary', 'PROTECTED_DACL_SECURITY_INFORMATION', 'PROTECTED_SACL_SECURITY_INFORMATION', 'REVOKE_ACCESS', 'SACL_SECURITY_INFORMATION', 'SANDBOX_INERT', 'SDDL_REVISION_1', 'SE_DACL_AUTO_INHERITED', 'SE_DACL_DEFAULTED', 'SE_DACL_PRESENT', 'SE_DACL_PROTECTED', 'SE_DS_OBJECT', 'SE_DS_OBJECT_ALL', 'SE_FILE_OBJECT', 'SE_GROUP_DEFAULTED', 'SE_GROUP_ENABLED', 'SE_GROUP_ENABLED_BY_DEFAULT', 'SE_GROUP_LOGON_ID', 'SE_GROUP_MANDATORY', 'SE_GROUP_OWNER', 'SE_GROUP_RESOURCE', 'SE_GROUP_USE_FOR_DENY_ONLY', 'SE_KERNEL_OBJECT', 'SE_LMSHARE', 'SE_OWNER_DEFAULTED', 'SE_PRINTER', 'SE_PRIVILEGE_ENABLED', 'SE_PRIVILEGE_ENABLED_BY_DEFAULT', 'SE_PRIVILEGE_REMOVED', 'SE_PRIVILEGE_USED_FOR_ACCESS', 'SE_PROVIDER_DEFINED_OBJECT', 'SE_REGISTRY_KEY', 'SE_REGISTRY_WOW64_32KEY', 'SE_SACL_AUTO_INHERITED', 'SE_SACL_DEFAULTED', 'SE_SACL_PRESENT', 'SE_SACL_PROTECTED', 'SE_SELF_RELATIVE', 'SE_SERVICE', 'SE_UNKNOWN_OBJECT_TYPE', 'SE_WINDOW_OBJECT', 'SE_WMIGUID_OBJECT', 'SECPKG_CRED_BOTH', 'SECPKG_CRED_INBOUND', 'SECPKG_CRED_OUTBOUND', 'SECPKG_FLAG_ACCEPT_WIN32_NAME', 'SECPKG_FLAG_CLIENT_ONLY', 'SECPKG_FLAG_CONNECTION', 'SECPKG_FLAG_DATAGRAM', 'SECPKG_FLAG_EXTENDED_ERROR', 'SECPKG_FLAG_IMPERSONATION', 'SECPKG_FLAG_INTEGRITY', 'SECPKG_FLAG_MULTI_REQUIRED', 'SECPKG_FLAG_PRIVACY', 'SECPKG_FLAG_STREAM', 'SECPKG_FLAG_TOKEN_ONLY', 'SECURITY_CREATOR_SID_AUTHORITY', 'SECURITY_LOCAL_SID_AUTHORITY', 'SECURITY_NON_UNIQUE_AUTHORITY', 'SECURITY_NT_AUTHORITY', 'SECURITY_NULL_SID_AUTHORITY', 'SECURITY_RESOURCE_MANAGER_AUTHORITY', 'SECURITY_WORLD_SID_AUTHORITY', 'SecurityAnonymous', 'SecurityDelegation', 'SecurityIdentification', 'SecurityImpersonation', 'SET_ACCESS', 'SET_AUDIT_FAILURE', 'SET_AUDIT_SUCCESS', 'SidTypeAlias', 'SidTypeComputer', 'SidTypeDeletedAccount', 'SidTypeDomain', 'SidTypeGroup', 'SidTypeInvalid', 'SidTypeUnknown', 'SidTypeUser', 'SidTypeWellKnownGroup', 'STYPE_DEVICE', 'STYPE_DISKTREE', 'STYPE_IPC', 'STYPE_PRINTQ', 'STYPE_SPECIAL', 'STYPE_TEMPORARY', 'SUB_CONTAINERS_AND_OBJECTS_INHERIT', 'SUB_CONTAINERS_ONLY_INHERIT', 'SUB_OBJECTS_ONLY_INHERIT', 'SUCCESSFUL_ACCESS_ACE_FLAG', 'SYSTEM_AUDIT_ACE_TYPE', 'SYSTEM_AUDIT_OBJECT_ACE_TYPE', 'TOKEN_ADJUST_DEFAULT', 'TOKEN_ADJUST_GROUPS', 'TOKEN_ADJUST_PRIVILEGES', 'TOKEN_ALL_ACCESS', 'TOKEN_ASSIGN_PRIMARY', 'TOKEN_DUPLICATE', 'TOKEN_EXECUTE', 'TOKEN_IMPERSONATE', 'TOKEN_QUERY', 'TOKEN_QUERY_SOURCE', 'TOKEN_READ', 'TOKEN_WRITE', 'TokenImpersonation', 'TokenPrimary', 'TrustedControllersInformation', 'TrustedDomainAuthInformation', 'TrustedDomainAuthInformationInternal', 'TrustedDomainFullInformation', 'TrustedDomainFullInformation2Internal', 'TrustedDomainFullInformationInternal', 'TrustedDomainInformationBasic', 'TrustedDomainInformationEx', 'TrustedDomainInformationEx2Internal', 'TrustedDomainNameInformation', 'TrustedPasswordInformation', 'TrustedPosixOffsetInformation', 'TRUSTEE_BAD_FORM', 'TRUSTEE_IS_ALIAS', 'TRUSTEE_IS_COMPUTER', 'TRUSTEE_IS_DELETED', 'TRUSTEE_IS_DOMAIN', 'TRUSTEE_IS_GROUP', 'TRUSTEE_IS_INVALID', 'TRUSTEE_IS_NAME', 'TRUSTEE_IS_OBJECTS_AND_NAME', 'TRUSTEE_IS_OBJECTS_AND_SID', 'TRUSTEE_IS_SID', 'TRUSTEE_IS_UNKNOWN', 'TRUSTEE_IS_USER', 'TRUSTEE_IS_WELL_KNOWN_GROUP', 'UNPROTECTED_DACL_SECURITY_INFORMATION', 'UNPROTECTED_SACL_SECURITY_INFORMATION']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """An interface to the win32 security API's"""
 
 
@@ -503,13 +503,13 @@ Returns:
     pass
         
 
-def SetNamedSecurityInfo(ObjectName:'Union[str, Any]',ObjectType:'int',SecurityInfo:'int',Owner:'PySID',Group:'PySID',Dacl:'PyACL',Sacl:'PyACL') -> 'None':
+def SetNamedSecurityInfo(ObjectName:'Union[Any, str]',ObjectType:'int',SecurityInfo:'int',Owner:'PySID',Group:'PySID',Dacl:'PyACL',Sacl:'PyACL') -> 'None':
     """
     Sets security info for an object by name
 
 Args:
 
-      ObjectName(Union[str, Any]):Name of object
+      ObjectName(Union[Any, str]):Name of object
       ObjectType(int):Value from SE_OBJECT_TYPE enum
       SecurityInfo(int):Combination of SECURITY_INFORMATION constants
       Owner(PySID):Sid to set as owner of object, can be None
@@ -525,13 +525,13 @@ Returns:
     pass
         
 
-def GetNamedSecurityInfo(ObjectName:'Union[str, Any]',ObjectType:'int',SecurityInfo:'int') -> 'PySECURITY_DESCRIPTOR':
+def GetNamedSecurityInfo(ObjectName:'Union[Any, str]',ObjectType:'int',SecurityInfo:'int') -> 'PySECURITY_DESCRIPTOR':
     """
     Retrieve security info for an object by name
 
 Args:
 
-      ObjectName(Union[str, Any]):Name of object
+      ObjectName(Union[Any, str]):Name of object
       ObjectType(int):Value from SE_OBJECT_TYPE enum
       SecurityInfo(int):Combination of SECURITY_INFORMATION constantsCommentsSeparate owner, group, dacl, and sacl are not returned as they can be easily retrieved from the returned PySECURITY_DESCRIPTOR
 
@@ -945,7 +945,7 @@ Returns:
     pass
         
 
-def LsaAddAccountRights(PolicyHandle:'PyLSA_HANDLE',AccountSid:'PySID',UserRights:'Tuple[Union[str, Any], ...]') -> 'None':
+def LsaAddAccountRights(PolicyHandle:'PyLSA_HANDLE',AccountSid:'PySID',UserRights:'Tuple[Union[Any, str], ...]') -> 'None':
     """
     Adds a list of privileges to an account
 
@@ -953,7 +953,7 @@ Args:
 
       PolicyHandle(PyLSA_HANDLE):An LSA policy handle as returned by win32security::LsaOpenPolicy
       AccountSid(PySID):Account to which privs will be added
-      UserRights(Tuple[Union[str, Any], ...]):Sequence of privilege names (SE_*_NAME unicode constants)CommentsAccount is created if it doesn't already exist.Accepts keyword args.
+      UserRights(Tuple[Union[Any, str], ...]):Sequence of privilege names (SE_*_NAME unicode constants)CommentsAccount is created if it doesn't already exist.Accepts keyword args.
 
 Returns:
 
@@ -963,7 +963,7 @@ Returns:
     pass
         
 
-def LsaRemoveAccountRights(PolicyHandle:'PyLSA_HANDLE',AccountSid:'PySID',AllRights:'int',UserRights:'Tuple[Union[str, Any], ...]') -> 'None':
+def LsaRemoveAccountRights(PolicyHandle:'PyLSA_HANDLE',AccountSid:'PySID',AllRights:'int',UserRights:'Tuple[Union[Any, str], ...]') -> 'None':
     """
     Removes privs from an account
 
@@ -972,7 +972,7 @@ Args:
       PolicyHandle(PyLSA_HANDLE):An LSA policy handle as returned by win32security::LsaOpenPolicy
       AccountSid(PySID):Account whose privileges will be removed
       AllRights(int):Boolean value indicating if all privs should be removed from account
-      UserRights(Tuple[Union[str, Any], ...]):List of privilege names to be removed (SE_*_NAME unicode constants)CommentsIf AllRights parm is true, account is *deleted*Accepts keyword args.
+      UserRights(Tuple[Union[Any, str], ...]):List of privilege names to be removed (SE_*_NAME unicode constants)CommentsIf AllRights parm is true, account is *deleted*Accepts keyword args.
 
 Returns:
 
@@ -999,14 +999,14 @@ Returns:
     pass
         
 
-def LsaEnumerateAccountsWithUserRight(PolicyHandle:'PyLSA_HANDLE',UserRight:'Union[str, Any]') -> 'Tuple[PySID, ...]':
+def LsaEnumerateAccountsWithUserRight(PolicyHandle:'PyLSA_HANDLE',UserRight:'Union[Any, str]') -> 'Tuple[PySID, ...]':
     """
     Return SIDs that hold specified priv
 
 Args:
 
       PolicyHandle(PyLSA_HANDLE):An LSA policy handle as returned by win32security::LsaOpenPolicy
-      UserRight(Union[str, Any]):Name of privilege (SE_*_NAME unicode constant)
+      UserRight(Union[Any, str]):Name of privilege (SE_*_NAME unicode constant)
 
 Returns:
 
@@ -1152,7 +1152,7 @@ Returns:
     pass
         
 
-def CryptEnumProviders() -> 'List[Any]':
+def CryptEnumProviders() -> 'List[Tuple[str, int]]':
     """
     List cryptography providers
 
@@ -1162,7 +1162,7 @@ Args:
 
 Returns:
 
-      List[Any]:win32security.CryptEnumProviders
+      List[Tuple[str, int]]:win32security.CryptEnumProviders
 
 [(PyUnicode,int),...] = CryptEnumProviders()List cryptography providers
 Return ValueReturns a sequence of tuples containing provider name and type
@@ -1392,14 +1392,14 @@ Returns:
     pass
         
 
-def AcquireCredentialsHandle(Principal:'Union[str, Any]',Package:'Union[str, Any]',CredentialUse:'int',LogonID:'Any',AuthData:'tuple') -> 'Tuple[PyCredHandle, PyTime]':
+def AcquireCredentialsHandle(Principal:'Union[Any, str]',Package:'Union[Any, str]',CredentialUse:'int',LogonID:'Any',AuthData:'tuple') -> 'Tuple[PyCredHandle, PyTime]':
     """
     Creates a handle to credentials for use with SSPI
 
 Args:
 
-      Principal(Union[str, Any]):Use None for current security context
-      Package(Union[str, Any]):Name of security package that credentials will be used with
+      Principal(Union[Any, str]):Use None for current security context
+      Package(Union[Any, str]):Name of security package that credentials will be used with
       CredentialUse(int):Intended use of requested credentials, SECPKG_CRED_INBOUND, SECPKG_CRED_OUTBOUND, or SECPKG_CRED_BOTH
       LogonID(Any):LUID representing a logon session, can be None
       AuthData(tuple):Sequence of 3 strings: (User, Domain, Password) - use none for existing credentialsReturn ValueReturns credential handle and credential's expiration time
@@ -1413,7 +1413,7 @@ Returns:
     pass
         
 
-def InitializeSecurityContext(Credential:'PyCredHandle',Context:'PyCtxtHandle',TargetName:'Union[str, Any]',ContextReq:'int',TargetDataRep:'int',pInput:'PySecBufferDesc',NewContext:'PyCtxtHandle',pOutput:'PySecBufferDesc') -> 'Tuple[int, int, PyTime]':
+def InitializeSecurityContext(Credential:'PyCredHandle',Context:'PyCtxtHandle',TargetName:'Union[Any, str]',ContextReq:'int',TargetDataRep:'int',pInput:'PySecBufferDesc',NewContext:'PyCtxtHandle',pOutput:'PySecBufferDesc') -> 'Tuple[int, int, PyTime]':
     """
     Creates a security context based on credentials created by AcquireCredentialsHandle
 
@@ -1421,7 +1421,7 @@ Args:
 
       Credential(PyCredHandle):A credentials handle as returned by win32security::AcquireCredentialsHandle
       Context(PyCtxtHandle):Use None on initial call, then handle returned in NewContext thereafter
-      TargetName(Union[str, Any]):Target of context, security package specific - Use None with NTLM
+      TargetName(Union[Any, str]):Target of context, security package specific - Use None with NTLM
       ContextReq(int):Combination of ISC_REQ_* flags
       TargetDataRep(int):One of SECURITY_NATIVE_DREP,SECURITY_NETWORK_DREP
       pInput(PySecBufferDesc):Data buffer - use None initially

@@ -1,6 +1,6 @@
-__all__=['CryptProtectData', 'CryptUnprotectData', 'CryptEnumProviders', 'CryptEnumProviderTypes', 'CryptGetDefaultProvider', 'CryptSetProviderEx', 'CryptAcquireContext', 'CryptFindLocalizedName', 'CertEnumSystemStore', 'CertEnumSystemStoreLocation', 'CertEnumPhysicalStore', 'CertRegisterSystemStore', 'CertUnregisterSystemStore', 'CertOpenStore', 'CertOpenSystemStore', 'CryptFindOIDInfo', 'CertAlgIdToOID', 'CertOIDToAlgId', 'CryptGetKeyIdentifierProperty', 'CryptEnumKeyIdentifierProperties', 'CryptEnumOIDInfo', 'CertAddSerializedElementToStore', 'CryptQueryObject', 'CryptDecodeMessage', 'CryptEncryptMessage', 'CryptDecryptMessage', 'CryptSignAndEncryptMessage', 'CryptVerifyMessageSignature', 'CryptGetMessageCertificates', 'CryptGetMessageSignerCount', 'CryptSignMessage', 'CryptVerifyDetachedMessageSignature', 'CryptDecryptAndVerifyMessageSignature', 'CryptEncodeObjectEx', 'CryptDecodeObjectEx', 'CertNameToStr', 'CryptFormatObject', 'PFXImportCertStore', 'PFXVerifyPassword', 'PFXIsPFXBlob', 'CryptBinaryToString', 'CryptStringToBinary']
+__all__=['', 'CryptProtectData', 'CryptUnprotectData', 'CryptEnumProviders', 'CryptEnumProviderTypes', 'CryptGetDefaultProvider', 'CryptSetProviderEx', 'CryptAcquireContext', 'CryptFindLocalizedName', 'CertEnumSystemStore', 'CertEnumSystemStoreLocation', 'CertEnumPhysicalStore', 'CertRegisterSystemStore', 'CertUnregisterSystemStore', 'CertOpenStore', 'CertOpenSystemStore', 'CryptFindOIDInfo', 'CertAlgIdToOID', 'CertOIDToAlgId', 'CryptGetKeyIdentifierProperty', 'CryptEnumKeyIdentifierProperties', 'CryptEnumOIDInfo', 'CertAddSerializedElementToStore', 'CryptQueryObject', 'CryptDecodeMessage', 'CryptEncryptMessage', 'CryptDecryptMessage', 'CryptSignAndEncryptMessage', 'CryptVerifyMessageSignature', 'CryptGetMessageCertificates', 'CryptGetMessageSignerCount', 'CryptSignMessage', 'CryptVerifyDetachedMessageSignature', 'CryptDecryptAndVerifyMessageSignature', 'CryptEncodeObjectEx', 'CryptDecodeObjectEx', 'CertNameToStr', 'CryptFormatObject', 'PFXImportCertStore', 'PFXVerifyPassword', 'PFXIsPFXBlob', 'CryptBinaryToString', 'CryptStringToBinary']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """An interface to the win32 Cryptography API"""
 
 
@@ -53,7 +53,7 @@ data is the unencrypted data.
     pass
         
 
-def CryptEnumProviders() -> 'List[Any]':
+def CryptEnumProviders() -> 'List[Tuple[str, int]]':
     """
     List cryptography providers
 
@@ -63,7 +63,7 @@ Args:
 
 Returns:
 
-      List[Any]:win32crypt.CryptEnumProviders
+      List[Tuple[str, int]]:win32crypt.CryptEnumProviders
 
 [(PyUnicode,int),...] = CryptEnumProviders()List cryptography providers
 Return ValueReturns a sequence of tuples containing provider name and type
@@ -73,7 +73,7 @@ Return ValueReturns a sequence of tuples containing provider name and type
     pass
         
 
-def CryptEnumProviderTypes() -> 'List[Any]':
+def CryptEnumProviderTypes() -> 'List[Tuple[str, int]]':
     """
     Lists available local cryptographic provider 
 
@@ -85,7 +85,7 @@ Args:
 
 Returns:
 
-      List[Any]:win32crypt.CryptEnumProviderTypes
+      List[Tuple[str, int]]:win32crypt.CryptEnumProviderTypes
 
 [(PyUnicode,int),...] = CryptEnumProviderTypes()Lists available local cryptographic provider 
 
@@ -177,7 +177,7 @@ Returns:
     pass
         
 
-def CertEnumSystemStore(dwFlags:'int',pvSystemStoreLocationPara:'Any'=None) -> 'List[str]':
+def CertEnumSystemStore(dwFlags:'int',pvSystemStoreLocationPara:'Any'=None) -> 'List[Any]':
     """
     Lists system stores
 
@@ -188,13 +188,13 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass
         
 
-def CertEnumSystemStoreLocation(Flags:'int'=0) -> 'List[str]':
+def CertEnumSystemStoreLocation(Flags:'int'=0) -> 'List[Any]':
     """
     Lists system store locations
 
@@ -204,13 +204,13 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass
         
 
-def CertEnumPhysicalStore(pvSystemStore:'str',dwFlags:'int') -> 'List[str]':
+def CertEnumPhysicalStore(pvSystemStore:'str',dwFlags:'int') -> 'List[Any]':
     """
     Lists physical stores on computer
 
@@ -221,7 +221,7 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass

@@ -1,6 +1,6 @@
-__all__=['AbortSystemShutdown', 'InitiateSystemShutdown', 'Apply', 'Beep', 'BeginUpdateResource', 'ChangeDisplaySettings', 'ChangeDisplaySettingsEx', 'ClipCursor', 'CloseHandle', 'CopyFile', 'DebugBreak', 'DeleteFile', 'DragQueryFile', 'DragFinish', 'DuplicateHandle', 'EndUpdateResource', 'EnumDisplayDevices', 'EnumDisplayMonitors', 'EnumDisplaySettings', 'EnumDisplaySettingsEx', 'EnumResourceLanguages', 'EnumResourceNames', 'EnumResourceTypes', 'ExpandEnvironmentStrings', 'ExitWindows', 'ExitWindowsEx', 'FindFiles', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FindCloseChangeNotification', 'FindExecutable', 'FormatMessage', 'FormatMessageW', 'FreeLibrary', 'GenerateConsoleCtrlEvent', 'GetAsyncKeyState', 'GetCommandLine', 'GetComputerName', 'GetComputerNameEx', 'GetComputerObjectName', 'GetMonitorInfo', 'GetUserName', 'GetUserNameEx', 'GetCursorPos', 'GetCurrentThread', 'GetCurrentThreadId', 'GetCurrentProcessId', 'GetCurrentProcess', 'GetConsoleTitle', 'GetDateFormat', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDllDirectory', 'GetDomainName', 'GetEnvironmentVariable', 'GetEnvironmentVariableW', 'GetFileAttributes', 'GetFileVersionInfo', 'GetFocus', 'GetFullPathName', 'GetHandleInformation', 'GetKeyboardLayout', 'GetKeyboardLayoutList', 'GetKeyboardLayoutName', 'GetKeyboardState', 'GetKeyState', 'GetLastError', 'GetLastInputInfo', 'GetLocalTime', 'GetLongPathName', 'GetLongPathNameW', 'GetLogicalDrives', 'GetLogicalDriveStrings', 'GetModuleFileName', 'GetModuleFileNameW', 'GetModuleHandle', 'GetPwrCapabilities', 'GetProfileSection', 'GetProcAddress', 'GetProfileVal', 'GetShortPathName', 'GetStdHandle', 'GetSysColor', 'GetSystemDefaultLangID', 'GetSystemDefaultLCID', 'GetSystemDirectory', 'GetSystemFileCacheSize', 'SetSystemFileCacheSize', 'GetSystemInfo', 'GetNativeSystemInfo', 'GetSystemMetrics', 'GetSystemTime', 'GetTempFileName', 'GetTempPath', 'GetThreadLocale', 'GetTickCount', 'GetTimeFormat', 'GetTimeZoneInformation', 'GetVersion', 'GetVersionEx', 'GetVolumeInformation', 'GetWindowsDirectory', 'GetWindowLong', 'GetUserDefaultLangID', 'GetUserDefaultLCID', 'GlobalMemoryStatus', 'GlobalMemoryStatusEx', 'keybd_event', 'mouse_event', 'LoadCursor', 'LoadKeyboardLayout', 'LoadLibrary', 'LoadLibraryEx', 'LoadResource', 'LoadString', 'MessageBeep', 'MessageBox', 'MonitorFromPoint', 'MonitorFromRect', 'MonitorFromWindow', 'MoveFile', 'MoveFileEx', 'OpenProcess', 'OutputDebugString', 'PostMessage', 'PostQuitMessage', 'PostThreadMessage', 'RegCloseKey', 'RegConnectRegistry', 'RegCopyTree', 'RegCreateKey', 'RegCreateKeyEx', 'RegDeleteKey', 'RegDeleteKeyEx', 'RegDeleteTree', 'RegDeleteValue', 'RegEnumKey', 'RegEnumKeyEx', 'RegEnumKeyExW', 'RegEnumValue', 'RegFlushKey', 'RegGetKeySecurity', 'RegLoadKey', 'RegOpenCurrentUser', 'RegOpenKey', 'RegOpenKeyEx', 'RegOpenKeyTransacted', 'RegOverridePredefKey', 'RegQueryValue', 'RegQueryValueEx', 'RegQueryInfoKey', 'RegQueryInfoKeyW', 'RegRestoreKey', 'RegSaveKey', 'RegSaveKeyEx', 'RegSetKeySecurity', 'RegSetValue', 'RegSetValueEx', 'RegUnLoadKey', 'RegisterWindowMessage', 'RegNotifyChangeKeyValue', 'SearchPath', 'SendMessage', 'SetConsoleCtrlHandler', 'SetConsoleTitle', 'SetCursorPos', 'SetDllDirectory', 'SetErrorMode', 'SetFileAttributes', 'SetLastError', 'SetSysColors', 'SetLocalTime', 'SetSystemTime', 'SetClassLong', 'SetClassWord', 'SetWindowWord', 'SetCursor', 'SetEnvironmentVariable', 'SetEnvironmentVariable', 'SetEnvironmentVariableW', 'SetHandleInformation', 'SetStdHandle', 'SetSystemPowerState', 'SetThreadLocale', 'SetTimeZoneInformation', 'SetWindowLong', 'ShellExecute', 'ShowCursor', 'Sleep', 'TerminateProcess', 'ToAsciiEx', 'Unicode', 'UpdateResource', 'VkKeyScan', 'VkKeyScan', 'WinExec', 'WinHelp', 'WriteProfileSection', 'WriteProfileVal', 'HIBYTE', 'LOBYTE', 'HIWORD', 'LOWORD', 'RGB', 'MAKELANGID', 'MAKEWORD', 'MAKELONG']
+__all__=['', 'AbortSystemShutdown', 'InitiateSystemShutdown', 'Apply', 'Beep', 'BeginUpdateResource', 'ChangeDisplaySettings', 'ChangeDisplaySettingsEx', 'ClipCursor', 'CloseHandle', 'CopyFile', 'DebugBreak', 'DeleteFile', 'DragQueryFile', 'DragFinish', 'DuplicateHandle', 'EndUpdateResource', 'EnumDisplayDevices', 'EnumDisplayMonitors', 'EnumDisplaySettings', 'EnumDisplaySettingsEx', 'EnumResourceLanguages', 'EnumResourceNames', 'EnumResourceTypes', 'ExpandEnvironmentStrings', 'ExitWindows', 'ExitWindowsEx', 'FindFiles', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FindCloseChangeNotification', 'FindExecutable', 'FormatMessage', 'FormatMessageW', 'FreeLibrary', 'GenerateConsoleCtrlEvent', 'GetAsyncKeyState', 'GetCommandLine', 'GetComputerName', 'GetComputerNameEx', 'GetComputerObjectName', 'GetMonitorInfo', 'GetUserName', 'GetUserNameEx', 'GetCursorPos', 'GetCurrentThread', 'GetCurrentThreadId', 'GetCurrentProcessId', 'GetCurrentProcess', 'GetConsoleTitle', 'GetDateFormat', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDllDirectory', 'GetDomainName', 'GetEnvironmentVariable', 'GetEnvironmentVariableW', 'GetFileAttributes', 'GetFileVersionInfo', 'GetFocus', 'GetFullPathName', 'GetHandleInformation', 'GetKeyboardLayout', 'GetKeyboardLayoutList', 'GetKeyboardLayoutName', 'GetKeyboardState', 'GetKeyState', 'GetLastError', 'GetLastInputInfo', 'GetLocalTime', 'GetLongPathName', 'GetLongPathNameW', 'GetLogicalDrives', 'GetLogicalDriveStrings', 'GetModuleFileName', 'GetModuleFileNameW', 'GetModuleHandle', 'GetPwrCapabilities', 'GetProfileSection', 'GetProcAddress', 'GetProfileVal', 'GetShortPathName', 'GetStdHandle', 'GetSysColor', 'GetSystemDefaultLangID', 'GetSystemDefaultLCID', 'GetSystemDirectory', 'GetSystemFileCacheSize', 'SetSystemFileCacheSize', 'GetSystemInfo', 'GetNativeSystemInfo', 'GetSystemMetrics', 'GetSystemTime', 'GetTempFileName', 'GetTempPath', 'GetThreadLocale', 'GetTickCount', 'GetTimeFormat', 'GetTimeZoneInformation', 'GetVersion', 'GetVersionEx', 'GetVolumeInformation', 'GetWindowsDirectory', 'GetWindowLong', 'GetUserDefaultLangID', 'GetUserDefaultLCID', 'GlobalMemoryStatus', 'GlobalMemoryStatusEx', 'keybd_event', 'mouse_event', 'LoadCursor', 'LoadKeyboardLayout', 'LoadLibrary', 'LoadLibraryEx', 'LoadResource', 'LoadString', 'MessageBeep', 'MessageBox', 'MonitorFromPoint', 'MonitorFromRect', 'MonitorFromWindow', 'MoveFile', 'MoveFileEx', 'OpenProcess', 'OutputDebugString', 'PostMessage', 'PostQuitMessage', 'PostThreadMessage', 'RegCloseKey', 'RegConnectRegistry', 'RegCopyTree', 'RegCreateKey', 'RegCreateKeyEx', 'RegDeleteKey', 'RegDeleteKeyEx', 'RegDeleteTree', 'RegDeleteValue', 'RegEnumKey', 'RegEnumKeyEx', 'RegEnumKeyExW', 'RegEnumValue', 'RegFlushKey', 'RegGetKeySecurity', 'RegLoadKey', 'RegOpenCurrentUser', 'RegOpenKey', 'RegOpenKeyEx', 'RegOpenKeyTransacted', 'RegOverridePredefKey', 'RegQueryValue', 'RegQueryValueEx', 'RegQueryInfoKey', 'RegQueryInfoKeyW', 'RegRestoreKey', 'RegSaveKey', 'RegSaveKeyEx', 'RegSetKeySecurity', 'RegSetValue', 'RegSetValueEx', 'RegUnLoadKey', 'RegisterWindowMessage', 'RegNotifyChangeKeyValue', 'SearchPath', 'SendMessage', 'SetConsoleCtrlHandler', 'SetConsoleTitle', 'SetCursorPos', 'SetDllDirectory', 'SetErrorMode', 'SetFileAttributes', 'SetLastError', 'SetSysColors', 'SetLocalTime', 'SetSystemTime', 'SetClassLong', 'SetClassWord', 'SetWindowWord', 'SetCursor', 'SetEnvironmentVariable', 'SetEnvironmentVariable', 'SetEnvironmentVariableW', 'SetHandleInformation', 'SetStdHandle', 'SetSystemPowerState', 'SetThreadLocale', 'SetTimeZoneInformation', 'SetWindowLong', 'ShellExecute', 'ShowCursor', 'Sleep', 'TerminateProcess', 'ToAsciiEx', 'Unicode', 'UpdateResource', 'VkKeyScan', 'VkKeyScan', 'WinExec', 'WinHelp', 'WriteProfileSection', 'WriteProfileVal', 'HIBYTE', 'LOBYTE', 'HIWORD', 'LOWORD', 'RGB', 'MAKELANGID', 'MAKEWORD', 'MAKELONG']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module, encapsulating the Windows Win32 API."""
 
 
@@ -133,13 +133,13 @@ Return ValueReturns DISP_CHANGE_SUCCESSFUL on success, or one of the DISP_CHANGE
     pass
         
 
-def ClipCursor(left,_top,_right,_bottom:'Tuple[int, int, int, int]') -> 'None':
+def ClipCursor(arg:'Tuple[int, int, int, int]') -> 'None':
     """
     Confines the cursor to a rectangular area on the screen.
 
 Args:
 
-      left,_top,_right,_bottom(Tuple[int, int, int, int]):contains the screen coordinates of the upper-left and lower-right corners of the confining rectangle. If this parameter is omitted or (0,0,0,0), the cursor is free to move anywhere on the screen.Win32 API References
+      arg(Tuple[int, int, int, int]):contains the screen coordinates of the upper-left and lower-right corners of the confining rectangle. If this parameter is omitted or (0,0,0,0), the cursor is free to move anywhere on the screen.Win32 API References
 
 Returns:
 
@@ -373,7 +373,7 @@ Returns:
     pass
         
 
-def EnumResourceLanguages(hmodule:'int',lpType:'PyResourceId',lpName:'PyResourceId') -> 'List[int]':
+def EnumResourceLanguages(hmodule:'int',lpType:'PyResourceId',lpName:'PyResourceId') -> 'List[Any]':
     """
     List languages for a resource
 
@@ -385,7 +385,7 @@ Args:
 
 Returns:
 
-      List[int]
+      List[Any]
         
     """
     pass
@@ -413,7 +413,7 @@ If passed as a string, form is '#' sign followed by decimal number. eg RT_ANICUR
     pass
         
 
-def EnumResourceTypes(hmodule:'int') -> 'List[str]':
+def EnumResourceTypes(hmodule:'int') -> 'List[Any]':
     """
     Return name or integer id of all resource types contained in 
 
@@ -425,13 +425,13 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass
         
 
-def ExpandEnvironmentStrings(in:'str') -> 'str':
+def ExpandEnvironmentStrings(_in:'str') -> 'str':
     """
     Expands environment-variable strings and replaces them with their 
 
@@ -439,7 +439,7 @@ defined values.
 
 Args:
 
-      in(str):String to expandWin32 API References
+      _in(str):String to expandWin32 API References
 
 Returns:
 
@@ -505,7 +505,7 @@ Return ValueReturns a sequence of WIN32_FIND_DATA tuples
     pass
         
 
-def FindFirstChangeNotification(pathName:'str',bSubDirs:'int',filter:'int') -> 'int':
+def FindFirstChangeNotification(pathName:'str',bSubDirs:'int',_filter:'int') -> 'int':
     """
     Creates a change notification handle and sets up initial change 
 
@@ -515,7 +515,7 @@ Args:
 
       pathName(str):Specifies the path of the directory to watch.
       bSubDirs(int):Specifies whether the function will monitor the directory or the directory tree. If this parameter is TRUE, the function monitors the directory tree rooted at the specified directory; if it is FALSE, it monitors only the specified directory
-      filter(int):Specifies the filter conditions that satisfy a change notification wait. This parameter can be one or more of the following values:ValueMeaningFILE_NOTIFY_CHANGE_FILE_NAMEAny file name change in the watched directory or subtree causes a change notification wait operation to return. Changes include renaming, creating, or deleting a file name.FILE_NOTIFY_CHANGE_DIR_NAMEAny directory-name change in the watched directory or subtree causes a change notification wait operation to return. Changes include creating or deleting a directory.FILE_NOTIFY_CHANGE_ATTRIBUTESAny attribute change in the watched directory or subtree causes a change notification wait operation to return.FILE_NOTIFY_CHANGE_SIZEAny file-size change in the watched directory or subtree causes a change notification wait operation to return. The operating system detects a change in file size only when the file is written to the disk. For operating systems that use extensive caching, detection occurs only when the cache is sufficiently flushed.FILE_NOTIFY_CHANGE_LAST_WRITEAny change to the last write-time of files in the watched directory or subtree causes a change notification wait operation to return. The operating system detects a change to the last write-time only when the file is written to the disk. For operating systems that use extensive caching, detection occurs only when the cache is sufficiently flushed.FILE_NOTIFY_CHANGE_SECURITYAny security-descriptor change in the watched directory or subtree causes a change notification wait operation to returnReturn ValueAlthough the result is a handle, the handle can not be closed via CloseHandle() - therefore a PyHandle object is not used.
+      _filter(int):Specifies the filter conditions that satisfy a change notification wait. This parameter can be one or more of the following values:ValueMeaningFILE_NOTIFY_CHANGE_FILE_NAMEAny file name change in the watched directory or subtree causes a change notification wait operation to return. Changes include renaming, creating, or deleting a file name.FILE_NOTIFY_CHANGE_DIR_NAMEAny directory-name change in the watched directory or subtree causes a change notification wait operation to return. Changes include creating or deleting a directory.FILE_NOTIFY_CHANGE_ATTRIBUTESAny attribute change in the watched directory or subtree causes a change notification wait operation to return.FILE_NOTIFY_CHANGE_SIZEAny file-size change in the watched directory or subtree causes a change notification wait operation to return. The operating system detects a change in file size only when the file is written to the disk. For operating systems that use extensive caching, detection occurs only when the cache is sufficiently flushed.FILE_NOTIFY_CHANGE_LAST_WRITEAny change to the last write-time of files in the watched directory or subtree causes a change notification wait operation to return. The operating system detects a change to the last write-time only when the file is written to the disk. For operating systems that use extensive caching, detection occurs only when the cache is sufficiently flushed.FILE_NOTIFY_CHANGE_SECURITYAny security-descriptor change in the watched directory or subtree causes a change notification wait operation to returnReturn ValueAlthough the result is a handle, the handle can not be closed via CloseHandle() - therefore a PyHandle object is not used.
 
 Returns:
 
@@ -600,7 +600,7 @@ Returns:
     pass
         
 
-def FindExecutable(filename:'str',dir:'str') -> 'Tuple[int, str]':
+def FindExecutable(filename:'str',_dir:'str') -> 'Tuple[int, str]':
     """
     Retrieves the name and handle of the executable (.EXE) file 
 
@@ -609,7 +609,7 @@ associated with the specified filename.
 Args:
 
       filename(str):A file name.  This can be either a document or executable file.
-      dir(str):The default directory.CommentsThe function will raise an exception if it fails.Win32 API References
+      _dir(str):The default directory.CommentsThe function will raise an exception if it fails.Win32 API References
 
 Returns:
 
@@ -948,7 +948,7 @@ Returns:
     pass
         
 
-def GetDateFormat(locale:'int',flags:'int',time:'PyTime',format:'str') -> 'str':
+def GetDateFormat(locale:'int',flags:'int',time:'PyTime',_format:'str') -> 'str':
     """
     Formats a date as a date string for a specified locale. The function formats 
 
@@ -959,7 +959,7 @@ Args:
       locale(int):
       flags(int):
       time(PyTime):The time to use, or None to use the current time.
-      format(str):May be None
+      _format(str):May be None
 
 Returns:
 
@@ -1113,14 +1113,14 @@ An exception is raised on failure.
     pass
         
 
-def GetFileVersionInfo(Filename:'Union[str, Any]',SubBlock:'Union[str, Any]') -> 'None':
+def GetFileVersionInfo(Filename:'Union[Any, str]',SubBlock:'Union[Any, str]') -> 'None':
     """
     Retrieve version info for specified file
 
 Args:
 
-      Filename(Union[str, Any]):File to query for version info
-      SubBlock(Union[str, Any]):Information to return: \\ for VS_FIXEDFILEINFO, \\VarFileInfo\\Translation for languages/codepages available
+      Filename(Union[Any, str]):File to query for version info
+      SubBlock(Union[Any, str]):Information to return: \\ for VS_FIXEDFILEINFO, \\VarFileInfo\\Translation for languages/codepages available
 
 Returns:
 
@@ -1535,13 +1535,13 @@ Return ValueThe return value is the same type as the default parameter.
     pass
         
 
-def GetShortPathName(path:'Union[str, Any]') -> 'str':
+def GetShortPathName(path:'Union[Any, str]') -> 'str':
     """
     Obtains the short path form of the specified path.
 
 Args:
 
-      path(Union[str, Any]):If a unicode object is passed, GetShortPathNameW will be called and a unicode object returned.CommentsThe short path name is an 8.3 compatible file name.  As the input path does not need to be absolute, the returned name may be longer than the input path.Win32 API References
+      path(Union[Any, str]):If a unicode object is passed, GetShortPathNameW will be called and a unicode object returned.CommentsThe short path name is an 8.3 compatible file name.  As the input path does not need to be absolute, the returned name may be longer than the input path.Win32 API References
 
 Returns:
 
@@ -1829,7 +1829,7 @@ Returns:
     pass
         
 
-def GetTimeFormat(locale:'int',flags:'int',time:'PyTime',format:'str') -> 'str':
+def GetTimeFormat(locale:'int',flags:'int',time:'PyTime',_format:'str') -> 'str':
     """
     Formats a time as a time string for a specified locale. The function formats 
 
@@ -1840,7 +1840,7 @@ Args:
       locale(int):
       flags(int):
       time(PyTime):The time to use, or None to use the current time.
-      format(str):May be None
+      _format(str):May be None
 
 Returns:
 
@@ -1956,13 +1956,13 @@ word is 0 if the platform is Windows NT, or 1 if Win32s on Windows 3.1
     pass
         
 
-def GetVersionEx(format:'int'=0) -> 'tuple':
+def GetVersionEx(_format:'int'=0) -> 'tuple':
     """
     Returns the current version of Windows, and information about the environment.
 
 Args:
 
-      format(int):The format of the version info to return. May be 0 (for OSVERSIONINFO) or 1 (for OSVERSIONINFOEX)Return ValueThe return value is a tuple with the following information.Items[0] int : majorVersionIdentifies the major version number of the operating system.[1] int : minorVersionIdentifies the minor version number of the operating system.[2] int : buildNumberIdentifies the build number of the operating system in the low-order word. (The high-order word contains the major and minor version numbers.)[3] int : platformIdIdentifies the platform supported by the operating system. May be one of VER_PLATFORM_WIN32s, VER_PLATFORM_WIN32_WINDOWS or VER_PLATFORM_WIN32_NT[4] string : versionContains arbitrary additional information about the operating system.Return Valueor if the format param is 1, the return value is a tuple with:Items[0] int : majorVersionIdentifies the major version number of the operating system.[1] int : minorVersionIdentifies the minor version number of the operating system.[2] int : buildNumberIdentifies the build number of the operating system in the low-order word. (The high-order word contains the major and minor version numbers.)[3] int : platformIdIdentifies the platform supported by the operating system. May be one of VER_PLATFORM_WIN32s, VER_PLATFORM_WIN32_WINDOWS or VER_PLATFORM_WIN32_NT[4] string : versionContains arbitrary additional information about the operating system.[5] int : wServicePackMajorMajor version number of the latest Service Pack installed on the system. For example, for Service Pack 3, the major version number is 3. If no Service Pack has been installed, the value is zero.[6] int : wServicePackMinorMinor version number of the latest Service Pack installed on the system. For example, for Service Pack 3, the minor version number is 0.[7] int : wSuiteMaskBit flags that identify the product suites available on the system. This member can be a combination of the VER_SUITE_* values.[8] int : wProductTypeAdditional information about the system. This member can be one of the VER_NT_* values.[9] int : wReserved
+      _format(int):The format of the version info to return. May be 0 (for OSVERSIONINFO) or 1 (for OSVERSIONINFOEX)Return ValueThe return value is a tuple with the following information.Items[0] int : majorVersionIdentifies the major version number of the operating system.[1] int : minorVersionIdentifies the minor version number of the operating system.[2] int : buildNumberIdentifies the build number of the operating system in the low-order word. (The high-order word contains the major and minor version numbers.)[3] int : platformIdIdentifies the platform supported by the operating system. May be one of VER_PLATFORM_WIN32s, VER_PLATFORM_WIN32_WINDOWS or VER_PLATFORM_WIN32_NT[4] string : versionContains arbitrary additional information about the operating system.Return Valueor if the format param is 1, the return value is a tuple with:Items[0] int : majorVersionIdentifies the major version number of the operating system.[1] int : minorVersionIdentifies the minor version number of the operating system.[2] int : buildNumberIdentifies the build number of the operating system in the low-order word. (The high-order word contains the major and minor version numbers.)[3] int : platformIdIdentifies the platform supported by the operating system. May be one of VER_PLATFORM_WIN32s, VER_PLATFORM_WIN32_WINDOWS or VER_PLATFORM_WIN32_NT[4] string : versionContains arbitrary additional information about the operating system.[5] int : wServicePackMajorMajor version number of the latest Service Pack installed on the system. For example, for Service Pack 3, the major version number is 3. If no Service Pack has been installed, the value is zero.[6] int : wServicePackMinorMinor version number of the latest Service Pack installed on the system. For example, for Service Pack 3, the minor version number is 0.[7] int : wSuiteMaskBit flags that identify the product suites available on the system. This member can be a combination of the VER_SUITE_* values.[8] int : wProductTypeAdditional information about the system. This member can be one of the VER_NT_* values.[9] int : wReserved
 
 Returns:
 
@@ -2295,14 +2295,14 @@ Returns:
     pass
         
 
-def LoadResource(handle:'int',type:'PyResourceId',name:'PyResourceId',language:'int') -> 'str':
+def LoadResource(handle:'int',_type:'PyResourceId',name:'PyResourceId',language:'int') -> 'str':
     """
     Finds and loads a resource from a PE file.
 
 Args:
 
       handle(int):The handle of the module containing the resource. Use None for currrent process executable.
-      type(PyResourceId):The type of resource to load.
+      _type(PyResourceId):The type of resource to load.
       name(PyResourceId):The name or Id of the resource to load.
       language(int):Language to use, defaults to LANG_NEUTRAL.
 
@@ -2332,13 +2332,13 @@ Returns:
     pass
         
 
-def MessageBeep(type:'int') -> 'int':
+def MessageBeep(arg:'int') -> 'int':
     """
     Plays a predefined waveform sound.
 
 Args:
 
-      type(int):Specifies the sound type, as identified by an entry in the [sounds] section of the registry. This parameter can be one of MB_ICONASTERISK, MB_ICONEXCLAMATION, MB_ICONHAND, MB_ICONQUESTION or MB_OK.CommentsThe waveform sound for each sound type is identified by an entry in the [sounds] section of the registry.
+      arg(int):Specifies the sound type, as identified by an entry in the [sounds] section of the registry. This parameter can be one of MB_ICONASTERISK, MB_ICONEXCLAMATION, MB_ICONHAND, MB_ICONQUESTION or MB_OK.CommentsThe waveform sound for each sound type is identified by an entry in the [sounds] section of the registry.
 
 Returns:
 
@@ -2348,7 +2348,7 @@ Returns:
     pass
         
 
-def MessageBox(hwnd:'int',message:'str',title:'Union[None, str]',style:'int',language:'int') -> 'int':
+def MessageBox(hwnd:'int',message:'str',title:'Union[None, str]',arg:'int',arg1:'int') -> 'int':
     """
     Display a message box.
 
@@ -2357,8 +2357,8 @@ Args:
       hwnd(int):The handle of the parent window.  See the comments section.
       message(str):The message to be displayed in the message box.
       title(Union[None, str]):The title for the message box.  If None, the applications title will be used.
-      style(int):The style of the message box.
-      language(int):The language ID to use.CommentsNormally, a program in a GUI environment will use one of the MessageBox methods supplied by the GUI (eg, win32ui::MessageBox or PyCWnd::MessageBox)Return ValueAn integer identifying the button pressed to dismiss the dialog.
+      arg(int):The style of the message box.
+      arg1(int):The language ID to use.CommentsNormally, a program in a GUI environment will use one of the MessageBox methods supplied by the GUI (eg, win32ui::MessageBox or PyCWnd::MessageBox)Return ValueAn integer identifying the button pressed to dismiss the dialog.
 
 Returns:
 
@@ -2570,13 +2570,13 @@ Returns:
     pass
         
 
-def RegCloseKey(key:'Union[PyHKEY, int]') -> 'None':
+def RegCloseKey(key:'Union[int, PyHKEY]') -> 'None':
     """
     Closes a previously opened registry key.
 
 Args:
 
-      key(Union[PyHKEY, int]):The key to be closed.Win32 API References
+      key(Union[int, PyHKEY]):The key to be closed.Win32 API References
 
 Returns:
 
@@ -2627,13 +2627,13 @@ Returns:
     pass
         
 
-def RegCreateKey(key:'Union[PyHKEY, int]',subKey:'str') -> 'PyHKEY':
+def RegCreateKey(key:'Union[int, PyHKEY]',subKey:'str') -> 'PyHKEY':
     """
     Creates the specified key, or opens the key if it already exists.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of a key that this method opens or creates. This key must be a subkey of the key identified by the key parameter. If key is one of the predefined keys, subKey may be None. In that case, the handle returned is the same hkey handle passed in to the function.Win32 API References
 
 Returns:
@@ -2648,13 +2648,13 @@ If the function fails, an exception is raised.
     pass
         
 
-def RegCreateKeyEx(Key:'Union[PyHKEY, int]',SubKey:'str',samDesired:'int',Options:'int',Class:'str'=None,SecurityAttributes:'PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'Tuple[PyHKEY, int]':
+def RegCreateKeyEx(Key:'Union[int, PyHKEY]',SubKey:'str',samDesired:'int',Options:'int',Class:'str'=None,SecurityAttributes:'PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'Tuple[PyHKEY, int]':
     """
     Extended version of RegCreateKey
 
 Args:
 
-      Key(Union[PyHKEY, int]):Registry key or one of win32con.HKEY_* values
+      Key(Union[int, PyHKEY]):Registry key or one of win32con.HKEY_* values
       SubKey(str):Name of subkey to open or create.
       samDesired(int):Access allowed to handle, combination of win32con.KEY_* constants.  Can also contain standard access rights such as DELETE, WRITE_OWNER, etc.
       Options(int):One of the winnt.REG_OPTION_* values
@@ -2674,13 +2674,13 @@ REG_OPENED_EXISTING_KEY)
     pass
         
 
-def RegDeleteKey(key:'Union[PyHKEY, int]',subKey:'str') -> 'None':
+def RegDeleteKey(key:'Union[int, PyHKEY]',subKey:'str') -> 'None':
     """
     Deletes the specified key.  This method can not delete keys with subkeys.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the key to delete. This key must be a subkey of the key identified by the key parameter. This value must not be None, and the key may not have subkeys.CommentsIf the method succeeds, the entire key, including all of its values, is removed. If the method fails, and exception is raised.Win32 API References
 
 Returns:
@@ -2691,13 +2691,13 @@ Returns:
     pass
         
 
-def RegDeleteKeyEx(Key:'Union[PyHKEY, int]',SubKey:'str',samDesired:'int'=0,Transaction:'int'=None) -> 'None':
+def RegDeleteKeyEx(Key:'Union[int, PyHKEY]',SubKey:'str',samDesired:'int'=0,Transaction:'int'=None) -> 'None':
     """
     Deletes a registry key from 32 or 64 bit registry view
 
 Args:
 
-      Key(Union[PyHKEY, int]):Registry key or one of win32con.HKEY_* values
+      Key(Union[int, PyHKEY]):Registry key or one of win32con.HKEY_* values
       SubKey(str):Name of subkey to be deleted.
       samDesired(int):Can be KEY_WOW64_32KEY or KEY_WOW64_64KEY to specify alternate registry view
       Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsAccepts keyword args.Requires 64-bit XP, Vista, or later.Key to be deleted cannot contain subkeysIf a transaction handle is specified, RegDeleteKeyTransacted is calledWin32 API References
@@ -2727,13 +2727,13 @@ Returns:
     pass
         
 
-def RegDeleteValue(key:'Union[PyHKEY, int]',value:'str') -> 'None':
+def RegDeleteValue(key:'Union[int, PyHKEY]',value:'str') -> 'None':
     """
     Removes a named value from the specified registry key.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       value(str):The name of the value to remove.Win32 API References
 
 Returns:
@@ -2744,7 +2744,7 @@ Returns:
     pass
         
 
-def RegEnumKey(key:'Union[PyHKEY, int]',index:'int') -> 'str':
+def RegEnumKey(key:'Union[int, PyHKEY]',index:'int') -> 'str':
     """
     Enumerates subkeys of the specified open registry key. The function retrieves 
 
@@ -2752,7 +2752,7 @@ the name of one subkey each time it is called.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       index(int):The index of the key to retrieve.Win32 API References
 
 Returns:
@@ -2763,13 +2763,13 @@ Returns:
     pass
         
 
-def RegEnumKeyEx(Key:'Union[PyHKEY, int]') -> 'tuple':
+def RegEnumKeyEx(Key:'Union[int, PyHKEY]') -> 'tuple':
     """
     Lists subkeys of a registry key
 
 Args:
 
-      Key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS.Return ValueReturns subkeys as tuples of  (name, reserved, class, last write time). Reserved will always be 0.
+      Key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS.Return ValueReturns subkeys as tuples of  (name, reserved, class, last write time). Reserved will always be 0.
 
 Returns:
 
@@ -2799,7 +2799,7 @@ Returns:
     pass
         
 
-def RegEnumValue(key:'Union[PyHKEY, int]',index:'int') -> 'Tuple[str, Any, type]':
+def RegEnumValue(key:'Union[int, PyHKEY]',index:'int') -> 'Tuple[str, Any, type]':
     """
     Enumerates values of the specified open registry key. The 
 
@@ -2807,7 +2807,7 @@ function retrieves the name of one subkey each time it is called.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       index(int):The index of the key to retrieve.CommentsThis function is typically called repeatedly, until an exception is raised, indicating no more values.Win32 API References
 
 Returns:
@@ -2818,13 +2818,13 @@ Returns:
     pass
         
 
-def RegFlushKey(key:'Union[PyHKEY, int]') -> 'None':
+def RegFlushKey(key:'Union[int, PyHKEY]') -> 'None':
     """
     Writes all the attributes of the specified key to the registry.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSCommentsIt is not necessary to call RegFlushKey to change a key. Registry changes are flushed to disk by the registry using its lazy flusher. Registry changes are also flushed to disk at system shutdown. Unlike win32api::RegCloseKey, the RegFlushKey method returns only when all the data has been written to the registry. An application should only call RegFlushKey if it requires absolute certainty that registry changes are on disk. If you don't know whether a RegFlushKey call is required, it probably isn't.Win32 API References
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSCommentsIt is not necessary to call RegFlushKey to change a key. Registry changes are flushed to disk by the registry using its lazy flusher. Registry changes are also flushed to disk at system shutdown. Unlike win32api::RegCloseKey, the RegFlushKey method returns only when all the data has been written to the registry. An application should only call RegFlushKey if it requires absolute certainty that registry changes are on disk. If you don't know whether a RegFlushKey call is required, it probably isn't.Win32 API References
 
 Returns:
 
@@ -2834,13 +2834,13 @@ Returns:
     pass
         
 
-def RegGetKeySecurity(key:'Union[PyHKEY, int]',security_info:'int') -> 'PySECURITY_DESCRIPTOR':
+def RegGetKeySecurity(key:'Union[int, PyHKEY]',security_info:'int') -> 'PySECURITY_DESCRIPTOR':
     """
     Retrieves the security on the specified registry key.
 
 Args:
 
-      key(Union[PyHKEY, int]):Handle to an open key for which the security descriptor is set.
+      key(Union[int, PyHKEY]):Handle to an open key for which the security descriptor is set.
       security_info(int):Specifies the components of the security descriptor to retrieve. The value can be a combination of the *_SECURITY_INFORMATION constants.Win32 API References
 
 Returns:
@@ -2851,7 +2851,7 @@ Returns:
     pass
         
 
-def RegLoadKey(key:'Union[PyHKEY, int]',subKey:'str',filename:'str') -> 'None':
+def RegLoadKey(key:'Union[int, PyHKEY]',subKey:'str',filename:'str') -> 'None':
     """
     The RegLoadKey method creates a subkey under HKEY_USER or HKEY_LOCAL_MACHINE 
 
@@ -2859,7 +2859,7 @@ and stores registration information from a specified file into that subkey.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the key to delete. This key must be a subkey of the key identified by the key parameter. This value must not be None, and the key may not have subkeys.
       filename(str):The name of the file to load registry data from. This file must have been created with the win32api::RegSaveKey function. Under the file allocation table (FAT) file system, the filename may not have an extension.CommentsA call to RegLoadKey fails if the calling process does not have the SE_RESTORE_PRIVILEGE privilege. If hkey is a handle returned by win32api::RegConnectRegistry, then the path specified in fileName is relative to the remote computer.Win32 API References
 
@@ -2903,13 +2903,13 @@ Returns:
     pass
         
 
-def RegOpenKeyEx(key:'Union[PyHKEY, int]',subKey:'str',sam:'int',reserved:'int'=0) -> 'PyHKEY':
+def RegOpenKeyEx(key:'Union[int, PyHKEY]',subKey:'str',sam:'int',reserved:'int'=0) -> 'PyHKEY':
     """
     Opens the specified key.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of a key that this method opens. This key must be a subkey of the key identified by the key parameter. If key is one of the predefined keys, subKey may be None. In that case, the handle returned is the same key handle passed in to the function.
       sam(int):Specifies an access mask that describes the desired security access for the new key. This parameter can be a combination of the following win32con constants: KEY_ALL_ACCESSKEY_CREATE_LINKKEY_CREATE_SUB_KEYKEY_ENUMERATE_SUB_KEYSKEY_EXECUTEKEY_NOTIFYKEY_QUERY_VALUEKEY_READKEY_SET_VALUEKEY_WRITEWin32 API References
       reserved(int):Reserved.  Must be zero.
@@ -2926,13 +2926,13 @@ If the function fails, an exception is raised.
     pass
         
 
-def RegOpenKeyTransacted(Key:'Union[PyHKEY, int]',SubKey:'str',samDesired:'int',Transaction:'int',Options:'int'=0) -> 'PyHKEY':
+def RegOpenKeyTransacted(Key:'Union[int, PyHKEY]',SubKey:'str',samDesired:'int',Transaction:'int',Options:'int'=0) -> 'PyHKEY':
     """
     Opens a registry key as part of a transaction
 
 Args:
 
-      Key(Union[PyHKEY, int]):Registry key or one of win32con.HKEY_* values
+      Key(Union[int, PyHKEY]):Registry key or one of win32con.HKEY_* values
       SubKey(str):Name of subkey to open.  Can be None to reopen an existing key.
       samDesired(int):Access allowed to handle, combination of win32con.KEY_* constants.  Can also contain standard access rights such as DELETE, WRITE_OWNER, etc.
       Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransaction
@@ -2965,7 +2965,7 @@ Returns:
     pass
         
 
-def RegQueryValue(key:'Union[PyHKEY, int]',subKey:'str') -> 'str':
+def RegQueryValue(key:'Union[int, PyHKEY]',subKey:'str') -> 'str':
     """
     The RegQueryValue method retrieves the value associated with 
 
@@ -2973,7 +2973,7 @@ the unnamed value for a specified key in the registry.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the subkey with which the value is associated. If this parameter is None or empty, the function retrieves the value set by the win32api::RegSetValue method for the key identified by key.CommentsValues in the registry have name, type, and data components. This method retrieves the data for a key's first value that has a NULL name. But the underlying API call doesn't return the type, Lame Lame Lame, DONT USE THIS!!!Win32 API References
 
 Returns:
@@ -2984,7 +2984,7 @@ Returns:
     pass
         
 
-def RegQueryValueEx(key:'Union[PyHKEY, int]',valueName:'str') -> 'Tuple[Any, type]':
+def RegQueryValueEx(key:'Union[int, PyHKEY]',valueName:'str') -> 'Tuple[Any, type]':
     """
     Retrieves the type and data for a specified value name associated 
 
@@ -2992,7 +2992,7 @@ with an open registry key.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       valueName(str):The name of the value to query.CommentsValues in the registry have name, type, and data components. This method retrieves the data for the given value.Win32 API References
 
 Returns:
@@ -3003,7 +3003,7 @@ Returns:
     pass
         
 
-def RegQueryInfoKey(key:'Union[PyHKEY, int]') -> 'Tuple[int, int, Any]':
+def RegQueryInfoKey(key:'Union[int, PyHKEY]') -> 'Tuple[int, int, Any]':
     """
     Returns the number of 
 
@@ -3015,7 +3015,7 @@ and if available the last time the key was modified as
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSWin32 API References
+      key(Union[int, PyHKEY]):An already open key, or or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSWin32 API References
 
 Returns:
 
@@ -3059,7 +3059,7 @@ Returns:
     pass
         
 
-def RegSaveKey(key:'Union[PyHKEY, int]',filename:'str',sa:'PySECURITY_ATTRIBUTES'=None) -> 'None':
+def RegSaveKey(key:'Union[int, PyHKEY]',filename:'str',sa:'PySECURITY_ATTRIBUTES'=None) -> 'None':
     """
     The RegSaveKey method saves the specified key, and all its subkeys to the specified 
 
@@ -3067,7 +3067,7 @@ file.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       filename(str):The name of the file to save registry data to. This file cannot already exist. If this filename includes an extension, it cannot be used on file allocation table (FAT) file systems by the win32api::RegLoadKey, win32api::RegReplaceKey, or win32api::RegRestoreKey methods.
       sa(PySECURITY_ATTRIBUTES):The security attributes of the created file.CommentsIf key represents a key on a remote computer, the path described by fileName is relative to the remote computer. The caller of this method must possess the SeBackupPrivilege security privilege.Win32 API References
 
@@ -3098,13 +3098,13 @@ Returns:
     pass
         
 
-def RegSetKeySecurity(key:'Union[PyHKEY, int]',security_info:'int',sd:'PySECURITY_DESCRIPTOR') -> 'None':
+def RegSetKeySecurity(key:'Union[int, PyHKEY]',security_info:'int',sd:'PySECURITY_DESCRIPTOR') -> 'None':
     """
     Sets the security on the specified registry key.
 
 Args:
 
-      key(Union[PyHKEY, int]):Handle to an open key for which the security descriptor is set.
+      key(Union[int, PyHKEY]):Handle to an open key for which the security descriptor is set.
       security_info(int):Specifies the components of the security descriptor to set. The value can be a combination of the *_SECURITY_INFORMATION constants.
       sd(PySECURITY_DESCRIPTOR):The new security descriptor for the keyCommentsIf key is one of the predefined keys, the predefined key should be closed with win32api::RegCloseKey. That ensures that the new security information is in effect the next time the predefined key is referenced.Win32 API References
 
@@ -3116,15 +3116,15 @@ Returns:
     pass
         
 
-def RegSetValue(key:'Union[PyHKEY, int]',subKey:'str',type:'int',value:'str') -> 'None':
+def RegSetValue(key:'Union[int, PyHKEY]',subKey:'str',_type:'int',value:'str') -> 'None':
     """
     Associates a value with a specified key.  Currently, only strings are supported.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the subkey with which the value is associated. This parameter can be None or empty, in which case the value will be added to the key identified by the key parameter.
-      type(int):Type of data. Must be win32con.REG_SZ
+      _type(int):Type of data. Must be win32con.REG_SZ
       value(str):The value to associate with the key.CommentsIf the key specified by the lpszSubKey parameter does not exist, the RegSetValue function creates it. Value lengths are limited by available memory. Long values (more than 2048 bytes) should be stored as files with the filenames stored in the configuration registry. This helps the registry perform efficiently. The key identified by the key parameter must have been opened with KEY_SET_VALUE access.Win32 API References
 
 Returns:
@@ -3135,16 +3135,16 @@ Returns:
     pass
         
 
-def RegSetValueEx(key:'Union[PyHKEY, int]',valueName:'str',reserved:'any',type:'int',value:'Any') -> 'None':
+def RegSetValueEx(key:'Union[int, PyHKEY]',valueName:'str',reserved:'Any',_type:'int',value:'Any') -> 'None':
     """
     Stores data in the value field of an open registry key.
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       valueName(str):The name of the value to set. If a value with this name is not already present in the key, the method adds it to the key. If this parameter is None or an empty string and the type parameter is the win32api.REG_SZ type, this function sets the same value the win32api::RegSetValue method would set.
-      reserved(any):Place holder for reserved argument.  Zero will always be passed to the API function.
-      type(int):Type of data.ValueMeaningREG_BINARYBinary data in any form.REG_DWORDA 32-bit number.REG_DWORD_LITTLE_ENDIANA 32-bit number in little-endian format. This is equivalent to REG_DWORD.In little-endian format, a multi-byte value is stored in memory from the lowest byte (the little end) to the highest byte. For example, the value 0x12345678 is stored as (0x78 0x56 0x34 0x12) in little-endian format.REG_QWORDA 64-bit number.REG_QWORD_LITTLE_ENDIANA 64-bit number in little-endian format. This is equivalent to REG_QWORD.In little-endian format, a multi-byte value is stored in memory from the lowest byte (the little end) to the highest byte. For example, the value 0x12345678 is stored as (0x78 0x56 0x34 0x12) in little-endian format. Windows NT and Windows 95 are designed to run on little-endian computer architectures. A user may connect to computers that have big-endian architectures, such as some UNIX systems.REG_DWORD_BIG_ENDIANA 32-bit number in big-endian format. In big-endian format, a multi-byte value is stored in memory from the highest byte (the big end) to the lowest byte. For example, the value 0x12345678 is stored as (0x12 0x34 0x56 0x78) in big-endian format.REG_EXPAND_SZA null-terminated string that contains unexpanded references to environment variables (for example, %PATH%). It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions.REG_LINKA Unicode symbolic link.REG_MULTI_SZAn array of null-terminated strings, terminated by two null characters.REG_NONENo defined value type.REG_RESOURCE_LISTA device-driver resource list.REG_SZA null-terminated string. It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions
+      reserved(Any):Place holder for reserved argument.  Zero will always be passed to the API function.
+      _type(int):Type of data.ValueMeaningREG_BINARYBinary data in any form.REG_DWORDA 32-bit number.REG_DWORD_LITTLE_ENDIANA 32-bit number in little-endian format. This is equivalent to REG_DWORD.In little-endian format, a multi-byte value is stored in memory from the lowest byte (the little end) to the highest byte. For example, the value 0x12345678 is stored as (0x78 0x56 0x34 0x12) in little-endian format.REG_QWORDA 64-bit number.REG_QWORD_LITTLE_ENDIANA 64-bit number in little-endian format. This is equivalent to REG_QWORD.In little-endian format, a multi-byte value is stored in memory from the lowest byte (the little end) to the highest byte. For example, the value 0x12345678 is stored as (0x78 0x56 0x34 0x12) in little-endian format. Windows NT and Windows 95 are designed to run on little-endian computer architectures. A user may connect to computers that have big-endian architectures, such as some UNIX systems.REG_DWORD_BIG_ENDIANA 32-bit number in big-endian format. In big-endian format, a multi-byte value is stored in memory from the highest byte (the big end) to the lowest byte. For example, the value 0x12345678 is stored as (0x12 0x34 0x56 0x78) in big-endian format.REG_EXPAND_SZA null-terminated string that contains unexpanded references to environment variables (for example, %PATH%). It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions.REG_LINKA Unicode symbolic link.REG_MULTI_SZAn array of null-terminated strings, terminated by two null characters.REG_NONENo defined value type.REG_RESOURCE_LISTA device-driver resource list.REG_SZA null-terminated string. It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions
       value(Any):The value to be stored with the specified value name.CommentsThis method can also set additional value and type information for the specified key. The key identified by the key parameter must have been opened with KEY_SET_VALUE access. To open the key, use the win32api::RegCreateKeyEx or win32api::RegOpenKeyEx methods. Value lengths are limited by available memory. Long values (more than 2048 bytes) should be stored as files with the filenames stored in the configuration registry. This helps the registry perform efficiently. The key identified by the key parameter must have been opened with KEY_SET_VALUE access.Win32 API References
 
 Returns:
@@ -3155,13 +3155,13 @@ Returns:
     pass
         
 
-def RegUnLoadKey(key:'Union[PyHKEY, int]',subKey:'str') -> 'None':
+def RegUnLoadKey(key:'Union[int, PyHKEY]',subKey:'str') -> 'None':
     """
     None
 
 Args:
 
-      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_USERSHKEY_LOCAL_MACHINE
+      key(Union[int, PyHKEY]):An already open key, or any one of the following win32con constants:HKEY_USERSHKEY_LOCAL_MACHINE
       subKey(str):The name of the key to unload. This key must be a subkey of the key identified by the key parameter. This value must not be None.CommentsA call to RegUnLoadKey fails if the calling process does not have the SE_RESTORE_PRIVILEGE privilege. If hkey is a handle returned by win32api::RegConnectRegistry, then the path specified in fileName is relative to the remote computer.Win32 API References
 
 Returns:
@@ -3190,13 +3190,13 @@ Returns:
     pass
         
 
-def RegNotifyChangeKeyValue(key:'Union[PyHKEY, int]',bWatchSubTree:'int',dwNotifyFilter:'int',hKey:'int',fAsynchronous:'int') -> 'None':
+def RegNotifyChangeKeyValue(key:'Union[int, PyHKEY]',bWatchSubTree:'int',dwNotifyFilter:'int',hKey:'int',fAsynchronous:'int') -> 'None':
     """
     Receive notification of registry changes
 
 Args:
 
-      key(Union[PyHKEY, int]):Handle to an open registry key
+      key(Union[int, PyHKEY]):Handle to an open registry key
       bWatchSubTree(int):Boolean, notify of changes to subkeys if True
       dwNotifyFilter(int):Combination of REG_NOTIFY_CHANGE_* constants
       hKey(int):Event handle to be signalled, use None if fAsynchronous is False
@@ -3288,13 +3288,13 @@ Returns:
     pass
         
 
-def SetCursorPos(x,y:'Tuple[int, int]') -> 'None':
+def SetCursorPos(arg:'Tuple[int, int]') -> 'None':
     """
     The SetCursorPos function moves the cursor to the specified screen coordinates.
 
 Args:
 
-      x,y(Tuple[int, int]):The new position.Win32 API References
+      arg(Tuple[int, int]):The new position.Win32 API References
 
 Returns:
 
@@ -3503,14 +3503,14 @@ Return ValueThe result is the previous cursor if there was one.
     pass
         
 
-def SetEnvironmentVariable(Name:'Union[str, Any]',Value:'Union[str, Any]') -> 'None':
+def SetEnvironmentVariable(Name:'Union[Any, str]',Value:'Union[Any, str]') -> 'None':
     """
     Creates, deletes, or changes the value of an environment variable.
 
 Args:
 
-      Name(Union[str, Any]):Name of the environment variable
-      Value(Union[str, Any]):Value to be set, use None to remove variableWin32 API References
+      Name(Union[Any, str]):Name of the environment variable
+      Value(Union[Any, str]):Value to be set, use None to remove variableWin32 API References
 
 Returns:
 
@@ -3520,14 +3520,14 @@ Returns:
     pass
         
 
-def SetEnvironmentVariable(Name:'Union[str, Any]',Value:'Union[str, Any]') -> 'None':
+def SetEnvironmentVariable(Name:'Union[Any, str]',Value:'Union[Any, str]') -> 'None':
     """
     Creates, deletes, or changes the value of an environment variable.
 
 Args:
 
-      Name(Union[str, Any]):Name of the environment variable
-      Value(Union[str, Any]):Value to be set, use None to remove variableWin32 API References
+      Name(Union[Any, str]):Name of the environment variable
+      Value(Union[Any, str]):Value to be set, use None to remove variableWin32 API References
 
 Returns:
 
@@ -3658,7 +3658,7 @@ Returns:
     pass
         
 
-def ShellExecute(hwnd:'int',op:'str',file:'str',params:'str',dir:'str',bShow:'int') -> 'int':
+def ShellExecute(hwnd:'int',op:'str',file:'str',params:'str',_dir:'str',bShow:'int') -> 'int':
     """
     Opens or prints a file.
 
@@ -3668,7 +3668,7 @@ Args:
       op(str):The operation to perform.  May be "open", "print", or None, which defaults to "open".
       file(str):The name of the file to open.
       params(str):The parameters to pass, if the file name contains an executable. Should be None for a document file.
-      dir(str):The initial directory for the application.
+      _dir(str):The initial directory for the application.
       bShow(int):Specifies whether the application is shown when it is opened. If the lpszFile parameter specifies a document file, this parameter is zero.Win32 API References
 
 Returns:
@@ -3775,14 +3775,14 @@ Returns:
     pass
         
 
-def UpdateResource(handle:'int',type:'PyResourceId',name:'PyResourceId',data:'str',language:'int') -> 'None':
+def UpdateResource(handle:'int',_type:'PyResourceId',name:'PyResourceId',data:'str',language:'int') -> 'None':
     """
     Updates a resource in a PE file.
 
 Args:
 
       handle(int):The update-file handle.
-      type(PyResourceId):The type of resource to update
+      _type(PyResourceId):The type of resource to update
       name(PyResourceId):The id/name of the resource to update
       data(str):The data to place into the resource.
       language(int):Language to use, defaults to LANG_NEUTRAL.
@@ -3829,14 +3829,14 @@ Returns:
     pass
         
 
-def WinExec(cmdLine:'str',show:'int') -> 'None':
+def WinExec(cmdLine:'str',arg:'int') -> 'None':
     """
     Runs the specified application.
 
 Args:
 
       cmdLine(str):The command line to execute.
-      show(int):The initial state of the applications window.Win32 API References
+      arg(int):The initial state of the applications window.Win32 API References
 
 Returns:
 

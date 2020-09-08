@@ -1,8 +1,8 @@
+import builtins
 from os import path
 import typing
 from typing import Any, Dict, Iterable, Sequence, Union
-import builtins
-import stub_generator.win32typing as win32typing
+import win32helper.win32typing as win32typing
 
 
 DOC_PATH: str = path.join(path.dirname(__file__), "..", "pywin32docs")
@@ -26,7 +26,8 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
         type_name = type_name.strip()
 
         if type_name.startswith("[") and type_name.endswith("...]"):
-            return f"List[{type_cvt(type_name[1:-1].split(',')[0])}]"
+
+            return f"List[{type_cvt(type_name[1:-6])}]"
         elif ',' in type_name:
             type_name = type_name.replace(r"(", "").replace(r")", "")
             type_names = type_name.replace(' ', '').split(',')
@@ -51,13 +52,14 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
 
         custom_cvt = {
             "string": "str",
+            "float":"float",
             "object": "Any",
             "PyHANDLE": "int",
             "PyUnicode": "str",
             "int tuple": "Tuple[int]",
             "integer":"int",
             "character":"str",
-            
+            "any":"Any",
         }
         if type_name in custom_cvt:
             return custom_cvt[type_name]

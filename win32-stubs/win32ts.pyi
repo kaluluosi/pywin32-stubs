@@ -1,6 +1,6 @@
-__all__=['WTSOpenServer', 'WTSCloseServer', 'WTSQueryUserConfig', 'WTSSetUserConfig', 'WTSEnumerateServers', 'WTSEnumerateSessions', 'WTSLogoffSession', 'WTSDisconnectSession', 'WTSQuerySessionInformation', 'WTSEnumerateProcesses', 'WTSQueryUserToken', 'WTSShutdownSystem', 'WTSTerminateProcess', 'ProcessIdToSessionId', 'WTSGetActiveConsoleSessionId', 'WTSRegisterSessionNotification', 'WTSUnRegisterSessionNotification', 'WTSWaitSystemEvent', 'WTSSendMessage']
+__all__=['', 'WTSOpenServer', 'WTSCloseServer', 'WTSQueryUserConfig', 'WTSSetUserConfig', 'WTSEnumerateServers', 'WTSEnumerateSessions', 'WTSLogoffSession', 'WTSDisconnectSession', 'WTSQuerySessionInformation', 'WTSEnumerateProcesses', 'WTSQueryUserToken', 'WTSShutdownSystem', 'WTSTerminateProcess', 'ProcessIdToSessionId', 'WTSGetActiveConsoleSessionId', 'WTSRegisterSessionNotification', 'WTSUnRegisterSessionNotification', 'WTSWaitSystemEvent', 'WTSSendMessage']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """Interface to the Terminal Services Api 
 
 All functions in this module accept keyword arguments"""

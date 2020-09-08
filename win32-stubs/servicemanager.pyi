@@ -1,6 +1,6 @@
-__all__=['CoInitializeEx', 'CoUninitialize', 'RegisterServiceCtrlHandler', 'LogMsg', 'LogInfoMsg', 'LogErrorMsg', 'LogWarningMsg', 'PumpWaitingMessages', 'Debugging', 'Initialize', 'Finalize', 'PrepareToHostSingle', 'PrepareToHostMultiple', 'RunningAsService', 'SetEventSourceName']
+__all__=['', 'CoInitializeEx', 'CoUninitialize', 'RegisterServiceCtrlHandler', 'LogMsg', 'LogInfoMsg', 'LogErrorMsg', 'LogWarningMsg', 'PumpWaitingMessages', 'Debugging', 'Initialize', 'Finalize', 'PrepareToHostSingle', 'PrepareToHostMultiple', 'RunningAsService', 'SetEventSourceName']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """"""
 
 
@@ -36,7 +36,7 @@ Returns:
     pass
         
 
-def RegisterServiceCtrlHandler(serviceName:'str',callback:'Any',extra_args:'bool'=False) -> 'Union[None, int]':
+def RegisterServiceCtrlHandler(serviceName:'str',callback:'Any',extra_args:'bool'=False) -> 'Union[int, None]':
     """
     Registers the Python service control handler function.
 
@@ -48,7 +48,7 @@ Args:
 
 Returns:
 
-      Union[None, int]:Is this callback expecting the additional 2 args passed by HandlerEx?
+      Union[int, None]:Is this callback expecting the additional 2 args passed by HandlerEx?
 Return ValueIf the service manager is in debug mode, this returns None, indicating 
 
 there is no service control manager handle, otherwise the handle to the Win32 service manager.
@@ -144,7 +144,7 @@ Return ValueReturns 1 if a WM_QUIT message was received, else 0
     pass
         
 
-def Debugging(newVal:'int'=-1) -> 'Union[False, True]':
+def Debugging(newVal:'int'=-1) -> 'Union[True, False]':
     """
     Indicates if the service is running in debug mode 
 
@@ -156,7 +156,7 @@ Args:
 
 Returns:
 
-      Union[False, True]
+      Union[True, False]
         
     """
     pass
@@ -213,13 +213,13 @@ Returns:
     pass
         
 
-def PrepareToHostMultiple(service_name:'Union[str, Any]',klass:'Any') -> 'None':
+def PrepareToHostMultiple(service_name:'Union[Any, str]',klass:'Any') -> 'None':
     """
     Prepare for hosting a multiple services in this EXE
 
 Args:
 
-      service_name(Union[str, Any]):The name of the service hosted by the class
+      service_name(Union[Any, str]):The name of the service hosted by the class
       klass(Any):The Python class to host.
 
 Returns:
@@ -230,7 +230,7 @@ Returns:
     pass
         
 
-def RunningAsService() -> 'Union[False, True]':
+def RunningAsService() -> 'Union[True, False]':
     """
     Indicates if the code is 
 
@@ -242,7 +242,7 @@ Args:
 
 Returns:
 
-      Union[False, True]
+      Union[True, False]
         
     """
     pass

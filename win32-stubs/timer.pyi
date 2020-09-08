@@ -1,6 +1,6 @@
-__all__=['set_timer', 'kill_timer']
+__all__=['', 'set_timer', 'kill_timer']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """Extension that wraps Win32 Timer functions"""
 
 

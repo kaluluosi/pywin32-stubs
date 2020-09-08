@@ -1,6 +1,6 @@
-__all__=['AreFileApisANSI', 'CancelIo', 'CopyFile', 'CopyFileW', 'CreateDirectory', 'CreateDirectoryW', 'CreateDirectoryEx', 'CreateFile', 'CreateIoCompletionPort', 'CreateMailslot', 'GetMailslotInfo', 'SetMailslotInfo', 'DefineDosDevice', 'DefineDosDeviceW', 'DeleteFile', 'DeviceIoControl', 'FindClose', 'FindCloseChangeNotification', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FlushFileBuffers', 'GetBinaryType', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDriveType', 'GetDriveTypeW', 'GetFileAttributes', 'GetFileAttributesW', 'GetFileTime', 'SetFileTime', 'GetFileInformationByHandle', 'GetCompressedFileSize', 'GetFileSize', 'AllocateReadBuffer', 'ReadFile', 'WriteFile', 'CloseHandle', 'LockFileEx', 'UnlockFileEx', 'GetQueuedCompletionStatus', 'PostQueuedCompletionStatus', 'GetFileType', 'GetLogicalDrives', 'GetOverlappedResult', 'LockFile', 'MoveFile', 'MoveFileW', 'MoveFileEx', 'MoveFileExW', 'QueryDosDevice', 'ReadDirectoryChangesW', 'FILE_NOTIFY_INFORMATION', 'SetCurrentDirectory', 'SetEndOfFile', 'SetFileApisToANSI', 'SetFileApisToOEM', 'SetFileAttributes', 'SetFilePointer', 'SetVolumeLabel', 'UnlockFile', '_get_osfhandle', '_open_osfhandle', '_setmaxstdio', '_getmaxstdio', 'TransmitFile', 'ConnectEx', 'AcceptEx', 'CalculateSocketEndPointSize', 'GetAcceptExSockaddrs', 'WSAEventSelect', 'WSAEnumNetworkEvents', 'WSAAsyncSelect', 'WSASend', 'WSARecv', 'BuildCommDCB', 'ClearCommError', 'EscapeCommFunction', 'GetCommState', 'SetCommState', 'ClearCommBreak', 'GetCommMask', 'SetCommMask', 'GetCommModemStatus', 'GetCommTimeouts', 'SetCommTimeouts', 'PurgeComm', 'SetCommBreak', 'SetupComm', 'TransmitCommChar', 'WaitCommEvent', 'SetVolumeMountPoint', 'DeleteVolumeMountPoint', 'GetVolumeNameForVolumeMountPoint', 'GetVolumePathName', 'GetVolumePathNamesForVolumeName', 'CreateHardLink', 'CreateSymbolicLink', 'EncryptFile', 'DecryptFile', 'EncryptionDisable', 'FileEncryptionStatus', 'QueryUsersOnEncryptedFile', 'QueryRecoveryAgentsOnEncryptedFile', 'RemoveUsersFromEncryptedFile', 'AddUsersToEncryptedFile', 'DuplicateEncryptionInfoFile', 'BackupRead', 'BackupSeek', 'BackupWrite', 'SetFileShortName', 'CopyFileEx', 'MoveFileWithProgress', 'ReplaceFile', 'OpenEncryptedFileRaw', 'ReadEncryptedFileRaw', 'WriteEncryptedFileRaw', 'CloseEncryptedFileRaw', 'CreateFileW', 'DeleteFileW', 'GetFileAttributesEx', 'SetFileAttributesW', 'CreateDirectoryExW', 'RemoveDirectory', 'FindFilesW', 'FindFilesIterator', 'FindStreams', 'FindFileNames', 'GetFinalPathNameByHandle', 'SfcGetNextProtectedFile', 'SfcIsFileProtected', 'GetLongPathName', 'GetFullPathName', 'Wow64DisableWow64FsRedirection', 'Wow64RevertWow64FsRedirection', 'GetFileInformationByHandleEx', 'SetFileInformationByHandle', 'ReOpenFile', 'OpenFileById', 'CALLBACK_CHUNK_FINISHED', 'CALLBACK_STREAM_SWITCH', 'CBR_110', 'CBR_115200', 'CBR_1200', 'CBR_128000', 'CBR_14400', 'CBR_19200', 'CBR_2400', 'CBR_256000', 'CBR_300', 'CBR_38400', 'CBR_4800', 'CBR_56000', 'CBR_57600', 'CBR_600', 'CBR_9600', 'CLRBREAK', 'CLRDTR', 'CLRRTS', 'COPY_FILE_ALLOW_DECRYPTED_DESTINATION', 'COPY_FILE_COPY_SYMLINK', 'COPY_FILE_FAIL_IF_EXISTS', 'COPY_FILE_OPEN_SOURCE_FOR_WRITE', 'COPY_FILE_RESTARTABLE', 'CREATE_ALWAYS', 'CREATE_FOR_DIR', 'CREATE_FOR_IMPORT', 'CREATE_NEW', 'DRIVE_CDROM', 'DRIVE_FIXED', 'DRIVE_NO_ROOT_DIR', 'DRIVE_RAMDISK', 'DRIVE_REMOTE', 'DRIVE_REMOVABLE', 'DRIVE_UNKNOWN', 'DTR_CONTROL_DISABLE', 'DTR_CONTROL_ENABLE', 'DTR_CONTROL_HANDSHAKE', 'EV_BREAK', 'EV_CTS', 'EV_DSR', 'EV_ERR', 'EV_RING', 'EV_RLSD', 'EV_RXCHAR', 'EV_RXFLAG', 'EV_TXEMPTY', 'EVENPARITY', 'FD_ACCEPT', 'FD_ADDRESS_LIST_CHANGE', 'FD_CLOSE', 'FD_CONNECT', 'FD_GROUP_QOS', 'FD_OOB', 'FD_QOS', 'FD_READ', 'FD_ROUTING_INTERFACE_CHANGE', 'FD_WRITE', 'FILE_ALL_ACCESS', 'FILE_ATTRIBUTE_ARCHIVE', 'FILE_ATTRIBUTE_COMPRESSED', 'FILE_ATTRIBUTE_DIRECTORY', 'FILE_ATTRIBUTE_HIDDEN', 'FILE_ATTRIBUTE_NORMAL', 'FILE_ATTRIBUTE_OFFLINE', 'FILE_ATTRIBUTE_READONLY', 'FILE_ATTRIBUTE_SYSTEM', 'FILE_ATTRIBUTE_TEMPORARY', 'FILE_BEGIN', 'FILE_CURRENT', 'FILE_ENCRYPTABLE', 'FILE_END', 'FILE_FLAG_BACKUP_SEMANTICS', 'FILE_FLAG_DELETE_ON_CLOSE', 'FILE_FLAG_NO_BUFFERING', 'FILE_FLAG_OPEN_REPARSE_POINT', 'FILE_FLAG_OVERLAPPED', 'FILE_FLAG_POSIX_SEMANTICS', 'FILE_FLAG_RANDOM_ACCESS', 'FILE_FLAG_SEQUENTIAL_SCAN', 'FILE_FLAG_WRITE_THROUGH', 'FILE_GENERIC_READ', 'FILE_GENERIC_WRITE', 'FILE_IS_ENCRYPTED', 'FILE_READ_ONLY', 'FILE_ROOT_DIR', 'FILE_SHARE_DELETE', 'FILE_SHARE_READ', 'FILE_SHARE_WRITE', 'FILE_SYSTEM_ATTR', 'FILE_SYSTEM_DIR', 'FILE_SYSTEM_NOT_SUPPORT', 'FILE_TYPE_CHAR', 'FILE_TYPE_DISK', 'FILE_TYPE_PIPE', 'FILE_TYPE_UNKNOWN', 'FILE_UNKNOWN', 'FILE_USER_DISALLOWED', 'FileAllocationInfo', 'FileAttributeTagInfo', 'FileBasicInfo', 'FileCompressionInfo', 'FileDispositionInfo', 'FileEndOfFileInfo', 'FileIdBothDirectoryInfo', 'FileIdBothDirectoryRestartInfo', 'FileIdType', 'FileIoPriorityHintInfo', 'FileNameInfo', 'FileRenameInfo', 'FileStandardInfo', 'FileStreamInfo', 'GENERIC_EXECUTE', 'GENERIC_READ', 'GENERIC_WRITE', 'GetFileExInfoStandard', 'IoPriorityHintLow', 'IoPriorityHintNormal', 'IoPriorityHintVeryLow', 'MARKPARITY', 'MOVEFILE_COPY_ALLOWED', 'MOVEFILE_CREATE_HARDLINK', 'MOVEFILE_DELAY_UNTIL_REBOOT', 'MOVEFILE_FAIL_IF_NOT_TRACKABLE', 'MOVEFILE_REPLACE_EXISTING', 'MOVEFILE_WRITE_THROUGH', 'NOPARITY', 'ObjectIdType', 'ODDPARITY', 'ONE5STOPBITS', 'ONESTOPBIT', 'OPEN_ALWAYS', 'OPEN_EXISTING', 'OVERWRITE_HIDDEN', 'PROGRESS_CANCEL', 'PROGRESS_CONTINUE', 'PROGRESS_QUIET', 'PROGRESS_STOP', 'PURGE_RXABORT', 'PURGE_RXCLEAR', 'PURGE_TXABORT', 'PURGE_TXCLEAR', 'REPLACEFILE_IGNORE_MERGE_ERRORS', 'REPLACEFILE_WRITE_THROUGH', 'RTS_CONTROL_DISABLE', 'RTS_CONTROL_ENABLE', 'RTS_CONTROL_HANDSHAKE', 'RTS_CONTROL_TOGGLE', 'SCS_32BIT_BINARY', 'SCS_DOS_BINARY', 'SCS_OS216_BINARY', 'SCS_PIF_BINARY', 'SCS_POSIX_BINARY', 'SCS_WOW_BINARY', 'SECURITY_ANONYMOUS', 'SECURITY_CONTEXT_TRACKING', 'SECURITY_DELEGATION', 'SECURITY_EFFECTIVE_ONLY', 'SECURITY_IDENTIFICATION', 'SECURITY_IMPERSONATION', 'SETBREAK', 'SETDTR', 'SETRTS', 'SETXOFF', 'SETXON', 'SO_CONNECT_TIME', 'SO_UPDATE_ACCEPT_CONTEXT', 'SO_UPDATE_CONNECT_CONTEXT', 'SPACEPARITY', 'SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE', 'SYMBOLIC_LINK_FLAG_DIRECTORY', 'TF_DISCONNECT', 'TF_REUSE_SOCKET', 'TF_USE_DEFAULT_WORKER', 'TF_USE_KERNEL_APC', 'TF_USE_SYSTEM_THREAD', 'TF_WRITE_BEHIND', 'TRUNCATE_EXISTING', 'TWOSTOPBITS', 'WSA_IO_PENDING', 'WSA_OPERATION_ABORTED', 'WSAECONNABORTED', 'WSAECONNRESET', 'WSAEDISCON', 'WSAEFAULT', 'WSAEINPROGRESS', 'WSAEINTR', 'WSAEINVAL', 'WSAEMSGSIZE', 'WSAENETDOWN', 'WSAENETRESET', 'WSAENOBUFS', 'WSAENOTCONN', 'WSAENOTSOCK', 'WSAEOPNOTSUPP', 'WSAESHUTDOWN', 'WSAEWOULDBLOCK']
+__all__=['', 'AreFileApisANSI', 'CancelIo', 'CopyFile', 'CopyFileW', 'CreateDirectory', 'CreateDirectoryW', 'CreateDirectoryEx', 'CreateFile', 'CreateIoCompletionPort', 'CreateMailslot', 'GetMailslotInfo', 'SetMailslotInfo', 'DefineDosDevice', 'DefineDosDeviceW', 'DeleteFile', 'DeviceIoControl', 'FindClose', 'FindCloseChangeNotification', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FlushFileBuffers', 'GetBinaryType', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDriveType', 'GetDriveTypeW', 'GetFileAttributes', 'GetFileAttributesW', 'GetFileTime', 'SetFileTime', 'GetFileInformationByHandle', 'GetCompressedFileSize', 'GetFileSize', 'AllocateReadBuffer', 'ReadFile', 'WriteFile', 'CloseHandle', 'LockFileEx', 'UnlockFileEx', 'GetQueuedCompletionStatus', 'PostQueuedCompletionStatus', 'GetFileType', 'GetLogicalDrives', 'GetOverlappedResult', 'LockFile', 'MoveFile', 'MoveFileW', 'MoveFileEx', 'MoveFileExW', 'QueryDosDevice', 'ReadDirectoryChangesW', 'FILE_NOTIFY_INFORMATION', 'SetCurrentDirectory', 'SetEndOfFile', 'SetFileApisToANSI', 'SetFileApisToOEM', 'SetFileAttributes', 'SetFilePointer', 'SetVolumeLabel', 'UnlockFile', '_get_osfhandle', '_open_osfhandle', '_setmaxstdio', '_getmaxstdio', 'TransmitFile', 'ConnectEx', 'AcceptEx', 'CalculateSocketEndPointSize', 'GetAcceptExSockaddrs', 'WSAEventSelect', 'WSAEnumNetworkEvents', 'WSAAsyncSelect', 'WSASend', 'WSARecv', 'BuildCommDCB', 'ClearCommError', 'EscapeCommFunction', 'GetCommState', 'SetCommState', 'ClearCommBreak', 'GetCommMask', 'SetCommMask', 'GetCommModemStatus', 'GetCommTimeouts', 'SetCommTimeouts', 'PurgeComm', 'SetCommBreak', 'SetupComm', 'TransmitCommChar', 'WaitCommEvent', 'SetVolumeMountPoint', 'DeleteVolumeMountPoint', 'GetVolumeNameForVolumeMountPoint', 'GetVolumePathName', 'GetVolumePathNamesForVolumeName', 'CreateHardLink', 'CreateSymbolicLink', 'EncryptFile', 'DecryptFile', 'EncryptionDisable', 'FileEncryptionStatus', 'QueryUsersOnEncryptedFile', 'QueryRecoveryAgentsOnEncryptedFile', 'RemoveUsersFromEncryptedFile', 'AddUsersToEncryptedFile', 'DuplicateEncryptionInfoFile', 'BackupRead', 'BackupSeek', 'BackupWrite', 'SetFileShortName', 'CopyFileEx', 'MoveFileWithProgress', 'ReplaceFile', 'OpenEncryptedFileRaw', 'ReadEncryptedFileRaw', 'WriteEncryptedFileRaw', 'CloseEncryptedFileRaw', 'CreateFileW', 'DeleteFileW', 'GetFileAttributesEx', 'SetFileAttributesW', 'CreateDirectoryExW', 'RemoveDirectory', 'FindFilesW', 'FindFilesIterator', 'FindStreams', 'FindFileNames', 'GetFinalPathNameByHandle', 'SfcGetNextProtectedFile', 'SfcIsFileProtected', 'GetLongPathName', 'GetFullPathName', 'Wow64DisableWow64FsRedirection', 'Wow64RevertWow64FsRedirection', 'GetFileInformationByHandleEx', 'SetFileInformationByHandle', 'ReOpenFile', 'OpenFileById', 'CALLBACK_CHUNK_FINISHED', 'CALLBACK_STREAM_SWITCH', 'CBR_110', 'CBR_115200', 'CBR_1200', 'CBR_128000', 'CBR_14400', 'CBR_19200', 'CBR_2400', 'CBR_256000', 'CBR_300', 'CBR_38400', 'CBR_4800', 'CBR_56000', 'CBR_57600', 'CBR_600', 'CBR_9600', 'CLRBREAK', 'CLRDTR', 'CLRRTS', 'COPY_FILE_ALLOW_DECRYPTED_DESTINATION', 'COPY_FILE_COPY_SYMLINK', 'COPY_FILE_FAIL_IF_EXISTS', 'COPY_FILE_OPEN_SOURCE_FOR_WRITE', 'COPY_FILE_RESTARTABLE', 'CREATE_ALWAYS', 'CREATE_FOR_DIR', 'CREATE_FOR_IMPORT', 'CREATE_NEW', 'DRIVE_CDROM', 'DRIVE_FIXED', 'DRIVE_NO_ROOT_DIR', 'DRIVE_RAMDISK', 'DRIVE_REMOTE', 'DRIVE_REMOVABLE', 'DRIVE_UNKNOWN', 'DTR_CONTROL_DISABLE', 'DTR_CONTROL_ENABLE', 'DTR_CONTROL_HANDSHAKE', 'EV_BREAK', 'EV_CTS', 'EV_DSR', 'EV_ERR', 'EV_RING', 'EV_RLSD', 'EV_RXCHAR', 'EV_RXFLAG', 'EV_TXEMPTY', 'EVENPARITY', 'FD_ACCEPT', 'FD_ADDRESS_LIST_CHANGE', 'FD_CLOSE', 'FD_CONNECT', 'FD_GROUP_QOS', 'FD_OOB', 'FD_QOS', 'FD_READ', 'FD_ROUTING_INTERFACE_CHANGE', 'FD_WRITE', 'FILE_ALL_ACCESS', 'FILE_ATTRIBUTE_ARCHIVE', 'FILE_ATTRIBUTE_COMPRESSED', 'FILE_ATTRIBUTE_DIRECTORY', 'FILE_ATTRIBUTE_HIDDEN', 'FILE_ATTRIBUTE_NORMAL', 'FILE_ATTRIBUTE_OFFLINE', 'FILE_ATTRIBUTE_READONLY', 'FILE_ATTRIBUTE_SYSTEM', 'FILE_ATTRIBUTE_TEMPORARY', 'FILE_BEGIN', 'FILE_CURRENT', 'FILE_ENCRYPTABLE', 'FILE_END', 'FILE_FLAG_BACKUP_SEMANTICS', 'FILE_FLAG_DELETE_ON_CLOSE', 'FILE_FLAG_NO_BUFFERING', 'FILE_FLAG_OPEN_REPARSE_POINT', 'FILE_FLAG_OVERLAPPED', 'FILE_FLAG_POSIX_SEMANTICS', 'FILE_FLAG_RANDOM_ACCESS', 'FILE_FLAG_SEQUENTIAL_SCAN', 'FILE_FLAG_WRITE_THROUGH', 'FILE_GENERIC_READ', 'FILE_GENERIC_WRITE', 'FILE_IS_ENCRYPTED', 'FILE_READ_ONLY', 'FILE_ROOT_DIR', 'FILE_SHARE_DELETE', 'FILE_SHARE_READ', 'FILE_SHARE_WRITE', 'FILE_SYSTEM_ATTR', 'FILE_SYSTEM_DIR', 'FILE_SYSTEM_NOT_SUPPORT', 'FILE_TYPE_CHAR', 'FILE_TYPE_DISK', 'FILE_TYPE_PIPE', 'FILE_TYPE_UNKNOWN', 'FILE_UNKNOWN', 'FILE_USER_DISALLOWED', 'FileAllocationInfo', 'FileAttributeTagInfo', 'FileBasicInfo', 'FileCompressionInfo', 'FileDispositionInfo', 'FileEndOfFileInfo', 'FileIdBothDirectoryInfo', 'FileIdBothDirectoryRestartInfo', 'FileIdType', 'FileIoPriorityHintInfo', 'FileNameInfo', 'FileRenameInfo', 'FileStandardInfo', 'FileStreamInfo', 'GENERIC_EXECUTE', 'GENERIC_READ', 'GENERIC_WRITE', 'GetFileExInfoStandard', 'IoPriorityHintLow', 'IoPriorityHintNormal', 'IoPriorityHintVeryLow', 'MARKPARITY', 'MOVEFILE_COPY_ALLOWED', 'MOVEFILE_CREATE_HARDLINK', 'MOVEFILE_DELAY_UNTIL_REBOOT', 'MOVEFILE_FAIL_IF_NOT_TRACKABLE', 'MOVEFILE_REPLACE_EXISTING', 'MOVEFILE_WRITE_THROUGH', 'NOPARITY', 'ObjectIdType', 'ODDPARITY', 'ONE5STOPBITS', 'ONESTOPBIT', 'OPEN_ALWAYS', 'OPEN_EXISTING', 'OVERWRITE_HIDDEN', 'PROGRESS_CANCEL', 'PROGRESS_CONTINUE', 'PROGRESS_QUIET', 'PROGRESS_STOP', 'PURGE_RXABORT', 'PURGE_RXCLEAR', 'PURGE_TXABORT', 'PURGE_TXCLEAR', 'REPLACEFILE_IGNORE_MERGE_ERRORS', 'REPLACEFILE_WRITE_THROUGH', 'RTS_CONTROL_DISABLE', 'RTS_CONTROL_ENABLE', 'RTS_CONTROL_HANDSHAKE', 'RTS_CONTROL_TOGGLE', 'SCS_32BIT_BINARY', 'SCS_DOS_BINARY', 'SCS_OS216_BINARY', 'SCS_PIF_BINARY', 'SCS_POSIX_BINARY', 'SCS_WOW_BINARY', 'SECURITY_ANONYMOUS', 'SECURITY_CONTEXT_TRACKING', 'SECURITY_DELEGATION', 'SECURITY_EFFECTIVE_ONLY', 'SECURITY_IDENTIFICATION', 'SECURITY_IMPERSONATION', 'SETBREAK', 'SETDTR', 'SETRTS', 'SETXOFF', 'SETXON', 'SO_CONNECT_TIME', 'SO_UPDATE_ACCEPT_CONTEXT', 'SO_UPDATE_CONNECT_CONTEXT', 'SPACEPARITY', 'SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE', 'SYMBOLIC_LINK_FLAG_DIRECTORY', 'TF_DISCONNECT', 'TF_REUSE_SOCKET', 'TF_USE_DEFAULT_WORKER', 'TF_USE_KERNEL_APC', 'TF_USE_SYSTEM_THREAD', 'TF_WRITE_BEHIND', 'TRUNCATE_EXISTING', 'TWOSTOPBITS', 'WSA_IO_PENDING', 'WSA_OPERATION_ABORTED', 'WSAECONNABORTED', 'WSAECONNRESET', 'WSAEDISCON', 'WSAEFAULT', 'WSAEINPROGRESS', 'WSAEINTR', 'WSAEINVAL', 'WSAEMSGSIZE', 'WSAENETDOWN', 'WSAENETRESET', 'WSAENOBUFS', 'WSAENOTCONN', 'WSAENOTSOCK', 'WSAEOPNOTSUPP', 'WSAESHUTDOWN', 'WSAEWOULDBLOCK']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """"""
 
 
@@ -36,13 +36,13 @@ Returns:
     pass
         
 
-def CopyFile(from:'str',to:'str',bFailIfExists:'int') -> 'None':
+def CopyFile(_from:'str',to:'str',bFailIfExists:'int') -> 'None':
     """
     Copies a file
 
 Args:
 
-      from(str):The name of the file to copy from
+      _from(str):The name of the file to copy from
       to(str):The name of the file to copy to
       bFailIfExists(int):Indicates if the operation should fail if the file exists.
 
@@ -54,13 +54,13 @@ Returns:
     pass
         
 
-def CopyFileW(from:'str',to:'str',bFailIfExists:'int') -> 'None':
+def CopyFileW(_from:'str',to:'str',bFailIfExists:'int') -> 'None':
     """
     Copies a file (NT/2000 Unicode specific version)
 
 Args:
 
-      from(str):The name of the file to copy from
+      _from(str):The name of the file to copy from
       to(str):The name of the file to copy to
       bFailIfExists(int):Indicates if the operation should fail if the file exists.
 
@@ -274,7 +274,7 @@ Returns:
     pass
         
 
-def DeviceIoControl(Device:'int',IoControlCode:'int',InBuffer:'Union[str, Any]',OutBuffer:'Union[int, Any]',Overlapped:'PyOVERLAPPED'=None) -> 'Union[str, Any]':
+def DeviceIoControl(Device:'int',IoControlCode:'int',InBuffer:'Union[Any, str]',OutBuffer:'Union[int, Any]',Overlapped:'PyOVERLAPPED'=None) -> 'Union[Any, str]':
     """
     Sends a control code to a device or file system driver
 
@@ -282,13 +282,13 @@ Args:
 
       Device(int):Handle to a file, device, or volume
       IoControlCode(int):IOControl Code to use, from winioctlcon
-      InBuffer(Union[str, Any]):The input data for the operation, can be None for some operations.
+      InBuffer(Union[Any, str]):The input data for the operation, can be None for some operations.
       OutBuffer(Union[int, Any]):Size of the buffer to allocate for output, or a writeable buffer as returned by win32file::AllocateReadBuffer.
       Overlapped(PyOVERLAPPED):An overlapped object for async operations.  Device handle must have been opened with FILE_FLAG_OVERLAPPED.CommentsAccepts keyword argsReturn ValueIf a preallocated output buffer is passed in, the returned object may be the original buffer, or a view of the buffer with only the actual size of the retrieved data. If OutBuffer is a buffer size and the operation is synchronous (ie no Overlapped is passed in), returns a plain string containing the retrieved data.  For an async operation, a new writeable buffer is returned.
 
 Returns:
 
-      Union[str, Any]:An overlapped object for async operations.  Device 
+      Union[Any, str]:An overlapped object for async operations.  Device 
 
 handle must have been opened with FILE_FLAG_OVERLAPPED.
 Comments
@@ -650,14 +650,14 @@ Returns:
     pass
         
 
-def ReadFile(hFile:'Union[int]',buffer_bufSize:'Union[int, PyOVERLAPPEDReadBuffer]',overlapped:'PyOVERLAPPED'=None) -> 'Tuple[int, str]':
+def ReadFile(hFile:'Union[int]',buffer_bufSize:'Union[PyOVERLAPPEDReadBuffer, int]',overlapped:'PyOVERLAPPED'=None) -> 'Tuple[int, str]':
     """
     Reads a string from a file
 
 Args:
 
       hFile(Union[int]):Handle to the file
-      buffer_bufSize(Union[int, PyOVERLAPPEDReadBuffer]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
+      buffer_bufSize(Union[PyOVERLAPPEDReadBuffer, int]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
       overlapped(PyOVERLAPPED):An overlapped structureCommentsin a multi-threaded overlapped environment, it is likely to be necessary to pre-allocate the read buffer using the win32file::AllocateReadBuffer method, otherwise the I/O operation may complete before you can assign to the resulting buffer.Return ValueThe result is a tuple of (hr, string/PyOVERLAPPEDReadBuffer), where hr may be 0, ERROR_MORE_DATA or ERROR_IO_PENDING. If the overlapped param is not None, then the result is a PyOVERLAPPEDReadBuffer.  Once the overlapped IO operation has completed, you can convert this to a string (str(object)) [py2k] or (bytes(object)) [py3k] to obtain the data. While the operation is in progress, you can use the slice operations (object[:end]) to obtain the data read so far. You must use the OVERLAPPED API functions to determine how much of the data is valid.
 
 Returns:
@@ -734,16 +734,16 @@ Returns:
     pass
         
 
-def LockFileEx(hFile:'Union[int]',int:'Any',int1:'Any',int2:'Any',ol:'PyOVERLAPPED'=None) -> 'None':
+def LockFileEx(hFile:'Union[int]',_int:'Any',_int1:'Any',_int2:'Any',ol:'PyOVERLAPPED'=None) -> 'None':
     """
     Locks a file. Wrapper for LockFileEx win32 API.
 
 Args:
 
       hFile(Union[int]):Handle to the file
-      int(Any):Flags that specify exclusive/shared and blocking/non-blocking mode
-      int1(Any):low-order part of number of bytes to lock
-      int2(Any):high-order part of number of bytes to lock
+      _int(Any):Flags that specify exclusive/shared and blocking/non-blocking mode
+      _int1(Any):low-order part of number of bytes to lock
+      _int2(Any):high-order part of number of bytes to lock
       ol(PyOVERLAPPED):An overlapped structure
 
 Returns:
@@ -754,15 +754,15 @@ Returns:
     pass
         
 
-def UnlockFileEx(hFile:'Union[int]',int:'Any',int1:'Any',ol:'PyOVERLAPPED'=None) -> 'None':
+def UnlockFileEx(hFile:'Union[int]',_int:'Any',_int1:'Any',ol:'PyOVERLAPPED'=None) -> 'None':
     """
     Unlocks a file. Wrapper for UnlockFileEx win32 API.
 
 Args:
 
       hFile(Union[int]):Handle to the file
-      int(Any):low-order part of number of bytes to lock
-      int1(Any):high-order part of number of bytes to lock
+      _int(Any):low-order part of number of bytes to lock
+      _int1(Any):high-order part of number of bytes to lock
       ol(PyOVERLAPPED):An overlapped structure
 
 Returns:
@@ -1402,7 +1402,7 @@ Returns:
     pass
         
 
-def WSAAsyncSelect(socket:'Any',hwnd:'Any',int:'int',networkEvents:'int') -> 'None':
+def WSAAsyncSelect(socket:'Any',hwnd:'Any',_int:'int',networkEvents:'int') -> 'None':
     """
     Request windows message notification for the supplied set of FD_XXXX network events.
 
@@ -1410,7 +1410,7 @@ Args:
 
       socket(Any):socket to attach to the event
       hwnd(Any):Window handle for the socket to become attached to.
-      int(int):Window message that will be posted.
+      _int(int):Window message that will be posted.
       networkEvents(int):A bitmask of network events that will cause wMsg to be posted. e.g. (FD_CLOSE | FD_READ)
 
 Returns:
@@ -1421,14 +1421,14 @@ Returns:
     pass
         
 
-def WSASend(s:'Union[int, Any]',buffer:'Union[str, Any]',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
+def WSASend(s:'Union[int, Any]',buffer:'Union[Any, str]',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
     """
     Winsock send() equivalent function for Overlapped I/O.
 
 Args:
 
       s(Union[int, Any]):Socket to send data on.
-      buffer(Union[str, Any]):Buffer to send data from.
+      buffer(Union[Any, str]):Buffer to send data from.
       ol(PyOVERLAPPED):An overlapped structure
       dwFlags(int):Optional send flags.
 
@@ -1459,13 +1459,13 @@ Returns:
     pass
         
 
-def BuildCommDCB(def:'str',dcb:'PyDCB') -> 'PyDCB':
+def BuildCommDCB(_def:'str',dcb:'PyDCB') -> 'PyDCB':
     """
     Fills the specified DCB structure with values specified in a device-control string. The device-control string uses the syntax of the mode command
 
 Args:
 
-      def(str):device-control string
+      _def(str):device-control string
       dcb(PyDCB):The device-control block
 
 Returns:
@@ -1830,7 +1830,7 @@ Returns:
     pass
         
 
-def GetVolumePathNamesForVolumeName(VolumeName:'str') -> 'List[str]':
+def GetVolumePathNamesForVolumeName(VolumeName:'str') -> 'List[Any]':
     """
     Returns mounted paths for a volume
 
@@ -1840,7 +1840,7 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass
@@ -1884,13 +1884,13 @@ Returns:
     pass
         
 
-def EncryptFile(filename:'Union[str, Any]') -> 'None':
+def EncryptFile(filename:'Union[Any, str]') -> 'None':
     """
     Encrypts specified file (requires Win2k or higher and NTFS)
 
 Args:
 
-      filename(Union[str, Any]):File to encrypt
+      filename(Union[Any, str]):File to encrypt
 
 Returns:
 
@@ -1900,13 +1900,13 @@ Returns:
     pass
         
 
-def DecryptFile(filename:'Union[str, Any]') -> 'None':
+def DecryptFile(filename:'Union[Any, str]') -> 'None':
     """
     Decrypts specified file (requires Win2k or higher and NTFS)
 
 Args:
 
-      filename(Union[str, Any]):File to decrypt
+      filename(Union[Any, str]):File to decrypt
 
 Returns:
 
@@ -1916,13 +1916,13 @@ Returns:
     pass
         
 
-def EncryptionDisable(DirName:'Union[str, Any]',Disable:'Any') -> 'None':
+def EncryptionDisable(DirName:'Union[Any, str]',Disable:'Any') -> 'None':
     """
     Enables/disables encryption for a directory (requires Win2k or higher and NTFS)
 
 Args:
 
-      DirName(Union[str, Any]):Directory to enable or disable
+      DirName(Union[Any, str]):Directory to enable or disable
       Disable(Any):Set to False to enable encryption
 
 Returns:
@@ -1933,13 +1933,13 @@ Returns:
     pass
         
 
-def FileEncryptionStatus(FileName:'Union[str, Any]') -> 'int':
+def FileEncryptionStatus(FileName:'Union[Any, str]') -> 'int':
     """
     retrieves the encryption status of the specified file.
 
 Args:
 
-      FileName(Union[str, Any]):file to queryCommentsRequires Windows 2000 or higher.Return ValueThe result is documented as being one of FILE_ENCRYPTABLE, FILE_IS_ENCRYPTED, FILE_SYSTEM_ATTR, FILE_ROOT_DIR, FILE_SYSTEM_DIR, FILE_UNKNOWN, FILE_SYSTEM_NOT_SUPPORT, FILE_USER_DISALLOWED, or FILE_READ_ONLY
+      FileName(Union[Any, str]):file to queryCommentsRequires Windows 2000 or higher.Return ValueThe result is documented as being one of FILE_ENCRYPTABLE, FILE_IS_ENCRYPTED, FILE_SYSTEM_ATTR, FILE_ROOT_DIR, FILE_SYSTEM_DIR, FILE_UNKNOWN, FILE_SYSTEM_NOT_SUPPORT, FILE_USER_DISALLOWED, or FILE_READ_ONLY
 
 Returns:
 
@@ -1959,13 +1959,13 @@ or FILE_READ_ONLY
     pass
         
 
-def QueryUsersOnEncryptedFile(FileName:'Union[str, Any]') -> 'Tuple[PySID, str, Any]':
+def QueryUsersOnEncryptedFile(FileName:'Union[Any, str]') -> 'Tuple[PySID, str, Any]':
     """
     Returns list of users for an encrypted file as tuples of (SID, certificate hash blob, display info)
 
 Args:
 
-      FileName(Union[str, Any]):file to query
+      FileName(Union[Any, str]):file to query
 
 Returns:
 
@@ -1975,13 +1975,13 @@ Returns:
     pass
         
 
-def QueryRecoveryAgentsOnEncryptedFile(FileName:'Union[str, Any]') -> 'Tuple[PySID, str, Any]':
+def QueryRecoveryAgentsOnEncryptedFile(FileName:'Union[Any, str]') -> 'Tuple[PySID, str, Any]':
     """
     Lists recovery agents for file as a tuple of tuples.
 
 Args:
 
-      FileName(Union[str, Any]):file to queryReturn ValueThe result is a tuple of tuples - ((SID, certificate hash blob, display info),....)
+      FileName(Union[Any, str]):file to queryReturn ValueThe result is a tuple of tuples - ((SID, certificate hash blob, display info),....)
 
 Returns:
 
@@ -1992,13 +1992,13 @@ Returns:
     pass
         
 
-def RemoveUsersFromEncryptedFile(FileName:'Union[str, Any]',pHashes:'Tuple[Tuple[PySID, str, Any], ...]') -> 'None':
+def RemoveUsersFromEncryptedFile(FileName:'Union[Any, str]',pHashes:'Tuple[Tuple[PySID, str, Any], ...]') -> 'None':
     """
     Removes specified certificates from file - if certificate is not found, it is ignored
 
 Args:
 
-      FileName(Union[str, Any]):File from which to remove users
+      FileName(Union[Any, str]):File from which to remove users
       pHashes(Tuple[Tuple[PySID, str, Any], ...]):Sequence representing an ENCRYPTION_CERTIFICATE_HASH_LIST structure, as returned by QueryUsersOnEncryptedFile
 
 Returns:
@@ -2009,13 +2009,13 @@ Returns:
     pass
         
 
-def AddUsersToEncryptedFile(FileName:'Union[str, Any]',pUsers:'Tuple[Tuple[PySID, str, int], ...]') -> 'None':
+def AddUsersToEncryptedFile(FileName:'Union[Any, str]',pUsers:'Tuple[Tuple[PySID, str, int], ...]') -> 'None':
     """
     Allows user identified by SID and EFS certificate access to decrypt specified file
 
 Args:
 
-      FileName(Union[str, Any]):File that additional users will be allowed to decrypt
+      FileName(Union[Any, str]):File that additional users will be allowed to decrypt
       pUsers(Tuple[Tuple[PySID, str, int], ...]):Sequence representing ENCRYPTION_CERTIFICATE_LIST - elements are sequences consisting of users' Sid, encoded EFS certficate (user must export a .cer to obtain this data), and encoding type (usually 1 for X509_ASN_ENCODING)
 
 Returns:
@@ -2427,7 +2427,7 @@ returning a WIN32_FIND_DATA tuple.
     pass
         
 
-def FindStreams(FileName:'str',Transaction:'int'=None) -> 'List[Any]':
+def FindStreams(FileName:'str',Transaction:'int'=None) -> 'List[Tuple[Any, str]]':
     """
     List the data streams for a file
 
@@ -2438,7 +2438,7 @@ Args:
 
 Returns:
 
-      List[Any]:Handle to a transaction, can be None
+      List[Tuple[Any, str]]:Handle to a transaction, can be None
 Comments
 
 This uses the API functions FindFirstStreamW, FindNextStreamW and FindClose
@@ -2453,7 +2453,7 @@ Return ValueReturns a list of tuples containing each stream's size and name
     pass
         
 
-def FindFileNames(FileName:'str',Transaction:'int'=None) -> 'List[str]':
+def FindFileNames(FileName:'str',Transaction:'int'=None) -> 'List[Any]':
     """
     Enumerates hard links that point to specified file
 
@@ -2464,7 +2464,7 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass
@@ -2487,7 +2487,7 @@ Returns:
     pass
         
 
-def SfcGetNextProtectedFile() -> 'List[str]':
+def SfcGetNextProtectedFile() -> 'List[Any]':
     """
     Returns list of protected operating system files
 
@@ -2497,7 +2497,7 @@ Args:
 
 Returns:
 
-      List[str]
+      List[Any]
         
     """
     pass
@@ -2536,18 +2536,18 @@ Returns:
     pass
         
 
-def GetFullPathName(FileName:'Union[str, Any]',Transaction:'int'=None) -> 'Union[str, Any]':
+def GetFullPathName(FileName:'Union[Any, str]',Transaction:'int'=None) -> 'Union[Any, str]':
     """
     Returns full path for path passed in
 
 Args:
 
-      FileName(Union[str, Any]):Path on which to operate
+      FileName(Union[Any, str]):Path on which to operate
       Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsThis function takes either a plain string or a unicode string, and returns the same type If unicode is passed in, GetFullPathNameW is called, which supports filenames longer than MAX_PATHIf Transaction parameter is specified, GetFullPathNameTransacted is called (requires Vista or later)
 
 Returns:
 
-      Union[str, Any]
+      Union[Any, str]
         
     """
     pass
@@ -2670,14 +2670,14 @@ Returns:
     pass
         
 
-def OpenFileById(File:'int',FileId:'Union[int, PyIID]',DesiredAccess:'int',ShareMode:'int',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'int':
+def OpenFileById(File:'int',FileId:'Union[PyIID, int]',DesiredAccess:'int',ShareMode:'int',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'int':
     """
     Opens a file by File Id or Object Id
 
 Args:
 
       File(int):Handle to a file on the volume that contains the file to open
-      FileId(Union[int, PyIID]):File Id or Object Id of the file to open
+      FileId(Union[PyIID, int]):File Id or Object Id of the file to open
       DesiredAccess(int):Access mode
       ShareMode(int):Sharing mode (FILE_SHARE_*)
       Flags(int):Combination of FILE_FLAG_* flags

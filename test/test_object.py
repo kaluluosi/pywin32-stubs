@@ -80,6 +80,13 @@ class MethodTest(unittest.TestCase):
         self.assertEqual(paramters[0].name, 'index')
         self.assertEqual(paramters[0].type, 'int')
 
+    def test_a(self):
+        method = Method("PyICatRegister__RegisterCategories_meth.html")
+        paramters = list(method.parameters)
+        self.assertEqual(len(paramters), 1)
+        self.assertEqual(paramters[0].name, 'arg')
+        self.assertEqual(paramters[0].type, 'List[Tuple[PyIID, int, str]]')
+
 class ObjectListTest(unittest.TestCase):
 
     def setUp(self):

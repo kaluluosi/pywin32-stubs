@@ -33,6 +33,9 @@ class Module(Doc):
         if self._method_map:
             return self._method_map.values()
         
+        if not self.soup.dl:
+            return 
+
         function_dt_list = self.soup.dl.find_all('dt')
 
         for dt in function_dt_list:
@@ -46,11 +49,11 @@ class Module(Doc):
     def __str__(self):
         lines = []
         lines.append("from typing import *")
-        lines.append("from .win32typing import *")
+        lines.append("from win32helper.win32typing import *")
         lines.append(f'"""{self.description}"""')
         lines.append("")
 
-        _all = []
+        _all = ['']
 
         for function in self.functions:
             lines.append(str(function))
@@ -81,6 +84,6 @@ class ModuleList(Doc):
             module_tag = module_tag.find_next('li')
             if not module_tag:
                 break
-            
+
             yield Module(module_tag.a['href'])
 

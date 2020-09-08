@@ -1,18 +1,45 @@
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, TYPE_CHECKING
+import builtins
 
 from .util import doc_path, is_exist , type_cvt
 from bs4.element import Tag
 from .doc import Doc
+import keyword
 import re
 
 class Paramter:
+
+    @staticmethod
+    def _is_unrecognized_name(name:str) -> bool:
+        """是否无法识别的名字"""
+        for c in "[]().,":
+            if c in name:
+                return True
+        return False
+
+    @staticmethod
+    def _is_keyword(name:str) -> bool:
+        if name in keyword.kwlist:
+            return True
+        elif name in ["object"]:
+            return True
+        elif name in builtins.__dict__:
+            return True
+        else:
+            return False
 
     def __init__(self, def_dt:Tag, desc_dd:Tag, duplicate_number:int=0):
         self._param_name:str 
         self._param_types:str = ""
 
         strings = list(def_dt.strings)
-        self._param_name = strings[0].strip().replace(" ","_")
+        self._param_name = strings[0]
+
+        if self._is_unrecognized_name(self._param_name):
+            self._param_name = "arg"
+        else:
+            self._param_name = self._param_name.strip().replace(" ","_")
+
         if len(strings) > 1:
             # 如果字符串大于1，则有可能有类型
             if ':' in def_dt.text:
@@ -29,7 +56,11 @@ class Paramter:
                 # 尝试eval一下这个默认值，如果eval不过，那么就可能是文档描述弃用
                 self._default = None
 
-        self._name = self._param_name.strip().replace('/', '_') or 'Unknow'
+        self._name = self._param_name.strip().replace('/', '_') or 'arg'
+        # 如果名字跟关键字冲突
+        if self._is_keyword(self._name):
+            self._name = '_'+self._name
+
         if self._name.startswith("[") and self._name.endswith("...]"):
             self._name = self._name.replace('[','').split(',')[0]
 

@@ -1,6 +1,6 @@
-__all__=['OpenPrinter', 'GetPrinter', 'SetPrinter', 'ClosePrinter', 'AddPrinterConnection', 'DeletePrinterConnection', 'EnumPrinters', 'GetDefaultPrinter', 'GetDefaultPrinterW', 'SetDefaultPrinter', 'SetDefaultPrinterW', 'StartDocPrinter', 'EndDocPrinter', 'AbortPrinter', 'StartPagePrinter', 'EndPagePrinter', 'StartDoc', 'EndDoc', 'AbortDoc', 'StartPage', 'EndPage', 'WritePrinter', 'EnumJobs', 'GetJob', 'SetJob', 'DocumentProperties', 'EnumPrintProcessors', 'EnumPrintProcessorDatatypes', 'EnumPrinterDrivers', 'EnumForms', 'AddForm', 'DeleteForm', 'GetForm', 'SetForm', 'AddJob', 'ScheduleJob', 'DeviceCapabilities', 'GetDeviceCaps', 'EnumMonitors', 'EnumPorts', 'GetPrintProcessorDirectory', 'GetPrinterDriverDirectory', 'AddPrinter', 'DeletePrinter', 'DeletePrinterDriver', 'DeletePrinterDriverEx', 'FlushPrinter']
+__all__=['', 'OpenPrinter', 'GetPrinter', 'SetPrinter', 'ClosePrinter', 'AddPrinterConnection', 'DeletePrinterConnection', 'EnumPrinters', 'GetDefaultPrinter', 'GetDefaultPrinterW', 'SetDefaultPrinter', 'SetDefaultPrinterW', 'StartDocPrinter', 'EndDocPrinter', 'AbortPrinter', 'StartPagePrinter', 'EndPagePrinter', 'StartDoc', 'EndDoc', 'AbortDoc', 'StartPage', 'EndPage', 'WritePrinter', 'EnumJobs', 'GetJob', 'SetJob', 'DocumentProperties', 'EnumPrintProcessors', 'EnumPrintProcessorDatatypes', 'EnumPrinterDrivers', 'EnumForms', 'AddForm', 'DeleteForm', 'GetForm', 'SetForm', 'AddJob', 'ScheduleJob', 'DeviceCapabilities', 'GetDeviceCaps', 'EnumMonitors', 'EnumPorts', 'GetPrintProcessorDirectory', 'GetPrinterDriverDirectory', 'AddPrinter', 'DeletePrinter', 'DeletePrinterDriver', 'DeletePrinterDriverEx', 'FlushPrinter']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """A module encapsulating the Windows printing API."""
 
 
@@ -209,7 +209,7 @@ Returns:
     pass
         
 
-def StartDocPrinter(hprinter:'PyPrinterHANDLE',tuple:'Any',level:'int'=1) -> 'int':
+def StartDocPrinter(hprinter:'PyPrinterHANDLE',_tuple:'Any',level:'int'=1) -> 'int':
     """
     Notifies the print spooler that a document is to be spooled for printing. To 
 
@@ -218,7 +218,7 @@ be used before using WritePrinter. Returns the Jobid of the started job.
 Args:
 
       hprinter(PyPrinterHANDLE):handle to printer (from win32print::OpenPrinter)
-      tuple(Any):A tuple corresponding to the level parameter.CommentsFor level 1, the tuple is:Items[0] string : docNameSpecifies the name of the document.[1] string : outputFileSpecifies the name of an output file. To print to a printer, set this to None.[2] string : dataTypeIdentifies the type of data used to record the document, such as "raw" or "emf", used to record the print job. This member can be None. If it is not None, the StartDoc function passes it to the printer driver. Note that the printer driver might ignore the requested data type.
+      _tuple(Any):A tuple corresponding to the level parameter.CommentsFor level 1, the tuple is:Items[0] string : docNameSpecifies the name of the document.[1] string : outputFileSpecifies the name of an output file. To print to a printer, set this to None.[2] string : dataTypeIdentifies the type of data used to record the document, such as "raw" or "emf", used to record the print job. This member can be None. If it is not None, the StartDoc function passes it to the printer driver. Note that the printer driver might ignore the requested data type.
       level(int):type of docinfo structure (only docinfo level 1 supported)
 
 Returns:
@@ -528,14 +528,14 @@ Returns:
     pass
         
 
-def EnumPrinterDrivers(Server:'Union[str, Any]'=None,Environment:'Union[str, Any]'=None,Level:'int'=1) -> 'Tuple[dict, ...]':
+def EnumPrinterDrivers(Server:'Union[Any, str]'=None,Environment:'Union[Any, str]'=None,Level:'int'=1) -> 'Tuple[dict, ...]':
     """
     Lists installed printer drivers
 
 Args:
 
-      Server(Union[str, Any]):Name of print server, use None for local machine
-      Environment(Union[str, Any]):Environment - eg 'Windows NT x86' - use None for current client environment
+      Server(Union[Any, str]):Name of print server, use None for local machine
+      Environment(Union[Any, str]):Environment - eg 'Windows NT x86' - use None for current client environment
       Level(int):Level of information to return, 1-6 (not all levels are supported on all platforms)CommentsOn Win2k and up, 'all' can be passed for environmentReturn ValueReturns a sequence of dictionaries representing DRIVER_INFO_* structures
 
 Returns:

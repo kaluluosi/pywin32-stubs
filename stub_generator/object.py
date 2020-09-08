@@ -15,7 +15,8 @@ class Property:
         def_str = def_dt.b.text.replace("unsigned", "").strip()
         if not self.is_validate_def(def_dt):
             raise Exception(f"{def_dt.text} is no a valide property define!")
-        self._type, self._name = def_str.split(' ')
+        self._type = ''.join(def_str.split(' ')[0:-1])
+        self._name = def_str.split(' ')[-1]
         self._type = type_cvt(self._type)
         self._description = desc_dd.text.replace('\n','')
 
@@ -171,5 +172,8 @@ class ObjectList(Doc):
             object_tag = object_tag.find_next('li')
             if not object_tag:
                 break
+
+            if '.' in object_tag.text:
+                continue
 
             yield Class(object_tag.a['href'])

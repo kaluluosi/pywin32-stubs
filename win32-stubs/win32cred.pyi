@@ -1,6 +1,6 @@
-__all__=['CredMarshalCredential', 'CredUnmarshalCredential', 'CredIsMarshaledCredential', 'CredEnumerate', 'CredGetTargetInfo', 'CredWriteDomainCredentials', 'CredReadDomainCredentials', 'CredDelete', 'CredWrite', 'CredRead', 'CredRename', 'CredUICmdLinePromptForCredentials', 'CredUIPromptForCredentials', 'CredUIConfirmCredentials', 'CredUIReadSSOCredW', 'CredUIStoreSSOCredW', 'CredUIParseUserName']
+__all__=['', 'CredMarshalCredential', 'CredUnmarshalCredential', 'CredIsMarshaledCredential', 'CredEnumerate', 'CredGetTargetInfo', 'CredWriteDomainCredentials', 'CredReadDomainCredentials', 'CredDelete', 'CredWrite', 'CredRead', 'CredRename', 'CredUICmdLinePromptForCredentials', 'CredUIPromptForCredentials', 'CredUIConfirmCredentials', 'CredUIReadSSOCredW', 'CredUIStoreSSOCredW', 'CredUIParseUserName']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """"""
 
 

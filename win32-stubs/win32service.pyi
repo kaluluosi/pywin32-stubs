@@ -1,6 +1,6 @@
-__all__=['GetThreadDesktop', 'EnumWindowStations', 'GetUserObjectInformation', 'SetUserObjectInformation', 'OpenWindowStation', 'OpenDesktop', 'CreateDesktop', 'OpenInputDesktop', 'GetProcessWindowStation', 'CreateWindowStation', 'EnumServicesStatus', 'EnumServicesStatusEx', 'EnumDependentServices', 'QueryServiceConfig', 'StartService', 'OpenService', 'OpenSCManager', 'CloseServiceHandle', 'QueryServiceStatus', 'QueryServiceStatusEx', 'SetServiceObjectSecurity', 'QueryServiceObjectSecurity', 'GetServiceKeyName', 'GetServiceDisplayName', 'SetServiceStatus', 'ControlService', 'DeleteService', 'CreateService', 'ChangeServiceConfig', 'LockServiceDatabase', 'UnlockServiceDatabase', 'QueryServiceLockStatus', 'ChangeServiceConfig2', 'QueryServiceConfig2', 'DBT_CONFIGCHANGECANCELED', 'DBT_CONFIGCHANGED', 'DBT_CUSTOMEVENT', 'DBT_DEVICEARRIVAL', 'DBT_DEVICEQUERYREMOVE', 'DBT_DEVICEQUERYREMOVEFAILED', 'DBT_DEVICEREMOVECOMPLETE', 'DBT_DEVICEREMOVEPENDING', 'DBT_DEVICETYPESPECIFIC', 'DBT_QUERYCHANGECONFIG', 'DF_ALLOWOTHERACCOUNTHOOK', 'SC_ACTION_NONE', 'SC_ACTION_REBOOT', 'SC_ACTION_RESTART', 'SC_ACTION_RUN_COMMAND', 'SC_ENUM_PROCESS_INFO', 'SC_GROUP_IDENTIFIER', 'SC_MANAGER_ALL_ACCESS', 'SC_MANAGER_CONNECT', 'SC_MANAGER_CREATE_SERVICE', 'SC_MANAGER_ENUMERATE_SERVICE', 'SC_MANAGER_LOCK', 'SC_MANAGER_MODIFY_BOOT_CONFIG', 'SC_MANAGER_QUERY_LOCK_STATUS', 'SERVICE_ACCEPT_HARDWAREPROFILECHANGE', 'SERVICE_ACCEPT_NETBINDCHANGE', 'SERVICE_ACCEPT_PARAMCHANGE', 'SERVICE_ACCEPT_PAUSE_CONTINUE', 'SERVICE_ACCEPT_POWEREVENT', 'SERVICE_ACCEPT_PRESHUTDOWN', 'SERVICE_ACCEPT_SESSIONCHANGE', 'SERVICE_ACCEPT_SHUTDOWN', 'SERVICE_ACCEPT_STOP', 'SERVICE_ACTIVE', 'SERVICE_ALL_ACCESS', 'SERVICE_AUTO_START', 'SERVICE_BOOT_START', 'SERVICE_CHANGE_CONFIG', 'SERVICE_CONFIG_DELAYED_AUTO_START_INFO', 'SERVICE_CONFIG_DESCRIPTION', 'SERVICE_CONFIG_FAILURE_ACTIONS', 'SERVICE_CONFIG_FAILURE_ACTIONS_FLAG', 'SERVICE_CONFIG_PRESHUTDOWN_INFO', 'SERVICE_CONFIG_REQUIRED_PRIVILEGES_INFO', 'SERVICE_CONFIG_SERVICE_SID_INFO', 'SERVICE_CONTINUE_PENDING', 'SERVICE_CONTROL_CONTINUE', 'SERVICE_CONTROL_DEVICEEVENT', 'SERVICE_CONTROL_HARDWAREPROFILECHANGE', 'SERVICE_CONTROL_INTERROGATE', 'SERVICE_CONTROL_NETBINDADD', 'SERVICE_CONTROL_NETBINDDISABLE', 'SERVICE_CONTROL_NETBINDENABLE', 'SERVICE_CONTROL_NETBINDREMOVE', 'SERVICE_CONTROL_PARAMCHANGE', 'SERVICE_CONTROL_PAUSE', 'SERVICE_CONTROL_POWEREVENT', 'SERVICE_CONTROL_PRESHUTDOWN', 'SERVICE_CONTROL_SESSIONCHANGE', 'SERVICE_CONTROL_SHUTDOWN', 'SERVICE_CONTROL_STOP', 'SERVICE_DEMAND_START', 'SERVICE_DISABLED', 'SERVICE_DRIVER', 'SERVICE_ENUMERATE_DEPENDENTS', 'SERVICE_ERROR_CRITICAL', 'SERVICE_ERROR_IGNORE', 'SERVICE_ERROR_NORMAL', 'SERVICE_ERROR_SEVERE', 'SERVICE_FILE_SYSTEM_DRIVER', 'SERVICE_INACTIVE', 'SERVICE_INTERACTIVE_PROCESS', 'SERVICE_INTERROGATE', 'SERVICE_KERNEL_DRIVER', 'SERVICE_NO_CHANGE', 'SERVICE_PAUSE_CONTINUE', 'SERVICE_PAUSE_PENDING', 'SERVICE_PAUSED', 'SERVICE_QUERY_CONFIG', 'SERVICE_QUERY_STATUS', 'SERVICE_RUNNING', 'SERVICE_SID_TYPE_NONE', 'SERVICE_SID_TYPE_RESTRICTED', 'SERVICE_SID_TYPE_UNRESTRICTED', 'SERVICE_SPECIFIC_ERROR', 'SERVICE_START', 'SERVICE_START_PENDING', 'SERVICE_STATE_ALL', 'SERVICE_STOP', 'SERVICE_STOP_PENDING', 'SERVICE_STOPPED', 'SERVICE_SYSTEM_START', 'SERVICE_USER_DEFINED_CONTROL', 'SERVICE_WIN32', 'SERVICE_WIN32_OWN_PROCESS', 'SERVICE_WIN32_SHARE_PROCESS', 'UOI_FLAGS', 'UOI_NAME', 'UOI_TYPE', 'UOI_USER_SID', 'WSF_VISIBLE']
+__all__=['', 'GetThreadDesktop', 'EnumWindowStations', 'GetUserObjectInformation', 'SetUserObjectInformation', 'OpenWindowStation', 'OpenDesktop', 'CreateDesktop', 'OpenInputDesktop', 'GetProcessWindowStation', 'CreateWindowStation', 'EnumServicesStatus', 'EnumServicesStatusEx', 'EnumDependentServices', 'QueryServiceConfig', 'StartService', 'OpenService', 'OpenSCManager', 'CloseServiceHandle', 'QueryServiceStatus', 'QueryServiceStatusEx', 'SetServiceObjectSecurity', 'QueryServiceObjectSecurity', 'GetServiceKeyName', 'GetServiceDisplayName', 'SetServiceStatus', 'ControlService', 'DeleteService', 'CreateService', 'ChangeServiceConfig', 'LockServiceDatabase', 'UnlockServiceDatabase', 'QueryServiceLockStatus', 'ChangeServiceConfig2', 'QueryServiceConfig2', 'DBT_CONFIGCHANGECANCELED', 'DBT_CONFIGCHANGED', 'DBT_CUSTOMEVENT', 'DBT_DEVICEARRIVAL', 'DBT_DEVICEQUERYREMOVE', 'DBT_DEVICEQUERYREMOVEFAILED', 'DBT_DEVICEREMOVECOMPLETE', 'DBT_DEVICEREMOVEPENDING', 'DBT_DEVICETYPESPECIFIC', 'DBT_QUERYCHANGECONFIG', 'DF_ALLOWOTHERACCOUNTHOOK', 'SC_ACTION_NONE', 'SC_ACTION_REBOOT', 'SC_ACTION_RESTART', 'SC_ACTION_RUN_COMMAND', 'SC_ENUM_PROCESS_INFO', 'SC_GROUP_IDENTIFIER', 'SC_MANAGER_ALL_ACCESS', 'SC_MANAGER_CONNECT', 'SC_MANAGER_CREATE_SERVICE', 'SC_MANAGER_ENUMERATE_SERVICE', 'SC_MANAGER_LOCK', 'SC_MANAGER_MODIFY_BOOT_CONFIG', 'SC_MANAGER_QUERY_LOCK_STATUS', 'SERVICE_ACCEPT_HARDWAREPROFILECHANGE', 'SERVICE_ACCEPT_NETBINDCHANGE', 'SERVICE_ACCEPT_PARAMCHANGE', 'SERVICE_ACCEPT_PAUSE_CONTINUE', 'SERVICE_ACCEPT_POWEREVENT', 'SERVICE_ACCEPT_PRESHUTDOWN', 'SERVICE_ACCEPT_SESSIONCHANGE', 'SERVICE_ACCEPT_SHUTDOWN', 'SERVICE_ACCEPT_STOP', 'SERVICE_ACTIVE', 'SERVICE_ALL_ACCESS', 'SERVICE_AUTO_START', 'SERVICE_BOOT_START', 'SERVICE_CHANGE_CONFIG', 'SERVICE_CONFIG_DELAYED_AUTO_START_INFO', 'SERVICE_CONFIG_DESCRIPTION', 'SERVICE_CONFIG_FAILURE_ACTIONS', 'SERVICE_CONFIG_FAILURE_ACTIONS_FLAG', 'SERVICE_CONFIG_PRESHUTDOWN_INFO', 'SERVICE_CONFIG_REQUIRED_PRIVILEGES_INFO', 'SERVICE_CONFIG_SERVICE_SID_INFO', 'SERVICE_CONTINUE_PENDING', 'SERVICE_CONTROL_CONTINUE', 'SERVICE_CONTROL_DEVICEEVENT', 'SERVICE_CONTROL_HARDWAREPROFILECHANGE', 'SERVICE_CONTROL_INTERROGATE', 'SERVICE_CONTROL_NETBINDADD', 'SERVICE_CONTROL_NETBINDDISABLE', 'SERVICE_CONTROL_NETBINDENABLE', 'SERVICE_CONTROL_NETBINDREMOVE', 'SERVICE_CONTROL_PARAMCHANGE', 'SERVICE_CONTROL_PAUSE', 'SERVICE_CONTROL_POWEREVENT', 'SERVICE_CONTROL_PRESHUTDOWN', 'SERVICE_CONTROL_SESSIONCHANGE', 'SERVICE_CONTROL_SHUTDOWN', 'SERVICE_CONTROL_STOP', 'SERVICE_DEMAND_START', 'SERVICE_DISABLED', 'SERVICE_DRIVER', 'SERVICE_ENUMERATE_DEPENDENTS', 'SERVICE_ERROR_CRITICAL', 'SERVICE_ERROR_IGNORE', 'SERVICE_ERROR_NORMAL', 'SERVICE_ERROR_SEVERE', 'SERVICE_FILE_SYSTEM_DRIVER', 'SERVICE_INACTIVE', 'SERVICE_INTERACTIVE_PROCESS', 'SERVICE_INTERROGATE', 'SERVICE_KERNEL_DRIVER', 'SERVICE_NO_CHANGE', 'SERVICE_PAUSE_CONTINUE', 'SERVICE_PAUSE_PENDING', 'SERVICE_PAUSED', 'SERVICE_QUERY_CONFIG', 'SERVICE_QUERY_STATUS', 'SERVICE_RUNNING', 'SERVICE_SID_TYPE_NONE', 'SERVICE_SID_TYPE_RESTRICTED', 'SERVICE_SID_TYPE_UNRESTRICTED', 'SERVICE_SPECIFIC_ERROR', 'SERVICE_START', 'SERVICE_START_PENDING', 'SERVICE_STATE_ALL', 'SERVICE_STOP', 'SERVICE_STOP_PENDING', 'SERVICE_STOPPED', 'SERVICE_SYSTEM_START', 'SERVICE_USER_DEFINED_CONTROL', 'SERVICE_WIN32', 'SERVICE_WIN32_OWN_PROCESS', 'SERVICE_WIN32_SHARE_PROCESS', 'UOI_FLAGS', 'UOI_NAME', 'UOI_TYPE', 'UOI_USER_SID', 'WSF_VISIBLE']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """An interface to the Windows NT Service API"""
 
 
@@ -36,14 +36,14 @@ Returns:
     pass
         
 
-def GetUserObjectInformation(Handle:'int',type:'int') -> 'None':
+def GetUserObjectInformation(Handle:'int',_type:'int') -> 'None':
     """
     Returns specified type of info about a window station or desktop
 
 Args:
 
       Handle(int):Handle to window station or desktop
-      type(int):Type of info to return, one of UOI_FLAGS,UOI_NAME, UOI_TYPE, or UOI_USER_SIDReturn ValueReturn type is dependent on UOI_* constant passed in
+      _type(int):Type of info to return, one of UOI_FLAGS,UOI_NAME, UOI_TYPE, or UOI_USER_SIDReturn ValueReturn type is dependent on UOI_* constant passed in
 
 Returns:
 
@@ -54,7 +54,7 @@ Returns:
     pass
         
 
-def SetUserObjectInformation(Handle:'int',info:'Any',type:'int') -> 'None':
+def SetUserObjectInformation(Handle:'int',info:'Any',_type:'int') -> 'None':
     """
     Set specified type of info for a window station or desktop object
 
@@ -62,7 +62,7 @@ Args:
 
       Handle(int):Handle to window station or desktop
       info(Any):Information to set for handle, currently only a dictionary representing USEROBJECTFLAGS struct
-      type(int):Type of info to set, currently only accepts UOI_FLAGSCommentsCurrently only UOI_FLAGS supported
+      _type(int):Type of info to set, currently only accepts UOI_FLAGSCommentsCurrently only UOI_FLAGS supported
 
 Returns:
 
@@ -72,13 +72,13 @@ Returns:
     pass
         
 
-def OpenWindowStation(szWinSta:'Union[str, Any]',Inherit:'Any',DesiredAccess:'int') -> 'PyHWINSTA':
+def OpenWindowStation(szWinSta:'Union[Any, str]',Inherit:'Any',DesiredAccess:'int') -> 'PyHWINSTA':
     """
     Returns a handle to the specified window station
 
 Args:
 
-      szWinSta(Union[str, Any]):Name of window station
+      szWinSta(Union[Any, str]):Name of window station
       Inherit(Any):Allow handle to be inherited by subprocesses
       DesiredAccess(int):Bitmask of access types
 
@@ -90,13 +90,13 @@ Returns:
     pass
         
 
-def OpenDesktop(szDesktop:'Union[str, Any]',Flags:'int',Inherit:'bool',DesiredAccess:'int') -> 'PyHDESK':
+def OpenDesktop(szDesktop:'Union[Any, str]',Flags:'int',Inherit:'bool',DesiredAccess:'int') -> 'PyHDESK':
     """
     Opens a handle to a desktop
 
 Args:
 
-      szDesktop(Union[str, Any]):Name of desktop to open
+      szDesktop(Union[Any, str]):Name of desktop to open
       Flags(int):DF_ALLOWOTHERACCOUNTHOOK or 0
       Inherit(bool):Allow handle to be inherited
       DesiredAccess(int):ACCESS_MASK specifying level of access for handle
@@ -109,13 +109,13 @@ Returns:
     pass
         
 
-def CreateDesktop(Desktop:'Union[str, Any]',Flags:'int',DesiredAccess:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES') -> 'PyHDESK':
+def CreateDesktop(Desktop:'Union[Any, str]',Flags:'int',DesiredAccess:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES') -> 'PyHDESK':
     """
     Creates a new desktop in calling process's current window station
 
 Args:
 
-      Desktop(Union[str, Any]):Name of desktop to create
+      Desktop(Union[Any, str]):Name of desktop to create
       Flags(int):DF_ALLOWOTHERACCOUNTHOOK or 0
       DesiredAccess(int):An ACCESS_MASK determining level of access available thru returned handle
       SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies inheritance and controls access to desktop
@@ -162,13 +162,13 @@ Returns:
     pass
         
 
-def CreateWindowStation(WindowStation:'Union[str, Any]',Flags:'int',DesiredAccess:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES') -> 'PyHWINSTA':
+def CreateWindowStation(WindowStation:'Union[Any, str]',Flags:'int',DesiredAccess:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES') -> 'PyHWINSTA':
     """
     Creates a new window station
 
 Args:
 
-      WindowStation(Union[str, Any]):Name of window station to create, or None
+      WindowStation(Union[Any, str]):Name of window station to create, or None
       Flags(int):CWF_CREATE_ONLY or 0
       DesiredAccess(int):Bitmask of access types available to returned handle
       SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies security for window station, and whether handle is inheritableCommentsIf name is None or empty string, name is formatteded from logon id
@@ -500,7 +500,7 @@ Returns:
     pass
         
 
-def CreateService(scHandle:'PySC_HANDLE',name:'str',displayName:'str',desiredAccess:'int',serviceType:'int',startType:'int',errorControl:'int',binaryFile:'str',loadOrderGroup:'str',bFetchTag:'int',serviceDeps:'List[str]',acctName:'str',password:'str') -> 'Tuple[Union[PySC_HANDLE], int]':
+def CreateService(scHandle:'PySC_HANDLE',name:'str',displayName:'str',desiredAccess:'int',serviceType:'int',startType:'int',errorControl:'int',binaryFile:'str',loadOrderGroup:'str',bFetchTag:'int',serviceDeps:'List[Any]',acctName:'str',password:'str') -> 'Tuple[Union[PySC_HANDLE], int]':
     """
     Creates a new service.
 
@@ -516,7 +516,7 @@ Args:
       binaryFile(str):name of binary file
       loadOrderGroup(str):name of load ordering group , or None
       bFetchTag(int):Should the tag be fetched and returned?  If TRUE, the result is a tuple of (handle, tag), otherwise just handle.
-      serviceDeps(List[str]):sequence of dependency names
+      serviceDeps(List[Any]):sequence of dependency names
       acctName(str):account name of service, or None
       password(str):password for service account , or None
 
@@ -528,7 +528,7 @@ Returns:
     pass
         
 
-def ChangeServiceConfig(hService:'PySC_HANDLE',serviceType:'int',startType:'int',errorControl:'int',binaryFile:'str',loadOrderGroup:'str',bFetchTag:'int',serviceDeps:'List[str]',acctName:'str',password:'str',displayName:'str') -> 'Union[None, int]':
+def ChangeServiceConfig(hService:'PySC_HANDLE',serviceType:'int',startType:'int',errorControl:'int',binaryFile:'str',loadOrderGroup:'str',bFetchTag:'int',serviceDeps:'List[Any]',acctName:'str',password:'str',displayName:'str') -> 'Union[int, None]':
     """
     Changes the configuration of an existing service.
 
@@ -541,14 +541,14 @@ Args:
       binaryFile(str):name of binary file, or None
       loadOrderGroup(str):name of load ordering group , or None
       bFetchTag(int):Should the tag be fetched and returned?  If TRUE, the result is the tag, else None.
-      serviceDeps(List[str]):sequence of dependency names
+      serviceDeps(List[Any]):sequence of dependency names
       acctName(str):account name of service, or None
       password(str):password for service account , or None
       displayName(str):Display name
 
 Returns:
 
-      Union[None, int]
+      Union[int, None]
         
     """
     pass

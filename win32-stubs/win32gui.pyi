@@ -1,6 +1,6 @@
-__all__=['EnumFontFamilies', 'set_logger', 'LOGFONT', 'CreateFontIndirect', 'GetObject', 'GetObjectType', 'PyGetMemory', 'PyGetString', 'PySetString', 'PySetMemory', 'PyGetArraySignedLong', 'PyGetBufferAddressAndLen', 'FlashWindow', 'FlashWindowEx', 'GetWindowLong', 'GetClassLong', 'SetWindowLong', 'CallWindowProc', 'SendMessage', 'SendMessageTimeout', 'PostMessage', 'PostThreadMessage', 'ReplyMessage', 'RegisterWindowMessage', 'DefWindowProc', 'EnumWindows', 'EnumThreadWindows', 'EnumChildWindows', 'DialogBox', 'DialogBoxParam', 'DialogBoxIndirect', 'DialogBoxIndirectParam', 'CreateDialogIndirect', 'DialogBoxIndirectParam', 'EndDialog', 'GetDlgItem', 'GetDlgItemInt', 'SetDlgItemInt', 'GetDlgCtrlID', 'GetDlgItemText', 'SetDlgItemText', 'GetNextDlgTabItem', 'GetNextDlgGroupItem', 'SetWindowText', 'GetWindowText', 'InitCommonControls', 'InitCommonControlsEx', 'LoadCursor', 'SetCursor', 'GetCursor', 'GetCursorInfo', 'CreateAcceleratorTable', 'DestroyAccleratorTable', 'LoadMenu', 'DestroyMenu', 'SetMenu', 'GetMenu', 'LoadIcon', 'CopyIcon', 'DrawIcon', 'DrawIconEx', 'CreateIconIndirect', 'CreateIconFromResource', 'LoadImage', 'DeleteObject', 'BitBlt', 'StretchBlt', 'PatBlt', 'SetStretchBltMode', 'GetStretchBltMode', 'TransparentBlt', 'MaskBlt', 'AlphaBlend', 'ImageList_Add', 'ImageList_Create', 'ImageList_Destroy', 'ImageList_Draw', 'ImageList_DrawEx', 'ImageList_GetIcon', 'ImageList_GetImageCount', 'ImageList_LoadImage', 'ImageList_LoadBitmap', 'ImageList_Remove', 'ImageList_Replace', 'ImageList_ReplaceIcon', 'ImageList_SetBkColor', 'ImageList_SetOverlayImage', 'MessageBox', 'MessageBeep', 'CreateWindow', 'DestroyWindow', 'EnableWindow', 'FindWindow', 'FindWindowEx', 'DragAcceptFiles', 'DragDetect', 'SetDoubleClickTime', 'GetDoubleClickTime', 'HideCaret', 'SetCaretPos', 'GetCaretPos', 'ShowCaret', 'ShowWindow', 'IsWindowVisible', 'IsWindowEnabled', 'SetFocus', 'GetFocus', 'UpdateWindow', 'BringWindowToTop', 'SetActiveWindow', 'GetActiveWindow', 'SetForegroundWindow', 'GetForegroundWindow', 'GetClientRect', 'GetDC', 'SaveDC', 'RestoreDC', 'DeleteDC', 'CreateCompatibleDC', 'CreateCompatibleBitmap', 'CreateBitmap', 'SelectObject', 'GetCurrentObject', 'GetWindowRect', 'GetStockObject', 'PostQuitMessage', 'WaitMessage', 'SetWindowPos', 'GetWindowPlacement', 'SetWindowPlacement', 'RegisterClass', 'UnregisterClass', 'PumpMessages', 'PumpWaitingMessages', 'GetMessage', 'TranslateMessage', 'DispatchMessage', 'TranslateAccelerator', 'PeekMessage', 'Shell_NotifyIcon', 'GetSystemMenu', 'DrawMenuBar', 'MoveWindow', 'CloseWindow', 'DeleteMenu', 'RemoveMenu', 'CreateMenu', 'CreatePopupMenu', 'TrackPopupMenu', 'CommDlgExtendedError', 'ExtractIcon', 'ExtractIconEx', 'DestroyIcon', 'GetIconInfo', 'ScreenToClient', 'ClientToScreen', 'PaintDesktop', 'RedrawWindow', 'GetTextExtentPoint32', 'GetTextMetrics', 'GetTextCharacterExtra', 'SetTextCharacterExtra', 'GetTextAlign', 'SetTextAlign', 'GetTextFace', 'GetMapMode', 'SetMapMode', 'GetGraphicsMode', 'SetGraphicsMode', 'GetLayout', 'SetLayout', 'GetPolyFillMode', 'SetPolyFillMode', 'GetWorldTransform', 'SetWorldTransform', 'ModifyWorldTransform', 'CombineTransform', 'GetWindowOrgEx', 'SetWindowOrgEx', 'GetViewportOrgEx', 'SetViewportOrgEx', 'GetWindowExtEx', 'SetWindowExtEx', 'GetViewportExtEx', 'SetViewportExtEx', 'GradientFill', 'GetOpenFileName', 'InsertMenuItem', 'SetMenuItemInfo', 'GetMenuItemInfo', 'GetMenuItemCount', 'GetMenuItemRect', 'GetMenuState', 'SetMenuDefaultItem', 'GetMenuDefaultItem', 'AppendMenu', 'InsertMenu', 'EnableMenuItem', 'CheckMenuItem', 'GetSubMenu', 'ModifyMenu', 'GetMenuItemID', 'SetMenuItemBitmaps', 'CheckMenuRadioItem', 'SetMenuInfo', 'GetMenuInfo', 'DrawFocusRect', 'DrawText', 'LineTo', 'Ellipse', 'Pie', 'Arc', 'ArcTo', 'AngleArc', 'Chord', 'ExtFloodFill', 'SetPixel', 'GetPixel', 'GetROP2', 'SetROP2', 'SetPixelV', 'MoveToEx', 'GetCurrentPositionEx', 'GetArcDirection', 'SetArcDirection', 'Polygon', 'Polyline', 'PolylineTo', 'PolyBezier', 'PolyBezierTo', 'PlgBlt', 'CreatePolygonRgn', 'ExtTextOut', 'GetTextColor', 'SetTextColor', 'GetBkMode', 'SetBkMode', 'GetBkColor', 'SetBkColor', 'DrawEdge', 'FillRect', 'FillRgn', 'PaintRgn', 'FrameRgn', 'InvertRgn', 'EqualRgn', 'PtInRegion', 'PtInRect', 'RectInRegion', 'SetRectRgn', 'CombineRgn', 'DrawAnimatedRects', 'CreateSolidBrush', 'CreatePatternBrush', 'CreateHatchBrush', 'CreatePen', 'GetSysColor', 'GetSysColorBrush', 'InvalidateRect', 'FrameRect', 'InvertRect', 'WindowFromDC', 'GetUpdateRgn', 'GetWindowRgn', 'SetWindowRgn', 'GetWindowRgnBox', 'ValidateRgn', 'InvalidateRgn', 'GetRgnBox', 'OffsetRgn', 'Rectangle', 'RoundRect', 'BeginPaint', 'EndPaint', 'BeginPath', 'EndPath', 'AbortPath', 'CloseFigure', 'FlattenPath', 'FillPath', 'WidenPath', 'StrokePath', 'StrokeAndFillPath', 'GetMiterLimit', 'SetMiterLimit', 'PathToRegion', 'GetPath', 'CreateRoundRectRgn', 'CreateRectRgnIndirect', 'CreateEllipticRgnIndirect', 'CreateWindowEx', 'GetParent', 'SetParent', 'GetCursorPos', 'GetDesktopWindow', 'GetWindow', 'GetWindowDC', 'IsIconic', 'IsWindow', 'IsChild', 'ReleaseCapture', 'GetCapture', 'SetCapture', '_TrackMouseEvent', 'ReleaseDC', 'CreateCaret', 'DestroyCaret', 'ScrollWindowEx', 'SetScrollInfo', 'GetScrollInfo', 'GetClassName', 'WindowFromPoint', 'ChildWindowFromPoint', 'ChildWindowFromPoint', 'ListView_SortItems', 'ListView_SortItemsEx', 'CreateDC', 'GetSaveFileNameW', 'GetOpenFileNameW', 'SystemParametersInfo', 'SetLayeredWindowAttributes', 'GetLayeredWindowAttributes', 'UpdateLayeredWindow', 'AnimateWindow', 'CreateBrushIndirect', 'ExtCreatePen', 'DrawTextW', 'EnumPropsEx', 'RegisterDeviceNotification', 'UnregisterDeviceNotification', 'RegisterHotKey', 'CLR_NONE', 'ILC_COLOR', 'ILC_COLOR16', 'ILC_COLOR24', 'ILC_COLOR32', 'ILC_COLOR4', 'ILC_COLOR8', 'ILC_COLORDDB', 'ILC_MASK', 'ILD_BLEND', 'ILD_BLEND25', 'ILD_BLEND50', 'ILD_FOCUS', 'ILD_MASK', 'ILD_NORMAL', 'ILD_SELECTED', 'ILD_TRANSPARENT', 'IMAGE_BITMAP', 'IMAGE_CURSOR', 'IMAGE_ICON', 'LR_CREATEDIBSECTION', 'LR_DEFAULTCOLOR', 'LR_DEFAULTSIZE', 'LR_LOADFROMFILE', 'LR_LOADMAP3DCOLORS', 'LR_LOADTRANSPARENT', 'LR_MONOCHROME', 'LR_SHARED', 'LR_VGACOLOR', 'NIF_ICON', 'NIF_INFO', 'NIF_MESSAGE', 'NIF_STATE', 'NIF_TIP', 'NIIF_ERROR', 'NIIF_ICON_MASK', 'NIIF_INFO', 'NIIF_NONE', 'NIIF_NOSOUND', 'NIIF_WARNING', 'NIM_ADD', 'NIM_DELETE', 'NIM_MODIFY', 'NIM_SETFOCUS', 'NIM_SETVERSION', 'TPM_BOTTOMALIGN', 'TPM_CENTERALIGN', 'TPM_LEFTALIGN', 'TPM_LEFTBUTTON', 'TPM_NONOTIFY', 'TPM_RETURNCMD', 'TPM_RIGHTALIGN', 'TPM_RIGHTBUTTON', 'TPM_TOPALIGN', 'TPM_VCENTERALIGN']
+__all__=['', 'EnumFontFamilies', 'set_logger', 'LOGFONT', 'CreateFontIndirect', 'GetObject', 'GetObjectType', 'PyGetMemory', 'PyGetString', 'PySetString', 'PySetMemory', 'PyGetArraySignedLong', 'PyGetBufferAddressAndLen', 'FlashWindow', 'FlashWindowEx', 'GetWindowLong', 'GetClassLong', 'SetWindowLong', 'CallWindowProc', 'SendMessage', 'SendMessageTimeout', 'PostMessage', 'PostThreadMessage', 'ReplyMessage', 'RegisterWindowMessage', 'DefWindowProc', 'EnumWindows', 'EnumThreadWindows', 'EnumChildWindows', 'DialogBox', 'DialogBoxParam', 'DialogBoxIndirect', 'DialogBoxIndirectParam', 'CreateDialogIndirect', 'DialogBoxIndirectParam', 'EndDialog', 'GetDlgItem', 'GetDlgItemInt', 'SetDlgItemInt', 'GetDlgCtrlID', 'GetDlgItemText', 'SetDlgItemText', 'GetNextDlgTabItem', 'GetNextDlgGroupItem', 'SetWindowText', 'GetWindowText', 'InitCommonControls', 'InitCommonControlsEx', 'LoadCursor', 'SetCursor', 'GetCursor', 'GetCursorInfo', 'CreateAcceleratorTable', 'DestroyAccleratorTable', 'LoadMenu', 'DestroyMenu', 'SetMenu', 'GetMenu', 'LoadIcon', 'CopyIcon', 'DrawIcon', 'DrawIconEx', 'CreateIconIndirect', 'CreateIconFromResource', 'LoadImage', 'DeleteObject', 'BitBlt', 'StretchBlt', 'PatBlt', 'SetStretchBltMode', 'GetStretchBltMode', 'TransparentBlt', 'MaskBlt', 'AlphaBlend', 'ImageList_Add', 'ImageList_Create', 'ImageList_Destroy', 'ImageList_Draw', 'ImageList_DrawEx', 'ImageList_GetIcon', 'ImageList_GetImageCount', 'ImageList_LoadImage', 'ImageList_LoadBitmap', 'ImageList_Remove', 'ImageList_Replace', 'ImageList_ReplaceIcon', 'ImageList_SetBkColor', 'ImageList_SetOverlayImage', 'MessageBox', 'MessageBeep', 'CreateWindow', 'DestroyWindow', 'EnableWindow', 'FindWindow', 'FindWindowEx', 'DragAcceptFiles', 'DragDetect', 'SetDoubleClickTime', 'GetDoubleClickTime', 'HideCaret', 'SetCaretPos', 'GetCaretPos', 'ShowCaret', 'ShowWindow', 'IsWindowVisible', 'IsWindowEnabled', 'SetFocus', 'GetFocus', 'UpdateWindow', 'BringWindowToTop', 'SetActiveWindow', 'GetActiveWindow', 'SetForegroundWindow', 'GetForegroundWindow', 'GetClientRect', 'GetDC', 'SaveDC', 'RestoreDC', 'DeleteDC', 'CreateCompatibleDC', 'CreateCompatibleBitmap', 'CreateBitmap', 'SelectObject', 'GetCurrentObject', 'GetWindowRect', 'GetStockObject', 'PostQuitMessage', 'WaitMessage', 'SetWindowPos', 'GetWindowPlacement', 'SetWindowPlacement', 'RegisterClass', 'UnregisterClass', 'PumpMessages', 'PumpWaitingMessages', 'GetMessage', 'TranslateMessage', 'DispatchMessage', 'TranslateAccelerator', 'PeekMessage', 'Shell_NotifyIcon', 'GetSystemMenu', 'DrawMenuBar', 'MoveWindow', 'CloseWindow', 'DeleteMenu', 'RemoveMenu', 'CreateMenu', 'CreatePopupMenu', 'TrackPopupMenu', 'CommDlgExtendedError', 'ExtractIcon', 'ExtractIconEx', 'DestroyIcon', 'GetIconInfo', 'ScreenToClient', 'ClientToScreen', 'PaintDesktop', 'RedrawWindow', 'GetTextExtentPoint32', 'GetTextMetrics', 'GetTextCharacterExtra', 'SetTextCharacterExtra', 'GetTextAlign', 'SetTextAlign', 'GetTextFace', 'GetMapMode', 'SetMapMode', 'GetGraphicsMode', 'SetGraphicsMode', 'GetLayout', 'SetLayout', 'GetPolyFillMode', 'SetPolyFillMode', 'GetWorldTransform', 'SetWorldTransform', 'ModifyWorldTransform', 'CombineTransform', 'GetWindowOrgEx', 'SetWindowOrgEx', 'GetViewportOrgEx', 'SetViewportOrgEx', 'GetWindowExtEx', 'SetWindowExtEx', 'GetViewportExtEx', 'SetViewportExtEx', 'GradientFill', 'GetOpenFileName', 'InsertMenuItem', 'SetMenuItemInfo', 'GetMenuItemInfo', 'GetMenuItemCount', 'GetMenuItemRect', 'GetMenuState', 'SetMenuDefaultItem', 'GetMenuDefaultItem', 'AppendMenu', 'InsertMenu', 'EnableMenuItem', 'CheckMenuItem', 'GetSubMenu', 'ModifyMenu', 'GetMenuItemID', 'SetMenuItemBitmaps', 'CheckMenuRadioItem', 'SetMenuInfo', 'GetMenuInfo', 'DrawFocusRect', 'DrawText', 'LineTo', 'Ellipse', 'Pie', 'Arc', 'ArcTo', 'AngleArc', 'Chord', 'ExtFloodFill', 'SetPixel', 'GetPixel', 'GetROP2', 'SetROP2', 'SetPixelV', 'MoveToEx', 'GetCurrentPositionEx', 'GetArcDirection', 'SetArcDirection', 'Polygon', 'Polyline', 'PolylineTo', 'PolyBezier', 'PolyBezierTo', 'PlgBlt', 'CreatePolygonRgn', 'ExtTextOut', 'GetTextColor', 'SetTextColor', 'GetBkMode', 'SetBkMode', 'GetBkColor', 'SetBkColor', 'DrawEdge', 'FillRect', 'FillRgn', 'PaintRgn', 'FrameRgn', 'InvertRgn', 'EqualRgn', 'PtInRegion', 'PtInRect', 'RectInRegion', 'SetRectRgn', 'CombineRgn', 'DrawAnimatedRects', 'CreateSolidBrush', 'CreatePatternBrush', 'CreateHatchBrush', 'CreatePen', 'GetSysColor', 'GetSysColorBrush', 'InvalidateRect', 'FrameRect', 'InvertRect', 'WindowFromDC', 'GetUpdateRgn', 'GetWindowRgn', 'SetWindowRgn', 'GetWindowRgnBox', 'ValidateRgn', 'InvalidateRgn', 'GetRgnBox', 'OffsetRgn', 'Rectangle', 'RoundRect', 'BeginPaint', 'EndPaint', 'BeginPath', 'EndPath', 'AbortPath', 'CloseFigure', 'FlattenPath', 'FillPath', 'WidenPath', 'StrokePath', 'StrokeAndFillPath', 'GetMiterLimit', 'SetMiterLimit', 'PathToRegion', 'GetPath', 'CreateRoundRectRgn', 'CreateRectRgnIndirect', 'CreateEllipticRgnIndirect', 'CreateWindowEx', 'GetParent', 'SetParent', 'GetCursorPos', 'GetDesktopWindow', 'GetWindow', 'GetWindowDC', 'IsIconic', 'IsWindow', 'IsChild', 'ReleaseCapture', 'GetCapture', 'SetCapture', '_TrackMouseEvent', 'ReleaseDC', 'CreateCaret', 'DestroyCaret', 'ScrollWindowEx', 'SetScrollInfo', 'GetScrollInfo', 'GetClassName', 'WindowFromPoint', 'ChildWindowFromPoint', 'ChildWindowFromPoint', 'ListView_SortItems', 'ListView_SortItemsEx', 'CreateDC', 'GetSaveFileNameW', 'GetOpenFileNameW', 'SystemParametersInfo', 'SetLayeredWindowAttributes', 'GetLayeredWindowAttributes', 'UpdateLayeredWindow', 'AnimateWindow', 'CreateBrushIndirect', 'ExtCreatePen', 'DrawTextW', 'EnumPropsEx', 'RegisterDeviceNotification', 'UnregisterDeviceNotification', 'RegisterHotKey', 'CLR_NONE', 'ILC_COLOR', 'ILC_COLOR16', 'ILC_COLOR24', 'ILC_COLOR32', 'ILC_COLOR4', 'ILC_COLOR8', 'ILC_COLORDDB', 'ILC_MASK', 'ILD_BLEND', 'ILD_BLEND25', 'ILD_BLEND50', 'ILD_FOCUS', 'ILD_MASK', 'ILD_NORMAL', 'ILD_SELECTED', 'ILD_TRANSPARENT', 'IMAGE_BITMAP', 'IMAGE_CURSOR', 'IMAGE_ICON', 'LR_CREATEDIBSECTION', 'LR_DEFAULTCOLOR', 'LR_DEFAULTSIZE', 'LR_LOADFROMFILE', 'LR_LOADMAP3DCOLORS', 'LR_LOADTRANSPARENT', 'LR_MONOCHROME', 'LR_SHARED', 'LR_VGACOLOR', 'NIF_ICON', 'NIF_INFO', 'NIF_MESSAGE', 'NIF_STATE', 'NIF_TIP', 'NIIF_ERROR', 'NIIF_ICON_MASK', 'NIIF_INFO', 'NIIF_NONE', 'NIIF_NOSOUND', 'NIIF_WARNING', 'NIM_ADD', 'NIM_DELETE', 'NIM_MODIFY', 'NIM_SETFOCUS', 'NIM_SETVERSION', 'TPM_BOTTOMALIGN', 'TPM_CENTERALIGN', 'TPM_LEFTALIGN', 'TPM_LEFTBUTTON', 'TPM_NONOTIFY', 'TPM_RETURNCMD', 'TPM_RIGHTALIGN', 'TPM_RIGHTBUTTON', 'TPM_TOPALIGN', 'TPM_VCENTERALIGN']
 from typing import *
-from .win32typing import *
+from win32helper.win32typing import *
 """"""
 
 
@@ -105,14 +105,14 @@ Returns:
     pass
         
 
-def PyGetMemory(addr:'int',len:'int') -> 'Any':
+def PyGetMemory(addr:'int',_len:'int') -> 'Any':
     """
     Returns a buffer object from and address and length
 
 Args:
 
       addr(int):Address of the memory to reference.
-      len(int):Number of bytes to return.CommentsIf zero is passed a ValueError will be raised.
+      _len(int):Number of bytes to return.CommentsIf zero is passed a ValueError will be raised.
 
 Returns:
 
@@ -122,14 +122,14 @@ Returns:
     pass
         
 
-def PyGetString(addr:'int',len:'int') -> 'str':
+def PyGetString(addr:'int',_len:'int') -> 'str':
     """
     Returns a string from an address.
 
 Args:
 
       addr(int):Address of the memory to reference
-      len(int):Number of characters to read.  If not specified, the string must be NULL terminated.Return ValueIf win32gui.UNICODE is True, this will return a unicode object.
+      _len(int):Number of characters to read.  If not specified, the string must be NULL terminated.Return ValueIf win32gui.UNICODE is True, this will return a unicode object.
 
 Returns:
 
@@ -417,13 +417,13 @@ Returns:
     pass
         
 
-def RegisterWindowMessage(name:'Union[str, Any]') -> 'int':
+def RegisterWindowMessage(name:'Union[Any, str]') -> 'int':
     """
     Defines a new window message that is guaranteed to be unique throughout the system. The message value can be used when sending or posting messages.
 
 Args:
 
-      name(Union[str, Any]):The string
+      name(Union[Any, str]):The string
 
 Returns:
 
@@ -717,7 +717,7 @@ Returns:
     pass
         
 
-def SetDlgItemText(hDlg:'int',IDDlgItem:'int',String:'Union[str, Any]') -> 'None':
+def SetDlgItemText(hDlg:'int',IDDlgItem:'int',String:'Union[Any, str]') -> 'None':
     """
     Sets the text for a window or control
 
@@ -725,7 +725,7 @@ Args:
 
       hDlg(int):Handle to a dialog window
       IDDlgItem(int):The Id of a control within the dialog
-      String(Union[str, Any]):The text to put in the control
+      String(Union[Any, str]):The text to put in the control
 
 Returns:
 
@@ -1112,7 +1112,7 @@ Returns:
     pass
         
 
-def LoadImage(hinst:'int',name:'Union[int, str]',type:'int',cxDesired:'int',cyDesired:'int',fuLoad:'int') -> 'Any':
+def LoadImage(hinst:'int',name:'Union[int, str]',_type:'int',cxDesired:'int',cyDesired:'int',fuLoad:'int') -> 'Any':
     """
     Loads a bitmap, cursor or icon
 
@@ -1120,7 +1120,7 @@ Args:
 
       hinst(int):Handle to an instance of the module that contains the image to be loaded. To load an OEM image, set this parameter to zero.
       name(Union[int, str]):Specifies the image to load. If the hInst parameter is non-zero and the fuLoad parameter omits LR_LOADFROMFILE, name specifies the image resource in the hInst module. If the image resource is to be loaded by name, the name parameter is a string that contains the name of the image resource.
-      type(int):Specifies the type of image to be loaded.
+      _type(int):Specifies the type of image to be loaded.
       cxDesired(int):Specifies the width, in pixels, of the icon or cursor. If this parameter is zero and the fuLoad parameter is LR_DEFAULTSIZE, the function uses the SM_CXICON or SM_CXCURSOR system metric value to set the width. If this parameter is zero and LR_DEFAULTSIZE is not used, the function uses the actual resource width.
       cyDesired(int):Specifies the height, in pixels, of the icon or cursor. If this parameter is zero and the fuLoad parameter is LR_DEFAULTSIZE, the function uses the SM_CYICON or SM_CYCURSOR system metric value to set the height. If this parameter is zero and LR_DEFAULTSIZE is not used, the function uses the actual resource height.
       fuLoad(int):
@@ -1594,13 +1594,13 @@ Returns:
     pass
         
 
-def MessageBeep(type:'int') -> 'None':
+def MessageBeep(_type:'int') -> 'None':
     """
     Plays a waveform sound.
 
 Args:
 
-      type(int):The type of the beep
+      _type(int):The type of the beep
 
 Returns:
 
@@ -2153,14 +2153,14 @@ Returns:
     pass
         
 
-def SelectObject(hdc:'int',object:'int') -> 'Any':
+def SelectObject(hdc:'int',_object:'int') -> 'Any':
     """
     Selects an object into the specified device context (DC). The new object replaces the previous object of the same type.
 
 Args:
 
       hdc(int):handle to DC
-      object(int):The GDI object
+      _object(int):The GDI object
 
 Returns:
 
@@ -2396,15 +2396,15 @@ Return ValueReturns non-zero (exit code from PostQuitMessage) if a WM_QUIT messa
     pass
         
 
-def GetMessage(hwnd:'int',min:'int',max:'int') -> 'Any':
+def GetMessage(hwnd:'int',_min:'int',_max:'int') -> 'Any':
     """
     None
 
 Args:
 
       hwnd(int):
-      min(int):
-      max(int):
+      _min(int):
+      _max(int):
 
 Returns:
 
@@ -2836,14 +2836,14 @@ Returns:
     pass
         
 
-def GetTextExtentPoint32(hdc:'int',str:'str') -> 'Tuple[Any, Any]':
+def GetTextExtentPoint32(hdc:'int',_str:'str') -> 'Tuple[Any, Any]':
     """
     Computes the width and height of the specified string of text.
 
 Args:
 
       hdc(int):The device context
-      str(str):The string to measure.
+      _str(str):The string to measure.
 
 Returns:
 
@@ -3323,13 +3323,13 @@ Returns:
     pass
         
 
-def GetOpenFileName(OPENFILENAME:'Union[str, bytes]') -> 'int':
+def GetOpenFileName(OPENFILENAME:'Union[bytes, str]') -> 'int':
     """
     Creates an Open dialog box that lets the user specify the drive, directory, and the name of a file or set of files to open.
 
 Args:
 
-      OPENFILENAME(Union[str, bytes]):A string packed into an OPENFILENAME structure, probably via the struct module.CommentsThe win32gui::GetOpenFileNameW function is far more convenient to use.Return ValueIf the user presses OK, the function returns TRUE.  Otherwise, use CommDlgExtendedError for error details (ie, a win32gui.error is raised).  If the user cancels the dialog, the winerror attribute of the exception will be zero.
+      OPENFILENAME(Union[bytes, str]):A string packed into an OPENFILENAME structure, probably via the struct module.CommentsThe win32gui::GetOpenFileNameW function is far more convenient to use.Return ValueIf the user presses OK, the function returns TRUE.  Otherwise, use CommDlgExtendedError for error details (ie, a win32gui.error is raised).  If the user cancels the dialog, the winerror attribute of the exception will be zero.
 
 Returns:
 
@@ -3879,13 +3879,13 @@ Returns:
     pass
         
 
-def ExtFloodFill(Unknow:'int',XStart:'int',YStart:'int',Color:'int',FillType:'int') -> 'None':
+def ExtFloodFill(arg:'int',XStart:'int',YStart:'int',Color:'int',FillType:'int') -> 'None':
     """
     Fills an area with current brush
 
 Args:
 
-      Unknow(int):Handle to a device context
+      arg(int):Handle to a device context
       XStart(int):Horizontal starting pos
       YStart(int):Vertical starting pos
       Color(int):RGB color value.  See win32api::RGB.
@@ -4061,14 +4061,14 @@ Returns:
     pass
         
 
-def Polygon(hdc:'int',Points:'List[Any]') -> 'None':
+def Polygon(hdc:'int',Points:'List[Tuple[int, int]]') -> 'None':
     """
     Draws a closed filled polygon defined by a sequence of points
 
 Args:
 
       hdc(int):Handle to a device context
-      Points(List[Any]):Sequence of POINT tuples: ((x,y),...)
+      Points(List[Tuple[int, int]]):Sequence of POINT tuples: ((x,y),...)
 
 Returns:
 
@@ -4078,14 +4078,14 @@ Returns:
     pass
         
 
-def Polyline(hdc:'int',Points:'List[Any]') -> 'None':
+def Polyline(hdc:'int',Points:'List[Tuple[int, int]]') -> 'None':
     """
     Connects a sequence of points using currently selected pen
 
 Args:
 
       hdc(int):Handle to a device context
-      Points(List[Any]):Sequence of POINT tuples: ((x,y),...)
+      Points(List[Tuple[int, int]]):Sequence of POINT tuples: ((x,y),...)
 
 Returns:
 
@@ -4095,14 +4095,14 @@ Returns:
     pass
         
 
-def PolylineTo(hdc:'int',Points:'List[Any]') -> 'None':
+def PolylineTo(hdc:'int',Points:'List[Tuple[int, int]]') -> 'None':
     """
     Draws a series of lines starting from current position.  Updates current position with end point.
 
 Args:
 
       hdc(int):Handle to a device context
-      Points(List[Any]):Sequence of POINT tuples: ((x,y),...)
+      Points(List[Tuple[int, int]]):Sequence of POINT tuples: ((x,y),...)
 
 Returns:
 
@@ -4112,14 +4112,14 @@ Returns:
     pass
         
 
-def PolyBezier(hdc:'int',Points:'List[Any]') -> 'None':
+def PolyBezier(hdc:'int',Points:'List[Tuple[int, int]]') -> 'None':
     """
     Draws a series of Bezier curves starting from first point specified.
 
 Args:
 
       hdc(int):Handle to a device context
-      Points(List[Any]):Sequence of POINT tuples: ((x,y),...).CommentsNumber of points must be a multiple of 3 plus 1.
+      Points(List[Tuple[int, int]]):Sequence of POINT tuples: ((x,y),...).CommentsNumber of points must be a multiple of 3 plus 1.
 
 Returns:
 
@@ -4129,14 +4129,14 @@ Returns:
     pass
         
 
-def PolyBezierTo(hdc:'int',Points:'List[Any]') -> 'None':
+def PolyBezierTo(hdc:'int',Points:'List[Tuple[int, int]]') -> 'None':
     """
     Draws a series of Bezier curves starting from current drawing position.
 
 Args:
 
       hdc(int):Handle to a device context
-      Points(List[Any]):Sequence of POINT tuples: ((x,y),...).CommentsPoints must contain 3 points for each curve.  Current position is updated with last endpoint.
+      Points(List[Tuple[int, int]]):Sequence of POINT tuples: ((x,y),...).CommentsPoints must contain 3 points for each curve.  Current position is updated with last endpoint.
 
 Returns:
 
@@ -4171,13 +4171,13 @@ Returns:
     pass
         
 
-def CreatePolygonRgn(Points:'List[Any]',PolyFillMode:'int') -> 'PyGdiHANDLE':
+def CreatePolygonRgn(Points:'List[Tuple[int, int]]',PolyFillMode:'int') -> 'PyGdiHANDLE':
     """
     Creates a region from a sequence of vertices
 
 Args:
 
-      Points(List[Any]):Sequence of POINT tuples: ((x,y),...).
+      Points(List[Tuple[int, int]]):Sequence of POINT tuples: ((x,y),...).
       PolyFillMode(int):Filling mode, one of ALTERNATE, WINDING
 
 Returns:
@@ -4188,19 +4188,19 @@ Returns:
     pass
         
 
-def ExtTextOut(hdc:'int',int:'Any',int1:'Any',int2:'Any',rect:'PyRECT',string:'Any',tuple:'Tuple[Tuple[Any, Any], ...]') -> 'int':
+def ExtTextOut(hdc:'int',_int:'Any',_int1:'Any',_int2:'Any',rect:'PyRECT',string:'Any',_tuple:'Tuple[Tuple[Any, Any], ...]') -> 'int':
     """
     Writes text to a DC.
 
 Args:
 
       hdc(int):Handle to a device context
-      int(Any):The x coordinate to write the text to.
-      int1(Any):The y coordinate to write the text to.
-      int2(Any):Specifies the rectangle type. This parameter can be one, both, or neither of ETO_CLIPPED and ETO_OPAQUE
+      _int(Any):The x coordinate to write the text to.
+      _int1(Any):The y coordinate to write the text to.
+      _int2(Any):Specifies the rectangle type. This parameter can be one, both, or neither of ETO_CLIPPED and ETO_OPAQUE
       rect(PyRECT):Specifies the text's bounding rectangle.  (Can be None.)
       string(Any):The text to write.
-      tuple(Tuple[Tuple[Any, Any], ...]):Optional array of values that indicate distance between origins of character cells.Win32 API References
+      _tuple(Tuple[Tuple[Any, Any], ...]):Optional array of values that indicate distance between origins of character cells.Win32 API References
 
 Returns:
 
@@ -6006,20 +6006,20 @@ Return ValueReturns a tuple of (color key, alpha, flags)
     pass
         
 
-def UpdateLayeredWindow(hwnd:'int',hdcDst:'int'=None,ptDst:'Tuple[Any, Any]'=None,size:'Tuple[Any, Any]'=None,hdcSrc:'int'=None,ptSrc:'Tuple[Any, Any]'=None,Key:'int'=0,blend:'Tuple[int, int, int, int]'=(0,0,255,0),Flags:'int'=0) -> 'None':
+def UpdateLayeredWindow(hwnd:'int',arg:'Tuple[int, int, int, int]',hdcDst:'int'=None,ptDst:'Tuple[Any, Any]'=None,size:'Tuple[Any, Any]'=None,hdcSrc:'int'=None,ptSrc:'Tuple[Any, Any]'=None,Key:'int'=0,Flags:'int'=0) -> 'None':
     """
     Updates the position, size, shape, content, and translucency of a layered window.
 
 Args:
 
       hwnd(int):handle to layered window
+      arg(Tuple[int, int, int, int]):PyBLENDFUNCTION specifying alpha blending parameters
       hdcDst(int):handle to screen DC, can be None.  *Must* be None if hdcSrc is None
       ptDst(Tuple[Any, Any]):New screen position, can be None.
       size(Tuple[Any, Any]):New size of the layered window, can be None.  *Must* be None if hdcSrc is None.
       hdcSrc(int):handle to surface DC for the window, can be None
       ptSrc(Tuple[Any, Any]):layer position, can be None.  *Must* be None if hdcSrc is None.
       Key(int):Color key, generate using win32api::RGB
-      blend(Tuple[int, int, int, int]):PyBLENDFUNCTION specifying alpha blending parameters
       Flags(int):One of the win32con.ULW_* values.  Use 0 if hdcSrc is None.CommentsThis function is only available on Windows 2000 and laterAccepts keyword arguments.
 
 Returns:
@@ -6125,14 +6125,14 @@ Returns:
     pass
         
 
-def RegisterDeviceNotification(handle:'int',filter:'Any',flags:'int') -> 'PyHDEVNOTIFY':
+def RegisterDeviceNotification(handle:'int',_filter:'Any',flags:'int') -> 'PyHDEVNOTIFY':
     """
     Registers the device or type of device for which a window will receive notifications.
 
 Args:
 
       handle(int):The handle to a window or a service
-      filter(Any):A buffer laid out like one of the DEV_BROADCAST_* structures, generally built by one of the win32gui_struct helpers.
+      _filter(Any):A buffer laid out like one of the DEV_BROADCAST_* structures, generally built by one of the win32gui_struct helpers.
       flags(int):Win32 API References
 
 Returns:
@@ -6163,14 +6163,14 @@ Returns:
     pass
         
 
-def RegisterHotKey(hWnd:'int',id:'int',Modifiers:'int',vk:'int') -> 'None':
+def RegisterHotKey(hWnd:'int',_id:'int',Modifiers:'int',vk:'int') -> 'None':
     """
     Registers a hotkey for a window
 
 Args:
 
       hWnd(int):Handle to window that will receive WM_HOTKEY messages
-      id(int):Unique id to be used for the hot key
+      _id(int):Unique id to be used for the hot key
       Modifiers(int):Control keys, combination of win32con.MOD_*
       vk(int):Virtual key codeWin32 API References
 
