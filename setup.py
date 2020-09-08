@@ -25,6 +25,7 @@ setup(
     version="0.1.2",
     description="stubs for pywin32",
     license="MIT",
+    url="https://github.com/mhammond/pywin32",
     author="Carlos Teng",
     author_email ="303359166@qq.com",
     keywords=["pywin32", "stubs"],
