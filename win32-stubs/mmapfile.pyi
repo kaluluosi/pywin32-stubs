@@ -1,15 +1,14 @@
-from pywintypes import *
 __all__=['mmapfile']
-import typing
+from typing import *
+from .win32typing import *
 """Compiled extension module that provides access to the memory mapped file API"""
 
 
-def mmapfile(File:str,Name:str,MaximumSize:int=0,FileOffset:int=0,NumberOfBytesToMap:int=0) -> typing.Any:
+def mmapfile(File:'str',Name:'str',MaximumSize:'int'=0,FileOffset:'int'=0,NumberOfBytesToMap:'int'=0) -> 'Pymmapfile':
     """
     Creates or opens a memory mapped file. 
 
 This method uses the following API functions: CreateFileMapping, MapViewOfFile, VirtualQuery
-
 
 Args:
 
@@ -21,7 +20,8 @@ Args:
 
 Returns:
 
-      typing.Any
+      Pymmapfile
         
     """
     pass
+        

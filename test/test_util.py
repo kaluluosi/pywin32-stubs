@@ -1,6 +1,7 @@
 from unittest import TestCase
 
 from os import path
+import sys
 
 from stub_generator.util import doc_path, is_exist, type_cvt
 
@@ -24,5 +25,14 @@ class UtilTest(TestCase):
 
         self.assertEqual(type_cvt('tuple'), 'tuple')
         self.assertEqual(type_cvt('PyHANDLE'), 'int')
-        self.assertEqual(type_cvt('object'), 'typing.Any')
+        self.assertEqual(type_cvt('object'), 'Any')
+        self.assertEqual(type_cvt('Object'), 'Any')
         self.assertEqual(type_cvt('string'), 'str')
+
+        self.assertEqual(type_cvt("PyHANDLE, PyHANDLE, int, int"), "Tuple[int, int, int, int]")
+        self.assertEqual(type_cvt("(int,int,int,int,string)"), "Tuple[int, int, int, int, str]")
+
+        self.assertEqual(type_cvt("[PyNETRESOURCE, ...]"), "List[PyNETRESOURCE]")
+        self.assertEqual(type_cvt("(PyUnicode,...)"), "Tuple[str, ...]")
+
+        self.assertEqual(type_cvt("((str, str), ...)"), "Tuple[Tuple[str, str], ...]")

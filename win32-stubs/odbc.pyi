@@ -1,13 +1,12 @@
-from pywintypes import *
 __all__=['odbc', 'SQLDataSources']
-import typing
+from typing import *
+from .win32typing import *
 """A Python wrapper around the ODBC API."""
 
 
-def odbc(connectionString:str) -> typing.Any:
+def odbc(connectionString:'str') -> 'connection':
     """
     Creates an ODBC connection
-
 
 Args:
 
@@ -15,16 +14,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      connection
         
     """
     pass
+        
 
-
-def SQLDataSources(direction:int) -> typing.Any:
+def SQLDataSources(direction:'int') -> 'Tuple[Any, Union[Any, None]]':
     """
     Enumerates ODBC data sources
-
 
 Args:
 
@@ -32,8 +30,9 @@ Args:
 
 Returns:
 
-      typing.Any:One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
+      Tuple[Any, Union[Any, None]]:One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
 
         
     """
     pass
+        

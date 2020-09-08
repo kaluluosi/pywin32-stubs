@@ -1,33 +1,31 @@
-from pywintypes import *
 __all__=['CreateConsoleScreenBuffer', 'GetConsoleDisplayMode', 'AttachConsole', 'AllocConsole', 'FreeConsole', 'GetConsoleProcessList', 'GetConsoleCP', 'GetConsoleOutputCP', 'SetConsoleCP', 'SetConsoleOutputCP', 'GetConsoleSelectionInfo', 'AddConsoleAlias', 'GetConsoleAliases', 'GetConsoleAliasExes', 'GetConsoleWindow', 'GetNumberOfConsoleFonts', 'SetConsoleTitle', 'GetConsoleTitle', 'GenerateConsoleCtrlEvent', 'GetStdHandle']
-import typing
+from typing import *
+from .win32typing import *
 """Interface to the Windows Console functions for dealing with character-mode applications"""
 
 
-def CreateConsoleScreenBuffer(DesiredAccess:int,ShareMode:int,Flags:int,SecurityAttributes:typing.Any=None) -> typing.Any:
+def CreateConsoleScreenBuffer(DesiredAccess:'int',ShareMode:'int',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'PyConsoleScreenBuffer':
     """
     Creates a new console screen buffer
-
 
 Args:
 
       DesiredAccess(int):GENERIC_READ and/or GENERIC_WRITE
       ShareMode(int):FILE_SHARE_READ and/or FILE_SHARE_WRITE
       Flags(int):CONSOLE_TEXTMODE_BUFFER is currently only valid flag
-      SecurityAttributes(typing.Any):Specifies security descriptor and inheritance for handle
+      SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies security descriptor and inheritance for handle
 
 Returns:
 
-      typing.Any
+      PyConsoleScreenBuffer
         
     """
     pass
+        
 
-
-def GetConsoleDisplayMode() -> int:
+def GetConsoleDisplayMode() -> 'int':
     """
     Returns the current console's display mode
-
 
 Args:
 
@@ -46,12 +44,11 @@ Return ValueCONSOLE_FULLSCREEN,CONSOLE_FULLSCREEN_HARDWARE
         
     """
     pass
+        
 
-
-def AttachConsole(ProcessId:int) -> None:
+def AttachConsole(ProcessId:'int') -> 'None':
     """
     Attaches to console of another process
-
 
 Args:
 
@@ -63,13 +60,12 @@ Returns:
         
     """
     pass
+        
 
-
-def AllocConsole() -> None:
+def AllocConsole() -> 'None':
     """
     Creates a new console for the calling process
 
-
 Args:
 
 
@@ -80,13 +76,12 @@ Returns:
         
     """
     pass
+        
 
-
-def FreeConsole() -> None:
+def FreeConsole() -> 'None':
     """
     Detaches process from its current console
 
-
 Args:
 
 
@@ -97,30 +92,28 @@ Returns:
         
     """
     pass
+        
 
-
-def GetConsoleProcessList() -> typing.Any:
+def GetConsoleProcessList() -> 'Tuple[int, ...]':
     """
     Returns pids of all processes attached to current console
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Tuple[int, ...]
         
     """
     pass
+        
 
-
-def GetConsoleCP() -> int:
+def GetConsoleCP() -> 'int':
     """
     Returns the input code page for calling process's console
 
-
 Args:
 
 
@@ -131,13 +124,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetConsoleOutputCP() -> int:
+def GetConsoleOutputCP() -> 'int':
     """
     Returns the output code page for calling process's console
 
-
 Args:
 
 
@@ -148,12 +140,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetConsoleCP(CodePageId:int) -> None:
+def SetConsoleCP(CodePageId:'int') -> 'None':
     """
     Sets the input code page for calling process's console
-
 
 Args:
 
@@ -165,12 +156,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetConsoleOutputCP(CodePageID:int) -> None:
+def SetConsoleOutputCP(CodePageID:'int') -> 'None':
     """
     Sets the output code page for calling process's console
-
 
 Args:
 
@@ -182,12 +172,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetConsoleSelectionInfo() -> dict:
+def GetConsoleSelectionInfo() -> 'dict':
     """
     Returns info on text selection within the current console
-
 
 Args:
 
@@ -207,18 +196,17 @@ CONSOLE_NO_SELECTION,CONSOLE_SELECTION_IN_PROGRESS,CONSOLE_SELECTION_NOT_EMPTY,C
         
     """
     pass
+        
 
-
-def AddConsoleAlias(Source:typing.Any,Target:typing.Any,ExeName:typing.Any) -> None:
+def AddConsoleAlias(Source:'Any',Target:'Any',ExeName:'Any') -> 'None':
     """
     Creates a new console alias
 
-
 Args:
 
-      Source(typing.Any):The string to be mapped to the target string
-      Target(typing.Any):String to be substituted for Source.  If None, alias is removed
-      ExeName(typing.Any):Name of executable that will use alias
+      Source(Any):The string to be mapped to the target string
+      Target(Any):String to be substituted for Source.  If None, alias is removed
+      ExeName(Any):Name of executable that will use alias
 
 Returns:
 
@@ -226,32 +214,30 @@ Returns:
         
     """
     pass
+        
 
-
-def GetConsoleAliases(ExeName:typing.Any) -> typing.Any:
+def GetConsoleAliases(ExeName:'Any') -> 'Any':
     """
     Retrieves aliases defined under specified executable
 
-
 Args:
 
-      ExeName(typing.Any):Name of executable for which to return aliasesReturn ValueReturns a unicode string containing null-terminated pairs of aliases and their target text of the form "alias1=replacementtext1\\0alias2=replacementtext2\\0"
+      ExeName(Any):Name of executable for which to return aliasesReturn ValueReturns a unicode string containing null-terminated pairs of aliases and their target text of the form "alias1=replacementtext1\\0alias2=replacementtext2\\0"
 
 Returns:
 
-      typing.Any:Name of executable for which to return aliasesReturn ValueReturns a unicode string containing null-terminated pairs of aliases and their target text 
+      Any:Name of executable for which to return aliasesReturn ValueReturns a unicode string containing null-terminated pairs of aliases and their target text 
 
 of the form "alias1=replacementtext1\\0alias2=replacementtext2\\0"
 
         
     """
     pass
+        
 
-
-def GetConsoleAliasExes() -> typing.Any:
+def GetConsoleAliasExes() -> 'Any':
     """
     Lists all executables that have console aliases defined
-
 
 Args:
 
@@ -259,19 +245,18 @@ Args:
 
 Returns:
 
-      typing.Any:win32console.GetConsoleAliasExes
+      Any:win32console.GetConsoleAliasExes
 PyUNICODE = GetConsoleAliasExes()Lists all executables that have console aliases defined
 Return ValueReturns a unicode string containing executable names separated by NULLS
 
         
     """
     pass
+        
 
-
-def GetConsoleWindow() -> int:
+def GetConsoleWindow() -> 'int':
     """
     Returns a handle to the console's window, or 0 if none exists
-
 
 Args:
 
@@ -291,12 +276,11 @@ raise a win32 exception.
         
     """
     pass
+        
 
-
-def GetNumberOfConsoleFonts() -> int:
+def GetNumberOfConsoleFonts() -> 'int':
     """
     Returns the number of fonts available to the console
-
 
 Args:
 
@@ -308,16 +292,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetConsoleTitle(ConsoleTitle:typing.Any) -> None:
+def SetConsoleTitle(ConsoleTitle:'Any') -> 'None':
     """
     Sets the title of the console window
 
-
 Args:
 
-      ConsoleTitle(typing.Any):New title for the console
+      ConsoleTitle(Any):New title for the console
 
 Returns:
 
@@ -325,12 +308,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetConsoleTitle() -> typing.Any:
+def GetConsoleTitle() -> 'Any':
     """
     Returns the title of the console window
-
 
 Args:
 
@@ -338,18 +320,17 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GenerateConsoleCtrlEvent(CtrlEvent:int,ProcessGroupId:int=0) -> None:
+def GenerateConsoleCtrlEvent(CtrlEvent:'int',ProcessGroupId:'int'=0) -> 'None':
     """
     Sends a control signal to a group of processes attached to a common 
 
 console
-
 
 Args:
 
@@ -362,12 +343,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetStdHandle(StdHandle:int) -> typing.Any:
+def GetStdHandle(StdHandle:'int') -> 'PyConsoleScreenBuffer':
     """
     Returns one of calling process's standard handles
-
 
 Args:
 
@@ -375,10 +355,11 @@ Args:
 
 Returns:
 
-      typing.Any:Specifies the handle to return - 
+      PyConsoleScreenBuffer:Specifies the handle to return - 
 
 STD_INPUT_HANDLE, STD_OUTPUT_HANDLE, or STD_ERROR_HANDLEReturn ValueReturns a PyConsoleScreenBuffer wrapping the handle, or None if specified handle does not exist
 
         
     """
     pass
+        

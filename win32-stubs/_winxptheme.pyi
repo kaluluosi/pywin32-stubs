@@ -1,13 +1,12 @@
-from pywintypes import *
 __all__=['OpenThemeData', 'CloseThemeData', 'DrawThemeBackground', 'DrawThemeText', 'GetThemeBackgroundContentRect', 'GetThemeBackgroundExtent', 'IsThemeActive', 'IsAppThemed', 'GetWindowTheme', 'EnableThemeDialogTexture', 'IsThemeDialogTextureEnabled', 'GetThemeAppProperties', 'EnableTheming', 'SetWindowTheme', 'GetCurrentThemeName', 'ETDT_DISABLE', 'ETDT_ENABLE', 'ETDT_ENABLETAB', 'ETDT_USETABTEXTURE']
-import typing
+from typing import *
+from .win32typing import *
 """"""
 
 
-def OpenThemeData(hwnd:int,pszClassList:str) -> typing.Any:
+def OpenThemeData(hwnd:'int',pszClassList:'str') -> 'PyHTHEME':
     """
     None
-
 
 Args:
 
@@ -16,13 +15,13 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyHTHEME
         
     """
     pass
+        
 
-
-def CloseThemeData(hTheme:typing.Any) -> None:
+def CloseThemeData(hTheme:'PyHTHEME') -> 'None':
     """
     Closes the theme data handle.  This should be done 
 
@@ -34,10 +33,9 @@ whenever a WM_THEMECHANGED msg is received
 
 handle).
 
-
 Args:
 
-      hTheme(typing.Any):Open theme data handle (returned from prior call to OpenThemeData() API).
+      hTheme(PyHTHEME):Open theme data handle (returned from prior call to OpenThemeData() API).
 
 Returns:
 
@@ -45,9 +43,9 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawThemeBackground(hTheme:typing.Any,hdc:int,iPartId:int,iStateId:int,pRect:typing.Any,pClipRect:typing.Any) -> None:
+def DrawThemeBackground(hTheme:'PyHTHEME',hdc:'int',iPartId:'int',iStateId:'int',pRect:'Any',pClipRect:'Any') -> 'None':
     """
     Draws the theme-specified border and fill for 
 
@@ -57,15 +55,14 @@ based on a bitmap file, a border and fill, or
 
 other image description.
 
-
 Args:
 
-      hTheme(typing.Any):theme data handle
+      hTheme(PyHTHEME):theme data handle
       hdc(int):HDC to draw into
       iPartId(int):part number to draw
       iStateId(int):state number (of the part) to draw
-      pRect(typing.Any):defines the size/location of the part
-      pClipRect(typing.Any):optional clipping rect (don't draw outside it)
+      pRect(Any):defines the size/location of the part
+      pClipRect(Any):optional clipping rect (don't draw outside it)
 
 Returns:
 
@@ -73,18 +70,17 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawThemeText(hTheme:typing.Any,hdc:int,iPartId:int,iStateId:int,pszText:str,dwCharCount:int,dwTextFlags:int,dwTextFlags2:int,pRect:typing.Any) -> None:
+def DrawThemeText(hTheme:'PyHTHEME',hdc:'int',iPartId:'int',iStateId:'int',pszText:'str',dwCharCount:'int',dwTextFlags:'int',dwTextFlags2:'int',pRect:'Any') -> 'None':
     """
     Draws the text using the theme-specified 
 
 color and font for the "iPartId" and "iStateId".
 
-
 Args:
 
-      hTheme(typing.Any):theme data handle
+      hTheme(PyHTHEME):theme data handle
       hdc(int):HDC to draw into
       iPartId(int):part number to draw
       iStateId(int):state number (of the part) to draw
@@ -92,7 +88,7 @@ Args:
       dwCharCount(int):number of chars to draw (-1 for all)
       dwTextFlags(int):same as DrawText() "uFormat" param
       dwTextFlags2(int):additional drawing options
-      pRect(typing.Any):defines the size/location of the part
+      pRect(Any):defines the size/location of the part
 
 Returns:
 
@@ -100,60 +96,57 @@ Returns:
         
     """
     pass
+        
 
-
-def GetThemeBackgroundContentRect(hTheme:typing.Any,hdc:int,iPartId:int,iStateId:int,pBoundingRect:typing.Any) -> typing.Any:
+def GetThemeBackgroundContentRect(hTheme:'PyHTHEME',hdc:'int',iPartId:'int',iStateId:'int',pBoundingRect:'Any') -> 'Any':
     """
     Gets the size of the content for the theme-defined 
 
 background.  This is usually the area inside the borders or Margins.
 
-
 Args:
 
-      hTheme(typing.Any):theme data handle
+      hTheme(PyHTHEME):theme data handle
       hdc(int):(optional) device content to be used for drawing
       iPartId(int):part number to draw
       iStateId(int):state number (of the part) to draw
-      pBoundingRect(typing.Any):the outer RECT of the part being drawnReturn ValueThe result is a rect with the content area
+      pBoundingRect(Any):the outer RECT of the part being drawnReturn ValueThe result is a rect with the content area
 
 Returns:
 
-      typing.Any:the outer RECT of the part being drawnReturn ValueThe result is a rect with the content area
+      Any:the outer RECT of the part being drawnReturn ValueThe result is a rect with the content area
 
         
     """
     pass
+        
 
-
-def GetThemeBackgroundExtent(hTheme:typing.Any,hdc:int,iPartId:int,iStateId:int,pContentRect:typing.Any) -> typing.Any:
+def GetThemeBackgroundExtent(hTheme:'PyHTHEME',hdc:'int',iPartId:'int',iStateId:'int',pContentRect:'Any') -> 'Any':
     """
     Calculates the size/location of the theme- 
 
 specified background based on the "pContentRect".
 
-
 Args:
 
-      hTheme(typing.Any):theme data handle
+      hTheme(PyHTHEME):theme data handle
       hdc(int):(optional) device content to be used for drawing
       iPartId(int):part number to draw
       iStateId(int):state number (of the part) to draw
-      pContentRect(typing.Any):RECT that defines the content areaReturn ValueResult is a rect with the overall size/location of part
+      pContentRect(Any):RECT that defines the content areaReturn ValueResult is a rect with the overall size/location of part
 
 Returns:
 
-      typing.Any:RECT that defines the content areaReturn ValueResult is a rect with the overall size/location of part
+      Any:RECT that defines the content areaReturn ValueResult is a rect with the overall size/location of part
 
         
     """
     pass
+        
 
-
-def IsThemeActive() -> bool:
+def IsThemeActive() -> 'bool':
     """
     None
-
 
 Args:
 
@@ -165,15 +158,14 @@ Returns:
         
     """
     pass
+        
 
-
-def IsAppThemed() -> bool:
+def IsAppThemed() -> 'bool':
     """
     Returns True if a theme is active and available to 
 
 the current process
 
-
 Args:
 
 
@@ -184,14 +176,13 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowTheme(hwnd:int) -> typing.Any:
+def GetWindowTheme(hwnd:'int') -> 'PyHTHEME':
     """
     If window is themed, returns its most recent 
 
 HTHEME from OpenThemeData() - otherwise, returns NULL.
-
 
 Args:
 
@@ -199,13 +190,13 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyHTHEME
         
     """
     pass
+        
 
-
-def EnableThemeDialogTexture(hdlg:int,dwFlags:int) -> None:
+def EnableThemeDialogTexture(hdlg:'int',dwFlags:'int') -> 'None':
     """
     Enables/disables dialog background theme. 
 
@@ -219,7 +210,6 @@ with that of their parent dialog in a manner that supports seamless
 
 background texturing.
 
-
 Args:
 
       hdlg(int):The window handle of the target dialog
@@ -231,12 +221,11 @@ Returns:
         
     """
     pass
+        
 
-
-def IsThemeDialogTextureEnabled(hdlg:int) -> bool:
+def IsThemeDialogTextureEnabled(hdlg:'int') -> 'bool':
     """
     Reports whether the dialog supports background texturing.
-
 
 Args:
 
@@ -248,12 +237,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetThemeAppProperties() -> int:
+def GetThemeAppProperties() -> 'int':
     """
     Returns the app property flags that control theming
-
 
 Args:
 
@@ -265,14 +253,13 @@ Returns:
         
     """
     pass
+        
 
-
-def EnableTheming(fEnable:bool) -> None:
+def EnableTheming(fEnable:'bool') -> 'None':
     """
     Enables or disables themeing for the current user 
 
 in the current and future sessions.
-
 
 Args:
 
@@ -284,20 +271,19 @@ Returns:
         
     """
     pass
+        
 
-
-def SetWindowTheme(hwnd:int,pszSubAppName:Union[str,None],pszSubIdList:Union[str,None]) -> None:
+def SetWindowTheme(hwnd:'int',pszSubAppName:'Union[str, None]',pszSubIdList:'Union[str, None]') -> 'None':
     """
     Rredirects an existing Window to use a different 
 
 section of the current theme information than its class normally asks for.
 
-
 Args:
 
       hwnd(int):The handle of the window (cannot be 0)
-      pszSubAppName(str,None):App (group) name to use in place of the calling app's name.  If NULL, the actual calling app name will be used.
-      pszSubIdList(str,None):A semicolon separated list of class Id names to use in place of actual list passed by the window's class.  if NULL, the id list from the calling class is used.
+      pszSubAppName(Union[str, None]):App (group) name to use in place of the calling app's name.  If NULL, the actual calling app name will be used.
+      pszSubIdList(Union[str, None]):A semicolon separated list of class Id names to use in place of actual list passed by the window's class.  if NULL, the id list from the calling class is used.
 
 Returns:
 
@@ -305,9 +291,9 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCurrentThemeName() -> typing.Any:
+def GetCurrentThemeName() -> 'Tuple[str, str, str]':
     """
     Get the name of the current theme in-use, the 
 
@@ -315,18 +301,17 @@ canonical color scheme name (not the display name) and the
 
 canonical size name (not the display name).
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Tuple[str, str, str]
         
     """
     pass
-
+        
 ETDT_DISABLE = ...
 ETDT_ENABLE = ...
 ETDT_ENABLETAB = ...

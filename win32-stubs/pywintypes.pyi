@@ -1,31 +1,29 @@
-from pywintypes import *
 __all__=['DosDateTimeToTime', 'Unicode', 'UnicodeFromRaw', 'IsTextUnicode', 'OVERLAPPED', 'IID', 'Time', 'Time', 'CreateGuid', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'HANDLE', 'HKEY', 'WAVEFORMATEX']
-import typing
+from typing import *
+from .win32typing import *
 """A module which supports common Windows types."""
 
 
-def DosDateTimeToTime() -> typing.Any:
+def DosDateTimeToTime() -> 'PyTime':
     """
     Converts an MS-DOS Date/Time to a standard Time object.
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      PyTime
         
     """
     pass
+        
 
-
-def Unicode() -> str:
+def Unicode() -> 'str':
     """
     Creates a new Unicode object
 
-
 Args:
 
 
@@ -36,16 +34,15 @@ Returns:
         
     """
     pass
+        
 
-
-def UnicodeFromRaw(str:Union[str,typing.Any]) -> str:
+def UnicodeFromRaw(str:'Union[str, Any]') -> 'str':
     """
     Creates a new Unicode object from raw binary data
 
-
 Args:
 
-      str(str,typing.Any):The string containing the binary data.
+      str(Union[str, Any]):The string containing the binary data.
 
 Returns:
 
@@ -53,12 +50,11 @@ Returns:
         
     """
     pass
+        
 
-
-def IsTextUnicode(str:str,flags:int) -> typing.Any:
+def IsTextUnicode(str:'str',flags:'int') -> 'Tuple[int, int]':
     """
     Determines whether a buffer probably contains a form of Unicode text.
-
 
 Args:
 
@@ -67,7 +63,7 @@ Args:
 
 Returns:
 
-      typing.Any:Determines the specific tests to makeReturn ValueThe function returns (result, flags), both integers. 
+      Tuple[int, int]:Determines the specific tests to makeReturn ValueThe function returns (result, flags), both integers. 
 
 result is nonzero if the data in the buffer passes the specified tests. 
 
@@ -80,12 +76,11 @@ determination.
         
     """
     pass
+        
 
-
-def OVERLAPPED() -> typing.Any:
+def OVERLAPPED() -> 'PyOVERLAPPED':
     """
     Creates a new OVERLAPPED object
-
 
 Args:
 
@@ -93,85 +88,80 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyOVERLAPPED
         
     """
     pass
+        
 
-
-def IID(iidString:Union[str,typing.Any],is_bytes:bool=False) -> typing.Any:
+def IID(iidString:'Union[str, Any]',is_bytes:'bool'=False) -> 'PyIID':
     """
     Creates a new IID object
 
-
 Args:
 
-      iidString(str,typing.Any):A string representation of an IID, or a ProgID.
+      iidString(Union[str, Any]):A string representation of an IID, or a ProgID.
       is_bytes(bool):Indicates if the first param is actually the bytes of an IID structure.
 
 Returns:
 
-      typing.Any
+      PyIID
         
     """
     pass
+        
 
-
-def Time(timeRepr:typing.Any) -> typing.Any:
+def Time(timeRepr:'Any') -> 'PyTime':
     """
     Creates a new time object.
 
-
 Args:
 
-      timeRepr(typing.Any):An integer/float/tuple time representation.CommentsNote that the parameter can be any object that supports int(object) - for example , another PyTime object. The integer should be as defined by the Python time module. See the description of the PyTime object for more information.
+      timeRepr(Any):An integer/float/tuple time representation.CommentsNote that the parameter can be any object that supports int(object) - for example , another PyTime object. The integer should be as defined by the Python time module. See the description of the PyTime object for more information.
 
 Returns:
 
-      typing.Any
+      PyTime
         
     """
     pass
+        
 
-
-def Time(timeRepr:typing.Any) -> typing.Any:
+def Time(timeRepr:'Any') -> 'PyTime':
     """
     Creates a new time object.
 
-
 Args:
 
-      timeRepr(typing.Any):An integer/float/tuple time representation.CommentsNote that the parameter can be any object that supports int(object) - for example , another PyTime object. The integer should be as defined by the Python time module. See the description of the PyTime object for more information.
+      timeRepr(Any):An integer/float/tuple time representation.CommentsNote that the parameter can be any object that supports int(object) - for example , another PyTime object. The integer should be as defined by the Python time module. See the description of the PyTime object for more information.
 
 Returns:
 
-      typing.Any
+      PyTime
         
     """
     pass
+        
 
-
-def CreateGuid() -> typing.Any:
+def CreateGuid() -> 'PyIID':
     """
     Creates a new, unique GUIID.
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      PyIID
         
     """
     pass
+        
 
-
-def ACL(bufSize:int=64) -> typing.Any:
+def ACL(bufSize:'int'=64) -> 'PyACL':
     """
     Creates a new ACL object
-
 
 Args:
 
@@ -179,70 +169,66 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyACL
         
     """
     pass
+        
 
-
-def SID(buffer:typing.Any,idAuthority:typing.Any,subAuthorities:typing.Any,bufSize:int=32) -> typing.Any:
+def SID(buffer:'Any',idAuthority:'Any',subAuthorities:'Any',bufSize:'int'=32) -> 'PySID':
     """
     Creates a new SID object
 
-
 Args:
 
-      buffer(typing.Any):A raw data buffer, assumed to hold the SID data.Alternative Parameters
-      idAuthority(typing.Any):The identifier authority.
-      subAuthorities(typing.Any):A list of sub authorities.
+      buffer(Any):A raw data buffer, assumed to hold the SID data.Alternative Parameters
+      idAuthority(Any):The identifier authority.
+      subAuthorities(Any):A list of sub authorities.
       bufSize(int):Size for the SID bufferAlternative Parameters
 
 Returns:
 
-      typing.Any
+      PySID
         
     """
     pass
+        
 
-
-def SECURITY_ATTRIBUTES() -> typing.Any:
+def SECURITY_ATTRIBUTES() -> 'PySECURITY_ATTRIBUTES':
     """
     Creates a new SECURITY_ATTRIBUTES object
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      PySECURITY_ATTRIBUTES
         
     """
     pass
+        
 
-
-def SECURITY_DESCRIPTOR() -> typing.Any:
+def SECURITY_DESCRIPTOR() -> 'PySECURITY_DESCRIPTOR':
     """
     Creates a new SECURITY_DESCRIPTOR object
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      PySECURITY_DESCRIPTOR
         
     """
     pass
+        
 
-
-def HANDLE() -> int:
+def HANDLE() -> 'int':
     """
     Creates a new HANDLE object
-
 
 Args:
 
@@ -254,37 +240,36 @@ Returns:
         
     """
     pass
+        
 
-
-def HKEY() -> typing.Any:
+def HKEY() -> 'PyHKEY':
     """
     Creates a new HKEY object
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      PyHKEY
         
     """
     pass
+        
 
-
-def WAVEFORMATEX() -> typing.Any:
+def WAVEFORMATEX() -> 'PyWAVEFORMATEX':
     """
     Creates a new WAVEFORMATEX object
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      PyWAVEFORMATEX
         
     """
     pass
+        

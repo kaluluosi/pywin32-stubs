@@ -1,15 +1,14 @@
-from pywintypes import *
 __all__=['ChangeClipboardChain', 'CloseClipboard', 'CountClipboardFormats', 'EmptyClipboard', 'EnumClipboardFormats', 'GetClipboardData', 'GetClipboardDataHandle', 'GetClipboardFormatName', 'GetClipboardOwner', 'GetClipboardSequenceNumber', 'GetClipboardViewer', 'GetGlobalMemory', 'GetOpenClipboardWindow', 'GetPriorityClipboardFormat', 'IsClipboardFormatAvailable', 'OpenClipboard', 'RegisterClipboardFormat', 'SetClipboardData', 'SetClipboardText', 'SetClipboardViewer']
-import typing
+from typing import *
+from .win32typing import *
 """A module which supports the Windows Clipboard API."""
 
 
-def ChangeClipboardChain(hWndRemove:int,hWndNewNext:int) -> int:
+def ChangeClipboardChain(hWndRemove:'int',hWndNewNext:'int') -> 'int':
     """
     The ChangeClipboardChain 
 
 function removes a specified window from the chain of clipboard viewers.
-
 
 Args:
 
@@ -34,12 +33,11 @@ typically TRUE.
         
     """
     pass
+        
 
-
-def CloseClipboard() -> None:
+def CloseClipboard() -> 'None':
     """
     None
-
 
 Args:
 
@@ -57,16 +55,15 @@ info.
         
     """
     pass
+        
 
-
-def CountClipboardFormats() -> int:
+def CountClipboardFormats() -> 'int':
     """
     The CountClipboardFormats 
 
 function retrieves the number of different data formats currently on the 
 
 clipboard.
-
 
 Args:
 
@@ -86,9 +83,9 @@ info.
         
     """
     pass
+        
 
-
-def EmptyClipboard() -> None:
+def EmptyClipboard() -> 'None':
     """
     The EmptyClipboard function empties 
 
@@ -97,7 +94,6 @@ the clipboard and frees handles to data in the clipboard. The function then
 assigns ownership of the clipboard to the window that currently has the 
 
 clipboard open.
-
 
 Args:
 
@@ -115,16 +111,15 @@ info.
         
     """
     pass
+        
 
-
-def EnumClipboardFormats(format:int=0) -> int:
+def EnumClipboardFormats(format:'int'=0) -> 'int':
     """
     The EnumClipboardFormats 
 
 function lets you enumerate the data formats that are currently available 
 
 on the clipboard.
-
 
 Args:
 
@@ -150,12 +145,11 @@ info.
         
     """
     pass
+        
 
-
-def GetClipboardData(format:int) -> typing.Any:
+def GetClipboardData(format:'int') -> 'Union[str, Any]':
     """
     None
-
 
 Args:
 
@@ -163,7 +157,7 @@ Args:
 
 Returns:
 
-      typing.Any:Search for Standard Clipboard Formats at msdn, google or google groups.
+      Union[str, Any]:Search for Standard Clipboard Formats at msdn, google or google groups.
  To Do CF_METAFILEPICT format returns a pointer to a METAFILEPICT struct which contains the metafile 
 
 handle, 
@@ -200,12 +194,11 @@ global memory referenced by the handle.
         
     """
     pass
+        
 
-
-def GetClipboardDataHandle(format:int) -> int:
+def GetClipboardDataHandle(format:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -217,16 +210,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetClipboardFormatName(format:int) -> str:
+def GetClipboardFormatName(format:'int') -> 'str':
     """
     The GetClipboardFormatName 
 
 function retrieves from the clipboard the name of the specified registered 
 
 format.
-
 
 Args:
 
@@ -246,14 +238,13 @@ info.
         
     """
     pass
+        
 
-
-def GetClipboardOwner() -> int:
+def GetClipboardOwner() -> 'int':
     """
     The GetClipboardOwner function 
 
 retrieves the window handle of the current owner of the clipboard.
-
 
 Args:
 
@@ -273,16 +264,15 @@ info.
         
     """
     pass
+        
 
-
-def GetClipboardSequenceNumber() -> int:
+def GetClipboardSequenceNumber() -> 'int':
     """
     The 
 
 GetClipboardSequenceNumber function returns the clipboard sequence number 
 
 for the current window station.
-
 
 Args:
 
@@ -300,14 +290,13 @@ returns zero.
         
     """
     pass
+        
 
-
-def GetClipboardViewer() -> int:
+def GetClipboardViewer() -> 'int':
     """
     The GetClipboardViewer function 
 
 retrieves the handle of the first window in the clipboard viewer chain.
-
 
 Args:
 
@@ -327,18 +316,17 @@ info.
         
     """
     pass
+        
 
-
-def GetGlobalMemory(hglobal:typing.Any) -> str:
+def GetGlobalMemory(hglobal:'int') -> 'str':
     """
     Returns the contents of the specified 
 
 global memory object.
 
-
 Args:
 
-      hglobal(typing.Any):The handle to the global memory object
+      hglobal(int):The handle to the global memory object
 
 Returns:
 
@@ -346,16 +334,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetOpenClipboardWindow() -> int:
+def GetOpenClipboardWindow() -> 'int':
     """
     The GetOpenClipboardWindow 
 
 function retrieves the handle of the window that currently has the 
 
 clipboard open.
-
 
 Args:
 
@@ -375,18 +362,17 @@ info.
         
     """
     pass
+        
 
-
-def GetPriorityClipboardFormat(formats:typing.Any) -> int:
+def GetPriorityClipboardFormat(formats:'Any') -> 'int':
     """
     Returns the first available clipboard format in the specified 
 
 list.
 
-
 Args:
 
-      formats(typing.Any):Sequence of integers identifying clipboard formats, in priority order. For a description of the standard clipboard formats, see Standard Clipboard Formats.Win32 API References
+      formats(Any):Sequence of integers identifying clipboard formats, in priority order. For a description of the standard clipboard formats, see Standard Clipboard Formats.Win32 API References
 
 Returns:
 
@@ -402,16 +388,15 @@ in any of the specified formats, the return value is -1.
         
     """
     pass
+        
 
-
-def IsClipboardFormatAvailable(format:int) -> int:
+def IsClipboardFormatAvailable(format:'int') -> 'int':
     """
     The 
 
 IsClipboardFormatAvailable function determines whether the clipboard 
 
 contains data in the specified format.
-
 
 Args:
 
@@ -425,9 +410,9 @@ Return ValueIf the clipboard format is available, the return value is nonzero.
         
     """
     pass
+        
 
-
-def OpenClipboard(hWnd:typing.Any=None) -> None:
+def OpenClipboard(hWnd:'int'=None) -> 'None':
     """
     The OpenClipboard function opens the 
 
@@ -435,10 +420,9 @@ clipboard for examination and prevents other applications from modifying
 
 the clipboard content.
 
-
 Args:
 
-      hWnd(typing.Any):Integer handle to the window to be associated with the open clipboard. If this parameter is None, the open clipboard is associated with the current task.CommentsOpenClipboard fails if another window has the clipboard open. An application should call the CloseClipboard function after every successful call to OpenClipboard. The window identified by the hWnd parameter does not become the clipboard owner unless the EmptyClipboard function is called.Win32 API References
+      hWnd(int):Integer handle to the window to be associated with the open clipboard. If this parameter is None, the open clipboard is associated with the current task.CommentsOpenClipboard fails if another window has the clipboard open. An application should call the CloseClipboard function after every successful call to OpenClipboard. The window identified by the hWnd parameter does not become the clipboard owner unless the EmptyClipboard function is called.Win32 API References
 
 Returns:
 
@@ -452,16 +436,15 @@ info.
         
     """
     pass
+        
 
-
-def RegisterClipboardFormat(name:str) -> None:
+def RegisterClipboardFormat(name:'str') -> 'None':
     """
     The 
 
 RegisterClipboardFormat function registers a new clipboard format. 
 
 This format can then be used as a valid clipboard format.
-
 
 Args:
 
@@ -481,9 +464,9 @@ info.
         
     """
     pass
+        
 
-
-def SetClipboardData(format:int,hMem:Union[int,typing.Any]) -> int:
+def SetClipboardData(format:'int',hMem:'Union[Any, int]') -> 'int':
     """
     The SetClipboardData function 
 
@@ -497,11 +480,10 @@ WM_RENDERALLFORMATS messages, the clipboard owner must not call
 
 OpenClipboard before calling SetClipboardData.)
 
-
 Args:
 
       format(int):Specifies a clipboard format. For a description of the standard clipboard formats, see Standard Clipboard Formats.
-      hMem(int,typing.Any):Integer handle to the data in the specified format, or string, unicode, or any object that supports the buffer interface. A global memory object is allocated, and the object's buffer is copied to the new memory. This parameter can be 0, indicating that the window provides data in the specified clipboard format (renders the format) upon request. If a window delays rendering, it must process the WM_RENDERFORMAT and WM_RENDERALLFORMATS messages. After SetClipboardData is called, the system owns the object identified by the hMem parameter. The application can read the data, but must not free the handle or leave it locked. If the hMem parameter identifies a memory object, the object must have been allocated using the GlobalAlloc function with the GMEM_MOVEABLE and GMEM_DDESHARE flags.CommentsThe uFormat parameter can identify a registered clipboard format, or it can be one of the standard clipboard formats. For more information, see Registered Clipboard Formats and Standard Clipboard Formats. The system performs implicit data format conversions between certain clipboard formats when an application calls the GetClipboardData function. For example, if the CF_OEMTEXT format is on the clipboard, a window can retrieve data in the CF_TEXT format. The format on the clipboard is converted to the requested format on demand. For more information, see Synthesized Clipboard Formats.Win32 API References
+      hMem(Union[Any, int]):Integer handle to the data in the specified format, or string, unicode, or any object that supports the buffer interface. A global memory object is allocated, and the object's buffer is copied to the new memory. This parameter can be 0, indicating that the window provides data in the specified clipboard format (renders the format) upon request. If a window delays rendering, it must process the WM_RENDERFORMAT and WM_RENDERALLFORMATS messages. After SetClipboardData is called, the system owns the object identified by the hMem parameter. The application can read the data, but must not free the handle or leave it locked. If the hMem parameter identifies a memory object, the object must have been allocated using the GlobalAlloc function with the GMEM_MOVEABLE and GMEM_DDESHARE flags.CommentsThe uFormat parameter can identify a registered clipboard format, or it can be one of the standard clipboard formats. For more information, see Registered Clipboard Formats and Standard Clipboard Formats. The system performs implicit data format conversions between certain clipboard formats when an application calls the GetClipboardData function. For example, if the CF_OEMTEXT format is on the clipboard, a window can retrieve data in the CF_TEXT format. The format on the clipboard is converted to the requested format on demand. For more information, see Synthesized Clipboard Formats.Win32 API References
 
 Returns:
 
@@ -517,18 +499,17 @@ info.
         
     """
     pass
+        
 
-
-def SetClipboardText(text:Union[str,typing.Any],format:int) -> int:
+def SetClipboardText(text:'Union[str, Any]',format:'int') -> 'int':
     """
     Convienience function to 
 
 call SetClipboardData with text.
 
-
 Args:
 
-      text(str,typing.Any):The text to place on the clipboard.
+      text(Union[str, Any]):The text to place on the clipboard.
       format(int):The clipboard format to use - must be CF_TEXT or CF_UNICODETEXTCommentsYou may pass a Unicode or string/bytes object to this function, but depending on the value of the 'format' param, it may be converted to the appropriate type for that param.Many applications will want to call this function twice, with the same string specified but CF_UNICODETEXT specified the second.Win32 API References
 
 Returns:
@@ -545,9 +526,9 @@ info.
         
     """
     pass
+        
 
-
-def SetClipboardViewer(hWndNewViewer:typing.Any) -> int:
+def SetClipboardViewer(hWndNewViewer:'int') -> 'int':
     """
     The SetClipboardViewer function 
 
@@ -557,10 +538,9 @@ viewer windows receive a WM_DRAWCLIPBOARD message whenever the content of
 
 the clipboard changes.
 
-
 Args:
 
-      hWndNewViewer(typing.Any):Integer handle to the window to be added to the clipboard chain.CommentsThe windows that are part of the clipboard viewer chain, called clipboard viewer windows, must process the clipboard messages WM_CHANGECBCHAIN and WM_DRAWCLIPBOARD. Each clipboard viewer window calls the SendMessage function to pass these messages to the next window in the clipboard viewer chain. A clipboard viewer window must eventually remove itself from the clipboard viewer chain by calling the ChangeClipboardChain function -- for example, in response to theWM_DESTROY message.Win32 API References
+      hWndNewViewer(int):Integer handle to the window to be added to the clipboard chain.CommentsThe windows that are part of the clipboard viewer chain, called clipboard viewer windows, must process the clipboard messages WM_CHANGECBCHAIN and WM_DRAWCLIPBOARD. Each clipboard viewer window calls the SendMessage function to pass these messages to the next window in the clipboard viewer chain. A clipboard viewer window must eventually remove itself from the clipboard viewer chain by calling the ChangeClipboardChain function -- for example, in response to theWM_DESTROY message.Win32 API References
 
 Returns:
 
@@ -580,3 +560,4 @@ chain, win32api.error is raised with the GetLastError info.
         
     """
     pass
+        

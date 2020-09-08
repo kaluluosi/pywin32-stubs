@@ -1,17 +1,16 @@
-from pywintypes import *
 __all__=['AbortSystemShutdown', 'InitiateSystemShutdown', 'Apply', 'Beep', 'BeginUpdateResource', 'ChangeDisplaySettings', 'ChangeDisplaySettingsEx', 'ClipCursor', 'CloseHandle', 'CopyFile', 'DebugBreak', 'DeleteFile', 'DragQueryFile', 'DragFinish', 'DuplicateHandle', 'EndUpdateResource', 'EnumDisplayDevices', 'EnumDisplayMonitors', 'EnumDisplaySettings', 'EnumDisplaySettingsEx', 'EnumResourceLanguages', 'EnumResourceNames', 'EnumResourceTypes', 'ExpandEnvironmentStrings', 'ExitWindows', 'ExitWindowsEx', 'FindFiles', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FindCloseChangeNotification', 'FindExecutable', 'FormatMessage', 'FormatMessageW', 'FreeLibrary', 'GenerateConsoleCtrlEvent', 'GetAsyncKeyState', 'GetCommandLine', 'GetComputerName', 'GetComputerNameEx', 'GetComputerObjectName', 'GetMonitorInfo', 'GetUserName', 'GetUserNameEx', 'GetCursorPos', 'GetCurrentThread', 'GetCurrentThreadId', 'GetCurrentProcessId', 'GetCurrentProcess', 'GetConsoleTitle', 'GetDateFormat', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDllDirectory', 'GetDomainName', 'GetEnvironmentVariable', 'GetEnvironmentVariableW', 'GetFileAttributes', 'GetFileVersionInfo', 'GetFocus', 'GetFullPathName', 'GetHandleInformation', 'GetKeyboardLayout', 'GetKeyboardLayoutList', 'GetKeyboardLayoutName', 'GetKeyboardState', 'GetKeyState', 'GetLastError', 'GetLastInputInfo', 'GetLocalTime', 'GetLongPathName', 'GetLongPathNameW', 'GetLogicalDrives', 'GetLogicalDriveStrings', 'GetModuleFileName', 'GetModuleFileNameW', 'GetModuleHandle', 'GetPwrCapabilities', 'GetProfileSection', 'GetProcAddress', 'GetProfileVal', 'GetShortPathName', 'GetStdHandle', 'GetSysColor', 'GetSystemDefaultLangID', 'GetSystemDefaultLCID', 'GetSystemDirectory', 'GetSystemFileCacheSize', 'SetSystemFileCacheSize', 'GetSystemInfo', 'GetNativeSystemInfo', 'GetSystemMetrics', 'GetSystemTime', 'GetTempFileName', 'GetTempPath', 'GetThreadLocale', 'GetTickCount', 'GetTimeFormat', 'GetTimeZoneInformation', 'GetVersion', 'GetVersionEx', 'GetVolumeInformation', 'GetWindowsDirectory', 'GetWindowLong', 'GetUserDefaultLangID', 'GetUserDefaultLCID', 'GlobalMemoryStatus', 'GlobalMemoryStatusEx', 'keybd_event', 'mouse_event', 'LoadCursor', 'LoadKeyboardLayout', 'LoadLibrary', 'LoadLibraryEx', 'LoadResource', 'LoadString', 'MessageBeep', 'MessageBox', 'MonitorFromPoint', 'MonitorFromRect', 'MonitorFromWindow', 'MoveFile', 'MoveFileEx', 'OpenProcess', 'OutputDebugString', 'PostMessage', 'PostQuitMessage', 'PostThreadMessage', 'RegCloseKey', 'RegConnectRegistry', 'RegCopyTree', 'RegCreateKey', 'RegCreateKeyEx', 'RegDeleteKey', 'RegDeleteKeyEx', 'RegDeleteTree', 'RegDeleteValue', 'RegEnumKey', 'RegEnumKeyEx', 'RegEnumKeyExW', 'RegEnumValue', 'RegFlushKey', 'RegGetKeySecurity', 'RegLoadKey', 'RegOpenCurrentUser', 'RegOpenKey', 'RegOpenKeyEx', 'RegOpenKeyTransacted', 'RegOverridePredefKey', 'RegQueryValue', 'RegQueryValueEx', 'RegQueryInfoKey', 'RegQueryInfoKeyW', 'RegRestoreKey', 'RegSaveKey', 'RegSaveKeyEx', 'RegSetKeySecurity', 'RegSetValue', 'RegSetValueEx', 'RegUnLoadKey', 'RegisterWindowMessage', 'RegNotifyChangeKeyValue', 'SearchPath', 'SendMessage', 'SetConsoleCtrlHandler', 'SetConsoleTitle', 'SetCursorPos', 'SetDllDirectory', 'SetErrorMode', 'SetFileAttributes', 'SetLastError', 'SetSysColors', 'SetLocalTime', 'SetSystemTime', 'SetClassLong', 'SetClassWord', 'SetWindowWord', 'SetCursor', 'SetEnvironmentVariable', 'SetEnvironmentVariable', 'SetEnvironmentVariableW', 'SetHandleInformation', 'SetStdHandle', 'SetSystemPowerState', 'SetThreadLocale', 'SetTimeZoneInformation', 'SetWindowLong', 'ShellExecute', 'ShowCursor', 'Sleep', 'TerminateProcess', 'ToAsciiEx', 'Unicode', 'UpdateResource', 'VkKeyScan', 'VkKeyScan', 'WinExec', 'WinHelp', 'WriteProfileSection', 'WriteProfileVal', 'HIBYTE', 'LOBYTE', 'HIWORD', 'LOWORD', 'RGB', 'MAKELANGID', 'MAKEWORD', 'MAKELONG']
-import typing
+from typing import *
+from .win32typing import *
 """A module, encapsulating the Windows Win32 API."""
 
 
-def AbortSystemShutdown(computerName:Union[str,typing.Any]) -> None:
+def AbortSystemShutdown(computerName:'Union[str]') -> 'None':
     """
     Aborts a system shutdown
 
-
 Args:
 
-      computerName(str,typing.Any):Specifies the name of the computer where the shutdown is to be stopped.Win32 API References
+      computerName(Union[str]):Specifies the name of the computer where the shutdown is to be stopped.Win32 API References
 
 Returns:
 
@@ -19,17 +18,16 @@ Returns:
         
     """
     pass
+        
 
-
-def InitiateSystemShutdown(computerName:Union[str,typing.Any],message:Union[str,typing.Any],timeOut:int,bForceClose:int,bRebootAfterShutdown:int) -> None:
+def InitiateSystemShutdown(computerName:'Union[str]',message:'Union[str]',timeOut:'int',bForceClose:'int',bRebootAfterShutdown:'int') -> 'None':
     """
     Initiates a shutdown and optional restart of the specified computer.
 
-
 Args:
 
-      computerName(str,typing.Any):Specifies the name of the computer to shut-down, or None
-      message(str,typing.Any):Message to display in a dialog box
+      computerName(Union[str]):Specifies the name of the computer to shut-down, or None
+      message(Union[str]):Message to display in a dialog box
       timeOut(int):Specifies the time (in seconds) that the dialog box should be displayed. While this dialog box is displayed, the shutdown can be stopped by the AbortSystemShutdown function. If dwTimeout is zero, the computer shuts down without displaying the dialog box, and the shutdown cannot be stopped by AbortSystemShutdown.
       bForceClose(int):Specifies whether applications with unsaved changes are to be forcibly closed. If this parameter is TRUE, such applications are closed. If this parameter is FALSE, a dialog box is displayed prompting the user to close the applications.
       bRebootAfterShutdown(int):Specifies whether the computer is to restart immediately after shutting down. If this parameter is TRUE, the computer is to restart. If this parameter is FALSE, the system flushes all caches to disk, clears the screen, and displays a message indicating that it is safe to power down.Win32 API References
@@ -40,31 +38,29 @@ Returns:
         
     """
     pass
+        
 
-
-def Apply(exceptionHandler:typing.Any,func:typing.Any,args:tuple) -> typing.Any:
+def Apply(exceptionHandler:'Any',func:'Any',args:'tuple') -> 'Any':
     """
     Calls a Python function, but traps Win32 exceptions.
 
-
 Args:
 
-      exceptionHandler(typing.Any):An object which will be called when a win32 exception occurs.
-      func(typing.Any):The function call call under the protection of the Win32 exception handler.
+      exceptionHandler(Any):An object which will be called when a win32 exception occurs.
+      func(Any):The function call call under the protection of the Win32 exception handler.
       args(tuple):Args for the function.CommentsCalls the specified function in a manner similar to the built-in function apply(), but allows Win32 exceptions to be handled by Python.  If a Win32 exception occurs calling the function, the specified exceptionHandler is called, and its return value determines the action taken.Return valueDescriptionTuple of (exc_type, exc_value)This exception is raised to the Python caller of Apply() - This is conceptually similar to "raise exc_type, exc_value", although exception handlers must not themselves raise exceptions (see below).IntegerMust be one of the win32 exception constants, and this value is returned to Win32.  See the Win32 documentation for details.NoneThe exception is considered not handled (ie, it is as if no exception handler exists).  If a Python exception occurs in the Win32 exception handler, it is as if None were returned (ie, no tracebacks or other diagnostics are printed)
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def Beep(freq:int,dur:int) -> None:
+def Beep(freq:'int',dur:'int') -> 'None':
     """
     Generates simple tones on the speaker.
-
 
 Args:
 
@@ -77,12 +73,11 @@ Returns:
         
     """
     pass
+        
 
-
-def BeginUpdateResource(filename:str,delete:int) -> int:
+def BeginUpdateResource(filename:'str',delete:'int') -> 'int':
     """
     Begins an update cycle for a PE file.
-
 
 Args:
 
@@ -95,16 +90,15 @@ Returns:
         
     """
     pass
+        
 
-
-def ChangeDisplaySettings(DevMode:typing.Any,Flags:int) -> int:
+def ChangeDisplaySettings(DevMode:'PyDEVMODE',Flags:'int') -> 'int':
     """
     Changes video mode for default display
 
-
 Args:
 
-      DevMode(typing.Any):A PyDEVMODE object as returned from EnumDisplaySettings, or None to reset to default settings from registry
+      DevMode(PyDEVMODE):A PyDEVMODE object as returned from EnumDisplaySettings, or None to reset to default settings from registry
       Flags(int):One of the win32con.CDS_* constants, or 0Return ValueReturns DISP_CHANGE_SUCCESSFUL on success, or one of the DISP_CHANGE_* error constants on failure
 
 Returns:
@@ -114,17 +108,16 @@ Returns:
         
     """
     pass
+        
 
-
-def ChangeDisplaySettingsEx(DeviceName:str=None,DevMode:typing.Any=None,Flags:int=0) -> int:
+def ChangeDisplaySettingsEx(DeviceName:'str'=None,DevMode:'PyDEVMODE'=None,Flags:'int'=0) -> 'int':
     """
     Changes video mode for specified display
-
 
 Args:
 
       DeviceName(str):Name of device as returned by win32api::EnumDisplayDevices, use None for default display device
-      DevMode(typing.Any):A PyDEVMODE object as returned from win32api::EnumDisplaySettings, or None to reset to default settings from registry
+      DevMode(PyDEVMODE):A PyDEVMODE object as returned from win32api::EnumDisplaySettings, or None to reset to default settings from registry
       Flags(int):One of the win32con.CDS_* constants, or 0CommentsAccepts keyword argumentsReturn ValueReturns DISP_CHANGE_SUCCESSFUL on success, or one of the DISP_CHANGE_* error constants on failure
 
 Returns:
@@ -138,16 +131,15 @@ Return ValueReturns DISP_CHANGE_SUCCESSFUL on success, or one of the DISP_CHANGE
         
     """
     pass
+        
 
-
-def ClipCursor(left, top, right, bottom:typing.Any) -> None:
+def ClipCursor(left,_top,_right,_bottom:'Tuple[int, int, int, int]') -> 'None':
     """
     Confines the cursor to a rectangular area on the screen.
 
-
 Args:
 
-      left, top, right, bottom(typing.Any):contains the screen coordinates of the upper-left and lower-right corners of the confining rectangle. If this parameter is omitted or (0,0,0,0), the cursor is free to move anywhere on the screen.Win32 API References
+      left,_top,_right,_bottom(Tuple[int, int, int, int]):contains the screen coordinates of the upper-left and lower-right corners of the confining rectangle. If this parameter is omitted or (0,0,0,0), the cursor is free to move anywhere on the screen.Win32 API References
 
 Returns:
 
@@ -155,16 +147,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CloseHandle(handle:typing.Any) -> None:
+def CloseHandle(handle:'Union[int]') -> 'None':
     """
     Closes an open handle.
 
-
 Args:
 
-      handle(typing.Any):A previously opened handle.
+      handle(Union[int]):A previously opened handle.
 
 Returns:
 
@@ -172,17 +163,16 @@ Returns:
         
     """
     pass
+        
 
-
-def CopyFile(src:str,dest:Union[str,typing.Any],bFailOnExist:int=0) -> None:
+def CopyFile(src:'Any',dest:'Union[str]',bFailOnExist:'int'=0) -> 'None':
     """
     Copies an existing file to a new file
 
-
 Args:
 
-      src(str):Name of an existing file.
-      dest(str,typing.Any):Name of file to copy to.
+      src(Any):Name of an existing file.
+      dest(Union[str]):Name of file to copy to.
       bFailOnExist(int):Indicates if the operation should fail if the file exists.Win32 API References
 
 Returns:
@@ -191,13 +181,12 @@ Returns:
         
     """
     pass
+        
 
-
-def DebugBreak() -> None:
+def DebugBreak() -> 'None':
     """
     Breaks into the C debugger
 
-
 Args:
 
 
@@ -208,16 +197,15 @@ Returns:
         
     """
     pass
+        
 
-
-def DeleteFile(fileName:Union[str,typing.Any]) -> None:
+def DeleteFile(fileName:'Union[str]') -> 'None':
     """
     Deletes the specified file.
 
-
 Args:
 
-      fileName(str,typing.Any):File to delete.Win32 API References
+      fileName(Union[str]):File to delete.Win32 API References
 
 Returns:
 
@@ -225,12 +213,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DragQueryFile(hDrop:int,fileNum:int=0xFFFFFFFF) -> typing.Any:
+def DragQueryFile(hDrop:'int',fileNum:'int'=0xFFFFFFFF) -> 'Union[str, int]':
     """
     Retrieves the file names of dropped files.
-
 
 Args:
 
@@ -239,7 +226,7 @@ Args:
 
 Returns:
 
-      typing.Any:Search for DragQueryFile at msdn, google or google groups.
+      Union[str, int]:Search for DragQueryFile at msdn, google or google groups.
 Return ValueIf the fileNum parameter is 0xFFFFFFFF (the default) then the return value 
 
 is an integer with the count of files dropped.  If fileNum is between 0 and Count, 
@@ -251,12 +238,11 @@ If an error occurs, and exception is raised.
         
     """
     pass
+        
 
-
-def DragFinish(hDrop:int) -> None:
+def DragFinish(hDrop:'int') -> 'None':
     """
     Releases the memory stored by Windows for the filenames.
-
 
 Args:
 
@@ -268,18 +254,17 @@ Returns:
         
     """
     pass
+        
 
-
-def DuplicateHandle(hSourceProcess:typing.Any,hSource:typing.Any,hTargetProcessHandle:typing.Any,desiredAccess:int,bInheritHandle:int,options:int) -> int:
+def DuplicateHandle(hSourceProcess:'int',hSource:'int',hTargetProcessHandle:'int',desiredAccess:'int',bInheritHandle:'int',options:'int') -> 'int':
     """
     Duplicates a handle.
 
-
 Args:
 
-      hSourceProcess(typing.Any):Identifies the process containing the handle to duplicate.
-      hSource(typing.Any):Identifies the handle to duplicate. This is an open object handle that is valid in the context of the source process.
-      hTargetProcessHandle(typing.Any):Identifies the process that is to receive the duplicated handle. The handle must have PROCESS_DUP_HANDLE access.
+      hSourceProcess(int):Identifies the process containing the handle to duplicate.
+      hSource(int):Identifies the handle to duplicate. This is an open object handle that is valid in the context of the source process.
+      hTargetProcessHandle(int):Identifies the process that is to receive the duplicated handle. The handle must have PROCESS_DUP_HANDLE access.
       desiredAccess(int):Specifies the access requested for the new handle. This parameter is ignored if the dwOptions parameter specifies the DUPLICATE_SAME_ACCESS flag. Otherwise, the flags that can be specified depend on the type of object whose handle is being duplicated. For the flags that can be specified for each object type, see the following Remarks section. Note that the new handle can have more access than the original handle.
       bInheritHandle(int):Indicates whether the handle is inheritable. If TRUE, the duplicate handle can be inherited by new processes created by the target process. If FALSE, the new handle cannot be inherited.
       options(int):Specifies optional actions. This parameter can be zero, or any combination of the following flagsDUPLICATE_CLOSE_SOURCEloses the source handle. This occurs regardless of any error status returned.DUPLICATE_SAME_ACCESSIgnores the dwDesiredAccess parameter. The duplicate handle has the same access as the source handle.CommentsWhen duplicating a handle for a different process, you should either keep a reference to the returned PyHANDLE, or call .Detach() on it to prevent it from being closed prematurely.
@@ -290,16 +275,15 @@ Returns:
         
     """
     pass
+        
 
-
-def EndUpdateResource(handle:typing.Any,discard:int) -> None:
+def EndUpdateResource(handle:'int',discard:'int') -> 'None':
     """
     Ends a resource update cycle of a PE file.
 
-
 Args:
 
-      handle(typing.Any):The update-file handle.
+      handle(int):The update-file handle.
       discard(int):Flag to discard all writes.
 
 Returns:
@@ -308,12 +292,11 @@ Returns:
         
     """
     pass
+        
 
-
-def EnumDisplayDevices(Device:str=None,DevNum:int=0,Flags:int=0) -> typing.Any:
+def EnumDisplayDevices(Device:'str'=None,DevNum:'int'=0,Flags:'int'=0) -> 'PyDISPLAY_DEVICE':
     """
     Obtain information about the display devices in a system
-
 
 Args:
 
@@ -323,21 +306,20 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyDISPLAY_DEVICE
         
     """
     pass
+        
 
-
-def EnumDisplayMonitors(hdc:typing.Any=None,rcClip:typing.Any=None) -> list:
+def EnumDisplayMonitors(hdc:'int'=None,rcClip:'PyRECT'=None) -> 'list':
     """
     Lists display monitors for a given device context and area
 
-
 Args:
 
-      hdc(typing.Any):Handle to device context, use None for virtual desktop
-      rcClip(typing.Any):Clipping rectangle, can be NoneCommentsAccepts keyword argumentsReturn ValueReturns a sequence of tuples.  For each monitor found, returns a handle to the monitor, device context handle, and intersection rectangle: (hMonitor, hdcMonitor, PyRECT)
+      hdc(int):Handle to device context, use None for virtual desktop
+      rcClip(PyRECT):Clipping rectangle, can be NoneCommentsAccepts keyword argumentsReturn ValueReturns a sequence of tuples.  For each monitor found, returns a handle to the monitor, device context handle, and intersection rectangle: (hMonitor, hdcMonitor, PyRECT)
 
 Returns:
 
@@ -352,12 +334,11 @@ device context handle, and intersection rectangle: (hMonitor, hdcMonitor, PyRECT
         
     """
     pass
+        
 
-
-def EnumDisplaySettings(DeviceName:str=None,ModeNum:int=0) -> typing.Any:
+def EnumDisplaySettings(DeviceName:'str'=None,ModeNum:'int'=0) -> 'PyDEVMODE':
     """
     List available modes for specified display device
-
 
 Args:
 
@@ -366,18 +347,17 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyDEVMODE
         
     """
     pass
+        
 
-
-def EnumDisplaySettingsEx(ModeNum:int,DeviceName:str=None,Flags:int=0) -> typing.Any:
+def EnumDisplaySettingsEx(ModeNum:'int',DeviceName:'str'=None,Flags:'int'=0) -> 'PyDEVMODE':
     """
     Lists available modes for a display device, with optional 
 
 flags
-
 
 Args:
 
@@ -387,79 +367,75 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyDEVMODE
         
     """
     pass
+        
 
-
-def EnumResourceLanguages(hmodule:typing.Any,lpType:typing.Any,lpName:typing.Any) -> typing.Any:
+def EnumResourceLanguages(hmodule:'int',lpType:'PyResourceId',lpName:'PyResourceId') -> 'List[int]':
     """
     List languages for a resource
 
-
 Args:
 
-      hmodule(typing.Any):Handle to the module that contains resource
-      lpType(typing.Any):Resource type, can be string or integer
-      lpName(typing.Any):Resource name, can be string or integer
+      hmodule(int):Handle to the module that contains resource
+      lpType(PyResourceId):Resource type, can be string or integer
+      lpName(PyResourceId):Resource name, can be string or integer
 
 Returns:
 
-      typing.Any
+      List[int]
         
     """
     pass
+        
 
-
-def EnumResourceNames(hmodule:typing.Any,resType:typing.Any) -> typing.Any:
+def EnumResourceNames(hmodule:'int',resType:'PyResourceId') -> 'List[str]':
     """
     Enumerates all the resources of the specified type from the 
 
 nominated file.
 
-
 Args:
 
-      hmodule(typing.Any):The handle to the module to enumerate.
-      resType(typing.Any):The type of resource to enumerate. (win32con.RT_*). If passed as a string, form is '#' sign followed by decimal number. eg RT_ANICURSOR would be '#21'Return ValueThe result is a list of string or integers, one for each resource enumerated.
+      hmodule(int):The handle to the module to enumerate.
+      resType(PyResourceId):The type of resource to enumerate. (win32con.RT_*). If passed as a string, form is '#' sign followed by decimal number. eg RT_ANICURSOR would be '#21'Return ValueThe result is a list of string or integers, one for each resource enumerated.
 
 Returns:
 
-      typing.Any:The type of resource to enumerate. (win32con.RT_*). 
+      List[str]:The type of resource to enumerate. (win32con.RT_*). 
 
 If passed as a string, form is '#' sign followed by decimal number. eg RT_ANICURSOR would be '#21'Return ValueThe result is a list of string or integers, one for each resource enumerated.
 
         
     """
     pass
+        
 
-
-def EnumResourceTypes(hmodule:typing.Any) -> typing.Any:
+def EnumResourceTypes(hmodule:'int') -> 'List[str]':
     """
     Return name or integer id of all resource types contained in 
 
 module
 
-
 Args:
 
-      hmodule(typing.Any):The handle to the module to enumerate.
+      hmodule(int):The handle to the module to enumerate.
 
 Returns:
 
-      typing.Any
+      List[str]
         
     """
     pass
+        
 
-
-def ExpandEnvironmentStrings(in:str) -> str:
+def ExpandEnvironmentStrings(in:'str') -> 'str':
     """
     Expands environment-variable strings and replaces them with their 
 
 defined values.
-
 
 Args:
 
@@ -471,12 +447,11 @@ Returns:
         
     """
     pass
+        
 
-
-def ExitWindows(reserved1:int=0,reserved2:int=0) -> None:
+def ExitWindows(reserved1:'int'=0,reserved2:'int'=0) -> 'None':
     """
     Logs off the current user
-
 
 Args:
 
@@ -489,14 +464,13 @@ Returns:
         
     """
     pass
+        
 
-
-def ExitWindowsEx(flags:int,reserved:int=0) -> None:
+def ExitWindowsEx(flags:'int',reserved:'int'=0) -> 'None':
     """
     either logs off the current user, shuts down the system, or shuts down and restarts 
 
 the system.
-
 
 Args:
 
@@ -509,14 +483,13 @@ Returns:
         
     """
     pass
+        
 
-
-def FindFiles(fileSpec:str) -> list:
+def FindFiles(fileSpec:'str') -> 'list':
     """
     Retrieves a list of matching filenames.  An interface to the API 
 
 FindFirstFile/FindNextFile/Find close functions.
-
 
 Args:
 
@@ -530,14 +503,13 @@ Return ValueReturns a sequence of WIN32_FIND_DATA tuples
         
     """
     pass
+        
 
-
-def FindFirstChangeNotification(pathName:str,bSubDirs:int,filter:int) -> int:
+def FindFirstChangeNotification(pathName:'str',bSubDirs:'int',filter:'int') -> 'int':
     """
     Creates a change notification handle and sets up initial change 
 
 notification filter conditions.
-
 
 Args:
 
@@ -592,31 +564,13 @@ is not used.
         
     """
     pass
+        
 
-
-def FindNextChangeNotification(handle:typing.Any) -> None:
+def FindNextChangeNotification(handle:'int') -> 'None':
     """
     Requests that the operating system signal a change notification handle 
 
 the next time it detects an appropriate change.
-
-
-Args:
-
-      handle(typing.Any):The handle returned from win32api::FindFirstChangeNotification
-
-Returns:
-
-      None
-        
-    """
-    pass
-
-
-def FindCloseChangeNotification(handle:int) -> None:
-    """
-    Closes the change notification handle.
-
 
 Args:
 
@@ -628,14 +582,29 @@ Returns:
         
     """
     pass
+        
 
+def FindCloseChangeNotification(handle:'int') -> 'None':
+    """
+    Closes the change notification handle.
 
-def FindExecutable(filename:str,dir:str) -> typing.Any:
+Args:
+
+      handle(int):The handle returned from win32api::FindFirstChangeNotification
+
+Returns:
+
+      None
+        
+    """
+    pass
+        
+
+def FindExecutable(filename:'str',dir:'str') -> 'Tuple[int, str]':
     """
     Retrieves the name and handle of the executable (.EXE) file 
 
 associated with the specified filename.
-
 
 Args:
 
@@ -644,7 +613,7 @@ Args:
 
 Returns:
 
-      typing.Any:Search for FindExecutable at msdn, google or google groups.
+      Tuple[int, str]:Search for FindExecutable at msdn, google or google groups.
 Return ValueThe return value is a tuple of (integer, string) 
 
 The integer is the instance handle of the executable file associated 
@@ -660,20 +629,19 @@ conversation.
         
     """
     pass
+        
 
-
-def FormatMessage(flags:typing.Any,source:typing.Any,messageId:typing.Any,languageID:typing.Any,inserts:typing.Any,errCode:int=0) -> str:
+def FormatMessage(flags:'Any',source:'Any',messageId:'Any',languageID:'Any',inserts:'Any',errCode:'int'=0) -> 'str':
     """
     Returns an error message from the system error file.
 
-
 Args:
 
-      flags(typing.Any):Flags for the call.  Note that FORMAT_MESSAGE_ALLOCATE_BUFFER and FORMAT_MESSAGE_ARGUMENT_ARRAY will always be added.
-      source(typing.Any):The source object.  If flags contain FORMAT_MESSAGE_FROM_HMODULE it should be an int; if flags contain FORMAT_MESSAGE_FROM_STRING it should be a string containing the error msg; otherwise it is ignored.
-      messageId(typing.Any):The message ID.
-      languageID(typing.Any):The language ID.
-      inserts(typing.Any):The string inserts to insert.Win32 API References
+      flags(Any):Flags for the call.  Note that FORMAT_MESSAGE_ALLOCATE_BUFFER and FORMAT_MESSAGE_ARGUMENT_ARRAY will always be added.
+      source(Any):The source object.  If flags contain FORMAT_MESSAGE_FROM_HMODULE it should be an int; if flags contain FORMAT_MESSAGE_FROM_STRING it should be a string containing the error msg; otherwise it is ignored.
+      messageId(Any):The message ID.
+      languageID(Any):The language ID.
+      inserts(Any):The string inserts to insert.Win32 API References
       errCode(int):The error code to return the message for,  If this value is 0, then GetLastError() is called to determine the error code.Alternative Parameters
 
 Returns:
@@ -682,20 +650,19 @@ Returns:
         
     """
     pass
+        
 
-
-def FormatMessageW(flags:typing.Any,source:typing.Any,messageId:typing.Any,languageID:typing.Any,inserts:typing.Any,errCode:int=0) -> str:
+def FormatMessageW(flags:'Any',source:'Any',messageId:'Any',languageID:'Any',inserts:'Any',errCode:'int'=0) -> 'str':
     """
     Returns an error message from the system error file.
 
-
 Args:
 
-      flags(typing.Any):Flags for the call.  Note that FORMAT_MESSAGE_ALLOCATE_BUFFER and FORMAT_MESSAGE_ARGUMENT_ARRAY will always be added.
-      source(typing.Any):The source object.  If flags contain FORMAT_MESSAGE_FROM_HMODULE it should be an int or PyHANDLE; if flags contain FORMAT_MESSAGE_FROM_STRING it should be a unicode string; otherwise it is ignored.
-      messageId(typing.Any):The message ID.
-      languageID(typing.Any):The language ID.
-      inserts(typing.Any):The string inserts to insert.Win32 API References
+      flags(Any):Flags for the call.  Note that FORMAT_MESSAGE_ALLOCATE_BUFFER and FORMAT_MESSAGE_ARGUMENT_ARRAY will always be added.
+      source(Any):The source object.  If flags contain FORMAT_MESSAGE_FROM_HMODULE it should be an int or PyHANDLE; if flags contain FORMAT_MESSAGE_FROM_STRING it should be a unicode string; otherwise it is ignored.
+      messageId(Any):The message ID.
+      languageID(Any):The language ID.
+      inserts(Any):The string inserts to insert.Win32 API References
       errCode(int):The error code to return the message for,  If this value is 0, then GetLastError() is called to determine the error code.Alternative Parameters
 
 Returns:
@@ -704,16 +671,15 @@ Returns:
         
     """
     pass
+        
 
-
-def FreeLibrary(hModule:typing.Any) -> None:
+def FreeLibrary(hModule:'int') -> 'None':
     """
     Decrements the reference count of the loaded dynamic-link library (DLL) module.
 
-
 Args:
 
-      hModule(typing.Any):Specifies the handle to the module.Win32 API References
+      hModule(int):Specifies the handle to the module.Win32 API References
 
 Returns:
 
@@ -721,14 +687,13 @@ Returns:
         
     """
     pass
+        
 
-
-def GenerateConsoleCtrlEvent(controlEvent:int,processGroupId:int) -> int:
+def GenerateConsoleCtrlEvent(controlEvent:'int',processGroupId:'int') -> 'int':
     """
     Send a specified signal to a console process group that shares the 
 
 console associated with the calling process.
-
 
 Args:
 
@@ -741,12 +706,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetAsyncKeyState(key:int) -> int:
+def GetAsyncKeyState(key:'int') -> 'int':
     """
     Retrieves the status of the specified key.
-
 
 Args:
 
@@ -770,13 +734,12 @@ keyboard focus.
         
     """
     pass
+        
 
-
-def GetCommandLine() -> str:
+def GetCommandLine() -> 'str':
     """
     Retrieves the current application's command line.
 
-
 Args:
 
 
@@ -787,13 +750,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetComputerName() -> str:
+def GetComputerName() -> 'str':
     """
     Returns the local computer name
 
-
 Args:
 
 
@@ -804,12 +766,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetComputerNameEx(NameType:int) -> str:
+def GetComputerNameEx(NameType:'int') -> 'str':
     """
     Retrieves a NetBIOS or DNS name associated with the local computer
-
 
 Args:
 
@@ -821,12 +782,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetComputerObjectName(NameFormat:int) -> str:
+def GetComputerObjectName(NameFormat:'int') -> 'str':
     """
     Retrieves the local computer's name in a specified format.
-
 
 Args:
 
@@ -838,16 +798,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMonitorInfo(hMonitor:typing.Any) -> dict:
+def GetMonitorInfo(hMonitor:'int') -> 'dict':
     """
     Retrieves information for a monitor by handle
 
-
 Args:
 
-      hMonitor(typing.Any):Handle to a monitorCommentsAccepts keyword argsReturn ValueReturns a dictionary representing a MONITORINFOEX structure
+      hMonitor(int):Handle to a monitorCommentsAccepts keyword argsReturn ValueReturns a dictionary representing a MONITORINFOEX structure
 
 Returns:
 
@@ -859,12 +818,11 @@ Return ValueReturns a dictionary representing a MONITORINFOEX structure
         
     """
     pass
+        
 
-
-def GetUserName() -> str:
+def GetUserName() -> 'str':
     """
     Returns the current user name
-
 
 Args:
 
@@ -876,12 +834,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetUserNameEx(NameFormat:int) -> str:
+def GetUserNameEx(NameFormat:'int') -> 'str':
     """
     Returns the current user name in format from EXTENDED_NAME_FORMAT enum
-
 
 Args:
 
@@ -893,30 +850,28 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCursorPos() -> typing.Any:
+def GetCursorPos() -> 'Tuple[int, int]':
     """
     Returns the position of the cursor, in screen co-ordinates.
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def GetCurrentThread() -> int:
+def GetCurrentThread() -> 'int':
     """
     Returns a pseudohandle for the current thread.
 
-
 Args:
 
 
@@ -927,13 +882,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCurrentThreadId() -> int:
+def GetCurrentThreadId() -> 'int':
     """
     Returns the thread ID for the current thread.
 
-
 Args:
 
 
@@ -944,13 +898,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCurrentProcessId() -> int:
+def GetCurrentProcessId() -> 'int':
     """
     Returns the thread ID for the current process.
 
-
 Args:
 
 
@@ -961,13 +914,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCurrentProcess() -> int:
+def GetCurrentProcess() -> 'int':
     """
     Returns a pseudohandle for the current process.
 
-
 Args:
 
 
@@ -978,12 +930,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetConsoleTitle() -> str:
+def GetConsoleTitle() -> 'str':
     """
     Returns the title for the current console.
-
 
 Args:
 
@@ -995,20 +946,19 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDateFormat(locale:int,flags:int,time:typing.Any,format:str) -> str:
+def GetDateFormat(locale:'int',flags:'int',time:'PyTime',format:'str') -> 'str':
     """
     Formats a date as a date string for a specified locale. The function formats 
 
 either a specified date or the local system date.
 
-
 Args:
 
       locale(int):
       flags(int):
-      time(typing.Any):The time to use, or None to use the current time.
+      time(PyTime):The time to use, or None to use the current time.
       format(str):May be None
 
 Returns:
@@ -1017,14 +967,13 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDiskFreeSpace(rootPath:str) -> tuple:
+def GetDiskFreeSpace(rootPath:'str') -> 'tuple':
     """
     Retrieves information about the specified disk, including the amount of 
 
 free space available.
-
 
 Args:
 
@@ -1044,14 +993,13 @@ If the function fails, an error is returned.
         
     """
     pass
+        
 
-
-def GetDiskFreeSpaceEx(rootPath:str) -> tuple:
+def GetDiskFreeSpaceEx(rootPath:'str') -> 'tuple':
     """
     Retrieves information about the specified disk, including the amount of 
 
 free space available.
-
 
 Args:
 
@@ -1075,13 +1023,12 @@ If the function fails, an error is returned.
         
     """
     pass
+        
 
-
-def GetDllDirectory() -> str:
+def GetDllDirectory() -> 'str':
     """
     Returns the DLL search path
 
-
 Args:
 
 
@@ -1092,13 +1039,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDomainName() -> str:
+def GetDomainName() -> 'str':
     """
     Returns the current domain name
 
-
 Args:
 
 
@@ -1109,12 +1055,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetEnvironmentVariable(variable:str) -> str:
+def GetEnvironmentVariable(variable:'str') -> 'str':
     """
     Retrieves the value of an environment variable.
-
 
 Args:
 
@@ -1128,12 +1073,11 @@ Return ValueReturns None if environment variable is not found
         
     """
     pass
+        
 
-
-def GetEnvironmentVariableW(Name:str) -> str:
+def GetEnvironmentVariableW(Name:'str') -> 'str':
     """
     Retrieves the unicode value of an environment variable.
-
 
 Args:
 
@@ -1147,12 +1091,11 @@ Return ValueReturns None if environment variable is not found
         
     """
     pass
+        
 
-
-def GetFileAttributes(pathName:str) -> int:
+def GetFileAttributes(pathName:'str') -> 'int':
     """
     Retrieves the attributes for the named file.
-
 
 Args:
 
@@ -1168,17 +1111,16 @@ An exception is raised on failure.
         
     """
     pass
+        
 
-
-def GetFileVersionInfo(Filename:Union[str,typing.Any],SubBlock:Union[str,typing.Any]) -> None:
+def GetFileVersionInfo(Filename:'Union[str, Any]',SubBlock:'Union[str, Any]') -> 'None':
     """
     Retrieve version info for specified file
 
-
 Args:
 
-      Filename(str,typing.Any):File to query for version info
-      SubBlock(str,typing.Any):Information to return: \\ for VS_FIXEDFILEINFO, \\VarFileInfo\\Translation for languages/codepages available
+      Filename(Union[str, Any]):File to query for version info
+      SubBlock(Union[str, Any]):Information to return: \\ for VS_FIXEDFILEINFO, \\VarFileInfo\\Translation for languages/codepages available
 
 Returns:
 
@@ -1186,14 +1128,13 @@ Returns:
         
     """
     pass
+        
 
-
-def GetFocus() -> int:
+def GetFocus() -> 'int':
     """
     Retrieves the handle of the keyboard focus window associated with the thread that 
 
 called the method.
-
 
 Args:
 
@@ -1207,12 +1148,11 @@ Return ValueThe method raises an exception if no window with the focus exists.
         
     """
     pass
+        
 
-
-def GetFullPathName(fileName:str) -> str:
+def GetFullPathName(fileName:'str') -> 'str':
     """
     Returns the full path of a (possibly relative) path
-
 
 Args:
 
@@ -1224,16 +1164,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetHandleInformation(Object:typing.Any) -> int:
+def GetHandleInformation(Object:'int') -> 'int':
     """
     Retrieves a handle's flags.
 
-
 Args:
 
-      Object(typing.Any):Handle to an objectCommentsNot available on Win98/MeReturn ValueReturns a combination of HANDLE_FLAG_INHERIT, HANDLE_FLAG_PROTECT_FROM_CLOSE
+      Object(int):Handle to an objectCommentsNot available on Win98/MeReturn ValueReturns a combination of HANDLE_FLAG_INHERIT, HANDLE_FLAG_PROTECT_FROM_CLOSE
 
 Returns:
 
@@ -1245,14 +1184,13 @@ Return ValueReturns a combination of HANDLE_FLAG_INHERIT, HANDLE_FLAG_PROTECT_FR
         
     """
     pass
+        
 
-
-def GetKeyboardLayout(threadId:int=0) -> int:
+def GetKeyboardLayout(threadId:'int'=0) -> 'int':
     """
     retrieves the active input locale identifier (formerly called the keyboard 
 
 layout) for the specified thread.
-
 
 Args:
 
@@ -1264,12 +1202,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetKeyboardLayoutList() -> typing.Any:
+def GetKeyboardLayoutList() -> 'Tuple[int, Any]':
     """
     Returns a sequence of all locale ids currently loaded
-
 
 Args:
 
@@ -1277,18 +1214,17 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[int, Any]
         
     """
     pass
+        
 
-
-def GetKeyboardLayoutName() -> int:
+def GetKeyboardLayoutName() -> 'int':
     """
     Retrieves the name of the active input locale identifier (formerly 
 
 called the keyboard layout).
-
 
 Args:
 
@@ -1300,12 +1236,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetKeyboardState() -> str:
+def GetKeyboardState() -> 'str':
     """
     Retrieves the status of the 256 virtual keys on the keyboard.
-
 
 Args:
 
@@ -1323,12 +1258,11 @@ documentation for more details.
         
     """
     pass
+        
 
-
-def GetKeyState(key:int) -> int:
+def GetKeyState(key:'int') -> 'int':
     """
     Retrieves the status of the specified key.
-
 
 Args:
 
@@ -1354,13 +1288,12 @@ toggled, and off when the key is untoggled.
         
     """
     pass
+        
 
-
-def GetLastError() -> int:
+def GetLastError() -> 'int':
     """
     Retrieves the calling thread's last error code value.
 
-
 Args:
 
 
@@ -1371,13 +1304,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLastInputInfo() -> int:
+def GetLastInputInfo() -> 'int':
     """
     Returns time of last input event in tick count
 
-
 Args:
 
 
@@ -1388,12 +1320,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLocalTime() -> tuple:
+def GetLocalTime() -> 'tuple':
     """
     Returns the current local time
-
 
 Args:
 
@@ -1405,12 +1336,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLongPathName(fileName:str) -> str:
+def GetLongPathName(fileName:'str') -> 'str':
     """
     Converts the specified path to its long form.
-
 
 Args:
 
@@ -1422,16 +1352,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLongPathNameW(fileName:typing.Any) -> str:
+def GetLongPathNameW(fileName:'str') -> 'str':
     """
     Converts the specified path to its long form.
 
-
 Args:
 
-      fileName(typing.Any):The file name.CommentsThis function may raise a NotImplementedError exception if the version of Windows does not support this function.
+      fileName(str):The file name.CommentsThis function may raise a NotImplementedError exception if the version of Windows does not support this function.
 
 Returns:
 
@@ -1439,12 +1368,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLogicalDrives() -> int:
+def GetLogicalDrives() -> 'int':
     """
     Returns a bitmask representing the currently available disk drives.
-
 
 Args:
 
@@ -1456,12 +1384,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLogicalDriveStrings() -> str:
+def GetLogicalDriveStrings() -> 'str':
     """
     Returns a string with all logical drives currently mapped.
-
 
 Args:
 
@@ -1479,16 +1406,15 @@ Use "s.split('\\0')" to split into components.
         
     """
     pass
+        
 
-
-def GetModuleFileName(hModule:typing.Any) -> str:
+def GetModuleFileName(hModule:'int') -> 'str':
     """
     Retrieves the filename of the specified module.
 
-
 Args:
 
-      hModule(typing.Any):Specifies the handle to the module.Win32 API References
+      hModule(int):Specifies the handle to the module.Win32 API References
 
 Returns:
 
@@ -1496,16 +1422,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetModuleFileNameW(hModule:typing.Any) -> str:
+def GetModuleFileNameW(hModule:'int') -> 'str':
     """
     Retrieves the unicode filename of the specified module.
 
-
 Args:
 
-      hModule(typing.Any):Specifies the handle to the module.Win32 API References
+      hModule(int):Specifies the handle to the module.Win32 API References
 
 Returns:
 
@@ -1513,12 +1438,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetModuleHandle(fileName:str=None) -> int:
+def GetModuleHandle(fileName:'str'=None) -> 'int':
     """
     Returns the handle of an already loaded DLL.
-
 
 Args:
 
@@ -1530,12 +1454,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetPwrCapabilities() -> dict:
+def GetPwrCapabilities() -> 'dict':
     """
     Retrieves system's power capabilities
-
 
 Args:
 
@@ -1549,12 +1472,11 @@ Return ValueReturns a dict representing a SYSTEM_POWER_CAPABILITIES struct
         
     """
     pass
+        
 
-
-def GetProfileSection(section:str,iniName:str=None) -> list:
+def GetProfileSection(section:'str',iniName:'str'=None) -> 'list':
     """
     Retrieves all entries from a section in an INI file.
-
 
 Args:
 
@@ -1569,19 +1491,18 @@ Return ValueThe return value is a list of strings.
         
     """
     pass
+        
 
-
-def GetProcAddress(hModule:typing.Any,functionName:typing.Any) -> int:
+def GetProcAddress(hModule:'int',functionName:'PyResourceId') -> 'int':
     """
     Returns the address of the specified exported dynamic-link library (DLL) 
 
 function.
 
-
 Args:
 
-      hModule(typing.Any):Specifies the handle to the module.
-      functionName(typing.Any):Specifies the name of the procedure, or its ordinal valueWin32 API References
+      hModule(int):Specifies the handle to the module.
+      functionName(PyResourceId):Specifies the name of the procedure, or its ordinal valueWin32 API References
 
 Returns:
 
@@ -1589,40 +1510,38 @@ Returns:
         
     """
     pass
+        
 
-
-def GetProfileVal(section:str,entry:str,defValue:Union[int,str],iniName:str=None) -> typing.Any:
+def GetProfileVal(section:'str',entry:'str',defValue:'Union[str, int]',iniName:'str'=None) -> 'Union[str, int]':
     """
     Retrieves entries from a windows INI file.  This method encapsulates 
 
 GetProfileString, GetProfileInt, GetPrivateProfileString and GetPrivateProfileInt.
 
-
 Args:
 
       section(str):The section in the INI file to retrieve a value for.
       entry(str):The entry within the section in the INI file to retrieve a value for.
-      defValue(int,str):The default value.  The type of this parameter determines the methods return type.
+      defValue(Union[str, int]):The default value.  The type of this parameter determines the methods return type.
       iniName(str):The name of the INI file.  If None, the system INI file is used.CommentsThis function is obsolete, applications should use the registry instead.Win32 API References
 
 Returns:
 
-      typing.Any:Search for GetPrivateProfileInt at msdn, google or google groups.
+      Union[str, int]:Search for GetPrivateProfileInt at msdn, google or google groups.
 Return ValueThe return value is the same type as the default parameter.
 
         
     """
     pass
+        
 
-
-def GetShortPathName(path:Union[str,typing.Any]) -> str:
+def GetShortPathName(path:'Union[str, Any]') -> 'str':
     """
     Obtains the short path form of the specified path.
 
-
 Args:
 
-      path(str,typing.Any):If a unicode object is passed, GetShortPathNameW will be called and a unicode object returned.CommentsThe short path name is an 8.3 compatible file name.  As the input path does not need to be absolute, the returned name may be longer than the input path.Win32 API References
+      path(Union[str, Any]):If a unicode object is passed, GetShortPathNameW will be called and a unicode object returned.CommentsThe short path name is an 8.3 compatible file name.  As the input path does not need to be absolute, the returned name may be longer than the input path.Win32 API References
 
 Returns:
 
@@ -1630,12 +1549,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetStdHandle(handle:int) -> None:
+def GetStdHandle(handle:'int') -> 'None':
     """
     Returns a handle for the standard input, standard output, or standard error device
-
 
 Args:
 
@@ -1647,12 +1565,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSysColor(index:int) -> int:
+def GetSysColor(index:'int') -> 'int':
     """
     Returns the current system color for the specified element.
-
 
 Args:
 
@@ -1666,13 +1583,12 @@ Return ValueThe return value is a windows RGB color representation.
         
     """
     pass
+        
 
-
-def GetSystemDefaultLangID() -> int:
+def GetSystemDefaultLangID() -> 'int':
     """
     Retrieves the system default language identifier.
 
-
 Args:
 
 
@@ -1683,13 +1599,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSystemDefaultLCID() -> int:
+def GetSystemDefaultLCID() -> 'int':
     """
     Retrieves the system default locale identifier.
 
-
 Args:
 
 
@@ -1700,12 +1615,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSystemDirectory() -> str:
+def GetSystemDirectory() -> 'str':
     """
     Returns the path of the Windows system directory.
-
 
 Args:
 
@@ -1717,12 +1631,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSystemFileCacheSize() -> tuple:
+def GetSystemFileCacheSize() -> 'tuple':
     """
     Returns the amount of memory reserved for file cache
-
 
 Args:
 
@@ -1740,17 +1653,16 @@ win32con.MM_WORKING_SET_* flags)
         
     """
     pass
+        
 
-
-def SetSystemFileCacheSize(MinimumFileCacheSize:typing.Any,MaximumFileCacheSize:typing.Any,Flags:int=0) -> None:
+def SetSystemFileCacheSize(MinimumFileCacheSize:'Any',MaximumFileCacheSize:'Any',Flags:'int'=0) -> 'None':
     """
     Sets the amount of memory reserved for file cache
 
-
 Args:
 
-      MinimumFileCacheSize(typing.Any):Minimum size in bytes.
-      MaximumFileCacheSize(typing.Any):Maximum size in bytes.
+      MinimumFileCacheSize(Any):Minimum size in bytes.
+      MaximumFileCacheSize(Any):Maximum size in bytes.
       Flags(int):Combination of win32con.MM_WORKING_SET_* flagsCommentsRequires SE_INCREASE_QUOTA_NAME privPass -1 for both min and max to flush file cache.Accepts keyword args.
 
 Returns:
@@ -1759,12 +1671,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSystemInfo() -> tuple:
+def GetSystemInfo() -> 'tuple':
     """
     Retrieves information about the current system.
-
 
 Args:
 
@@ -1786,12 +1697,11 @@ dwProcessorTypedwAllocationGranularity(wProcessorLevel,wProcessorRevision)
         
     """
     pass
+        
 
-
-def GetNativeSystemInfo() -> tuple:
+def GetNativeSystemInfo() -> 'tuple':
     """
     Retrieves information about the current system for a Wow64 process.
-
 
 Args:
 
@@ -1813,12 +1723,11 @@ dwProcessorTypedwAllocationGranularity(wProcessorLevel,wProcessorRevision)
         
     """
     pass
+        
 
-
-def GetSystemMetrics(index:int) -> int:
+def GetSystemMetrics(index:'int') -> 'int':
     """
     Retrieves various system metrics and system configuration settings.
-
 
 Args:
 
@@ -1830,12 +1739,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSystemTime() -> tuple:
+def GetSystemTime() -> 'tuple':
     """
     Returns the current system time
-
 
 Args:
 
@@ -1847,14 +1755,13 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTempFileName(path:str,prefix:str,nUnique:int) -> tuple:
+def GetTempFileName(path:'str',prefix:'str',nUnique:'int') -> 'tuple':
     """
     Returns creates a temporary filename of the following form: 
 
 path\\preuuuu.tmp.
-
 
 Args:
 
@@ -1872,12 +1779,11 @@ filename, and rc is the unique number used to generate the filename.
         
     """
     pass
+        
 
-
-def GetTempPath() -> str:
+def GetTempPath() -> 'str':
     """
     Retrieves the path of the directory designated for temporary files.
-
 
 Args:
 
@@ -1889,13 +1795,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetThreadLocale() -> int:
+def GetThreadLocale() -> 'int':
     """
     Returns the current thread's locale.
 
-
 Args:
 
 
@@ -1906,13 +1811,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTickCount() -> int:
+def GetTickCount() -> 'int':
     """
     Returns the number of milliseconds since windows started.
 
-
 Args:
 
 
@@ -1923,20 +1827,19 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTimeFormat(locale:int,flags:int,time:typing.Any,format:str) -> str:
+def GetTimeFormat(locale:'int',flags:'int',time:'PyTime',format:'str') -> 'str':
     """
     Formats a time as a time string for a specified locale. The function formats 
 
 either a specified time or the local system time.
 
-
 Args:
 
       locale(int):
       flags(int):
-      time(typing.Any):The time to use, or None to use the current time.
+      time(PyTime):The time to use, or None to use the current time.
       format(str):May be None
 
 Returns:
@@ -1945,12 +1848,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTimeZoneInformation(times_as_tuples:bool=False) -> tuple:
+def GetTimeZoneInformation(times_as_tuples:'bool'=False) -> 'tuple':
     """
     Retrieves the system time-zone information.
-
 
 Args:
 
@@ -2030,12 +1932,11 @@ zones, the value of this member is 60.
         
     """
     pass
+        
 
-
-def GetVersion() -> int:
+def GetVersion() -> 'int':
     """
     Returns the current version of Windows, and information about the environment.
-
 
 Args:
 
@@ -2053,12 +1954,11 @@ word is 0 if the platform is Windows NT, or 1 if Win32s on Windows 3.1
         
     """
     pass
+        
 
-
-def GetVersionEx(format:int=0) -> tuple:
+def GetVersionEx(format:'int'=0) -> 'tuple':
     """
     Returns the current version of Windows, and information about the environment.
-
 
 Args:
 
@@ -2145,14 +2045,13 @@ be one of the VER_NT_* values.
         
     """
     pass
+        
 
-
-def GetVolumeInformation(path:str) -> tuple:
+def GetVolumeInformation(path:'str') -> 'tuple':
     """
     Returns information about a file system and colume whose root directory 
 
 is specified.
-
 
 Args:
 
@@ -2175,12 +2074,11 @@ string - File System Name
         
     """
     pass
+        
 
-
-def GetWindowsDirectory() -> str:
+def GetWindowsDirectory() -> 'str':
     """
     Returns the path of the Windows directory.
-
 
 Args:
 
@@ -2192,18 +2090,17 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowLong(hwnd:typing.Any,offset:int) -> int:
+def GetWindowLong(hwnd:'int',offset:'int') -> 'int':
     """
     Retrieves a long value at the specified offset into the extra window memory of 
 
 the given window.
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the window.
+      hwnd(int):The handle to the window.
       offset(int):Specifies the zero-based byte offset of the value to change. Valid values are in the range zero through the number of bytes of extra window memory, minus four (for example, if 12 or more bytes of extra memory were specified, a value of 8 would be an index to the third long integer), or one of the GWL_ constants.CommentsThis function calls the GetWindowLongPtr Api function
 
 Returns:
@@ -2212,13 +2109,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetUserDefaultLangID() -> int:
+def GetUserDefaultLangID() -> 'int':
     """
     Retrieves the user default language identifier.
 
-
 Args:
 
 
@@ -2229,13 +2125,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetUserDefaultLCID() -> int:
+def GetUserDefaultLCID() -> 'int':
     """
     Retrieves the user default locale identifier.
 
-
 Args:
 
 
@@ -2246,12 +2141,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GlobalMemoryStatus() -> dict:
+def GlobalMemoryStatus() -> 'dict':
     """
     Returns systemwide memory usage
-
 
 Args:
 
@@ -2267,12 +2161,11 @@ Return ValueReturns a dictionary representing a MEMORYSTATUS structure
         
     """
     pass
+        
 
-
-def GlobalMemoryStatusEx() -> dict:
+def GlobalMemoryStatusEx() -> 'dict':
     """
     Returns physical and virtual memory usage
-
 
 Args:
 
@@ -2291,19 +2184,18 @@ Return ValueReturns a dictionary representing a MEMORYSTATUSEX structure
         
     """
     pass
+        
 
-
-def keybd_event(bVk:typing.Any,bScan:typing.Any,dwFlags:typing.Any=0,dwExtraInfo:typing.Any=0) -> None:
+def keybd_event(bVk:'Any',bScan:'Any',dwFlags:'Any'=0,dwExtraInfo:'Any'=0) -> 'None':
     """
     Simulate a keyboard event
 
-
 Args:
 
-      bVk(typing.Any):Virtual-key code
-      bScan(typing.Any):Hardware scan code
-      dwFlags(typing.Any):Flags specifying various function options
-      dwExtraInfo(typing.Any):Additional data associated with keystrokeWin32 API References
+      bVk(Any):Virtual-key code
+      bScan(Any):Hardware scan code
+      dwFlags(Any):Flags specifying various function options
+      dwExtraInfo(Any):Additional data associated with keystrokeWin32 API References
 
 Returns:
 
@@ -2311,20 +2203,19 @@ Returns:
         
     """
     pass
+        
 
-
-def mouse_event(dx:typing.Any,dy:typing.Any,dwData:typing.Any,dwFlags:typing.Any=0,dwExtraInfo:typing.Any=0) -> None:
+def mouse_event(dx:'Any',dy:'Any',dwData:'Any',dwFlags:'Any'=0,dwExtraInfo:'Any'=0) -> 'None':
     """
     Simulate a mouse event
 
-
 Args:
 
-      dx(typing.Any):Horizontal position of mouse
-      dy(typing.Any):Vertical position of mouse
-      dwData(typing.Any):Flag specific parameter
-      dwFlags(typing.Any):Flags specifying various function options
-      dwExtraInfo(typing.Any):Additional data associated with mouse eventWin32 API References
+      dx(Any):Horizontal position of mouse
+      dy(Any):Vertical position of mouse
+      dwData(Any):Flag specific parameter
+      dwFlags(Any):Flags specifying various function options
+      dwExtraInfo(Any):Additional data associated with mouse eventWin32 API References
 
 Returns:
 
@@ -2332,17 +2223,16 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadCursor(hInstance:typing.Any,cursorid:typing.Any) -> int:
+def LoadCursor(hInstance:'int',cursorid:'PyResourceId') -> 'int':
     """
     Loads a cursor.
 
-
 Args:
 
-      hInstance(typing.Any):Handle to the instance to load the resource from, or None to load a standard system cursor
-      cursorid(typing.Any):The ID of the cursor.  Can be a resource id or for system cursors, one of win32con.IDC_*Win32 API References
+      hInstance(int):Handle to the instance to load the resource from, or None to load a standard system cursor
+      cursorid(PyResourceId):The ID of the cursor.  Can be a resource id or for system cursors, one of win32con.IDC_*Win32 API References
 
 Returns:
 
@@ -2350,12 +2240,11 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadKeyboardLayout(KLID:str,Flags:int=0) -> int:
+def LoadKeyboardLayout(KLID:'str',Flags:'int'=0) -> 'int':
     """
     Loads a new locale id
-
 
 Args:
 
@@ -2370,12 +2259,11 @@ Return ValueReturns the numeric locale id that was loaded
         
     """
     pass
+        
 
-
-def LoadLibrary(fileName:str) -> int:
+def LoadLibrary(fileName:'str') -> 'int':
     """
     Loads the specified DLL, and returns the handle.
-
 
 Args:
 
@@ -2387,18 +2275,17 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadLibraryEx(fileName:str,handle:typing.Any,handle1:typing.Any) -> int:
+def LoadLibraryEx(fileName:'str',handle:'int',handle1:'Any') -> 'int':
     """
     Loads the specified DLL, and returns the handle.
-
 
 Args:
 
       fileName(str):Specifies the file name of the module to load.
-      handle(typing.Any):Reserved - must be zero
-      handle1(typing.Any):Specifies the action to take when loading the module.Win32 API References
+      handle(int):Reserved - must be zero
+      handle1(Any):Specifies the action to take when loading the module.Win32 API References
 
 Returns:
 
@@ -2406,18 +2293,17 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadResource(handle:typing.Any,type:typing.Any,name:typing.Any,language:int) -> str:
+def LoadResource(handle:'int',type:'PyResourceId',name:'PyResourceId',language:'int') -> 'str':
     """
     Finds and loads a resource from a PE file.
 
-
 Args:
 
-      handle(typing.Any):The handle of the module containing the resource. Use None for currrent process executable.
-      type(typing.Any):The type of resource to load.
-      name(typing.Any):The name or Id of the resource to load.
+      handle(int):The handle of the module containing the resource. Use None for currrent process executable.
+      type(PyResourceId):The type of resource to load.
+      name(PyResourceId):The name or Id of the resource to load.
       language(int):Language to use, defaults to LANG_NEUTRAL.
 
 Returns:
@@ -2426,16 +2312,15 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadString(handle:typing.Any,stringId:int,numChars:int=1024) -> str:
+def LoadString(handle:'int',stringId:'int',numChars:'int'=1024) -> 'str':
     """
     Loads a string from a resource file.
 
-
 Args:
 
-      handle(typing.Any):The handle of the module containing the resource.
+      handle(int):The handle of the module containing the resource.
       stringId(int):The ID of the string to load.
       numChars(int):Number of characters to allocate for the return buffer.
 
@@ -2445,12 +2330,11 @@ Returns:
         
     """
     pass
+        
 
-
-def MessageBeep(type:int) -> int:
+def MessageBeep(type:'int') -> 'int':
     """
     Plays a predefined waveform sound.
-
 
 Args:
 
@@ -2462,18 +2346,17 @@ Returns:
         
     """
     pass
+        
 
-
-def MessageBox(hwnd:typing.Any,message:str,title:Union[str,None],style:int,language:int) -> int:
+def MessageBox(hwnd:'int',message:'str',title:'Union[str, None]',style:'int',language:'int') -> 'int':
     """
     Display a message box.
 
-
 Args:
 
-      hwnd(typing.Any):The handle of the parent window.  See the comments section.
+      hwnd(int):The handle of the parent window.  See the comments section.
       message(str):The message to be displayed in the message box.
-      title(str,None):The title for the message box.  If None, the applications title will be used.
+      title(Union[str, None]):The title for the message box.  If None, the applications title will be used.
       style(int):The style of the message box.
       language(int):The language ID to use.CommentsNormally, a program in a GUI environment will use one of the MessageBox methods supplied by the GUI (eg, win32ui::MessageBox or PyCWnd::MessageBox)Return ValueAn integer identifying the button pressed to dismiss the dialog.
 
@@ -2490,16 +2373,15 @@ Return ValueAn integer identifying the button pressed to dismiss the dialog.
         
     """
     pass
+        
 
-
-def MonitorFromPoint(pt:typing.Any,Flags:int=0) -> int:
+def MonitorFromPoint(pt:'Tuple[int, int]',Flags:'int'=0) -> 'int':
     """
     Finds monitor that contains a point
 
-
 Args:
 
-      pt(typing.Any):Tuple of 2 ints (x,y) specifying screen coordinates
+      pt(Tuple[int, int]):Tuple of 2 ints (x,y) specifying screen coordinates
       Flags(int):Flags that determine default behaviour, one of MONITOR_DEFAULTTONEAREST,MONITOR_DEFAULTTONULL,MONITOR_DEFAULTTOPRIMARYCommentsAccepts keyword argumentsReturn ValueReturns None if no monitor was found
 
 Returns:
@@ -2515,16 +2397,15 @@ Return ValueReturns None if no monitor was found
         
     """
     pass
+        
 
-
-def MonitorFromRect(rc:typing.Any,Flags:int=0) -> int:
+def MonitorFromRect(rc:'PyRECT',Flags:'int'=0) -> 'int':
     """
     Finds monitor that has largest intersection with a rectangle
 
-
 Args:
 
-      rc(typing.Any):Rectangle to be examined
+      rc(PyRECT):Rectangle to be examined
       Flags(int):Flags that determine default behaviour, one of MONITOR_DEFAULTTONEAREST,MONITOR_DEFAULTTONULL,MONITOR_DEFAULTTOPRIMARYCommentsAccepts keyword argumentsReturn ValueReturns None if no monitor was found
 
 Returns:
@@ -2540,16 +2421,15 @@ Return ValueReturns None if no monitor was found
         
     """
     pass
+        
 
-
-def MonitorFromWindow(hwnd:typing.Any,Flags:int=0) -> int:
+def MonitorFromWindow(hwnd:'int',Flags:'int'=0) -> 'int':
     """
     Finds monitor that contains a window
 
-
 Args:
 
-      hwnd(typing.Any):Handle to a window
+      hwnd(int):Handle to a window
       Flags(int):Flags that determine default behaviour, one of MONITOR_DEFAULTTONEAREST,MONITOR_DEFAULTTONULL,MONITOR_DEFAULTTOPRIMARYCommentsAccepts keyword argumentsReturn ValueReturns None if no monitor was found
 
 Returns:
@@ -2565,12 +2445,11 @@ Return ValueReturns None if no monitor was found
         
     """
     pass
+        
 
-
-def MoveFile(srcName:str,destName:str) -> None:
+def MoveFile(srcName:'str',destName:'str') -> 'None':
     """
     Renames a file, or a directory (including its children).
-
 
 Args:
 
@@ -2583,12 +2462,11 @@ Returns:
         
     """
     pass
+        
 
-
-def MoveFileEx(srcName:str,destName:str,flag:int) -> None:
+def MoveFileEx(srcName:'str',destName:'str',flag:'int') -> 'None':
     """
     Renames a file.
-
 
 Args:
 
@@ -2602,12 +2480,11 @@ Returns:
         
     """
     pass
+        
 
-
-def OpenProcess(reqdAccess:int,bInherit:int,pid:int) -> int:
+def OpenProcess(reqdAccess:'int',bInherit:'int',pid:'int') -> 'int':
     """
     Retrieves a handle to an existing process
-
 
 Args:
 
@@ -2621,12 +2498,11 @@ Returns:
         
     """
     pass
+        
 
-
-def OutputDebugString(msg:str) -> None:
+def OutputDebugString(msg:'str') -> 'None':
     """
     Sends a string to the Windows debugging device.
-
 
 Args:
 
@@ -2638,16 +2514,15 @@ Returns:
         
     """
     pass
+        
 
-
-def PostMessage(hwnd:typing.Any,idMessage:int,wParam:int=None,lParam:int=None) -> None:
+def PostMessage(hwnd:'int',idMessage:'int',wParam:'int'=None,lParam:'int'=None) -> 'None':
     """
     Post a message to a window.
 
-
 Args:
 
-      hwnd(typing.Any):The hWnd of the window to receive the message.
+      hwnd(int):The hWnd of the window to receive the message.
       idMessage(int):The ID of the message to post.
       wParam(int):The wParam for the message
       lParam(int):The lParam for the messageWin32 API References
@@ -2658,12 +2533,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PostQuitMessage(exitCode:int=0) -> None:
+def PostQuitMessage(exitCode:'int'=0) -> 'None':
     """
     Post a quit message to an app.
-
 
 Args:
 
@@ -2675,19 +2549,18 @@ Returns:
         
     """
     pass
+        
 
-
-def PostThreadMessage(tid:int,idMessage:int,wParam:Union[int,str]=None,lParam:Union[int,str]=None) -> None:
+def PostThreadMessage(tid:'int',idMessage:'int',wParam:'Union[str, int]'=None,lParam:'Union[str, int]'=None) -> 'None':
     """
     Post a message to the specified thread.
-
 
 Args:
 
       tid(int):Identifier of the thread to which the message will be posted.
       idMessage(int):The ID of the message to post.
-      wParam(int,str):The wParam for the message
-      lParam(int,str):The lParam for the messageWin32 API References
+      wParam(Union[str, int]):The wParam for the message
+      lParam(Union[str, int]):The lParam for the messageWin32 API References
 
 Returns:
 
@@ -2695,16 +2568,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegCloseKey(key:typing.Any) -> None:
+def RegCloseKey(key:'Union[PyHKEY, int]') -> 'None':
     """
     Closes a previously opened registry key.
 
-
 Args:
 
-      key(typing.Any):The key to be closed.Win32 API References
+      key(Union[PyHKEY, int]):The key to be closed.Win32 API References
 
 Returns:
 
@@ -2712,14 +2584,13 @@ Returns:
         
     """
     pass
+        
 
-
-def RegConnectRegistry(computerName:str,key:int) -> int:
+def RegConnectRegistry(computerName:'str',key:'int') -> 'int':
     """
     Establishes a connection to a predefined registry handle on another 
 
 computer.
-
 
 Args:
 
@@ -2736,18 +2607,17 @@ If the function fails, an exception is raised.
         
     """
     pass
+        
 
-
-def RegCopyTree(KeySrc:typing.Any,SubKey:typing.Any,KeyDest:typing.Any) -> None:
+def RegCopyTree(KeySrc:'PyHKEY',SubKey:'str',KeyDest:'PyHKEY') -> 'None':
     """
     Copies an entire registry key to another location
 
-
 Args:
 
-      KeySrc(typing.Any):Registry key to be copied
-      SubKey(typing.Any):Subkey to be copied, can be None
-      KeyDest(typing.Any):The destination keyCommentsAccepts keyword args.Requires Vista or later.
+      KeySrc(PyHKEY):Registry key to be copied
+      SubKey(str):Subkey to be copied, can be None
+      KeyDest(PyHKEY):The destination keyCommentsAccepts keyword args.Requires Vista or later.
 
 Returns:
 
@@ -2755,21 +2625,20 @@ Returns:
         
     """
     pass
+        
 
-
-def RegCreateKey(key:typing.Any,subKey:str) -> typing.Any:
+def RegCreateKey(key:'Union[PyHKEY, int]',subKey:'str') -> 'PyHKEY':
     """
     Creates the specified key, or opens the key if it already exists.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of a key that this method opens or creates. This key must be a subkey of the key identified by the key parameter. If key is one of the predefined keys, subKey may be None. In that case, the handle returned is the same hkey handle passed in to the function.Win32 API References
 
 Returns:
 
-      typing.Any:Search for RegCreateKey at msdn, google or google groups.
+      PyHKEY:Search for RegCreateKey at msdn, google or google groups.
 Return ValueThe return value is the handle of the opened key. 
 
 If the function fails, an exception is raised.
@@ -2777,26 +2646,25 @@ If the function fails, an exception is raised.
         
     """
     pass
+        
 
-
-def RegCreateKeyEx(Key:typing.Any,SubKey:typing.Any,samDesired:int,Options:int,Class:typing.Any=None,SecurityAttributes:typing.Any=None,Transaction:typing.Any=None) -> typing.Any:
+def RegCreateKeyEx(Key:'Union[PyHKEY, int]',SubKey:'str',samDesired:'int',Options:'int',Class:'str'=None,SecurityAttributes:'PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'Tuple[PyHKEY, int]':
     """
     Extended version of RegCreateKey
 
-
 Args:
 
-      Key(typing.Any):Registry key or one of win32con.HKEY_* values
-      SubKey(typing.Any):Name of subkey to open or create.
+      Key(Union[PyHKEY, int]):Registry key or one of win32con.HKEY_* values
+      SubKey(str):Name of subkey to open or create.
       samDesired(int):Access allowed to handle, combination of win32con.KEY_* constants.  Can also contain standard access rights such as DELETE, WRITE_OWNER, etc.
       Options(int):One of the winnt.REG_OPTION_* values
-      Class(typing.Any):Name of registry key class
-      SecurityAttributes(typing.Any):Specifies security for key and handle inheritance
-      Transaction(typing.Any):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsImplemented only as Unicode (RegCreateKeyExW).  Accepts keyword arguments.If a transaction handle is passed in, RegCreateKeyTransacted will be called (requires Vista or later)Win32 API References
+      Class(str):Name of registry key class
+      SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies security for key and handle inheritance
+      Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsImplemented only as Unicode (RegCreateKeyExW).  Accepts keyword arguments.If a transaction handle is passed in, RegCreateKeyTransacted will be called (requires Vista or later)Win32 API References
 
 Returns:
 
-      typing.Any:Search for RegCreateKeyTransacted at msdn, google or google groups.
+      Tuple[PyHKEY, int]:Search for RegCreateKeyTransacted at msdn, google or google groups.
 Return ValueReturns registry handle and flag indicating if key was opened or created (REG_CREATED_NEW_KEY or 
 
 REG_OPENED_EXISTING_KEY)
@@ -2804,16 +2672,15 @@ REG_OPENED_EXISTING_KEY)
         
     """
     pass
+        
 
-
-def RegDeleteKey(key:typing.Any,subKey:str) -> None:
+def RegDeleteKey(key:'Union[PyHKEY, int]',subKey:'str') -> 'None':
     """
     Deletes the specified key.  This method can not delete keys with subkeys.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the key to delete. This key must be a subkey of the key identified by the key parameter. This value must not be None, and the key may not have subkeys.CommentsIf the method succeeds, the entire key, including all of its values, is removed. If the method fails, and exception is raised.Win32 API References
 
 Returns:
@@ -2822,19 +2689,18 @@ Returns:
         
     """
     pass
+        
 
-
-def RegDeleteKeyEx(Key:typing.Any,SubKey:typing.Any,samDesired:int=0,Transaction:typing.Any=None) -> None:
+def RegDeleteKeyEx(Key:'Union[PyHKEY, int]',SubKey:'str',samDesired:'int'=0,Transaction:'int'=None) -> 'None':
     """
     Deletes a registry key from 32 or 64 bit registry view
 
-
 Args:
 
-      Key(typing.Any):Registry key or one of win32con.HKEY_* values
-      SubKey(typing.Any):Name of subkey to be deleted.
+      Key(Union[PyHKEY, int]):Registry key or one of win32con.HKEY_* values
+      SubKey(str):Name of subkey to be deleted.
       samDesired(int):Can be KEY_WOW64_32KEY or KEY_WOW64_64KEY to specify alternate registry view
-      Transaction(typing.Any):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsAccepts keyword args.Requires 64-bit XP, Vista, or later.Key to be deleted cannot contain subkeysIf a transaction handle is specified, RegDeleteKeyTransacted is calledWin32 API References
+      Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsAccepts keyword args.Requires 64-bit XP, Vista, or later.Key to be deleted cannot contain subkeysIf a transaction handle is specified, RegDeleteKeyTransacted is calledWin32 API References
 
 Returns:
 
@@ -2842,17 +2708,16 @@ Returns:
         
     """
     pass
+        
 
-
-def RegDeleteTree(Key:typing.Any,SubKey:typing.Any) -> None:
+def RegDeleteTree(Key:'PyHKEY',SubKey:'str') -> 'None':
     """
     Recursively deletes a key's subkeys and values
 
-
 Args:
 
-      Key(typing.Any):Handle to a registry key
-      SubKey(typing.Any):Name of subkey to be deleted, or None for all subkeys and valuesCommentsAccepts keyword args.Requires Vista or later.
+      Key(PyHKEY):Handle to a registry key
+      SubKey(str):Name of subkey to be deleted, or None for all subkeys and valuesCommentsAccepts keyword args.Requires Vista or later.
 
 Returns:
 
@@ -2860,16 +2725,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegDeleteValue(key:typing.Any,value:str) -> None:
+def RegDeleteValue(key:'Union[PyHKEY, int]',value:'str') -> 'None':
     """
     Removes a named value from the specified registry key.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       value(str):The name of the value to remove.Win32 API References
 
 Returns:
@@ -2878,18 +2742,17 @@ Returns:
         
     """
     pass
+        
 
-
-def RegEnumKey(key:typing.Any,index:int) -> str:
+def RegEnumKey(key:'Union[PyHKEY, int]',index:'int') -> 'str':
     """
     Enumerates subkeys of the specified open registry key. The function retrieves 
 
 the name of one subkey each time it is called.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       index(int):The index of the key to retrieve.Win32 API References
 
 Returns:
@@ -2898,16 +2761,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegEnumKeyEx(Key:typing.Any) -> tuple:
+def RegEnumKeyEx(Key:'Union[PyHKEY, int]') -> 'tuple':
     """
     Lists subkeys of a registry key
 
-
 Args:
 
-      Key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS.Return ValueReturns subkeys as tuples of  (name, reserved, class, last write time). Reserved will always be 0.
+      Key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS.Return ValueReturns subkeys as tuples of  (name, reserved, class, last write time). Reserved will always be 0.
 
 Returns:
 
@@ -2918,16 +2780,15 @@ constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS.Return 
         
     """
     pass
+        
 
-
-def RegEnumKeyExW(Key:typing.Any) -> tuple:
+def RegEnumKeyExW(Key:'PyHKEY') -> 'tuple':
     """
     Unicode version of RegEnumKeyEx
 
-
 Args:
 
-      Key(typing.Any):Registry handle opened with KEY_ENUMERATE_SUB_KEYS, or one of win32con.HKEY_* constantsReturn ValueReturns subkeys as tuples of  (name, reserved, class, last write time). Reserved will always be 0.
+      Key(PyHKEY):Registry handle opened with KEY_ENUMERATE_SUB_KEYS, or one of win32con.HKEY_* constantsReturn ValueReturns subkeys as tuples of  (name, reserved, class, last write time). Reserved will always be 0.
 
 Returns:
 
@@ -2936,36 +2797,34 @@ Returns:
         
     """
     pass
+        
 
-
-def RegEnumValue(key:typing.Any,index:int) -> typing.Any:
+def RegEnumValue(key:'Union[PyHKEY, int]',index:'int') -> 'Tuple[str, Any, type]':
     """
     Enumerates values of the specified open registry key. The 
 
 function retrieves the name of one subkey each time it is called.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       index(int):The index of the key to retrieve.CommentsThis function is typically called repeatedly, until an exception is raised, indicating no more values.Win32 API References
 
 Returns:
 
-      typing.Any
+      Tuple[str, Any, type]
         
     """
     pass
+        
 
-
-def RegFlushKey(key:typing.Any) -> None:
+def RegFlushKey(key:'Union[PyHKEY, int]') -> 'None':
     """
     Writes all the attributes of the specified key to the registry.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSCommentsIt is not necessary to call RegFlushKey to change a key. Registry changes are flushed to disk by the registry using its lazy flusher. Registry changes are also flushed to disk at system shutdown. Unlike win32api::RegCloseKey, the RegFlushKey method returns only when all the data has been written to the registry. An application should only call RegFlushKey if it requires absolute certainty that registry changes are on disk. If you don't know whether a RegFlushKey call is required, it probably isn't.Win32 API References
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSCommentsIt is not necessary to call RegFlushKey to change a key. Registry changes are flushed to disk by the registry using its lazy flusher. Registry changes are also flushed to disk at system shutdown. Unlike win32api::RegCloseKey, the RegFlushKey method returns only when all the data has been written to the registry. An application should only call RegFlushKey if it requires absolute certainty that registry changes are on disk. If you don't know whether a RegFlushKey call is required, it probably isn't.Win32 API References
 
 Returns:
 
@@ -2973,36 +2832,34 @@ Returns:
         
     """
     pass
+        
 
-
-def RegGetKeySecurity(key:typing.Any,security_info:int) -> typing.Any:
+def RegGetKeySecurity(key:'Union[PyHKEY, int]',security_info:'int') -> 'PySECURITY_DESCRIPTOR':
     """
     Retrieves the security on the specified registry key.
 
-
 Args:
 
-      key(typing.Any):Handle to an open key for which the security descriptor is set.
+      key(Union[PyHKEY, int]):Handle to an open key for which the security descriptor is set.
       security_info(int):Specifies the components of the security descriptor to retrieve. The value can be a combination of the *_SECURITY_INFORMATION constants.Win32 API References
 
 Returns:
 
-      typing.Any
+      PySECURITY_DESCRIPTOR
         
     """
     pass
+        
 
-
-def RegLoadKey(key:typing.Any,subKey:str,filename:str) -> None:
+def RegLoadKey(key:'Union[PyHKEY, int]',subKey:'str',filename:'str') -> 'None':
     """
     The RegLoadKey method creates a subkey under HKEY_USER or HKEY_LOCAL_MACHINE 
 
 and stores registration information from a specified file into that subkey.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the key to delete. This key must be a subkey of the key identified by the key parameter. This value must not be None, and the key may not have subkeys.
       filename(str):The name of the file to load registry data from. This file must have been created with the win32api::RegSaveKey function. Under the file allocation table (FAT) file system, the filename may not have an extension.CommentsA call to RegLoadKey fails if the calling process does not have the SE_RESTORE_PRIVILEGE privilege. If hkey is a handle returned by win32api::RegConnectRegistry, then the path specified in fileName is relative to the remote computer.Win32 API References
 
@@ -3012,12 +2869,11 @@ Returns:
         
     """
     pass
+        
 
-
-def RegOpenCurrentUser(samDesired:int) -> typing.Any:
+def RegOpenCurrentUser(samDesired:'int') -> 'PyHKEY':
     """
     Opens HKEY_CURRENT_USER for impersonated user
-
 
 Args:
 
@@ -3025,16 +2881,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyHKEY
         
     """
     pass
+        
 
-
-def RegOpenKey() -> typing.Any:
+def RegOpenKey() -> 'PyHKEY':
     """
     Opens the specified key.
-
 
 Args:
 
@@ -3042,27 +2897,26 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyHKEY
         
     """
     pass
+        
 
-
-def RegOpenKeyEx(key:typing.Any,subKey:str,sam:int,reserved:int=0) -> typing.Any:
+def RegOpenKeyEx(key:'Union[PyHKEY, int]',subKey:'str',sam:'int',reserved:'int'=0) -> 'PyHKEY':
     """
     Opens the specified key.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of a key that this method opens. This key must be a subkey of the key identified by the key parameter. If key is one of the predefined keys, subKey may be None. In that case, the handle returned is the same key handle passed in to the function.
       sam(int):Specifies an access mask that describes the desired security access for the new key. This parameter can be a combination of the following win32con constants: KEY_ALL_ACCESSKEY_CREATE_LINKKEY_CREATE_SUB_KEYKEY_ENUMERATE_SUB_KEYSKEY_EXECUTEKEY_NOTIFYKEY_QUERY_VALUEKEY_READKEY_SET_VALUEKEY_WRITEWin32 API References
       reserved(int):Reserved.  Must be zero.
 
 Returns:
 
-      typing.Any:Search for RegOpenKeyEx at msdn, google or google groups.
+      PyHKEY:Search for RegOpenKeyEx at msdn, google or google groups.
 Return ValueThe return value is the handle of the opened key. 
 
 If the function fails, an exception is raised.
@@ -3070,40 +2924,38 @@ If the function fails, an exception is raised.
         
     """
     pass
+        
 
-
-def RegOpenKeyTransacted(Key:typing.Any,SubKey:typing.Any,samDesired:int,Transaction:typing.Any,Options:int=0) -> typing.Any:
+def RegOpenKeyTransacted(Key:'Union[PyHKEY, int]',SubKey:'str',samDesired:'int',Transaction:'int',Options:'int'=0) -> 'PyHKEY':
     """
     Opens a registry key as part of a transaction
 
-
 Args:
 
-      Key(typing.Any):Registry key or one of win32con.HKEY_* values
-      SubKey(typing.Any):Name of subkey to open.  Can be None to reopen an existing key.
+      Key(Union[PyHKEY, int]):Registry key or one of win32con.HKEY_* values
+      SubKey(str):Name of subkey to open.  Can be None to reopen an existing key.
       samDesired(int):Access allowed to handle, combination of win32con.KEY_* constants.  Can also contain standard access rights such as DELETE, WRITE_OWNER, etc.
-      Transaction(typing.Any):Handle to a transaction as returned by win32transaction::CreateTransaction
+      Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransaction
       Options(int):Reserved, use only 0CommentsAccepts keyword arguments.Requires Vista or later.Win32 API References
 
 Returns:
 
-      typing.Any:Search for RegOpenKeyTransacted at msdn, google or google groups.
+      PyHKEY:Search for RegOpenKeyTransacted at msdn, google or google groups.
 Return ValueReturns a transacted registry handle.  Note that operations on subkeys are not automatically transacted.
 
         
     """
     pass
+        
 
-
-def RegOverridePredefKey(Key:typing.Any,NewKey:typing.Any) -> None:
+def RegOverridePredefKey(Key:'PyHKEY',NewKey:'PyHKEY') -> 'None':
     """
     Redirects one of the predefined keys to different key
 
-
 Args:
 
-      Key(typing.Any):One of the predefined registry keys (win32con.HKEY_*)
-      NewKey(typing.Any):Registry key to which it will be redirected.  Pass None to restore original key.CommentsRequires Windows 2000 or later.Win32 API References
+      Key(PyHKEY):One of the predefined registry keys (win32con.HKEY_*)
+      NewKey(PyHKEY):Registry key to which it will be redirected.  Pass None to restore original key.CommentsRequires Windows 2000 or later.Win32 API References
 
 Returns:
 
@@ -3111,18 +2963,17 @@ Returns:
         
     """
     pass
+        
 
-
-def RegQueryValue(key:typing.Any,subKey:str) -> str:
+def RegQueryValue(key:'Union[PyHKEY, int]',subKey:'str') -> 'str':
     """
     The RegQueryValue method retrieves the value associated with 
 
 the unnamed value for a specified key in the registry.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the subkey with which the value is associated. If this parameter is None or empty, the function retrieves the value set by the win32api::RegSetValue method for the key identified by key.CommentsValues in the registry have name, type, and data components. This method retrieves the data for a key's first value that has a NULL name. But the underlying API call doesn't return the type, Lame Lame Lame, DONT USE THIS!!!Win32 API References
 
 Returns:
@@ -3131,29 +2982,28 @@ Returns:
         
     """
     pass
+        
 
-
-def RegQueryValueEx(key:typing.Any,valueName:str) -> typing.Any:
+def RegQueryValueEx(key:'Union[PyHKEY, int]',valueName:'str') -> 'Tuple[Any, type]':
     """
     Retrieves the type and data for a specified value name associated 
 
 with an open registry key.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       valueName(str):The name of the value to query.CommentsValues in the registry have name, type, and data components. This method retrieves the data for the given value.Win32 API References
 
 Returns:
 
-      typing.Any
+      Tuple[Any, type]
         
     """
     pass
+        
 
-
-def RegQueryInfoKey(key:typing.Any) -> typing.Any:
+def RegQueryInfoKey(key:'Union[PyHKEY, int]') -> 'Tuple[int, int, Any]':
     """
     Returns the number of 
 
@@ -3163,27 +3013,25 @@ and if available the last time the key was modified as
 
 100's of nanoseconds since Jan 1, 1600.
 
-
 Args:
 
-      key(typing.Any):An already open key, or or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSWin32 API References
+      key(Union[PyHKEY, int]):An already open key, or or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERSWin32 API References
 
 Returns:
 
-      typing.Any
+      Tuple[int, int, Any]
         
     """
     pass
+        
 
-
-def RegQueryInfoKeyW(Key:typing.Any) -> dict:
+def RegQueryInfoKeyW(Key:'PyHKEY') -> 'dict':
     """
     Returns information about an open registry key
 
-
 Args:
 
-      Key(typing.Any):Handle to a registry key, or one of win32con.HKEY_* constantsWin32 API References
+      Key(PyHKEY):Handle to a registry key, or one of win32con.HKEY_* constantsWin32 API References
 
 Returns:
 
@@ -3191,17 +3039,16 @@ Returns:
         
     """
     pass
+        
 
-
-def RegRestoreKey(Key:typing.Any,File:typing.Any,Flags:int=0) -> None:
+def RegRestoreKey(Key:'PyHKEY',File:'str',Flags:'int'=0) -> 'None':
     """
     Restores a key and subkeys from a saved registry file
 
-
 Args:
 
-      Key(typing.Any):Handle to registry key to be restored.  Can also be one of win32con.HKEY_* values.
-      File(typing.Any):File from which to restore registry data
+      Key(PyHKEY):Handle to registry key to be restored.  Can also be one of win32con.HKEY_* values.
+      File(str):File from which to restore registry data
       Flags(int):One of REG_FORCE_RESTORE,REG_NO_LAZY_FLUSH,REG_REFRESH_HIVE,REG_WHOLE_HIVE_VOLATILE (from winnt)CommentsImplemented only as Unicode (RegRestoreKeyW).  Accepts keyword arguments.Requires SeBackupPrivilege and SeRestorePrivilegeWin32 API References
 
 Returns:
@@ -3210,20 +3057,19 @@ Returns:
         
     """
     pass
+        
 
-
-def RegSaveKey(key:typing.Any,filename:str,sa:typing.Any=None) -> None:
+def RegSaveKey(key:'Union[PyHKEY, int]',filename:'str',sa:'PySECURITY_ATTRIBUTES'=None) -> 'None':
     """
     The RegSaveKey method saves the specified key, and all its subkeys to the specified 
 
 file.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       filename(str):The name of the file to save registry data to. This file cannot already exist. If this filename includes an extension, it cannot be used on file allocation table (FAT) file systems by the win32api::RegLoadKey, win32api::RegReplaceKey, or win32api::RegRestoreKey methods.
-      sa(typing.Any):The security attributes of the created file.CommentsIf key represents a key on a remote computer, the path described by fileName is relative to the remote computer. The caller of this method must possess the SeBackupPrivilege security privilege.Win32 API References
+      sa(PySECURITY_ATTRIBUTES):The security attributes of the created file.CommentsIf key represents a key on a remote computer, the path described by fileName is relative to the remote computer. The caller of this method must possess the SeBackupPrivilege security privilege.Win32 API References
 
 Returns:
 
@@ -3231,19 +3077,18 @@ Returns:
         
     """
     pass
+        
 
-
-def RegSaveKeyEx(Key:typing.Any,File:typing.Any,Flags:int,SecurityAttributes:typing.Any=None) -> None:
+def RegSaveKeyEx(Key:'PyHKEY',File:'str',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'None':
     """
     Extended version of RegSaveKey
 
-
 Args:
 
-      Key(typing.Any):Handle to a registry key or one of HKEY_CURRENT_CONFIG, HKEY_CURRENT_USER
-      File(typing.Any):Name of file in which to save data.  File must not already exist.
+      Key(PyHKEY):Handle to a registry key or one of HKEY_CURRENT_CONFIG, HKEY_CURRENT_USER
+      File(str):Name of file in which to save data.  File must not already exist.
       Flags(int):One of REG_STANDARD_FORMAT,REG_LATEST_FORMAT,REG_NO_COMPRESSION (from winnt.py)CommentsImplemented only as Unicode (RegSaveKeyExW).  Accepts keyword arguments.SE_BACKUP_NAME privilege must be enabled.Win32 API References
-      SecurityAttributes(typing.Any):Specifies security for the file to be created
+      SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies security for the file to be created
 
 Returns:
 
@@ -3251,18 +3096,17 @@ Returns:
         
     """
     pass
+        
 
-
-def RegSetKeySecurity(key:typing.Any,security_info:int,sd:typing.Any) -> None:
+def RegSetKeySecurity(key:'Union[PyHKEY, int]',security_info:'int',sd:'PySECURITY_DESCRIPTOR') -> 'None':
     """
     Sets the security on the specified registry key.
 
-
 Args:
 
-      key(typing.Any):Handle to an open key for which the security descriptor is set.
+      key(Union[PyHKEY, int]):Handle to an open key for which the security descriptor is set.
       security_info(int):Specifies the components of the security descriptor to set. The value can be a combination of the *_SECURITY_INFORMATION constants.
-      sd(typing.Any):The new security descriptor for the keyCommentsIf key is one of the predefined keys, the predefined key should be closed with win32api::RegCloseKey. That ensures that the new security information is in effect the next time the predefined key is referenced.Win32 API References
+      sd(PySECURITY_DESCRIPTOR):The new security descriptor for the keyCommentsIf key is one of the predefined keys, the predefined key should be closed with win32api::RegCloseKey. That ensures that the new security information is in effect the next time the predefined key is referenced.Win32 API References
 
 Returns:
 
@@ -3270,16 +3114,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegSetValue(key:typing.Any,subKey:str,type:int,value:str) -> None:
+def RegSetValue(key:'Union[PyHKEY, int]',subKey:'str',type:'int',value:'str') -> 'None':
     """
     Associates a value with a specified key.  Currently, only strings are supported.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       subKey(str):The name of the subkey with which the value is associated. This parameter can be None or empty, in which case the value will be added to the key identified by the key parameter.
       type(int):Type of data. Must be win32con.REG_SZ
       value(str):The value to associate with the key.CommentsIf the key specified by the lpszSubKey parameter does not exist, the RegSetValue function creates it. Value lengths are limited by available memory. Long values (more than 2048 bytes) should be stored as files with the filenames stored in the configuration registry. This helps the registry perform efficiently. The key identified by the key parameter must have been opened with KEY_SET_VALUE access.Win32 API References
@@ -3290,20 +3133,19 @@ Returns:
         
     """
     pass
+        
 
-
-def RegSetValueEx(key:typing.Any,valueName:str,reserved:typing.Any,type:int,value:typing.Any) -> None:
+def RegSetValueEx(key:'Union[PyHKEY, int]',valueName:'str',reserved:'any',type:'int',value:'Any') -> 'None':
     """
     Stores data in the value field of an open registry key.
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_CLASSES_ROOTHKEY_CURRENT_USERHKEY_LOCAL_MACHINEHKEY_USERS
       valueName(str):The name of the value to set. If a value with this name is not already present in the key, the method adds it to the key. If this parameter is None or an empty string and the type parameter is the win32api.REG_SZ type, this function sets the same value the win32api::RegSetValue method would set.
-      reserved(typing.Any):Place holder for reserved argument.  Zero will always be passed to the API function.
+      reserved(any):Place holder for reserved argument.  Zero will always be passed to the API function.
       type(int):Type of data.ValueMeaningREG_BINARYBinary data in any form.REG_DWORDA 32-bit number.REG_DWORD_LITTLE_ENDIANA 32-bit number in little-endian format. This is equivalent to REG_DWORD.In little-endian format, a multi-byte value is stored in memory from the lowest byte (the little end) to the highest byte. For example, the value 0x12345678 is stored as (0x78 0x56 0x34 0x12) in little-endian format.REG_QWORDA 64-bit number.REG_QWORD_LITTLE_ENDIANA 64-bit number in little-endian format. This is equivalent to REG_QWORD.In little-endian format, a multi-byte value is stored in memory from the lowest byte (the little end) to the highest byte. For example, the value 0x12345678 is stored as (0x78 0x56 0x34 0x12) in little-endian format. Windows NT and Windows 95 are designed to run on little-endian computer architectures. A user may connect to computers that have big-endian architectures, such as some UNIX systems.REG_DWORD_BIG_ENDIANA 32-bit number in big-endian format. In big-endian format, a multi-byte value is stored in memory from the highest byte (the big end) to the lowest byte. For example, the value 0x12345678 is stored as (0x12 0x34 0x56 0x78) in big-endian format.REG_EXPAND_SZA null-terminated string that contains unexpanded references to environment variables (for example, %PATH%). It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions.REG_LINKA Unicode symbolic link.REG_MULTI_SZAn array of null-terminated strings, terminated by two null characters.REG_NONENo defined value type.REG_RESOURCE_LISTA device-driver resource list.REG_SZA null-terminated string. It will be a Unicode or ANSI string depending on whether you use the Unicode or ANSI functions
-      value(typing.Any):The value to be stored with the specified value name.CommentsThis method can also set additional value and type information for the specified key. The key identified by the key parameter must have been opened with KEY_SET_VALUE access. To open the key, use the win32api::RegCreateKeyEx or win32api::RegOpenKeyEx methods. Value lengths are limited by available memory. Long values (more than 2048 bytes) should be stored as files with the filenames stored in the configuration registry. This helps the registry perform efficiently. The key identified by the key parameter must have been opened with KEY_SET_VALUE access.Win32 API References
+      value(Any):The value to be stored with the specified value name.CommentsThis method can also set additional value and type information for the specified key. The key identified by the key parameter must have been opened with KEY_SET_VALUE access. To open the key, use the win32api::RegCreateKeyEx or win32api::RegOpenKeyEx methods. Value lengths are limited by available memory. Long values (more than 2048 bytes) should be stored as files with the filenames stored in the configuration registry. This helps the registry perform efficiently. The key identified by the key parameter must have been opened with KEY_SET_VALUE access.Win32 API References
 
 Returns:
 
@@ -3311,16 +3153,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegUnLoadKey(key:typing.Any,subKey:str) -> None:
+def RegUnLoadKey(key:'Union[PyHKEY, int]',subKey:'str') -> 'None':
     """
     None
 
-
 Args:
 
-      key(typing.Any):An already open key, or any one of the following win32con constants:HKEY_USERSHKEY_LOCAL_MACHINE
+      key(Union[PyHKEY, int]):An already open key, or any one of the following win32con constants:HKEY_USERSHKEY_LOCAL_MACHINE
       subKey(str):The name of the key to unload. This key must be a subkey of the key identified by the key parameter. This value must not be None.CommentsA call to RegUnLoadKey fails if the calling process does not have the SE_RESTORE_PRIVILEGE privilege. If hkey is a handle returned by win32api::RegConnectRegistry, then the path specified in fileName is relative to the remote computer.Win32 API References
 
 Returns:
@@ -3329,14 +3170,13 @@ Returns:
         
     """
     pass
+        
 
-
-def RegisterWindowMessage(msgString:str) -> None:
+def RegisterWindowMessage(msgString:'str') -> 'None':
     """
     The RegisterWindowMessage method, given a string, returns a system wide 
 
 unique message ID, suitable for sending messages between applications who both register the same string.
-
 
 Args:
 
@@ -3348,19 +3188,18 @@ Returns:
         
     """
     pass
+        
 
-
-def RegNotifyChangeKeyValue(key:typing.Any,bWatchSubTree:int,dwNotifyFilter:int,hKey:typing.Any,fAsynchronous:int) -> None:
+def RegNotifyChangeKeyValue(key:'Union[PyHKEY, int]',bWatchSubTree:'int',dwNotifyFilter:'int',hKey:'int',fAsynchronous:'int') -> 'None':
     """
     Receive notification of registry changes
 
-
 Args:
 
-      key(typing.Any):Handle to an open registry key
+      key(Union[PyHKEY, int]):Handle to an open registry key
       bWatchSubTree(int):Boolean, notify of changes to subkeys if True
       dwNotifyFilter(int):Combination of REG_NOTIFY_CHANGE_* constants
-      hKey(typing.Any):Event handle to be signalled, use None if fAsynchronous is False
+      hKey(int):Event handle to be signalled, use None if fAsynchronous is False
       fAsynchronous(int):Boolean, function returns immediately if True, waits for change if False
 
 Returns:
@@ -3369,12 +3208,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SearchPath(path:str,fileName:str,fileExt:str=None) -> int:
+def SearchPath(path:'str',fileName:'str',fileExt:'str'=None) -> 'int':
     """
     Searches a path for the specified file.
-
 
 Args:
 
@@ -3394,19 +3232,18 @@ of the file.
         
     """
     pass
+        
 
-
-def SendMessage(hwnd:typing.Any,idMessage:int,wParam:Union[int,str]=None,lParam:Union[int,str]=None) -> None:
+def SendMessage(hwnd:'int',idMessage:'int',wParam:'Union[str, int]'=None,lParam:'Union[str, int]'=None) -> 'None':
     """
     Send a message to a window.
 
-
 Args:
 
-      hwnd(typing.Any):The hWnd of the window to receive the message.
+      hwnd(int):The hWnd of the window to receive the message.
       idMessage(int):The ID of the message to send.
-      wParam(int,str):The wParam for the message
-      lParam(int,str):The lParam for the messageWin32 API References
+      wParam(Union[str, int]):The wParam for the message
+      lParam(Union[str, int]):The lParam for the messageWin32 API References
 
 Returns:
 
@@ -3414,18 +3251,17 @@ Returns:
         
     """
     pass
+        
 
-
-def SetConsoleCtrlHandler(ctrlHandler:typing.Any,bAdd:int) -> None:
+def SetConsoleCtrlHandler(ctrlHandler:'callable',bAdd:'int') -> 'None':
     """
     Adds or removes an application-defined HandlerRoutine function from the 
 
 list of handler functions for the calling process.
 
-
 Args:
 
-      ctrlHandler(typing.Any):The function to call.  This function should accept one param - the type of signal.
+      ctrlHandler(callable):The function to call.  This function should accept one param - the type of signal.
       bAdd(int):True if the handler is being added, false if removed.CommentsNote that the implementation is a single CtrlHandler in C, which keeps a list of the handlers added by this function.  So although this function uses the same semantics as the Win32 function (ie, last registered first called, and first to return True stops the calls) the true order of all Python and C implemented CtrlHandlers may not match what would happen if all were implemented in C. This handler must acquire the Python lock before it can call any of the registered handlers.  This means the handler may not be called until the current Python thread yields the lock.  A console process can use the win32api::GenerateConsoleCtrlEvent function to send a CTRL+C or CTRL+BREAK signal to a console process group. The system generates CTRL_CLOSE_EVENT, CTRL_LOGOFF_EVENT, and CTRL_SHUTDOWN_EVENT signals when the user closes the console, logs off, or shuts down the system so that the process has an opportunity to clean up before termination.Win32 API References
 
 Returns:
@@ -3434,12 +3270,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetConsoleTitle(title:str) -> None:
+def SetConsoleTitle(title:'str') -> 'None':
     """
     Sets the title for the current console.
-
 
 Args:
 
@@ -3451,16 +3286,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetCursorPos(x,y:typing.Any) -> None:
+def SetCursorPos(x,y:'Tuple[int, int]') -> 'None':
     """
     The SetCursorPos function moves the cursor to the specified screen coordinates.
 
-
 Args:
 
-      x,y(typing.Any):The new position.Win32 API References
+      x,y(Tuple[int, int]):The new position.Win32 API References
 
 Returns:
 
@@ -3468,16 +3302,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetDllDirectory(PathName:typing.Any) -> None:
+def SetDllDirectory(PathName:'str') -> 'None':
     """
     Modifies the application-specific DLL search path
 
-
 Args:
 
-      PathName(typing.Any):Directory to be added to search path, can be None to restore defaultsWin32 API References
+      PathName(str):Directory to be added to search path, can be None to restore defaultsWin32 API References
 
 Returns:
 
@@ -3485,14 +3318,13 @@ Returns:
         
     """
     pass
+        
 
-
-def SetErrorMode(errorMode:int) -> int:
+def SetErrorMode(errorMode:'int') -> 'int':
     """
     Controls whether the system will handle the specified types of serious errors, or 
 
 whether the process will handle them.
-
 
 Args:
 
@@ -3506,12 +3338,11 @@ Return ValueThe result is an integer containing the old error flags.
         
     """
     pass
+        
 
-
-def SetFileAttributes(pathName:str,attrs:int) -> int:
+def SetFileAttributes(pathName:'str',attrs:'int') -> 'int':
     """
     Sets the named file's attributes.
-
 
 Args:
 
@@ -3524,12 +3355,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetLastError() -> int:
+def SetLastError() -> 'int':
     """
     Sets the calling thread's last error code value.
-
 
 Args:
 
@@ -3541,12 +3371,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetSysColors(Elements:tuple,RgbValues:tuple) -> None:
+def SetSysColors(Elements:'tuple',RgbValues:'tuple') -> 'None':
     """
     Changes color of various window elements
-
 
 Args:
 
@@ -3559,16 +3388,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetLocalTime(SystemTime:typing.Any) -> None:
+def SetLocalTime(SystemTime:'PyTime') -> 'None':
     """
     Changes the system's local time
 
-
 Args:
 
-      SystemTime(typing.Any):The local time to be set.  Can also be a time tuple.
+      SystemTime(PyTime):The local time to be set.  Can also be a time tuple.
 
 Returns:
 
@@ -3576,12 +3404,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetSystemTime(year:int,month:int,dayOfWeek:int,day:int,hour:int,minute:int,second:int,millseconds:int) -> int:
+def SetSystemTime(year:'int',month:'int',dayOfWeek:'int',day:'int',hour:'int',minute:'int',second:'int',millseconds:'int') -> 'int':
     """
     Returns the current system time
-
 
 Args:
 
@@ -3600,18 +3427,17 @@ Returns:
         
     """
     pass
+        
 
-
-def SetClassLong(hwnd:typing.Any,offset:int,val:int) -> int:
+def SetClassLong(hwnd:'int',offset:'int',val:'int') -> 'int':
     """
     Replaces the specified 32 or 64 bit value at the specified offset into the extra 
 
 class memory for the window.
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the window.
+      hwnd(int):The handle to the window.
       offset(int):Specifies the zero-based byte offset of the value to change. Valid values are in the range zero through the number of bytes of extra window memory, minus four (for example, if 12 or more bytes of extra memory were specified, a value of 8 would be an index to the third long integer), or one of the GWL_ constants.
       val(int):Specifies the long value to place in the window's reserved memory.CommentsThis function calls the SetClassLongPtr Api function
 
@@ -3621,12 +3447,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetClassWord(hwnd:int,offset:int,val:int) -> int:
+def SetClassWord(hwnd:'int',offset:'int',val:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -3640,16 +3465,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetWindowWord(hwnd:typing.Any,offset:int,val:int) -> int:
+def SetWindowWord(hwnd:'int',offset:'int',val:'int') -> 'int':
     """
     None
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the window.
+      hwnd(int):The handle to the window.
       offset(int):Specifies the zero-based byte offset of the value to change. Valid values are in the range zero through the number of bytes of extra window memory, minus four (for example, if 12 or more bytes of extra memory were specified, a value of 8 would be an index to the third long integer), or one of the GWL_ constants.
       val(int):Specifies the long value to place in the window's reserved memory.CommentsThis function is obsolete, use win32api::SetWindowLong instead
 
@@ -3659,16 +3483,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetCursor(hCursor:typing.Any) -> int:
+def SetCursor(hCursor:'int') -> 'int':
     """
     Set the cursor to the HCURSOR object.
 
-
 Args:
 
-      hCursor(typing.Any):The new cursor. Can be None to remove cursor.Win32 API References
+      hCursor(int):The new cursor. Can be None to remove cursor.Win32 API References
 
 Returns:
 
@@ -3678,17 +3501,16 @@ Return ValueThe result is the previous cursor if there was one.
         
     """
     pass
+        
 
-
-def SetEnvironmentVariable(Name:Union[str,typing.Any],Value:Union[str,typing.Any]) -> None:
+def SetEnvironmentVariable(Name:'Union[str, Any]',Value:'Union[str, Any]') -> 'None':
     """
     Creates, deletes, or changes the value of an environment variable.
 
-
 Args:
 
-      Name(str,typing.Any):Name of the environment variable
-      Value(str,typing.Any):Value to be set, use None to remove variableWin32 API References
+      Name(Union[str, Any]):Name of the environment variable
+      Value(Union[str, Any]):Value to be set, use None to remove variableWin32 API References
 
 Returns:
 
@@ -3696,17 +3518,16 @@ Returns:
         
     """
     pass
+        
 
-
-def SetEnvironmentVariable(Name:Union[str,typing.Any],Value:Union[str,typing.Any]) -> None:
+def SetEnvironmentVariable(Name:'Union[str, Any]',Value:'Union[str, Any]') -> 'None':
     """
     Creates, deletes, or changes the value of an environment variable.
 
-
 Args:
 
-      Name(str,typing.Any):Name of the environment variable
-      Value(str,typing.Any):Value to be set, use None to remove variableWin32 API References
+      Name(Union[str, Any]):Name of the environment variable
+      Value(Union[str, Any]):Value to be set, use None to remove variableWin32 API References
 
 Returns:
 
@@ -3714,12 +3535,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetEnvironmentVariableW(Name:str,Value:str) -> None:
+def SetEnvironmentVariableW(Name:'str',Value:'str') -> 'None':
     """
     Creates, deletes, or changes the value of an environment variable.
-
 
 Args:
 
@@ -3732,16 +3552,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetHandleInformation(Object:typing.Any,Mask:int,Flags:int) -> None:
+def SetHandleInformation(Object:'int',Mask:'int',Flags:'int') -> 'None':
     """
     Sets a handles's flags
 
-
 Args:
 
-      Object(typing.Any):Handle to an object
+      Object(int):Handle to an object
       Mask(int):Bitmask specifying which flags should be set
       Flags(int):Bitmask of flag values to be set. Valid Flags are HANDLE_FLAG_INHERIT, HANDLE_FLAG_PROTECT_FROM_CLOSECommentsNot available on Win98/Me
 
@@ -3751,17 +3570,16 @@ Returns:
         
     """
     pass
+        
 
-
-def SetStdHandle(handle:int,handle1:typing.Any) -> None:
+def SetStdHandle(handle:'int',handle1:'Union[int]') -> 'None':
     """
     Set the handle for the standard input, standard output, or standard error device
-
 
 Args:
 
       handle(int):input, output, or error device
-      handle1(typing.Any):A previously opened handle to be a standard handle
+      handle1(Union[int]):A previously opened handle to be a standard handle
 
 Returns:
 
@@ -3769,17 +3587,16 @@ Returns:
         
     """
     pass
+        
 
-
-def SetSystemPowerState(Suspend:typing.Any,Force:typing.Any) -> None:
+def SetSystemPowerState(Suspend:'Any',Force:'Any') -> 'None':
     """
     Initiates low power mode to make system sleep or hibernate
 
-
 Args:
 
-      Suspend(typing.Any):True - system is suspended. False - initiates hibernation.
-      Force(typing.Any):True - power state occurs unconditionally. False - applications are queried for permission.CommentsRequires Win2k or later.SE_SHUTDOWN_NAME privilege must be enabled.Win32 API References
+      Suspend(Any):True - system is suspended. False - initiates hibernation.
+      Force(Any):True - power state occurs unconditionally. False - applications are queried for permission.CommentsRequires Win2k or later.SE_SHUTDOWN_NAME privilege must be enabled.Win32 API References
 
 Returns:
 
@@ -3787,12 +3604,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetThreadLocale(lcid:int) -> None:
+def SetThreadLocale(lcid:'int') -> 'None':
     """
     Sets the current thread's locale.
-
 
 Args:
 
@@ -3804,12 +3620,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetTimeZoneInformation(tzi:tuple) -> tuple:
+def SetTimeZoneInformation(tzi:'tuple') -> 'tuple':
     """
     Sets the system time-zone information.
-
 
 Args:
 
@@ -3821,14 +3636,13 @@ Returns:
         
     """
     pass
+        
 
-
-def SetWindowLong(hwnd:int,offset:int,val:int) -> int:
+def SetWindowLong(hwnd:'int',offset:'int',val:'int') -> 'int':
     """
     Places a long value at the specified offset into the extra window memory of the 
 
 given window.
-
 
 Args:
 
@@ -3842,16 +3656,15 @@ Returns:
         
     """
     pass
+        
 
-
-def ShellExecute(hwnd:typing.Any,op:str,file:str,params:str,dir:str,bShow:int) -> int:
+def ShellExecute(hwnd:'int',op:'str',file:'str',params:'str',dir:'str',bShow:'int') -> 'int':
     """
     Opens or prints a file.
 
-
 Args:
 
-      hwnd(typing.Any):The handle of the parent window, or 0 for no parent.  This window receives any message boxes an application produces (for example, for error reporting).
+      hwnd(int):The handle of the parent window, or 0 for no parent.  This window receives any message boxes an application produces (for example, for error reporting).
       op(str):The operation to perform.  May be "open", "print", or None, which defaults to "open".
       file(str):The name of the file to open.
       params(str):The parameters to pass, if the file name contains an executable. Should be None for a document file.
@@ -3868,12 +3681,11 @@ data exchange [DDE] server application.) If there is an error, the method raises
         
     """
     pass
+        
 
-
-def ShowCursor(show:int) -> int:
+def ShowCursor(show:'int') -> 'int':
     """
     The ShowCursor method displays or hides the cursor.
-
 
 Args:
 
@@ -3887,12 +3699,11 @@ Return ValueThe return value specifies the new display counter
         
     """
     pass
+        
 
-
-def Sleep(time:int,bAlterable:int=0) -> int:
+def Sleep(time:'int',bAlterable:'int'=0) -> 'int':
     """
     Suspends execution of the current thread for the specified time.
-
 
 Args:
 
@@ -3907,16 +3718,15 @@ Return ValueThe return value is zero if the specified time interval expired.
         
     """
     pass
+        
 
-
-def TerminateProcess(handle:typing.Any,exitCode:int) -> None:
+def TerminateProcess(handle:'int',exitCode:'int') -> 'None':
     """
     Kills a process
 
-
 Args:
 
-      handle(typing.Any):The handle of the process to terminate.
+      handle(int):The handle of the process to terminate.
       exitCode(int):The exit code for the process.CommentsSee also win32api::OpenProcess
 
 Returns:
@@ -3925,14 +3735,13 @@ Returns:
         
     """
     pass
+        
 
-
-def ToAsciiEx(vk:int,scancode:int,keyboardstate:bytes,flags:int=0,hlayout:typing.Any=None) -> bytes:
+def ToAsciiEx(vk:'int',scancode:'int',keyboardstate:'bytes',flags:'int'=0,hlayout:'Any'=None) -> 'bytes':
     """
     Translates the specified virtual-key code and keyboard state to the corresponding 
 
 character or characters.
-
 
 Args:
 
@@ -3940,7 +3749,7 @@ Args:
       scancode(int):The scan code.
       keyboardstate(bytes):A string of exactly 256 characters.
       flags(int):
-      hlayout(typing.Any):The keyboard layout to use
+      hlayout(Any):The keyboard layout to use
 
 Returns:
 
@@ -3948,12 +3757,11 @@ Returns:
         
     """
     pass
+        
 
-
-def Unicode() -> str:
+def Unicode() -> 'str':
     """
     Creates a new Unicode object
-
 
 Args:
 
@@ -3965,18 +3773,17 @@ Returns:
         
     """
     pass
+        
 
-
-def UpdateResource(handle:typing.Any,type:typing.Any,name:typing.Any,data:str,language:int) -> None:
+def UpdateResource(handle:'int',type:'PyResourceId',name:'PyResourceId',data:'str',language:'int') -> 'None':
     """
     Updates a resource in a PE file.
 
-
 Args:
 
-      handle(typing.Any):The update-file handle.
-      type(typing.Any):The type of resource to update
-      name(typing.Any):The id/name of the resource to update
+      handle(int):The update-file handle.
+      type(PyResourceId):The type of resource to update
+      name(PyResourceId):The id/name of the resource to update
       data(str):The data to place into the resource.
       language(int):Language to use, defaults to LANG_NEUTRAL.
 
@@ -3986,17 +3793,16 @@ Returns:
         
     """
     pass
+        
 
-
-def VkKeyScan(char:typing.Any,char1:typing.Any) -> int:
+def VkKeyScan(char:'Any',char1:'chr') -> 'int':
     """
     Translates a character to the corresponding virtual-key code and shift state.
 
-
 Args:
 
-      char(typing.Any):A byte or unicode string of length 1.  If a byte string is passed VkKeyScanA will be called, otherwise VkKeyScanW will be called.
-      char1(typing.Any):Specifies a characterWin32 API References
+      char(Any):A byte or unicode string of length 1.  If a byte string is passed VkKeyScanA will be called, otherwise VkKeyScanW will be called.
+      char1(chr):Specifies a characterWin32 API References
 
 Returns:
 
@@ -4004,17 +3810,16 @@ Returns:
         
     """
     pass
+        
 
-
-def VkKeyScan(char:typing.Any,char1:typing.Any) -> int:
+def VkKeyScan(char:'Any',char1:'chr') -> 'int':
     """
     Translates a character to the corresponding virtual-key code and shift state.
 
-
 Args:
 
-      char(typing.Any):A byte or unicode string of length 1.  If a byte string is passed VkKeyScanA will be called, otherwise VkKeyScanW will be called.
-      char1(typing.Any):Specifies a characterWin32 API References
+      char(Any):A byte or unicode string of length 1.  If a byte string is passed VkKeyScanA will be called, otherwise VkKeyScanW will be called.
+      char1(chr):Specifies a characterWin32 API References
 
 Returns:
 
@@ -4022,12 +3827,11 @@ Returns:
         
     """
     pass
+        
 
-
-def WinExec(cmdLine:str,show:int) -> None:
+def WinExec(cmdLine:'str',show:'int') -> 'None':
     """
     Runs the specified application.
-
 
 Args:
 
@@ -4040,19 +3844,18 @@ Returns:
         
     """
     pass
+        
 
-
-def WinHelp(hwnd:int,hlpFile:str,cmd:int,data:Union[int,str]=0) -> None:
+def WinHelp(hwnd:'int',hlpFile:'str',cmd:'int',data:'Union[str, int]'=0) -> 'None':
     """
     Invokes the Windows Help system.
-
 
 Args:
 
       hwnd(int):The handle of the window requesting help.
       hlpFile(str):The name of the help file.
       cmd(int):The type of help.  See the api for full details.
-      data(int,str):Additional data specific to the help call.Win32 API References
+      data(Union[str, int]):Additional data specific to the help call.Win32 API References
 
 Returns:
 
@@ -4062,12 +3865,11 @@ Return ValueThe method raises an exception if an error occurs.
         
     """
     pass
+        
 
-
-def WriteProfileSection(section:str,data:str,iniName:str=None) -> list:
+def WriteProfileSection(section:'str',data:'str',iniName:'str'=None) -> 'list':
     """
     Writes a complete section to an INI file or registry.
-
 
 Args:
 
@@ -4081,18 +3883,17 @@ Returns:
         
     """
     pass
+        
 
-
-def WriteProfileVal(section:str,entry:str,value:Union[int,str],iniName:str=None) -> None:
+def WriteProfileVal(section:'str',entry:'str',value:'Union[str, int]',iniName:'str'=None) -> 'None':
     """
     Writes a value to a Windows INI file.
-
 
 Args:
 
       section(str):The section in the INI file to write to.
       entry(str):The entry within the section in the INI file to write to.
-      value(int,str):The value to write.
+      value(Union[str, int]):The value to write.
       iniName(str):The name of the INI file.  If None, the system INI file is used.CommentsThis function is obsolete, applications should use the registry instead.Win32 API References
 
 Returns:
@@ -4101,12 +3902,11 @@ Returns:
         
     """
     pass
+        
 
-
-def HIBYTE(val:int) -> int:
+def HIBYTE(val:'int') -> 'int':
     """
     An interface to the win32api HIBYTE macro.
-
 
 Args:
 
@@ -4118,12 +3918,11 @@ Returns:
         
     """
     pass
+        
 
-
-def LOBYTE(val:int) -> int:
+def LOBYTE(val:'int') -> 'int':
     """
     An interface to the win32api LOBYTE macro.
-
 
 Args:
 
@@ -4135,12 +3934,11 @@ Returns:
         
     """
     pass
+        
 
-
-def HIWORD(val:int) -> int:
+def HIWORD(val:'int') -> 'int':
     """
     An interface to the win32api HIWORD macro.
-
 
 Args:
 
@@ -4152,12 +3950,11 @@ Returns:
         
     """
     pass
+        
 
-
-def LOWORD(val:int) -> int:
+def LOWORD(val:'int') -> 'int':
     """
     An interface to the win32api LOWORD macro.
-
 
 Args:
 
@@ -4169,12 +3966,11 @@ Returns:
         
     """
     pass
+        
 
-
-def RGB(red:int,green:int,blue:int) -> int:
+def RGB(red:'int',green:'int',blue:'int') -> 'int':
     """
     An interface to the win32api RGB macro.
-
 
 Args:
 
@@ -4188,14 +3984,13 @@ Returns:
         
     """
     pass
+        
 
-
-def MAKELANGID(PrimaryLanguage:int,SubLanguage:int) -> int:
+def MAKELANGID(PrimaryLanguage:'int',SubLanguage:'int') -> 'int':
     """
     Creates a language identifier from a primary language identifier and a sublanguage 
 
 identifier.
-
 
 Args:
 
@@ -4208,13 +4003,12 @@ Returns:
         
     """
     pass
+        
 
-
-def MAKEWORD(low:int,high:int) -> int:
+def MAKEWORD(low:'int',high:'int') -> 'int':
     """
     creates a WORD value by concatenating the specified values.
 
-
 Args:
 
       low(int):Specifies the low-order byte of the new value.
@@ -4226,13 +4020,12 @@ Returns:
         
     """
     pass
+        
 
-
-def MAKELONG(low:int,high:int) -> int:
+def MAKELONG(low:'int',high:'int') -> 'int':
     """
     creates a LONG value by concatenating the specified values.
 
-
 Args:
 
       low(int):Specifies the low-order byte of the new value.
@@ -4244,3 +4037,4 @@ Returns:
         
     """
     pass
+        

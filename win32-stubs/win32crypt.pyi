@@ -1,23 +1,22 @@
-from pywintypes import *
 __all__=['CryptProtectData', 'CryptUnprotectData', 'CryptEnumProviders', 'CryptEnumProviderTypes', 'CryptGetDefaultProvider', 'CryptSetProviderEx', 'CryptAcquireContext', 'CryptFindLocalizedName', 'CertEnumSystemStore', 'CertEnumSystemStoreLocation', 'CertEnumPhysicalStore', 'CertRegisterSystemStore', 'CertUnregisterSystemStore', 'CertOpenStore', 'CertOpenSystemStore', 'CryptFindOIDInfo', 'CertAlgIdToOID', 'CertOIDToAlgId', 'CryptGetKeyIdentifierProperty', 'CryptEnumKeyIdentifierProperties', 'CryptEnumOIDInfo', 'CertAddSerializedElementToStore', 'CryptQueryObject', 'CryptDecodeMessage', 'CryptEncryptMessage', 'CryptDecryptMessage', 'CryptSignAndEncryptMessage', 'CryptVerifyMessageSignature', 'CryptGetMessageCertificates', 'CryptGetMessageSignerCount', 'CryptSignMessage', 'CryptVerifyDetachedMessageSignature', 'CryptDecryptAndVerifyMessageSignature', 'CryptEncodeObjectEx', 'CryptDecodeObjectEx', 'CertNameToStr', 'CryptFormatObject', 'PFXImportCertStore', 'PFXVerifyPassword', 'PFXIsPFXBlob', 'CryptBinaryToString', 'CryptStringToBinary']
-import typing
+from typing import *
+from .win32typing import *
 """An interface to the win32 Cryptography API"""
 
 
-def CryptProtectData(DataIn:bytes,DataDescr:typing.Any=None,OptionalEntropy:bytes=None,Reserved:None=None,PromptStruct:typing.Any=None,Flags:int=0) -> bytes:
+def CryptProtectData(DataIn:'bytes',DataDescr:'str'=None,OptionalEntropy:'bytes'=None,Reserved:'None'=None,PromptStruct:'PyCRYPTPROTECT_PROMPTSTRUCT'=None,Flags:'int'=0) -> 'bytes':
     """
     Encrypts data using a session key derived from current user's logon 
 
 credentials
 
-
 Args:
 
       DataIn(bytes):Data to be encrypted.
-      DataDescr(typing.Any):Description to add to the data
+      DataDescr(str):Description to add to the data
       OptionalEntropy(bytes):Extra entropy (eg password) for encryption process, can be None
       Reserved(None):Must be None
-      PromptStruct(typing.Any):Contains options for UI display during encryption and decryption, can be None
+      PromptStruct(PyCRYPTPROTECT_PROMPTSTRUCT):Contains options for UI display during encryption and decryption, can be None
       Flags(int):Combination of CRYPTPROTECT_* flags
 
 Returns:
@@ -26,24 +25,23 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptUnprotectData(DataIn:bytes,OptionalEntropy:bytes=None,Reserved:None=None,PromptStruct:typing.Any=None,Flags:int=0) -> typing.Any:
+def CryptUnprotectData(DataIn:'bytes',OptionalEntropy:'bytes'=None,Reserved:'None'=None,PromptStruct:'PyCRYPTPROTECT_PROMPTSTRUCT'=None,Flags:'int'=0) -> 'Tuple[str, bytes]':
     """
     None
-
 
 Args:
 
       DataIn(bytes):Data to be decrypted.
       OptionalEntropy(bytes):Extra entropy passed to CryptProtectData
       Reserved(None):Must be None
-      PromptStruct(typing.Any):Contains options for UI display during encryption and decryption, can be None
+      PromptStruct(PyCRYPTPROTECT_PROMPTSTRUCT):Contains options for UI display during encryption and decryption, can be None
       Flags(int):Combination of CRYPTPROTECT_* flagsReturn ValueThe result is a tuple of (description, data) where description is the description that was passed to win32crypt::CryptProtectData, and data is the unencrypted data.
 
 Returns:
 
-      typing.Any:Combination of CRYPTPROTECT_* flags
+      Tuple[str, bytes]:Combination of CRYPTPROTECT_* flags
 Return ValueThe result is a tuple of (description, data) where description 
 
 is the description that was passed to win32crypt::CryptProtectData, and 
@@ -53,12 +51,11 @@ data is the unencrypted data.
         
     """
     pass
+        
 
-
-def CryptEnumProviders() -> typing.Any:
+def CryptEnumProviders() -> 'List[Any]':
     """
     List cryptography providers
-
 
 Args:
 
@@ -66,7 +63,7 @@ Args:
 
 Returns:
 
-      typing.Any:win32crypt.CryptEnumProviders
+      List[Any]:win32crypt.CryptEnumProviders
 
 [(PyUnicode,int),...] = CryptEnumProviders()List cryptography providers
 Return ValueReturns a sequence of tuples containing provider name and type
@@ -74,14 +71,13 @@ Return ValueReturns a sequence of tuples containing provider name and type
         
     """
     pass
+        
 
-
-def CryptEnumProviderTypes() -> typing.Any:
+def CryptEnumProviderTypes() -> 'List[Any]':
     """
     Lists available local cryptographic provider 
 
 types
-
 
 Args:
 
@@ -89,7 +85,7 @@ Args:
 
 Returns:
 
-      typing.Any:win32crypt.CryptEnumProviderTypes
+      List[Any]:win32crypt.CryptEnumProviderTypes
 
 [(PyUnicode,int),...] = CryptEnumProviderTypes()Lists available local cryptographic provider 
 
@@ -104,12 +100,11 @@ Return ValueReturns a sequence of tuples containing name and identifier of provi
         
     """
     pass
+        
 
-
-def CryptGetDefaultProvider(ProvType:int,Flags:int) -> str:
+def CryptGetDefaultProvider(ProvType:'int',Flags:'int') -> 'str':
     """
     Returns default provider for local machine or current user
-
 
 Args:
 
@@ -122,16 +117,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptSetProviderEx(ProvName:typing.Any,ProvType:int,Flags:int) -> None:
+def CryptSetProviderEx(ProvName:'str',ProvType:'int',Flags:'int') -> 'None':
     """
     Sets default provider (for machine or user) for specified type
 
-
 Args:
 
-      ProvName(typing.Any):Name of new default provider (MS_*_PROV value)
+      ProvName(str):Name of new default provider (MS_*_PROV value)
       ProvType(int):One of the PROV_* provider types
       Flags(int):CRYPT_MACHINE_DEFAULT or CRYPT_USER_DEFAULT.  Combine with CRYPT_DELETE_DEFAULT to remove default.
 
@@ -141,41 +135,39 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptAcquireContext(Container:typing.Any,Provider:typing.Any,ProvType:int,Flags:int) -> typing.Any:
+def CryptAcquireContext(Container:'str',Provider:'str',ProvType:'int',Flags:'int') -> 'PyCRYPTPROV':
     """
     Retrieve handle to a cryptographic service provider
 
-
 Args:
 
-      Container(typing.Any):Name of key container, can be none to use a Provider's default key container (usually username)
-      Provider(typing.Any):Name of cryptographic provider. (MS_*_PROV) Use None for user's default provider.
+      Container(str):Name of key container, can be none to use a Provider's default key container (usually username)
+      Provider(str):Name of cryptographic provider. (MS_*_PROV) Use None for user's default provider.
       ProvType(int):One of the PROV_* constants
       Flags(int):Combination of CRYPT_VERIFYCONTEXT,CRYPT_NEWKEYSET,CRYPT_MACHINE_KEYSET,CRYPT_DELETEKEYSET,CRYPT_SILENTReturn ValueReturns None if CRYPT_DELETEKEYSET is specified, otherwise returns a handle to the provider
 
 Returns:
 
-      typing.Any:Combination of 
+      PyCRYPTPROV:Combination of 
 
 CRYPT_VERIFYCONTEXT,CRYPT_NEWKEYSET,CRYPT_MACHINE_KEYSET,CRYPT_DELETEKEYSET,CRYPT_SILENTReturn ValueReturns None if CRYPT_DELETEKEYSET is specified, otherwise returns a handle to the provider
 
         
     """
     pass
+        
 
-
-def CryptFindLocalizedName(CryptName:typing.Any) -> str:
+def CryptFindLocalizedName(CryptName:'str') -> 'str':
     """
     Returns localized name for predefined system stores (Root, 
 
 My, .Default, .LocalMachine)
 
-
 Args:
 
-      CryptName(typing.Any):Name of a system store
+      CryptName(str):Name of a system store
 
 Returns:
 
@@ -183,30 +175,28 @@ Returns:
         
     """
     pass
+        
 
-
-def CertEnumSystemStore(dwFlags:int,pvSystemStoreLocationPara:typing.Any=None) -> typing.Any:
+def CertEnumSystemStore(dwFlags:'int',pvSystemStoreLocationPara:'Any'=None) -> 'List[str]':
     """
     Lists system stores
-
 
 Args:
 
       dwFlags(int):CERT_SYSTEM_STORE_* location, can be combined with CERT_SYSTEM_STORE_RELOCATE_FLAG
-      pvSystemStoreLocationPara(typing.Any):Optional If flags contains CERT_SYSTEM_STORE_RELOCATE_FLAG must be a sequence (PyHkey, unicode) representing a CERT_SYSTEM_STORE_RELOCATE_PARA, otherwise should be a unicode store name
+      pvSystemStoreLocationPara(Any):Optional If flags contains CERT_SYSTEM_STORE_RELOCATE_FLAG must be a sequence (PyHkey, unicode) representing a CERT_SYSTEM_STORE_RELOCATE_PARA, otherwise should be a unicode store name
 
 Returns:
 
-      typing.Any
+      List[str]
         
     """
     pass
+        
 
-
-def CertEnumSystemStoreLocation(Flags:int=0) -> typing.Any:
+def CertEnumSystemStoreLocation(Flags:'int'=0) -> 'List[str]':
     """
     Lists system store locations
-
 
 Args:
 
@@ -214,38 +204,36 @@ Args:
 
 Returns:
 
-      typing.Any
+      List[str]
         
     """
     pass
+        
 
-
-def CertEnumPhysicalStore(pvSystemStore:typing.Any,dwFlags:int) -> typing.Any:
+def CertEnumPhysicalStore(pvSystemStore:'str',dwFlags:'int') -> 'List[str]':
     """
     Lists physical stores on computer
 
-
 Args:
 
-      pvSystemStore(typing.Any):Name of system store to enumerate physical locations for
+      pvSystemStore(str):Name of system store to enumerate physical locations for
       dwFlags(int):CERT_SYSTEM_STORE_* constant, CERT_SYSTEM_STORE_RELOCATE_FLAG  not supported yet
 
 Returns:
 
-      typing.Any
+      List[str]
         
     """
     pass
+        
 
-
-def CertRegisterSystemStore(SystemStore:typing.Any,Flags:int) -> None:
+def CertRegisterSystemStore(SystemStore:'str',Flags:'int') -> 'None':
     """
     Registers a certificate store
 
-
 Args:
 
-      SystemStore(typing.Any):string/unicode name of store to be registered, or a sequence of (PyHkey, unicode) representing a CERT_SYSTEM_STORE_RELOCATE_PARA struct
+      SystemStore(str):string/unicode name of store to be registered, or a sequence of (PyHkey, unicode) representing a CERT_SYSTEM_STORE_RELOCATE_PARA struct
       Flags(int):One of the CERT_SYSTEM_STORE_* location constants, can also be combined with CERT_SYSTEM_STORE_RELOCATE_FLAG and CERT_STORE_CREATE_NEW_FLAG
 
 Returns:
@@ -254,16 +242,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CertUnregisterSystemStore(SystemStore:typing.Any,Flags:int) -> None:
+def CertUnregisterSystemStore(SystemStore:'str',Flags:'int') -> 'None':
     """
     Unregisters a certificate store
 
-
 Args:
 
-      SystemStore(typing.Any):Name of System store to be unregistered
+      SystemStore(str):Name of System store to be unregistered
       Flags(int):CERT_SYSTEM_STORE_RELOCATE_FLAG, CERT_STORE_DELETE_FLAG (CERT_SYSTEM_STORE_RELOCATE_FLAG  not supported yet)
 
 Returns:
@@ -272,56 +259,53 @@ Returns:
         
     """
     pass
+        
 
-
-def CertOpenStore(StoreProvider:int,MsgAndCertEncodingType:int,CryptProv:typing.Any,Flags:int,Para:typing.Any=None) -> typing.Any:
+def CertOpenStore(StoreProvider:'int',MsgAndCertEncodingType:'int',CryptProv:'PyCRYPTPROV',Flags:'int',Para:'Any'=None) -> 'PyCERTSTORE':
     """
     Opens a certificate store
-
 
 Args:
 
       StoreProvider(int):CERT_STORE_PROV_*, currently does not accept string provider names
       MsgAndCertEncodingType(int):Only used with CERT_STORE_PROV_MSG, CERT_STORE_PROV_PKCS7, and CERT_STORE_PROV_FILENAME. Usually should be X509_ASN_ENCODING combined with PKCS_7_ASN_ENCODING
-      CryptProv(typing.Any):Handle to a CSP, can be None to use default provider
+      CryptProv(PyCRYPTPROV):Handle to a CSP, can be None to use default provider
       Flags(int):Combination of CERT_STORE_*_FLAG flags
-      Para(typing.Any):PyCERT_SYSTEM_STORE_RELOCATE_PARA, or data specific to provider
+      Para(Any):PyCERT_SYSTEM_STORE_RELOCATE_PARA, or data specific to provider
 
 Returns:
 
-      typing.Any
+      PyCERTSTORE
         
     """
     pass
+        
 
-
-def CertOpenSystemStore(SubsystemProtocol:typing.Any,Prov:typing.Any=None) -> typing.Any:
+def CertOpenSystemStore(SubsystemProtocol:'str',Prov:'PyCRYPTPROV'=None) -> 'PyCERTSTORE':
     """
     Opens most commonly used Certificate Stores
 
-
 Args:
 
-      SubsystemProtocol(typing.Any):Name of store to open, will be created if it doesn't already exist
-      Prov(typing.Any):Handle to CSP, use None for default provider
+      SubsystemProtocol(str):Name of store to open, will be created if it doesn't already exist
+      Prov(PyCRYPTPROV):Handle to CSP, use None for default provider
 
 Returns:
 
-      typing.Any
+      PyCERTSTORE
         
     """
     pass
+        
 
-
-def CryptFindOIDInfo(KeyType:int,Key:typing.Any,GroupId:int=0) -> dict:
+def CryptFindOIDInfo(KeyType:'int',Key:'Any',GroupId:'int'=0) -> 'dict':
     """
     Returns information about an algorithm identifier or object identifier
-
 
 Args:
 
       KeyType(int):One of CRYPT_OID_INFO_OID_KEY,CRYPT_OID_INFO_NAME_KEY,CRYPT_OID_INFO_ALGID_KEY,CRYPT_OID_INFO_SIGN_KEY
-      Key(typing.Any):Type is dependent on KeyType
+      Key(Any):Type is dependent on KeyType
       GroupId(int):CRYPT_*_GROUP_ID constant, or 0Return ValueReturns a dictionary of CRYPT_OID_INFO dataKeyTypeType of KeyCRYPT_OID_INFO_OID_KEYAn szOID_* character stringCRYPT_OID_INFO_NAME_KEYA unicode nameCRYPT_OID_INFO_ALGID_KEYAn ALG_ID, one of the CALG_* integer constantsCRYPT_OID_INFO_SIGN_KEYA tuple of 2 CALG_* integers (hash algorithm, public key algorithm)
 
 Returns:
@@ -346,12 +330,11 @@ CRYPT_OID_INFO_SIGN_KEYA tuple of 2 CALG_* integers (hash algorithm, public key 
         
     """
     pass
+        
 
-
-def CertAlgIdToOID(AlgId:int) -> str:
+def CertAlgIdToOID(AlgId:'int') -> 'str':
     """
     Converts an integer ALG_ID to it's szOID_ string representation
-
 
 Args:
 
@@ -363,12 +346,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CertOIDToAlgId(ObjId:str) -> int:
+def CertOIDToAlgId(ObjId:'str') -> 'int':
     """
     Converts a string object identfier to a numeric algorith identifier
-
 
 Args:
 
@@ -380,43 +362,41 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptGetKeyIdentifierProperty(KeyIdentifier:str,PropId:int,Flags:int=0,ComputerName:typing.Any=None) -> typing.Any:
+def CryptGetKeyIdentifierProperty(KeyIdentifier:'str',PropId:'int',Flags:'int'=0,ComputerName:'str'=None) -> 'Any':
     """
     Retrieves a property from a certificate by its key 
 
 indentifier
-
 
 Args:
 
       KeyIdentifier(str):Hash that identifies a certificate key
       PropId(int):Property identifier, one of the CERT_*_PROP_ID values
       Flags(int):Use CRYPT_KEYID_MACHINE_FLAG for machine keyset. (CRYPT_KEYID_ALLOC_FLAG is always added to Flags)
-      ComputerName(typing.Any):Name of remote computer, use None for local machineCommentsCERT_KEY_PROV_INFO_PROP_ID is only property currently supported
+      ComputerName(str):Name of remote computer, use None for local machineCommentsCERT_KEY_PROV_INFO_PROP_ID is only property currently supported
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CryptEnumKeyIdentifierProperties(KeyIdentifier:str=None,PropId:int=0,Flags:int=0,ComputerName:typing.Any=None) -> list:
+def CryptEnumKeyIdentifierProperties(KeyIdentifier:'str'=None,PropId:'int'=0,Flags:'int'=0,ComputerName:'str'=None) -> 'list':
     """
     Enumerates private keys for certificates and their 
 
 properties
-
 
 Args:
 
       KeyIdentifier(str):Id of a certificate key, can be None for all keys
       PropId(int):CERT_*_PROP_ID constant. Limits returned values to specified propery, Use 0 for all
       Flags(int):Can be CRYPT_KEYID_MACHINE_FLAG to list keys for local machine, or remote machine if ComputerName is given
-      ComputerName(typing.Any):Name of remote computer, use None for local machine
+      ComputerName(str):Name of remote computer, use None for local machine
 
 Returns:
 
@@ -424,12 +404,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptEnumOIDInfo(GroupId:int=0) -> list:
+def CryptEnumOIDInfo(GroupId:'int'=0) -> 'list':
     """
     Lists registered Object Identifiers that belong to specified group
-
 
 Args:
 
@@ -441,35 +420,33 @@ Returns:
         
     """
     pass
+        
 
-
-def CertAddSerializedElementToStore(CertStore:typing.Any,Element:typing.Any,AddDisposition:int,ContextTypeFlags:int,Flags:int=0) -> typing.Any:
+def CertAddSerializedElementToStore(CertStore:'PyCERTSTORE',Element:'Any',AddDisposition:'int',ContextTypeFlags:'int',Flags:'int'=0) -> 'PyCERT_CONTEXT':
     """
     Imports a serialized Certificate context, 
 
 CRL, or CTL
 
-
 Args:
 
-      CertStore(typing.Any):Certificate Store to which the context will be added, can be None
-      Element(typing.Any):Serialized data
+      CertStore(PyCERTSTORE):Certificate Store to which the context will be added, can be None
+      Element(Any):Serialized data
       AddDisposition(int):one of CERT_STORE_ADD_* values
       ContextTypeFlags(int):One of CERT_STORE_*_CONTEXT_FLAG constants
       Flags(int):Reserved, use only 0CommentsCurrently only Certificate contexts are supported
 
 Returns:
 
-      typing.Any
+      PyCERT_CONTEXT
         
     """
     pass
+        
 
-
-def CryptQueryObject(ObjectType:int,Object:str,ExpectedContentTypeFlags:int,ExpectedFormatTypeFlags:int,Flags:int=0) -> dict:
+def CryptQueryObject(ObjectType:'int',Object:'str',ExpectedContentTypeFlags:'int',ExpectedFormatTypeFlags:'int',Flags:'int'=0) -> 'dict':
     """
     Determines the cryptographic type of input data
-
 
 Args:
 
@@ -499,22 +476,21 @@ Context:PyCERT_CONTEXT}		## A certificate, CRL, or CTL context depending on Cont
         
     """
     pass
+        
 
-
-def CryptDecodeMessage(EncodedBlob:typing.Any,DecryptPara:dict,MsgTypeFlags:int,VerifyPara:dict=None,SignerIndex:int=0,PrevInnerContentType:int=0,ReturnData:typing.Any=True) -> dict:
+def CryptDecodeMessage(EncodedBlob:'Any',DecryptPara:'dict',MsgTypeFlags:'int',VerifyPara:'dict'=None,SignerIndex:'int'=0,PrevInnerContentType:'int'=0,ReturnData:'Any'=True) -> 'dict':
     """
     Decodes and decrypts a message, and verifies its signatures
 
-
 Args:
 
-      EncodedBlob(typing.Any):Data to be decoded
+      EncodedBlob(Any):Data to be decoded
       DecryptPara(dict):PyCRYPT_DECRYPT_MESSAGE_PARA containing decryption parms
       MsgTypeFlags(int):Combination of CMSG_DATA_FLAG, CMSG_SIGNED_FLAG, CMSG_ENVELOPED_FLAG, CMSG_SIGNED_AND_ENVELOPED_FLAG, or CMSG_HASHED_FLAG
       VerifyPara(dict):PyCRYPT_VERIFY_MESSAGE_PARA containing signature verification parms
       SignerIndex(int):Index of the signer to verify,  ignored if message is not signed.
       PrevInnerContentType(int):Content type returned from previous call, used during subsequent pass on a nested message
-      ReturnData(typing.Any):Indicates if decoded data should be returned.CommentsOnly one level of encoding is interpreted.  Some types of messages will need multiple calls to completely decode. For example, to decode a message created by win32crypt::CryptSignAndEncryptMessage, one pass with CMSG_ENVELOPED_FLAG 	and a second pass using CMSG_SIGNED_FLAG are required to recover the original message text.Return ValueOutput params are returned as a dict containing: {MsgType:int},					&nbsp&nbsp##Type of message decoded, one of CMSG_DATA,CMSG_SIGNED,CMSG_ENVELOPED,CMSG_SIGNED_AND_ENVELOPED,CMSG_HASHED 	InnerContentType:int, &nbsp&nbsp##Type of decoded content returned, uses same set of values as MsgType.  CMSG_DATA indicates unencoded data. Decoded:str,					&nbsp&nbsp##The decoded data, will be None if ReturnData is False. XchgCert:PyCERT_CONTEXT,	&nbsp&nbsp##Certificate used to decode message SignerCert:PyCERT_CONTEXT}	&nbsp&nbsp##Certificate used to sign message
+      ReturnData(Any):Indicates if decoded data should be returned.CommentsOnly one level of encoding is interpreted.  Some types of messages will need multiple calls to completely decode. For example, to decode a message created by win32crypt::CryptSignAndEncryptMessage, one pass with CMSG_ENVELOPED_FLAG 	and a second pass using CMSG_SIGNED_FLAG are required to recover the original message text.Return ValueOutput params are returned as a dict containing: {MsgType:int},					&nbsp&nbsp##Type of message decoded, one of CMSG_DATA,CMSG_SIGNED,CMSG_ENVELOPED,CMSG_SIGNED_AND_ENVELOPED,CMSG_HASHED 	InnerContentType:int, &nbsp&nbsp##Type of decoded content returned, uses same set of values as MsgType.  CMSG_DATA indicates unencoded data. Decoded:str,					&nbsp&nbsp##The decoded data, will be None if ReturnData is False. XchgCert:PyCERT_CONTEXT,	&nbsp&nbsp##Certificate used to decode message SignerCert:PyCERT_CONTEXT}	&nbsp&nbsp##Certificate used to sign message
 
 Returns:
 
@@ -545,18 +521,17 @@ SignerCert:PyCERT_CONTEXT}	&nbsp&nbsp##Certificate used to sign message
         
     """
     pass
+        
 
-
-def CryptEncryptMessage(EncryptPara:typing.Any,RecipientCert:typing.Any,ToBeEncrypted:typing.Any) -> str:
+def CryptEncryptMessage(EncryptPara:'PyCRYPT_ENCRYPT_MESSAGE_PARA',RecipientCert:'Tuple[PyCERT_CONTEXT, ...]',ToBeEncrypted:'Any') -> 'str':
     """
     Encrypts and encodes a message
 
-
 Args:
 
-      EncryptPara(typing.Any):Encryption parameters
-      RecipientCert(typing.Any):Sequence of handles to recipients' certificates
-      ToBeEncrypted(typing.Any):Data to be encrypted
+      EncryptPara(PyCRYPT_ENCRYPT_MESSAGE_PARA):Encryption parameters
+      RecipientCert(Tuple[PyCERT_CONTEXT, ...]):Sequence of handles to recipients' certificates
+      ToBeEncrypted(Any):Data to be encrypted
 
 Returns:
 
@@ -564,37 +539,35 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptDecryptMessage(DecryptPara:typing.Any,EncryptedBlob:typing.Any) -> typing.Any:
+def CryptDecryptMessage(DecryptPara:'PyCRYPT_DECRYPT_MESSAGE_PARA',EncryptedBlob:'Any') -> 'Tuple[str, PyCERT_CONTEXT]':
     """
     Decrypts an encrypted and encoded message
 
-
 Args:
 
-      DecryptPara(typing.Any):Dictionary containing decryption parameters
-      EncryptedBlob(typing.Any):Buffer containing an encrypted messageReturn ValueReturns the decrypted message and a handle to the certificate used to decrypt it
+      DecryptPara(PyCRYPT_DECRYPT_MESSAGE_PARA):Dictionary containing decryption parameters
+      EncryptedBlob(Any):Buffer containing an encrypted messageReturn ValueReturns the decrypted message and a handle to the certificate used to decrypt it
 
 Returns:
 
-      typing.Any:Buffer containing an encrypted messageReturn ValueReturns the decrypted message and a handle to the certificate used to decrypt it
+      Tuple[str, PyCERT_CONTEXT]:Buffer containing an encrypted messageReturn ValueReturns the decrypted message and a handle to the certificate used to decrypt it
 
         
     """
     pass
+        
 
-
-def CryptSignAndEncryptMessage(SignPara:typing.Any,EncryptPara:typing.Any,RecipientCert:typing.Any,ToBeSignedAndEncrypted:str) -> str:
+def CryptSignAndEncryptMessage(SignPara:'PyCRYPT_SIGN_MESSAGE_PARA',EncryptPara:'PyCRYPT_ENCRYPT_MESSAGE_PARA',RecipientCert:'Tuple[PyCERT_CONTEXT, ...]',ToBeSignedAndEncrypted:'str') -> 'str':
     """
     Encrypts, encodes and signs a message using a certificate
 
-
 Args:
 
-      SignPara(typing.Any):Message signing parameters
-      EncryptPara(typing.Any):Encryption parameters
-      RecipientCert(typing.Any):Sequence of certificates of intended recipients
+      SignPara(PyCRYPT_SIGN_MESSAGE_PARA):Message signing parameters
+      EncryptPara(PyCRYPT_ENCRYPT_MESSAGE_PARA):Encryption parameters
+      RecipientCert(Tuple[PyCERT_CONTEXT, ...]):Sequence of certificates of intended recipients
       ToBeSignedAndEncrypted(str):Buffer containing data to be encoded in the message
 
 Returns:
@@ -603,60 +576,57 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptVerifyMessageSignature(SignedBlob:str,SignerIndex:int=0,VerifyPara:typing.Any=None,ReturnData:typing.Any=False) -> typing.Any:
+def CryptVerifyMessageSignature(SignedBlob:'str',SignerIndex:'int'=0,VerifyPara:'PyCRYPT_VERIFY_MESSAGE_PARA'=None,ReturnData:'Any'=False) -> 'Tuple[PyCERT_CONTEXT, str]':
     """
     Verifies the signature of an encoded 
 
 message
 
-
 Args:
 
       SignedBlob(str):Buffer containing a signed message
       SignerIndex(int):Index of the signer to verify, zero-based
-      VerifyPara(typing.Any):Signature verification parameters, use None for defaults
-      ReturnData(typing.Any):Indicates if decoded data should be returned.Return ValueReturns the signing certificate and the decoded data.  If ReturnData parm is False, None is returned for data.
+      VerifyPara(PyCRYPT_VERIFY_MESSAGE_PARA):Signature verification parameters, use None for defaults
+      ReturnData(Any):Indicates if decoded data should be returned.Return ValueReturns the signing certificate and the decoded data.  If ReturnData parm is False, None is returned for data.
 
 Returns:
 
-      typing.Any:Indicates if decoded data should be returned.
+      Tuple[PyCERT_CONTEXT, str]:Indicates if decoded data should be returned.
 Return ValueReturns the signing certificate and the decoded data.  If ReturnData parm is False, None is returned for data.
 
         
     """
     pass
+        
 
-
-def CryptGetMessageCertificates(SignedBlob:typing.Any,MsgAndCertEncodingType:int,CryptProv:typing.Any=None,Flags:int=0) -> typing.Any:
+def CryptGetMessageCertificates(SignedBlob:'Any',MsgAndCertEncodingType:'int',CryptProv:'PyCRYPTPROV'=None,Flags:'int'=0) -> 'PyCERTSTORE':
     """
     Extracts certificates encoded in a message
 
-
 Args:
 
-      SignedBlob(typing.Any):Buffer containing a signed message
+      SignedBlob(Any):Buffer containing a signed message
       MsgAndCertEncodingType(int):Message and certificate encoding types
-      CryptProv(typing.Any):Handle to a CSP, use None for default
+      CryptProv(PyCRYPTPROV):Handle to a CSP, use None for default
       Flags(int):Same flags used with win32crypt::CertOpenStore
 
 Returns:
 
-      typing.Any
+      PyCERTSTORE
         
     """
     pass
+        
 
-
-def CryptGetMessageSignerCount(SignedBlob:typing.Any,MsgEncodingType:int) -> int:
+def CryptGetMessageSignerCount(SignedBlob:'Any',MsgEncodingType:'int') -> 'int':
     """
     Finds the number of signers of an encoded message
 
-
 Args:
 
-      SignedBlob(typing.Any):Buffer containing a signed message
+      SignedBlob(Any):Buffer containing a signed message
       MsgEncodingType(int):Message encoding type
 
 Returns:
@@ -665,18 +635,17 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptSignMessage(SignPara:typing.Any,ToBeSigned:typing.Any,DetachedSignature:typing.Any=False) -> str:
+def CryptSignMessage(SignPara:'PyCRYPT_SIGN_MESSAGE_PARA',ToBeSigned:'Tuple[str, ...]',DetachedSignature:'Any'=False) -> 'str':
     """
     Signs and encodes a message
 
-
 Args:
 
-      SignPara(typing.Any):Message signing parameters
-      ToBeSigned(typing.Any):Sequence of strings containing message data.  Can only contain 1 string if DetachedSignature parm is False.
-      DetachedSignature(typing.Any):If True, only the signature itself is encoded in output msg.
+      SignPara(PyCRYPT_SIGN_MESSAGE_PARA):Message signing parameters
+      ToBeSigned(Tuple[str, ...]):Sequence of strings containing message data.  Can only contain 1 string if DetachedSignature parm is False.
+      DetachedSignature(Any):If True, only the signature itself is encoded in output msg.
 
 Returns:
 
@@ -684,25 +653,24 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptVerifyDetachedMessageSignature(SignerIndex:int,DetachedSignBlob:typing.Any,ToBeSigned:typing.Any,VerifyPara:typing.Any=None) -> typing.Any:
+def CryptVerifyDetachedMessageSignature(SignerIndex:'int',DetachedSignBlob:'Any',ToBeSigned:'Tuple[Any, ...]',VerifyPara:'PyCRYPT_VERIFY_MESSAGE_PARA'=None) -> 'PyCERT_CONTEXT':
     """
     Verifies a signature that is encoded 
 
 separately from the data
 
-
 Args:
 
       SignerIndex(int):Index of the signer to verify
-      DetachedSignBlob(typing.Any):Buffer containing an encoded signature
-      ToBeSigned(typing.Any):Sequence of buffers containing message data.
-      VerifyPara(typing.Any):Signature verification parameters, use None for defaultsReturn ValueReturns the signing certificate
+      DetachedSignBlob(Any):Buffer containing an encoded signature
+      ToBeSigned(Tuple[Any, ...]):Sequence of buffers containing message data.
+      VerifyPara(PyCRYPT_VERIFY_MESSAGE_PARA):Signature verification parameters, use None for defaultsReturn ValueReturns the signing certificate
 
 Returns:
 
-      typing.Any:Signature verification parameters, use 
+      PyCERT_CONTEXT:Signature verification parameters, use 
 
 None for defaults
 Return ValueReturns the signing certificate
@@ -710,20 +678,19 @@ Return ValueReturns the signing certificate
         
     """
     pass
+        
 
-
-def CryptDecryptAndVerifyMessageSignature(EncryptedBlob:typing.Any,DecryptPara:typing.Any,VerifyPara:typing.Any=None,SignerIndex:int=0) -> dict:
+def CryptDecryptAndVerifyMessageSignature(EncryptedBlob:'Any',DecryptPara:'PyCRYPT_DECRYPT_MESSAGE_PARA',VerifyPara:'PyCRYPT_VERIFY_MESSAGE_PARA'=None,SignerIndex:'int'=0) -> 'dict':
     """
     Decrypts and decodes a signed message, and verifies 
 
 its signatures
 
-
 Args:
 
-      EncryptedBlob(typing.Any):Encoded message to be decrypted.
-      DecryptPara(typing.Any):Decryption parms
-      VerifyPara(typing.Any):Signature verification parms
+      EncryptedBlob(Any):Encoded message to be decrypted.
+      DecryptPara(PyCRYPT_DECRYPT_MESSAGE_PARA):Decryption parms
+      VerifyPara(PyCRYPT_VERIFY_MESSAGE_PARA):Signature verification parms
       SignerIndex(int):Index of the signer to verify, zero-based.CommentsUsage is similar to CryptDecodeMessage, except that it undoes all levels of encoding and returns the bare message.   This function is the counterpart of CryptSignAndEncryptMessage.Return ValueOutput params are returned as a dict containing: Decrypted:str,					&nbsp&nbsp##The decrypted message contents XchgCert:PyCERT_CONTEXT,	&nbsp&nbsp##Certificate whose private key was used to decrypt message SignerCert:PyCERT_CONTEXT	&nbsp&nbsp##Certificate used to sign message
 
 Returns:
@@ -745,20 +712,19 @@ SignerCert:PyCERT_CONTEXT	&nbsp&nbsp##Certificate used to sign message
         
     """
     pass
+        
 
-
-def CryptEncodeObjectEx(StructType:Union[str,int],StructInfo:dict,CertEncodingType:int,Flags:int=0,EncodePara:typing.Any=None) -> str:
+def CryptEncodeObjectEx(StructType:'Union[str, int]',StructInfo:'dict',CertEncodingType:'int',Flags:'int'=0,EncodePara:'Any'=None) -> 'str':
     """
     Serializes and ASN encodes cryptographic structures
 
-
 Args:
 
-      StructType(str,int):OID identifying type of data to be encoded, either szOID_* string or a numeric id
+      StructType(Union[str, int]):OID identifying type of data to be encoded, either szOID_* string or a numeric id
       StructInfo(dict):Information to be encoded.  Contents of dict are dependent on StructType
       CertEncodingType(int):Encoding types
       Flags(int):Encoding options, combination of CRYPT_UNICODE_* constants.  CRYPT_ENCODE_ALLOC_FLAG is added to flags..
-      EncodePara(typing.Any):Not supported, use only NoneStructTypeType of inputszOID_ENHANCED_KEY_USAGEPyCTL_USAGE (sequence of OID's)X509_ENHANCED_KEY_USAGEPyCTL_USAGE (sequence of OID's)szOID_KEY_USAGEPyCRYPT_BIT_BLOBX509_KEY_USAGEPyCRYPT_BIT_BLOBX509_BITSPyCRYPT_BIT_BLOB
+      EncodePara(Any):Not supported, use only NoneStructTypeType of inputszOID_ENHANCED_KEY_USAGEPyCTL_USAGE (sequence of OID's)X509_ENHANCED_KEY_USAGEPyCTL_USAGE (sequence of OID's)szOID_KEY_USAGEPyCRYPT_BIT_BLOBX509_KEY_USAGEPyCRYPT_BIT_BLOBX509_BITSPyCRYPT_BIT_BLOB
 
 Returns:
 
@@ -766,24 +732,23 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptDecodeObjectEx(StructType:Union[str,int],Encoded:str,CertEncodingType:int,Flags:int=0,DecodePara:typing.Any=None) -> typing.Any:
+def CryptDecodeObjectEx(StructType:'Union[str, int]',Encoded:'str',CertEncodingType:'int',Flags:'int'=0,DecodePara:'Any'=None) -> 'Any':
     """
     Decodes ASN encoded data
 
-
 Args:
 
-      StructType(str,int):An OID identifying the type of data to be decoded, can be either str or int
+      StructType(Union[str, int]):An OID identifying the type of data to be decoded, can be either str or int
       Encoded(str):String or buffer containing ASN encoded data
       CertEncodingType(int):Encoding types
       Flags(int):Encoding options, can be combination CRYPT_UNICODE_* constants.  CRYPT_ENCODE_ALLOC_FLAG is added to flags..
-      DecodePara(typing.Any):Not supported, use only NoneOIDObject returnedszOID_ENHANCED_KEY_USAGESequence of OIDsX509_ENHANCED_KEY_USAGESequence of OIDsszOID_KEY_USAGEPyCRYPT_BIT_BLOBX509_KEY_USAGEPyCRYPT_BIT_BLOBX509_BITSPyCRYPT_BIT_BLOBszOID_SUBJECT_ALT_NAMEPyCERT_ALT_NAME_INFOszOID_SUBJECT_ALT_NAME2PyCERT_ALT_NAME_INFOszOID_ISSUER_ALT_NAMEPyCERT_ALT_NAME_INFOszOID_ISSUER_ALT_NAME2PyCERT_ALT_NAME_INFOszOID_NEXT_UPDATE_LOCATIONPyCERT_ALT_NAME_INFOX509_ALTERNATE_NAMEPyCERT_ALT_NAME_INFOX509_NAME_VALUEPyCERT_NAME_VALUEX509_UNICODE_ANY_STRINGPyCERT_NAME_VALUEX509_UNICODE_NAME_VALUEPyCERT_NAME_VALUEX509_NAMEPyCERT_NAME_INFOX509_UNICODE_NAMEPyCERT_NAME_INFOszOID_KEY_ATTRIBUTESPyCERT_KEY_ATTRIBUTES_INFOX509_KEY_ATTRIBUTESPyCERT_KEY_ATTRIBUTES_INFOszOID_BASIC_CONSTRAINTSPyCERT_BASIC_CONSTRAINTS_INFOX509_BASIC_CONSTRAINTSPyCERT_BASIC_CONSTRAINTS_INFOszOID_BASIC_CONSTRAINTS2PyCERT_BASIC_CONSTRAINTS2_INFOX509_BASIC_CONSTRAINTS2PyCERT_BASIC_CONSTRAINTS2_INFOszOID_CERT_POLICIESSequence of PyCERT_POLICY_INFO objectsszOID_APPLICATION_CERT_POLICIESSequence of PyCERT_POLICY_INFO objectsX509_CERT_POLICIESSequence of PyCERT_POLICY_INFO objectsszOID_SUBJECT_KEY_IDENTIFIERBinary string containing the key identifierszOID_AUTHORITY_KEY_IDENTIFIERPyCERT_AUTHORITY_KEY_ID_INFOX509_AUTHORITY_KEY_IDPyCERT_AUTHORITY_KEY_ID_INFOReturn ValueType of object returned is dependent on the StructType to be decoded
+      DecodePara(Any):Not supported, use only NoneOIDObject returnedszOID_ENHANCED_KEY_USAGESequence of OIDsX509_ENHANCED_KEY_USAGESequence of OIDsszOID_KEY_USAGEPyCRYPT_BIT_BLOBX509_KEY_USAGEPyCRYPT_BIT_BLOBX509_BITSPyCRYPT_BIT_BLOBszOID_SUBJECT_ALT_NAMEPyCERT_ALT_NAME_INFOszOID_SUBJECT_ALT_NAME2PyCERT_ALT_NAME_INFOszOID_ISSUER_ALT_NAMEPyCERT_ALT_NAME_INFOszOID_ISSUER_ALT_NAME2PyCERT_ALT_NAME_INFOszOID_NEXT_UPDATE_LOCATIONPyCERT_ALT_NAME_INFOX509_ALTERNATE_NAMEPyCERT_ALT_NAME_INFOX509_NAME_VALUEPyCERT_NAME_VALUEX509_UNICODE_ANY_STRINGPyCERT_NAME_VALUEX509_UNICODE_NAME_VALUEPyCERT_NAME_VALUEX509_NAMEPyCERT_NAME_INFOX509_UNICODE_NAMEPyCERT_NAME_INFOszOID_KEY_ATTRIBUTESPyCERT_KEY_ATTRIBUTES_INFOX509_KEY_ATTRIBUTESPyCERT_KEY_ATTRIBUTES_INFOszOID_BASIC_CONSTRAINTSPyCERT_BASIC_CONSTRAINTS_INFOX509_BASIC_CONSTRAINTSPyCERT_BASIC_CONSTRAINTS_INFOszOID_BASIC_CONSTRAINTS2PyCERT_BASIC_CONSTRAINTS2_INFOX509_BASIC_CONSTRAINTS2PyCERT_BASIC_CONSTRAINTS2_INFOszOID_CERT_POLICIESSequence of PyCERT_POLICY_INFO objectsszOID_APPLICATION_CERT_POLICIESSequence of PyCERT_POLICY_INFO objectsX509_CERT_POLICIESSequence of PyCERT_POLICY_INFO objectsszOID_SUBJECT_KEY_IDENTIFIERBinary string containing the key identifierszOID_AUTHORITY_KEY_IDENTIFIERPyCERT_AUTHORITY_KEY_ID_INFOX509_AUTHORITY_KEY_IDPyCERT_AUTHORITY_KEY_ID_INFOReturn ValueType of object returned is dependent on the StructType to be decoded
 
 Returns:
 
-      typing.Any:Not supported, use only None
+      Any:Not supported, use only None
 
 
 
@@ -827,12 +792,11 @@ Return ValueType of object returned is dependent on the StructType to be decoded
         
     """
     pass
+        
 
-
-def CertNameToStr(Name:str,StrType:int,CertEncodingType:int) -> str:
+def CertNameToStr(Name:'str',StrType:'int',CertEncodingType:'int') -> 'str':
     """
     Converts an encoded CERT_NAME_INFO into a formatted string
-
 
 Args:
 
@@ -846,16 +810,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptFormatObject(StructType:Union[str,int],Encoded:str,CertEncodingType:int,FormatStrType:int=0,FormatType:int=0,FormatStruct:None=None) -> str:
+def CryptFormatObject(StructType:'Union[str, int]',Encoded:'str',CertEncodingType:'int',FormatStrType:'int'=0,FormatType:'int'=0,FormatStruct:'None'=None) -> 'str':
     """
     Formats an encoded buffer into a readable string
 
-
 Args:
 
-      StructType(str,int):OID identifying the type of encoded data, one of the szOID_* strings or an integer OID
+      StructType(Union[str, int]):OID identifying the type of encoded data, one of the szOID_* strings or an integer OID
       Encoded(str):String containing encoded data to be formatted
       CertEncodingType(int):Input encoding
       FormatStrType(int):String formatting options, combination of CRYPT_FORMAT_STR_MULTI_LINE, CRYPT_FORMAT_STR_NO_HEX
@@ -868,12 +831,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PFXImportCertStore(PFX:bytes,Password:str,Flags:int) -> typing.Any:
+def PFXImportCertStore(PFX:'bytes',Password:'str',Flags:'int') -> 'PyCERTSTORE':
     """
     Creates a certificate store from PKCS#12 data (*.PFX files)
-
 
 Args:
 
@@ -883,16 +845,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyCERTSTORE
         
     """
     pass
+        
 
-
-def PFXVerifyPassword(PFX:bytes,Password:str,Flags:int) -> typing.Any:
+def PFXVerifyPassword(PFX:'bytes',Password:'str',Flags:'int') -> 'Any':
     """
     Checks if a PFX blob can be decrypted with given password
-
 
 Args:
 
@@ -902,16 +863,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PFXIsPFXBlob(PFX:bytes) -> typing.Any:
+def PFXIsPFXBlob(PFX:'bytes') -> 'Any':
     """
     Checks if data buffer contains a PFX blob
-
 
 Args:
 
@@ -919,16 +879,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CryptBinaryToString(Binary:bytes,Flags:int) -> str:
+def CryptBinaryToString(Binary:'bytes',Flags:'int') -> 'str':
     """
     Formats a binary buffer into the specified type of string
-
 
 Args:
 
@@ -941,12 +900,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CryptStringToBinary(String:str,Flags:int) -> typing.Any:
+def CryptStringToBinary(String:'str',Flags:'int') -> 'Tuple[bytes, int, int]':
     """
     Converts a formatted string back into raw bytes
-
 
 Args:
 
@@ -955,7 +913,7 @@ Args:
 
 Returns:
 
-      typing.Any:Search for CryptStringToBinary at msdn, google or google groups.
+      Tuple[bytes, int, int]:Search for CryptStringToBinary at msdn, google or google groups.
 Return ValueReturns the decoded binary data, number of header characters skipped, and CRYPT_STRING_* value 
 
 denoting the type of data found (used if input Flags is one of *_ANY values)
@@ -963,3 +921,4 @@ denoting the type of data found (used if input Flags is one of *_ANY values)
         
     """
     pass
+        

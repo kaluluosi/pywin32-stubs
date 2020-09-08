@@ -1,20 +1,19 @@
-from pywintypes import *
 __all__=['EnumFontFamilies', 'set_logger', 'LOGFONT', 'CreateFontIndirect', 'GetObject', 'GetObjectType', 'PyGetMemory', 'PyGetString', 'PySetString', 'PySetMemory', 'PyGetArraySignedLong', 'PyGetBufferAddressAndLen', 'FlashWindow', 'FlashWindowEx', 'GetWindowLong', 'GetClassLong', 'SetWindowLong', 'CallWindowProc', 'SendMessage', 'SendMessageTimeout', 'PostMessage', 'PostThreadMessage', 'ReplyMessage', 'RegisterWindowMessage', 'DefWindowProc', 'EnumWindows', 'EnumThreadWindows', 'EnumChildWindows', 'DialogBox', 'DialogBoxParam', 'DialogBoxIndirect', 'DialogBoxIndirectParam', 'CreateDialogIndirect', 'DialogBoxIndirectParam', 'EndDialog', 'GetDlgItem', 'GetDlgItemInt', 'SetDlgItemInt', 'GetDlgCtrlID', 'GetDlgItemText', 'SetDlgItemText', 'GetNextDlgTabItem', 'GetNextDlgGroupItem', 'SetWindowText', 'GetWindowText', 'InitCommonControls', 'InitCommonControlsEx', 'LoadCursor', 'SetCursor', 'GetCursor', 'GetCursorInfo', 'CreateAcceleratorTable', 'DestroyAccleratorTable', 'LoadMenu', 'DestroyMenu', 'SetMenu', 'GetMenu', 'LoadIcon', 'CopyIcon', 'DrawIcon', 'DrawIconEx', 'CreateIconIndirect', 'CreateIconFromResource', 'LoadImage', 'DeleteObject', 'BitBlt', 'StretchBlt', 'PatBlt', 'SetStretchBltMode', 'GetStretchBltMode', 'TransparentBlt', 'MaskBlt', 'AlphaBlend', 'ImageList_Add', 'ImageList_Create', 'ImageList_Destroy', 'ImageList_Draw', 'ImageList_DrawEx', 'ImageList_GetIcon', 'ImageList_GetImageCount', 'ImageList_LoadImage', 'ImageList_LoadBitmap', 'ImageList_Remove', 'ImageList_Replace', 'ImageList_ReplaceIcon', 'ImageList_SetBkColor', 'ImageList_SetOverlayImage', 'MessageBox', 'MessageBeep', 'CreateWindow', 'DestroyWindow', 'EnableWindow', 'FindWindow', 'FindWindowEx', 'DragAcceptFiles', 'DragDetect', 'SetDoubleClickTime', 'GetDoubleClickTime', 'HideCaret', 'SetCaretPos', 'GetCaretPos', 'ShowCaret', 'ShowWindow', 'IsWindowVisible', 'IsWindowEnabled', 'SetFocus', 'GetFocus', 'UpdateWindow', 'BringWindowToTop', 'SetActiveWindow', 'GetActiveWindow', 'SetForegroundWindow', 'GetForegroundWindow', 'GetClientRect', 'GetDC', 'SaveDC', 'RestoreDC', 'DeleteDC', 'CreateCompatibleDC', 'CreateCompatibleBitmap', 'CreateBitmap', 'SelectObject', 'GetCurrentObject', 'GetWindowRect', 'GetStockObject', 'PostQuitMessage', 'WaitMessage', 'SetWindowPos', 'GetWindowPlacement', 'SetWindowPlacement', 'RegisterClass', 'UnregisterClass', 'PumpMessages', 'PumpWaitingMessages', 'GetMessage', 'TranslateMessage', 'DispatchMessage', 'TranslateAccelerator', 'PeekMessage', 'Shell_NotifyIcon', 'GetSystemMenu', 'DrawMenuBar', 'MoveWindow', 'CloseWindow', 'DeleteMenu', 'RemoveMenu', 'CreateMenu', 'CreatePopupMenu', 'TrackPopupMenu', 'CommDlgExtendedError', 'ExtractIcon', 'ExtractIconEx', 'DestroyIcon', 'GetIconInfo', 'ScreenToClient', 'ClientToScreen', 'PaintDesktop', 'RedrawWindow', 'GetTextExtentPoint32', 'GetTextMetrics', 'GetTextCharacterExtra', 'SetTextCharacterExtra', 'GetTextAlign', 'SetTextAlign', 'GetTextFace', 'GetMapMode', 'SetMapMode', 'GetGraphicsMode', 'SetGraphicsMode', 'GetLayout', 'SetLayout', 'GetPolyFillMode', 'SetPolyFillMode', 'GetWorldTransform', 'SetWorldTransform', 'ModifyWorldTransform', 'CombineTransform', 'GetWindowOrgEx', 'SetWindowOrgEx', 'GetViewportOrgEx', 'SetViewportOrgEx', 'GetWindowExtEx', 'SetWindowExtEx', 'GetViewportExtEx', 'SetViewportExtEx', 'GradientFill', 'GetOpenFileName', 'InsertMenuItem', 'SetMenuItemInfo', 'GetMenuItemInfo', 'GetMenuItemCount', 'GetMenuItemRect', 'GetMenuState', 'SetMenuDefaultItem', 'GetMenuDefaultItem', 'AppendMenu', 'InsertMenu', 'EnableMenuItem', 'CheckMenuItem', 'GetSubMenu', 'ModifyMenu', 'GetMenuItemID', 'SetMenuItemBitmaps', 'CheckMenuRadioItem', 'SetMenuInfo', 'GetMenuInfo', 'DrawFocusRect', 'DrawText', 'LineTo', 'Ellipse', 'Pie', 'Arc', 'ArcTo', 'AngleArc', 'Chord', 'ExtFloodFill', 'SetPixel', 'GetPixel', 'GetROP2', 'SetROP2', 'SetPixelV', 'MoveToEx', 'GetCurrentPositionEx', 'GetArcDirection', 'SetArcDirection', 'Polygon', 'Polyline', 'PolylineTo', 'PolyBezier', 'PolyBezierTo', 'PlgBlt', 'CreatePolygonRgn', 'ExtTextOut', 'GetTextColor', 'SetTextColor', 'GetBkMode', 'SetBkMode', 'GetBkColor', 'SetBkColor', 'DrawEdge', 'FillRect', 'FillRgn', 'PaintRgn', 'FrameRgn', 'InvertRgn', 'EqualRgn', 'PtInRegion', 'PtInRect', 'RectInRegion', 'SetRectRgn', 'CombineRgn', 'DrawAnimatedRects', 'CreateSolidBrush', 'CreatePatternBrush', 'CreateHatchBrush', 'CreatePen', 'GetSysColor', 'GetSysColorBrush', 'InvalidateRect', 'FrameRect', 'InvertRect', 'WindowFromDC', 'GetUpdateRgn', 'GetWindowRgn', 'SetWindowRgn', 'GetWindowRgnBox', 'ValidateRgn', 'InvalidateRgn', 'GetRgnBox', 'OffsetRgn', 'Rectangle', 'RoundRect', 'BeginPaint', 'EndPaint', 'BeginPath', 'EndPath', 'AbortPath', 'CloseFigure', 'FlattenPath', 'FillPath', 'WidenPath', 'StrokePath', 'StrokeAndFillPath', 'GetMiterLimit', 'SetMiterLimit', 'PathToRegion', 'GetPath', 'CreateRoundRectRgn', 'CreateRectRgnIndirect', 'CreateEllipticRgnIndirect', 'CreateWindowEx', 'GetParent', 'SetParent', 'GetCursorPos', 'GetDesktopWindow', 'GetWindow', 'GetWindowDC', 'IsIconic', 'IsWindow', 'IsChild', 'ReleaseCapture', 'GetCapture', 'SetCapture', '_TrackMouseEvent', 'ReleaseDC', 'CreateCaret', 'DestroyCaret', 'ScrollWindowEx', 'SetScrollInfo', 'GetScrollInfo', 'GetClassName', 'WindowFromPoint', 'ChildWindowFromPoint', 'ChildWindowFromPoint', 'ListView_SortItems', 'ListView_SortItemsEx', 'CreateDC', 'GetSaveFileNameW', 'GetOpenFileNameW', 'SystemParametersInfo', 'SetLayeredWindowAttributes', 'GetLayeredWindowAttributes', 'UpdateLayeredWindow', 'AnimateWindow', 'CreateBrushIndirect', 'ExtCreatePen', 'DrawTextW', 'EnumPropsEx', 'RegisterDeviceNotification', 'UnregisterDeviceNotification', 'RegisterHotKey', 'CLR_NONE', 'ILC_COLOR', 'ILC_COLOR16', 'ILC_COLOR24', 'ILC_COLOR32', 'ILC_COLOR4', 'ILC_COLOR8', 'ILC_COLORDDB', 'ILC_MASK', 'ILD_BLEND', 'ILD_BLEND25', 'ILD_BLEND50', 'ILD_FOCUS', 'ILD_MASK', 'ILD_NORMAL', 'ILD_SELECTED', 'ILD_TRANSPARENT', 'IMAGE_BITMAP', 'IMAGE_CURSOR', 'IMAGE_ICON', 'LR_CREATEDIBSECTION', 'LR_DEFAULTCOLOR', 'LR_DEFAULTSIZE', 'LR_LOADFROMFILE', 'LR_LOADMAP3DCOLORS', 'LR_LOADTRANSPARENT', 'LR_MONOCHROME', 'LR_SHARED', 'LR_VGACOLOR', 'NIF_ICON', 'NIF_INFO', 'NIF_MESSAGE', 'NIF_STATE', 'NIF_TIP', 'NIIF_ERROR', 'NIIF_ICON_MASK', 'NIIF_INFO', 'NIIF_NONE', 'NIIF_NOSOUND', 'NIIF_WARNING', 'NIM_ADD', 'NIM_DELETE', 'NIM_MODIFY', 'NIM_SETFOCUS', 'NIM_SETVERSION', 'TPM_BOTTOMALIGN', 'TPM_CENTERALIGN', 'TPM_LEFTALIGN', 'TPM_LEFTBUTTON', 'TPM_NONOTIFY', 'TPM_RETURNCMD', 'TPM_RIGHTALIGN', 'TPM_RIGHTBUTTON', 'TPM_TOPALIGN', 'TPM_VCENTERALIGN']
-import typing
+from typing import *
+from .win32typing import *
 """"""
 
 
-def EnumFontFamilies(hdc:typing.Any,Family:Union[str,typing.Any],EnumFontFamProc:typing.Any,Param:typing.Any) -> int:
+def EnumFontFamilies(hdc:'int',Family:'Union[str]',EnumFontFamProc:'Any',Param:'Any') -> 'int':
     """
     Enumerates the available font families.
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context for which to enumerate available fonts
-      Family(str,typing.Any):Family of fonts to enumerate. If none, first member of each font family will be returned.
-      EnumFontFamProc(typing.Any):The Python function called with each font family. This function is called with 4 arguments.
-      Param(typing.Any):An arbitrary object to be passed to the callback functionCommentsThe parameters that the callback function will receive are as follows:PyLOGFONT - contains the font parameters None - Placeholder for a TEXTMETRIC structure, not supported yet int - Font type, combination of DEVICE_FONTTYPE, RASTER_FONTTYPE, TRUETYPE_FONTTYPE object - The Param originally passed in to EnumFontFamilies
+      hdc(int):Handle to a device context for which to enumerate available fonts
+      Family(Union[str]):Family of fonts to enumerate. If none, first member of each font family will be returned.
+      EnumFontFamProc(Any):The Python function called with each font family. This function is called with 4 arguments.
+      Param(Any):An arbitrary object to be passed to the callback functionCommentsThe parameters that the callback function will receive are as follows:PyLOGFONT - contains the font parameters None - Placeholder for a TEXTMETRIC structure, not supported yet int - Font type, combination of DEVICE_FONTTYPE, RASTER_FONTTYPE, TRUETYPE_FONTTYPE object - The Param originally passed in to EnumFontFamilies
 
 Returns:
 
@@ -22,16 +21,15 @@ Returns:
         
     """
     pass
+        
 
-
-def set_logger(logger:typing.Any) -> None:
+def set_logger(logger:'Any') -> 'None':
     """
     Sets a logger object for exceptions and error information
 
-
 Args:
 
-      logger(typing.Any):A logger object, generally from the standard logger package.CommentsOnce a logger has been set for the module, unhandled exceptions, such as from a window's WNDPROC, will be written (via logger.exception()) to the log instead of to stderr. Note that using this with the Python 2.3 logging package will prevent the traceback from being written to the log.  However, it is possible to use the Python 2.4 logging package directly with Python 2.3
+      logger(Any):A logger object, generally from the standard logger package.CommentsOnce a logger has been set for the module, unhandled exceptions, such as from a window's WNDPROC, will be written (via logger.exception()) to the log instead of to stderr. Note that using this with the Python 2.3 logging package will prevent the traceback from being written to the log.  However, it is possible to use the Python 2.4 logging package directly with Python 2.3
 
 Returns:
 
@@ -39,12 +37,11 @@ Returns:
         
     """
     pass
+        
 
-
-def LOGFONT() -> typing.Any:
+def LOGFONT() -> 'PyLOGFONT':
     """
     Creates a LOGFONT object.
-
 
 Args:
 
@@ -52,56 +49,53 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyLOGFONT
         
     """
     pass
+        
 
-
-def CreateFontIndirect(lplf:typing.Any) -> typing.Any:
+def CreateFontIndirect(lplf:'PyLOGFONT') -> 'Any':
     """
     function creates a logical font that has the specified characteristics. 
 
 The font can subsequently be selected as the current font for any device context.
 
-
 Args:
 
-      lplf(typing.Any):A LOGFONT object as returned by win32gui::LOGFONT
+      lplf(PyLOGFONT):A LOGFONT object as returned by win32gui::LOGFONT
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetObject(handle:typing.Any) -> typing.Any:
+def GetObject(handle:'int') -> 'Any':
     """
     Returns a struct containing the parameters used to create a GDI object
 
-
 Args:
 
-      handle(typing.Any):Handle to the object.CommentsThe result depends on the type of the handle.Object type as determined by win32gui::GetObjectTypeReturned objectOBJ_FONTPyLOGFONTOBJ_BITMAPPyBITMAPOBJ_PENDict representing a LOGPEN struct
+      handle(int):Handle to the object.CommentsThe result depends on the type of the handle.Object type as determined by win32gui::GetObjectTypeReturned objectOBJ_FONTPyLOGFONTOBJ_BITMAPPyBITMAPOBJ_PENDict representing a LOGPEN struct
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetObjectType(h:typing.Any) -> int:
+def GetObjectType(h:'int') -> 'int':
     """
     Returns the type (OBJ_* constant) of a GDI handle
 
-
 Args:
 
-      h(typing.Any):A handle to a GDI object
+      h(int):A handle to a GDI object
 
 Returns:
 
@@ -109,12 +103,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PyGetMemory(addr:int,len:int) -> typing.Any:
+def PyGetMemory(addr:'int',len:'int') -> 'Any':
     """
     Returns a buffer object from and address and length
-
 
 Args:
 
@@ -123,16 +116,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PyGetString(addr:int,len:int) -> str:
+def PyGetString(addr:'int',len:'int') -> 'str':
     """
     Returns a string from an address.
-
 
 Args:
 
@@ -148,12 +140,11 @@ string must be NULL terminated.Return ValueIf win32gui.UNICODE is True, this wil
         
     """
     pass
+        
 
-
-def PySetString(addr:int,String:str,maxLen:int) -> typing.Any:
+def PySetString(addr:'int',String:'str',maxLen:'int') -> 'Any':
     """
     None
-
 
 Args:
 
@@ -163,73 +154,69 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PySetMemory(addr:int,String:typing.Any) -> typing.Any:
+def PySetMemory(addr:'int',String:'Any') -> 'Any':
     """
     Copies bytes to an address.
-
 
 Args:
 
       addr(int):Address of the memory to reference
-      String(typing.Any):The string to copy
+      String(Any):The string to copy
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PyGetArraySignedLong(array:typing.Any,index:int) -> typing.Any:
+def PyGetArraySignedLong(array:'Any',index:'int') -> 'Any':
     """
     Returns a signed long from an array object at specified index
 
-
 Args:
 
-      array(typing.Any):array object to use
+      array(Any):array object to use
       index(int):index of offset
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PyGetBufferAddressAndLen(obj:typing.Any) -> typing.Any:
+def PyGetBufferAddressAndLen(obj:'Any') -> 'Any':
     """
     Returns a buffer object address and len
 
-
 Args:
 
-      obj(typing.Any):the buffer object
+      obj(Any):the buffer object
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def FlashWindow(hwnd:typing.Any,bInvert:int) -> int:
+def FlashWindow(hwnd:'int',bInvert:'int') -> 'int':
     """
     The FlashWindow function flashes the specified window one time. It does not change the active state of the window.
 
-
 Args:
 
-      hwnd(typing.Any):Handle to a window
+      hwnd(int):Handle to a window
       bInvert(int):Indicates if window should toggle between active and inactive
 
 Returns:
@@ -238,16 +225,15 @@ Returns:
         
     """
     pass
+        
 
-
-def FlashWindowEx(hwnd:typing.Any,dwFlags:int,uCount:int,dwTimeout:int) -> int:
+def FlashWindowEx(hwnd:'int',dwFlags:'int',uCount:'int',dwTimeout:'int') -> 'int':
     """
     The FlashWindowEx function flashes the specified window a specified number of times.
 
-
 Args:
 
-      hwnd(typing.Any):Handle to a window
+      hwnd(int):Handle to a window
       dwFlags(int):Combination of win32con.FLASHW_* flags
       uCount(int):Nbr of times to flash
       dwTimeout(int):Elapsed time between flashes, in milliseconds
@@ -258,12 +244,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowLong(hwnd:int,index:int) -> int:
+def GetWindowLong(hwnd:'int',index:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -276,12 +261,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetClassLong(hwnd:int,index:int) -> int:
+def GetClassLong(hwnd:'int',index:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -294,18 +278,17 @@ Returns:
         
     """
     pass
+        
 
-
-def SetWindowLong(hwnd:typing.Any,index:int,value:typing.Any) -> int:
+def SetWindowLong(hwnd:'int',index:'int',value:'Any') -> 'int':
     """
     Places a long value at the specified offset into the extra window memory of the given window.
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the window
+      hwnd(int):The handle to the window
       index(int):The index of the item to set.
-      value(typing.Any):The value to set.CommentsThis function calls the SetWindowLongPtr Api functionIf index is GWLP_WNDPROC, then the value parameter must be a callable object (or a dictionary) to use as the new window procedure.
+      value(Any):The value to set.CommentsThis function calls the SetWindowLongPtr Api functionIf index is GWLP_WNDPROC, then the value parameter must be a callable object (or a dictionary) to use as the new window procedure.
 
 Returns:
 
@@ -313,20 +296,19 @@ Returns:
         
     """
     pass
+        
 
-
-def CallWindowProc(wndproc:int,hwnd:typing.Any,msg:int,wparam:Union[int,str],lparam:Union[int,str]) -> int:
+def CallWindowProc(wndproc:'int',hwnd:'int',msg:'int',wparam:'Union[str, int]',lparam:'Union[str, int]') -> 'int':
     """
     None
-
 
 Args:
 
       wndproc(int):The wndproc to call - this is generally the return value of SetWindowLong(GWL_WNDPROC)
-      hwnd(typing.Any):Handle to the window
+      hwnd(int):Handle to the window
       msg(int):A window message
-      wparam(int,str):Type is dependent on the message
-      lparam(int,str):Type is dependent on the message
+      wparam(Union[str, int]):Type is dependent on the message
+      lparam(Union[str, int]):Type is dependent on the message
 
 Returns:
 
@@ -334,19 +316,18 @@ Returns:
         
     """
     pass
+        
 
-
-def SendMessage(hwnd:int,message:int,wparam:Union[int,str]=None,lparam:Union[int,str]=None) -> int:
+def SendMessage(hwnd:'int',message:'int',wparam:'Union[str, int]'=None,lparam:'Union[str, int]'=None) -> 'int':
     """
     Sends a message to the window.
-
 
 Args:
 
       hwnd(int):The handle to the Window
       message(int):The ID of the message to post
-      wparam(int,str):Type depends on the message
-      lparam(int,str):Type depends on the message
+      wparam(Union[str, int]):Type depends on the message
+      lparam(Union[str, int]):Type depends on the message
 
 Returns:
 
@@ -354,12 +335,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SendMessageTimeout(hwnd:int,message:int,wparam:int,lparam:int,flags:int,timeout:int) -> typing.Any:
+def SendMessageTimeout(hwnd:'int',message:'int',wparam:'int',lparam:'int',flags:'int',timeout:'int') -> 'Tuple[int, int]':
     """
     Sends a message to the window.
-
 
 Args:
 
@@ -372,7 +352,7 @@ Args:
 
 Returns:
 
-      typing.Any:Timeout duration in milliseconds.Return ValueThe result is the result of the SendMessageTimeout call, plus the last 'result' param. 
+      Tuple[int, int]:Timeout duration in milliseconds.Return ValueThe result is the result of the SendMessageTimeout call, plus the last 'result' param. 
 
 If the timeout period expires, a pywintypes.error exception will be thrown, 
 
@@ -381,12 +361,11 @@ with zero as the error code.  See the Microsoft documentation for more informati
         
     """
     pass
+        
 
-
-def PostMessage(hwnd:int,message:int,wparam:int=0,lparam:int=0) -> None:
+def PostMessage(hwnd:'int',message:'int',wparam:'int'=0,lparam:'int'=0) -> 'None':
     """
     None
-
 
 Args:
 
@@ -401,12 +380,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PostThreadMessage(threadId:int,message:int,wparam:int,lparam:int) -> None:
+def PostThreadMessage(threadId:'int',message:'int',wparam:'int',lparam:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -421,12 +399,11 @@ Returns:
         
     """
     pass
+        
 
-
-def ReplyMessage(result:int) -> int:
+def ReplyMessage(result:'int') -> 'int':
     """
     Used to reply to a message sent through the SendMessage function without returning control to the function that called SendMessage.
-
 
 Args:
 
@@ -438,16 +415,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegisterWindowMessage(name:Union[str,typing.Any]) -> int:
+def RegisterWindowMessage(name:'Union[str, Any]') -> 'int':
     """
     Defines a new window message that is guaranteed to be unique throughout the system. The message value can be used when sending or posting messages.
 
-
 Args:
 
-      name(str,typing.Any):The string
+      name(Union[str, Any]):The string
 
 Returns:
 
@@ -455,12 +431,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DefWindowProc(hwnd:int,message:int,wparam:int,lparam:int) -> int:
+def DefWindowProc(hwnd:'int',message:'int',wparam:'int',lparam:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -475,17 +450,16 @@ Returns:
         
     """
     pass
+        
 
-
-def EnumWindows(callback:typing.Any,extra:typing.Any) -> None:
+def EnumWindows(callback:'Any',extra:'Any') -> 'None':
     """
     Enumerates all top-level windows on the screen by passing the handle to each window, in turn, to an application-defined callback function.
 
-
 Args:
 
-      callback(typing.Any):A Python function to be used as the callback.  Function can return False to stop enumeration, or raise an exception.
-      extra(typing.Any):Any python object - this is passed to the callback function as the second param (first is the hwnd).
+      callback(Any):A Python function to be used as the callback.  Function can return False to stop enumeration, or raise an exception.
+      extra(Any):Any python object - this is passed to the callback function as the second param (first is the hwnd).
 
 Returns:
 
@@ -493,18 +467,17 @@ Returns:
         
     """
     pass
+        
 
-
-def EnumThreadWindows(dwThreadId:int,callback:typing.Any,extra:typing.Any) -> None:
+def EnumThreadWindows(dwThreadId:'int',callback:'Any',extra:'Any') -> 'None':
     """
     Enumerates all top-level windows associated with a thread on the screen by passing the handle to each window, in turn, to an application-defined callback function. EnumThreadWindows continues until the last top-level window associated with the thread is enumerated or the callback function returns FALSE
-
 
 Args:
 
       dwThreadId(int):The id of the thread for which the windows need to be enumerated.
-      callback(typing.Any):A Python function to be used as the callback.
-      extra(typing.Any):Any python object - this is passed to the callback function as the second param (first is the hwnd).
+      callback(Any):A Python function to be used as the callback.
+      extra(Any):Any python object - this is passed to the callback function as the second param (first is the hwnd).
 
 Returns:
 
@@ -512,18 +485,17 @@ Returns:
         
     """
     pass
+        
 
-
-def EnumChildWindows(hwnd:typing.Any,callback:typing.Any,extra:typing.Any) -> None:
+def EnumChildWindows(hwnd:'int',callback:'Any',extra:'Any') -> 'None':
     """
     Enumerates the child windows that belong to the specified parent window by passing the handle to each child window, in turn, to an application-defined callback function. EnumChildWindows continues until the last child window is enumerated or the callback function returns FALSE.
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the window to enumerate.
-      callback(typing.Any):A Python function to be used as the callback.
-      extra(typing.Any):Any python object - this is passed to the callback function as the second param (first is the hwnd).
+      hwnd(int):The handle to the window to enumerate.
+      callback(Any):A Python function to be used as the callback.
+      extra(Any):Any python object - this is passed to the callback function as the second param (first is the hwnd).
 
 Returns:
 
@@ -531,19 +503,18 @@ Returns:
         
     """
     pass
+        
 
-
-def DialogBox(hInstance:typing.Any,TemplateName:typing.Any,hWndParent:typing.Any,DialogFunc:typing.Any,InitParam:int=0) -> int:
+def DialogBox(hInstance:'int',TemplateName:'PyResourceId',hWndParent:'int',DialogFunc:'Any',InitParam:'int'=0) -> 'int':
     """
     Creates a modal dialog box.
 
-
 Args:
 
-      hInstance(typing.Any):Handle to module that contains the dialog template
-      TemplateName(typing.Any):Name or resource id of the dialog resource
-      hWndParent(typing.Any):Handle to dialog's parent window
-      DialogFunc(typing.Any):Dialog box procedure to process messages
+      hInstance(int):Handle to module that contains the dialog template
+      TemplateName(PyResourceId):Name or resource id of the dialog resource
+      hWndParent(int):Handle to dialog's parent window
+      DialogFunc(Any):Dialog box procedure to process messages
       InitParam(int):Initialization data to be passed to above procedure during WM_INITDIALOG processing
 
 Returns:
@@ -552,12 +523,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DialogBoxParam() -> int:
+def DialogBoxParam() -> 'int':
     """
     None
-
 
 Args:
 
@@ -569,20 +539,19 @@ Returns:
         
     """
     pass
+        
 
-
-def DialogBoxIndirect(hInstance:typing.Any,controlList:typing.Any,hWndParent:typing.Any,DialogFunc:typing.Any,InitParam:typing.Any=0) -> int:
+def DialogBoxIndirect(hInstance:'int',controlList:'PyDialogTemplate',hWndParent:'int',DialogFunc:'Any',InitParam:'Any'=0) -> 'int':
     """
     None
 
-
 Args:
 
-      hInstance(typing.Any):Handle to module creating the dialog box
-      controlList(typing.Any):Sequence of items defining the dialog box and subcontrols
-      hWndParent(typing.Any):Handle to dialog's parent window
-      DialogFunc(typing.Any):Dialog box procedure to process messages
-      InitParam(typing.Any):Initialization data to be passed to above procedure during WM_INITDIALOG processing
+      hInstance(int):Handle to module creating the dialog box
+      controlList(PyDialogTemplate):Sequence of items defining the dialog box and subcontrols
+      hWndParent(int):Handle to dialog's parent window
+      DialogFunc(Any):Dialog box procedure to process messages
+      InitParam(Any):Initialization data to be passed to above procedure during WM_INITDIALOG processing
 
 Returns:
 
@@ -590,12 +559,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DialogBoxIndirectParam() -> int:
+def DialogBoxIndirectParam() -> 'int':
     """
     None
-
 
 Args:
 
@@ -607,19 +575,18 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateDialogIndirect(hInstance:typing.Any,controlList:typing.Any,hWndParent:typing.Any,DialogFunc:typing.Any,InitParam:int=0) -> int:
+def CreateDialogIndirect(hInstance:'int',controlList:'PyDialogTemplate',hWndParent:'int',DialogFunc:'Any',InitParam:'int'=0) -> 'int':
     """
     None
 
-
 Args:
 
-      hInstance(typing.Any):Handle to module creating the dialog box
-      controlList(typing.Any):Sequence containing a PyDLGTEMPLATE, followed by variable number of PyDLGITEMTEMPLATEs
-      hWndParent(typing.Any):Handle to dialog's parent window
-      DialogFunc(typing.Any):Dialog box procedure to process messages
+      hInstance(int):Handle to module creating the dialog box
+      controlList(PyDialogTemplate):Sequence containing a PyDLGTEMPLATE, followed by variable number of PyDLGITEMTEMPLATEs
+      hWndParent(int):Handle to dialog's parent window
+      DialogFunc(Any):Dialog box procedure to process messages
       InitParam(int):Initialization data to be passed to above procedure during WM_INITDIALOG processing
 
 Returns:
@@ -628,12 +595,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DialogBoxIndirectParam() -> int:
+def DialogBoxIndirectParam() -> 'int':
     """
     None
-
 
 Args:
 
@@ -645,12 +611,11 @@ Returns:
         
     """
     pass
+        
 
-
-def EndDialog(hwnd:int,result:int) -> None:
+def EndDialog(hwnd:'int',result:'int') -> 'None':
     """
     Ends a dialog box.
-
 
 Args:
 
@@ -663,36 +628,34 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDlgItem(hDlg:typing.Any,IDDlgItem:int) -> typing.Any:
+def GetDlgItem(hDlg:'int',IDDlgItem:'int') -> 'Any':
     """
     Retrieves the handle to a control in the specified dialog box.
 
-
 Args:
 
-      hDlg(typing.Any):Handle to a dialog window
+      hDlg(int):Handle to a dialog window
       IDDlgItem(int):Identifier of one of the dialog's controls
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetDlgItemInt(hDlg:typing.Any,IDDlgItem:int,Signed:typing.Any) -> None:
+def GetDlgItemInt(hDlg:'int',IDDlgItem:'int',Signed:'Any') -> 'None':
     """
     Returns the integer value of a dialog control
 
-
 Args:
 
-      hDlg(typing.Any):Handle to a dialog window
+      hDlg(int):Handle to a dialog window
       IDDlgItem(int):Identifier of one of the dialog's controls
-      Signed(typing.Any):Indicates whether control value should be interpreted as signed
+      Signed(Any):Indicates whether control value should be interpreted as signed
 
 Returns:
 
@@ -700,19 +663,18 @@ Returns:
         
     """
     pass
+        
 
-
-def SetDlgItemInt(hDlg:typing.Any,IDDlgItem:int,Value:int,Signed:typing.Any) -> None:
+def SetDlgItemInt(hDlg:'int',IDDlgItem:'int',Value:'int',Signed:'Any') -> 'None':
     """
     Places an integer value in a dialog control
 
-
 Args:
 
-      hDlg(typing.Any):Handle to a dialog window
+      hDlg(int):Handle to a dialog window
       IDDlgItem(int):Identifier of one of the dialog's controls
       Value(int):Value to placed in the control
-      Signed(typing.Any):Indicates if the input value is signed
+      Signed(Any):Indicates if the input value is signed
 
 Returns:
 
@@ -720,12 +682,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDlgCtrlID(hwnd:int) -> int:
+def GetDlgCtrlID(hwnd:'int') -> 'int':
     """
     Retrieves the identifier of the specified control.
-
 
 Args:
 
@@ -737,16 +698,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDlgItemText(hDlg:typing.Any,IDDlgItem:int) -> str:
+def GetDlgItemText(hDlg:'int',IDDlgItem:'int') -> 'str':
     """
     Returns the text of a dialog control
 
-
 Args:
 
-      hDlg(typing.Any):Handle to a dialog window
+      hDlg(int):Handle to a dialog window
       IDDlgItem(int):The Id of a control within the dialog
 
 Returns:
@@ -755,18 +715,17 @@ Returns:
         
     """
     pass
+        
 
-
-def SetDlgItemText(hDlg:typing.Any,IDDlgItem:int,String:Union[str,typing.Any]) -> None:
+def SetDlgItemText(hDlg:'int',IDDlgItem:'int',String:'Union[str, Any]') -> 'None':
     """
     Sets the text for a window or control
 
-
 Args:
 
-      hDlg(typing.Any):Handle to a dialog window
+      hDlg(int):Handle to a dialog window
       IDDlgItem(int):The Id of a control within the dialog
-      String(str,typing.Any):The text to put in the control
+      String(Union[str, Any]):The text to put in the control
 
 Returns:
 
@@ -774,13 +733,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetNextDlgTabItem(hDlg:int,hCtl:int,bPrevious:int) -> typing.Any:
+def GetNextDlgTabItem(hDlg:'int',hCtl:'int',bPrevious:'int') -> 'Any':
     """
     Retrieves a handle to the first control that has the WS_TABSTOP style that precedes (or follows) the specified control.
 
-
 Args:
 
       hDlg(int):handle to dialog box
@@ -789,17 +747,16 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetNextDlgGroupItem(hDlg:int,hCtl:int,bPrevious:int) -> typing.Any:
+def GetNextDlgGroupItem(hDlg:'int',hCtl:'int',bPrevious:'int') -> 'Any':
     """
     Retrieves a handle to the first control in a group of controls that precedes (or follows) the specified control in a dialog box.
 
-
 Args:
 
       hDlg(int):handle to dialog box
@@ -808,16 +765,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def SetWindowText() -> None:
+def SetWindowText() -> 'None':
     """
     Sets the window text.
-
 
 Args:
 
@@ -829,16 +785,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowText(hwnd:typing.Any) -> str:
+def GetWindowText(hwnd:'int') -> 'str':
     """
     Get the window text.
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the windowCommentsNote that previous versions of PyWin32 returned a (empty) Unicode object when the string was empty, or an MBCS encoded string value otherwise.  A String is now returned in all cases.
+      hwnd(int):The handle to the windowCommentsNote that previous versions of PyWin32 returned a (empty) Unicode object when the string was empty, or an MBCS encoded string value otherwise.  A String is now returned in all cases.
 
 Returns:
 
@@ -846,12 +801,11 @@ Returns:
         
     """
     pass
+        
 
-
-def InitCommonControls() -> None:
+def InitCommonControls() -> 'None':
     """
     Initializes the common controls.
-
 
 Args:
 
@@ -863,12 +817,11 @@ Returns:
         
     """
     pass
+        
 
-
-def InitCommonControlsEx(flag:int) -> None:
+def InitCommonControlsEx(flag:'int') -> 'None':
     """
     Initializes specific common controls.
-
 
 Args:
 
@@ -880,12 +833,11 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadCursor(hinstance:int,resid:int) -> typing.Any:
+def LoadCursor(hinstance:'int',resid:'int') -> 'Any':
     """
     Loads a cursor.
-
 
 Args:
 
@@ -894,16 +846,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def SetCursor(hcursor:int) -> typing.Any:
+def SetCursor(hcursor:'int') -> 'Any':
     """
     None
-
 
 Args:
 
@@ -911,67 +862,63 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetCursor() -> typing.Any:
+def GetCursor() -> 'Any':
     """
     None
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetCursorInfo() -> typing.Any:
+def GetCursorInfo() -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about the global cursor.
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Tuple[Any, Any, Any, Any]
         
     """
     pass
+        
 
-
-def CreateAcceleratorTable(accels:typing.Any) -> typing.Any:
+def CreateAcceleratorTable(accels:'Tuple[Tuple[int, int, int], ...]') -> 'Any':
     """
     Creates an accelerator table
 
-
 Args:
 
-      accels(typing.Any):A sequence of (fVirt, key, cmd), as per the Win32 ACCEL structure.
+      accels(Tuple[Tuple[int, int, int], ...]):A sequence of (fVirt, key, cmd), as per the Win32 ACCEL structure.
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def DestroyAccleratorTable(haccel:int) -> None:
+def DestroyAccleratorTable(haccel:'int') -> 'None':
     """
     Destroys an accelerator table
-
 
 Args:
 
@@ -983,30 +930,28 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadMenu(hinstance:int,resource_id:Union[int,str]) -> typing.Any:
+def LoadMenu(hinstance:'int',resource_id:'Union[str, int]') -> 'Any':
     """
     Loads a menu
-
 
 Args:
 
       hinstance(int):
-      resource_id(int,str):
+      resource_id(Union[str, int]):
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def DestroyMenu() -> None:
+def DestroyMenu() -> 'None':
     """
     Destroys a previously loaded menu.
-
 
 Args:
 
@@ -1018,12 +963,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMenu(hwnd:int,hmenu:int) -> None:
+def SetMenu(hwnd:'int',hmenu:'int') -> 'None':
     """
     Sets the menu for the specified window.
-
 
 Args:
 
@@ -1036,12 +980,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenu() -> None:
+def GetMenu() -> 'None':
     """
     Gets the menu for the specified window.
-
 
 Args:
 
@@ -1053,30 +996,28 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadIcon(hinstance:int,resource_id:Union[int,str]) -> typing.Any:
+def LoadIcon(hinstance:'int',resource_id:'Union[str, int]') -> 'Any':
     """
     Loads an icon
-
 
 Args:
 
       hinstance(int):
-      resource_id(int,str):
+      resource_id(Union[str, int]):
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CopyIcon(hicon:int) -> typing.Any:
+def CopyIcon(hicon:'int') -> 'Any':
     """
     Copies an icon
-
 
 Args:
 
@@ -1084,16 +1025,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def DrawIcon(hDC:int,X:int,Y:int,hicon:int) -> None:
+def DrawIcon(hDC:'int',X:'int',Y:'int',hicon:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -1108,16 +1048,15 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawIconEx(hDC:int,xLeft:int,yTop:int,hIcon:int,cxWidth:int,cyWidth:int,istepIfAniCur:int,hbrFlickerFreeDraw:typing.Any,diFlags:int) -> None:
+def DrawIconEx(hDC:'int',xLeft:'int',yTop:'int',hIcon:'int',cxWidth:'int',cyWidth:'int',istepIfAniCur:'int',hbrFlickerFreeDraw:'PyGdiHANDLE',diFlags:'int') -> 'None':
     """
     Draws an icon or cursor into the specified device context, 
 
 performing the specified raster operations, and stretching or compressing the 
 
 icon or cursor as specified.
-
 
 Args:
 
@@ -1128,7 +1067,7 @@ Args:
       cxWidth(int):icon width
       cyWidth(int):icon height
       istepIfAniCur(int):frame index, animated cursor
-      hbrFlickerFreeDraw(typing.Any):handle to background brush, can be None
+      hbrFlickerFreeDraw(PyGdiHANDLE):handle to background brush, can be None
       diFlags(int):icon-drawing flags (win32con.DI_*)
 
 Returns:
@@ -1137,16 +1076,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateIconIndirect(iconinfo:typing.Any) -> int:
+def CreateIconIndirect(iconinfo:'PyICONINFO') -> 'int':
     """
     Creates an icon or cursor from an ICONINFO structure.
 
-
 Args:
 
-      iconinfo(typing.Any):Tuple defining the icon parameters
+      iconinfo(PyICONINFO):Tuple defining the icon parameters
 
 Returns:
 
@@ -1154,12 +1092,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateIconFromResource(bits:str,fIcon:bool,ver:int=0x00030000) -> int:
+def CreateIconFromResource(bits:'str',fIcon:'bool',ver:'int'=0x00030000) -> 'int':
     """
     Creates an icon or cursor from resource bits describing the icon.
-
 
 Args:
 
@@ -1173,17 +1110,16 @@ Returns:
         
     """
     pass
+        
 
-
-def LoadImage(hinst:int,name:Union[int,str],type:int,cxDesired:int,cyDesired:int,fuLoad:int) -> typing.Any:
+def LoadImage(hinst:'int',name:'Union[str, int]',type:'int',cxDesired:'int',cyDesired:'int',fuLoad:'int') -> 'Any':
     """
     Loads a bitmap, cursor or icon
-
 
 Args:
 
       hinst(int):Handle to an instance of the module that contains the image to be loaded. To load an OEM image, set this parameter to zero.
-      name(int,str):Specifies the image to load. If the hInst parameter is non-zero and the fuLoad parameter omits LR_LOADFROMFILE, name specifies the image resource in the hInst module. If the image resource is to be loaded by name, the name parameter is a string that contains the name of the image resource.
+      name(Union[str, int]):Specifies the image to load. If the hInst parameter is non-zero and the fuLoad parameter omits LR_LOADFROMFILE, name specifies the image resource in the hInst module. If the image resource is to be loaded by name, the name parameter is a string that contains the name of the image resource.
       type(int):Specifies the type of image to be loaded.
       cxDesired(int):Specifies the width, in pixels, of the icon or cursor. If this parameter is zero and the fuLoad parameter is LR_DEFAULTSIZE, the function uses the SM_CXICON or SM_CXCURSOR system metric value to set the width. If this parameter is zero and LR_DEFAULTSIZE is not used, the function uses the actual resource width.
       cyDesired(int):Specifies the height, in pixels, of the icon or cursor. If this parameter is zero and the fuLoad parameter is LR_DEFAULTSIZE, the function uses the SM_CYICON or SM_CYCURSOR system metric value to set the height. If this parameter is zero and LR_DEFAULTSIZE is not used, the function uses the actual resource height.
@@ -1191,20 +1127,19 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def DeleteObject(handle:typing.Any) -> None:
+def DeleteObject(handle:'PyGdiHANDLE') -> 'None':
     """
     Deletes a logical pen, brush, font, bitmap, region, or palette, freeing all system resources associated with the object. After the object is deleted, the specified handle is no longer valid.
 
-
 Args:
 
-      handle(typing.Any):handle to the object to delete.
+      handle(PyGdiHANDLE):handle to the object to delete.
 
 Returns:
 
@@ -1212,16 +1147,15 @@ Returns:
         
     """
     pass
+        
 
-
-def BitBlt(hdcDest:int,x:int,y:int,width:int,height:int,hdcSrc:int,nXSrc:int,nYSrc:int,dwRop:int) -> None:
+def BitBlt(hdcDest:'int',x:'int',y:'int',width:'int',height:'int',hdcSrc:'int',nXSrc:'int',nYSrc:'int',dwRop:'int') -> 'None':
     """
     Performs a bit-block transfer of the color data corresponding 
 
 to a rectangle of pixels from the specified source device context into a 
 
 destination device context.
-
 
 Args:
 
@@ -1241,16 +1175,15 @@ Returns:
         
     """
     pass
+        
 
-
-def StretchBlt(hdcDest:int,x:int,y:int,width:int,height:int,hdcSrc:int,nXSrc:int,nYSrc:int,nWidthSrc:int,nHeightSrc:int,dwRop:int) -> None:
+def StretchBlt(hdcDest:'int',x:'int',y:'int',width:'int',height:'int',hdcSrc:'int',nXSrc:'int',nYSrc:'int',nWidthSrc:'int',nHeightSrc:'int',dwRop:'int') -> 'None':
     """
     Copies a bitmap from a source rectangle into a destination 
 
 rectangle, stretching or compressing the bitmap to fit the dimensions of the 
 
 destination rectangle, if necessary
-
 
 Args:
 
@@ -1272,16 +1205,15 @@ Returns:
         
     """
     pass
+        
 
-
-def PatBlt(hdc:typing.Any,XLeft:int,YLeft:int,Width:int,Height:int,Rop:int) -> None:
+def PatBlt(hdc:'int',XLeft:'int',YLeft:'int',Width:'int',Height:'int',Rop:'int') -> 'None':
     """
     Paints a rectangle by combining the current brush with existing colors
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       XLeft(int):Horizontal pos
       YLeft(int):Vertical pos
       Width(int):Width of rectangular area
@@ -1294,16 +1226,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetStretchBltMode(hdc:typing.Any,StretchMode:int) -> int:
+def SetStretchBltMode(hdc:'int',StretchMode:'int') -> 'int':
     """
     None
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       StretchMode(int):One of BLACKONWHITE,COLORONCOLOR,HALFTONE,STRETCH_ANDSCANS,STRETCH_DELETESCANS,STRETCH_HALFTONE,STRETCH_ORSCANS, or WHITEONBLACK (from win32con)Return ValueIf the function succeeds, the return value is the previous stretching mode. If the function fails, the return value is zero.
 
 Returns:
@@ -1315,16 +1246,15 @@ If the function fails, the return value is zero.
         
     """
     pass
+        
 
-
-def GetStretchBltMode(hdc:typing.Any) -> int:
+def GetStretchBltMode(hdc:'int') -> 'int':
     """
     None
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns one of BLACKONWHITE,COLORONCOLOR,HALFTONE,STRETCH_ANDSCANS,STRETCH_DELETESCANS,STRETCH_HALFTONE,STRETCH_ORSCANS,WHITEONBLACK, or 0 on error.
+      hdc(int):Handle to a device contextReturn ValueReturns one of BLACKONWHITE,COLORONCOLOR,HALFTONE,STRETCH_ANDSCANS,STRETCH_DELETESCANS,STRETCH_HALFTONE,STRETCH_ORSCANS,WHITEONBLACK, or 0 on error.
 
 Returns:
 
@@ -1333,21 +1263,20 @@ Returns:
         
     """
     pass
+        
 
-
-def TransparentBlt(Dest:typing.Any,XOriginDest:int,YOriginDest:int,WidthDest:int,HeightDest:int,Src:typing.Any,XOriginSrc:int,YOriginSrc:int,WidthSrc:int,HeightSrc:int,Transparent:int) -> None:
+def TransparentBlt(Dest:'int',XOriginDest:'int',YOriginDest:'int',WidthDest:'int',HeightDest:'int',Src:'int',XOriginSrc:'int',YOriginSrc:'int',WidthSrc:'int',HeightSrc:'int',Transparent:'int') -> 'None':
     """
     Transfers color from one DC to another, with one color treated as transparent
 
-
 Args:
 
-      Dest(typing.Any):Destination device context handle
+      Dest(int):Destination device context handle
       XOriginDest(int):X pos of dest rect
       YOriginDest(int):Y pos of dest rect
       WidthDest(int):Width of dest rect
       HeightDest(int):Height of dest rect
-      Src(typing.Any):Source DC handle
+      Src(int):Source DC handle
       XOriginSrc(int):X pos of src rect
       YOriginSrc(int):Y pos of src rect
       WidthSrc(int):Width of src rect
@@ -1360,26 +1289,25 @@ Returns:
         
     """
     pass
+        
 
-
-def MaskBlt(Dest:typing.Any,XDest:int,YDest:int,Width:int,Height:int,Src:typing.Any,XSrc:int,YSrc:int,Mask:typing.Any,xMask:int,yMask:int,Rop:int) -> None:
+def MaskBlt(Dest:'int',XDest:'int',YDest:'int',Width:'int',Height:'int',Src:'int',XSrc:'int',YSrc:'int',Mask:'PyGdiHANDLE',xMask:'int',yMask:'int',Rop:'int') -> 'None':
     """
     Combines the color data for the source and destination 
 
 bitmaps using the specified mask and raster operation.
 
-
 Args:
 
-      Dest(typing.Any):Destination device context handle
+      Dest(int):Destination device context handle
       XDest(int):X pos of dest rect
       YDest(int):Y pos of dest rect
       Width(int):Width of rect to be copied
       Height(int):Height of rect to be copied
-      Src(typing.Any):Source DC handle
+      Src(int):Source DC handle
       XSrc(int):X pos of src rect
       YSrc(int):Y pos of src rect
-      Mask(typing.Any):Handle to monochrome bitmap used to mask color
+      Mask(PyGdiHANDLE):Handle to monochrome bitmap used to mask color
       xMask(int):X pos in mask
       yMask(int):Y pos in mask
       Rop(int):Foreground and background raster operations.  See MSDN docs for how to construct this value.CommentsThis function is not supported on Win9x.Win32 API References
@@ -1390,26 +1318,25 @@ Returns:
         
     """
     pass
+        
 
-
-def AlphaBlend(Dest:typing.Any,XOriginDest:int,YOriginDest:int,WidthDest:int,HeightDest:int,Src:typing.Any,XOriginSrc:int,YOriginSrc:int,WidthSrc:int,HeightSrc:int,blendFunction:typing.Any) -> None:
+def AlphaBlend(Dest:'int',XOriginDest:'int',YOriginDest:'int',WidthDest:'int',HeightDest:'int',Src:'int',XOriginSrc:'int',YOriginSrc:'int',WidthSrc:'int',HeightSrc:'int',blendFunction:'PyBLENDFUNCTION') -> 'None':
     """
     Transfers color information using alpha blending
 
-
 Args:
 
-      Dest(typing.Any):Destination device context handle
+      Dest(int):Destination device context handle
       XOriginDest(int):X pos of dest rect
       YOriginDest(int):Y pos of dest rect
       WidthDest(int):Width of dest rect
       HeightDest(int):Height of dest rect
-      Src(typing.Any):Source DC handle
+      Src(int):Source DC handle
       XOriginSrc(int):X pos of src rect
       YOriginSrc(int):Y pos of src rect
       WidthSrc(int):Width of src rect
       HeightSrc(int):Height of src rect
-      blendFunction(typing.Any):Alpha blending parameters
+      blendFunction(PyBLENDFUNCTION):Alpha blending parameters
 
 Returns:
 
@@ -1417,18 +1344,17 @@ Returns:
         
     """
     pass
+        
 
-
-def ImageList_Add(himl:int,hbmImage:typing.Any,hbmMask:typing.Any) -> int:
+def ImageList_Add(himl:'int',hbmImage:'PyGdiHANDLE',hbmMask:'PyGdiHANDLE') -> 'int':
     """
     Adds an image or images to an image list.
-
 
 Args:
 
       himl(int):Handle to the image list.
-      hbmImage(typing.Any):Handle to the bitmap that contains the image or images. The number of images is inferred from the width of the bitmap.
-      hbmMask(typing.Any):Handle to the bitmap that contains the mask. If no mask is used with the image list, this parameter is ignoredReturn ValueReturns the index of the first new image if successful, or -1 otherwise.
+      hbmImage(PyGdiHANDLE):Handle to the bitmap that contains the image or images. The number of images is inferred from the width of the bitmap.
+      hbmMask(PyGdiHANDLE):Handle to the bitmap that contains the mask. If no mask is used with the image list, this parameter is ignoredReturn ValueReturns the index of the first new image if successful, or -1 otherwise.
 
 Returns:
 
@@ -1437,97 +1363,91 @@ Returns:
         
     """
     pass
+        
 
-
-def ImageList_Create() -> typing.Any:
+def ImageList_Create() -> 'Any':
     """
     Create an image list
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_Destroy() -> typing.Any:
+def ImageList_Destroy() -> 'Any':
     """
     Destroy an imagelist
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_Draw() -> typing.Any:
+def ImageList_Draw() -> 'Any':
     """
     Draw an image on an HDC
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_DrawEx() -> typing.Any:
+def ImageList_DrawEx() -> 'Any':
     """
     Draw an image on an HDC
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_GetIcon() -> typing.Any:
+def ImageList_GetIcon() -> 'Any':
     """
     Extract an icon from an imagelist
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_GetImageCount() -> int:
+def ImageList_GetImageCount() -> 'int':
     """
     Return count of images in imagelist
-
 
 Args:
 
@@ -1539,114 +1459,107 @@ Returns:
         
     """
     pass
+        
 
-
-def ImageList_LoadImage() -> typing.Any:
+def ImageList_LoadImage() -> 'Any':
     """
     Loads bitmaps, cursors or icons, creates imagelist
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_LoadBitmap() -> typing.Any:
+def ImageList_LoadBitmap() -> 'Any':
     """
     Creates an image list from the specified bitmap resource.
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_Remove() -> typing.Any:
+def ImageList_Remove() -> 'Any':
     """
     Remove an image from an imagelist
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_Replace() -> typing.Any:
+def ImageList_Replace() -> 'Any':
     """
     Replace an image in an imagelist with a bitmap image
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_ReplaceIcon() -> typing.Any:
+def ImageList_ReplaceIcon() -> 'Any':
     """
     Replace an image in an imagelist with an icon image
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_SetBkColor() -> typing.Any:
+def ImageList_SetBkColor() -> 'Any':
     """
     Set the background color for the imagelist
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ImageList_SetOverlayImage(hImageList:int,iImage:int,iOverlay:int) -> None:
+def ImageList_SetOverlayImage(hImageList:'int',iImage:'int',iOverlay:'int') -> 'None':
     """
     Adds a specified image to the list of images to be used as overlay masks. An image list can have up to four overlay masks in version 4.70 and earlier and up to 15 in version 4.71. The function assigns an overlay mask index to the specified image.
-
 
 Args:
 
@@ -1660,18 +1573,17 @@ Returns:
         
     """
     pass
+        
 
-
-def MessageBox(parent:int,text:Union[str,typing.Any],caption:Union[str,typing.Any],flags:int) -> int:
+def MessageBox(parent:'int',text:'Union[str]',caption:'Union[str]',flags:'int') -> 'int':
     """
     Displays a message box
-
 
 Args:
 
       parent(int):The parent window
-      text(str,typing.Any):The text for the message box
-      caption(str,typing.Any):The caption for the message box
+      text(Union[str]):The text for the message box
+      caption(Union[str]):The caption for the message box
       flags(int):
 
 Returns:
@@ -1680,12 +1592,11 @@ Returns:
         
     """
     pass
+        
 
-
-def MessageBeep(type:int) -> None:
+def MessageBeep(type:'int') -> 'None':
     """
     Plays a waveform sound.
-
 
 Args:
 
@@ -1697,16 +1608,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateWindow(className:Union[int,str],windowTitle:str,style:int,x:int,y:int,width:int,height:int,parent:int,menu:int,hinstance:int,reserved:None) -> int:
+def CreateWindow(className:'Union[str, int]',windowTitle:'str',style:'int',x:'int',y:'int',width:'int',height:'int',parent:'int',menu:'int',hinstance:'int',reserved:'None') -> 'int':
     """
     Creates a new window.
 
-
 Args:
 
-      className(int,str):
+      className(Union[str, int]):
       windowTitle(str):
       style(int):The style for the window.
       x(int):
@@ -1724,12 +1634,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DestroyWindow(hwnd:int) -> None:
+def DestroyWindow(hwnd:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -1741,17 +1650,16 @@ Returns:
         
     """
     pass
+        
 
-
-def EnableWindow(hWnd:typing.Any,bEnable:typing.Any) -> int:
+def EnableWindow(hWnd:'int',bEnable:'Any') -> 'int':
     """
     Enables and disables keyboard and mouse input to a window
 
-
 Args:
 
-      hWnd(typing.Any):Handle to window
-      bEnable(typing.Any):True to enable input to the window, False to disable inputReturn ValueReturns True if window was already disabled when call was made, False otherwise
+      hWnd(int):Handle to window
+      bEnable(Any):True to enable input to the window, False to disable inputReturn ValueReturns True if window was already disabled when call was made, False otherwise
 
 Returns:
 
@@ -1760,16 +1668,15 @@ Returns:
         
     """
     pass
+        
 
-
-def FindWindow(ClassName:typing.Any,WindowName:str) -> int:
+def FindWindow(ClassName:'PyResourceId',WindowName:'str') -> 'int':
     """
     Retrieves a handle to the top-level window whose class name and window name match the specified strings.
 
-
 Args:
 
-      ClassName(typing.Any):Name or atom of window class to find, can be None
+      ClassName(PyResourceId):Name or atom of window class to find, can be None
       WindowName(str):Title of window to find, can be None
 
 Returns:
@@ -1778,18 +1685,17 @@ Returns:
         
     """
     pass
+        
 
-
-def FindWindowEx(Parent:typing.Any,ChildAfter:typing.Any,ClassName:typing.Any,WindowName:str) -> int:
+def FindWindowEx(Parent:'int',ChildAfter:'int',ClassName:'PyResourceId',WindowName:'str') -> 'int':
     """
     Retrieves a handle to the top-level window whose class name and window name match the specified strings.
 
-
 Args:
 
-      Parent(typing.Any):Window whose child windows will be searched.  If 0, desktop window is assumed.
-      ChildAfter(typing.Any):Child window after which to search in Z-order, can be 0 to search all
-      ClassName(typing.Any):Name or atom of window class to find, can be None
+      Parent(int):Window whose child windows will be searched.  If 0, desktop window is assumed.
+      ChildAfter(int):Child window after which to search in Z-order, can be 0 to search all
+      ClassName(PyResourceId):Name or atom of window class to find, can be None
       WindowName(str):Title of window to find, can be None
 
 Returns:
@@ -1798,12 +1704,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DragAcceptFiles(hwnd:int,fAccept:int) -> None:
+def DragAcceptFiles(hwnd:'int',fAccept:'int') -> 'None':
     """
     Registers whether a window accepts dropped files.
-
 
 Args:
 
@@ -1816,17 +1721,16 @@ Returns:
         
     """
     pass
+        
 
-
-def DragDetect(hwnd:int,point:typing.Any) -> None:
+def DragDetect(hwnd:'int',point:'Tuple[int, int]') -> 'None':
     """
     captures the mouse and tracks its movement until the user releases the left button, presses the ESC key, or moves the mouse outside the drag rectangle around the specified point.
-
 
 Args:
 
       hwnd(int):Handle to the Window
-      point(typing.Any):Initial position of the mouse, in screen coordinates. The function determines the coordinates of the drag rectangle by using this point.Return ValueIf the user moved the mouse outside of the drag rectangle while holding down the left button , the return value is nonzero. If the user did not move the mouse outside of the drag rectangle while holding down the left button , the return value is zero.
+      point(Tuple[int, int]):Initial position of the mouse, in screen coordinates. The function determines the coordinates of the drag rectangle by using this point.Return ValueIf the user moved the mouse outside of the drag rectangle while holding down the left button , the return value is nonzero. If the user did not move the mouse outside of the drag rectangle while holding down the left button , the return value is zero.
 
 Returns:
 
@@ -1837,12 +1741,11 @@ If the user did not move the mouse outside of the drag rectangle while holding d
         
     """
     pass
+        
 
-
-def SetDoubleClickTime(newVal:int) -> None:
+def SetDoubleClickTime(newVal:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -1854,12 +1757,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetDoubleClickTime() -> int:
+def GetDoubleClickTime() -> 'int':
     """
     None
-
 
 Args:
 
@@ -1871,16 +1773,15 @@ Returns:
         
     """
     pass
+        
 
-
-def HideCaret(hWnd:typing.Any) -> None:
+def HideCaret(hWnd:'int') -> 'None':
     """
     Hides the caret
 
-
 Args:
 
-      hWnd(typing.Any):Window that owns the caret, can be 0.
+      hWnd(int):Window that owns the caret, can be 0.
 
 Returns:
 
@@ -1888,12 +1789,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetCaretPos(x:int,y:int) -> None:
+def SetCaretPos(x:'int',y:'int') -> 'None':
     """
     Changes the position of the caret
-
 
 Args:
 
@@ -1906,12 +1806,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCaretPos() -> typing.Any:
+def GetCaretPos() -> 'Tuple[int, int]':
     """
     Returns the current caret position
-
 
 Args:
 
@@ -1919,20 +1818,19 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def ShowCaret(hWnd:typing.Any) -> None:
+def ShowCaret(hWnd:'int') -> 'None':
     """
     Shows the caret at its current position
 
-
 Args:
 
-      hWnd(typing.Any):Window that owns the caret, can be 0.
+      hWnd(int):Window that owns the caret, can be 0.
 
 Returns:
 
@@ -1940,12 +1838,11 @@ Returns:
         
     """
     pass
+        
 
-
-def ShowWindow(hWnd:int,cmdShow:int) -> typing.Any:
+def ShowWindow(hWnd:'int',cmdShow:'int') -> 'Any':
     """
     Shows or hides a window and changes its state
-
 
 Args:
 
@@ -1954,17 +1851,16 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def IsWindowVisible(hwnd:int) -> int:
+def IsWindowVisible(hwnd:'int') -> 'int':
     """
     Indicates if the window has the WS_VISIBLE style.
 
-
 Args:
 
       hwnd(int):The handle to the window
@@ -1975,13 +1871,12 @@ Returns:
         
     """
     pass
+        
 
-
-def IsWindowEnabled(hwnd:int) -> int:
+def IsWindowEnabled(hwnd:'int') -> 'int':
     """
     Indicates if the window is enabled.
 
-
 Args:
 
       hwnd(int):The handle to the window
@@ -1992,13 +1887,12 @@ Returns:
         
     """
     pass
+        
 
-
-def SetFocus(hwnd:int) -> None:
+def SetFocus(hwnd:'int') -> 'None':
     """
     Sets focus to the specified window.
 
-
 Args:
 
       hwnd(int):The handle to the window
@@ -2009,13 +1903,12 @@ Returns:
         
     """
     pass
+        
 
-
-def GetFocus() -> None:
+def GetFocus() -> 'None':
     """
     Returns the HWND of the window with focus.
 
-
 Args:
 
 
@@ -2026,29 +1919,11 @@ Returns:
         
     """
     pass
-
-
-def UpdateWindow(hwnd:int) -> None:
-    """
-    None
-
-
-Args:
-
-      hwnd(int):The handle to the window
-
-Returns:
-
-      None
         
-    """
-    pass
 
-
-def BringWindowToTop(hwnd:int) -> None:
+def UpdateWindow(hwnd:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2060,12 +1935,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetActiveWindow(hwnd:int) -> typing.Any:
+def BringWindowToTop(hwnd:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2073,33 +1947,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      None
         
     """
     pass
-
-
-def GetActiveWindow() -> typing.Any:
-    """
-    None
-
-
-Args:
-
-
-
-Returns:
-
-      typing.Any
         
-    """
-    pass
 
-
-def SetForegroundWindow(hwnd:int) -> typing.Any:
+def SetActiveWindow(hwnd:'int') -> 'Any':
     """
     None
-
 
 Args:
 
@@ -2107,16 +1963,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetForegroundWindow() -> typing.Any:
+def GetActiveWindow() -> 'Any':
     """
     None
-
 
 Args:
 
@@ -2124,54 +1979,83 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
+
+def SetForegroundWindow(hwnd:'int') -> 'Any':
+    """
+    None
+
+Args:
+
+      hwnd(int):The handle to the window
+
+Returns:
+
+      Any
+        
+    """
+    pass
+        
+
+def GetForegroundWindow() -> 'Any':
+    """
+    None
+
+Args:
 
 
-def GetClientRect(hwnd:int) -> typing.Any:
+
+Returns:
+
+      Any
+        
+    """
+    pass
+        
+
+def GetClientRect(hwnd:'int') -> 'Tuple[Any, Any, Any, Any]':
     """
     Returns the rectangle of the client area of a window, in client coordinates
 
-
 Args:
 
       hwnd(int):The handle to the window
 
 Returns:
 
-      typing.Any
+      Tuple[Any, Any, Any, Any]
         
     """
     pass
+        
 
-
-def GetDC(hwnd:int) -> typing.Any:
+def GetDC(hwnd:'int') -> 'Any':
     """
     Gets the device context for the window.
 
-
 Args:
 
       hwnd(int):The handle to the window
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def SaveDC(hdc:typing.Any) -> int:
+def SaveDC(hdc:'int') -> 'int':
     """
     Save the state of a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to device contextReturn ValueReturns a value identifying the state that can be passed to win32gui::RestoreDC.  On error, returns 0.
+      hdc(int):Handle to device contextReturn ValueReturns a value identifying the state that can be passed to win32gui::RestoreDC.  On error, returns 0.
 
 Returns:
 
@@ -2180,16 +2064,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RestoreDC(hdc:typing.Any,SavedDC:int) -> None:
+def RestoreDC(hdc:'int',SavedDC:'int') -> 'None':
     """
     Restores a device context state
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       SavedDC(int):Identifier of state to be restored, as returned by win32gui::SaveDC.
 
 Returns:
@@ -2198,12 +2081,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DeleteDC(hdc:int) -> None:
+def DeleteDC(hdc:'int') -> 'None':
     """
     Deletes a DC
-
 
 Args:
 
@@ -2215,12 +2097,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateCompatibleDC(dc:int) -> typing.Any:
+def CreateCompatibleDC(dc:'int') -> 'Any':
     """
     Creates a memory device context (DC) compatible with the specified device.
-
 
 Args:
 
@@ -2228,16 +2109,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CreateCompatibleBitmap(hdc:int,width:int,height:int) -> typing.Any:
+def CreateCompatibleBitmap(hdc:'int',width:'int',height:'int') -> 'PyGdiHANDLE':
     """
     Creates a bitmap compatible with the device that is associated with the specified device context.
-
 
 Args:
 
@@ -2247,16 +2127,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def CreateBitmap(width:int,height:int,cPlanes:int,cBitsPerPixel:int,bitmap bits:None) -> typing.Any:
+def CreateBitmap(width:'int',height:'int',cPlanes:'int',cBitsPerPixel:'int',bitmap_bits:'None') -> 'PyGdiHANDLE':
     """
     Creates a bitmap
-
 
 Args:
 
@@ -2264,20 +2143,19 @@ Args:
       height(int):bitmap height, in pixels
       cPlanes(int):number of color planes
       cBitsPerPixel(int):number of bits to identify color
-      bitmap bits(None):Must be None
+      bitmap_bits(None):Must be None
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def SelectObject(hdc:int,object:int) -> typing.Any:
+def SelectObject(hdc:'int',object:'int') -> 'Any':
     """
     Selects an object into the specified device context (DC). The new object replaces the previous object of the same type.
-
 
 Args:
 
@@ -2286,20 +2164,19 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def GetCurrentObject(hdc:typing.Any,ObjectType:int) -> int:
+def GetCurrentObject(hdc:'int',ObjectType:'int') -> 'int':
     """
     Retrieves currently selected object from a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       ObjectType(int):Type of object to retrieve, one of win32con.OBJ_*;
 
 Returns:
@@ -2308,12 +2185,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowRect(hwnd:int) -> typing.Any:
+def GetWindowRect(hwnd:'int') -> 'Tuple[Any, Any, Any, Any]':
     """
     Returns the rectangle for a window in screen coordinates
-
 
 Args:
 
@@ -2321,16 +2197,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[Any, Any, Any, Any]
         
     """
     pass
+        
 
-
-def GetStockObject(Object:int) -> int:
+def GetStockObject(Object:'int') -> 'int':
     """
     Creates a handle to one of the standard system Gdi objects
-
 
 Args:
 
@@ -2342,12 +2217,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PostQuitMessage(rc:int) -> None:
+def PostQuitMessage(rc:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2359,12 +2233,11 @@ Returns:
         
     """
     pass
+        
 
-
-def WaitMessage() -> None:
+def WaitMessage() -> 'None':
     """
     Waits for a message
-
 
 Args:
 
@@ -2376,17 +2249,16 @@ Returns:
         
     """
     pass
+        
 
-
-def SetWindowPos(hWnd:typing.Any,InsertAfter:typing.Any,X:int,Y:int,cx:int,cy:int,Flags:int) -> None:
+def SetWindowPos(hWnd:'int',InsertAfter:'int',X:'int',Y:'int',cx:'int',cy:'int',Flags:'int') -> 'None':
     """
     Sets the position and size of a window
 
-
 Args:
 
-      hWnd(typing.Any):Handle to the window
-      InsertAfter(typing.Any):Window that hWnd will be placed below.  Can be a window handle or one of HWND_BOTTOM,HWND_NOTOPMOST,HWND_TOP, or HWND_TOPMOST
+      hWnd(int):Handle to the window
+      InsertAfter(int):Window that hWnd will be placed below.  Can be a window handle or one of HWND_BOTTOM,HWND_NOTOPMOST,HWND_TOP, or HWND_TOPMOST
       X(int):New X coord
       Y(int):New Y coord
       cx(int):New width of window
@@ -2399,12 +2271,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowPlacement() -> tuple:
+def GetWindowPlacement() -> 'tuple':
     """
     Returns placement information about the current window.
-
 
 Args:
 
@@ -2437,17 +2308,16 @@ normalposSpecifies the window's coordinates when the window is in the restored p
         
     """
     pass
+        
 
-
-def SetWindowPlacement(hWnd:typing.Any,placement:typing.Any) -> None:
+def SetWindowPlacement(hWnd:'int',placement:'Any') -> 'None':
     """
     Sets the windows placement
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      placement(typing.Any):A tuple representing the WINDOWPLACEMENT structure.
+      hWnd(int):Handle to a window
+      placement(Any):A tuple representing the WINDOWPLACEMENT structure.
 
 Returns:
 
@@ -2455,16 +2325,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegisterClass(wndClass:typing.Any) -> int:
+def RegisterClass(wndClass:'PyWNDCLASS') -> 'int':
     """
     Registers a window class.
 
-
 Args:
 
-      wndClass(typing.Any):An object describing the window class.
+      wndClass(PyWNDCLASS):An object describing the window class.
 
 Returns:
 
@@ -2472,17 +2341,16 @@ Returns:
         
     """
     pass
+        
 
-
-def UnregisterClass(atom:typing.Any,hinst:typing.Any) -> None:
+def UnregisterClass(atom:'PyResourceId',hinst:'int') -> 'None':
     """
     None
 
-
 Args:
 
-      atom(typing.Any):The atom or classname identifying the class previously registered.
-      hinst(typing.Any):The handle to the instance unregistering the class, can be None
+      atom(PyResourceId):The atom or classname identifying the class previously registered.
+      hinst(int):The handle to the instance unregistering the class, can be None
 
 Returns:
 
@@ -2490,12 +2358,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PumpMessages() -> None:
+def PumpMessages() -> 'None':
     """
     Runs a message loop until a WM_QUIT message is received.
-
 
 Args:
 
@@ -2509,12 +2376,11 @@ Return ValueReturns exit code from PostQuitMessage when a WM_QUIT message is rec
         
     """
     pass
+        
 
-
-def PumpWaitingMessages() -> int:
+def PumpWaitingMessages() -> 'int':
     """
     Pumps all waiting messages for the current thread.
-
 
 Args:
 
@@ -2528,12 +2394,11 @@ Return ValueReturns non-zero (exit code from PostQuitMessage) if a WM_QUIT messa
         
     """
     pass
+        
 
-
-def GetMessage(hwnd:int,min:int,max:int) -> typing.Any:
+def GetMessage(hwnd:'int',min:'int',max:'int') -> 'Any':
     """
     None
-
 
 Args:
 
@@ -2543,20 +2408,19 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def TranslateMessage(msg:typing.Any) -> int:
+def TranslateMessage(msg:'Any') -> 'int':
     """
     None
 
-
 Args:
 
-      msg(typing.Any):
+      msg(Any):
 
 Returns:
 
@@ -2564,16 +2428,15 @@ Returns:
         
     """
     pass
+        
 
-
-def DispatchMessage(msg:typing.Any) -> int:
+def DispatchMessage(msg:'Any') -> 'int':
     """
     None
 
-
 Args:
 
-      msg(typing.Any):
+      msg(Any):
 
 Returns:
 
@@ -2581,18 +2444,17 @@ Returns:
         
     """
     pass
+        
 
-
-def TranslateAccelerator(hwnd:int,haccel:int,msg:typing.Any) -> int:
+def TranslateAccelerator(hwnd:'int',haccel:'int',msg:'Any') -> 'int':
     """
     None
-
 
 Args:
 
       hwnd(int):
       haccel(int):
-      msg(typing.Any):
+      msg(Any):
 
 Returns:
 
@@ -2600,12 +2462,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PeekMessage(hwnd:int,filterMin:int,filterMax:int,removalOptions:int) -> typing.Any:
+def PeekMessage(hwnd:'int',filterMin:'int',filterMax:'int',removalOptions:'int') -> 'Any':
     """
     None
-
 
 Args:
 
@@ -2616,21 +2477,20 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def Shell_NotifyIcon(Message:int,nid:typing.Any) -> None:
+def Shell_NotifyIcon(Message:'int',nid:'PyNOTIFYICONDATA') -> 'None':
     """
     Adds, removes or modifies a taskbar icon.
-
 
 Args:
 
       Message(int):One of win32gui.NIM_* flags
-      nid(typing.Any):Tuple containing NOTIFYICONDATA info
+      nid(PyNOTIFYICONDATA):Tuple containing NOTIFYICONDATA info
 
 Returns:
 
@@ -2638,12 +2498,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSystemMenu(hwnd:int,bRevert:int) -> int:
+def GetSystemMenu(hwnd:'int',bRevert:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -2657,12 +2516,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawMenuBar(hwnd:int) -> None:
+def DrawMenuBar(hwnd:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2674,12 +2532,11 @@ Returns:
         
     """
     pass
+        
 
-
-def MoveWindow(hwnd:int,x:int,y:int,width:int,height:int,bRepaint:int) -> None:
+def MoveWindow(hwnd:'int',x:'int',y:'int',width:'int',height:'int',bRepaint:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2696,12 +2553,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CloseWindow() -> None:
+def CloseWindow() -> 'None':
     """
     None
-
 
 Args:
 
@@ -2713,31 +2569,11 @@ Returns:
         
     """
     pass
-
-
-def DeleteMenu(hmenu:int,position:int,flags:int) -> None:
-    """
-    None
-
-
-Args:
-
-      hmenu(int):The handle to the menu
-      position(int):The position to delete.
-      flags(int):
-
-Returns:
-
-      None
         
-    """
-    pass
 
-
-def RemoveMenu(hmenu:int,position:int,flags:int) -> None:
+def DeleteMenu(hmenu:'int',position:'int',flags:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2751,12 +2587,29 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateMenu() -> int:
+def RemoveMenu(hmenu:'int',position:'int',flags:'int') -> 'None':
     """
     None
 
+Args:
+
+      hmenu(int):The handle to the menu
+      position(int):The position to delete.
+      flags(int):
+
+Returns:
+
+      None
+        
+    """
+    pass
+        
+
+def CreateMenu() -> 'int':
+    """
+    None
 
 Args:
 
@@ -2772,12 +2625,11 @@ Return ValueThe result is a HMENU to the new menu.
         
     """
     pass
+        
 
-
-def CreatePopupMenu() -> int:
+def CreatePopupMenu() -> 'int':
     """
     None
-
 
 Args:
 
@@ -2793,22 +2645,21 @@ Return ValueThe result is a HMENU to the new menu.
         
     """
     pass
+        
 
-
-def TrackPopupMenu(hmenu:int,flags:typing.Any,x:int,y:int,reserved:int,hwnd:typing.Any,prcRect:typing.Any) -> int:
+def TrackPopupMenu(hmenu:'int',flags:'Any',x:'int',y:'int',reserved:'int',hwnd:'Any',prcRect:'PyRECT') -> 'int':
     """
     Display popup shortcut menu
-
 
 Args:
 
       hmenu(int):The handle to the menu
-      flags(typing.Any):flags
+      flags(Any):flags
       x(int):x pos
       y(int):y pos
       reserved(int):reserved
-      hwnd(typing.Any):owner window
-      prcRect(typing.Any):Pointer to rec (can be None)
+      hwnd(Any):owner window
+      prcRect(PyRECT):Pointer to rec (can be None)
 
 Returns:
 
@@ -2816,12 +2667,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CommDlgExtendedError() -> int:
+def CommDlgExtendedError() -> 'int':
     """
     None
-
 
 Args:
 
@@ -2833,17 +2683,16 @@ Returns:
         
     """
     pass
+        
 
-
-def ExtractIcon(hinstance:int,moduleName:Union[str,typing.Any],index:int) -> int:
+def ExtractIcon(hinstance:'int',moduleName:'Union[str]',index:'int') -> 'int':
     """
     None
-
 
 Args:
 
       hinstance(int):
-      moduleName(str,typing.Any):
+      moduleName(Union[str]):
       index(int):CommentsYou must destroy the icon handle returned by calling the win32gui::DestroyIcon function.Return ValueThe result is a HICON.
 
 Returns:
@@ -2856,12 +2705,11 @@ Return ValueThe result is a HICON.
         
     """
     pass
+        
 
-
-def ExtractIconEx(moduleName:str,index:int,numIcons:int=1) -> int:
+def ExtractIconEx(moduleName:'str',index:'int',numIcons:'int'=1) -> 'int':
     """
     None
-
 
 Args:
 
@@ -2882,12 +2730,11 @@ the file, otherwise it is 2 arrays of icon handles.
         
     """
     pass
+        
 
-
-def DestroyIcon(hicon:int) -> None:
+def DestroyIcon(hicon:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -2899,72 +2746,68 @@ Returns:
         
     """
     pass
+        
 
-
-def GetIconInfo(hicon:typing.Any) -> typing.Any:
+def GetIconInfo(hicon:'int') -> 'PyICONINFO':
     """
     Returns parameters for an icon or cursor
 
-
 Args:
 
-      hicon(typing.Any):The icon to queryReturn ValueThe result is a tuple of (fIcon, xHotspot, yHotspot, hbmMask, hbmColor) The hbmMask and hbmColor items are bitmaps created for the caller, so must be freed.
+      hicon(int):The icon to queryReturn ValueThe result is a tuple of (fIcon, xHotspot, yHotspot, hbmMask, hbmColor) The hbmMask and hbmColor items are bitmaps created for the caller, so must be freed.
 
 Returns:
 
-      typing.Any:The icon to queryReturn ValueThe result is a tuple of (fIcon, xHotspot, yHotspot, hbmMask, hbmColor) 
+      PyICONINFO:The icon to queryReturn ValueThe result is a tuple of (fIcon, xHotspot, yHotspot, hbmMask, hbmColor) 
 
 The hbmMask and hbmColor items are bitmaps created for the caller, so must be freed.
 
         
     """
     pass
+        
 
-
-def ScreenToClient(hWnd:typing.Any,Point:typing.Any) -> typing.Any:
+def ScreenToClient(hWnd:'int',Point:'Tuple[int, int]') -> 'Tuple[int, int]':
     """
     Convert screen coordinates to client coords
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      Point(typing.Any):Screen coordinates to be converted
+      hWnd(int):Handle to a window
+      Point(Tuple[int, int]):Screen coordinates to be converted
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def ClientToScreen(hWnd:typing.Any,Point:typing.Any) -> typing.Any:
+def ClientToScreen(hWnd:'int',Point:'Tuple[int, int]') -> 'Tuple[int, int]':
     """
     Convert client coordinates to screen coords
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      Point(typing.Any):Client coordinates to be converted
+      hWnd(int):Handle to a window
+      Point(Tuple[int, int]):Client coordinates to be converted
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def PaintDesktop(hdc:typing.Any) -> None:
+def PaintDesktop(hdc:'int') -> 'None':
     """
     Fills a DC with the destop background
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
@@ -2972,18 +2815,17 @@ Returns:
         
     """
     pass
+        
 
-
-def RedrawWindow(hWnd:typing.Any,rcUpdate:typing.Any,hrgnUpdate:typing.Any,flags:int) -> None:
+def RedrawWindow(hWnd:'int',rcUpdate:'Tuple[int, int, int, int]',hrgnUpdate:'PyGdiHANDLE',flags:'int') -> 'None':
     """
     Causes a portion of a window to be redrawn
 
-
 Args:
 
-      hWnd(typing.Any):Handle to window to be redrawn
-      rcUpdate(typing.Any):Rectangle (left, top, right, bottom) identifying part of window to be redrawn, can be None
-      hrgnUpdate(typing.Any):Handle to region to be redrawn, can be None to indicate entire client area
+      hWnd(int):Handle to window to be redrawn
+      rcUpdate(Tuple[int, int, int, int]):Rectangle (left, top, right, bottom) identifying part of window to be redrawn, can be None
+      hrgnUpdate(PyGdiHANDLE):Handle to region to be redrawn, can be None to indicate entire client area
       flags(int):Combination of win32con.RDW_* flags
 
 Returns:
@@ -2992,30 +2834,28 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTextExtentPoint32(hdc:typing.Any,str:str) -> typing.Any:
+def GetTextExtentPoint32(hdc:'int',str:'str') -> 'Tuple[Any, Any]':
     """
     Computes the width and height of the specified string of text.
 
-
 Args:
 
-      hdc(typing.Any):The device context
+      hdc(int):The device context
       str(str):The string to measure.
 
 Returns:
 
-      typing.Any
+      Tuple[Any, Any]
         
     """
     pass
+        
 
-
-def GetTextMetrics() -> dict:
+def GetTextMetrics() -> 'dict':
     """
     Returns info for the font selected into a DC
-
 
 Args:
 
@@ -3027,16 +2867,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTextCharacterExtra(hdc:typing.Any) -> int:
+def GetTextCharacterExtra(hdc:'int') -> 'int':
     """
     Returns the space between characters
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
@@ -3044,16 +2883,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetTextCharacterExtra(hdc:typing.Any,CharExtra:int) -> int:
+def SetTextCharacterExtra(hdc:'int',CharExtra:'int') -> 'int':
     """
     Sets the spacing between characters
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       CharExtra(int):Space between adjacent chars, in logical unitsReturn ValueReturns the previous spacing
 
 Returns:
@@ -3063,16 +2901,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTextAlign(hdc:typing.Any) -> int:
+def GetTextAlign(hdc:'int') -> 'int':
     """
     Returns horizontal and vertical alignment for text in a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns combination of win32con.TA_* flags
+      hdc(int):Handle to a device contextReturn ValueReturns combination of win32con.TA_* flags
 
 Returns:
 
@@ -3081,16 +2918,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetTextAlign(hdc:typing.Any,Mode:int) -> int:
+def SetTextAlign(hdc:'int',Mode:'int') -> 'int':
     """
     Sets horizontal and vertical alignment for text in a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       Mode(int):Combination of win32con.TA_* constantsReturn ValueReturns the previous alignment flags
 
 Returns:
@@ -3100,16 +2936,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTextFace(hdc:typing.Any) -> str:
+def GetTextFace(hdc:'int') -> 'str':
     """
     Retrieves the name of the font currently selected in a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextCommentsCalls unicode api function (GetTextFaceW)
+      hdc(int):Handle to a device contextCommentsCalls unicode api function (GetTextFaceW)
 
 Returns:
 
@@ -3117,16 +2952,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMapMode(hdc:typing.Any) -> int:
+def GetMapMode(hdc:'int') -> 'int':
     """
     Returns the method a device context uses to translate logical units to physical units
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns one of win32con.MM_* values
+      hdc(int):Handle to a device contextReturn ValueReturns one of win32con.MM_* values
 
 Returns:
 
@@ -3135,16 +2969,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMapMode(hdc:typing.Any,MapMode:int) -> int:
+def SetMapMode(hdc:'int',MapMode:'int') -> 'int':
     """
     Sets the method used for translating logical units to device units
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       MapMode(int):The new mapping mode (win32con.MM_*)Return ValueReturns the previous mapping mode, one of win32con.MM_* constants
 
 Returns:
@@ -3154,16 +2987,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetGraphicsMode(hdc:typing.Any) -> int:
+def GetGraphicsMode(hdc:'int') -> 'int':
     """
     Determines if advanced GDI features are enabled for a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns GM_COMPATIBLE or GM_ADVANCED
+      hdc(int):Handle to a device contextReturn ValueReturns GM_COMPATIBLE or GM_ADVANCED
 
 Returns:
 
@@ -3172,16 +3004,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetGraphicsMode(hdc:typing.Any,Mode:int) -> int:
+def SetGraphicsMode(hdc:'int',Mode:'int') -> 'int':
     """
     Enables or disables advanced graphics features for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       Mode(int):GM_COMPATIBLE or GM_ADVANCED (from win32con)Return ValueReturns the previous mode, one of win32con.GM_COMPATIBLE or win32con.GM_ADVANCED
 
 Returns:
@@ -3191,16 +3022,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLayout(hdc:typing.Any) -> int:
+def GetLayout(hdc:'int') -> 'int':
     """
     Retrieves the layout mode of a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns one of win32con.LAYOUT_*
+      hdc(int):Handle to a device contextReturn ValueReturns one of win32con.LAYOUT_*
 
 Returns:
 
@@ -3209,16 +3039,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetLayout(hdc:typing.Any,Layout:int) -> int:
+def SetLayout(hdc:'int',Layout:'int') -> 'int':
     """
     Sets the layout for a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       Layout(int):One of win32con.LAYOUT_* constantsReturn ValueReturns the previous layout mode
 
 Returns:
@@ -3228,16 +3057,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetPolyFillMode(hdc:typing.Any) -> int:
+def GetPolyFillMode(hdc:'int') -> 'int':
     """
     Returns the polygon filling mode for a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns win32con.ALTERNATE or win32con.WINDING
+      hdc(int):Handle to a device contextReturn ValueReturns win32con.ALTERNATE or win32con.WINDING
 
 Returns:
 
@@ -3246,16 +3074,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetPolyFillMode(hdc:typing.Any,PolyFillMode:int) -> int:
+def SetPolyFillMode(hdc:'int',PolyFillMode:'int') -> 'int':
     """
     Sets the polygon filling mode for a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       PolyFillMode(int):One of ALTERNATE or WINDINGReturn ValueReturns the previous mode, one of win32con.ALTERNATE or win32con.WINDING
 
 Returns:
@@ -3265,34 +3092,32 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWorldTransform(hdc:typing.Any) -> typing.Any:
+def GetWorldTransform(hdc:'int') -> 'PyXFORM':
     """
     Retrieves a device context's coordinate space translation matrix
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextCommentsDC's mode must be set to GM_ADVANCED.  See win32gui::SetGraphicsMode.
+      hdc(int):Handle to a device contextCommentsDC's mode must be set to GM_ADVANCED.  See win32gui::SetGraphicsMode.
 
 Returns:
 
-      typing.Any
+      PyXFORM
         
     """
     pass
+        
 
-
-def SetWorldTransform(hdc:typing.Any,Xform:typing.Any) -> None:
+def SetWorldTransform(hdc:'int',Xform:'PyXFORM') -> 'None':
     """
     Transforms a device context's coordinate space
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Xform(typing.Any):Matrix defining the transformationCommentsDC's mode must be set to GM_ADVANCED.  See win32gui::SetGraphicsMode.
+      hdc(int):Handle to a device context
+      Xform(PyXFORM):Matrix defining the transformationCommentsDC's mode must be set to GM_ADVANCED.  See win32gui::SetGraphicsMode.
 
 Returns:
 
@@ -3300,17 +3125,16 @@ Returns:
         
     """
     pass
+        
 
-
-def ModifyWorldTransform(hdc:typing.Any,Xform:typing.Any,Mode:int) -> None:
+def ModifyWorldTransform(hdc:'int',Xform:'PyXFORM',Mode:'int') -> 'None':
     """
     Combines a coordinate tranformation with device context's current transformation
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Xform(typing.Any):Transformation to be applied.  Ignored if Mode is MWT_IDENTITY.
+      hdc(int):Handle to a device context
+      Xform(PyXFORM):Transformation to be applied.  Ignored if Mode is MWT_IDENTITY.
       Mode(int):One of win32con.MWT_* values specifying how transformations will be combinedCommentsDC's mode must be set to GM_ADVANCED.  See win32gui::SetGraphicsMode.
 
 Returns:
@@ -3319,185 +3143,175 @@ Returns:
         
     """
     pass
+        
 
-
-def CombineTransform(xform1:typing.Any,xform2:typing.Any) -> typing.Any:
+def CombineTransform(xform1:'PyXFORM',xform2:'PyXFORM') -> 'PyXFORM':
     """
     Combines two coordinate space transformations
 
-
 Args:
 
-      xform1(typing.Any):First transformation
-      xform2(typing.Any):Second transformation
+      xform1(PyXFORM):First transformation
+      xform2(PyXFORM):Second transformation
 
 Returns:
 
-      typing.Any
+      PyXFORM
         
     """
     pass
+        
 
-
-def GetWindowOrgEx(hdc:typing.Any) -> typing.Any:
+def GetWindowOrgEx(hdc:'int') -> 'Tuple[int, int]':
     """
     Retrievs the window origin for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def SetWindowOrgEx(hdc:typing.Any,X:int,Y:int) -> typing.Any:
+def SetWindowOrgEx(hdc:'int',X:'int',Y:'int') -> 'Tuple[int, int]':
     """
     Changes the window origin for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       X(int):New X coord in logical units
       Y(int):New Y coord in logical unitsReturn ValueReturns the previous origin
 
 Returns:
 
-      typing.Any:New Y coord in logical unitsReturn ValueReturns the previous origin
+      Tuple[int, int]:New Y coord in logical unitsReturn ValueReturns the previous origin
 
         
     """
     pass
+        
 
-
-def GetViewportOrgEx(hdc:typing.Any) -> typing.Any:
+def GetViewportOrgEx(hdc:'int') -> 'Tuple[int, int]':
     """
     Retrievs the origin for a DC's viewport
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def SetViewportOrgEx(hdc:typing.Any,X:int,Y:int) -> typing.Any:
+def SetViewportOrgEx(hdc:'int',X:'int',Y:'int') -> 'Tuple[int, int]':
     """
     Changes the viewport origin for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       X(int):New X coord in logical units
       Y(int):New Y coord in logical unitsReturn ValueReturns the previous origin as (x,y)
 
 Returns:
 
-      typing.Any:New Y coord in logical unitsReturn ValueReturns the previous origin as (x,y)
+      Tuple[int, int]:New Y coord in logical unitsReturn ValueReturns the previous origin as (x,y)
 
         
     """
     pass
+        
 
-
-def GetWindowExtEx(hdc:typing.Any) -> typing.Any:
+def GetWindowExtEx(hdc:'int') -> 'Tuple[int, int]':
     """
     Retrieves the window extents for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
+      hdc(int):Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
 
 Returns:
 
-      typing.Any:Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
+      Tuple[int, int]:Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
 
         
     """
     pass
+        
 
-
-def SetWindowExtEx(hdc:typing.Any,XExtent:int,YExtent:int) -> typing.Any:
+def SetWindowExtEx(hdc:'int',XExtent:'int',YExtent:'int') -> 'Tuple[int, int]':
     """
     Changes the window extents for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       XExtent(int):New X extent in logical units
       YExtent(int):New Y extent in logical unitsReturn ValueReturns the previous extents
 
 Returns:
 
-      typing.Any:New Y extent in logical unitsReturn ValueReturns the previous extents
+      Tuple[int, int]:New Y extent in logical unitsReturn ValueReturns the previous extents
 
         
     """
     pass
+        
 
-
-def GetViewportExtEx(hdc:typing.Any) -> typing.Any:
+def GetViewportExtEx(hdc:'int') -> 'Tuple[int, int]':
     """
     Retrieves the viewport extents for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
+      hdc(int):Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
 
 Returns:
 
-      typing.Any:Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
+      Tuple[int, int]:Handle to a device contextReturn ValueReturns the extents as (x,y) in logical units
 
         
     """
     pass
+        
 
-
-def SetViewportExtEx(hdc:typing.Any,XExtent:int,YExtent:int) -> typing.Any:
+def SetViewportExtEx(hdc:'int',XExtent:'int',YExtent:'int') -> 'Tuple[int, int]':
     """
     Changes the viewport extents for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       XExtent(int):New X extent in logical units
       YExtent(int):New Y extent in logical unitsReturn ValueReturns the previous extents as (x,y) in logical units
 
 Returns:
 
-      typing.Any:New Y extent in logical unitsReturn ValueReturns the previous extents as (x,y) in logical units
+      Tuple[int, int]:New Y extent in logical unitsReturn ValueReturns the previous extents as (x,y) in logical units
 
         
     """
     pass
+        
 
-
-def GradientFill(hdc:int,Vertex:typing.Any,Mesh:tuple,Mode:int) -> None:
+def GradientFill(hdc:'int',Vertex:'Tuple[PyTRIVERTEX, ...]',Mesh:'tuple',Mode:'int') -> 'None':
     """
     Shades triangles or rectangles by interpolating between vertex colors
-
 
 Args:
 
       hdc(int):Handle to device context
-      Vertex(typing.Any):Sequence of TRIVERTEX dicts defining color info
+      Vertex(Tuple[PyTRIVERTEX, ...]):Sequence of TRIVERTEX dicts defining color info
       Mesh(tuple):Sequence of tuples containing either 2 or 3 ints that index into the trivertex array to define either triangles or rectangles
       Mode(int):win32con.GRADIENT_FILL_* value defining whether to fill by triangle or by rectangle
 
@@ -3507,16 +3321,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetOpenFileName(OPENFILENAME:Union[str,bytes]) -> int:
+def GetOpenFileName(OPENFILENAME:'Union[str, bytes]') -> 'int':
     """
     Creates an Open dialog box that lets the user specify the drive, directory, and the name of a file or set of files to open.
 
-
 Args:
 
-      OPENFILENAME(str,bytes):A string packed into an OPENFILENAME structure, probably via the struct module.CommentsThe win32gui::GetOpenFileNameW function is far more convenient to use.Return ValueIf the user presses OK, the function returns TRUE.  Otherwise, use CommDlgExtendedError for error details (ie, a win32gui.error is raised).  If the user cancels the dialog, the winerror attribute of the exception will be zero.
+      OPENFILENAME(Union[str, bytes]):A string packed into an OPENFILENAME structure, probably via the struct module.CommentsThe win32gui::GetOpenFileNameW function is far more convenient to use.Return ValueIf the user presses OK, the function returns TRUE.  Otherwise, use CommDlgExtendedError for error details (ie, a win32gui.error is raised).  If the user cancels the dialog, the winerror attribute of the exception will be zero.
 
 Returns:
 
@@ -3530,19 +3343,18 @@ Return ValueIf the user presses OK, the function returns TRUE.  Otherwise, use C
         
     """
     pass
+        
 
-
-def InsertMenuItem(hMenu:int,uItem:int,fByPosition:int,menuItem:typing.Any) -> None:
+def InsertMenuItem(hMenu:'int',uItem:'int',fByPosition:'int',menuItem:'Any') -> 'None':
     """
     Inserts a menu item
 
-
 Args:
 
       hMenu(int):Handle to the menu
       uItem(int):The menu item identifier or the menu item position.
       fByPosition(int):Boolean value of True if uItem is set to a menu item position. This parameter is set to False if uItem is set to a menu item identifier.
-      menuItem(typing.Any):A string or buffer in the format of a MENUITEMINFO structure.
+      menuItem(Any):A string or buffer in the format of a MENUITEMINFO structure.
 
 Returns:
 
@@ -3550,19 +3362,18 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMenuItemInfo(hMenu:int,uItem:int,fByPosition:int,menuItem:typing.Any) -> None:
+def SetMenuItemInfo(hMenu:'int',uItem:'int',fByPosition:'int',menuItem:'Any') -> 'None':
     """
     Sets menu information
 
-
 Args:
 
       hMenu(int):Handle to the menu
       uItem(int):The menu item identifier or the menu item position.
       fByPosition(int):Boolean value of True if uItem is set to a menu item position. This parameter is set to False if uItem is set to a menu item identifier.
-      menuItem(typing.Any):A string or buffer in the format of a MENUITEMINFO structure.
+      menuItem(Any):A string or buffer in the format of a MENUITEMINFO structure.
 
 Returns:
 
@@ -3570,19 +3381,18 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenuItemInfo(hMenu:int,uItem:int,fByPosition:int,menuItem:typing.Any) -> None:
+def GetMenuItemInfo(hMenu:'int',uItem:'int',fByPosition:'int',menuItem:'Any') -> 'None':
     """
     Gets menu information
 
-
 Args:
 
       hMenu(int):Handle to the menu
       uItem(int):The menu item identifier or the menu item position.
       fByPosition(int):Boolean value of True if uItem is set to a menu item position. This parameter is set to False if uItem is set to a menu item identifier.
-      menuItem(typing.Any):A string or buffer in the format of a MENUITEMINFO structure.
+      menuItem(Any):A string or buffer in the format of a MENUITEMINFO structure.
 
 Returns:
 
@@ -3590,12 +3400,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenuItemCount(hMenu:int) -> int:
+def GetMenuItemCount(hMenu:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -3607,12 +3416,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenuItemRect(hWnd:int,hMenu:int,uItem:int) -> typing.Any:
+def GetMenuItemRect(hWnd:'int',hMenu:'int',uItem:'int') -> 'Tuple[int, int, int, int]':
     """
     None
-
 
 Args:
 
@@ -3622,16 +3430,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[int, int, int, int]
         
     """
     pass
+        
 
-
-def GetMenuState(hMenu:int,uID:int,flags:int) -> int:
+def GetMenuState(hMenu:'int',uID:'int',flags:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -3645,12 +3452,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMenuDefaultItem(hMenu:int,uItem:int,fByPos:int) -> None:
+def SetMenuDefaultItem(hMenu:'int',uItem:'int',fByPos:'int') -> 'None':
     """
     None
-
 
 Args:
 
@@ -3664,12 +3470,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenuDefaultItem(hMenu:int,fByPos:int,flags:int) -> int:
+def GetMenuDefaultItem(hMenu:'int',fByPos:'int',flags:'int') -> 'int':
     """
     None
-
 
 Args:
 
@@ -3683,12 +3488,11 @@ Returns:
         
     """
     pass
+        
 
-
-def AppendMenu() -> None:
+def AppendMenu() -> 'None':
     """
     None
-
 
 Args:
 
@@ -3700,12 +3504,11 @@ Returns:
         
     """
     pass
+        
 
-
-def InsertMenu() -> None:
+def InsertMenu() -> 'None':
     """
     None
-
 
 Args:
 
@@ -3717,12 +3520,11 @@ Returns:
         
     """
     pass
+        
 
-
-def EnableMenuItem() -> None:
+def EnableMenuItem() -> 'None':
     """
     None
-
 
 Args:
 
@@ -3734,12 +3536,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CheckMenuItem() -> int:
+def CheckMenuItem() -> 'int':
     """
     None
-
 
 Args:
 
@@ -3751,12 +3552,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSubMenu(hMenu:int,nPos:int) -> typing.Any:
+def GetSubMenu(hMenu:'int',nPos:'int') -> 'Any':
     """
     None
-
 
 Args:
 
@@ -3765,16 +3565,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def ModifyMenu(hMnu:int,uPosition:int,uFlags:int,uIDNewItem:int,newItem:str) -> None:
+def ModifyMenu(hMnu:'int',uPosition:'int',uFlags:'int',uIDNewItem:'int',newItem:'str') -> 'None':
     """
     Changes an existing menu item. This function is used to specify the content, appearance, and behavior of the menu item.
-
 
 Args:
 
@@ -3790,12 +3589,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenuItemID(hMenu:int,nPos:int) -> int:
+def GetMenuItemID(hMenu:'int',nPos:'int') -> 'int':
     """
     Retrieves the menu item identifier of a menu item located at the specified position in a menu.
-
 
 Args:
 
@@ -3808,20 +3606,19 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMenuItemBitmaps(hMenu:int,uPosition:int,uFlags:int,hBitmapUnchecked:typing.Any,hBitmapChecked:typing.Any) -> None:
+def SetMenuItemBitmaps(hMenu:'int',uPosition:'int',uFlags:'int',hBitmapUnchecked:'PyGdiHANDLE',hBitmapChecked:'PyGdiHANDLE') -> 'None':
     """
     Associates the specified bitmap with a menu item. Whether the menu item is selected or clear, the system displays the appropriate bitmap next to the menu item.
-
 
 Args:
 
       hMenu(int):handle to menu
       uPosition(int):menu item
       uFlags(int):options
-      hBitmapUnchecked(typing.Any):handle to unchecked bitmap, can be None
-      hBitmapChecked(typing.Any):handle to checked bitmap, can be None
+      hBitmapUnchecked(PyGdiHANDLE):handle to unchecked bitmap, can be None
+      hBitmapChecked(PyGdiHANDLE):handle to checked bitmap, can be None
 
 Returns:
 
@@ -3829,16 +3626,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CheckMenuRadioItem(hMenu:int,idFirst:int,idLast:int,idCheck:int,uFlags:int) -> None:
+def CheckMenuRadioItem(hMenu:'int',idFirst:'int',idLast:'int',idCheck:'int',uFlags:'int') -> 'None':
     """
     Checks a specified menu item and makes it a 
 
 radio item. At the same time, the function clears all other menu items in 
 
 the associated group and clears the radio-item type flag for those items.
-
 
 Args:
 
@@ -3854,17 +3650,16 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMenuInfo(hmenu:int,info:typing.Any) -> None:
+def SetMenuInfo(hmenu:'int',info:'Any') -> 'None':
     """
     Sets information for a specified menu.
 
-
 Args:
 
       hmenu(int):handle to menu
-      info(typing.Any):menu information in the format of a buffer.CommentsSee win32gui_struct for helper functions.This function will raise NotImplementedError on early platforms (eg, Windows NT.)
+      info(Any):menu information in the format of a buffer.CommentsSee win32gui_struct for helper functions.This function will raise NotImplementedError on early platforms (eg, Windows NT.)
 
 Returns:
 
@@ -3872,17 +3667,16 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMenuInfo(hmenu:int,info:typing.Any) -> None:
+def GetMenuInfo(hmenu:'int',info:'Any') -> 'None':
     """
     Gets information about a specified menu.
 
-
 Args:
 
       hmenu(int):handle to menu
-      info(typing.Any):A buffer to fill with the information.CommentsSee win32gui_struct for helper functions.This function will raise NotImplementedError on early platforms (eg, Windows NT.)
+      info(Any):A buffer to fill with the information.CommentsSee win32gui_struct for helper functions.This function will raise NotImplementedError on early platforms (eg, Windows NT.)
 
 Returns:
 
@@ -3890,17 +3684,16 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawFocusRect(hDC:typing.Any,rc:typing.Any) -> None:
+def DrawFocusRect(hDC:'int',rc:'Tuple[int, int, int, int]') -> 'None':
     """
     Draws a standard focus outline around a rectangle
 
-
 Args:
 
-      hDC(typing.Any):Handle to a device context
-      rc(typing.Any):Tuple of (left,top,right,bottom) defining the rectangle
+      hDC(int):Handle to a device context
+      rc(Tuple[int, int, int, int]):Tuple of (left,top,right,bottom) defining the rectangle
 
 Returns:
 
@@ -3908,38 +3701,36 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawText(hDC:Union[int,typing.Any],String:str,nCount:int,Rect:typing.Any,Format:int) -> typing.Any:
+def DrawText(hDC:'Union[int]',String:'str',nCount:'int',Rect:'PyRECT',Format:'int') -> 'Tuple[int, PyRECT]':
     """
     Draws formatted text on a device context
 
-
 Args:
 
-      hDC(int,typing.Any):The device context on which to draw
+      hDC(Union[int]):The device context on which to draw
       String(str):The text to be drawn
       nCount(int):The number of characters, use -1 for simple null-terminated string
-      Rect(typing.Any):Tuple of 4 ints specifying the position (left, top, right, bottom)
+      Rect(PyRECT):Tuple of 4 ints specifying the position (left, top, right, bottom)
       Format(int):Formatting flags, combination of win32con.DT_* valuesReturn ValueReturns the height of the drawn text, and the rectangle coordinates
 
 Returns:
 
-      typing.Any:Formatting flags, combination of win32con.DT_* valuesReturn ValueReturns the height of the drawn text, and the rectangle coordinates
+      Tuple[int, PyRECT]:Formatting flags, combination of win32con.DT_* valuesReturn ValueReturns the height of the drawn text, and the rectangle coordinates
 
         
     """
     pass
+        
 
-
-def LineTo(hdc:typing.Any,XEnd:int,YEnd:int) -> None:
+def LineTo(hdc:'int',XEnd:'int',YEnd:'int') -> 'None':
     """
     Draw a line from current position to specified point
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       XEnd(int):Horizontal position in logical units
       YEnd(int):Vertical position in logical units
 
@@ -3949,16 +3740,15 @@ Returns:
         
     """
     pass
+        
 
-
-def Ellipse(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int) -> None:
+def Ellipse(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int') -> 'None':
     """
     Draws a filled ellipse on a device context
 
-
 Args:
 
-      hdc(typing.Any):Device context on which to draw
+      hdc(int):Device context on which to draw
       LeftRect(int):Left limit of ellipse
       TopRect(int):Top limit of ellipse
       RightRect(int):Right limit of ellipse
@@ -3970,16 +3760,15 @@ Returns:
         
     """
     pass
+        
 
-
-def Pie(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int,XRadial1:int,YRadial1:int,XRadial2:int,YRadial2:int) -> None:
+def Pie(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int',XRadial1:'int',YRadial1:'int',XRadial2:'int',YRadial2:'int') -> 'None':
     """
     Draws a section of an ellipse cut by 2 radials
 
-
 Args:
 
-      hdc(typing.Any):Device context on which to draw
+      hdc(int):Device context on which to draw
       LeftRect(int):Left limit of ellipse
       TopRect(int):Top limit of ellipse
       RightRect(int):Right limit of ellipse
@@ -3995,16 +3784,15 @@ Returns:
         
     """
     pass
+        
 
-
-def Arc(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int,XRadial1:int,YRadial1:int,XRadial2:int,YRadial2:int) -> None:
+def Arc(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int',XRadial1:'int',YRadial1:'int',XRadial2:'int',YRadial2:'int') -> 'None':
     """
     Draws an arc defined by an ellipse and 2 radials
 
-
 Args:
 
-      hdc(typing.Any):Device context on which to draw
+      hdc(int):Device context on which to draw
       LeftRect(int):Left limit of ellipse
       TopRect(int):Top limit of ellipse
       RightRect(int):Right limit of ellipse
@@ -4020,16 +3808,15 @@ Returns:
         
     """
     pass
+        
 
-
-def ArcTo(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int,XRadial1:int,YRadial1:int,XRadial2:int,YRadial2:int) -> None:
+def ArcTo(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int',XRadial1:'int',YRadial1:'int',XRadial2:'int',YRadial2:'int') -> 'None':
     """
     Draws an arc defined by an ellipse and 2 radials
 
-
 Args:
 
-      hdc(typing.Any):Device context on which to draw
+      hdc(int):Device context on which to draw
       LeftRect(int):Left limit of ellipse
       TopRect(int):Top limit of ellipse
       RightRect(int):Right limit of ellipse
@@ -4045,16 +3832,15 @@ Returns:
         
     """
     pass
+        
 
-
-def AngleArc(hdc:typing.Any,Y:int,Y1:int,Radius:int,StartAngle:float,SweepAngle:float) -> None:
+def AngleArc(hdc:'int',Y:'int',Y1:'int',Radius:'int',StartAngle:'float',SweepAngle:'float') -> 'None':
     """
     Draws a line from current pos and a section of a circle's arc
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       Y(int):x pos of circle
       Y1(int):y pos of circle
       Radius(int):Radius of circle
@@ -4067,16 +3853,15 @@ Returns:
         
     """
     pass
+        
 
-
-def Chord(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int,XRadial1:int,YRadial1:int,XRadial2:int,YRadial2:int) -> None:
+def Chord(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int',XRadial1:'int',YRadial1:'int',XRadial2:'int',YRadial2:'int') -> 'None':
     """
     Draws a chord defined by an ellipse and 2 radials
 
-
 Args:
 
-      hdc(typing.Any):Device context on which to draw
+      hdc(int):Device context on which to draw
       LeftRect(int):Left limit of ellipse
       TopRect(int):Top limit of ellipse
       RightRect(int):Right limit of ellipse
@@ -4092,16 +3877,15 @@ Returns:
         
     """
     pass
+        
 
-
-def ExtFloodFill(:typing.Any,XStart:int,YStart:int,Color:int,FillType:int) -> None:
+def ExtFloodFill(Unknow:'int',XStart:'int',YStart:'int',Color:'int',FillType:'int') -> 'None':
     """
     Fills an area with current brush
 
-
 Args:
 
-      (typing.Any):Handle to a device context
+      Unknow(int):Handle to a device context
       XStart(int):Horizontal starting pos
       YStart(int):Vertical starting pos
       Color(int):RGB color value.  See win32api::RGB.
@@ -4113,16 +3897,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetPixel(hdc:typing.Any,X:int,Y:int,Color:int) -> int:
+def SetPixel(hdc:'int',X:'int',Y:'int',Color:'int') -> 'int':
     """
     Set the color of a single pixel
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       X(int):Horizontal pos
       Y(int):Vertical pos
       Color(int):RGB color to be set.Return ValueReturns the RGB color actually set, which may be different from the one passed in
@@ -4134,16 +3917,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetPixel(hdc:typing.Any,XPos:int,YPos:int) -> int:
+def GetPixel(hdc:'int',XPos:'int',YPos:'int') -> 'int':
     """
     Returns the RGB color of a single pixel
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       XPos(int):Horizontal pos
       YPos(int):Vertical pos
 
@@ -4153,16 +3935,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetROP2(hdc:typing.Any) -> int:
+def GetROP2(hdc:'int') -> 'int':
     """
     Returns the foreground mixing mode of a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns one of win32con.R2_* values
+      hdc(int):Handle to a device contextReturn ValueReturns one of win32con.R2_* values
 
 Returns:
 
@@ -4171,16 +3952,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetROP2(hdc:typing.Any,DrawMode:int) -> int:
+def SetROP2(hdc:'int',DrawMode:'int') -> 'int':
     """
     Sets the foreground mixing mode of a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       DrawMode(int):Mixing mode, one of win32con.R2_*.Return ValueReturns previous mode
 
 Returns:
@@ -4190,16 +3970,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetPixelV(hdc:typing.Any,X:int,Y:int,Color:int) -> None:
+def SetPixelV(hdc:'int',X:'int',Y:'int',Color:'int') -> 'None':
     """
     Sets the color of a single pixel to an approximation of specified color
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       X(int):Horizontal pos
       Y(int):Vertical pos
       Color(int):RGB color to be set.
@@ -4210,53 +3989,50 @@ Returns:
         
     """
     pass
+        
 
-
-def MoveToEx(hdc:typing.Any,X:int,Y:int) -> typing.Any:
+def MoveToEx(hdc:'int',X:'int',Y:'int') -> 'Tuple[int, int]':
     """
     Changes the current drawing position
 
-
 Args:
 
-      hdc(typing.Any):Device context handle
+      hdc(int):Device context handle
       X(int):Horizontal pos in logical units
       Y(int):Vertical pos in logical unitsReturn ValueReturns the previous position as (X, Y)
 
 Returns:
 
-      typing.Any:Vertical pos in logical unitsReturn ValueReturns the previous position as (X, Y)
+      Tuple[int, int]:Vertical pos in logical unitsReturn ValueReturns the previous position as (X, Y)
 
         
     """
     pass
+        
 
-
-def GetCurrentPositionEx(hdc:typing.Any) -> typing.Any:
+def GetCurrentPositionEx(hdc:'int') -> 'Tuple[int, int]':
     """
     Returns a device context's current drawing position
 
-
 Args:
 
-      hdc(typing.Any):Device context
+      hdc(int):Device context
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def GetArcDirection(hdc:typing.Any) -> int:
+def GetArcDirection(hdc:'int') -> 'int':
     """
     Returns the direction in which rectangles and arcs are drawn
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueRecturns one of win32con.AD_* values
+      hdc(int):Handle to a device contextReturn ValueRecturns one of win32con.AD_* values
 
 Returns:
 
@@ -4265,16 +4041,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetArcDirection(hdc:typing.Any,ArcDirection:int) -> int:
+def SetArcDirection(hdc:'int',ArcDirection:'int') -> 'int':
     """
     Sets the drawing direction for arcs and rectangles
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       ArcDirection(int):One of win32con.AD_* constantsReturn ValueReturns the previous direction, or 0 on error.
 
 Returns:
@@ -4284,17 +4059,16 @@ Returns:
         
     """
     pass
+        
 
-
-def Polygon(hdc:typing.Any,Points:typing.Any) -> None:
+def Polygon(hdc:'int',Points:'List[Any]') -> 'None':
     """
     Draws a closed filled polygon defined by a sequence of points
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Points(typing.Any):Sequence of POINT tuples: ((x,y),...)
+      hdc(int):Handle to a device context
+      Points(List[Any]):Sequence of POINT tuples: ((x,y),...)
 
 Returns:
 
@@ -4302,17 +4076,16 @@ Returns:
         
     """
     pass
+        
 
-
-def Polyline(hdc:typing.Any,Points:typing.Any) -> None:
+def Polyline(hdc:'int',Points:'List[Any]') -> 'None':
     """
     Connects a sequence of points using currently selected pen
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Points(typing.Any):Sequence of POINT tuples: ((x,y),...)
+      hdc(int):Handle to a device context
+      Points(List[Any]):Sequence of POINT tuples: ((x,y),...)
 
 Returns:
 
@@ -4320,17 +4093,16 @@ Returns:
         
     """
     pass
+        
 
-
-def PolylineTo(hdc:typing.Any,Points:typing.Any) -> None:
+def PolylineTo(hdc:'int',Points:'List[Any]') -> 'None':
     """
     Draws a series of lines starting from current position.  Updates current position with end point.
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Points(typing.Any):Sequence of POINT tuples: ((x,y),...)
+      hdc(int):Handle to a device context
+      Points(List[Any]):Sequence of POINT tuples: ((x,y),...)
 
 Returns:
 
@@ -4338,17 +4110,16 @@ Returns:
         
     """
     pass
+        
 
-
-def PolyBezier(hdc:typing.Any,Points:typing.Any) -> None:
+def PolyBezier(hdc:'int',Points:'List[Any]') -> 'None':
     """
     Draws a series of Bezier curves starting from first point specified.
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Points(typing.Any):Sequence of POINT tuples: ((x,y),...).CommentsNumber of points must be a multiple of 3 plus 1.
+      hdc(int):Handle to a device context
+      Points(List[Any]):Sequence of POINT tuples: ((x,y),...).CommentsNumber of points must be a multiple of 3 plus 1.
 
 Returns:
 
@@ -4356,17 +4127,16 @@ Returns:
         
     """
     pass
+        
 
-
-def PolyBezierTo(hdc:typing.Any,Points:typing.Any) -> None:
+def PolyBezierTo(hdc:'int',Points:'List[Any]') -> 'None':
     """
     Draws a series of Bezier curves starting from current drawing position.
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      Points(typing.Any):Sequence of POINT tuples: ((x,y),...).CommentsPoints must contain 3 points for each curve.  Current position is updated with last endpoint.
+      hdc(int):Handle to a device context
+      Points(List[Any]):Sequence of POINT tuples: ((x,y),...).CommentsPoints must contain 3 points for each curve.  Current position is updated with last endpoint.
 
 Returns:
 
@@ -4374,23 +4144,22 @@ Returns:
         
     """
     pass
+        
 
-
-def PlgBlt(Dest:typing.Any,Point:tuple,Src:typing.Any,XSrc:int,YSrc:int,Width:int,Height:int,Mask:typing.Any=None,xMask:int=0,yMask:int=0) -> None:
+def PlgBlt(Dest:'int',Point:'tuple',Src:'int',XSrc:'int',YSrc:'int',Width:'int',Height:'int',Mask:'PyGdiHANDLE'=None,xMask:'int'=0,yMask:'int'=0) -> 'None':
     """
     Copies color from a rectangle into a parallelogram
 
-
 Args:
 
-      Dest(typing.Any):Destination DC
+      Dest(int):Destination DC
       Point(tuple):Sequence of 3 POINT tuples (x,y) describing a paralellogram
-      Src(typing.Any):Source device context
+      Src(int):Source device context
       XSrc(int):Left edge of source rectangle
       YSrc(int):Top of source rectangle
       Width(int):Width of source rectangle
       Height(int):Height of source rectangle
-      Mask(typing.Any):Handle to monochrome bitmap to mask source, can be None
+      Mask(PyGdiHANDLE):Handle to monochrome bitmap to mask source, can be None
       xMask(int):x pos in mask
       yMask(int):y pos in mask
 
@@ -4400,40 +4169,38 @@ Returns:
         
     """
     pass
+        
 
-
-def CreatePolygonRgn(Points:typing.Any,PolyFillMode:int) -> typing.Any:
+def CreatePolygonRgn(Points:'List[Any]',PolyFillMode:'int') -> 'PyGdiHANDLE':
     """
     Creates a region from a sequence of vertices
 
-
 Args:
 
-      Points(typing.Any):Sequence of POINT tuples: ((x,y),...).
+      Points(List[Any]):Sequence of POINT tuples: ((x,y),...).
       PolyFillMode(int):Filling mode, one of ALTERNATE, WINDING
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def ExtTextOut(hdc:typing.Any,int:typing.Any,int1:typing.Any,int1:typing.Any,rect:typing.Any,string:typing.Any,tuple:typing.Any) -> int:
+def ExtTextOut(hdc:'int',int:'Any',int1:'Any',int2:'Any',rect:'PyRECT',string:'Any',tuple:'Tuple[Tuple[Any, Any], ...]') -> 'int':
     """
     Writes text to a DC.
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      int(typing.Any):The x coordinate to write the text to.
-      int1(typing.Any):The y coordinate to write the text to.
-      int1(typing.Any):Specifies the rectangle type. This parameter can be one, both, or neither of ETO_CLIPPED and ETO_OPAQUE
-      rect(typing.Any):Specifies the text's bounding rectangle.  (Can be None.)
-      string(typing.Any):The text to write.
-      tuple(typing.Any):Optional array of values that indicate distance between origins of character cells.Win32 API References
+      hdc(int):Handle to a device context
+      int(Any):The x coordinate to write the text to.
+      int1(Any):The y coordinate to write the text to.
+      int2(Any):Specifies the rectangle type. This parameter can be one, both, or neither of ETO_CLIPPED and ETO_OPAQUE
+      rect(PyRECT):Specifies the text's bounding rectangle.  (Can be None.)
+      string(Any):The text to write.
+      tuple(Tuple[Tuple[Any, Any], ...]):Optional array of values that indicate distance between origins of character cells.Win32 API References
 
 Returns:
 
@@ -4443,12 +4210,11 @@ Return ValueAlways none.  If the function fails, an exception is raised.
         
     """
     pass
+        
 
-
-def GetTextColor(hdc:int) -> int:
+def GetTextColor(hdc:'int') -> 'int':
     """
     Returns the text color for a DC
-
 
 Args:
 
@@ -4461,12 +4227,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetTextColor(hdc:int,color:int) -> int:
+def SetTextColor(hdc:'int',color:'int') -> 'int':
     """
     Changes the text color for a device context
-
 
 Args:
 
@@ -4480,16 +4245,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetBkMode(hdc:typing.Any) -> int:
+def GetBkMode(hdc:'int') -> 'int':
     """
     Returns the background mode for a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns OPAQUE, TRANSPARENT, or 0 on failure
+      hdc(int):Handle to a device contextReturn ValueReturns OPAQUE, TRANSPARENT, or 0 on failure
 
 Returns:
 
@@ -4498,16 +4262,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetBkMode(hdc:Union[int,typing.Any],BkMode:int) -> int:
+def SetBkMode(hdc:'Union[int]',BkMode:'int') -> 'int':
     """
     Sets the background mode for a device context
 
-
 Args:
 
-      hdc(int,typing.Any):Handle to a device context
+      hdc(Union[int]):Handle to a device context
       BkMode(int):OPAQUE or TRANSPARENTReturn ValueReturns the previous mode, or 0 on failure
 
 Returns:
@@ -4517,16 +4280,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetBkColor(hdc:typing.Any) -> int:
+def GetBkColor(hdc:'int') -> 'int':
     """
     Returns the background color for a device context
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device contextReturn ValueReturns an RGB color value.  On error, returns CLR_INVALID.
+      hdc(int):Handle to a device contextReturn ValueReturns an RGB color value.  On error, returns CLR_INVALID.
 
 Returns:
 
@@ -4535,16 +4297,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetBkColor(hdc:Union[int,typing.Any],color:int) -> int:
+def SetBkColor(hdc:'Union[int]',color:'int') -> 'int':
     """
     Sets the background color for a device context
 
-
 Args:
 
-      hdc(int,typing.Any):Handle to a device context
+      hdc(Union[int]):Handle to a device context
       color(int):Return ValueReturns the previous color, or CLR_INVALID on failure
 
 Returns:
@@ -4554,39 +4315,37 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawEdge(hdc:typing.Any,rc:typing.Any,edge:int,Flags:int) -> typing.Any:
+def DrawEdge(hdc:'int',rc:'PyRECT',edge:'int',Flags:'int') -> 'PyRECT':
     """
     Draws edge(s) of a rectangle
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
-      rc(typing.Any):Rectangle whose edge(s) will be drawn
+      hdc(int):Handle to a device context
+      rc(PyRECT):Rectangle whose edge(s) will be drawn
       edge(int):Combination of win32con.BDR_* flags, or one of win32con.EDGE_* flags
       Flags(int):Combination of win32con.BF_* flagsReturn ValueBF_ADJUST flag causes input rectange to be shrunk by size of border.. Rectangle is always returned.
 
 Returns:
 
-      typing.Any:Combination of win32con.BF_* flagsReturn ValueBF_ADJUST flag causes input rectange to be shrunk by size of border.. Rectangle is always returned.
+      PyRECT:Combination of win32con.BF_* flagsReturn ValueBF_ADJUST flag causes input rectange to be shrunk by size of border.. Rectangle is always returned.
 
         
     """
     pass
+        
 
-
-def FillRect(hDC:typing.Any,rc:typing.Any,hbr:typing.Any) -> None:
+def FillRect(hDC:'int',rc:'PyRECT',hbr:'PyGdiHANDLE') -> 'None':
     """
     Fills a rectangular area with specified brush
 
-
 Args:
 
-      hDC(typing.Any):Handle to a device context
-      rc(typing.Any):Rectangle to be filled
-      hbr(typing.Any):Handle to brush to be used to fill area
+      hDC(int):Handle to a device context
+      rc(PyRECT):Rectangle to be filled
+      hbr(PyGdiHANDLE):Handle to brush to be used to fill area
 
 Returns:
 
@@ -4594,18 +4353,17 @@ Returns:
         
     """
     pass
+        
 
-
-def FillRgn(hdc:typing.Any,hrgn:typing.Any,hbr:typing.Any) -> None:
+def FillRgn(hdc:'int',hrgn:'PyGdiHANDLE',hbr:'PyGdiHANDLE') -> 'None':
     """
     Fills a region with specified brush
 
-
 Args:
 
-      hdc(typing.Any):Handle to the device context
-      hrgn(typing.Any):Handle to the region
-      hbr(typing.Any):Brush to be used
+      hdc(int):Handle to the device context
+      hrgn(PyGdiHANDLE):Handle to the region
+      hbr(PyGdiHANDLE):Brush to be used
 
 Returns:
 
@@ -4613,17 +4371,16 @@ Returns:
         
     """
     pass
+        
 
-
-def PaintRgn(hdc:typing.Any,hrgn:typing.Any) -> None:
+def PaintRgn(hdc:'int',hrgn:'PyGdiHANDLE') -> 'None':
     """
     Paints a region with current brush
 
-
 Args:
 
-      hdc(typing.Any):Handle to the device context
-      hrgn(typing.Any):Handle to the region
+      hdc(int):Handle to the device context
+      hrgn(PyGdiHANDLE):Handle to the region
 
 Returns:
 
@@ -4631,18 +4388,17 @@ Returns:
         
     """
     pass
+        
 
-
-def FrameRgn(hdc:typing.Any,hrgn:typing.Any,hbr:typing.Any,Width:int,Height:int) -> None:
+def FrameRgn(hdc:'int',hrgn:'Any',hbr:'Any',Width:'int',Height:'int') -> 'None':
     """
     Draws a frame around a region
 
-
 Args:
 
-      hdc(typing.Any):Handle to the device context
-      hrgn(typing.Any):Handle to the region
-      hbr(typing.Any):Handle to brush to be used
+      hdc(int):Handle to the device context
+      hrgn(Any):Handle to the region
+      hbr(Any):Handle to brush to be used
       Width(int):Frame width
       Height(int):Frame height
 
@@ -4652,17 +4408,16 @@ Returns:
         
     """
     pass
+        
 
-
-def InvertRgn(hdc:typing.Any,hrgn:typing.Any) -> None:
+def InvertRgn(hdc:'int',hrgn:'Any') -> 'None':
     """
     Inverts the colors in a region
 
-
 Args:
 
-      hdc(typing.Any):Handle to the device context
-      hrgn(typing.Any):Handle to the region
+      hdc(int):Handle to the device context
+      hrgn(Any):Handle to the region
 
 Returns:
 
@@ -4670,89 +4425,84 @@ Returns:
         
     """
     pass
+        
 
-
-def EqualRgn(SrcRgn1:typing.Any,SrcRgn2:typing.Any) -> typing.Any:
+def EqualRgn(SrcRgn1:'Any',SrcRgn2:'Any') -> 'Any':
     """
     Determines if 2 regions are equal
 
-
 Args:
 
-      SrcRgn1(typing.Any):Handle to a region
-      SrcRgn2(typing.Any):Handle to a region
+      SrcRgn1(Any):Handle to a region
+      SrcRgn2(Any):Handle to a region
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PtInRegion(hrgn:typing.Any,X:int,Y:int) -> typing.Any:
+def PtInRegion(hrgn:'Any',X:'int',Y:'int') -> 'Any':
     """
     Determines if a region contains a point
 
-
 Args:
 
-      hrgn(typing.Any):Handle to a region
+      hrgn(Any):Handle to a region
       X(int):X coord
       Y(int):Y coord
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def PtInRect(rect:typing.Any,point:typing.Any) -> typing.Any:
+def PtInRect(rect:'Tuple[int, int, int, int]',point:'Tuple[int, int]') -> 'Any':
     """
     Determines if a rectangle contains a point
 
-
 Args:
 
-      rect(typing.Any):The rect to check
-      point(typing.Any):The point
+      rect(Tuple[int, int, int, int]):The rect to check
+      point(Tuple[int, int]):The point
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def RectInRegion(hrgn:typing.Any,rc:typing.Any) -> typing.Any:
+def RectInRegion(hrgn:'Any',rc:'PyRECT') -> 'Any':
     """
     Determines if a region and rectangle overlap at any point
 
-
 Args:
 
-      hrgn(typing.Any):Handle to a region
-      rc(typing.Any):Rectangle coordinates in logical units
+      hrgn(Any):Handle to a region
+      rc(PyRECT):Rectangle coordinates in logical units
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def SetRectRgn(hrgn:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int) -> None:
+def SetRectRgn(hrgn:'Any',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int') -> 'None':
     """
     Makes an existing region rectangular
 
-
 Args:
 
-      hrgn(typing.Any):Handle to a region
+      hrgn(Any):Handle to a region
       LeftRect(int):Left edge in logical units
       TopRect(int):Top edge in logical units
       RightRect(int):Right edge in logical units
@@ -4764,18 +4514,17 @@ Returns:
         
     """
     pass
+        
 
-
-def CombineRgn(Dest:typing.Any,Src1:typing.Any,Src2:typing.Any,CombineMode:int) -> int:
+def CombineRgn(Dest:'Any',Src1:'Any',Src2:'Any',CombineMode:'int') -> 'int':
     """
     Combines two regions
 
-
 Args:
 
-      Dest(typing.Any):Handle to existing region that will receive combined region
-      Src1(typing.Any):Handle to first region
-      Src2(typing.Any):Handle to second region
+      Dest(Any):Handle to existing region that will receive combined region
+      Src1(Any):Handle to first region
+      Src2(Any):Handle to second region
       CombineMode(int):One of RGN_AND,RGN_COPY,RGN_DIFF,RGN_OR,RGN_XORReturn ValueReturns the type of region created, one of NULLREGION, SIMPLEREGION, COMPLEXREGION
 
 Returns:
@@ -4785,19 +4534,18 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawAnimatedRects(hwnd:int,idAni:int,minCoords:typing.Any,restCoords:typing.Any) -> None:
+def DrawAnimatedRects(hwnd:'int',idAni:'int',minCoords:'PyRECT',restCoords:'PyRECT') -> 'None':
     """
     Animates a rectangle in the manner of minimizing, mazimizing, or opening
-
 
 Args:
 
       hwnd(int):handle to clipping window
       idAni(int):type of animation, win32con.IDANI_*
-      minCoords(typing.Any):rectangle coordinates (minimized)
-      restCoords(typing.Any):rectangle coordinates (restored)
+      minCoords(PyRECT):rectangle coordinates (minimized)
+      restCoords(PyRECT):rectangle coordinates (restored)
 
 Returns:
 
@@ -4805,12 +4553,11 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateSolidBrush(Color:int) -> typing.Any:
+def CreateSolidBrush(Color:'int') -> 'PyGdiHANDLE':
     """
     Creates a solid brush of specified color
-
 
 Args:
 
@@ -4818,33 +4565,31 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def CreatePatternBrush(hbmp:typing.Any) -> typing.Any:
+def CreatePatternBrush(hbmp:'PyGdiHANDLE') -> 'PyGdiHANDLE':
     """
     Creates a brush using a bitmap as a pattern
 
-
 Args:
 
-      hbmp(typing.Any):Handle to a bitmap
+      hbmp(PyGdiHANDLE):Handle to a bitmap
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def CreateHatchBrush(Style:int,clrref:int) -> typing.Any:
+def CreateHatchBrush(Style:'int',clrref:'int') -> 'PyGdiHANDLE':
     """
     Creates a hatch brush with specified style and color
-
 
 Args:
 
@@ -4853,16 +4598,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def CreatePen(PenStyle:int,Width:int,Color:int) -> typing.Any:
+def CreatePen(PenStyle:'int',Width:'int',Color:'int') -> 'PyGdiHANDLE':
     """
     Create a GDI pen
-
 
 Args:
 
@@ -4872,16 +4616,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def GetSysColor(Index:int) -> int:
+def GetSysColor(Index:'int') -> 'int':
     """
     Returns the color of a window element
-
 
 Args:
 
@@ -4893,12 +4636,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSysColorBrush(Index:int) -> typing.Any:
+def GetSysColorBrush(Index:'int') -> 'PyGdiHANDLE':
     """
     Creates a handle to a system color brush
-
 
 Args:
 
@@ -4906,22 +4648,21 @@ Args:
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def InvalidateRect(hWnd:typing.Any,Rect:typing.Any,Erase:typing.Any) -> None:
+def InvalidateRect(hWnd:'int',Rect:'PyRECT',Erase:'Any') -> 'None':
     """
     Invalidates a rectangular area of a window and adds it to the window's update region
 
-
 Args:
 
-      hWnd(typing.Any):Handle to the window
-      Rect(typing.Any):Client coordinates defining area to be redrawn.  Use None for entire client area.
-      Erase(typing.Any):Indicates if background should be erased
+      hWnd(int):Handle to the window
+      Rect(PyRECT):Client coordinates defining area to be redrawn.  Use None for entire client area.
+      Erase(Any):Indicates if background should be erased
 
 Returns:
 
@@ -4929,18 +4670,17 @@ Returns:
         
     """
     pass
+        
 
-
-def FrameRect(hDC:typing.Any,rc:typing.Any,hbr:typing.Any) -> None:
+def FrameRect(hDC:'int',rc:'PyRECT',hbr:'PyGdiHANDLE') -> 'None':
     """
     Draws an outline around a rectangle
 
-
 Args:
 
-      hDC(typing.Any):Handle to a device context
-      rc(typing.Any):Rectangle around which to draw
-      hbr(typing.Any):Handle to brush created using CreateHatchBrush, CreatePatternBrush, CreateSolidBrush, or GetStockObject
+      hDC(int):Handle to a device context
+      rc(PyRECT):Rectangle around which to draw
+      hbr(PyGdiHANDLE):Handle to brush created using CreateHatchBrush, CreatePatternBrush, CreateSolidBrush, or GetStockObject
 
 Returns:
 
@@ -4948,17 +4688,16 @@ Returns:
         
     """
     pass
+        
 
-
-def InvertRect(hDC:typing.Any,rc:typing.Any) -> None:
+def InvertRect(hDC:'int',rc:'PyRECT') -> 'None':
     """
     Inverts the colors in a regtangular region
 
-
 Args:
 
-      hDC(typing.Any):Handle to a device context
-      rc(typing.Any):Coordinates of rectangle to invert
+      hDC(int):Handle to a device context
+      rc(PyRECT):Coordinates of rectangle to invert
 
 Returns:
 
@@ -4966,16 +4705,15 @@ Returns:
         
     """
     pass
+        
 
-
-def WindowFromDC(hDC:typing.Any) -> int:
+def WindowFromDC(hDC:'int') -> 'int':
     """
     Finds the window associated with a device context
 
-
 Args:
 
-      hDC(typing.Any):Handle to a device contextReturn ValueReturns a handle to the window, or 0 if the DC is not associated with a window
+      hDC(int):Handle to a device contextReturn ValueReturns a handle to the window, or 0 if the DC is not associated with a window
 
 Returns:
 
@@ -4984,18 +4722,17 @@ Returns:
         
     """
     pass
+        
 
-
-def GetUpdateRgn(hWnd:typing.Any,hRgn:typing.Any,Erase:typing.Any) -> int:
+def GetUpdateRgn(hWnd:'int',hRgn:'PyGdiHANDLE',Erase:'Any') -> 'int':
     """
     Copies the update region of a window into an existing region
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      hRgn(typing.Any):Handle to an existing region to receive update area
-      Erase(typing.Any):Indicates if window background is to be erasedReturn ValueReturns type of region, one of COMPLEXREGION, NULLREGION, or SIMPLEREGION
+      hWnd(int):Handle to a window
+      hRgn(PyGdiHANDLE):Handle to an existing region to receive update area
+      Erase(Any):Indicates if window background is to be erasedReturn ValueReturns type of region, one of COMPLEXREGION, NULLREGION, or SIMPLEREGION
 
 Returns:
 
@@ -5004,17 +4741,16 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowRgn(hWnd:typing.Any,hRgn:typing.Any) -> int:
+def GetWindowRgn(hWnd:'int',hRgn:'PyGdiHANDLE') -> 'int':
     """
     Copies the window region of a window into an existing region
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      hRgn(typing.Any):Handle to an existing region that receives window regionReturn ValueReturns type of region, one of COMPLEXREGION, NULLREGION, or SIMPLEREGION
+      hWnd(int):Handle to a window
+      hRgn(PyGdiHANDLE):Handle to an existing region that receives window regionReturn ValueReturns type of region, one of COMPLEXREGION, NULLREGION, or SIMPLEREGION
 
 Returns:
 
@@ -5023,18 +4759,17 @@ Returns:
         
     """
     pass
+        
 
-
-def SetWindowRgn(hWnd:typing.Any,hRgn:typing.Any,Redraw:typing.Any) -> None:
+def SetWindowRgn(hWnd:'int',hRgn:'PyGdiHANDLE',Redraw:'Any') -> 'None':
     """
     Sets the visible region of a window
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      hRgn(typing.Any):Handle to region to be set, can be None
-      Redraw(typing.Any):Indicates if window should be completely redrawnCommentsOn success, the system assumes ownership of the region so you should call the handle's Detach() method to prevent it from being automatically closed.
+      hWnd(int):Handle to a window
+      hRgn(PyGdiHANDLE):Handle to region to be set, can be None
+      Redraw(Any):Indicates if window should be completely redrawnCommentsOn success, the system assumes ownership of the region so you should call the handle's Detach() method to prevent it from being automatically closed.
 
 Returns:
 
@@ -5042,20 +4777,19 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowRgnBox(hWnd:typing.Any) -> typing.Any:
+def GetWindowRgnBox(hWnd:'int') -> 'Tuple[int, PyRECT]':
     """
     Returns the bounding box for a window's region
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window that has a window region. (see win32gui::SetWindowRgn)CommentsOnly available in winxpguiReturn ValueReturns type of region and rectangle coordinates in device units
+      hWnd(int):Handle to a window that has a window region. (see win32gui::SetWindowRgn)CommentsOnly available in winxpguiReturn ValueReturns type of region and rectangle coordinates in device units
 
 Returns:
 
-      typing.Any:Handle to a window that has a window region. (see win32gui::SetWindowRgn)Comments
+      Tuple[int, PyRECT]:Handle to a window that has a window region. (see win32gui::SetWindowRgn)Comments
 
 Only available in winxpgui
 Return ValueReturns type of region and rectangle coordinates in device units
@@ -5063,17 +4797,16 @@ Return ValueReturns type of region and rectangle coordinates in device units
         
     """
     pass
+        
 
-
-def ValidateRgn(hWnd:typing.Any,hRgn:typing.Any) -> None:
+def ValidateRgn(hWnd:'int',hRgn:'PyGdiHANDLE') -> 'None':
     """
     Removes a region from a window's update region
 
-
 Args:
 
-      hWnd(typing.Any):Handle to the window
-      hRgn(typing.Any):Region to be validated
+      hWnd(int):Handle to the window
+      hRgn(PyGdiHANDLE):Region to be validated
 
 Returns:
 
@@ -5081,18 +4814,17 @@ Returns:
         
     """
     pass
+        
 
-
-def InvalidateRgn(hWnd:typing.Any,hRgn:typing.Any,Erase:typing.Any) -> None:
+def InvalidateRgn(hWnd:'int',hRgn:'PyGdiHANDLE',Erase:'Any') -> 'None':
     """
     Adds a region to a window's update region
 
-
 Args:
 
-      hWnd(typing.Any):Handle to the window
-      hRgn(typing.Any):Region to be redrawn
-      Erase(typing.Any):Indidates if background should be erased
+      hWnd(int):Handle to the window
+      hRgn(PyGdiHANDLE):Region to be redrawn
+      Erase(Any):Indidates if background should be erased
 
 Returns:
 
@@ -5100,34 +4832,32 @@ Returns:
         
     """
     pass
+        
 
-
-def GetRgnBox(hrgn:typing.Any) -> typing.Any:
+def GetRgnBox(hrgn:'PyGdiHANDLE') -> 'Tuple[int, PyRECT]':
     """
     Calculates the bounding box of a region
 
-
 Args:
 
-      hrgn(typing.Any):Handle to a regionReturn ValueReturns type of region (COMPLEXREGION, NULLREGION, or SIMPLEREGION) and rectangle in logical units
+      hrgn(PyGdiHANDLE):Handle to a regionReturn ValueReturns type of region (COMPLEXREGION, NULLREGION, or SIMPLEREGION) and rectangle in logical units
 
 Returns:
 
-      typing.Any:Handle to a regionReturn ValueReturns type of region (COMPLEXREGION, NULLREGION, or SIMPLEREGION) and rectangle in logical units
+      Tuple[int, PyRECT]:Handle to a regionReturn ValueReturns type of region (COMPLEXREGION, NULLREGION, or SIMPLEREGION) and rectangle in logical units
 
         
     """
     pass
+        
 
-
-def OffsetRgn(hrgn:typing.Any,XOffset:int,YOffset:int) -> int:
+def OffsetRgn(hrgn:'PyGdiHANDLE',XOffset:'int',YOffset:'int') -> 'int':
     """
     Relocates a region
 
-
 Args:
 
-      hrgn(typing.Any):Handle to a region
+      hrgn(PyGdiHANDLE):Handle to a region
       XOffset(int):Horizontal offset
       YOffset(int):Vertical offsetReturn ValueReturns type of region (COMPLEXREGION, NULLREGION, or SIMPLEREGION)
 
@@ -5138,16 +4868,15 @@ Returns:
         
     """
     pass
+        
 
-
-def Rectangle(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int) -> None:
+def Rectangle(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int') -> 'None':
     """
     Creates a solid rectangle using currently selected pen and brush
 
-
 Args:
 
-      hdc(typing.Any):Handle to device context
+      hdc(int):Handle to device context
       LeftRect(int):Position of left edge of rectangle
       TopRect(int):Position of top edge of rectangle
       RightRect(int):Position of right edge of rectangle
@@ -5159,16 +4888,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RoundRect(hdc:typing.Any,LeftRect:int,TopRect:int,RightRect:int,BottomRect:int,Width:int,Height:int) -> None:
+def RoundRect(hdc:'int',LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int',Width:'int',Height:'int') -> 'None':
     """
     Draws a rectangle with elliptically rounded corners, filled using using current brush
 
-
 Args:
 
-      hdc(typing.Any):Handle to device context
+      hdc(int):Handle to device context
       LeftRect(int):Position of left edge of rectangle
       TopRect(int):Position of top edge of rectangle
       RightRect(int):Position of right edge of rectangle
@@ -5182,12 +4910,11 @@ Returns:
         
     """
     pass
+        
 
-
-def BeginPaint() -> typing.Any:
+def BeginPaint() -> 'Tuple[Any, Any]':
     """
     None
-
 
 Args:
 
@@ -5195,21 +4922,20 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[Any, Any]
         
     """
     pass
+        
 
-
-def EndPaint(hwnd:int,ps:typing.Any) -> None:
+def EndPaint(hwnd:'int',ps:'Any') -> 'None':
     """
     None
-
 
 Args:
 
       hwnd(int):
-      ps(typing.Any):As returned from win32gui::BeginPaint
+      ps(Any):As returned from win32gui::BeginPaint
 
 Returns:
 
@@ -5217,16 +4943,15 @@ Returns:
         
     """
     pass
+        
 
-
-def BeginPath(hdc:typing.Any) -> None:
+def BeginPath(hdc:'int') -> 'None':
     """
     Initializes a path in a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
@@ -5234,16 +4959,15 @@ Returns:
         
     """
     pass
+        
 
-
-def EndPath(hdc:typing.Any) -> None:
+def EndPath(hdc:'int') -> 'None':
     """
     None
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
@@ -5251,16 +4975,15 @@ Returns:
         
     """
     pass
+        
 
-
-def AbortPath(hdc:typing.Any) -> None:
+def AbortPath(hdc:'int') -> 'None':
     """
     None
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
@@ -5268,16 +4991,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CloseFigure(hdc:typing.Any) -> None:
+def CloseFigure(hdc:'int') -> 'None':
     """
     Closes a section of a path by connecting the beginning pos with the current pos
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains an open path. See win32gui::BeginPath.
+      hdc(int):Handle to a device context that contains an open path. See win32gui::BeginPath.
 
 Returns:
 
@@ -5285,16 +5007,15 @@ Returns:
         
     """
     pass
+        
 
-
-def FlattenPath(hdc:typing.Any) -> None:
+def FlattenPath(hdc:'int') -> 'None':
     """
     Flattens any curves in current path into a series of lines
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains a closed path. See win32gui::EndPath.
+      hdc(int):Handle to a device context that contains a closed path. See win32gui::EndPath.
 
 Returns:
 
@@ -5302,16 +5023,15 @@ Returns:
         
     """
     pass
+        
 
-
-def FillPath(hdc:typing.Any) -> None:
+def FillPath(hdc:'int') -> 'None':
     """
     Fills a path with currently selected brush
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains a finalized path. See win32gui::EndPath.CommentsAny open figures are closed and path is deselected from the DC.
+      hdc(int):Handle to a device context that contains a finalized path. See win32gui::EndPath.CommentsAny open figures are closed and path is deselected from the DC.
 
 Returns:
 
@@ -5319,16 +5039,15 @@ Returns:
         
     """
     pass
+        
 
-
-def WidenPath(hdc:typing.Any) -> None:
+def WidenPath(hdc:'int') -> 'None':
     """
     Widens current path by amount it would increase by if drawn with currently selected pen
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains a closed path. See win32gui::EndPath.
+      hdc(int):Handle to a device context that contains a closed path. See win32gui::EndPath.
 
 Returns:
 
@@ -5336,16 +5055,15 @@ Returns:
         
     """
     pass
+        
 
-
-def StrokePath(hdc:typing.Any) -> None:
+def StrokePath(hdc:'int') -> 'None':
     """
     Draws current path with currently selected pen
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains a closed path. See win32gui::EndPath.
+      hdc(int):Handle to a device context that contains a closed path. See win32gui::EndPath.
 
 Returns:
 
@@ -5353,16 +5071,15 @@ Returns:
         
     """
     pass
+        
 
-
-def StrokeAndFillPath(hdc:typing.Any) -> None:
+def StrokeAndFillPath(hdc:'int') -> 'None':
     """
     Combines operations of StrokePath and FillPath with no overlap
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains a closed path. See win32gui::EndPath.
+      hdc(int):Handle to a device context that contains a closed path. See win32gui::EndPath.
 
 Returns:
 
@@ -5370,16 +5087,15 @@ Returns:
         
     """
     pass
+        
 
-
-def GetMiterLimit(hdc:typing.Any) -> float:
+def GetMiterLimit(hdc:'int') -> 'float':
     """
     Retrieves the limit of miter joins for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
 
 Returns:
 
@@ -5387,16 +5103,15 @@ Returns:
         
     """
     pass
+        
 
-
-def SetMiterLimit(hdc:typing.Any,NewLimit:float) -> float:
+def SetMiterLimit(hdc:'int',NewLimit:'float') -> 'float':
     """
     Set the limit of miter joins for a DC
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context
+      hdc(int):Handle to a device context
       NewLimit(float):New limit to be setReturn ValueReturns the previous limit
 
 Returns:
@@ -5406,47 +5121,44 @@ Returns:
         
     """
     pass
+        
 
-
-def PathToRegion(hdc:typing.Any) -> typing.Any:
+def PathToRegion(hdc:'int') -> 'PyGdiHANDLE':
     """
     Converts a closed path in a DC to a region
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context that contains a closed path. See win32gui::EndPath.CommentsOn success, the path is deselected from the DC
+      hdc(int):Handle to a device context that contains a closed path. See win32gui::EndPath.CommentsOn success, the path is deselected from the DC
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def GetPath(hdc:typing.Any) -> typing.Any:
+def GetPath(hdc:'int') -> 'Tuple[tuple, tuple]':
     """
     Returns a sequence of points that describe the current path
 
-
 Args:
 
-      hdc(typing.Any):Handle to a device context containing a finalized path.  See win32gui::EndPathReturn ValueReturns a sequence of POINT tuples, and a sequence of ints designating each point's function (combination of win32con.PT_* values)
+      hdc(int):Handle to a device context containing a finalized path.  See win32gui::EndPathReturn ValueReturns a sequence of POINT tuples, and a sequence of ints designating each point's function (combination of win32con.PT_* values)
 
 Returns:
 
-      typing.Any:Handle to a device context containing a finalized path.  See win32gui::EndPathReturn ValueReturns a sequence of POINT tuples, and a sequence of ints designating each point's function (combination of win32con.PT_* values)
+      Tuple[tuple, tuple]:Handle to a device context containing a finalized path.  See win32gui::EndPathReturn ValueReturns a sequence of POINT tuples, and a sequence of ints designating each point's function (combination of win32con.PT_* values)
 
         
     """
     pass
+        
 
-
-def CreateRoundRectRgn(LeftRect:int,TopRect:int,RightRect:int,BottomRect:int,WidthEllipse:int,HeightEllipse:int) -> typing.Any:
+def CreateRoundRectRgn(LeftRect:'int',TopRect:'int',RightRect:'int',BottomRect:'int',WidthEllipse:'int',HeightEllipse:'int') -> 'Any':
     """
     Create a rectangular region with elliptically rounded corners,
-
 
 Args:
 
@@ -5459,55 +5171,52 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CreateRectRgnIndirect(rc:typing.Any) -> typing.Any:
+def CreateRectRgnIndirect(rc:'PyRECT') -> 'Any':
     """
     Creates a rectangular region,
 
-
 Args:
 
-      rc(typing.Any):Coordinates of rectangle
+      rc(PyRECT):Coordinates of rectangle
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CreateEllipticRgnIndirect(rc:typing.Any) -> typing.Any:
+def CreateEllipticRgnIndirect(rc:'PyRECT') -> 'Any':
     """
     Creates an ellipse region,
 
-
 Args:
 
-      rc(typing.Any):Coordinates of bounding rectangle in logical units
+      rc(PyRECT):Coordinates of bounding rectangle in logical units
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        
 
-
-def CreateWindowEx(dwExStyle:int,className:Union[int,str],windowTitle:str,style:int,x:int,y:int,width:int,height:int,parent:int,menu:int,hinstance:int,reserved:None) -> int:
+def CreateWindowEx(dwExStyle:'int',className:'Union[str, int]',windowTitle:'str',style:'int',x:'int',y:'int',width:'int',height:'int',parent:'int',menu:'int',hinstance:'int',reserved:'None') -> 'int':
     """
     Creates a new window with Extended Style.
-
 
 Args:
 
       dwExStyle(int):extended window style
-      className(int,str):
+      className(Union[str, int]):
       windowTitle(str):
       style(int):The style for the window.
       x(int):
@@ -5525,12 +5234,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetParent(child:int) -> int:
+def GetParent(child:'int') -> 'int':
     """
     Retrieves a handle to the specified child window's parent window.
-
 
 Args:
 
@@ -5542,12 +5250,11 @@ Returns:
         
     """
     pass
+        
 
-
-def SetParent(child:int,child1:int) -> int:
+def SetParent(child:'int',child1:'int') -> 'int':
     """
     changes the parent window of the specified child window.
-
 
 Args:
 
@@ -5560,12 +5267,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCursorPos() -> typing.Any:
+def GetCursorPos() -> 'Tuple[int, int]':
     """
     retrieves the cursor's position, in screen coordinates.
-
 
 Args:
 
@@ -5573,16 +5279,15 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[int, int]
         
     """
     pass
+        
 
-
-def GetDesktopWindow() -> int:
+def GetDesktopWindow() -> 'int':
     """
     returns the desktop window
-
 
 Args:
 
@@ -5594,12 +5299,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindow(hWnd:int,uCmd:int) -> int:
+def GetWindow(hWnd:'int',uCmd:'int') -> 'int':
     """
     returns a window that has the specified relationship (Z order or owner) to the specified window.
-
 
 Args:
 
@@ -5612,12 +5316,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetWindowDC(hWnd:int) -> int:
+def GetWindowDC(hWnd:'int') -> 'int':
     """
     returns the device context (DC) for the entire window, including title bar, menus, and scroll bars.
-
 
 Args:
 
@@ -5629,13 +5332,12 @@ Returns:
         
     """
     pass
+        
 
-
-def IsIconic(hWnd:int) -> None:
+def IsIconic(hWnd:'int') -> 'None':
     """
     determines whether the specified window is minimized (iconic).
 
-
 Args:
 
       hWnd(int):handle to window
@@ -5646,13 +5348,12 @@ Returns:
         
     """
     pass
+        
 
-
-def IsWindow(hWnd:int) -> None:
+def IsWindow(hWnd:'int') -> 'None':
     """
     determines whether the specified window handle identifies an existing window.
 
-
 Args:
 
       hWnd(int):handle to window
@@ -5663,12 +5364,11 @@ Returns:
         
     """
     pass
+        
 
-
-def IsChild(hWndParent:int,hWnd:int) -> None:
+def IsChild(hWndParent:'int',hWnd:'int') -> 'None':
     """
     Tests whether a window is a child window or descendant window of a specified parent window
-
 
 Args:
 
@@ -5681,12 +5381,11 @@ Returns:
         
     """
     pass
+        
 
-
-def ReleaseCapture() -> None:
+def ReleaseCapture() -> 'None':
     """
     Releases the moust capture for a window.
-
 
 Args:
 
@@ -5698,12 +5397,11 @@ Returns:
         
     """
     pass
+        
 
-
-def GetCapture() -> int:
+def GetCapture() -> 'int':
     """
     Returns the window with the mouse capture.
-
 
 Args:
 
@@ -5715,13 +5413,12 @@ Returns:
         
     """
     pass
+        
 
-
-def SetCapture() -> None:
+def SetCapture() -> 'None':
     """
     Captures the mouse for the specified window.
 
-
 Args:
 
 
@@ -5732,16 +5429,15 @@ Returns:
         
     """
     pass
+        
 
-
-def _TrackMouseEvent(tme:typing.Any) -> None:
+def _TrackMouseEvent(tme:'TRACKMOUSEEVENT') -> 'None':
     """
     Posts messages when the mouse pointer leaves a window or hovers over a window for a specified amount of time.
 
-
 Args:
 
-      tme(typing.Any):
+      tme(TRACKMOUSEEVENT):
 
 Returns:
 
@@ -5749,12 +5445,11 @@ Returns:
         
     """
     pass
+        
 
-
-def ReleaseDC(hWnd:int,hDC:int) -> int:
+def ReleaseDC(hWnd:'int',hDC:'int') -> 'int':
     """
     Releases a device context.
-
 
 Args:
 
@@ -5767,17 +5462,16 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateCaret(hWnd:int,hBitmap:typing.Any,nWidth:int,nHeight:int) -> None:
+def CreateCaret(hWnd:'int',hBitmap:'PyGdiHANDLE',nWidth:'int',nHeight:'int') -> 'None':
     """
     Creates a new caret for a window
-
 
 Args:
 
       hWnd(int):handle to owner window
-      hBitmap(typing.Any):handle to bitmap for caret shape
+      hBitmap(PyGdiHANDLE):handle to bitmap for caret shape
       nWidth(int):caret width
       nHeight(int):caret height
 
@@ -5787,12 +5481,11 @@ Returns:
         
     """
     pass
+        
 
-
-def DestroyCaret() -> None:
+def DestroyCaret() -> 'None':
     """
     Destroys caret for current task
-
 
 Args:
 
@@ -5804,44 +5497,42 @@ Returns:
         
     """
     pass
+        
 
-
-def ScrollWindowEx(hWnd:int,dx:int,dy:int,rcScroll:typing.Any,rcClip:typing.Any,hrgnUpdate:typing.Any,flags:int) -> typing.Any:
+def ScrollWindowEx(hWnd:'int',dx:'int',dy:'int',rcScroll:'PyRECT',rcClip:'PyRECT',hrgnUpdate:'Any',flags:'int') -> 'Tuple[int, PyRECT]':
     """
     scrolls the content of the specified window's client area.
-
 
 Args:
 
       hWnd(int):handle to window to scroll
       dx(int):Amount of horizontal scrolling, in device units
       dy(int):Amount of vertical scrolling, in device units
-      rcScroll(typing.Any):Scroll rectangle, can be None for entire client area
-      rcClip(typing.Any):Clipping rectangle, can be None
-      hrgnUpdate(typing.Any):Handle to region which will be updated with area invalidated by scroll operation, can be None
+      rcScroll(PyRECT):Scroll rectangle, can be None for entire client area
+      rcClip(PyRECT):Clipping rectangle, can be None
+      hrgnUpdate(Any):Handle to region which will be updated with area invalidated by scroll operation, can be None
       flags(int):Scrolling flags, combination of SW_ERASE,SW_INVALIDATE,SW_SCROLLCHILDREN,SW_SMOOTHSCROLL. If SW_SMOOTHSCROLL is specified, use upper 16 bits to specify time in milliseconds.Return ValueReturns the type of region invalidated by scrolling, and a rectangle defining the affected area.
 
 Returns:
 
-      typing.Any:Scrolling flags, combination of SW_ERASE,SW_INVALIDATE,SW_SCROLLCHILDREN,SW_SMOOTHSCROLL. 
+      Tuple[int, PyRECT]:Scrolling flags, combination of SW_ERASE,SW_INVALIDATE,SW_SCROLLCHILDREN,SW_SMOOTHSCROLL. 
 
 If SW_SMOOTHSCROLL is specified, use upper 16 bits to specify time in milliseconds.Return ValueReturns the type of region invalidated by scrolling, and a rectangle defining the affected area.
 
         
     """
     pass
+        
 
-
-def SetScrollInfo(hwnd:int,nBar:int,scollInfo:typing.Any,bRedraw:int=1) -> None:
+def SetScrollInfo(hwnd:'int',nBar:'int',scollInfo:'PySCROLLINFO',bRedraw:'int'=1) -> 'None':
     """
     Sets information about a scroll-bar
-
 
 Args:
 
       hwnd(int):The handle to the window.
       nBar(int):Identifies the bar.
-      scollInfo(typing.Any):Scollbar info.
+      scollInfo(PySCROLLINFO):Scollbar info.
       bRedraw(int):Should the bar be redrawn?Return ValueReturns an int with the current position of the scroll box.
 
 Returns:
@@ -5852,12 +5543,11 @@ Return ValueReturns an int with the current position of the scroll box.
         
     """
     pass
+        
 
-
-def GetScrollInfo(hwnd:int,nBar:int,mask:int) -> typing.Any:
+def GetScrollInfo(hwnd:'int',nBar:'int',mask:'int') -> 'PySCROLLINFO':
     """
     Returns information about a scroll bar
-
 
 Args:
 
@@ -5867,20 +5557,19 @@ Args:
 
 Returns:
 
-      typing.Any
+      PySCROLLINFO
         
     """
     pass
+        
 
-
-def GetClassName(hwnd:typing.Any) -> str:
+def GetClassName(hwnd:'int') -> 'str':
     """
     Retrieves the name of the class to which the specified window belongs.
 
-
 Args:
 
-      hwnd(typing.Any):The handle to the window
+      hwnd(int):The handle to the window
 
 Returns:
 
@@ -5888,16 +5577,15 @@ Returns:
         
     """
     pass
+        
 
-
-def WindowFromPoint(point:typing.Any) -> int:
+def WindowFromPoint(point:'Tuple[int, int]') -> 'int':
     """
     Retrieves a handle to the window that contains the specified point.
 
-
 Args:
 
-      point(typing.Any):The point.
+      point(Tuple[int, int]):The point.
 
 Returns:
 
@@ -5905,17 +5593,16 @@ Returns:
         
     """
     pass
+        
 
-
-def ChildWindowFromPoint(hwndParent:int,point:typing.Any) -> int:
+def ChildWindowFromPoint(hwndParent:'int',point:'Tuple[int, int]') -> 'int':
     """
     Determines which, if any, of the child windows belonging to a parent window contains the specified point.
-
 
 Args:
 
       hwndParent(int):The parent.
-      point(typing.Any):The point.
+      point(Tuple[int, int]):The point.
 
 Returns:
 
@@ -5923,17 +5610,16 @@ Returns:
         
     """
     pass
+        
 
-
-def ChildWindowFromPoint(hwndParent:int,point:typing.Any) -> int:
+def ChildWindowFromPoint(hwndParent:'int',point:'Tuple[int, int]') -> 'int':
     """
     Determines which, if any, of the child windows belonging to a parent window contains the specified point.
-
 
 Args:
 
       hwndParent(int):The parent.
-      point(typing.Any):The point.
+      point(Tuple[int, int]):The point.
 
 Returns:
 
@@ -5941,18 +5627,17 @@ Returns:
         
     """
     pass
+        
 
-
-def ListView_SortItems(hwnd:int,callback:typing.Any,param:typing.Any=None) -> None:
+def ListView_SortItems(hwnd:'int',callback:'Any',param:'Any'=None) -> 'None':
     """
     Uses an application-defined comparison function to sort the items of a list view control.
-
 
 Args:
 
       hwnd(int):The handle to the window
-      callback(typing.Any):A callback object, taking 3 params.
-      param(typing.Any):The third param to the callback function.
+      callback(Any):A callback object, taking 3 params.
+      param(Any):The third param to the callback function.
 
 Returns:
 
@@ -5960,18 +5645,17 @@ Returns:
         
     """
     pass
+        
 
-
-def ListView_SortItemsEx(hwnd:int,callback:typing.Any,param:typing.Any=None) -> None:
+def ListView_SortItemsEx(hwnd:'int',callback:'Any',param:'Any'=None) -> 'None':
     """
     Uses an application-defined comparison function to sort the items of a list view control.
-
 
 Args:
 
       hwnd(int):The handle to the window
-      callback(typing.Any):A callback object, taking 3 params.
-      param(typing.Any):The third param to the callback function.
+      callback(Any):A callback object, taking 3 params.
+      param(Any):The third param to the callback function.
 
 Returns:
 
@@ -5979,18 +5663,17 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateDC(Driver:str,Device:str,InitData:typing.Any) -> int:
+def CreateDC(Driver:'str',Device:'str',InitData:'PyDEVMODE') -> 'int':
     """
     Creates a device context for a printer or display device
-
 
 Args:
 
       Driver(str):Name of display or print provider, usually DISPLAY or WINSPOOL
       Device(str):Name of specific device, eg printer name returned from GetDefaultPrinter
-      InitData(typing.Any):A PyDEVMODE that specifies printing parameters, use None for printer defaults
+      InitData(PyDEVMODE):A PyDEVMODE that specifies printing parameters, use None for printer defaults
 
 Returns:
 
@@ -5998,31 +5681,30 @@ Returns:
         
     """
     pass
+        
 
-
-def GetSaveFileNameW(hwndOwner:typing.Any=None,hInstance:typing.Any=None,Filter:typing.Any=None,CustomFilter:typing.Any=None,FilterIndex:int=0,File:typing.Any=None,MaxFile:int=1024,InitialDir:typing.Any=None,Title:typing.Any=None,Flags:int=0,DefExt:typing.Any=None,TemplateName:typing.Any=None) -> typing.Any:
+def GetSaveFileNameW(hwndOwner:'int'=None,hInstance:'int'=None,Filter:'Any'=None,CustomFilter:'Any'=None,FilterIndex:'int'=0,File:'Any'=None,MaxFile:'int'=1024,InitialDir:'Any'=None,Title:'Any'=None,Flags:'int'=0,DefExt:'Any'=None,TemplateName:'PyResourceId'=None) -> 'Tuple[Any, Any, int]':
     """
     Creates a dialog for user to specify location to save a file or files
 
-
 Args:
 
-      hwndOwner(typing.Any):Handle to window that owns dialog
-      hInstance(typing.Any):Handle to module that contains dialog template
-      Filter(typing.Any):Contains pairs of descriptions and filespecs separated by NULLS, with a final trailing NULL. Example: 'Python Scripts\\0*.py;*.pyw;*.pys\\0Text files\\0*.txt\\0'
-      CustomFilter(typing.Any):Description to be used for filter that user selected or typed, can also contain a filespec as above
+      hwndOwner(int):Handle to window that owns dialog
+      hInstance(int):Handle to module that contains dialog template
+      Filter(Any):Contains pairs of descriptions and filespecs separated by NULLS, with a final trailing NULL. Example: 'Python Scripts\\0*.py;*.pyw;*.pys\\0Text files\\0*.txt\\0'
+      CustomFilter(Any):Description to be used for filter that user selected or typed, can also contain a filespec as above
       FilterIndex(int):Specifies which of the filters is initially selected, use 0 for CustomFilter
-      File(typing.Any):The file name initially displayed
+      File(Any):The file name initially displayed
       MaxFile(int):Number of characters to allocate for selected filename(s), override if large number of files expected
-      InitialDir(typing.Any):The starting directory
-      Title(typing.Any):The title of the dialog box
+      InitialDir(Any):The starting directory
+      Title(Any):The title of the dialog box
       Flags(int):Combination of win32con.OFN_* constants
-      DefExt(typing.Any):The default extension to use
-      TemplateName(typing.Any):Name or resource id of dialog box templateCommentsAccepts keyword arguments, all arguments optionalReturn ValueReturns a tuple of 3 values (PyUNICODE, PyUNICODE, int): First is the selected file(s). If multiple files are selected, returned string will be the directory followed by files names separated by nulls, otherwise it will be the full path.  In other words, if you use the OFN_ALLOWMULTISELECT flag you should split this value on \\0 characters and if the length of the result list is 1, it will be the full path, otherwise element 0 will be the directory and the rest of the elements will be filenames in this directory. Second is a unicode string containing user-selected filter, will be None if CustomFilter was not specified Third item contains flags pertaining to users input, such as OFN_READONLY and OFN_EXTENSIONDIFFERENT If the user presses cancel or an error occurs, a win32gui.error is raised.  If the user pressed cancel, the error number (ie, the winerror attribute of the exception) will be zero.
+      DefExt(Any):The default extension to use
+      TemplateName(PyResourceId):Name or resource id of dialog box templateCommentsAccepts keyword arguments, all arguments optionalReturn ValueReturns a tuple of 3 values (PyUNICODE, PyUNICODE, int): First is the selected file(s). If multiple files are selected, returned string will be the directory followed by files names separated by nulls, otherwise it will be the full path.  In other words, if you use the OFN_ALLOWMULTISELECT flag you should split this value on \\0 characters and if the length of the result list is 1, it will be the full path, otherwise element 0 will be the directory and the rest of the elements will be filenames in this directory. Second is a unicode string containing user-selected filter, will be None if CustomFilter was not specified Third item contains flags pertaining to users input, such as OFN_READONLY and OFN_EXTENSIONDIFFERENT If the user presses cancel or an error occurs, a win32gui.error is raised.  If the user pressed cancel, the error number (ie, the winerror attribute of the exception) will be zero.
 
 Returns:
 
-      typing.Any:Name or resource id of dialog box template
+      Tuple[Any, Any, int]:Name or resource id of dialog box template
 Comments
 
 Accepts keyword arguments, all arguments optional
@@ -6049,45 +5731,43 @@ win32gui.error is raised.  If the user pressed cancel, the error number (ie, the
         
     """
     pass
+        
 
-
-def GetOpenFileNameW(hwndOwner:typing.Any=None,hInstance:typing.Any=None,Filter:typing.Any=None,CustomFilter:typing.Any=None,FilterIndex:int=0,File:typing.Any=None,MaxFile:int=1024,InitialDir:typing.Any=None,Title:typing.Any=None,Flags:int=0,DefExt:typing.Any=None,TemplateName:typing.Any=None) -> typing.Any:
+def GetOpenFileNameW(hwndOwner:'int'=None,hInstance:'int'=None,Filter:'Any'=None,CustomFilter:'Any'=None,FilterIndex:'int'=0,File:'Any'=None,MaxFile:'int'=1024,InitialDir:'Any'=None,Title:'Any'=None,Flags:'int'=0,DefExt:'Any'=None,TemplateName:'PyResourceId'=None) -> 'Tuple[Any, Any, int]':
     """
     Creates a dialog to allow user to select file(s) to open
 
-
 Args:
 
-      hwndOwner(typing.Any):Handle to window that owns dialog
-      hInstance(typing.Any):Handle to module that contains dialog template
-      Filter(typing.Any):Contains pairs of descriptions and filespecs separated by NULLS, with a final trailing NULL. Example: 'Python Scripts\\0*.py;*.pyw;*.pys\\0Text files\\0*.txt\\0'
-      CustomFilter(typing.Any):Description to be used for filter that user selected or typed, can also contain a filespec as above
+      hwndOwner(int):Handle to window that owns dialog
+      hInstance(int):Handle to module that contains dialog template
+      Filter(Any):Contains pairs of descriptions and filespecs separated by NULLS, with a final trailing NULL. Example: 'Python Scripts\\0*.py;*.pyw;*.pys\\0Text files\\0*.txt\\0'
+      CustomFilter(Any):Description to be used for filter that user selected or typed, can also contain a filespec as above
       FilterIndex(int):Specifies which of the filters is initially selected, use 0 for CustomFilter
-      File(typing.Any):The file name initially displayed
+      File(Any):The file name initially displayed
       MaxFile(int):Number of characters to allocate for selected filename, override if large number of files expected
-      InitialDir(typing.Any):The starting directory
-      Title(typing.Any):The title of the dialog box
+      InitialDir(Any):The starting directory
+      Title(Any):The title of the dialog box
       Flags(int):Combination of win32con.OFN_* constants
-      DefExt(typing.Any):The default extension to use
-      TemplateName(typing.Any):Name or resource id of dialog box templateCommentsAccepts keyword arguments, all arguments optional Input parameters and return values are identical to win32gui::GetSaveFileNameW
+      DefExt(Any):The default extension to use
+      TemplateName(PyResourceId):Name or resource id of dialog box templateCommentsAccepts keyword arguments, all arguments optional Input parameters and return values are identical to win32gui::GetSaveFileNameW
 
 Returns:
 
-      typing.Any
+      Tuple[Any, Any, int]
         
     """
     pass
+        
 
-
-def SystemParametersInfo(Action:int,Param:typing.Any=None,WinIni:int=0) -> None:
+def SystemParametersInfo(Action:'int',Param:'Any'=None,WinIni:'int'=0) -> 'None':
     """
     Queries or sets system-wide parameters. This function can also update the user profile while setting a parameter.
-
 
 Args:
 
       Action(int):System parameter to query or set, one of the SPI_GET* or SPI_SET* constants
-      Param(typing.Any):depends on action to be taken
+      Param(Any):depends on action to be taken
       WinIni(int):Flags specifying whether change should be permanent, and if all windows should be notified of change. Combination of SPIF_UPDATEINIFILE, SPIF_SENDCHANGE, SPIF_SENDWININICHANGEActionInput/return typeSPI_GETDESKWALLPAPERReturns the path to the bmp used as wallpaperSPI_SETDESKWALLPAPERParam should be a string specifying a .bmp fileSPI_GETDROPSHADOWReturns a booleanSPI_GETFLATMENUReturns a booleanSPI_GETFONTSMOOTHINGReturns a booleanSPI_GETICONTITLEWRAPReturns a booleanSPI_GETSNAPTODEFBUTTONReturns a booleanSPI_GETBEEPReturns a booleanSPI_GETBLOCKSENDINPUTRESETSReturns a booleanSPI_GETMENUUNDERLINESReturns a booleanSPI_GETKEYBOARDCUESReturns a booleanSPI_GETKEYBOARDPREFReturns a booleanSPI_GETSCREENSAVEACTIVEReturns a booleanSPI_GETSCREENSAVERRUNNINGReturns a booleanSPI_GETMENUDROPALIGNMENTReturns a boolean (True indicates left aligned, False right aligned)SPI_GETMENUFADEReturns a booleanSPI_GETLOWPOWERACTIVEReturns a booleanSPI_GETPOWEROFFACTIVEReturns a booleanSPI_GETCOMBOBOXANIMATIONReturns a booleanSPI_GETCURSORSHADOWReturns a booleanSPI_GETGRADIENTCAPTIONSReturns a booleanSPI_GETHOTTRACKINGReturns a booleanSPI_GETLISTBOXSMOOTHSCROLLINGReturns a booleanSPI_GETMENUANIMATIONReturns a booleanSPI_GETSELECTIONFADEReturns a booleanSPI_GETTOOLTIPANIMATIONReturns a booleanSPI_GETTOOLTIPFADEReturns a boolean (TRUE=fade, False=slide)SPI_GETUIEFFECTSReturns a booleanSPI_GETACTIVEWINDOWTRACKINGReturns a booleanSPI_GETACTIVEWNDTRKZORDERReturns a booleanSPI_GETDRAGFULLWINDOWSReturns a booleanSPI_GETSHOWIMEUIReturns a booleanSPI_GETMOUSECLICKLOCKReturns a booleanSPI_GETMOUSESONARReturns a booleanSPI_GETMOUSEVANISHReturns a booleanSPI_GETSCREENREADERReturns a booleanSPI_GETSHOWSOUNDSReturns a booleanSPI_SETDROPSHADOWParam must be a booleanSPI_SETDROPSHADOWParam must be a booleanSPI_SETMENUUNDERLINESParam must be a booleanSPI_SETKEYBOARDCUESParam must be a booleanSPI_SETMENUFADEParam must be a booleanSPI_SETCOMBOBOXANIMATIONParam must be a booleanSPI_SETCURSORSHADOWParam must be a booleanSPI_SETGRADIENTCAPTIONSParam must be a booleanSPI_SETHOTTRACKINGParam must be a booleanSPI_SETLISTBOXSMOOTHSCROLLINGParam must be a booleanSPI_SETMENUANIMATIONParam must be a booleanSPI_SETSELECTIONFADEParam must be a booleanSPI_SETTOOLTIPANIMATIONParam must be a booleanSPI_SETTOOLTIPFADEParam must be a booleanSPI_SETUIEFFECTSParam must be a booleanSPI_SETACTIVEWINDOWTRACKINGParam must be a booleanSPI_SETACTIVEWNDTRKZORDERParam must be a booleanSPI_SETMOUSESONARParam must be a booleanSPI_SETMOUSEVANISHParam must be a booleanSPI_SETMOUSECLICKLOCKParam must be a booleanSPI_SETFONTSMOOTHINGParam should specify a booleanSPI_SETICONTITLEWRAPParam should specify a booleanSPI_SETSNAPTODEFBUTTONParam is a booleanSPI_SETBEEPParam is a booleanSPI_SETBLOCKSENDINPUTRESETSParam is a booleanSPI_SETKEYBOARDPREFParam is a booleanSPI_SETMOUSEBUTTONSWAPParam is a booleanSPI_SETSCREENSAVEACTIVEParam is a booleanSPI_SETMENUDROPALIGNMENTParam is a boolean (True=left aligned, False=right aligned)SPI_SETLOWPOWERACTIVEParam is a booleanSPI_SETPOWEROFFACTIVEParam is a booleanSPI_SETDRAGFULLWINDOWSParam is a booleanSPI_SETSHOWIMEUIParam is a booleanSPI_SETSCREENREADERParam is a booleanSPI_SETSHOWSOUNDSParam is a booleanSPI_SETMOUSETRAILSParam should be an int specifying the nbr of cursors in the trail (0 or 1 means disabled)SPI_SETWHEELSCROLLLINESParam is an int specifying nbr of linesSPI_SETKEYBOARDDELAYParam is an int in the range 0 - 3SPI_SETKEYBOARDSPEEDParam is an int in the range 0 - 31SPI_SETDOUBLECLICKTIMEParam is an int (in milliseconds),  Use win32gui::GetDoubleClickTime to retrieve the value.SPI_SETDOUBLECLKWIDTHParam is an int.  Use win32api.GetSystemMetrics(SM_CXDOUBLECLK) to retrieve the value.SPI_SETDOUBLECLKHEIGHTParam is an int,  Use win32api.GetSystemMetrics(SM_CYDOUBLECLK) to retrieve the value.SPI_SETMOUSEHOVERHEIGHTParam is an intSPI_SETMOUSEHOVERWIDTHParam is an intSPI_SETMOUSEHOVERTIMEParam is an intSPI_SETSCREENSAVETIMEOUTParam is an int specifying the timeout in secondsSPI_SETMENUSHOWDELAYParam is an int specifying the shortcut menu delay in millisecondsSPI_SETLOWPOWERTIMEOUTParam is an int (in seconds)SPI_SETPOWEROFFTIMEOUTParam is an int (in seconds)SPI_SETDRAGHEIGHTParam is an int. Use win32api.GetSystemMetrics(SM_CYDRAG) to retrieve the value.SPI_SETDRAGWIDTHParam is an int. Use win32api.GetSystemMetrics(SM_CXDRAG) to retrieve the value.SPI_SETBORDERParam is an intSPI_GETFONTSMOOTHINGCONTRASTReturns an intSPI_GETFONTSMOOTHINGTYPEReturns an intSPI_GETMOUSETRAILSReturns an int specifying the nbr of cursor images in the trail, 0 or 1 indicates disabledSPI_GETWHEELSCROLLLINESReturns the nbr of lines to scroll for the mouse wheelSPI_GETKEYBOARDDELAYReturns an intSPI_GETKEYBOARDSPEEDReturns an intSPI_GETMOUSESPEEDReturns an intSPI_GETMOUSEHOVERHEIGHTReturns an intSPI_GETMOUSEHOVERWIDTHReturns an intSPI_GETMOUSEHOVERTIMEReturns an intSPI_GETSCREENSAVETIMEOUTReturns an int (idle time in seconds)SPI_GETMENUSHOWDELAYReturns an int (shortcut delay in milliseconds)SPI_GETLOWPOWERTIMEOUTReturns an int (in seconds)SPI_GETPOWEROFFTIMEOUTReturns an int (in seconds)SPI_GETACTIVEWNDTRKTIMEOUTReturns an int (milliseconds)SPI_GETBORDERReturns an intSPI_GETCARETWIDTHReturns an intSPI_GETFOREGROUNDFLASHCOUNTReturns an intSPI_GETFOREGROUNDLOCKTIMEOUTReturns an intSPI_GETFOCUSBORDERHEIGHTReturns an intSPI_GETFOCUSBORDERWIDTHReturns an intSPI_GETMOUSECLICKLOCKTIMEReturns an int (in milliseconds)SPI_SETFONTSMOOTHINGCONTRASTParam should be an int in the range 1000 to 2200SPI_SETFONTSMOOTHINGTYPEParam should be one of the FE_FONTSMOOTHING* constantsSPI_SETMOUSESPEEDParam should be an int in the range 1 - 20SPI_SETACTIVEWNDTRKTIMEOUTParam is an int (in milliseconds)SPI_SETCARETWIDTHParam is an int (in pixels)SPI_SETFOREGROUNDFLASHCOUNTParam is an intSPI_SETFOREGROUNDLOCKTIMEOUTParam is an int (in milliseconds)SPI_SETFOCUSBORDERHEIGHTReturns an intSPI_SETFOCUSBORDERWIDTHReturns an intSPI_SETMOUSECLICKLOCKTIMEParam is an int (in milliseconds)SPI_GETICONTITLELOGFONTReturns a PyLOGFONT,SPI_SETICONTITLELOGFONTParam must be a PyLOGFONT,SPI_SETLANGTOGGLEParam is ignored. Sets the language toggle hotkey from registry key HKCU\\keyboard layout\\toggleSPI_SETICONSReloads the system icons.  Param is not usedSPI_GETMOUSEReturns a tuple of 3 ints containing the x and y mouse thresholds and the acceleration factor.SPI_SETMOUSEParam should be a sequence of 3 intsSPI_GETDEFAULTINPUTLANGReturns an int (locale id for default language)SPI_SETDEFAULTINPUTLANGParam is an int containing a locale idSPI_GETANIMATIONReturns an intSPI_SETANIMATIONParam is an intSPI_ICONHORIZONTALSPACINGFunctions as both a get and set operation.  If Param is None, functions as a get operation, otherwise Param is an int to be set as the new valueSPI_ICONVERTICALSPACINGFunctions as both a get and set operation.  If Param is None, functions as a get operation, otherwise Param is an int to be set as the new valueSPI_GETNONCLIENTMETRICSParam must be None.  The result is a dict.SPI_SETNONCLIENTMETRICSParam is a dict in the form of a NONCLIENTMETRICS struct, as returned by SPI_GETNONCLIENTMETRICS operationSPI_GETMINIMIZEDMETRICSReturns a dict representing a MINIMIZEDMETRICS struct.  Param is not used.SPI_SETMINIMIZEDMETRICSParam should be a MINIMIZEDMETRICS dict as returned by SPI_GETMINIMIZEDMETRICS actionSPI_SETDESKPATTERNUnsupported (obsolete)SPI_GETFASTTASKSWITCHUnsupported (obsolete)SPI_SETFASTTASKSWITCHUnsupported (obsolete)SPI_SETSCREENSAVERRUNNINGUnsupported (documented as internal use only)SPI_SCREENSAVERRUNNINGSame as SPI_SETSCREENSAVERRUNNINGSPI_SETPENWINDOWSUnsupported (only relevant for win95)SPI_GETWINDOWSEXTENSIONUnsupported (only relevant for win95)SPI_GETGRIDGRANULARITYUnsupported (obsolete)SPI_SETGRIDGRANULARITYUnsupported (obsolete)SPI_LANGDRIVERUnsupported (use is not documented)SPI_GETFONTSMOOTHINGORIENTATIONUnsupported (use is not documented)SPI_SETFONTSMOOTHINGORIENTATIONUnsupported (use is not documented)SPI_SETHANDHELDUnsupported (use is not documented)SPI_GETICONMETRICSNot implemented yetSPI_SETICONMETRICSNot implemented yetSPI_GETWORKAREANot implemented yetSPI_SETWORKAREANot implemented yetSPI_GETSERIALKEYSNot implemented yetSPI_SETSERIALKEYSNot implemented yetSPI_SETMOUSEKEYSNot implemented yetSPI_GETMOUSEKEYSNot implemented yetSPI_GETHIGHCONTRASTNot implemented yetSPI_SETHIGHCONTRASTNot implemented yetSPI_GETSOUNDSENTRYNot implemented yetSPI_SETSOUNDSENTRYNot implemented yetSPI_GETSTICKYKEYSNot implemented yetSPI_SETSTICKYKEYSNot implemented yetSPI_GETTOGGLEKEYSNot implemented yetSPI_SETTOGGLEKEYSNot implemented yetSPI_GETACCESSTIMEOUTNot implemented yetSPI_SETACCESSTIMEOUTNot implemented yetSPI_GETFILTERKEYSNot implemented yetSPI_SETFILTERKEYSNot implemented yetCommentsParam and WinIni are not used with any of the SPI_GET operations Boolean parameters can be any object that can be evaluated as True or FalseReturn ValueSPI_SET functions all return None on success.  Types returned by SPI_GET functions are dependent on the operation
 
 Returns:
@@ -6283,16 +5963,15 @@ Return ValueSPI_SET functions all return None on success.  Types returned by SPI
         
     """
     pass
+        
 
-
-def SetLayeredWindowAttributes(hwnd:typing.Any,Key:int,Alpha:int,Flags:int) -> None:
+def SetLayeredWindowAttributes(hwnd:'int',Key:'int',Alpha:'int',Flags:'int') -> 'None':
     """
     Sets the opacity and transparency color key of a layered window.
 
-
 Args:
 
-      hwnd(typing.Any):handle to the layered window
+      hwnd(int):handle to the layered window
       Key(int):Specifies the color key.  Use win32api::RGB to generate value.
       Alpha(int):Opacity, in the range 0-255
       Flags(int):Combination of win32con.LWA_* valuesCommentsThis function only exists on Win2k and laterAccepts keyword arguments
@@ -6303,20 +5982,19 @@ Returns:
         
     """
     pass
+        
 
-
-def GetLayeredWindowAttributes(hwnd:typing.Any) -> typing.Any:
+def GetLayeredWindowAttributes(hwnd:'int') -> 'Tuple[int, int, int]':
     """
     Retrieves the layering parameters of a window with the WS_EX_LAYERED extended style
 
-
 Args:
 
-      hwnd(typing.Any):Handle to a layered windowCommentsThis function only exists on WinXP and later.Accepts keyword arguments.Return ValueReturns a tuple of (color key, alpha, flags)
+      hwnd(int):Handle to a layered windowCommentsThis function only exists on WinXP and later.Accepts keyword arguments.Return ValueReturns a tuple of (color key, alpha, flags)
 
 Returns:
 
-      typing.Any:Handle to a layered windowComments
+      Tuple[int, int, int]:Handle to a layered windowComments
 
 This function only exists on WinXP and later.
 
@@ -6326,23 +6004,22 @@ Return ValueReturns a tuple of (color key, alpha, flags)
         
     """
     pass
+        
 
-
-def UpdateLayeredWindow(hwnd:typing.Any,hdcDst:typing.Any=None,ptDst:typing.Any=None,size:typing.Any=None,hdcSrc:int=None,ptSrc:typing.Any=None,Key:int=0,blend:typing.Any=(0,0,255,0),Flags:int=0) -> None:
+def UpdateLayeredWindow(hwnd:'int',hdcDst:'int'=None,ptDst:'Tuple[Any, Any]'=None,size:'Tuple[Any, Any]'=None,hdcSrc:'int'=None,ptSrc:'Tuple[Any, Any]'=None,Key:'int'=0,blend:'Tuple[int, int, int, int]'=(0,0,255,0),Flags:'int'=0) -> 'None':
     """
     Updates the position, size, shape, content, and translucency of a layered window.
 
-
 Args:
 
-      hwnd(typing.Any):handle to layered window
-      hdcDst(typing.Any):handle to screen DC, can be None.  *Must* be None if hdcSrc is None
-      ptDst(typing.Any):New screen position, can be None.
-      size(typing.Any):New size of the layered window, can be None.  *Must* be None if hdcSrc is None.
+      hwnd(int):handle to layered window
+      hdcDst(int):handle to screen DC, can be None.  *Must* be None if hdcSrc is None
+      ptDst(Tuple[Any, Any]):New screen position, can be None.
+      size(Tuple[Any, Any]):New size of the layered window, can be None.  *Must* be None if hdcSrc is None.
       hdcSrc(int):handle to surface DC for the window, can be None
-      ptSrc(typing.Any):layer position, can be None.  *Must* be None if hdcSrc is None.
+      ptSrc(Tuple[Any, Any]):layer position, can be None.  *Must* be None if hdcSrc is None.
       Key(int):Color key, generate using win32api::RGB
-      blend(typing.Any):PyBLENDFUNCTION specifying alpha blending parameters
+      blend(Tuple[int, int, int, int]):PyBLENDFUNCTION specifying alpha blending parameters
       Flags(int):One of the win32con.ULW_* values.  Use 0 if hdcSrc is None.CommentsThis function is only available on Windows 2000 and laterAccepts keyword arguments.
 
 Returns:
@@ -6351,16 +6028,15 @@ Returns:
         
     """
     pass
+        
 
-
-def AnimateWindow(hwnd:typing.Any,Time:int,Flags:int) -> None:
+def AnimateWindow(hwnd:'int',Time:'int',Flags:'int') -> 'None':
     """
     Enables you to produce special effects when showing or hiding windows. There are three types of animation: roll, slide, and alpha-blended fade.
 
-
 Args:
 
-      hwnd(typing.Any):handle to window
+      hwnd(int):handle to window
       Time(int):Duration of animation in ms
       Flags(int):Animation type, combination of win32con.AW_* flagsCommentsThis function is available on Win2k and laterAccepts keyword args
 
@@ -6370,36 +6046,34 @@ Returns:
         
     """
     pass
+        
 
-
-def CreateBrushIndirect(lb:typing.Any) -> typing.Any:
+def CreateBrushIndirect(lb:'PyLOGBRUSH') -> 'PyGdiHANDLE':
     """
     Creates a GDI brush from a LOGBRUSH struct
 
-
 Args:
 
-      lb(typing.Any):Dict containing brush creation parameters
+      lb(PyLOGBRUSH):Dict containing brush creation parameters
 
 Returns:
 
-      typing.Any
+      PyGdiHANDLE
         
     """
     pass
+        
 
-
-def ExtCreatePen(PenStyle:int,Width:int,lb:typing.Any,Style:typing.Any=None) -> int:
+def ExtCreatePen(PenStyle:'int',Width:'int',lb:'PyLOGBRUSH',Style:'Tuple[int, ...]'=None) -> 'int':
     """
     Creates a GDI pen object
-
 
 Args:
 
       PenStyle(int):Combination of win32con.PS_*.  Must contain either PS_GEOMETRIC or PS_COSMETIC.
       Width(int):Width of pen in logical units.  Must be 1 for PS_COSMETIC.
-      lb(typing.Any):Dict containing brush creation parameters
-      Style(typing.Any):Sequence containing lengths of dashes and spaces  Used only with PS_USERSTYLE, otherwise must be None.
+      lb(PyLOGBRUSH):Dict containing brush creation parameters
+      Style(Tuple[int, ...]):Sequence containing lengths of dashes and spaces  Used only with PS_USERSTYLE, otherwise must be None.
 
 Returns:
 
@@ -6407,24 +6081,23 @@ Returns:
         
     """
     pass
+        
 
-
-def DrawTextW(hDC:typing.Any,String:typing.Any,Count:int,Rect:typing.Any,Format:int) -> typing.Any:
+def DrawTextW(hDC:'int',String:'str',Count:'int',Rect:'PyRECT',Format:'int') -> 'Tuple[int, PyRECT]':
     """
     Draws Unicode text on a device context.
 
-
 Args:
 
-      hDC(typing.Any):Handle to a device context
-      String(typing.Any):Text to be drawn
+      hDC(int):Handle to a device context
+      String(str):Text to be drawn
       Count(int):Number of characters to draw, use -1 for entire null terminated string
-      Rect(typing.Any):Rectangle in which to draw text
+      Rect(PyRECT):Rectangle in which to draw text
       Format(int):Formatting flags, combination of win32con.DT_* valuesCommentsAccepts keyword args.Return ValueReturns the height of the drawn text, and the rectangle coordinates
 
 Returns:
 
-      typing.Any:Formatting flags, combination of win32con.DT_* valuesComments
+      Tuple[int, PyRECT]:Formatting flags, combination of win32con.DT_* valuesComments
 
 Accepts keyword args.
 Return ValueReturns the height of the drawn text, and the rectangle coordinates
@@ -6432,18 +6105,17 @@ Return ValueReturns the height of the drawn text, and the rectangle coordinates
         
     """
     pass
+        
 
-
-def EnumPropsEx(hWnd:typing.Any,EnumFunc:typing.Any,Param:typing.Any) -> None:
+def EnumPropsEx(hWnd:'int',EnumFunc:'Any',Param:'Any') -> 'None':
     """
     None
 
-
 Args:
 
-      hWnd(typing.Any):Handle to a window
-      EnumFunc(typing.Any):Callback function
-      Param(typing.Any):Arbitrary object to be passed to callback function
+      hWnd(int):Handle to a window
+      EnumFunc(Any):Callback function
+      Param(Any):Arbitrary object to be passed to callback function
 
 Returns:
 
@@ -6451,28 +6123,27 @@ Returns:
         
     """
     pass
+        
 
-
-def RegisterDeviceNotification(handle:typing.Any,filter:typing.Any,flags:int) -> typing.Any:
+def RegisterDeviceNotification(handle:'int',filter:'Any',flags:'int') -> 'PyHDEVNOTIFY':
     """
     Registers the device or type of device for which a window will receive notifications.
 
-
 Args:
 
-      handle(typing.Any):The handle to a window or a service
-      filter(typing.Any):A buffer laid out like one of the DEV_BROADCAST_* structures, generally built by one of the win32gui_struct helpers.
+      handle(int):The handle to a window or a service
+      filter(Any):A buffer laid out like one of the DEV_BROADCAST_* structures, generally built by one of the win32gui_struct helpers.
       flags(int):Win32 API References
 
 Returns:
 
-      typing.Any
+      PyHDEVNOTIFY
         
     """
     pass
+        
 
-
-def UnregisterDeviceNotification() -> None:
+def UnregisterDeviceNotification() -> 'None':
     """
     Unregisters a Device Notification handle. 
 
@@ -6480,7 +6151,6 @@ It is generally not necessary to call this function manually, but in some cases,
 
 handle values may be extracted via the struct module and need to be closed explicitly.
 
-
 Args:
 
 
@@ -6491,16 +6161,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RegisterHotKey(hWnd:typing.Any,id:int,Modifiers:int,vk:int) -> None:
+def RegisterHotKey(hWnd:'int',id:'int',Modifiers:'int',vk:'int') -> 'None':
     """
     Registers a hotkey for a window
 
-
 Args:
 
-      hWnd(typing.Any):Handle to window that will receive WM_HOTKEY messages
+      hWnd(int):Handle to window that will receive WM_HOTKEY messages
       id(int):Unique id to be used for the hot key
       Modifiers(int):Control keys, combination of win32con.MOD_*
       vk(int):Virtual key codeWin32 API References
@@ -6511,7 +6180,7 @@ Returns:
         
     """
     pass
-
+        
 CLR_NONE = ...
 ILC_COLOR = ...
 ILC_COLOR16 = ...

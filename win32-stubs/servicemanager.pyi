@@ -1,14 +1,13 @@
-from pywintypes import *
 __all__=['CoInitializeEx', 'CoUninitialize', 'RegisterServiceCtrlHandler', 'LogMsg', 'LogInfoMsg', 'LogErrorMsg', 'LogWarningMsg', 'PumpWaitingMessages', 'Debugging', 'Initialize', 'Finalize', 'PrepareToHostSingle', 'PrepareToHostMultiple', 'RunningAsService', 'SetEventSourceName']
-import typing
+from typing import *
+from .win32typing import *
 """"""
 
 
-def CoInitializeEx() -> None:
+def CoInitializeEx() -> 'None':
     """
     Initialize OLE with additional options.
 
-
 Args:
 
 
@@ -19,13 +18,12 @@ Returns:
         
     """
     pass
+        
 
-
-def CoUninitialize() -> None:
+def CoUninitialize() -> 'None':
     """
     Unitialize OLE
 
-
 Args:
 
 
@@ -36,22 +34,21 @@ Returns:
         
     """
     pass
+        
 
-
-def RegisterServiceCtrlHandler(serviceName:typing.Any,callback:typing.Any,extra_args:bool=False) -> typing.Any:
+def RegisterServiceCtrlHandler(serviceName:'str',callback:'Any',extra_args:'bool'=False) -> 'Union[None, int]':
     """
     Registers the Python service control handler function.
 
-
 Args:
 
-      serviceName(typing.Any):The name of the service.  This is provided in args[0] of the service class __init__ method.
-      callback(typing.Any):The Python function that performs as the control function.  This will be called with an integer status argument.
+      serviceName(str):The name of the service.  This is provided in args[0] of the service class __init__ method.
+      callback(Any):The Python function that performs as the control function.  This will be called with an integer status argument.
       extra_args(bool):Is this callback expecting the additional 2 args passed by HandlerEx?Return ValueIf the service manager is in debug mode, this returns None, indicating there is no service control manager handle, otherwise the handle to the Win32 service manager.
 
 Returns:
 
-      typing.Any:Is this callback expecting the additional 2 args passed by HandlerEx?
+      Union[None, int]:Is this callback expecting the additional 2 args passed by HandlerEx?
 Return ValueIf the service manager is in debug mode, this returns None, indicating 
 
 there is no service control manager handle, otherwise the handle to the Win32 service manager.
@@ -59,18 +56,17 @@ there is no service control manager handle, otherwise the handle to the Win32 se
         
     """
     pass
+        
 
-
-def LogMsg(errorType:int,eventId:int,inserts:typing.Any=None) -> None:
+def LogMsg(errorType:'int',eventId:'int',inserts:'Tuple[str, Any]'=None) -> 'None':
     """
     Logs a specific message
-
 
 Args:
 
       errorType(int):
       eventId(int):
-      inserts(typing.Any):
+      inserts(Tuple[str, Any]):
 
 Returns:
 
@@ -78,16 +74,15 @@ Returns:
         
     """
     pass
+        
 
-
-def LogInfoMsg(msg:typing.Any) -> None:
+def LogInfoMsg(msg:'str') -> 'None':
     """
     Logs a generic informational message to the event log
 
-
 Args:
 
-      msg(typing.Any):The message to write.
+      msg(str):The message to write.
 
 Returns:
 
@@ -95,16 +90,15 @@ Returns:
         
     """
     pass
+        
 
-
-def LogErrorMsg(msg:typing.Any) -> None:
+def LogErrorMsg(msg:'str') -> 'None':
     """
     Logs a generic error message to the event log
 
-
 Args:
 
-      msg(typing.Any):The message to write.
+      msg(str):The message to write.
 
 Returns:
 
@@ -112,16 +106,15 @@ Returns:
         
     """
     pass
+        
 
-
-def LogWarningMsg(msg:typing.Any) -> None:
+def LogWarningMsg(msg:'str') -> 'None':
     """
     Logs a generic warning message to the event log
 
-
 Args:
 
-      msg(typing.Any):The message to write.
+      msg(str):The message to write.
 
 Returns:
 
@@ -129,12 +122,11 @@ Returns:
         
     """
     pass
+        
 
-
-def PumpWaitingMessages() -> int:
+def PumpWaitingMessages() -> 'int':
     """
     Pumps all waiting messages.
-
 
 Args:
 
@@ -150,14 +142,13 @@ Return ValueReturns 1 if a WM_QUIT message was received, else 0
         
     """
     pass
+        
 
-
-def Debugging(newVal:int=-1) -> typing.Any:
+def Debugging(newVal:'int'=-1) -> 'Union[False, True]':
     """
     Indicates if the service is running in debug mode 
 
 and optionally toggles the debug flag.
-
 
 Args:
 
@@ -165,23 +156,22 @@ Args:
 
 Returns:
 
-      typing.Any
+      Union[False, True]
         
     """
     pass
+        
 
-
-def Initialize(eventSourceName:typing.Any=None,eventSourceFile:typing.Any=None) -> None:
+def Initialize(eventSourceName:'str'=None,eventSourceFile:'str'=None) -> 'None':
     """
     Initialize the module for hosting a service.  This is generally called 
 
 automatically
 
-
 Args:
 
-      eventSourceName(typing.Any):The event source name
-      eventSourceFile(typing.Any):The name of the file (generally a DLL) with the event source messages.
+      eventSourceName(str):The event source name
+      eventSourceFile(str):The name of the file (generally a DLL) with the event source messages.
 
 Returns:
 
@@ -189,13 +179,12 @@ Returns:
         
     """
     pass
+        
 
-
-def Finalize() -> None:
+def Finalize() -> 'None':
     """
     None
 
-
 Args:
 
 
@@ -206,16 +195,15 @@ Returns:
         
     """
     pass
+        
 
-
-def PrepareToHostSingle(klass:typing.Any=None) -> None:
+def PrepareToHostSingle(klass:'Any'=None) -> 'None':
     """
     Prepare for hosting a single service in this EXE
 
-
 Args:
 
-      klass(typing.Any):The Python class to host.  If not specified, the service name is looked up in the registry and the specified class instantiated.
+      klass(Any):The Python class to host.  If not specified, the service name is looked up in the registry and the specified class instantiated.
 
 Returns:
 
@@ -223,17 +211,16 @@ Returns:
         
     """
     pass
+        
 
-
-def PrepareToHostMultiple(service_name:Union[str,typing.Any],klass:typing.Any) -> None:
+def PrepareToHostMultiple(service_name:'Union[str, Any]',klass:'Any') -> 'None':
     """
     Prepare for hosting a multiple services in this EXE
 
-
 Args:
 
-      service_name(str,typing.Any):The name of the service hosted by the class
-      klass(typing.Any):The Python class to host.
+      service_name(Union[str, Any]):The name of the service hosted by the class
+      klass(Any):The Python class to host.
 
 Returns:
 
@@ -241,33 +228,31 @@ Returns:
         
     """
     pass
+        
 
-
-def RunningAsService() -> typing.Any:
+def RunningAsService() -> 'Union[False, True]':
     """
     Indicates if the code is 
 
 being executed as a service.
 
-
 Args:
 
 
 
 Returns:
 
-      typing.Any
+      Union[False, True]
         
     """
     pass
+        
 
-
-def SetEventSourceName(sourceName:str,registerNow:bool=False) -> None:
+def SetEventSourceName(sourceName:'str',registerNow:'bool'=False) -> 'None':
     """
     Sets the event source name 
 
 for event log entries written by the service.
-
 
 Args:
 
@@ -280,3 +265,4 @@ Returns:
         
     """
     pass
+        

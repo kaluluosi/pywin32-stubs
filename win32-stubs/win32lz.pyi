@@ -1,13 +1,12 @@
-from pywintypes import *
 __all__=['GetExpandedName', 'Close', 'Copy', 'Init', 'OpenFile']
-import typing
+from typing import *
+from .win32typing import *
 """A module encapsulating the Windows LZ compression routines."""
 
 
-def GetExpandedName(Source:str) -> str:
+def GetExpandedName(Source:'str') -> 'str':
     """
     Retrieves the original name of an expanded file,
-
 
 Args:
 
@@ -19,12 +18,11 @@ Returns:
         
     """
     pass
+        
 
-
-def Close(handle:int) -> None:
+def Close(handle:'int') -> 'None':
     """
     Closes a handle to an LZ file.
-
 
 Args:
 
@@ -36,12 +34,11 @@ Returns:
         
     """
     pass
+        
 
-
-def Copy(hSrc:int,hDest:int) -> int:
+def Copy(hSrc:'int',hDest:'int') -> 'int':
     """
     Copies a source file to a destination file.
-
 
 Args:
 
@@ -54,14 +51,13 @@ Returns:
         
     """
     pass
+        
 
-
-def Init(handle:int) -> None:
+def Init(handle:'int') -> 'None':
     """
     Allocates memory for the internal data structures required to decompress files, and then 
 
 creates and initializes them.
-
 
 Args:
 
@@ -73,12 +69,11 @@ Returns:
         
     """
     pass
+        
 
-
-def OpenFile(fileName:str,action:int) -> typing.Any:
+def OpenFile(fileName:'str',action:'int') -> 'Tuple[int, tuple]':
     """
     Creates, opens, reopens, or deletes the specified file.
-
 
 Args:
 
@@ -87,7 +82,8 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[int, tuple]
         
     """
     pass
+        

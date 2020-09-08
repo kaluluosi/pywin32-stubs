@@ -1,18 +1,17 @@
-from pywintypes import *
 __all__=['set_timer', 'kill_timer']
-import typing
+from typing import *
+from .win32typing import *
 """Extension that wraps Win32 Timer functions"""
 
 
-def set_timer(Elapse:int,TimerFunc:typing.Any) -> int:
+def set_timer(Elapse:'int',TimerFunc:'Any') -> 'int':
     """
     Creates a timer that executes a callback function
-
 
 Args:
 
       Elapse(int):Timer period, in milliseconds
-      TimerFunc(typing.Any):Callback function.  Will be called with with 2 int args: (timer_id, time)CommentsUses the SetTimer function.Return ValueReturns the id of the timer, which can be passed to kill_timer to stop it.
+      TimerFunc(Any):Callback function.  Will be called with with 2 int args: (timer_id, time)CommentsUses the SetTimer function.Return ValueReturns the id of the timer, which can be passed to kill_timer to stop it.
 
 Returns:
 
@@ -26,12 +25,11 @@ Return ValueReturns the id of the timer, which can be passed to kill_timer to st
         
     """
     pass
+        
 
-
-def kill_timer(IDEvent:int) -> typing.Any:
+def kill_timer(IDEvent:'int') -> 'Any':
     """
     Creates a timer that executes a callback function
-
 
 Args:
 
@@ -39,7 +37,8 @@ Args:
 
 Returns:
 
-      typing.Any
+      Any
         
     """
     pass
+        

@@ -1,25 +1,24 @@
-from pywintypes import *
 __all__=['CreateTransaction', 'RollbackTransaction', 'RollbackTransactionAsync', 'CommitTransaction', 'CommitTransactionAsync', 'GetTransactionId', 'OpenTransaction']
-import typing
+from typing import *
+from .win32typing import *
 """Module wrapping Kernal Transaction Manager functions, as used with 
 
 transacted NTFS and transacted registry functions."""
 
 
-def CreateTransaction(TransactionAttributes:typing.Any=None,UOW:typing.Any=None,CreateOptions:int=0,IsolationLevel:int=0,IsolationFlags:int=0,Timeout:int=0,Description:typing.Any=None) -> int:
+def CreateTransaction(TransactionAttributes:'PySECURITY_ATTRIBUTES'=None,UOW:'PyIID'=None,CreateOptions:'int'=0,IsolationLevel:'int'=0,IsolationFlags:'int'=0,Timeout:'int'=0,Description:'str'=None) -> 'int':
     """
     Creates a transaction
 
-
 Args:
 
-      TransactionAttributes(typing.Any):Security and inheritance for the transaction, can be None
-      UOW(typing.Any):Reserved, use only None
+      TransactionAttributes(PySECURITY_ATTRIBUTES):Security and inheritance for the transaction, can be None
+      UOW(PyIID):Reserved, use only None
       CreateOptions(int):TRANSACTION_DO_NOT_PROMOTE is only defined flag
       IsolationLevel(int):Reserved, use only 0
       IsolationFlags(int):Reserved, use only 0
       Timeout(int):Abort timeout in milliseconds
-      Description(typing.Any):Text description of transaction, can be NoneWin32 API References
+      Description(str):Text description of transaction, can be NoneWin32 API References
 
 Returns:
 
@@ -27,16 +26,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RollbackTransaction(TransactionHandle:typing.Any) -> None:
+def RollbackTransaction(TransactionHandle:'int') -> 'None':
     """
     Rolls back a transaction
 
-
 Args:
 
-      TransactionHandle(typing.Any):Handle to a transactionWin32 API References
+      TransactionHandle(int):Handle to a transactionWin32 API References
 
 Returns:
 
@@ -44,16 +42,15 @@ Returns:
         
     """
     pass
+        
 
-
-def RollbackTransactionAsync(TransactionHandle:typing.Any) -> None:
+def RollbackTransactionAsync(TransactionHandle:'int') -> 'None':
     """
     Rolls back a transaction asynchronously
 
-
 Args:
 
-      TransactionHandle(typing.Any):Handle to a transactionWin32 API References
+      TransactionHandle(int):Handle to a transactionWin32 API References
 
 Returns:
 
@@ -61,16 +58,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CommitTransaction(TransactionHandle:typing.Any) -> None:
+def CommitTransaction(TransactionHandle:'int') -> 'None':
     """
     Commits a transaction
 
-
 Args:
 
-      TransactionHandle(typing.Any):Handle to a transactionWin32 API References
+      TransactionHandle(int):Handle to a transactionWin32 API References
 
 Returns:
 
@@ -78,16 +74,15 @@ Returns:
         
     """
     pass
+        
 
-
-def CommitTransactionAsync(TransactionHandle:typing.Any) -> None:
+def CommitTransactionAsync(TransactionHandle:'int') -> 'None':
     """
     Commits a transaction asynchronously
 
-
 Args:
 
-      TransactionHandle(typing.Any):Handle to a transactionWin32 API References
+      TransactionHandle(int):Handle to a transactionWin32 API References
 
 Returns:
 
@@ -95,34 +90,32 @@ Returns:
         
     """
     pass
+        
 
-
-def GetTransactionId(TransactionHandle:typing.Any) -> typing.Any:
+def GetTransactionId(TransactionHandle:'int') -> 'PyIID':
     """
     Returns the transaction's GUID
 
-
 Args:
 
-      TransactionHandle(typing.Any):Handle to a transaction
+      TransactionHandle(int):Handle to a transaction
 
 Returns:
 
-      typing.Any
+      PyIID
         
     """
     pass
+        
 
-
-def OpenTransaction(DesiredAccess:int,TransactionId:typing.Any) -> int:
+def OpenTransaction(DesiredAccess:'int',TransactionId:'PyIID') -> 'int':
     """
     Creates a handle to an existing transaction
-
 
 Args:
 
       DesiredAccess(int):Combination of TRANSACTION_* access rights
-      TransactionId(typing.Any):GUID identifying the transaction
+      TransactionId(PyIID):GUID identifying the transaction
 
 Returns:
 
@@ -130,3 +123,4 @@ Returns:
         
     """
     pass
+        

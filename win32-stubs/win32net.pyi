@@ -1,15 +1,14 @@
-from pywintypes import *
 __all__=['NetGetJoinInformation', 'NetGroupGetInfo', 'NetGroupGetUsers', 'NetGroupSetUsers', 'NetGroupSetInfo', 'NetGroupAdd', 'NetGroupAddUser', 'NetGroupDel', 'NetGroupDelUser', 'NetGroupEnum', 'NetGroupAdd', 'NetLocalGroupAddMembers', 'NetLocalGroupDelMembers', 'NetGroupDel', 'NetGroupEnum', 'NetGroupGetInfo', 'NetLocalGroupGetMembers', 'NetGroupSetInfo', 'NetLocalGroupSetMembers', 'NetMessageBufferSend', 'NetMessageNameAdd', 'NetMessageNameDel', 'NetMessageNameEnum', 'NetServerEnum', 'NetServerGetInfo', 'NetServerSetInfo', 'NetShareAdd', 'NetShareDel', 'NetShareCheck', 'NetShareEnum', 'NetShareGetInfo', 'NetShareSetInfo', 'NetUserAdd', 'NetUserChangePassword', 'NetUserEnum', 'NetUserGetGroups', 'NetUserGetInfo', 'NetUserGetLocalGroups', 'NetUserSetInfo', 'NetUserDel', 'NetUserModalsGet', 'NetUserModalsSet', 'NetWkstaUserEnum', 'NetWkstaGetInfo', 'NetWkstaSetInfo', 'NetWkstaTransportEnum', 'NetWkstaTransportAdd', 'NetWkstaTransportDel', 'NetServerDiskEnum', 'NetUseAdd', 'NetUseDel', 'NetUseEnum', 'NetUseGetInfo', 'NetGetAnyDCName', 'NetGetDCName', 'NetSessionEnum', 'NetSessionDel', 'NetSessionGetInfo', 'NetFileEnum', 'NetFileClose', 'NetFileGetInfo', 'NetStatisticsGet', 'NetServerComputerNameAdd', 'NetServerComputerNameDel', 'NetValidateName', 'NetValidatePasswordPolicy']
-import typing
+from typing import *
+from .win32typing import *
 """A module encapsulating the Windows Network API."""
 
 
-def NetGetJoinInformation() -> typing.Any:
+def NetGetJoinInformation() -> 'Tuple[str, int]':
     """
     Retrieves join status information for the specified 
 
 computer.
-
 
 Args:
 
@@ -17,21 +16,20 @@ Args:
 
 Returns:
 
-      typing.Any
+      Tuple[str, int]
         
     """
     pass
+        
 
-
-def NetGroupGetInfo(server:Union[str,typing.Any],groupname:Union[str,typing.Any],level:int) -> dict:
+def NetGroupGetInfo(server:'Union[str]',groupname:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves information about a particular group on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupname(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      groupname(Union[str]):The group name
       level(int):The information level contained in the dataWin32 API References
 
 Returns:
@@ -44,24 +42,23 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetGroupGetUsers(server:Union[str,typing.Any],groupName:Union[str,typing.Any],level:int,resumeHandle:int=0,prefLen:int=4096) -> typing.Any:
+def NetGroupGetUsers(server:'Union[str]',groupName:'Union[str]',level:'int',resumeHandle:'int'=0,prefLen:'int'=4096) -> 'Tuple[Any, Any, Any, Any]':
     """
     Enumerates the users in a group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupName(str,typing.Any):The name of the local group.
+      server(Union[str]):The name of the server, or None.
+      groupName(Union[str]):The name of the local group.
       level(int):The level of data required.
       resumeHandle(int):A resume handle.  See the return description for more information.
       prefLen(int):The preferred length of the data buffer.Win32 API References
 
 Returns:
 
-      typing.Any:Search for NetGroupGetUsers at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetGroupGetUsers at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyGROUP_USERS_INFO_*, depending on the level parameter), 
@@ -81,21 +78,20 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetGroupSetUsers(server:Union[str,typing.Any],group:Union[str,typing.Any],level:int,members:typing.Any) -> None:
+def NetGroupSetUsers(server:'Union[str]',group:'Union[str]',level:'int',members:'Tuple[Any, Any]') -> 'None':
     """
     Sets the members of a local group.  Any existing members not listed are 
 
 removed.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      group(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      group(Union[str]):The group name
       level(int):The level of information in the data. Must be 0
-      members(typing.Any):The list of new members to add.Win32 API References
+      members(Tuple[Any, Any]):The list of new members to add.Win32 API References
 
 Returns:
 
@@ -103,19 +99,18 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupSetInfo(server:Union[str,typing.Any],groupname:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetGroupSetInfo(server:'Union[str]',groupname:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets information about a particular group account on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupname(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      groupname(Union[str]):The group name
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the group data.Win32 API References
+      data(Any):A dictionary holding the group data.Win32 API References
 
 Returns:
 
@@ -123,18 +118,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupAdd(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetGroupAdd(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Creates a new group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the group data.Win32 API References
+      data(Any):A dictionary holding the group data.Win32 API References
 
 Returns:
 
@@ -142,18 +136,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupAddUser(server:Union[str,typing.Any],group:Union[str,typing.Any],username:Union[str,typing.Any]) -> None:
+def NetGroupAddUser(server:'Union[str]',group:'Union[str]',username:'Union[str]') -> 'None':
     """
     Adds a user to the group
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      group(str,typing.Any):The group name
-      username(str,typing.Any):The user to add to the group.Win32 API References
+      server(Union[str]):The name of the server, or None.
+      group(Union[str]):The group name
+      username(Union[str]):The user to add to the group.Win32 API References
 
 Returns:
 
@@ -161,17 +154,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupDel(server:Union[str,typing.Any],groupname:Union[str,typing.Any]) -> None:
+def NetGroupDel(server:'Union[str]',groupname:'Union[str]') -> 'None':
     """
     Deletes a group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupname(str,typing.Any):The group nameWin32 API References
+      server(Union[str]):The name of the server, or None.
+      groupname(Union[str]):The group nameWin32 API References
 
 Returns:
 
@@ -179,18 +171,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupDelUser(server:Union[str,typing.Any],group:Union[str,typing.Any],username:Union[str,typing.Any]) -> None:
+def NetGroupDelUser(server:'Union[str]',group:'Union[str]',username:'Union[str]') -> 'None':
     """
     Deletes a user from the group
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      group(str,typing.Any):The group name
-      username(str,typing.Any):The user to delete from the group.Win32 API References
+      server(Union[str]):The name of the server, or None.
+      group(Union[str]):The group name
+      username(Union[str]):The user to delete from the group.Win32 API References
 
 Returns:
 
@@ -198,23 +189,22 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupEnum(server:Union[str,typing.Any],level:int,prefLen:int,resumeHandle:int=0) -> typing.Any:
+def NetGroupEnum(server:'Union[str]',level:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Enumerates all groups.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The level of data required.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetGroupEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetGroupEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyGROUP_INFO_*, depending on the level parameter), 
@@ -234,18 +224,17 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetGroupAdd(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetGroupAdd(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Creates a new group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the group data.Win32 API References
+      data(Any):A dictionary holding the group data.Win32 API References
 
 Returns:
 
@@ -253,19 +242,18 @@ Returns:
         
     """
     pass
+        
 
-
-def NetLocalGroupAddMembers(server:Union[str,typing.Any],group:Union[str,typing.Any],level:int,members:typing.Any) -> None:
+def NetLocalGroupAddMembers(server:'Union[str]',group:'Union[str]',level:'int',members:'Tuple[Any, Any]') -> 'None':
     """
     Adds users to a local group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      group(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      group(Union[str]):The group name
       level(int):The level of information in the data.
-      members(typing.Any):The new members to add.Win32 API References
+      members(Tuple[Any, Any]):The new members to add.Win32 API References
 
 Returns:
 
@@ -273,18 +261,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetLocalGroupDelMembers(server:Union[str,typing.Any],group:Union[str,typing.Any],members:typing.Any) -> None:
+def NetLocalGroupDelMembers(server:'Union[str]',group:'Union[str]',members:'List[str]') -> 'None':
     """
     Deletes users from a local group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      group(str,typing.Any):The group name
-      members(typing.Any):A list of strings with fully qualified user names to delete from a local group.Win32 API References
+      server(Union[str]):The name of the server, or None.
+      group(Union[str]):The group name
+      members(List[str]):A list of strings with fully qualified user names to delete from a local group.Win32 API References
 
 Returns:
 
@@ -292,17 +279,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupDel(server:Union[str,typing.Any],groupname:Union[str,typing.Any]) -> None:
+def NetGroupDel(server:'Union[str]',groupname:'Union[str]') -> 'None':
     """
     Deletes a group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupname(str,typing.Any):The group nameWin32 API References
+      server(Union[str]):The name of the server, or None.
+      groupname(Union[str]):The group nameWin32 API References
 
 Returns:
 
@@ -310,23 +296,22 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGroupEnum(server:Union[str,typing.Any],level:int,prefLen:int,resumeHandle:int=0) -> typing.Any:
+def NetGroupEnum(server:'Union[str]',level:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Enumerates all groups.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The level of data required.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetGroupEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetGroupEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyGROUP_INFO_*, depending on the level parameter), 
@@ -346,17 +331,16 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetGroupGetInfo(server:Union[str,typing.Any],groupname:Union[str,typing.Any],level:int) -> dict:
+def NetGroupGetInfo(server:'Union[str]',groupname:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves information about a particular group on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupname(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      groupname(Union[str]):The group name
       level(int):The information level contained in the dataWin32 API References
 
 Returns:
@@ -369,26 +353,25 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetLocalGroupGetMembers(server:Union[str,typing.Any],groupName:Union[str,typing.Any],level:int,resumeHandle:int=0,prefLen:int=4096) -> typing.Any:
+def NetLocalGroupGetMembers(server:'Union[str]',groupName:'Union[str]',level:'int',resumeHandle:'int'=0,prefLen:'int'=4096) -> 'Tuple[Any, Any, Any, Any]':
     """
     Enumerates the members in a local 
 
 group.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupName(str,typing.Any):The name of the local group.
+      server(Union[str]):The name of the server, or None.
+      groupName(Union[str]):The name of the local group.
       level(int):The level of data required.
       resumeHandle(int):A resume handle.  See the return description for more information.
       prefLen(int):The preferred length of the data buffer.Win32 API References
 
 Returns:
 
-      typing.Any:Search for NetLocalGroupGetMembers at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetLocalGroupGetMembers at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyLOCALGROUP_MEMBERS_INFO_*, depending on the level parameter), 
@@ -408,19 +391,18 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetGroupSetInfo(server:Union[str,typing.Any],groupname:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetGroupSetInfo(server:'Union[str]',groupname:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets information about a particular group account on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      groupname(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      groupname(Union[str]):The group name
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the group data.Win32 API References
+      data(Any):A dictionary holding the group data.Win32 API References
 
 Returns:
 
@@ -428,21 +410,20 @@ Returns:
         
     """
     pass
+        
 
-
-def NetLocalGroupSetMembers(server:Union[str,typing.Any],group:Union[str,typing.Any],level:int,members:typing.Any) -> None:
+def NetLocalGroupSetMembers(server:'Union[str]',group:'Union[str]',level:'int',members:'Tuple[Any, Any]') -> 'None':
     """
     Sets the members of a local group. Any existing members not listed 
 
 are removed.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      group(str,typing.Any):The group name
+      server(Union[str]):The name of the server, or None.
+      group(Union[str]):The group name
       level(int):The level of information in the data.
-      members(typing.Any):The list of new members to add.Win32 API References
+      members(Tuple[Any, Any]):The list of new members to add.Win32 API References
 
 Returns:
 
@@ -450,12 +431,11 @@ Returns:
         
     """
     pass
+        
 
-
-def NetMessageBufferSend(domain:str,userName:str,fromName:str,message:str) -> None:
+def NetMessageBufferSend(domain:'str',userName:'str',fromName:'str',message:'str') -> 'None':
     """
     sends a string to a registered message alias.
-
 
 Args:
 
@@ -470,17 +450,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetMessageNameAdd(server:Union[str,typing.Any],msgname:Union[str,typing.Any]) -> None:
+def NetMessageNameAdd(server:'Union[str, Any]',msgname:'Union[str, Any]') -> 'None':
     """
     Adds a message alias for specified machine
 
-
 Args:
 
-      server(str,typing.Any):Name of server on which to execute - leading backslashes required on NT - local machine used if None
-      msgname(str,typing.Any):Message alias to add, 15 characters max
+      server(Union[str, Any]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
+      msgname(Union[str, Any]):Message alias to add, 15 characters max
 
 Returns:
 
@@ -488,17 +467,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetMessageNameDel(server:Union[str,typing.Any],msgname:Union[str,typing.Any]) -> None:
+def NetMessageNameDel(server:'Union[str, Any]',msgname:'Union[str, Any]') -> 'None':
     """
     Removes a message alias for specified machine
 
-
 Args:
 
-      server(str,typing.Any):Name of server on which to execute - leading backslashes required on NT - local machine used if None
-      msgname(str,typing.Any):Message alias to delete for specified machine
+      server(Union[str, Any]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
+      msgname(Union[str, Any]):Message alias to delete for specified machine
 
 Returns:
 
@@ -506,16 +484,15 @@ Returns:
         
     """
     pass
+        
 
-
-def NetMessageNameEnum(Server:Union[str,typing.Any]) -> None:
+def NetMessageNameEnum(Server:'Union[str, Any]') -> 'None':
     """
     Lists aliases for a computer
 
-
 Args:
 
-      Server(str,typing.Any):Name of server on which to execute - leading backslashes required on NT - local machine used if None
+      Server(Union[str, Any]):Name of server on which to execute - leading backslashes required on NT - local machine used if None
 
 Returns:
 
@@ -523,27 +500,26 @@ Returns:
         
     """
     pass
+        
 
-
-def NetServerEnum(server:Union[str,typing.Any],level:int,type:int,prefLen:int,domain:Union[str,typing.Any]=None,resumeHandle:int=0) -> typing.Any:
+def NetServerEnum(server:'Union[str]',level:'int',type:'int',prefLen:'int',domain:'Union[str]'=None,resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about each server of a 
 
 particular type
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The level of data required.
       type(int):Type of server to return - one of the SV_TYPE_* constants.
       prefLen(int):The preferred length of the data buffer.Win32 API References
-      domain(str,typing.Any):The domain to enumerate, or None for the current domain.
+      domain(Union[str]):The domain to enumerate, or None for the current domain.
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetServerEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetServerEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PySERVER_INFO_*, depending on the level parameter), 
@@ -563,16 +539,15 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetServerGetInfo(server:Union[str,typing.Any],level:int) -> dict:
+def NetServerGetInfo(server:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves information about a particular server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The information level contained in the dataWin32 API References
 
 Returns:
@@ -585,18 +560,17 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetServerSetInfo(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetServerSetInfo(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets information about a particular server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the share data.Win32 API References
+      data(Any):A dictionary holding the share data.Win32 API References
 
 Returns:
 
@@ -604,18 +578,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetShareAdd(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetShareAdd(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Creates a new share.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data.  Must be level 2 or 502.
-      data(typing.Any):A dictionary holding the share data, in the format of SHARE_INFO_*Win32 API References
+      data(Any):A dictionary holding the share data, in the format of SHARE_INFO_*Win32 API References
 
 Returns:
 
@@ -623,17 +596,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetShareDel(server:Union[str,typing.Any],shareName:Union[str,typing.Any],reserved:int=0) -> None:
+def NetShareDel(server:'Union[str]',shareName:'Union[str]',reserved:'int'=0) -> 'None':
     """
     Deletes a share
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      shareName(str,typing.Any):The share name
+      server(Union[str]):The name of the server, or None.
+      shareName(Union[str]):The share name
       reserved(int):Must be zero.Win32 API References
 
 Returns:
@@ -642,46 +614,44 @@ Returns:
         
     """
     pass
+        
 
-
-def NetShareCheck(server:Union[str,typing.Any],deviceName:Union[str,typing.Any]) -> typing.Any:
+def NetShareCheck(server:'Union[str]',deviceName:'Union[str]') -> 'Tuple[Any, type]':
     """
     Checks if server is sharing a device
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      deviceName(str,typing.Any):The share nameWin32 API References
+      server(Union[str]):The name of the server, or None.
+      deviceName(Union[str]):The share nameWin32 API References
 
 Returns:
 
-      typing.Any:Search for NetShareCheck at msdn, google or google groups.
+      Tuple[Any, type]:Search for NetShareCheck at msdn, google or google groups.
 Return ValueThe result is (1, type-of-device) if device is shared, (0, None) if it is not shared.
 
         
     """
     pass
+        
 
-
-def NetShareEnum(server:Union[str,typing.Any],level:int,prefLen:int,serverName:typing.Any,resumeHandle:int=0) -> typing.Any:
+def NetShareEnum(server:'Union[str]',level:'int',prefLen:'int',serverName:'Any',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about each shared resource 
 
 on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The level of data required.
       prefLen(int):The preferred length of the data buffer.Alternative Parameters
-      serverName(typing.Any):The name of the server on which the call should execute, or None for the local computer.CommentsIf the old style is used, the result is a list of [(shareName, type, remarks), ...]Win32 API References
+      serverName(Any):The name of the server on which the call should execute, or None for the local computer.CommentsIf the old style is used, the result is a list of [(shareName, type, remarks), ...]Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetShareEnum 
+      Tuple[Any, Any, Any, Any]:Search for NetShareEnum 
 
 param 1 is not declared as const :-( at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
@@ -703,17 +673,16 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetShareGetInfo(server:Union[str,typing.Any],netname:Union[str,typing.Any],level:int) -> dict:
+def NetShareGetInfo(server:'Union[str]',netname:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves information about a particular share on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      netname(str,typing.Any):The network name
+      server(Union[str]):The name of the server, or None.
+      netname(Union[str]):The network name
       level(int):The information level contained in the dataWin32 API References
 
 Returns:
@@ -726,19 +695,18 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetShareSetInfo(server:Union[str,typing.Any],netname:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetShareSetInfo(server:'Union[str]',netname:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets information about a particular share on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      netname(str,typing.Any):The network name
+      server(Union[str]):The name of the server, or None.
+      netname(Union[str]):The network name
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the share data.Win32 API References
+      data(Any):A dictionary holding the share data.Win32 API References
 
 Returns:
 
@@ -746,18 +714,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUserAdd(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetUserAdd(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Creates a new user.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the user data in the format of PyUSER_INFO_*.Win32 API References
+      data(Any):A dictionary holding the user data in the format of PyUSER_INFO_*.Win32 API References
 
 Returns:
 
@@ -765,19 +732,18 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUserChangePassword(server:Union[str,typing.Any],username:Union[str,typing.Any],oldPassword:Union[str,typing.Any],newPassword:Union[str,typing.Any]) -> None:
+def NetUserChangePassword(server:'Union[str]',username:'Union[str]',oldPassword:'Union[str]',newPassword:'Union[str]') -> 'None':
     """
     Changes the password for a user.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      username(str,typing.Any):The user name, or None for the current username.
-      oldPassword(str,typing.Any):The old password
-      newPassword(str,typing.Any):The new passwordCommentsA server or domain can be configured to require that a user log on to change the password on a user account. If that is the case, you need administrator or account operator access to change the password for another user acount. If logging on is not required, you can change the password for any user account, so long as you know the current password.Win32 API References
+      server(Union[str]):The name of the server, or None.
+      username(Union[str]):The user name, or None for the current username.
+      oldPassword(Union[str]):The old password
+      newPassword(Union[str]):The new passwordCommentsA server or domain can be configured to require that a user log on to change the password on a user account. If that is the case, you need administrator or account operator access to change the password for another user acount. If logging on is not required, you can change the password for any user account, so long as you know the current password.Win32 API References
 
 Returns:
 
@@ -785,16 +751,15 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUserEnum(server:Union[str,typing.Any],level:int,filter:int,prefLen:int,resumeHandle:int=0) -> typing.Any:
+def NetUserEnum(server:'Union[str]',level:'int',filter:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Enumerates all users.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The level of data required.
       filter(int):The types of accounts to enumerate.
       prefLen(int):The preferred length of the data buffer.Win32 API References
@@ -802,7 +767,7 @@ Args:
 
 Returns:
 
-      typing.Any:Search for NetUserEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetUserEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyUSER_INFO_*, depending on the level parameter), 
@@ -822,14 +787,13 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetUserGetGroups(serverName:str,userName:str) -> typing.Any:
+def NetUserGetGroups(serverName:'str',userName:'str') -> 'List[Any]':
     """
     Returns a list of groups,attributes for all groups 
 
 for the user.
-
 
 Args:
 
@@ -838,7 +802,7 @@ Args:
 
 Returns:
 
-      typing.Any:The name of the user to search for in each group account. To Do This needs to be extended to support the new model, while 
+      List[Any]:The name of the user to search for in each group account. To Do This needs to be extended to support the new model, while 
 
 not breaking existing code.  A default arg would be perfect.
 Return ValueAlways makes the level 1 call and returns all data. 
@@ -852,17 +816,16 @@ Earlier version of NT have not been tested.
         
     """
     pass
+        
 
-
-def NetUserGetInfo(server:Union[str,typing.Any],username:Union[str,typing.Any],level:int) -> dict:
+def NetUserGetInfo(server:'Union[str]',username:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves information about a particular user account on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      username(str,typing.Any):The user name
+      server(Union[str]):The name of the server, or None.
+      username(Union[str]):The user name
       level(int):The information level contained in the dataWin32 API References
 
 Returns:
@@ -875,14 +838,13 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetUserGetLocalGroups(serverName:str,userName:str,flags:int) -> typing.Any:
+def NetUserGetLocalGroups(serverName:'str',userName:'str',flags:'int') -> 'List[Any]':
     """
     Retrieves a list of local groups to which a specified user 
 
 belongs.
-
 
 Args:
 
@@ -892,23 +854,22 @@ Args:
 
 Returns:
 
-      typing.Any
+      List[Any]
         
     """
     pass
+        
 
-
-def NetUserSetInfo(server:Union[str,typing.Any],username:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetUserSetInfo(server:'Union[str]',username:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets information about a particular user account on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      username(str,typing.Any):The user name
+      server(Union[str]):The name of the server, or None.
+      username(Union[str]):The user name
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the user data in the format of PyUSER_INFO_*Win32 API References
+      data(Any):A dictionary holding the user data in the format of PyUSER_INFO_*Win32 API References
 
 Returns:
 
@@ -916,17 +877,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUserDel(server:Union[str,typing.Any],username:Union[str,typing.Any]) -> None:
+def NetUserDel(server:'Union[str]',username:'Union[str]') -> 'None':
     """
     Deletes a user.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      username(str,typing.Any):The user nameWin32 API References
+      server(Union[str]):The name of the server, or None.
+      username(Union[str]):The user nameWin32 API References
 
 Returns:
 
@@ -934,16 +894,15 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUserModalsGet(server:Union[str,typing.Any],level:int) -> dict:
+def NetUserModalsGet(server:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves global user information on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the dataWin32 API References
 
 Returns:
@@ -956,18 +915,17 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetUserModalsSet(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetUserModalsSet(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets global user parameters on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the data in the format of PyUSER_MODALS_INFO_*.Win32 API References
+      data(Any):A dictionary holding the data in the format of PyUSER_MODALS_INFO_*.Win32 API References
 
 Returns:
 
@@ -975,25 +933,24 @@ Returns:
         
     """
     pass
+        
 
-
-def NetWkstaUserEnum(server:Union[str,typing.Any],level:int,prefLen:int,resumeHandle:int=0) -> typing.Any:
+def NetWkstaUserEnum(server:'Union[str]',level:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about all users 
 
 currently logged on to the workstation.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The level of data required.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetWkstaUserEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetWkstaUserEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyWKSTA_USER_INFO_*, depending on the level parameter), 
@@ -1013,16 +970,15 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetWkstaGetInfo(server:Union[str,typing.Any],level:int) -> dict:
+def NetWkstaGetInfo(server:'Union[str]',level:'int') -> 'dict':
     """
     Retrieves information about the configuration elements for a workstation
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The information level contained in the data. NOTE: levels 302 and 402 don't seem to work correctly. They return error 124. So currently these info levels are not available.Win32 API References
 
 Returns:
@@ -1035,18 +991,17 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetWkstaSetInfo(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetWkstaSetInfo(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Sets information about the configuration elements for a workstation
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the share data.Win32 API References
+      data(Any):A dictionary holding the share data.Win32 API References
 
 Returns:
 
@@ -1054,25 +1009,24 @@ Returns:
         
     """
     pass
+        
 
-
-def NetWkstaTransportEnum(server:Union[str,typing.Any],level:int,prefLen:int,resumeHandle:int=0) -> typing.Any:
+def NetWkstaTransportEnum(server:'Union[str]',level:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about transport 
 
 protocols that are currently managed by the redirector
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The level of data required.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetWkstaTransportEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetWkstaTransportEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyWKSTA_TRANSPORT_INFO_*, depending on the level parameter), 
@@ -1092,18 +1046,17 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetWkstaTransportAdd(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetWkstaTransportAdd(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     binds the redirector to a transport
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the share data.Win32 API References
+      data(Any):A dictionary holding the share data.Win32 API References
 
 Returns:
 
@@ -1111,17 +1064,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetWkstaTransportDel(server:Union[str,typing.Any],TransportName:Union[str,typing.Any],ucond:int=0) -> None:
+def NetWkstaTransportDel(server:'Union[str]',TransportName:'Union[str]',ucond:'int'=0) -> 'None':
     """
     unbinds the transport protocol from redirector
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      TransportName(str,typing.Any):The name of the transport to delete.
+      server(Union[str]):The name of the server, or None.
+      TransportName(Union[str]):The name of the transport to delete.
       ucond(int):Level of force to use. Can be USE_FORCE or USE_NOFORCE or USE_LOTS_OF_FORCEWin32 API References
 
 Returns:
@@ -1130,16 +1082,15 @@ Returns:
         
     """
     pass
+        
 
-
-def NetServerDiskEnum(server:Union[str,typing.Any],level:int) -> list:
+def NetServerDiskEnum(server:'Union[str]',level:'int') -> 'list':
     """
     Retrieves the list of disk drives on a server.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The level of data required. Must be 0.Win32 API References
 
 Returns:
@@ -1150,20 +1101,19 @@ Return ValueThe result is a list of drives on the server
         
     """
     pass
+        
 
-
-def NetUseAdd(server:Union[str,typing.Any],level:int,data:typing.Any) -> None:
+def NetUseAdd(server:'Union[str]',level:'int',data:'Any') -> 'None':
     """
     Establishes connection between local or NULL device name and a shared resource through 
 
 redirector
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
+      server(Union[str]):The name of the server, or None.
       level(int):The information level contained in the data
-      data(typing.Any):A dictionary holding the share data in the format of PyUSE_INFO_*.Win32 API References
+      data(Any):A dictionary holding the share data in the format of PyUSE_INFO_*.Win32 API References
 
 Returns:
 
@@ -1171,17 +1121,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUseDel(server:Union[str,typing.Any],useName:Union[str,typing.Any],forceCond:int=0) -> None:
+def NetUseDel(server:'Union[str]',useName:'Union[str]',forceCond:'int'=0) -> 'None':
     """
     Ends connection to a shared resource.
 
-
 Args:
 
-      server(str,typing.Any):The name of the server, or None.
-      useName(str,typing.Any):The share name
+      server(Union[str]):The name of the server, or None.
+      useName(Union[str]):The share name
       forceCond(int):Level of force to use. Can be USE_FORCE or USE_NOFORCE or USE_LOTS_OF_FORCEWin32 API References
 
 Returns:
@@ -1190,25 +1139,24 @@ Returns:
         
     """
     pass
+        
 
-
-def NetUseEnum(server:Union[str,typing.Any],level:int,prefLen:int,resumeHandle:int=0) -> typing.Any:
+def NetUseEnum(server:'Union[str]',level:'int',prefLen:'int',resumeHandle:'int'=0) -> 'Tuple[Any, Any, Any, Any]':
     """
     Retrieves information about transport protocols that 
 
 are currently managed by the redirector
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
+      server(Union[str]):The name of the server to execute on, or None.
       level(int):The level of data required. Currently levels 0, 1 and 2 are supported.
       prefLen(int):The preferred length of the data buffer.Win32 API References
       resumeHandle(int):A resume handle.  See the return description for more information.
 
 Returns:
 
-      typing.Any:Search for NetUseEnum at msdn, google or google groups.
+      Tuple[Any, Any, Any, Any]:Search for NetUseEnum at msdn, google or google groups.
 Return ValueThe result is a list of items read (with each item being a dictionary of format 
 
 PyUSE_INFO_*, depending on the level parameter), 
@@ -1228,17 +1176,16 @@ returned for the new handle, indicating all the data has been read.
         
     """
     pass
+        
 
-
-def NetUseGetInfo(server:Union[str,typing.Any],usename:Union[str,typing.Any],level:int=0) -> dict:
+def NetUseGetInfo(server:'Union[str]',usename:'Union[str]',level:'int'=0) -> 'dict':
     """
     Retrieves information about the configuration elements for a workstation
 
-
 Args:
 
-      server(str,typing.Any):The name of the server to execute on, or None.
-      usename(str,typing.Any):The name of the locally mapped resource.
+      server(Union[str]):The name of the server to execute on, or None.
+      usename(Union[str]):The name of the locally mapped resource.
       level(int):The information level contained in the data. NOTE: levels 302 and 402 don't seem to work correctly. They return error 124. So currently these info levels are not available.Win32 API References
 
 Returns:
@@ -1251,19 +1198,18 @@ formats, depending on the level parameter.
         
     """
     pass
+        
 
-
-def NetGetAnyDCName(server:typing.Any=None,domain:typing.Any=None) -> str:
+def NetGetAnyDCName(server:'str'=None,domain:'str'=None) -> 'str':
     """
     Returns the name of any domain controller trusted by the specified 
 
 server.
 
-
 Args:
 
-      server(typing.Any):Specifies the name of the remote server on which the function is to execute. If this parameter is None, the local computer is used.
-      domain(typing.Any):Specifies the name of the domain. If this parameter is None, the name of the domain controller for the primary domain is used.
+      server(str):Specifies the name of the remote server on which the function is to execute. If this parameter is None, the local computer is used.
+      domain(str):Specifies the name of the domain. If this parameter is None, the name of the domain controller for the primary domain is used.
 
 Returns:
 
@@ -1271,17 +1217,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetGetDCName(server:typing.Any=None,domain:typing.Any=None) -> str:
+def NetGetDCName(server:'str'=None,domain:'str'=None) -> 'str':
     """
     Returns the name of the primary domain controller (PDC).
 
-
 Args:
 
-      server(typing.Any):Specifies the name of the remote server on which the function is to execute. If this parameter is None, the local computer is used.
-      domain(typing.Any):Specifies the name of the domain. If this parameter is None, the name of the domain controller for the primary domain is used.
+      server(str):Specifies the name of the remote server on which the function is to execute. If this parameter is None, the local computer is used.
+      domain(str):Specifies the name of the domain. If this parameter is None, the name of the domain controller for the primary domain is used.
 
 Returns:
 
@@ -1289,42 +1234,40 @@ Returns:
         
     """
     pass
+        
 
-
-def NetSessionEnum(level:int,server:Union[str,typing.Any]=None,client:Union[str,typing.Any]=None,username:Union[str,typing.Any]=None) -> typing.Any:
+def NetSessionEnum(level:'int',server:'Union[str]'=None,client:'Union[str]'=None,username:'Union[str]'=None) -> 'Tuple[dict, ...]':
     """
     Returns network sessions for a server, limited to single client and/or 
 
 user if specified.
 
-
 Args:
 
       level(int):Level of information requested, currently accepts 0, 1, 2, 10, and 502
-      server(str,typing.Any):The name of the server for which to list sessions, local machine assumed if None
-      client(str,typing.Any):Name of client computer, or None to list all computer sessions
-      username(str,typing.Any):User name, or None to list all connected usersReturn ValueReturns a sequence of dictionaries representing SESSION_INFO_* structs, depending on level specified
+      server(Union[str]):The name of the server for which to list sessions, local machine assumed if None
+      client(Union[str]):Name of client computer, or None to list all computer sessions
+      username(Union[str]):User name, or None to list all connected usersReturn ValueReturns a sequence of dictionaries representing SESSION_INFO_* structs, depending on level specified
 
 Returns:
 
-      typing.Any:User name, or None to list all connected users
+      Tuple[dict, ...]:User name, or None to list all connected users
 Return ValueReturns a sequence of dictionaries representing SESSION_INFO_* structs, depending on level specified
 
         
     """
     pass
+        
 
-
-def NetSessionDel(server:Union[str,typing.Any],client:Union[str,typing.Any]=None,username:Union[str,typing.Any]=None) -> None:
+def NetSessionDel(server:'Union[str]',client:'Union[str]'=None,username:'Union[str]'=None) -> 'None':
     """
     Disconnects network connections on a server
 
-
 Args:
 
-      server(str,typing.Any):The name of the server on which to operate, local machine assumed if None or blank
-      client(str,typing.Any):Name of client computer, or None
-      username(str,typing.Any):User name, or None for all connected usersReturn ValueReturns None on success
+      server(Union[str]):The name of the server on which to operate, local machine assumed if None or blank
+      client(Union[str]):Name of client computer, or None
+      username(Union[str]):User name, or None for all connected usersReturn ValueReturns None on success
 
 Returns:
 
@@ -1334,19 +1277,18 @@ Return ValueReturns None on success
         
     """
     pass
+        
 
-
-def NetSessionGetInfo(level:int,server:Union[str,typing.Any],client:Union[str,typing.Any],username:Union[str,typing.Any]) -> dict:
+def NetSessionGetInfo(level:'int',server:'Union[str]',client:'Union[str]',username:'Union[str]') -> 'dict':
     """
     Returns information for a network session from specified client
-
 
 Args:
 
       level(int):Level of information requested, currently accepts 0, 1, 2, 10, and 502
-      server(str,typing.Any):The name of the server on which to operate, None or blank assumes local machine
-      client(str,typing.Any):Name of client computer
-      username(str,typing.Any):User that established sessionReturn ValueReturns a dictionary representing a SESSION_INFO_* struct, depending on level specified
+      server(Union[str]):The name of the server on which to operate, None or blank assumes local machine
+      client(Union[str]):Name of client computer
+      username(Union[str]):User that established sessionReturn ValueReturns a dictionary representing a SESSION_INFO_* struct, depending on level specified
 
 Returns:
 
@@ -1355,38 +1297,36 @@ Returns:
         
     """
     pass
+        
 
-
-def NetFileEnum(level:int,servername:Union[str,typing.Any]=None,basepath:Union[str,typing.Any]=None,username:Union[str,typing.Any]=None) -> typing.Any:
+def NetFileEnum(level:'int',servername:'Union[str]'=None,basepath:'Union[str]'=None,username:'Union[str]'=None) -> 'Tuple[dict, ...]':
     """
     Lists remotely opened resources on a server
-
 
 Args:
 
       level(int):Level of information, 2 or 3 supported
-      servername(str,typing.Any):The name of the server for which to list open resources, local machine assumed if None
-      basepath(str,typing.Any):If specified, limits returned list to files on given path
-      username(str,typing.Any):User that opened resource, or None to list open files for all usersReturn ValueReturns a sequence of dictionaries representing FILE_INFO_* structs, depending on level specified
+      servername(Union[str]):The name of the server for which to list open resources, local machine assumed if None
+      basepath(Union[str]):If specified, limits returned list to files on given path
+      username(Union[str]):User that opened resource, or None to list open files for all usersReturn ValueReturns a sequence of dictionaries representing FILE_INFO_* structs, depending on level specified
 
 Returns:
 
-      typing.Any:User that opened resource, or None to list open files for all users
+      Tuple[dict, ...]:User that opened resource, or None to list open files for all users
 Return ValueReturns a sequence of dictionaries representing FILE_INFO_* structs, depending on level specified
 
         
     """
     pass
+        
 
-
-def NetFileClose(servername:Union[str,typing.Any],fileid:int) -> None:
+def NetFileClose(servername:'Union[str]',fileid:'int') -> 'None':
     """
     Closes an open network resource on a server
 
-
 Args:
 
-      servername(str,typing.Any):Name of server on which to operate, local machine assumed if None
+      servername(Union[str]):Name of server on which to operate, local machine assumed if None
       fileid(int):Id of opened resource, as returned by win32net::NetFileEnum
 
 Returns:
@@ -1395,17 +1335,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetFileGetInfo(level:int,servername:Union[str,typing.Any],fileid:int) -> dict:
+def NetFileGetInfo(level:'int',servername:'Union[str]',fileid:'int') -> 'dict':
     """
     Returns information about an open network resource
-
 
 Args:
 
       level(int):Level of information to return, 2 or 3 supported
-      servername(str,typing.Any):Server on which resource is open, local machine assumed if None
+      servername(Union[str]):Server on which resource is open, local machine assumed if None
       fileid(int):Id of opened resource, as returned by win32net::NetFileEnum
 
 Returns:
@@ -1414,17 +1353,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetStatisticsGet(server:Union[str,typing.Any],service:Union[str,typing.Any],level:int,options:int) -> dict:
+def NetStatisticsGet(server:'Union[str]',service:'Union[str]',level:'int',options:'int') -> 'dict':
     """
     Retrieves network statistics for specified service on specified machine
 
-
 Args:
 
-      server(str,typing.Any):Name of server/workstation to retrieve statistics for (None or blank uses local).
-      service(str,typing.Any):SERVICE_SERVER or SERVICE_WORKSTATION
+      server(Union[str]):Name of server/workstation to retrieve statistics for (None or blank uses local).
+      service(Union[str]):SERVICE_SERVER or SERVICE_WORKSTATION
       level(int):Only 0 currently supported.
       options(int):Must be zero.Return ValueThe result is a dictionary representing a STAT_SERVER_0 or STAT_WORKSTATION_0 struct
 
@@ -1435,18 +1373,17 @@ Returns:
         
     """
     pass
+        
 
-
-def NetServerComputerNameAdd(ServerName:Union[str,typing.Any],EmulatedDomainName:Union[str,typing.Any],EmulatedServerName:Union[str,typing.Any]) -> None:
+def NetServerComputerNameAdd(ServerName:'Union[str]',EmulatedDomainName:'Union[str]',EmulatedServerName:'Union[str]') -> 'None':
     """
     Adds an additional network name for a server
 
-
 Args:
 
-      ServerName(str,typing.Any):Name of server that will receive additional name
-      EmulatedDomainName(str,typing.Any):Domain under which to add the new server name, can be None
-      EmulatedServerName(str,typing.Any):New network name that server will respond toReturn ValueReturns none on success
+      ServerName(Union[str]):Name of server that will receive additional name
+      EmulatedDomainName(Union[str]):Domain under which to add the new server name, can be None
+      EmulatedServerName(Union[str]):New network name that server will respond toReturn ValueReturns none on success
 
 Returns:
 
@@ -1455,17 +1392,16 @@ Returns:
         
     """
     pass
+        
 
-
-def NetServerComputerNameDel(ServerName:Union[str,typing.Any],EmulatedServerName:Union[str,typing.Any]) -> None:
+def NetServerComputerNameDel(ServerName:'Union[str]',EmulatedServerName:'Union[str]') -> 'None':
     """
     None
 
-
 Args:
 
-      ServerName(str,typing.Any):Name of server on which to operate
-      EmulatedServerName(str,typing.Any):Network name to be removedReturn ValueReturns none on success
+      ServerName(Union[str]):Name of server on which to operate
+      EmulatedServerName(Union[str]):Network name to be removedReturn ValueReturns none on success
 
 Returns:
 
@@ -1474,20 +1410,19 @@ Returns:
         
     """
     pass
+        
 
-
-def NetValidateName(Server:Union[str,typing.Any],Name:Union[str,typing.Any],NameType:int,Account:Union[str,typing.Any]=None,Password:Union[str,typing.Any]=None) -> None:
+def NetValidateName(Server:'Union[str]',Name:'Union[str]',NameType:'int',Account:'Union[str]'=None,Password:'Union[str]'=None) -> 'None':
     """
     Checks that domain/machine/workgroup name is valid for given context
 
-
 Args:
 
-      Server(str,typing.Any):Name of server on which to execute (None or blank uses local)
-      Name(str,typing.Any):Machine, domain, or workgroup name to validate
+      Server(Union[str]):Name of server on which to execute (None or blank uses local)
+      Name(Union[str]):Machine, domain, or workgroup name to validate
       NameType(int):Type of name to validate - from NETSETUP_NAME_TYPE enum (win32net.NetSetup*)
-      Account(str,typing.Any):Account name to use while validating, current security context is used if not specified
-      Password(str,typing.Any):Password for AccountCommentsIf Account and Password aren't passed, current logon credentials are usedWill raise NotImplementedError if not available on this platform.Return ValueReturns none if valid, exception if not
+      Account(Union[str]):Account name to use while validating, current security context is used if not specified
+      Password(Union[str]):Password for AccountCommentsIf Account and Password aren't passed, current logon credentials are usedWill raise NotImplementedError if not available on this platform.Return ValueReturns none if valid, exception if not
 
 Returns:
 
@@ -1502,9 +1437,9 @@ Return ValueReturns none if valid, exception if not
         
     """
     pass
+        
 
-
-def NetValidatePasswordPolicy(Server:Union[str,typing.Any],Qualifier:None,ValidationType:int,arg:Union[dict,tuple]) -> None:
+def NetValidatePasswordPolicy(Server:'Union[str]',Qualifier:'None',ValidationType:'int',arg:'Union[tuple, dict]') -> 'None':
     """
     Allows an application to check 
 
@@ -1514,13 +1449,12 @@ verify that passwords meet the complexity, aging, minimum length, and
 
 history reuse requirements of a password policy.
 
-
 Args:
 
-      Server(str,typing.Any):Name of server on which to execute (None or blank uses local)
+      Server(Union[str]):Name of server on which to execute (None or blank uses local)
       Qualifier(None):Reserved, must be None
       ValidationType(int):The type of password validation to perform
-      arg(dict,tuple):Depends on the ValidationType param - either a PyNET_VALIDATE_AUTHENTICATION_INPUT_ARG,  PyNET_VALIDATE_PASSWORD_CHANGE_INPUT_ARG or PyNET_VALIDATE_PASSWORD_RESET_INPUT_ARG tuple or dict.CommentsWill raise NotImplementedError if not available on this platform, or raise win32net.error if the function fails.Return ValueReturns a tuple of (PyNET_VALIDATE_PERSISTED_FIELDS, int) with the integer being the ValidationResult.
+      arg(Union[tuple, dict]):Depends on the ValidationType param - either a PyNET_VALIDATE_AUTHENTICATION_INPUT_ARG,  PyNET_VALIDATE_PASSWORD_CHANGE_INPUT_ARG or PyNET_VALIDATE_PASSWORD_RESET_INPUT_ARG tuple or dict.CommentsWill raise NotImplementedError if not available on this platform, or raise win32net.error if the function fails.Return ValueReturns a tuple of (PyNET_VALIDATE_PERSISTED_FIELDS, int) with the integer being the ValidationResult.
 
 Returns:
 
@@ -1542,3 +1476,4 @@ the integer being the ValidationResult.
         
     """
     pass
+        
