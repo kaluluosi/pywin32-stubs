@@ -1,7 +1,4 @@
-from pygments.formatters.other import TestcaseFormatter
-from typed_ast.ast27 import Param
 from unittest import TestCase
-from unittest.mock import Mock
 from stub_generator.constant import Constant, ConstantList
 from stub_generator.function import Function
 from stub_generator.module import Module, ModuleList
