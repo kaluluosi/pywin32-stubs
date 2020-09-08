@@ -9,16 +9,6 @@ try:
 except IOError:
     long_description = ""
 
-def create_pth():
-    site_package_path = sysconfig.get_python_lib()
-    lines = []
-    pkg_dir = "pywin32_stubs-0.1.0-py{}.{}".format(*sys.version_info[:2])
-    lines.append(os.path.join(pkg_dir, "win32-stubs\n"))
-    lines.append(os.path.join(pkg_dir, "pythonwin-stubs\n"))
-    lines.append(os.path.join(pkg_dir, "win32comext-stubs\n"))
-    lines.append(os.path.join(pkg_dir, "win32helper\n"))
-    with open(os.path.join(site_package_path,'pywin32-stubs.pth'), 'w', encoding='utf-8') as f:
-        f.writelines(lines)
 
 setup(
     name="pywin32-stubs",
@@ -36,6 +26,7 @@ setup(
         "win32comext-stubs":["*.py", "*.pyi"],
         "win32helper":["*.py", "*.pyi"]
         },
+    data_files=[("Lib/site-packages",["pywin32-stubs.pth"])],
     install_requires=['pywin32'],
     long_description=long_description,
     classifiers=[
@@ -44,5 +35,3 @@ setup(
     ],
     zip_safe=False
 )
-
-create_pth()
