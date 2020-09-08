@@ -273,7 +273,7 @@ Returns:
     pass
         
 
-def SetWindowTheme(hwnd:'int',pszSubAppName:'Union[str, None]',pszSubIdList:'Union[str, None]') -> 'None':
+def SetWindowTheme(hwnd:'int',pszSubAppName:'Union[None, str]',pszSubIdList:'Union[None, str]') -> 'None':
     """
     Rredirects an existing Window to use a different 
 
@@ -282,8 +282,8 @@ section of the current theme information than its class normally asks for.
 Args:
 
       hwnd(int):The handle of the window (cannot be 0)
-      pszSubAppName(Union[str, None]):App (group) name to use in place of the calling app's name.  If NULL, the actual calling app name will be used.
-      pszSubIdList(Union[str, None]):A semicolon separated list of class Id names to use in place of actual list passed by the window's class.  if NULL, the id list from the calling class is used.
+      pszSubAppName(Union[None, str]):App (group) name to use in place of the calling app's name.  If NULL, the actual calling app name will be used.
+      pszSubIdList(Union[None, str]):A semicolon separated list of class Id names to use in place of actual list passed by the window's class.  if NULL, the id list from the calling class is used.
 
 Returns:
 

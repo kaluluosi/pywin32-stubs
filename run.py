@@ -22,7 +22,6 @@ with open(objects_file, 'w', encoding='utf-8') as f:
     lines.insert(0, f"__all__={_all}\n")
     f.writelines(lines)
 
-shutil.copyfile(objects_file, "stub_generator/win32typing.py")
 
 
 win32_modules = ModuleList("win32_modules.html")

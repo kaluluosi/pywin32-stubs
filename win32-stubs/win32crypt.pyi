@@ -714,13 +714,13 @@ SignerCert:PyCERT_CONTEXT	&nbsp&nbsp##Certificate used to sign message
     pass
         
 
-def CryptEncodeObjectEx(StructType:'Union[str, int]',StructInfo:'dict',CertEncodingType:'int',Flags:'int'=0,EncodePara:'Any'=None) -> 'str':
+def CryptEncodeObjectEx(StructType:'Union[int, str]',StructInfo:'dict',CertEncodingType:'int',Flags:'int'=0,EncodePara:'Any'=None) -> 'str':
     """
     Serializes and ASN encodes cryptographic structures
 
 Args:
 
-      StructType(Union[str, int]):OID identifying type of data to be encoded, either szOID_* string or a numeric id
+      StructType(Union[int, str]):OID identifying type of data to be encoded, either szOID_* string or a numeric id
       StructInfo(dict):Information to be encoded.  Contents of dict are dependent on StructType
       CertEncodingType(int):Encoding types
       Flags(int):Encoding options, combination of CRYPT_UNICODE_* constants.  CRYPT_ENCODE_ALLOC_FLAG is added to flags..
@@ -734,13 +734,13 @@ Returns:
     pass
         
 
-def CryptDecodeObjectEx(StructType:'Union[str, int]',Encoded:'str',CertEncodingType:'int',Flags:'int'=0,DecodePara:'Any'=None) -> 'Any':
+def CryptDecodeObjectEx(StructType:'Union[int, str]',Encoded:'str',CertEncodingType:'int',Flags:'int'=0,DecodePara:'Any'=None) -> 'Any':
     """
     Decodes ASN encoded data
 
 Args:
 
-      StructType(Union[str, int]):An OID identifying the type of data to be decoded, can be either str or int
+      StructType(Union[int, str]):An OID identifying the type of data to be decoded, can be either str or int
       Encoded(str):String or buffer containing ASN encoded data
       CertEncodingType(int):Encoding types
       Flags(int):Encoding options, can be combination CRYPT_UNICODE_* constants.  CRYPT_ENCODE_ALLOC_FLAG is added to flags..
@@ -812,13 +812,13 @@ Returns:
     pass
         
 
-def CryptFormatObject(StructType:'Union[str, int]',Encoded:'str',CertEncodingType:'int',FormatStrType:'int'=0,FormatType:'int'=0,FormatStruct:'None'=None) -> 'str':
+def CryptFormatObject(StructType:'Union[int, str]',Encoded:'str',CertEncodingType:'int',FormatStrType:'int'=0,FormatType:'int'=0,FormatStruct:'None'=None) -> 'str':
     """
     Formats an encoded buffer into a readable string
 
 Args:
 
-      StructType(Union[str, int]):OID identifying the type of encoded data, one of the szOID_* strings or an integer OID
+      StructType(Union[int, str]):OID identifying the type of encoded data, one of the szOID_* strings or an integer OID
       Encoded(str):String containing encoded data to be formatted
       CertEncodingType(int):Input encoding
       FormatStrType(int):String formatting options, combination of CRYPT_FORMAT_STR_MULTI_LINE, CRYPT_FORMAT_STR_NO_HEX

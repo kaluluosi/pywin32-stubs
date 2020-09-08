@@ -215,7 +215,7 @@ Returns:
     pass
         
 
-def DragQueryFile(hDrop:'int',fileNum:'int'=0xFFFFFFFF) -> 'Union[str, int]':
+def DragQueryFile(hDrop:'int',fileNum:'int'=0xFFFFFFFF) -> 'Union[int, str]':
     """
     Retrieves the file names of dropped files.
 
@@ -226,7 +226,7 @@ Args:
 
 Returns:
 
-      Union[str, int]:Search for DragQueryFile at msdn, google or google groups.
+      Union[int, str]:Search for DragQueryFile at msdn, google or google groups.
 Return ValueIf the fileNum parameter is 0xFFFFFFFF (the default) then the return value 
 
 is an integer with the count of files dropped.  If fileNum is between 0 and Count, 
@@ -1512,7 +1512,7 @@ Returns:
     pass
         
 
-def GetProfileVal(section:'str',entry:'str',defValue:'Union[str, int]',iniName:'str'=None) -> 'Union[str, int]':
+def GetProfileVal(section:'str',entry:'str',defValue:'Union[int, str]',iniName:'str'=None) -> 'Union[int, str]':
     """
     Retrieves entries from a windows INI file.  This method encapsulates 
 
@@ -1522,12 +1522,12 @@ Args:
 
       section(str):The section in the INI file to retrieve a value for.
       entry(str):The entry within the section in the INI file to retrieve a value for.
-      defValue(Union[str, int]):The default value.  The type of this parameter determines the methods return type.
+      defValue(Union[int, str]):The default value.  The type of this parameter determines the methods return type.
       iniName(str):The name of the INI file.  If None, the system INI file is used.CommentsThis function is obsolete, applications should use the registry instead.Win32 API References
 
 Returns:
 
-      Union[str, int]:Search for GetPrivateProfileInt at msdn, google or google groups.
+      Union[int, str]:Search for GetPrivateProfileInt at msdn, google or google groups.
 Return ValueThe return value is the same type as the default parameter.
 
         
@@ -2348,7 +2348,7 @@ Returns:
     pass
         
 
-def MessageBox(hwnd:'int',message:'str',title:'Union[str, None]',style:'int',language:'int') -> 'int':
+def MessageBox(hwnd:'int',message:'str',title:'Union[None, str]',style:'int',language:'int') -> 'int':
     """
     Display a message box.
 
@@ -2356,7 +2356,7 @@ Args:
 
       hwnd(int):The handle of the parent window.  See the comments section.
       message(str):The message to be displayed in the message box.
-      title(Union[str, None]):The title for the message box.  If None, the applications title will be used.
+      title(Union[None, str]):The title for the message box.  If None, the applications title will be used.
       style(int):The style of the message box.
       language(int):The language ID to use.CommentsNormally, a program in a GUI environment will use one of the MessageBox methods supplied by the GUI (eg, win32ui::MessageBox or PyCWnd::MessageBox)Return ValueAn integer identifying the button pressed to dismiss the dialog.
 
@@ -2551,7 +2551,7 @@ Returns:
     pass
         
 
-def PostThreadMessage(tid:'int',idMessage:'int',wParam:'Union[str, int]'=None,lParam:'Union[str, int]'=None) -> 'None':
+def PostThreadMessage(tid:'int',idMessage:'int',wParam:'Union[int, str]'=None,lParam:'Union[int, str]'=None) -> 'None':
     """
     Post a message to the specified thread.
 
@@ -2559,8 +2559,8 @@ Args:
 
       tid(int):Identifier of the thread to which the message will be posted.
       idMessage(int):The ID of the message to post.
-      wParam(Union[str, int]):The wParam for the message
-      lParam(Union[str, int]):The lParam for the messageWin32 API References
+      wParam(Union[int, str]):The wParam for the message
+      lParam(Union[int, str]):The lParam for the messageWin32 API References
 
 Returns:
 
@@ -3234,7 +3234,7 @@ of the file.
     pass
         
 
-def SendMessage(hwnd:'int',idMessage:'int',wParam:'Union[str, int]'=None,lParam:'Union[str, int]'=None) -> 'None':
+def SendMessage(hwnd:'int',idMessage:'int',wParam:'Union[int, str]'=None,lParam:'Union[int, str]'=None) -> 'None':
     """
     Send a message to a window.
 
@@ -3242,8 +3242,8 @@ Args:
 
       hwnd(int):The hWnd of the window to receive the message.
       idMessage(int):The ID of the message to send.
-      wParam(Union[str, int]):The wParam for the message
-      lParam(Union[str, int]):The lParam for the messageWin32 API References
+      wParam(Union[int, str]):The wParam for the message
+      lParam(Union[int, str]):The lParam for the messageWin32 API References
 
 Returns:
 
@@ -3846,7 +3846,7 @@ Returns:
     pass
         
 
-def WinHelp(hwnd:'int',hlpFile:'str',cmd:'int',data:'Union[str, int]'=0) -> 'None':
+def WinHelp(hwnd:'int',hlpFile:'str',cmd:'int',data:'Union[int, str]'=0) -> 'None':
     """
     Invokes the Windows Help system.
 
@@ -3855,7 +3855,7 @@ Args:
       hwnd(int):The handle of the window requesting help.
       hlpFile(str):The name of the help file.
       cmd(int):The type of help.  See the api for full details.
-      data(Union[str, int]):Additional data specific to the help call.Win32 API References
+      data(Union[int, str]):Additional data specific to the help call.Win32 API References
 
 Returns:
 
@@ -3885,7 +3885,7 @@ Returns:
     pass
         
 
-def WriteProfileVal(section:'str',entry:'str',value:'Union[str, int]',iniName:'str'=None) -> 'None':
+def WriteProfileVal(section:'str',entry:'str',value:'Union[int, str]',iniName:'str'=None) -> 'None':
     """
     Writes a value to a Windows INI file.
 
@@ -3893,7 +3893,7 @@ Args:
 
       section(str):The section in the INI file to write to.
       entry(str):The entry within the section in the INI file to write to.
-      value(Union[str, int]):The value to write.
+      value(Union[int, str]):The value to write.
       iniName(str):The name of the INI file.  If None, the system INI file is used.CommentsThis function is obsolete, applications should use the registry instead.Win32 API References
 
 Returns:

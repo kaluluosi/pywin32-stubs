@@ -20,7 +20,7 @@ Returns:
     pass
         
 
-def SQLDataSources(direction:'int') -> 'Tuple[Any, Union[Any, None]]':
+def SQLDataSources(direction:'int') -> 'Tuple[Any, Union[None, Any]]':
     """
     Enumerates ODBC data sources
 
@@ -30,7 +30,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Union[Any, None]]:One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
+      Tuple[Any, Union[None, Any]]:One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
 
         
     """

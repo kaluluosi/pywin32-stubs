@@ -57,7 +57,7 @@ Returns:
     pass
         
 
-def TransactNamedPipe(pipeName:'Any',writeData:'Union[str, Any]',buffer_bufSize:'Union[PyOVERLAPPEDReadBuffer, int]',overlapped:'PyOVERLAPPED'=None) -> 'Union[str, Any]':
+def TransactNamedPipe(pipeName:'Any',writeData:'Union[str, Any]',buffer_bufSize:'Union[int, PyOVERLAPPEDReadBuffer]',overlapped:'PyOVERLAPPED'=None) -> 'Union[str, Any]':
     """
     Combines the functions that write a 
 
@@ -69,7 +69,7 @@ Args:
 
       pipeName(Any):The name of the pipe.
       writeData(Union[str, Any]):The data to write to the pipe.
-      buffer_bufSize(Union[PyOVERLAPPEDReadBuffer, int]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
+      buffer_bufSize(Union[int, PyOVERLAPPEDReadBuffer]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
       overlapped(PyOVERLAPPED):An overlapped structure or NoneCommentsThis function is modelled on win32file::ReadFile - for overlapped operations you are expected to provide a buffer which will be filled asynchronously.
 
 Returns:

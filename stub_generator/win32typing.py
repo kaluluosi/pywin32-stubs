@@ -3672,12 +3672,6 @@ class PyDEVMODE(object):
 
 
       @property
-      def DisplayOrientation(self)->'int':
-         """Display rotation: DMDO_DEFAULT,DMDO_90, DMDO_180, DMDO_270"""
-         pass
-
-
-      @property
       def ICMMethod(self)->'int':
          """Indicates where ICM is performed, one of win32con.DMICMMETHOD_* values"""
          pass
@@ -3937,12 +3931,6 @@ class PyDEVMODEW(object):
       @property
       def DisplayFrequency(self)->'int':
          """Refresh rate"""
-         pass
-
-
-      @property
-      def DisplayOrientation(self)->'int':
-         """Display rotation: DMDO_DEFAULT,DMDO_90, DMDO_180, DMDO_270"""
          pass
 
 
@@ -8579,7 +8567,7 @@ class PyUSE_INFO_1(object):
 
 
       @property
-      def password(self)->'Union[Any, str]':
+      def password(self)->'Union[str, Any]':
          """"""
          pass
 
@@ -8628,7 +8616,7 @@ class PyUSE_INFO_2(object):
 
 
       @property
-      def password(self)->'Union[Any, str]':
+      def password(self)->'Union[str, Any]':
          """"""
          pass
 
@@ -8689,7 +8677,7 @@ class PyUSE_INFO_3(object):
 
 
       @property
-      def password(self)->'Union[Any, str]':
+      def password(self)->'Union[str, Any]':
          """"""
          pass
 
@@ -8998,12 +8986,6 @@ class PyWKSTA_INFO_302(object):
 
 
       @property
-      def max_wrk_cache(self)->'int':
-         """Indicates the number of seconds the server waits before disconnecting an inactive session."""
-         pass
-
-
-      @property
       def siz_error(self)->'int':
          """Specifies the size, in bytes, of an internal error buffer."""
          pass
@@ -9169,12 +9151,6 @@ class PyWKSTA_INFO_402(object):
       @property
       def siz_char_buf(self)->'int':
          """Specifies the maximum size, in bytes, of a character pipe buffer and device buffer."""
-         pass
-
-
-      @property
-      def siz_char_buf(self)->'Union[str]':
-         """.."""
          pass
 
 

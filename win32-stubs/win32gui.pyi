@@ -298,7 +298,7 @@ Returns:
     pass
         
 
-def CallWindowProc(wndproc:'int',hwnd:'int',msg:'int',wparam:'Union[str, int]',lparam:'Union[str, int]') -> 'int':
+def CallWindowProc(wndproc:'int',hwnd:'int',msg:'int',wparam:'Union[int, str]',lparam:'Union[int, str]') -> 'int':
     """
     None
 
@@ -307,8 +307,8 @@ Args:
       wndproc(int):The wndproc to call - this is generally the return value of SetWindowLong(GWL_WNDPROC)
       hwnd(int):Handle to the window
       msg(int):A window message
-      wparam(Union[str, int]):Type is dependent on the message
-      lparam(Union[str, int]):Type is dependent on the message
+      wparam(Union[int, str]):Type is dependent on the message
+      lparam(Union[int, str]):Type is dependent on the message
 
 Returns:
 
@@ -318,7 +318,7 @@ Returns:
     pass
         
 
-def SendMessage(hwnd:'int',message:'int',wparam:'Union[str, int]'=None,lparam:'Union[str, int]'=None) -> 'int':
+def SendMessage(hwnd:'int',message:'int',wparam:'Union[int, str]'=None,lparam:'Union[int, str]'=None) -> 'int':
     """
     Sends a message to the window.
 
@@ -326,8 +326,8 @@ Args:
 
       hwnd(int):The handle to the Window
       message(int):The ID of the message to post
-      wparam(Union[str, int]):Type depends on the message
-      lparam(Union[str, int]):Type depends on the message
+      wparam(Union[int, str]):Type depends on the message
+      lparam(Union[int, str]):Type depends on the message
 
 Returns:
 
@@ -932,14 +932,14 @@ Returns:
     pass
         
 
-def LoadMenu(hinstance:'int',resource_id:'Union[str, int]') -> 'Any':
+def LoadMenu(hinstance:'int',resource_id:'Union[int, str]') -> 'Any':
     """
     Loads a menu
 
 Args:
 
       hinstance(int):
-      resource_id(Union[str, int]):
+      resource_id(Union[int, str]):
 
 Returns:
 
@@ -998,14 +998,14 @@ Returns:
     pass
         
 
-def LoadIcon(hinstance:'int',resource_id:'Union[str, int]') -> 'Any':
+def LoadIcon(hinstance:'int',resource_id:'Union[int, str]') -> 'Any':
     """
     Loads an icon
 
 Args:
 
       hinstance(int):
-      resource_id(Union[str, int]):
+      resource_id(Union[int, str]):
 
 Returns:
 
@@ -1112,14 +1112,14 @@ Returns:
     pass
         
 
-def LoadImage(hinst:'int',name:'Union[str, int]',type:'int',cxDesired:'int',cyDesired:'int',fuLoad:'int') -> 'Any':
+def LoadImage(hinst:'int',name:'Union[int, str]',type:'int',cxDesired:'int',cyDesired:'int',fuLoad:'int') -> 'Any':
     """
     Loads a bitmap, cursor or icon
 
 Args:
 
       hinst(int):Handle to an instance of the module that contains the image to be loaded. To load an OEM image, set this parameter to zero.
-      name(Union[str, int]):Specifies the image to load. If the hInst parameter is non-zero and the fuLoad parameter omits LR_LOADFROMFILE, name specifies the image resource in the hInst module. If the image resource is to be loaded by name, the name parameter is a string that contains the name of the image resource.
+      name(Union[int, str]):Specifies the image to load. If the hInst parameter is non-zero and the fuLoad parameter omits LR_LOADFROMFILE, name specifies the image resource in the hInst module. If the image resource is to be loaded by name, the name parameter is a string that contains the name of the image resource.
       type(int):Specifies the type of image to be loaded.
       cxDesired(int):Specifies the width, in pixels, of the icon or cursor. If this parameter is zero and the fuLoad parameter is LR_DEFAULTSIZE, the function uses the SM_CXICON or SM_CXCURSOR system metric value to set the width. If this parameter is zero and LR_DEFAULTSIZE is not used, the function uses the actual resource width.
       cyDesired(int):Specifies the height, in pixels, of the icon or cursor. If this parameter is zero and the fuLoad parameter is LR_DEFAULTSIZE, the function uses the SM_CYICON or SM_CYCURSOR system metric value to set the height. If this parameter is zero and LR_DEFAULTSIZE is not used, the function uses the actual resource height.
@@ -1610,13 +1610,13 @@ Returns:
     pass
         
 
-def CreateWindow(className:'Union[str, int]',windowTitle:'str',style:'int',x:'int',y:'int',width:'int',height:'int',parent:'int',menu:'int',hinstance:'int',reserved:'None') -> 'int':
+def CreateWindow(className:'Union[int, str]',windowTitle:'str',style:'int',x:'int',y:'int',width:'int',height:'int',parent:'int',menu:'int',hinstance:'int',reserved:'None') -> 'int':
     """
     Creates a new window.
 
 Args:
 
-      className(Union[str, int]):
+      className(Union[int, str]):
       windowTitle(str):
       style(int):The style for the window.
       x(int):
@@ -5209,14 +5209,14 @@ Returns:
     pass
         
 
-def CreateWindowEx(dwExStyle:'int',className:'Union[str, int]',windowTitle:'str',style:'int',x:'int',y:'int',width:'int',height:'int',parent:'int',menu:'int',hinstance:'int',reserved:'None') -> 'int':
+def CreateWindowEx(dwExStyle:'int',className:'Union[int, str]',windowTitle:'str',style:'int',x:'int',y:'int',width:'int',height:'int',parent:'int',menu:'int',hinstance:'int',reserved:'None') -> 'int':
     """
     Creates a new window with Extended Style.
 
 Args:
 
       dwExStyle(int):extended window style
-      className(Union[str, int]):
+      className(Union[int, str]):
       windowTitle(str):
       style(int):The style for the window.
       x(int):

@@ -702,7 +702,7 @@ Returns:
          pass
 
 
-      def CertSaveStore(self,MsgAndCertEncodingType:'int',SaveAs:'int',SaveTo:'int',SaveToPara:'Union[str, int]',Flags:'int'=0) -> 'None':
+      def CertSaveStore(self,MsgAndCertEncodingType:'int',SaveAs:'int',SaveTo:'int',SaveToPara:'Union[int, str]',Flags:'int'=0) -> 'None':
          """
          Serializes the store to memory or a file
 
@@ -711,7 +711,7 @@ Args:
       MsgAndCertEncodingType(int):Only used when saveas is CERT_STORE_SAVE_AS_PKCS7 - usually X509_ASN_ENCODING combined with PKCS_7_ASN_ENCODING
       SaveAs(int):One of the CERT_STORE_SAVE_AS_* constants
       SaveTo(int):One of the CERT_STORE_SAVE_TO_* constants (CERT_STORE_SAVE_TO_MEMORY not supported yet)
-      SaveToPara(Union[str, int]):File name or open file handle depending on SaveTo parm
+      SaveToPara(Union[int, str]):File name or open file handle depending on SaveTo parm
       Flags(int):Reserved, use 0
 
 Returns:
@@ -1772,7 +1772,7 @@ Returns:
          pass
 
 
-      def CryptGetHashParam(self,Param:'int',Flags:'int'=0) -> 'Union[str, int]':
+      def CryptGetHashParam(self,Param:'int',Flags:'int'=0) -> 'Union[int, str]':
          """
          Retrieves the specified attribute of the hash
 
@@ -1783,7 +1783,7 @@ Args:
 
 Returns:
 
-      Union[str, int]:Reserved, use 0 if passed in
+      Union[int, str]:Reserved, use 0 if passed in
 Comments
 
 After this method has been called, no more data can be hashed
@@ -3672,12 +3672,6 @@ class PyDEVMODE(object):
 
 
       @property
-      def DisplayOrientation(self)->'int':
-         """Display rotation: DMDO_DEFAULT,DMDO_90, DMDO_180, DMDO_270"""
-         pass
-
-
-      @property
       def ICMMethod(self)->'int':
          """Indicates where ICM is performed, one of win32con.DMICMMETHOD_* values"""
          pass
@@ -3937,12 +3931,6 @@ class PyDEVMODEW(object):
       @property
       def DisplayFrequency(self)->'int':
          """Refresh rate"""
-         pass
-
-
-      @property
-      def DisplayOrientation(self)->'int':
-         """Display rotation: DMDO_DEFAULT,DMDO_90, DMDO_180, DMDO_270"""
          pass
 
 
@@ -7305,13 +7293,13 @@ class PySTARTUPINFO(object):
 
 
       @property
-      def lpDesktop(self)->'Union[str, None]':
+      def lpDesktop(self)->'Union[None, str]':
          """"""
          pass
 
 
       @property
-      def lpTitle(self)->'Union[str, None]':
+      def lpTitle(self)->'Union[None, str]':
          """"""
          pass
 
@@ -8579,7 +8567,7 @@ class PyUSE_INFO_1(object):
 
 
       @property
-      def password(self)->'Union[Any, str]':
+      def password(self)->'Union[str, Any]':
          """"""
          pass
 
@@ -8628,7 +8616,7 @@ class PyUSE_INFO_2(object):
 
 
       @property
-      def password(self)->'Union[Any, str]':
+      def password(self)->'Union[str, Any]':
          """"""
          pass
 
@@ -8689,7 +8677,7 @@ class PyUSE_INFO_3(object):
 
 
       @property
-      def password(self)->'Union[Any, str]':
+      def password(self)->'Union[str, Any]':
          """"""
          pass
 
@@ -8998,12 +8986,6 @@ class PyWKSTA_INFO_302(object):
 
 
       @property
-      def max_wrk_cache(self)->'int':
-         """Indicates the number of seconds the server waits before disconnecting an inactive session."""
-         pass
-
-
-      @property
       def siz_error(self)->'int':
          """Specifies the size, in bytes, of an internal error buffer."""
          pass
@@ -9169,12 +9151,6 @@ class PyWKSTA_INFO_402(object):
       @property
       def siz_char_buf(self)->'int':
          """Specifies the maximum size, in bytes, of a character pipe buffer and device buffer."""
-         pass
-
-
-      @property
-      def siz_char_buf(self)->'Union[str]':
-         """.."""
          pass
 
 

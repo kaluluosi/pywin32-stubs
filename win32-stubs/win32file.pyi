@@ -274,7 +274,7 @@ Returns:
     pass
         
 
-def DeviceIoControl(Device:'int',IoControlCode:'int',InBuffer:'Union[str, Any]',OutBuffer:'Union[Any, int]',Overlapped:'PyOVERLAPPED'=None) -> 'Union[str, Any]':
+def DeviceIoControl(Device:'int',IoControlCode:'int',InBuffer:'Union[str, Any]',OutBuffer:'Union[int, Any]',Overlapped:'PyOVERLAPPED'=None) -> 'Union[str, Any]':
     """
     Sends a control code to a device or file system driver
 
@@ -283,7 +283,7 @@ Args:
       Device(int):Handle to a file, device, or volume
       IoControlCode(int):IOControl Code to use, from winioctlcon
       InBuffer(Union[str, Any]):The input data for the operation, can be None for some operations.
-      OutBuffer(Union[Any, int]):Size of the buffer to allocate for output, or a writeable buffer as returned by win32file::AllocateReadBuffer.
+      OutBuffer(Union[int, Any]):Size of the buffer to allocate for output, or a writeable buffer as returned by win32file::AllocateReadBuffer.
       Overlapped(PyOVERLAPPED):An overlapped object for async operations.  Device handle must have been opened with FILE_FLAG_OVERLAPPED.CommentsAccepts keyword argsReturn ValueIf a preallocated output buffer is passed in, the returned object may be the original buffer, or a view of the buffer with only the actual size of the retrieved data. If OutBuffer is a buffer size and the operation is synchronous (ie no Overlapped is passed in), returns a plain string containing the retrieved data.  For an async operation, a new writeable buffer is returned.
 
 Returns:
@@ -650,14 +650,14 @@ Returns:
     pass
         
 
-def ReadFile(hFile:'Union[int]',buffer_bufSize:'Union[PyOVERLAPPEDReadBuffer, int]',overlapped:'PyOVERLAPPED'=None) -> 'Tuple[int, str]':
+def ReadFile(hFile:'Union[int]',buffer_bufSize:'Union[int, PyOVERLAPPEDReadBuffer]',overlapped:'PyOVERLAPPED'=None) -> 'Tuple[int, str]':
     """
     Reads a string from a file
 
 Args:
 
       hFile(Union[int]):Handle to the file
-      buffer_bufSize(Union[PyOVERLAPPEDReadBuffer, int]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
+      buffer_bufSize(Union[int, PyOVERLAPPEDReadBuffer]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
       overlapped(PyOVERLAPPED):An overlapped structureCommentsin a multi-threaded overlapped environment, it is likely to be necessary to pre-allocate the read buffer using the win32file::AllocateReadBuffer method, otherwise the I/O operation may complete before you can assign to the resulting buffer.Return ValueThe result is a tuple of (hr, string/PyOVERLAPPEDReadBuffer), where hr may be 0, ERROR_MORE_DATA or ERROR_IO_PENDING. If the overlapped param is not None, then the result is a PyOVERLAPPEDReadBuffer.  Once the overlapped IO operation has completed, you can convert this to a string (str(object)) [py2k] or (bytes(object)) [py3k] to obtain the data. While the operation is in progress, you can use the slice operations (object[:end]) to obtain the data read so far. You must use the OVERLAPPED API functions to determine how much of the data is valid.
 
 Returns:
@@ -685,14 +685,14 @@ You must use the OVERLAPPED API functions to determine how much of the data is v
     pass
         
 
-def WriteFile(hFile:'Union[int]',data:'Union[str, PyOVERLAPPEDReadBuffer]',ol:'PyOVERLAPPED'=None) -> 'Tuple[int, int]':
+def WriteFile(hFile:'Union[int]',data:'Union[PyOVERLAPPEDReadBuffer, str]',ol:'PyOVERLAPPED'=None) -> 'Tuple[int, int]':
     """
     Writes a string to a file
 
 Args:
 
       hFile(Union[int]):Handle to the file
-      data(Union[str, PyOVERLAPPEDReadBuffer]):The data to write.
+      data(Union[PyOVERLAPPEDReadBuffer, str]):The data to write.
       ol(PyOVERLAPPED):An overlapped structureCommentsIf you use an overlapped buffer, then it is your responsibility to ensure the string object passed remains valid until the operation completes.  If Python garbage collection reclaims the buffer before the win32 API has finished with it, the results are unpredictable.Return ValueThe result is a tuple of (errCode, nBytesWritten).  If errCode is not zero, it will be ERROR_IO_PENDING (ie, it is an overlapped request). Any other error will raise an exception.
 
 Returns:
@@ -1234,7 +1234,7 @@ Returns:
     pass
         
 
-def TransmitFile(Socket:'Union[Any, int]',File:'Union[int]',NumberOfBytesToWrite:'int',NumberOfBytesPerSend:'int',Overlapped:'PyOVERLAPPED',Flags:'int',Head:'Any'=None,Tail:'Any'=None) -> 'None':
+def TransmitFile(Socket:'Union[int, Any]',File:'Union[int]',NumberOfBytesToWrite:'int',NumberOfBytesPerSend:'int',Overlapped:'PyOVERLAPPED',Flags:'int',Head:'Any'=None,Tail:'Any'=None) -> 'None':
     """
     Transmits a file over a socket 
 
@@ -1242,7 +1242,7 @@ TransmitFile(sock, filehandle, bytes_to_write, bytes_per_send, overlap, flags [,
 
 Args:
 
-      Socket(Union[Any, int]):Socket that will be used to send the file
+      Socket(Union[int, Any]):Socket that will be used to send the file
       File(Union[int]):Handle to the file
       NumberOfBytesToWrite(int):The number of bytes in the file to transmit, use 0 for entire file.
       NumberOfBytesPerSend(int):The size, in bytes, of each block of data sent in each send operation.
@@ -1261,7 +1261,7 @@ Return ValueReturns 0 on completion, or ERROR_IO_PENDING if an overlapped operat
     pass
         
 
-def ConnectEx(s:'Union[Any, int]',name:'tuple',Overlapped:'PyOVERLAPPED',SendBuffer:'Any'=None) -> 'Tuple[int, int]':
+def ConnectEx(s:'Union[int, Any]',name:'tuple',Overlapped:'PyOVERLAPPED',SendBuffer:'Any'=None) -> 'Tuple[int, int]':
     """
     Version of connect that uses Overlapped I/O 
 
@@ -1269,7 +1269,7 @@ ConnectEx(sock, (addr, port), buf, overlap)
 
 Args:
 
-      s(Union[Any, int]):A bound, unconnected socket that will be used to connect
+      s(Union[int, Any]):A bound, unconnected socket that will be used to connect
       name(tuple):Address to connect to (host, port)
       Overlapped(PyOVERLAPPED):An overlapped structure
       SendBuffer(Any):Buffer to send on the socket after connectReturn ValueReturns the completion code and number of bytes sent. The completion code will be 0 for a completed operation, or ERROR_IO_PENDING for a pending overlapped operation.If the platform does not support ConnectEx (eg, Windows 2000), an exception will be thrown indicating the WSAIoctl function (which is used to fetch the function pointer) failed with error code WSAEINVAL (10022).
@@ -1294,14 +1294,14 @@ fetch the function pointer) failed with error code WSAEINVAL (10022).
     pass
         
 
-def AcceptEx(sListening:'Union[Any, int]',sAccepting:'Union[Any, int]',buffer:'Any',ol:'PyOVERLAPPED') -> 'None':
+def AcceptEx(sListening:'Union[int, Any]',sAccepting:'Union[int, Any]',buffer:'Any',ol:'PyOVERLAPPED') -> 'None':
     """
     Version of accept that uses Overlapped I/O
 
 Args:
 
-      sListening(Union[Any, int]):Socket that had listen() called on.
-      sAccepting(Union[Any, int]):Socket that will be used as the incoming connection.
+      sListening(Union[int, Any]):Socket that had listen() called on.
+      sAccepting(Union[int, Any]):Socket that will be used as the incoming connection.
       buffer(Any):Buffer to read incoming data and connection point information into. This buffer MUST be big enough to recieve your connection endpoints... AF_INET sockets need to be at least 64 bytes. The correct minimum of the buffer is determined by the protocol family that the listening socket is using.
       ol(PyOVERLAPPED):An overlapped structureCommentsIn order to make sure the connection has been accepted, either use the hEvent in PyOVERLAPPED, GetOverlappedResult, or GetQueuedCompletionStatus.To use this with I/O completion ports, don't forget to attach sAccepting to your completion port.Pass a buffer of exactly the size returned by win32file::CalculateSocketEndPointSize to have AcceptEx return without reading any bytes from the remote connection.ExampleTo have sAccepting inherit the properties of sListening, you need to do the following after a connection is successfully acceptedimport structsAccepting.setsockopt(socket.SOL_SOCKET, win32file.SO_UPDATE_ACCEPT_CONTEXT, struct.pack("I", sListening.fileno()))Return ValueThe result is 0 or ERROR_IO_PENDING.  All other values will raise win32file.error.  Specifically: if the win32 function returns FALSE, WSAGetLastError() is checked for ERROR_IO_PENDING.
 
@@ -1333,13 +1333,13 @@ WSAGetLastError() is checked for ERROR_IO_PENDING.
     pass
         
 
-def CalculateSocketEndPointSize(socket:'Union[Any, int]') -> 'int':
+def CalculateSocketEndPointSize(socket:'Union[int, Any]') -> 'int':
     """
     Calculate how many bytes are needed for the connection endpoints data for a socket.
 
 Args:
 
-      socket(Union[Any, int]):The socket for which to determine the size.CommentsThis function allows you to determine the minumum buffer size which can be passed to win32file::AcceptEx
+      socket(Union[int, Any]):The socket for which to determine the size.CommentsThis function allows you to determine the minumum buffer size which can be passed to win32file::AcceptEx
 
 Returns:
 
@@ -1349,13 +1349,13 @@ Returns:
     pass
         
 
-def GetAcceptExSockaddrs(sAccepting:'Union[Any, int]',buffer:'PyOVERLAPPEDReadBuffer') -> 'Tuple[Any, Any, Any]':
+def GetAcceptExSockaddrs(sAccepting:'Union[int, Any]',buffer:'PyOVERLAPPEDReadBuffer') -> 'Tuple[Any, Any, Any]':
     """
     Parses the connection endpoints from the buffer passed into AcceptEx
 
 Args:
 
-      sAccepting(Union[Any, int]):Socket that was passed into the sAccepting parameter of AcceptEx
+      sAccepting(Union[int, Any]):Socket that was passed into the sAccepting parameter of AcceptEx
       buffer(PyOVERLAPPEDReadBuffer):Buffer you passed into AcceptExCommentsLocalSockAddr and RemoteSockAddr are ("xx.xx.xx.xx", port#) if iFamily == AF_INETotherwise LocalSockAddr and RemoteSockAddr are just binary stringsand they should be unpacked with the struct module.
 
 Returns:
@@ -1421,13 +1421,13 @@ Returns:
     pass
         
 
-def WSASend(s:'Union[Any, int]',buffer:'Union[str, Any]',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
+def WSASend(s:'Union[int, Any]',buffer:'Union[str, Any]',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
     """
     Winsock send() equivalent function for Overlapped I/O.
 
 Args:
 
-      s(Union[Any, int]):Socket to send data on.
+      s(Union[int, Any]):Socket to send data on.
       buffer(Union[str, Any]):Buffer to send data from.
       ol(PyOVERLAPPED):An overlapped structure
       dwFlags(int):Optional send flags.
@@ -1440,13 +1440,13 @@ Returns:
     pass
         
 
-def WSARecv(s:'Union[Any, int]',buffer:'Any',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
+def WSARecv(s:'Union[int, Any]',buffer:'Any',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
     """
     Winsock recv() equivalent function for Overlapped I/O.
 
 Args:
 
-      s(Union[Any, int]):Socket to send data on.
+      s(Union[int, Any]):Socket to send data on.
       buffer(Any):Buffer to send data from.
       ol(PyOVERLAPPED):An overlapped structure
       dwFlags(int):Optional reception flags.
@@ -2670,14 +2670,14 @@ Returns:
     pass
         
 
-def OpenFileById(File:'int',FileId:'Union[PyIID, int]',DesiredAccess:'int',ShareMode:'int',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'int':
+def OpenFileById(File:'int',FileId:'Union[int, PyIID]',DesiredAccess:'int',ShareMode:'int',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'int':
     """
     Opens a file by File Id or Object Id
 
 Args:
 
       File(int):Handle to a file on the volume that contains the file to open
-      FileId(Union[PyIID, int]):File Id or Object Id of the file to open
+      FileId(Union[int, PyIID]):File Id or Object Id of the file to open
       DesiredAccess(int):Access mode
       ShareMode(int):Sharing mode (FILE_SHARE_*)
       Flags(int):Combination of FILE_FLAG_* flags

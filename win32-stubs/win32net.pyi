@@ -1439,7 +1439,7 @@ Return ValueReturns none if valid, exception if not
     pass
         
 
-def NetValidatePasswordPolicy(Server:'Union[str]',Qualifier:'None',ValidationType:'int',arg:'Union[tuple, dict]') -> 'None':
+def NetValidatePasswordPolicy(Server:'Union[str]',Qualifier:'None',ValidationType:'int',arg:'Union[dict, tuple]') -> 'None':
     """
     Allows an application to check 
 
@@ -1454,7 +1454,7 @@ Args:
       Server(Union[str]):Name of server on which to execute (None or blank uses local)
       Qualifier(None):Reserved, must be None
       ValidationType(int):The type of password validation to perform
-      arg(Union[tuple, dict]):Depends on the ValidationType param - either a PyNET_VALIDATE_AUTHENTICATION_INPUT_ARG,  PyNET_VALIDATE_PASSWORD_CHANGE_INPUT_ARG or PyNET_VALIDATE_PASSWORD_RESET_INPUT_ARG tuple or dict.CommentsWill raise NotImplementedError if not available on this platform, or raise win32net.error if the function fails.Return ValueReturns a tuple of (PyNET_VALIDATE_PERSISTED_FIELDS, int) with the integer being the ValidationResult.
+      arg(Union[dict, tuple]):Depends on the ValidationType param - either a PyNET_VALIDATE_AUTHENTICATION_INPUT_ARG,  PyNET_VALIDATE_PASSWORD_CHANGE_INPUT_ARG or PyNET_VALIDATE_PASSWORD_RESET_INPUT_ARG tuple or dict.CommentsWill raise NotImplementedError if not available on this platform, or raise win32net.error if the function fails.Return ValueReturns a tuple of (PyNET_VALIDATE_PERSISTED_FIELDS, int) with the integer being the ValidationResult.
 
 Returns:
 

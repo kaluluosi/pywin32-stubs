@@ -466,7 +466,7 @@ info.
     pass
         
 
-def SetClipboardData(format:'int',hMem:'Union[Any, int]') -> 'int':
+def SetClipboardData(format:'int',hMem:'Union[int, Any]') -> 'int':
     """
     The SetClipboardData function 
 
@@ -483,7 +483,7 @@ OpenClipboard before calling SetClipboardData.)
 Args:
 
       format(int):Specifies a clipboard format. For a description of the standard clipboard formats, see Standard Clipboard Formats.
-      hMem(Union[Any, int]):Integer handle to the data in the specified format, or string, unicode, or any object that supports the buffer interface. A global memory object is allocated, and the object's buffer is copied to the new memory. This parameter can be 0, indicating that the window provides data in the specified clipboard format (renders the format) upon request. If a window delays rendering, it must process the WM_RENDERFORMAT and WM_RENDERALLFORMATS messages. After SetClipboardData is called, the system owns the object identified by the hMem parameter. The application can read the data, but must not free the handle or leave it locked. If the hMem parameter identifies a memory object, the object must have been allocated using the GlobalAlloc function with the GMEM_MOVEABLE and GMEM_DDESHARE flags.CommentsThe uFormat parameter can identify a registered clipboard format, or it can be one of the standard clipboard formats. For more information, see Registered Clipboard Formats and Standard Clipboard Formats. The system performs implicit data format conversions between certain clipboard formats when an application calls the GetClipboardData function. For example, if the CF_OEMTEXT format is on the clipboard, a window can retrieve data in the CF_TEXT format. The format on the clipboard is converted to the requested format on demand. For more information, see Synthesized Clipboard Formats.Win32 API References
+      hMem(Union[int, Any]):Integer handle to the data in the specified format, or string, unicode, or any object that supports the buffer interface. A global memory object is allocated, and the object's buffer is copied to the new memory. This parameter can be 0, indicating that the window provides data in the specified clipboard format (renders the format) upon request. If a window delays rendering, it must process the WM_RENDERFORMAT and WM_RENDERALLFORMATS messages. After SetClipboardData is called, the system owns the object identified by the hMem parameter. The application can read the data, but must not free the handle or leave it locked. If the hMem parameter identifies a memory object, the object must have been allocated using the GlobalAlloc function with the GMEM_MOVEABLE and GMEM_DDESHARE flags.CommentsThe uFormat parameter can identify a registered clipboard format, or it can be one of the standard clipboard formats. For more information, see Registered Clipboard Formats and Standard Clipboard Formats. The system performs implicit data format conversions between certain clipboard formats when an application calls the GetClipboardData function. For example, if the CF_OEMTEXT format is on the clipboard, a window can retrieve data in the CF_TEXT format. The format on the clipboard is converted to the requested format on demand. For more information, see Synthesized Clipboard Formats.Win32 API References
 
 Returns:
 
