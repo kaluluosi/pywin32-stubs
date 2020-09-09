@@ -1,10 +1,10 @@
 __all__=['', 'AreFileApisANSI', 'CancelIo', 'CopyFile', 'CopyFileW', 'CreateDirectory', 'CreateDirectoryW', 'CreateDirectoryEx', 'CreateFile', 'CreateIoCompletionPort', 'CreateMailslot', 'GetMailslotInfo', 'SetMailslotInfo', 'DefineDosDevice', 'DefineDosDeviceW', 'DeleteFile', 'DeviceIoControl', 'FindClose', 'FindCloseChangeNotification', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FlushFileBuffers', 'GetBinaryType', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDriveType', 'GetDriveTypeW', 'GetFileAttributes', 'GetFileAttributesW', 'GetFileTime', 'SetFileTime', 'GetFileInformationByHandle', 'GetCompressedFileSize', 'GetFileSize', 'AllocateReadBuffer', 'ReadFile', 'WriteFile', 'CloseHandle', 'LockFileEx', 'UnlockFileEx', 'GetQueuedCompletionStatus', 'PostQueuedCompletionStatus', 'GetFileType', 'GetLogicalDrives', 'GetOverlappedResult', 'LockFile', 'MoveFile', 'MoveFileW', 'MoveFileEx', 'MoveFileExW', 'QueryDosDevice', 'ReadDirectoryChangesW', 'FILE_NOTIFY_INFORMATION', 'SetCurrentDirectory', 'SetEndOfFile', 'SetFileApisToANSI', 'SetFileApisToOEM', 'SetFileAttributes', 'SetFilePointer', 'SetVolumeLabel', 'UnlockFile', '_get_osfhandle', '_open_osfhandle', '_setmaxstdio', '_getmaxstdio', 'TransmitFile', 'ConnectEx', 'AcceptEx', 'CalculateSocketEndPointSize', 'GetAcceptExSockaddrs', 'WSAEventSelect', 'WSAEnumNetworkEvents', 'WSAAsyncSelect', 'WSASend', 'WSARecv', 'BuildCommDCB', 'ClearCommError', 'EscapeCommFunction', 'GetCommState', 'SetCommState', 'ClearCommBreak', 'GetCommMask', 'SetCommMask', 'GetCommModemStatus', 'GetCommTimeouts', 'SetCommTimeouts', 'PurgeComm', 'SetCommBreak', 'SetupComm', 'TransmitCommChar', 'WaitCommEvent', 'SetVolumeMountPoint', 'DeleteVolumeMountPoint', 'GetVolumeNameForVolumeMountPoint', 'GetVolumePathName', 'GetVolumePathNamesForVolumeName', 'CreateHardLink', 'CreateSymbolicLink', 'EncryptFile', 'DecryptFile', 'EncryptionDisable', 'FileEncryptionStatus', 'QueryUsersOnEncryptedFile', 'QueryRecoveryAgentsOnEncryptedFile', 'RemoveUsersFromEncryptedFile', 'AddUsersToEncryptedFile', 'DuplicateEncryptionInfoFile', 'BackupRead', 'BackupSeek', 'BackupWrite', 'SetFileShortName', 'CopyFileEx', 'MoveFileWithProgress', 'ReplaceFile', 'OpenEncryptedFileRaw', 'ReadEncryptedFileRaw', 'WriteEncryptedFileRaw', 'CloseEncryptedFileRaw', 'CreateFileW', 'DeleteFileW', 'GetFileAttributesEx', 'SetFileAttributesW', 'CreateDirectoryExW', 'RemoveDirectory', 'FindFilesW', 'FindFilesIterator', 'FindStreams', 'FindFileNames', 'GetFinalPathNameByHandle', 'SfcGetNextProtectedFile', 'SfcIsFileProtected', 'GetLongPathName', 'GetFullPathName', 'Wow64DisableWow64FsRedirection', 'Wow64RevertWow64FsRedirection', 'GetFileInformationByHandleEx', 'SetFileInformationByHandle', 'ReOpenFile', 'OpenFileById', 'CALLBACK_CHUNK_FINISHED', 'CALLBACK_STREAM_SWITCH', 'CBR_110', 'CBR_115200', 'CBR_1200', 'CBR_128000', 'CBR_14400', 'CBR_19200', 'CBR_2400', 'CBR_256000', 'CBR_300', 'CBR_38400', 'CBR_4800', 'CBR_56000', 'CBR_57600', 'CBR_600', 'CBR_9600', 'CLRBREAK', 'CLRDTR', 'CLRRTS', 'COPY_FILE_ALLOW_DECRYPTED_DESTINATION', 'COPY_FILE_COPY_SYMLINK', 'COPY_FILE_FAIL_IF_EXISTS', 'COPY_FILE_OPEN_SOURCE_FOR_WRITE', 'COPY_FILE_RESTARTABLE', 'CREATE_ALWAYS', 'CREATE_FOR_DIR', 'CREATE_FOR_IMPORT', 'CREATE_NEW', 'DRIVE_CDROM', 'DRIVE_FIXED', 'DRIVE_NO_ROOT_DIR', 'DRIVE_RAMDISK', 'DRIVE_REMOTE', 'DRIVE_REMOVABLE', 'DRIVE_UNKNOWN', 'DTR_CONTROL_DISABLE', 'DTR_CONTROL_ENABLE', 'DTR_CONTROL_HANDSHAKE', 'EV_BREAK', 'EV_CTS', 'EV_DSR', 'EV_ERR', 'EV_RING', 'EV_RLSD', 'EV_RXCHAR', 'EV_RXFLAG', 'EV_TXEMPTY', 'EVENPARITY', 'FD_ACCEPT', 'FD_ADDRESS_LIST_CHANGE', 'FD_CLOSE', 'FD_CONNECT', 'FD_GROUP_QOS', 'FD_OOB', 'FD_QOS', 'FD_READ', 'FD_ROUTING_INTERFACE_CHANGE', 'FD_WRITE', 'FILE_ALL_ACCESS', 'FILE_ATTRIBUTE_ARCHIVE', 'FILE_ATTRIBUTE_COMPRESSED', 'FILE_ATTRIBUTE_DIRECTORY', 'FILE_ATTRIBUTE_HIDDEN', 'FILE_ATTRIBUTE_NORMAL', 'FILE_ATTRIBUTE_OFFLINE', 'FILE_ATTRIBUTE_READONLY', 'FILE_ATTRIBUTE_SYSTEM', 'FILE_ATTRIBUTE_TEMPORARY', 'FILE_BEGIN', 'FILE_CURRENT', 'FILE_ENCRYPTABLE', 'FILE_END', 'FILE_FLAG_BACKUP_SEMANTICS', 'FILE_FLAG_DELETE_ON_CLOSE', 'FILE_FLAG_NO_BUFFERING', 'FILE_FLAG_OPEN_REPARSE_POINT', 'FILE_FLAG_OVERLAPPED', 'FILE_FLAG_POSIX_SEMANTICS', 'FILE_FLAG_RANDOM_ACCESS', 'FILE_FLAG_SEQUENTIAL_SCAN', 'FILE_FLAG_WRITE_THROUGH', 'FILE_GENERIC_READ', 'FILE_GENERIC_WRITE', 'FILE_IS_ENCRYPTED', 'FILE_READ_ONLY', 'FILE_ROOT_DIR', 'FILE_SHARE_DELETE', 'FILE_SHARE_READ', 'FILE_SHARE_WRITE', 'FILE_SYSTEM_ATTR', 'FILE_SYSTEM_DIR', 'FILE_SYSTEM_NOT_SUPPORT', 'FILE_TYPE_CHAR', 'FILE_TYPE_DISK', 'FILE_TYPE_PIPE', 'FILE_TYPE_UNKNOWN', 'FILE_UNKNOWN', 'FILE_USER_DISALLOWED', 'FileAllocationInfo', 'FileAttributeTagInfo', 'FileBasicInfo', 'FileCompressionInfo', 'FileDispositionInfo', 'FileEndOfFileInfo', 'FileIdBothDirectoryInfo', 'FileIdBothDirectoryRestartInfo', 'FileIdType', 'FileIoPriorityHintInfo', 'FileNameInfo', 'FileRenameInfo', 'FileStandardInfo', 'FileStreamInfo', 'GENERIC_EXECUTE', 'GENERIC_READ', 'GENERIC_WRITE', 'GetFileExInfoStandard', 'IoPriorityHintLow', 'IoPriorityHintNormal', 'IoPriorityHintVeryLow', 'MARKPARITY', 'MOVEFILE_COPY_ALLOWED', 'MOVEFILE_CREATE_HARDLINK', 'MOVEFILE_DELAY_UNTIL_REBOOT', 'MOVEFILE_FAIL_IF_NOT_TRACKABLE', 'MOVEFILE_REPLACE_EXISTING', 'MOVEFILE_WRITE_THROUGH', 'NOPARITY', 'ObjectIdType', 'ODDPARITY', 'ONE5STOPBITS', 'ONESTOPBIT', 'OPEN_ALWAYS', 'OPEN_EXISTING', 'OVERWRITE_HIDDEN', 'PROGRESS_CANCEL', 'PROGRESS_CONTINUE', 'PROGRESS_QUIET', 'PROGRESS_STOP', 'PURGE_RXABORT', 'PURGE_RXCLEAR', 'PURGE_TXABORT', 'PURGE_TXCLEAR', 'REPLACEFILE_IGNORE_MERGE_ERRORS', 'REPLACEFILE_WRITE_THROUGH', 'RTS_CONTROL_DISABLE', 'RTS_CONTROL_ENABLE', 'RTS_CONTROL_HANDSHAKE', 'RTS_CONTROL_TOGGLE', 'SCS_32BIT_BINARY', 'SCS_DOS_BINARY', 'SCS_OS216_BINARY', 'SCS_PIF_BINARY', 'SCS_POSIX_BINARY', 'SCS_WOW_BINARY', 'SECURITY_ANONYMOUS', 'SECURITY_CONTEXT_TRACKING', 'SECURITY_DELEGATION', 'SECURITY_EFFECTIVE_ONLY', 'SECURITY_IDENTIFICATION', 'SECURITY_IMPERSONATION', 'SETBREAK', 'SETDTR', 'SETRTS', 'SETXOFF', 'SETXON', 'SO_CONNECT_TIME', 'SO_UPDATE_ACCEPT_CONTEXT', 'SO_UPDATE_CONNECT_CONTEXT', 'SPACEPARITY', 'SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE', 'SYMBOLIC_LINK_FLAG_DIRECTORY', 'TF_DISCONNECT', 'TF_REUSE_SOCKET', 'TF_USE_DEFAULT_WORKER', 'TF_USE_KERNEL_APC', 'TF_USE_SYSTEM_THREAD', 'TF_WRITE_BEHIND', 'TRUNCATE_EXISTING', 'TWOSTOPBITS', 'WSA_IO_PENDING', 'WSA_OPERATION_ABORTED', 'WSAECONNABORTED', 'WSAECONNRESET', 'WSAEDISCON', 'WSAEFAULT', 'WSAEINPROGRESS', 'WSAEINTR', 'WSAEINVAL', 'WSAEMSGSIZE', 'WSAENETDOWN', 'WSAENETRESET', 'WSAENOBUFS', 'WSAENOTCONN', 'WSAENOTSOCK', 'WSAEOPNOTSUPP', 'WSAESHUTDOWN', 'WSAEWOULDBLOCK']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """"""
 
 
-def AreFileApisANSI() -> 'int':
+def AreFileApisANSI() -> 'typing.Any':
     """
     Determines whether a set of Win32 file functions is using the ANSI or OEM character set code page. This function is useful for 8-bit console input and output operations.
 
@@ -14,7 +14,7 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
@@ -36,7 +36,7 @@ Returns:
     pass
         
 
-def CopyFile(_from:'str',to:'str',bFailIfExists:'int') -> 'None':
+def CopyFile(_from:'str',to:'str',bFailIfExists:'typing.Any') -> 'None':
     """
     Copies a file
 
@@ -44,7 +44,7 @@ Args:
 
       _from(str):The name of the file to copy from
       to(str):The name of the file to copy to
-      bFailIfExists(int):Indicates if the operation should fail if the file exists.
+      bFailIfExists(typing.Any):Indicates if the operation should fail if the file exists.
 
 Returns:
 
@@ -54,7 +54,7 @@ Returns:
     pass
         
 
-def CopyFileW(_from:'str',to:'str',bFailIfExists:'int') -> 'None':
+def CopyFileW(_from:'str',to:'str',bFailIfExists:'typing.Any') -> 'None':
     """
     Copies a file (NT/2000 Unicode specific version)
 
@@ -62,7 +62,7 @@ Args:
 
       _from(str):The name of the file to copy from
       to(str):The name of the file to copy to
-      bFailIfExists(int):Indicates if the operation should fail if the file exists.
+      bFailIfExists(typing.Any):Indicates if the operation should fail if the file exists.
 
 Returns:
 
@@ -72,14 +72,14 @@ Returns:
     pass
         
 
-def CreateDirectory(name:'str',sa:'PySECURITY_ATTRIBUTES') -> 'None':
+def CreateDirectory(name:'str',sa:'win32typing.PySECURITY_ATTRIBUTES') -> 'None':
     """
     Creates a directory
 
 Args:
 
       name(str):The name of the directory to create
-      sa(PySECURITY_ATTRIBUTES):The security attributes, or None
+      sa(win32typing.PySECURITY_ATTRIBUTES):The security attributes, or None
 
 Returns:
 
@@ -89,14 +89,14 @@ Returns:
     pass
         
 
-def CreateDirectoryW(name:'str',sa:'PySECURITY_ATTRIBUTES') -> 'None':
+def CreateDirectoryW(name:'str',sa:'win32typing.PySECURITY_ATTRIBUTES') -> 'None':
     """
     Creates a directory (NT/2000 Unicode specific version)
 
 Args:
 
       name(str):The name of the directory to create
-      sa(PySECURITY_ATTRIBUTES):The security attributes, or None
+      sa(win32typing.PySECURITY_ATTRIBUTES):The security attributes, or None
 
 Returns:
 
@@ -106,7 +106,7 @@ Returns:
     pass
         
 
-def CreateDirectoryEx(templateName:'str',newDirectory:'str',sa:'PySECURITY_ATTRIBUTES') -> 'None':
+def CreateDirectoryEx(templateName:'str',newDirectory:'str',sa:'win32typing.PySECURITY_ATTRIBUTES') -> 'None':
     """
     Creates a directory
 
@@ -114,7 +114,7 @@ Args:
 
       templateName(str):Specifies the path of the directory to use as a template when creating the new directory.
       newDirectory(str):Specifies the name of the new directory
-      sa(PySECURITY_ATTRIBUTES):The security attributes, or None
+      sa(win32typing.PySECURITY_ATTRIBUTES):The security attributes, or None
 
 Returns:
 
@@ -124,18 +124,18 @@ Returns:
     pass
         
 
-def CreateFile(fileName:'str',desiredAccess:'int',shareMode:'int',attributes:'PySECURITY_ATTRIBUTES',CreationDisposition:'int',flagsAndAttributes:'int',hTemplateFile:'int') -> 'int':
+def CreateFile(fileName:'str',desiredAccess:'typing.Any',shareMode:'typing.Any',attributes:'win32typing.PySECURITY_ATTRIBUTES',CreationDisposition:'typing.Any',flagsAndAttributes:'typing.Any',hTemplateFile:'int') -> 'int':
     """
     Creates or opens the a file or other object and returns a handle that can be used to access the object.
 
 Args:
 
       fileName(str):The name of the file
-      desiredAccess(int):access (read-write) mode Specifies the type of access to the object. An application can obtain read access, write access, read-write access, or device query access. This parameter can be any combination of the following values.ValueMeaning0Specifies device query access to the object. An application can query device attributes without accessing the device.GENERIC_READSpecifies read access to the object. Data can be read from the file and the file pointer can be moved. Combine with GENERIC_WRITE for read-write access.GENERIC_WRITESpecifies write access to the object. Data can be written to the file and the file pointer can be moved. Combine with GENERIC_READ for read-write access.
-      shareMode(int):Set of bit flags that specifies how the object can be shared. If dwShareMode is 0, the object cannot be shared. Subsequent open operations on the object will fail, until the handle is closed. To share the object, use a combination of one or more of the following values:ValueMeaningFILE_SHARE_DELETEWindows NT: Subsequent open operations on the object will succeed only if delete access is requested.FILE_SHARE_READSubsequent open operations on the object will succeed only if read access is requested.FILE_SHARE_WRITESubsequent open operations on the object will succeed only if write access is requested.
-      attributes(PySECURITY_ATTRIBUTES):The security attributes, or None
-      CreationDisposition(int):Specifies which action to take on files that exist, and which action to take when files do not exist. For more information about this parameter, see the Remarks section. This parameter must be one of the following values:ValueMeaningCREATE_NEWCreates a new file. The function fails if the specified file already exists.CREATE_ALWAYSCreates a new file. If the file exists, the function overwrites the file and clears the existing attributes.OPEN_EXISTINGOpens the file. The function fails if the file does not exist. See the Remarks section for a discussion of why you should use the OPEN_EXISTING flag if you are using the CreateFile function for devices, including the console.OPEN_ALWAYSOpens the file, if it exists. If the file does not exist, the function creates the file as if dwCreationDisposition were CREATE_NEW.TRUNCATE_EXISTINGOpens the file. Once opened, the file is truncated so that its size is zero bytes. The calling process must open the file with at least GENERIC_WRITE access. The function fails if the file does not exist.
-      flagsAndAttributes(int):file attributes
+      desiredAccess(typing.Any):access (read-write) mode Specifies the type of access to the object. An application can obtain read access, write access, read-write access, or device query access. This parameter can be any combination of the following values.ValueMeaning0Specifies device query access to the object. An application can query device attributes without accessing the device.GENERIC_READSpecifies read access to the object. Data can be read from the file and the file pointer can be moved. Combine with GENERIC_WRITE for read-write access.GENERIC_WRITESpecifies write access to the object. Data can be written to the file and the file pointer can be moved. Combine with GENERIC_READ for read-write access.
+      shareMode(typing.Any):Set of bit flags that specifies how the object can be shared. If dwShareMode is 0, the object cannot be shared. Subsequent open operations on the object will fail, until the handle is closed. To share the object, use a combination of one or more of the following values:ValueMeaningFILE_SHARE_DELETEWindows NT: Subsequent open operations on the object will succeed only if delete access is requested.FILE_SHARE_READSubsequent open operations on the object will succeed only if read access is requested.FILE_SHARE_WRITESubsequent open operations on the object will succeed only if write access is requested.
+      attributes(win32typing.PySECURITY_ATTRIBUTES):The security attributes, or None
+      CreationDisposition(typing.Any):Specifies which action to take on files that exist, and which action to take when files do not exist. For more information about this parameter, see the Remarks section. This parameter must be one of the following values:ValueMeaningCREATE_NEWCreates a new file. The function fails if the specified file already exists.CREATE_ALWAYSCreates a new file. If the file exists, the function overwrites the file and clears the existing attributes.OPEN_EXISTINGOpens the file. The function fails if the file does not exist. See the Remarks section for a discussion of why you should use the OPEN_EXISTING flag if you are using the CreateFile function for devices, including the console.OPEN_ALWAYSOpens the file, if it exists. If the file does not exist, the function creates the file as if dwCreationDisposition were CREATE_NEW.TRUNCATE_EXISTINGOpens the file. Once opened, the file is truncated so that its size is zero bytes. The calling process must open the file with at least GENERIC_WRITE access. The function fails if the file does not exist.
+      flagsAndAttributes(typing.Any):file attributes
       hTemplateFile(int):Specifies a handle with GENERIC_READ access to a template file. The template file supplies file attributes and extended attributes for the file being created.   Under Win95, this must be 0, else an exception will be raised.CommentsThe following objects can be opened:filespipesmailslotscommunications resourcesdisk devices (Windows NT only)consolesdirectories (open only)
 
 Returns:
@@ -146,7 +146,7 @@ Returns:
     pass
         
 
-def CreateIoCompletionPort(handle:'int',existing:'int',completionKey:'int',numThreads:'int') -> 'int':
+def CreateIoCompletionPort(handle:'int',existing:'int',completionKey:'typing.Any',numThreads:'typing.Any') -> 'int':
     """
     Can associate an instance of an opened file with a newly created or an existing input/output (I/O) completion port; or it can create an I/O completion port without associating it with a file.
 
@@ -154,8 +154,8 @@ Args:
 
       handle(int):file handle to associate with the I/O completion port
       existing(int):handle to the I/O completion port
-      completionKey(int):per-file completion key for I/O completion packets
-      numThreads(int):number of threads allowed to execute concurrentlyReturn ValueIf an existing handle to a completion port is passed, the result of this function will be that same handle.  See MSDN for more details.
+      completionKey(typing.Any):per-file completion key for I/O completion packets
+      numThreads(typing.Any):number of threads allowed to execute concurrentlyReturn ValueIf an existing handle to a completion port is passed, the result of this function will be that same handle.  See MSDN for more details.
 
 Returns:
 
@@ -168,16 +168,16 @@ of this function will be that same handle.  See MSDN for more details.
     pass
         
 
-def CreateMailslot(Name:'str',MaxMessageSize:'int',ReadTimeout:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES') -> 'int':
+def CreateMailslot(Name:'typing.Any',MaxMessageSize:'typing.Any',ReadTimeout:'typing.Any',SecurityAttributes:'win32typing.PySECURITY_ATTRIBUTES') -> 'int':
     """
     Creates a mailslot on the local machine
 
 Args:
 
-      Name(str):Name of the mailslot, of the form \\.\\mailslot\\[path]name
-      MaxMessageSize(int):Largest message size.  Use 0 for unlimited.
-      ReadTimeout(int):Timeout in milliseconds.  Use -1 for no timeout.
-      SecurityAttributes(PySECURITY_ATTRIBUTES):Determines if returned handle is inheritable, can be NoneWin32 API References
+      Name(typing.Any):Name of the mailslot, of the form \\.\\mailslot\\[path]name
+      MaxMessageSize(typing.Any):Largest message size.  Use 0 for unlimited.
+      ReadTimeout(typing.Any):Timeout in milliseconds.  Use -1 for no timeout.
+      SecurityAttributes(win32typing.PySECURITY_ATTRIBUTES):Determines if returned handle is inheritable, can be NoneWin32 API References
 
 Returns:
 
@@ -187,7 +187,7 @@ Returns:
     pass
         
 
-def GetMailslotInfo(Mailslot:'int') -> 'Tuple[int, int, int, int]':
+def GetMailslotInfo(Mailslot:'int') -> 'typing.Tuple[typing.Any, typing.Any, typing.Any, typing.Any]':
     """
     Retrieves information about a mailslot
 
@@ -197,7 +197,7 @@ Args:
 
 Returns:
 
-      Tuple[int, int, int, int]:Search for GetMailslotInfo at msdn, google or google groups.
+      typing.Tuple[typing.Any, typing.Any, typing.Any, typing.Any]:Search for GetMailslotInfo at msdn, google or google groups.
 Return ValueReturns (maximum message size, next message size, message count, timeout)
 
         
@@ -205,14 +205,14 @@ Return ValueReturns (maximum message size, next message size, message count, tim
     pass
         
 
-def SetMailslotInfo(Mailslot:'int',ReadTimeout:'int') -> 'None':
+def SetMailslotInfo(Mailslot:'int',ReadTimeout:'typing.Any') -> 'None':
     """
     Sets a mailslot's timeout
 
 Args:
 
       Mailslot(int):Handle to a mailslot
-      ReadTimeout(int):Timeout in milliseconds, use -1 for no timeoutWin32 API References
+      ReadTimeout(typing.Any):Timeout in milliseconds, use -1 for no timeoutWin32 API References
 
 Returns:
 
@@ -222,13 +222,13 @@ Returns:
     pass
         
 
-def DefineDosDevice(flags:'int',deviceName:'str',targetPath:'str') -> 'None':
+def DefineDosDevice(flags:'typing.Any',deviceName:'str',targetPath:'str') -> 'None':
     """
     Lets an application define, redefine, or delete MS-DOS device names.
 
 Args:
 
-      flags(int):flags specifying aspects of device definition
+      flags(typing.Any):flags specifying aspects of device definition
       deviceName(str):MS-DOS device name string
       targetPath(str):MS-DOS or path string for 32-bit Windows.
 
@@ -240,13 +240,13 @@ Returns:
     pass
         
 
-def DefineDosDeviceW(flags:'int',deviceName:'str',targetPath:'str') -> 'None':
+def DefineDosDeviceW(flags:'typing.Any',deviceName:'str',targetPath:'str') -> 'None':
     """
     Lets an application define, redefine, or delete MS-DOS device names. (NT/2000 Unicode specific version)
 
 Args:
 
-      flags(int):flags specifying aspects of device definition
+      flags(typing.Any):flags specifying aspects of device definition
       deviceName(str):MS-DOS device name string
       targetPath(str):MS-DOS or path string for 32-bit Windows.
 
@@ -274,21 +274,21 @@ Returns:
     pass
         
 
-def DeviceIoControl(Device:'int',IoControlCode:'int',InBuffer:'Union[Any, str]',OutBuffer:'Union[int, Any]',Overlapped:'PyOVERLAPPED'=None) -> 'Union[Any, str]':
+def DeviceIoControl(Device:'int',IoControlCode:'typing.Any',InBuffer:'typing.Union[typing.Any]',OutBuffer:'typing.Union[typing.Any]',Overlapped:'win32typing.PyOVERLAPPED'=None) -> 'typing.Union[typing.Any]':
     """
     Sends a control code to a device or file system driver
 
 Args:
 
       Device(int):Handle to a file, device, or volume
-      IoControlCode(int):IOControl Code to use, from winioctlcon
-      InBuffer(Union[Any, str]):The input data for the operation, can be None for some operations.
-      OutBuffer(Union[int, Any]):Size of the buffer to allocate for output, or a writeable buffer as returned by win32file::AllocateReadBuffer.
-      Overlapped(PyOVERLAPPED):An overlapped object for async operations.  Device handle must have been opened with FILE_FLAG_OVERLAPPED.CommentsAccepts keyword argsReturn ValueIf a preallocated output buffer is passed in, the returned object may be the original buffer, or a view of the buffer with only the actual size of the retrieved data. If OutBuffer is a buffer size and the operation is synchronous (ie no Overlapped is passed in), returns a plain string containing the retrieved data.  For an async operation, a new writeable buffer is returned.
+      IoControlCode(typing.Any):IOControl Code to use, from winioctlcon
+      InBuffer(typing.Union[typing.Any]):The input data for the operation, can be None for some operations.
+      OutBuffer(typing.Union[typing.Any]):Size of the buffer to allocate for output, or a writeable buffer as returned by win32file::AllocateReadBuffer.
+      Overlapped(win32typing.PyOVERLAPPED):An overlapped object for async operations.  Device handle must have been opened with FILE_FLAG_OVERLAPPED.CommentsAccepts keyword argsReturn ValueIf a preallocated output buffer is passed in, the returned object may be the original buffer, or a view of the buffer with only the actual size of the retrieved data. If OutBuffer is a buffer size and the operation is synchronous (ie no Overlapped is passed in), returns a plain string containing the retrieved data.  For an async operation, a new writeable buffer is returned.
 
 Returns:
 
-      Union[Any, str]:An overlapped object for async operations.  Device 
+      typing.Union[typing.Any]:An overlapped object for async operations.  Device 
 
 handle must have been opened with FILE_FLAG_OVERLAPPED.
 Comments
@@ -311,13 +311,13 @@ data.  For an async operation, a new writeable buffer is returned.
     pass
         
 
-def FindClose(hFindFile:'int') -> 'None':
+def FindClose(hFindFile:'typing.Any') -> 'None':
     """
     Closes a find handle.
 
 Args:
 
-      hFindFile(int):file search handle
+      hFindFile(typing.Any):file search handle
 
 Returns:
 
@@ -327,13 +327,13 @@ Returns:
     pass
         
 
-def FindCloseChangeNotification(hChangeHandle:'int') -> 'None':
+def FindCloseChangeNotification(hChangeHandle:'typing.Any') -> 'None':
     """
     Closes a handle.
 
 Args:
 
-      hChangeHandle(int):handle to change notification to close
+      hChangeHandle(typing.Any):handle to change notification to close
 
 Returns:
 
@@ -343,35 +343,35 @@ Returns:
     pass
         
 
-def FindFirstChangeNotification(pathName:'str',bWatchSubtree:'int',notifyFilter:'int') -> 'int':
+def FindFirstChangeNotification(pathName:'str',bWatchSubtree:'typing.Any',notifyFilter:'typing.Any') -> 'typing.Any':
     """
     Creates a change notification handle and sets up initial change notification filter conditions. A wait on a notification handle succeeds when a change matching the filter conditions occurs in the specified directory or subtree.
 
 Args:
 
       pathName(str):Name of directory to watch
-      bWatchSubtree(int):flag for monitoring directory or directory tree
-      notifyFilter(int):filter conditions to watch for.  See win32api::FindFirstChangeNotification for details.
+      bWatchSubtree(typing.Any):flag for monitoring directory or directory tree
+      notifyFilter(typing.Any):filter conditions to watch for.  See win32api::FindFirstChangeNotification for details.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def FindNextChangeNotification(hChangeHandle:'int') -> 'int':
+def FindNextChangeNotification(hChangeHandle:'typing.Any') -> 'typing.Any':
     """
     Requests that the operating system signal a change notification handle the next time it detects an appropriate change,
 
 Args:
 
-      hChangeHandle(int):handle to change notification to signal
+      hChangeHandle(typing.Any):handle to change notification to signal
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
@@ -393,7 +393,7 @@ Returns:
     pass
         
 
-def GetBinaryType(appName:'str') -> 'int':
+def GetBinaryType(appName:'str') -> 'typing.Any':
     """
     Determines whether a file is executable, and if so, what type of executable file it is. That last property determines which subsystem an executable file runs under.
 
@@ -403,13 +403,13 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetDiskFreeSpace(rootPathName:'str') -> 'Tuple[int, int, int, int]':
+def GetDiskFreeSpace(rootPathName:'str') -> 'typing.Tuple[typing.Any, typing.Any, typing.Any, typing.Any]':
     """
     Determines the free space on a device.
 
@@ -419,14 +419,14 @@ Args:
 
 Returns:
 
-      Tuple[int, int, int, int]:address of root pathReturn ValueThe result is a tuple of integers representing (sectors per cluster, bytes per sector, number of free clusters, total number of clusters)
+      typing.Tuple[typing.Any, typing.Any, typing.Any, typing.Any]:address of root pathReturn ValueThe result is a tuple of integers representing (sectors per cluster, bytes per sector, number of free clusters, total number of clusters)
 
         
     """
     pass
         
 
-def GetDiskFreeSpaceEx(rootPathName:'str') -> 'Tuple[Any, Any, Any]':
+def GetDiskFreeSpaceEx(rootPathName:'str') -> 'typing.Tuple[typing.Any, typing.Any, typing.Any]':
     """
     Determines the free space on a device.
 
@@ -436,7 +436,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any, Any]:address of root pathReturn ValueThe result is a tuple of long integers:
+      typing.Tuple[typing.Any, typing.Any, typing.Any]:address of root pathReturn ValueThe result is a tuple of long integers:
 Items[0] long integer : freeBytes
 The total number of free bytes on the disk that are available to the user associated with the calling thread.
 [1] long integer : totalBytes
@@ -451,7 +451,7 @@ The total number of free bytes on the disk.
     pass
         
 
-def GetDriveType(rootPathName:'str') -> 'int':
+def GetDriveType(rootPathName:'str') -> 'typing.Any':
     """
     Determines whether a disk drive is a removable, fixed, CD-ROM, RAM disk, or network drive.
 
@@ -461,14 +461,14 @@ Args:
 
 Returns:
 
-      int:Return ValueThe result is one of the DRIVE_* constants.
+      typing.Any:Return ValueThe result is one of the DRIVE_* constants.
 
         
     """
     pass
         
 
-def GetDriveTypeW(rootPathName:'str') -> 'int':
+def GetDriveTypeW(rootPathName:'str') -> 'typing.Any':
     """
     Determines whether a disk drive is a removable, fixed, CD-ROM, RAM disk, or network drive. (NT/2000 Unicode specific version).
 
@@ -478,14 +478,14 @@ Args:
 
 Returns:
 
-      int:Return ValueThe result is one of the DRIVE_* constants.
+      typing.Any:Return ValueThe result is one of the DRIVE_* constants.
 
         
     """
     pass
         
 
-def GetFileAttributes(fileName:'str') -> 'int':
+def GetFileAttributes(fileName:'str') -> 'typing.Any':
     """
     Determines a files attributes.
 
@@ -495,13 +495,13 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetFileAttributesW(fileName:'str') -> 'int':
+def GetFileAttributesW(fileName:'str') -> 'typing.Any':
     """
     Determines a files attributes (NT/2000 Unicode specific version).
 
@@ -511,42 +511,42 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetFileTime(handle:'int',creationTime:'PyTime',accessTime:'PyTime',writeTime:'PyTime') -> 'Tuple[PyTime, PyTime, PyTime]':
+def GetFileTime(handle:'int',creationTime:'win32typing.PyTime',accessTime:'win32typing.PyTime',writeTime:'win32typing.PyTime') -> 'typing.Tuple[win32typing.PyTime, win32typing.PyTime, win32typing.PyTime]':
     """
     Returns a file's creation, last access, and modification times.
 
 Args:
 
       handle(int):Handle to the file.
-      creationTime(PyTime):
-      accessTime(PyTime):
-      writeTime(PyTime):CommentsTimes are returned in UTC time.
+      creationTime(win32typing.PyTime):
+      accessTime(win32typing.PyTime):
+      writeTime(win32typing.PyTime):CommentsTimes are returned in UTC time.
 
 Returns:
 
-      Tuple[PyTime, PyTime, PyTime]
+      typing.Tuple[win32typing.PyTime, win32typing.PyTime, win32typing.PyTime]
         
     """
     pass
         
 
-def SetFileTime(File:'int',CreationTime:'PyTime'=None,LastAccessTime:'PyTime'=None,LastWriteTime:'PyTime'=None,UTCTimes:'Any'=False) -> 'None':
+def SetFileTime(File:'int',CreationTime:'win32typing.PyTime'=None,LastAccessTime:'win32typing.PyTime'=None,LastWriteTime:'win32typing.PyTime'=None,UTCTimes:'typing.Any'=False) -> 'None':
     """
     Sets the date and time that a file was created, last accessed, or last modified.
 
 Args:
 
       File(int):Previously opened handle (opened with FILE_WRITE_ATTRIBUTES access).
-      CreationTime(PyTime):File created time. None for no change.
-      LastAccessTime(PyTime):File access time. None for no change.
-      LastWriteTime(PyTime):File written time. None for no change.
-      UTCTimes(Any):If True, input times are treated as UTC and no conversion is done, otherwise they are treated as local times.  Defaults to False for backward compatibility. This parameter is ignored in Python 3.x, where you should always pass datetime objects with timezone information.
+      CreationTime(win32typing.PyTime):File created time. None for no change.
+      LastAccessTime(win32typing.PyTime):File access time. None for no change.
+      LastWriteTime(win32typing.PyTime):File written time. None for no change.
+      UTCTimes(typing.Any):If True, input times are treated as UTC and no conversion is done, otherwise they are treated as local times.  Defaults to False for backward compatibility. This parameter is ignored in Python 3.x, where you should always pass datetime objects with timezone information.
 
 Returns:
 
@@ -556,17 +556,17 @@ Returns:
     pass
         
 
-def GetFileInformationByHandle(handle:'Union[int]') -> 'tuple':
+def GetFileInformationByHandle(handle:'typing.Union[typing.Any, int]') -> 'typing.Any':
     """
     Retrieves file information for a specified file.
 
 Args:
 
-      handle(Union[int]):Handle to the file for which to obtain information.This handle should not be a pipe handle. The GetFileInformationByHandle function does not work with pipe handles.CommentsDepending on the underlying network components of the operating system and the type of server connected to, the GetFileInformationByHandle function may fail, return partial information, or full information for the given file. In general, you should not use GetFileInformationByHandle unless your application is intended to be run on a limited set of operating system configurations.Return ValueThe result is a tuple of:Items[0] int : dwFileAttributes[1] PyTime : ftCreationTime[2] PyTime : ftLastAccessTime[3] PyTime : ftLastWriteTime[4] int : dwVolumeSerialNumber[5] int : nFileSizeHigh[6] int : nFileSizeLow[7] int : nNumberOfLinks[8] int : nFileIndexHigh[9] int : nFileIndexLow
+      handle(typing.Union[typing.Any, int]):Handle to the file for which to obtain information.This handle should not be a pipe handle. The GetFileInformationByHandle function does not work with pipe handles.CommentsDepending on the underlying network components of the operating system and the type of server connected to, the GetFileInformationByHandle function may fail, return partial information, or full information for the given file. In general, you should not use GetFileInformationByHandle unless your application is intended to be run on a limited set of operating system configurations.Return ValueThe result is a tuple of:Items[0] int : dwFileAttributes[1] PyTime : ftCreationTime[2] PyTime : ftLastAccessTime[3] PyTime : ftLastWriteTime[4] int : dwVolumeSerialNumber[5] int : nFileSizeHigh[6] int : nFileSizeLow[7] int : nNumberOfLinks[8] int : nFileIndexHigh[9] int : nFileIndexLow
 
 Returns:
 
-      tuple:Handle to the file for which to obtain information.This handle should not be a pipe handle. The GetFileInformationByHandle function does not work with pipe handles.Comments
+      typing.Any:Handle to the file for which to obtain information.This handle should not be a pipe handle. The GetFileInformationByHandle function does not work with pipe handles.Comments
 
 Depending on the underlying network components of the operating system and the type of server 
 
@@ -602,7 +602,7 @@ Items[0] int : dwFileAttributes
     pass
         
 
-def GetCompressedFileSize() -> 'Any':
+def GetCompressedFileSize() -> 'typing.Any':
     """
     Determines the compressed size of a file.
 
@@ -612,13 +612,13 @@ Args:
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def GetFileSize() -> 'Any':
+def GetFileSize() -> 'typing.Any':
     """
     Determines the size of a file.
 
@@ -628,41 +628,41 @@ Args:
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def AllocateReadBuffer(bufSize:'int') -> 'PyOVERLAPPEDReadBuffer':
+def AllocateReadBuffer(bufSize:'typing.Any') -> 'win32typing.PyOVERLAPPEDReadBuffer':
     """
     None
 
 Args:
 
-      bufSize(int):The size of the buffer to allocate.
+      bufSize(typing.Any):The size of the buffer to allocate.
 
 Returns:
 
-      PyOVERLAPPEDReadBuffer
+      win32typing.PyOVERLAPPEDReadBuffer
         
     """
     pass
         
 
-def ReadFile(hFile:'Union[int]',buffer_bufSize:'Union[PyOVERLAPPEDReadBuffer, int]',overlapped:'PyOVERLAPPED'=None) -> 'Tuple[int, str]':
+def ReadFile(hFile:'typing.Union[typing.Any, int]',buffer_bufSize:'typing.Union[win32typing.PyOVERLAPPEDReadBuffer, typing.Any]',overlapped:'win32typing.PyOVERLAPPED'=None) -> 'typing.Tuple[typing.Any, str]':
     """
     Reads a string from a file
 
 Args:
 
-      hFile(Union[int]):Handle to the file
-      buffer_bufSize(Union[PyOVERLAPPEDReadBuffer, int]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
-      overlapped(PyOVERLAPPED):An overlapped structureCommentsin a multi-threaded overlapped environment, it is likely to be necessary to pre-allocate the read buffer using the win32file::AllocateReadBuffer method, otherwise the I/O operation may complete before you can assign to the resulting buffer.Return ValueThe result is a tuple of (hr, string/PyOVERLAPPEDReadBuffer), where hr may be 0, ERROR_MORE_DATA or ERROR_IO_PENDING. If the overlapped param is not None, then the result is a PyOVERLAPPEDReadBuffer.  Once the overlapped IO operation has completed, you can convert this to a string (str(object)) [py2k] or (bytes(object)) [py3k] to obtain the data. While the operation is in progress, you can use the slice operations (object[:end]) to obtain the data read so far. You must use the OVERLAPPED API functions to determine how much of the data is valid.
+      hFile(typing.Union[typing.Any, int]):Handle to the file
+      buffer_bufSize(typing.Union[win32typing.PyOVERLAPPEDReadBuffer, typing.Any]):Size of the buffer to create for the result, or a buffer to fill with the result. If a buffer object and overlapped is passed, the result is the buffer itself.  If a buffer but no overlapped is passed, the result is a new string object, built from the buffer, but with a length that reflects the data actually read.
+      overlapped(win32typing.PyOVERLAPPED):An overlapped structureCommentsin a multi-threaded overlapped environment, it is likely to be necessary to pre-allocate the read buffer using the win32file::AllocateReadBuffer method, otherwise the I/O operation may complete before you can assign to the resulting buffer.Return ValueThe result is a tuple of (hr, string/PyOVERLAPPEDReadBuffer), where hr may be 0, ERROR_MORE_DATA or ERROR_IO_PENDING. If the overlapped param is not None, then the result is a PyOVERLAPPEDReadBuffer.  Once the overlapped IO operation has completed, you can convert this to a string (str(object)) [py2k] or (bytes(object)) [py3k] to obtain the data. While the operation is in progress, you can use the slice operations (object[:end]) to obtain the data read so far. You must use the OVERLAPPED API functions to determine how much of the data is valid.
 
 Returns:
 
-      Tuple[int, str]:An overlapped structure
+      typing.Tuple[typing.Any, str]:An overlapped structure
 Comments
 
 in a multi-threaded overlapped environment, it is likely to be necessary to pre-allocate the read buffer using the win32file::AllocateReadBuffer method, otherwise the I/O operation may complete before you can assign to the resulting buffer.
@@ -685,19 +685,19 @@ You must use the OVERLAPPED API functions to determine how much of the data is v
     pass
         
 
-def WriteFile(hFile:'Union[int]',data:'Union[PyOVERLAPPEDReadBuffer, str]',ol:'PyOVERLAPPED'=None) -> 'Tuple[int, int]':
+def WriteFile(hFile:'typing.Union[typing.Any, int]',data:'typing.Union[str, win32typing.PyOVERLAPPEDReadBuffer]',ol:'win32typing.PyOVERLAPPED'=None) -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Writes a string to a file
 
 Args:
 
-      hFile(Union[int]):Handle to the file
-      data(Union[PyOVERLAPPEDReadBuffer, str]):The data to write.
-      ol(PyOVERLAPPED):An overlapped structureCommentsIf you use an overlapped buffer, then it is your responsibility to ensure the string object passed remains valid until the operation completes.  If Python garbage collection reclaims the buffer before the win32 API has finished with it, the results are unpredictable.Return ValueThe result is a tuple of (errCode, nBytesWritten).  If errCode is not zero, it will be ERROR_IO_PENDING (ie, it is an overlapped request). Any other error will raise an exception.
+      hFile(typing.Union[typing.Any, int]):Handle to the file
+      data(typing.Union[str, win32typing.PyOVERLAPPEDReadBuffer]):The data to write.
+      ol(win32typing.PyOVERLAPPED):An overlapped structureCommentsIf you use an overlapped buffer, then it is your responsibility to ensure the string object passed remains valid until the operation completes.  If Python garbage collection reclaims the buffer before the win32 API has finished with it, the results are unpredictable.Return ValueThe result is a tuple of (errCode, nBytesWritten).  If errCode is not zero, it will be ERROR_IO_PENDING (ie, it is an overlapped request). Any other error will raise an exception.
 
 Returns:
 
-      Tuple[int, int]:An overlapped structure
+      typing.Tuple[typing.Any, typing.Any]:An overlapped structure
 Comments
 
 If you use an overlapped buffer, then it is your responsibility 
@@ -718,13 +718,13 @@ Any other error will raise an exception.
     pass
         
 
-def CloseHandle(handle:'Union[int]') -> 'None':
+def CloseHandle(handle:'typing.Union[typing.Any, int]') -> 'None':
     """
     Closes an open handle.
 
 Args:
 
-      handle(Union[int]):A previously opened handle.
+      handle(typing.Union[typing.Any, int]):A previously opened handle.
 
 Returns:
 
@@ -734,17 +734,17 @@ Returns:
     pass
         
 
-def LockFileEx(hFile:'Union[int]',_int:'Any',_int1:'Any',_int2:'Any',ol:'PyOVERLAPPED'=None) -> 'None':
+def LockFileEx(hFile:'typing.Union[typing.Any, int]',_int:'typing.Any',_int1:'typing.Any',_int2:'typing.Any',ol:'win32typing.PyOVERLAPPED'=None) -> 'None':
     """
     Locks a file. Wrapper for LockFileEx win32 API.
 
 Args:
 
-      hFile(Union[int]):Handle to the file
-      _int(Any):Flags that specify exclusive/shared and blocking/non-blocking mode
-      _int1(Any):low-order part of number of bytes to lock
-      _int2(Any):high-order part of number of bytes to lock
-      ol(PyOVERLAPPED):An overlapped structure
+      hFile(typing.Union[typing.Any, int]):Handle to the file
+      _int(typing.Any):Flags that specify exclusive/shared and blocking/non-blocking mode
+      _int1(typing.Any):low-order part of number of bytes to lock
+      _int2(typing.Any):high-order part of number of bytes to lock
+      ol(win32typing.PyOVERLAPPED):An overlapped structure
 
 Returns:
 
@@ -754,16 +754,16 @@ Returns:
     pass
         
 
-def UnlockFileEx(hFile:'Union[int]',_int:'Any',_int1:'Any',ol:'PyOVERLAPPED'=None) -> 'None':
+def UnlockFileEx(hFile:'typing.Union[typing.Any, int]',_int:'typing.Any',_int1:'typing.Any',ol:'win32typing.PyOVERLAPPED'=None) -> 'None':
     """
     Unlocks a file. Wrapper for UnlockFileEx win32 API.
 
 Args:
 
-      hFile(Union[int]):Handle to the file
-      _int(Any):low-order part of number of bytes to lock
-      _int1(Any):high-order part of number of bytes to lock
-      ol(PyOVERLAPPED):An overlapped structure
+      hFile(typing.Union[typing.Any, int]):Handle to the file
+      _int(typing.Any):low-order part of number of bytes to lock
+      _int1(typing.Any):high-order part of number of bytes to lock
+      ol(win32typing.PyOVERLAPPED):An overlapped structure
 
 Returns:
 
@@ -773,43 +773,43 @@ Returns:
     pass
         
 
-def GetQueuedCompletionStatus(hPort:'int',timeOut:'int') -> 'Tuple[int, int, int, PyOVERLAPPED]':
+def GetQueuedCompletionStatus(hPort:'int',timeOut:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any, typing.Any, win32typing.PyOVERLAPPED]':
     """
     Attempts to dequeue an I/O completion packet from a specified input/output completion port.
 
 Args:
 
       hPort(int):The handle to the completion port.
-      timeOut(int):Timeout in milli-seconds.CommentsThis method never throws an API error. The result is a tuple of (rc, numberOfBytesTransferred, completionKey, overlapped) If the function succeeds, rc will be set to 0, otherwise it will be set to the win32 error code.
+      timeOut(typing.Any):Timeout in milli-seconds.CommentsThis method never throws an API error. The result is a tuple of (rc, numberOfBytesTransferred, completionKey, overlapped) If the function succeeds, rc will be set to 0, otherwise it will be set to the win32 error code.
 
 Returns:
 
-      Tuple[int, int, int, PyOVERLAPPED]
+      typing.Tuple[typing.Any, typing.Any, typing.Any, win32typing.PyOVERLAPPED]
         
     """
     pass
         
 
-def PostQueuedCompletionStatus(handle:'int',numberOfbytes:'int'=0,completionKey:'int'=0,overlapped:'PyOVERLAPPED'=None) -> 'None':
+def PostQueuedCompletionStatus(handle:'int',numberOfbytes:'typing.Any'=0,completionKey:'typing.Any'=0,overlapped:'win32typing.PyOVERLAPPED'=None) -> 'typing.Any':
     """
     lets you post an I/O completion packet to an I/O completion port. The I/O completion packet will satisfy an outstanding call to the GetQueuedCompletionStatus function.
 
 Args:
 
       handle(int):handle to an I/O completion port
-      numberOfbytes(int):value to return via GetQueuedCompletionStatus' first result
-      completionKey(int):value to return via GetQueuedCompletionStatus' second result
-      overlapped(PyOVERLAPPED):value to return via GetQueuedCompletionStatus' third resultCommentsNote that if you post overlapped objects, but your post is closed before all pending requests are processed, the overlapped objects (including its 'handle' and 'object' members) will leak. See MS KB article Q192800 for a summary of this.
+      numberOfbytes(typing.Any):value to return via GetQueuedCompletionStatus' first result
+      completionKey(typing.Any):value to return via GetQueuedCompletionStatus' second result
+      overlapped(win32typing.PyOVERLAPPED):value to return via GetQueuedCompletionStatus' third resultCommentsNote that if you post overlapped objects, but your post is closed before all pending requests are processed, the overlapped objects (including its 'handle' and 'object' members) will leak. See MS KB article Q192800 for a summary of this.
 
 Returns:
 
-      None
+      typing.Any
         
     """
     pass
         
 
-def GetFileType(hFile:'int') -> 'int':
+def GetFileType(hFile:'int') -> 'typing.Any':
     """
     Determines the type of a file.
 
@@ -819,13 +819,13 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetLogicalDrives() -> 'int':
+def GetLogicalDrives() -> 'typing.Any':
     """
     Returns a bitmaks of the logical drives installed.
 
@@ -835,41 +835,41 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetOverlappedResult(hFile:'int',overlapped:'PyOVERLAPPED',bWait:'int') -> 'int':
+def GetOverlappedResult(hFile:'int',overlapped:'win32typing.PyOVERLAPPED',bWait:'typing.Any') -> 'typing.Any':
     """
     Determines the result of the most recent call with an OVERLAPPED object.
 
 Args:
 
       hFile(int):The handle to the pipe or file
-      overlapped(PyOVERLAPPED):The overlapped object to check.
-      bWait(int):Indicates if the function should wait for data to become available.CommentsThe result is the number of bytes transferred.  The overlapped object's attributes will be changed during this call.
+      overlapped(win32typing.PyOVERLAPPED):The overlapped object to check.
+      bWait(typing.Any):Indicates if the function should wait for data to become available.CommentsThe result is the number of bytes transferred.  The overlapped object's attributes will be changed during this call.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def LockFile(hFile:'int',offsetLow:'int',offsetHigh:'int',nNumberOfBytesToLockLow:'int',nNumberOfBytesToLockHigh:'int') -> 'None':
+def LockFile(hFile:'int',offsetLow:'typing.Any',offsetHigh:'typing.Any',nNumberOfBytesToLockLow:'typing.Any',nNumberOfBytesToLockHigh:'typing.Any') -> 'None':
     """
     Locks a specified file for exclusive access by the calling process.
 
 Args:
 
       hFile(int):handle of file to lock
-      offsetLow(int):low-order word of lock region offset
-      offsetHigh(int):high-order word of lock region offset
-      nNumberOfBytesToLockLow(int):low-order word of length to lock
-      nNumberOfBytesToLockHigh(int):high-order word of length to lock
+      offsetLow(typing.Any):low-order word of lock region offset
+      offsetHigh(typing.Any):high-order word of lock region offset
+      nNumberOfBytesToLockLow(typing.Any):low-order word of length to lock
+      nNumberOfBytesToLockHigh(typing.Any):high-order word of length to lock
 
 Returns:
 
@@ -913,7 +913,7 @@ Returns:
     pass
         
 
-def MoveFileEx(existingFileName:'str',newFileName:'str',flags:'int') -> 'None':
+def MoveFileEx(existingFileName:'str',newFileName:'str',flags:'typing.Any') -> 'None':
     """
     Renames an existing file or a directory (including all its children).
 
@@ -921,7 +921,7 @@ Args:
 
       existingFileName(str):Name of the existing file
       newFileName(str):New name for the file, can be None for delayed delete operation
-      flags(int):flag to determine how to move file (win32file.MOVEFILE_*)
+      flags(typing.Any):flag to determine how to move file (win32file.MOVEFILE_*)
 
 Returns:
 
@@ -931,7 +931,7 @@ Returns:
     pass
         
 
-def MoveFileExW(existingFileName:'str',newFileName:'str',flags:'int') -> 'None':
+def MoveFileExW(existingFileName:'str',newFileName:'str',flags:'typing.Any') -> 'None':
     """
     Renames an existing file or a directory (including all its children). (NT/2000 Unicode specific version).
 
@@ -939,7 +939,7 @@ Args:
 
       existingFileName(str):Name of the existing file
       newFileName(str):New name for the file, can be None for delayed delete operation
-      flags(int):flag to determine how to move file (win32file.MOVEFILE_*)
+      flags(typing.Any):flag to determine how to move file (win32file.MOVEFILE_*)
 
 Returns:
 
@@ -966,17 +966,17 @@ Returns:
     pass
         
 
-def ReadDirectoryChangesW(handle:'int',size:'int',bWatchSubtree:'int',dwNotifyFilter:'int',overlapped:'PyOVERLAPPED'=None) -> 'None':
+def ReadDirectoryChangesW(handle:'int',size:'typing.Any',bWatchSubtree:'typing.Any',dwNotifyFilter:'typing.Any',overlapped:'win32typing.PyOVERLAPPED'=None) -> 'None':
     """
     retrieves information describing the changes occurring within a directory.
 
 Args:
 
       handle(int):Handle to the directory to be monitored. This directory must be opened with the FILE_LIST_DIRECTORY access right.
-      size(int):Size of the buffer to allocate for the results.
-      bWatchSubtree(int):Specifies whether the ReadDirectoryChangesW function will monitor the directory or the directory tree. If TRUE is specified, the function monitors the directory tree rooted at the specified directory. If FALSE is specified, the function monitors only the directory specified by the hDirectory parameter.
-      dwNotifyFilter(int):Specifies filter criteria the function checks to determine if the wait operation has completed. This parameter can be one or more of the FILE_NOTIFY_CHANGE_* values.
-      overlapped(PyOVERLAPPED):An overlapped object.  The directory must also be opened with FILE_FLAG_OVERLAPPED.CommentsIf you pass an overlapped object, you almost certainly must pass a buffer object for the asynchronous results - failure to do so may crash Python as the asynchronous result writes to invalid memory.The FILE_NOTIFY_INFORMATION structure used by this function is variable length, depending on the length of the filename. The size of the buffer must be at least 6 bytes long + the length of the filenames returned.  The number of notifications that can be returned for a given buffer size depends on the filename lengths.Return ValueIf a buffer size is passed, the result is a list of (action, filename)If a buffer is passed, the result is None - you must use the overlapped object to determine when the information is available and how much is valid. The buffer can then be passed to win32file::FILE_NOTIFY_INFORMATION
+      size(typing.Any):Size of the buffer to allocate for the results.
+      bWatchSubtree(typing.Any):Specifies whether the ReadDirectoryChangesW function will monitor the directory or the directory tree. If TRUE is specified, the function monitors the directory tree rooted at the specified directory. If FALSE is specified, the function monitors only the directory specified by the hDirectory parameter.
+      dwNotifyFilter(typing.Any):Specifies filter criteria the function checks to determine if the wait operation has completed. This parameter can be one or more of the FILE_NOTIFY_CHANGE_* values.
+      overlapped(win32typing.PyOVERLAPPED):An overlapped object.  The directory must also be opened with FILE_FLAG_OVERLAPPED.CommentsIf you pass an overlapped object, you almost certainly must pass a buffer object for the asynchronous results - failure to do so may crash Python as the asynchronous result writes to invalid memory.The FILE_NOTIFY_INFORMATION structure used by this function is variable length, depending on the length of the filename. The size of the buffer must be at least 6 bytes long + the length of the filenames returned.  The number of notifications that can be returned for a given buffer size depends on the filename lengths.Return ValueIf a buffer size is passed, the result is a list of (action, filename)If a buffer is passed, the result is None - you must use the overlapped object to determine when the information is available and how much is valid. The buffer can then be passed to win32file::FILE_NOTIFY_INFORMATION
 
 Returns:
 
@@ -1015,30 +1015,30 @@ The buffer can then be passed to win32file::FILE_NOTIFY_INFORMATION
     pass
         
 
-def FILE_NOTIFY_INFORMATION(buffer:'str',size:'int') -> 'Tuple[Tuple[Any, Any], ...]':
+def FILE_NOTIFY_INFORMATION(buffer:'str',size:'typing.Any') -> 'typing.Tuple[typing.Tuple[typing.Any, typing.Any], ...]':
     """
     Decodes a PyFILE_NOTIFY_INFORMATION buffer.
 
 Args:
 
       buffer(str):The buffer to decode.
-      size(int):The number of bytes to refer to.  Generally this will be smaller than the size of the buffer (and certainly never greater!)CommentsSee win32file::ReadDirectoryChangesW for more information.
+      size(typing.Any):The number of bytes to refer to.  Generally this will be smaller than the size of the buffer (and certainly never greater!)CommentsSee win32file::ReadDirectoryChangesW for more information.
 
 Returns:
 
-      Tuple[Tuple[Any, Any], ...]
+      typing.Tuple[typing.Tuple[typing.Any, typing.Any], ...]
         
     """
     pass
         
 
-def SetCurrentDirectory(lpPathName:'Union[str]') -> 'None':
+def SetCurrentDirectory(lpPathName:'typing.Union[str, typing.Any]') -> 'None':
     """
     Sets the current directory.
 
 Args:
 
-      lpPathName(Union[str]):Name of the path to set current.
+      lpPathName(typing.Union[str, typing.Any]):Name of the path to set current.
 
 Returns:
 
@@ -1096,14 +1096,14 @@ Returns:
     pass
         
 
-def SetFileAttributes(filename:'str',newAttributes:'int') -> 'None':
+def SetFileAttributes(filename:'str',newAttributes:'typing.Any') -> 'None':
     """
     Changes a file's attributes.
 
 Args:
 
       filename(str):filename
-      newAttributes(int):attributes to set
+      newAttributes(typing.Any):attributes to set
 
 Returns:
 
@@ -1113,15 +1113,15 @@ Returns:
     pass
         
 
-def SetFilePointer(handle:'int',offset:'Any',moveMethod:'int') -> 'None':
+def SetFilePointer(handle:'int',offset:'typing.Any',moveMethod:'typing.Any') -> 'None':
     """
     Moves the file pointer of an open file.
 
 Args:
 
       handle(int):The file to perform the operation on.
-      offset(Any):Offset to move the file pointer.
-      moveMethod(int):Starting point for the file pointer move. This parameter can be one of the following values.ValueMeaningFILE_BEGINThe starting point is zero or the beginning of the file.FILE_CURRENTThe starting point is the current value of the file pointer.FILE_ENDThe starting point is the current end-of-file position.
+      offset(typing.Any):Offset to move the file pointer.
+      moveMethod(typing.Any):Starting point for the file pointer move. This parameter can be one of the following values.ValueMeaningFILE_BEGINThe starting point is zero or the beginning of the file.FILE_CURRENTThe starting point is the current value of the file pointer.FILE_ENDThe starting point is the current end-of-file position.
 
 Returns:
 
@@ -1148,17 +1148,17 @@ Returns:
     pass
         
 
-def UnlockFile(hFile:'int',offsetLow:'int',offsetHigh:'int',nNumberOfBytesToUnlockLow:'int',nNumberOfBytesToUnlockHigh:'int') -> 'None':
+def UnlockFile(hFile:'int',offsetLow:'typing.Any',offsetHigh:'typing.Any',nNumberOfBytesToUnlockLow:'typing.Any',nNumberOfBytesToUnlockHigh:'typing.Any') -> 'None':
     """
     None
 
 Args:
 
       hFile(int):handle of file to unlock
-      offsetLow(int):low-order word of lock region offset
-      offsetHigh(int):high-order word of lock region offset
-      nNumberOfBytesToUnlockLow(int):low-order word of length to unlock
-      nNumberOfBytesToUnlockHigh(int):high-order word of length to unlock
+      offsetLow(typing.Any):low-order word of lock region offset
+      offsetHigh(typing.Any):high-order word of lock region offset
+      nNumberOfBytesToUnlockLow(typing.Any):low-order word of length to unlock
+      nNumberOfBytesToUnlockHigh(typing.Any):high-order word of length to unlock
 
 Returns:
 
@@ -1168,57 +1168,57 @@ Returns:
     pass
         
 
-def _get_osfhandle(fd:'int') -> 'Any':
+def _get_osfhandle(fd:'typing.Any') -> 'typing.Any':
     """
     Gets operating-system file handle associated with existing stream
 
 Args:
 
-      fd(int):File descriptor as returned by file.fileno()
+      fd(typing.Any):File descriptor as returned by file.fileno()
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def _open_osfhandle(osfhandle:'int',flags:'int') -> 'int':
+def _open_osfhandle(osfhandle:'int',flags:'typing.Any') -> 'typing.Any':
     """
     Associates a C run-time file handle with a existing operating-system file handle.
 
 Args:
 
       osfhandle(int):An open file handle
-      flags(int):O_APPEND,O_RDONLY, or O_TEXT
+      flags(typing.Any):O_APPEND,O_RDONLY, or O_TEXT
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def _setmaxstdio(newmax:'int') -> 'int':
+def _setmaxstdio(newmax:'typing.Any') -> 'typing.Any':
     """
     Set the maximum allowed number of open stdio handles
 
 Args:
 
-      newmax(int):Maximum number of open stdio streams, 2048 maxReturn ValueReturns the number that was set, or -1 on failure.
+      newmax(typing.Any):Maximum number of open stdio streams, 2048 maxReturn ValueReturns the number that was set, or -1 on failure.
 
 Returns:
 
-      int:Maximum number of open stdio streams, 2048 maxReturn ValueReturns the number that was set, or -1 on failure.
+      typing.Any:Maximum number of open stdio streams, 2048 maxReturn ValueReturns the number that was set, or -1 on failure.
 
         
     """
     pass
         
 
-def _getmaxstdio() -> 'int':
+def _getmaxstdio() -> 'typing.Any':
     """
     Returns the maximum number of CRT io streams.
 
@@ -1228,13 +1228,13 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def TransmitFile(Socket:'Union[int, Any]',File:'Union[int]',NumberOfBytesToWrite:'int',NumberOfBytesPerSend:'int',Overlapped:'PyOVERLAPPED',Flags:'int',Head:'Any'=None,Tail:'Any'=None) -> 'None':
+def TransmitFile(Socket:'typing.Union[typing.Any]',File:'typing.Union[typing.Any, int]',NumberOfBytesToWrite:'typing.Any',NumberOfBytesPerSend:'typing.Any',Overlapped:'win32typing.PyOVERLAPPED',Flags:'typing.Any',Head:'typing.Any'=None,Tail:'typing.Any'=None) -> 'None':
     """
     Transmits a file over a socket 
 
@@ -1242,14 +1242,14 @@ TransmitFile(sock, filehandle, bytes_to_write, bytes_per_send, overlap, flags [,
 
 Args:
 
-      Socket(Union[int, Any]):Socket that will be used to send the file
-      File(Union[int]):Handle to the file
-      NumberOfBytesToWrite(int):The number of bytes in the file to transmit, use 0 for entire file.
-      NumberOfBytesPerSend(int):The size, in bytes, of each block of data sent in each send operation.
-      Overlapped(PyOVERLAPPED):An overlapped structure, can be None.
-      Flags(int):A set of flags used to modify the behavior of the TransmitFile function call. (win32file.TF_*)
-      Head(Any):Buffer to send on the socket before the file
-      Tail(Any):Buffer to send on the socket after the fileReturn ValueReturns 0 on completion, or ERROR_IO_PENDING if an overlapped operation has been queued
+      Socket(typing.Union[typing.Any]):Socket that will be used to send the file
+      File(typing.Union[typing.Any, int]):Handle to the file
+      NumberOfBytesToWrite(typing.Any):The number of bytes in the file to transmit, use 0 for entire file.
+      NumberOfBytesPerSend(typing.Any):The size, in bytes, of each block of data sent in each send operation.
+      Overlapped(win32typing.PyOVERLAPPED):An overlapped structure, can be None.
+      Flags(typing.Any):A set of flags used to modify the behavior of the TransmitFile function call. (win32file.TF_*)
+      Head(typing.Any):Buffer to send on the socket before the file
+      Tail(typing.Any):Buffer to send on the socket after the fileReturn ValueReturns 0 on completion, or ERROR_IO_PENDING if an overlapped operation has been queued
 
 Returns:
 
@@ -1261,7 +1261,7 @@ Return ValueReturns 0 on completion, or ERROR_IO_PENDING if an overlapped operat
     pass
         
 
-def ConnectEx(s:'Union[int, Any]',name:'tuple',Overlapped:'PyOVERLAPPED',SendBuffer:'Any'=None) -> 'Tuple[int, int]':
+def ConnectEx(s:'typing.Union[typing.Any]',name:'typing.Any',Overlapped:'win32typing.PyOVERLAPPED',SendBuffer:'typing.Any'=None) -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Version of connect that uses Overlapped I/O 
 
@@ -1269,14 +1269,14 @@ ConnectEx(sock, (addr, port), buf, overlap)
 
 Args:
 
-      s(Union[int, Any]):A bound, unconnected socket that will be used to connect
-      name(tuple):Address to connect to (host, port)
-      Overlapped(PyOVERLAPPED):An overlapped structure
-      SendBuffer(Any):Buffer to send on the socket after connectReturn ValueReturns the completion code and number of bytes sent. The completion code will be 0 for a completed operation, or ERROR_IO_PENDING for a pending overlapped operation.If the platform does not support ConnectEx (eg, Windows 2000), an exception will be thrown indicating the WSAIoctl function (which is used to fetch the function pointer) failed with error code WSAEINVAL (10022).
+      s(typing.Union[typing.Any]):A bound, unconnected socket that will be used to connect
+      name(typing.Any):Address to connect to (host, port)
+      Overlapped(win32typing.PyOVERLAPPED):An overlapped structure
+      SendBuffer(typing.Any):Buffer to send on the socket after connectReturn ValueReturns the completion code and number of bytes sent. The completion code will be 0 for a completed operation, or ERROR_IO_PENDING for a pending overlapped operation.If the platform does not support ConnectEx (eg, Windows 2000), an exception will be thrown indicating the WSAIoctl function (which is used to fetch the function pointer) failed with error code WSAEINVAL (10022).
 
 Returns:
 
-      Tuple[int, int]:Buffer to send on the socket after connect
+      typing.Tuple[typing.Any, typing.Any]:Buffer to send on the socket after connect
 Return ValueReturns the completion code and number of bytes sent. 
 
 The completion code will be 0 for a completed operation, or ERROR_IO_PENDING for a pending overlapped operation.
@@ -1294,16 +1294,16 @@ fetch the function pointer) failed with error code WSAEINVAL (10022).
     pass
         
 
-def AcceptEx(sListening:'Union[int, Any]',sAccepting:'Union[int, Any]',buffer:'Any',ol:'PyOVERLAPPED') -> 'None':
+def AcceptEx(sListening:'typing.Union[typing.Any]',sAccepting:'typing.Union[typing.Any]',buffer:'typing.Any',ol:'win32typing.PyOVERLAPPED') -> 'None':
     """
     Version of accept that uses Overlapped I/O
 
 Args:
 
-      sListening(Union[int, Any]):Socket that had listen() called on.
-      sAccepting(Union[int, Any]):Socket that will be used as the incoming connection.
-      buffer(Any):Buffer to read incoming data and connection point information into. This buffer MUST be big enough to recieve your connection endpoints... AF_INET sockets need to be at least 64 bytes. The correct minimum of the buffer is determined by the protocol family that the listening socket is using.
-      ol(PyOVERLAPPED):An overlapped structureCommentsIn order to make sure the connection has been accepted, either use the hEvent in PyOVERLAPPED, GetOverlappedResult, or GetQueuedCompletionStatus.To use this with I/O completion ports, don't forget to attach sAccepting to your completion port.Pass a buffer of exactly the size returned by win32file::CalculateSocketEndPointSize to have AcceptEx return without reading any bytes from the remote connection.ExampleTo have sAccepting inherit the properties of sListening, you need to do the following after a connection is successfully acceptedimport structsAccepting.setsockopt(socket.SOL_SOCKET, win32file.SO_UPDATE_ACCEPT_CONTEXT, struct.pack("I", sListening.fileno()))Return ValueThe result is 0 or ERROR_IO_PENDING.  All other values will raise win32file.error.  Specifically: if the win32 function returns FALSE, WSAGetLastError() is checked for ERROR_IO_PENDING.
+      sListening(typing.Union[typing.Any]):Socket that had listen() called on.
+      sAccepting(typing.Union[typing.Any]):Socket that will be used as the incoming connection.
+      buffer(typing.Any):Buffer to read incoming data and connection point information into. This buffer MUST be big enough to recieve your connection endpoints... AF_INET sockets need to be at least 64 bytes. The correct minimum of the buffer is determined by the protocol family that the listening socket is using.
+      ol(win32typing.PyOVERLAPPED):An overlapped structureCommentsIn order to make sure the connection has been accepted, either use the hEvent in PyOVERLAPPED, GetOverlappedResult, or GetQueuedCompletionStatus.To use this with I/O completion ports, don't forget to attach sAccepting to your completion port.Pass a buffer of exactly the size returned by win32file::CalculateSocketEndPointSize to have AcceptEx return without reading any bytes from the remote connection.ExampleTo have sAccepting inherit the properties of sListening, you need to do the following after a connection is successfully acceptedimport structsAccepting.setsockopt(socket.SOL_SOCKET, win32file.SO_UPDATE_ACCEPT_CONTEXT, struct.pack("I", sListening.fileno()))Return ValueThe result is 0 or ERROR_IO_PENDING.  All other values will raise win32file.error.  Specifically: if the win32 function returns FALSE, WSAGetLastError() is checked for ERROR_IO_PENDING.
 
 Returns:
 
@@ -1333,48 +1333,48 @@ WSAGetLastError() is checked for ERROR_IO_PENDING.
     pass
         
 
-def CalculateSocketEndPointSize(socket:'Union[int, Any]') -> 'int':
+def CalculateSocketEndPointSize(socket:'typing.Union[typing.Any]') -> 'typing.Any':
     """
     Calculate how many bytes are needed for the connection endpoints data for a socket.
 
 Args:
 
-      socket(Union[int, Any]):The socket for which to determine the size.CommentsThis function allows you to determine the minumum buffer size which can be passed to win32file::AcceptEx
+      socket(typing.Union[typing.Any]):The socket for which to determine the size.CommentsThis function allows you to determine the minumum buffer size which can be passed to win32file::AcceptEx
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetAcceptExSockaddrs(sAccepting:'Union[int, Any]',buffer:'PyOVERLAPPEDReadBuffer') -> 'Tuple[Any, Any, Any]':
+def GetAcceptExSockaddrs(sAccepting:'typing.Union[typing.Any]',buffer:'win32typing.PyOVERLAPPEDReadBuffer') -> 'typing.Tuple[typing.Any, typing.Any, typing.Any]':
     """
     Parses the connection endpoints from the buffer passed into AcceptEx
 
 Args:
 
-      sAccepting(Union[int, Any]):Socket that was passed into the sAccepting parameter of AcceptEx
-      buffer(PyOVERLAPPEDReadBuffer):Buffer you passed into AcceptExCommentsLocalSockAddr and RemoteSockAddr are ("xx.xx.xx.xx", port#) if iFamily == AF_INETotherwise LocalSockAddr and RemoteSockAddr are just binary stringsand they should be unpacked with the struct module.
+      sAccepting(typing.Union[typing.Any]):Socket that was passed into the sAccepting parameter of AcceptEx
+      buffer(win32typing.PyOVERLAPPEDReadBuffer):Buffer you passed into AcceptExCommentsLocalSockAddr and RemoteSockAddr are ("xx.xx.xx.xx", port#) if iFamily == AF_INETotherwise LocalSockAddr and RemoteSockAddr are just binary stringsand they should be unpacked with the struct module.
 
 Returns:
 
-      Tuple[Any, Any, Any]
+      typing.Tuple[typing.Any, typing.Any, typing.Any]
         
     """
     pass
         
 
-def WSAEventSelect(socket:'Any',hEvent:'Any',networkEvents:'int') -> 'None':
+def WSAEventSelect(socket:'typing.Any',hEvent:'typing.Any',networkEvents:'typing.Any') -> 'None':
     """
     Specifies an event object to be associated with the supplied set of FD_XXXX network events.
 
 Args:
 
-      socket(Any):socket to attach to the event
-      hEvent(Any):Event handle for the socket to become attached to.
-      networkEvents(int):A bitmask of network events that will cause hEvent to be signaled. e.g. (FD_CLOSE | FD_READ)
+      socket(typing.Any):socket to attach to the event
+      hEvent(typing.Any):Event handle for the socket to become attached to.
+      networkEvents(typing.Any):A bitmask of network events that will cause hEvent to be signaled. e.g. (FD_CLOSE | FD_READ)
 
 Returns:
 
@@ -1384,34 +1384,34 @@ Returns:
     pass
         
 
-def WSAEnumNetworkEvents(s:'Any',hEvent:'int') -> 'dict':
+def WSAEnumNetworkEvents(s:'typing.Any',hEvent:'int') -> 'typing.Any':
     """
     Return network events that caused the event associated with the socket to be signaled.
 
 Args:
 
-      s(Any):Socket to check for netork events, previously registered for network event notification with WSAEventSelect.
+      s(typing.Any):Socket to check for netork events, previously registered for network event notification with WSAEventSelect.
       hEvent(int):Optional handle to the event associated with socket s in the last call to WSAEventSelect. If specified, the event will be reset.Return ValueA dictionary mapping network events that occured for the specified socket since the last call to this function (e.g. FD_READ, FD_WRITE) to their associated error code, or 0 if the event occured without an error. The events returned are a subset of events previously registered for this socket with WSAEventSelect.
 
 Returns:
 
-      dict:Optional handle to the event associated with socket s in the last call to WSAEventSelect. If specified, the event will be reset.Return ValueA dictionary mapping network events that occured for the specified socket since the last call to this function (e.g. FD_READ, FD_WRITE) to their associated error code, or 0 if the event occured without an error. The events returned are a subset of events previously registered for this socket with WSAEventSelect.
+      typing.Any:Optional handle to the event associated with socket s in the last call to WSAEventSelect. If specified, the event will be reset.Return ValueA dictionary mapping network events that occured for the specified socket since the last call to this function (e.g. FD_READ, FD_WRITE) to their associated error code, or 0 if the event occured without an error. The events returned are a subset of events previously registered for this socket with WSAEventSelect.
 
         
     """
     pass
         
 
-def WSAAsyncSelect(socket:'Any',hwnd:'Any',_int:'int',networkEvents:'int') -> 'None':
+def WSAAsyncSelect(socket:'typing.Any',hwnd:'typing.Any',_int:'typing.Any',networkEvents:'typing.Any') -> 'None':
     """
     Request windows message notification for the supplied set of FD_XXXX network events.
 
 Args:
 
-      socket(Any):socket to attach to the event
-      hwnd(Any):Window handle for the socket to become attached to.
-      _int(int):Window message that will be posted.
-      networkEvents(int):A bitmask of network events that will cause wMsg to be posted. e.g. (FD_CLOSE | FD_READ)
+      socket(typing.Any):socket to attach to the event
+      hwnd(typing.Any):Window handle for the socket to become attached to.
+      _int(typing.Any):Window message that will be posted.
+      networkEvents(typing.Any):A bitmask of network events that will cause wMsg to be posted. e.g. (FD_CLOSE | FD_READ)
 
 Returns:
 
@@ -1421,72 +1421,72 @@ Returns:
     pass
         
 
-def WSASend(s:'Union[int, Any]',buffer:'Union[Any, str]',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
+def WSASend(s:'typing.Union[typing.Any]',buffer:'typing.Union[str, typing.Any]',ol:'win32typing.PyOVERLAPPED',dwFlags:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Winsock send() equivalent function for Overlapped I/O.
 
 Args:
 
-      s(Union[int, Any]):Socket to send data on.
-      buffer(Union[Any, str]):Buffer to send data from.
-      ol(PyOVERLAPPED):An overlapped structure
-      dwFlags(int):Optional send flags.
+      s(typing.Union[typing.Any]):Socket to send data on.
+      buffer(typing.Union[str, typing.Any]):Buffer to send data from.
+      ol(win32typing.PyOVERLAPPED):An overlapped structure
+      dwFlags(typing.Any):Optional send flags.
 
 Returns:
 
-      Tuple[Any, Any]
+      typing.Tuple[typing.Any, typing.Any]
         
     """
     pass
         
 
-def WSARecv(s:'Union[int, Any]',buffer:'Any',ol:'PyOVERLAPPED',dwFlags:'int') -> 'Tuple[Any, Any]':
+def WSARecv(s:'typing.Union[typing.Any]',buffer:'typing.Any',ol:'win32typing.PyOVERLAPPED',dwFlags:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Winsock recv() equivalent function for Overlapped I/O.
 
 Args:
 
-      s(Union[int, Any]):Socket to send data on.
-      buffer(Any):Buffer to send data from.
-      ol(PyOVERLAPPED):An overlapped structure
-      dwFlags(int):Optional reception flags.
+      s(typing.Union[typing.Any]):Socket to send data on.
+      buffer(typing.Any):Buffer to send data from.
+      ol(win32typing.PyOVERLAPPED):An overlapped structure
+      dwFlags(typing.Any):Optional reception flags.
 
 Returns:
 
-      Tuple[Any, Any]
+      typing.Tuple[typing.Any, typing.Any]
         
     """
     pass
         
 
-def BuildCommDCB(_def:'str',dcb:'PyDCB') -> 'PyDCB':
+def BuildCommDCB(_def:'str',dcb:'win32typing.PyDCB') -> 'win32typing.PyDCB':
     """
     Fills the specified DCB structure with values specified in a device-control string. The device-control string uses the syntax of the mode command
 
 Args:
 
       _def(str):device-control string
-      dcb(PyDCB):The device-control block
+      dcb(win32typing.PyDCB):The device-control block
 
 Returns:
 
-      PyDCB
+      win32typing.PyDCB
         
     """
     pass
         
 
-def ClearCommError(PyHANDLE:'Any') -> 'Tuple[int, PyCOMSTAT]':
+def ClearCommError(PyHANDLE:'typing.Any') -> 'typing.Tuple[typing.Any, win32typing.PyCOMSTAT]':
     """
     retrieves information about a communications error and reports the current status of a communications device.
 
 Args:
 
-      PyHANDLE(Any):A handle to the device.
+      PyHANDLE(typing.Any):A handle to the device.
 
 Returns:
 
-      Tuple[int, PyCOMSTAT]
+      typing.Tuple[typing.Any, win32typing.PyCOMSTAT]
         
     """
     pass
@@ -1508,7 +1508,7 @@ Returns:
     pass
         
 
-def GetCommState(handle:'int') -> 'PyDCB':
+def GetCommState(handle:'int') -> 'win32typing.PyDCB':
     """
     Returns a device-control block (a DCB structure) with the current control settings for a specified communications device.
 
@@ -1518,13 +1518,13 @@ Args:
 
 Returns:
 
-      PyDCB
+      win32typing.PyDCB
         
     """
     pass
         
 
-def SetCommState(handle:'int',dcb:'PyDCB') -> 'None':
+def SetCommState(handle:'int',dcb:'win32typing.PyDCB') -> 'None':
     """
     Configures a communications device according to the specifications in a device-control block. 
 
@@ -1533,7 +1533,7 @@ The function reinitializes all hardware and control settings, but it does not em
 Args:
 
       handle(int):The handle to the communications device.
-      dcb(PyDCB):The control settings.
+      dcb(win32typing.PyDCB):The control settings.
 
 Returns:
 
@@ -1559,7 +1559,7 @@ Returns:
     pass
         
 
-def GetCommMask(handle:'int') -> 'int':
+def GetCommMask(handle:'int') -> 'typing.Any':
     """
     Retrieves the value of the event mask for a specified communications device.
 
@@ -1569,30 +1569,30 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def SetCommMask(handle:'int',val:'int') -> 'int':
+def SetCommMask(handle:'int',val:'typing.Any') -> 'typing.Any':
     """
     Sets the value of the event mask for a specified communications device.
 
 Args:
 
       handle(int):The handle to the communications device.
-      val(int):The new mask value.
+      val(typing.Any):The new mask value.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetCommModemStatus(handle:'int') -> 'int':
+def GetCommModemStatus(handle:'int') -> 'typing.Any':
     """
     Retrieves modem control-register values.
 
@@ -1602,13 +1602,13 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def GetCommTimeouts(handle:'int') -> 'Any':
+def GetCommTimeouts(handle:'int') -> 'typing.Any':
     """
     Retrieves the time-out parameters for all read and write operations on a specified communications device.
 
@@ -1618,37 +1618,37 @@ Args:
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def SetCommTimeouts(handle:'int',val:'Any') -> 'int':
+def SetCommTimeouts(handle:'int',val:'typing.Any') -> 'typing.Any':
     """
     Sets the time-out parameters for all read and write operations on a specified communications device.
 
 Args:
 
       handle(int):The handle to the communications device.
-      val(Any):The new time-out parameters.
+      val(typing.Any):The new time-out parameters.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def PurgeComm(handle:'int',action:'int') -> 'None':
+def PurgeComm(handle:'int',action:'typing.Any') -> 'None':
     """
     Discards all characters from the output or input buffer of a specified communications resource. It can also terminate pending read or write operations on the resource.
 
 Args:
 
       handle(int):The handle to the communications device.
-      action(int):The action to perform.  This parameter can be one or more of the following values.ValueMeaningPURGE_TXABORTTerminates all outstanding overlapped write operations and returns immediately, even if the write operations have not been completed.PURGE_RXABORTTerminates all outstanding overlapped read operations and returns immediately, even if the read operations have not been completed.PURGE_TXCLEARClears the output buffer (if the device driver has one).PURGE_RXCLEARClears the input buffer (if the device driver has one).
+      action(typing.Any):The action to perform.  This parameter can be one or more of the following values.ValueMeaningPURGE_TXABORTTerminates all outstanding overlapped write operations and returns immediately, even if the write operations have not been completed.PURGE_RXABORTTerminates all outstanding overlapped read operations and returns immediately, even if the read operations have not been completed.PURGE_TXCLEARClears the output buffer (if the device driver has one).PURGE_RXCLEARClears the input buffer (if the device driver has one).
 
 Returns:
 
@@ -1674,15 +1674,15 @@ Returns:
     pass
         
 
-def SetupComm(handle:'int',dwInQueue:'int',dwOutQueue:'int') -> 'None':
+def SetupComm(handle:'int',dwInQueue:'typing.Any',dwOutQueue:'typing.Any') -> 'None':
     """
     Initializes the communications parameters for a specified communications device.
 
 Args:
 
       handle(int):The handle to the communications device.
-      dwInQueue(int):Specifies the recommended size, in bytes, of the device's internal input buffer.
-      dwOutQueue(int):Specifies the recommended size, in bytes, of the device's internal output buffer.
+      dwInQueue(typing.Any):Specifies the recommended size, in bytes, of the device's internal input buffer.
+      dwOutQueue(typing.Any):Specifies the recommended size, in bytes, of the device's internal output buffer.
 
 Returns:
 
@@ -1692,14 +1692,14 @@ Returns:
     pass
         
 
-def TransmitCommChar(handle:'int',cChar:'Any') -> 'None':
+def TransmitCommChar(handle:'int',cChar:'typing.Any') -> 'None':
     """
     Transmits a specified character ahead of any pending data in the output buffer of the specified communications device.
 
 Args:
 
       handle(int):The handle to the communications device.
-      cChar(Any):The character to transmit.CommentsThe TransmitCommChar function is useful for sending an interrupt character (such as a CTRL+C) to a host system. If the device is not transmitting, TransmitCommChar cannot be called repeatedly. Once TransmitCommChar places a character in the output buffer, the character must be transmitted before the function can be called again. If the previous character has not yet been sent, TransmitCommChar returns an error.
+      cChar(typing.Any):The character to transmit.CommentsThe TransmitCommChar function is useful for sending an interrupt character (such as a CTRL+C) to a host system. If the device is not transmitting, TransmitCommChar cannot be called repeatedly. Once TransmitCommChar places a character in the output buffer, the character must be transmitted before the function can be called again. If the previous character has not yet been sent, TransmitCommChar returns an error.
 
 Returns:
 
@@ -1709,14 +1709,14 @@ Returns:
     pass
         
 
-def WaitCommEvent(handle:'int',overlapped:'PyOVERLAPPED') -> 'None':
+def WaitCommEvent(handle:'int',overlapped:'win32typing.PyOVERLAPPED') -> 'None':
     """
     Waits for an event to occur for a specified communications device. The set of events that are monitored by this function is contained in the event mask associated with the device handle.
 
 Args:
 
       handle(int):The handle to the communications device.
-      overlapped(PyOVERLAPPED):This structure is required if hFile was opened with FILE_FLAG_OVERLAPPED. If hFile was opened with FILE_FLAG_OVERLAPPED, the lpOverlapped parameter must not be NULL. It must point to a valid OVERLAPPED structure. If hFile was opened with FILE_FLAG_OVERLAPPED and lpOverlapped is NULL, the function can incorrectly report that the operation is complete. If hFile was opened with FILE_FLAG_OVERLAPPED and lpOverlapped is not NULL, WaitCommEvent is performed as an overlapped operation. In this case, the OVERLAPPED structure must contain a handle to a manual-reset event object (created by using the CreateEvent function). If hFile was not opened with FILE_FLAG_OVERLAPPED, WaitCommEvent does not return until one of the specified events or an error occurs.CommentsIf an overlapped structure is passed, then the PyOVERLAPPED::dword address is passed to the Win32 API as the mask.  This means that once the overlapped operation has completed, this dword attribute can be used to determine the type of event that occurred.Return ValueThe result is a tuple of (rc, mask_val), where rc is zero for success, or the result of calling GetLastError() otherwise.  The mask_val is the new mask value once the function has returned, but if an Overlapped object is passed, this value will generally be meaningless.  See the comments for more details.
+      overlapped(win32typing.PyOVERLAPPED):This structure is required if hFile was opened with FILE_FLAG_OVERLAPPED. If hFile was opened with FILE_FLAG_OVERLAPPED, the lpOverlapped parameter must not be NULL. It must point to a valid OVERLAPPED structure. If hFile was opened with FILE_FLAG_OVERLAPPED and lpOverlapped is NULL, the function can incorrectly report that the operation is complete. If hFile was opened with FILE_FLAG_OVERLAPPED and lpOverlapped is not NULL, WaitCommEvent is performed as an overlapped operation. In this case, the OVERLAPPED structure must contain a handle to a manual-reset event object (created by using the CreateEvent function). If hFile was not opened with FILE_FLAG_OVERLAPPED, WaitCommEvent does not return until one of the specified events or an error occurs.CommentsIf an overlapped structure is passed, then the PyOVERLAPPED::dword address is passed to the Win32 API as the mask.  This means that once the overlapped operation has completed, this dword attribute can be used to determine the type of event that occurred.Return ValueThe result is a tuple of (rc, mask_val), where rc is zero for success, or the result of calling GetLastError() otherwise.  The mask_val is the new mask value once the function has returned, but if an Overlapped object is passed, this value will generally be meaningless.  See the comments for more details.
 
 Returns:
 
@@ -1813,14 +1813,14 @@ Returns:
     pass
         
 
-def GetVolumePathName(FileName:'str',BufferLength:'int'=0) -> 'str':
+def GetVolumePathName(FileName:'str',BufferLength:'typing.Any'=0) -> 'str':
     """
     Returns volume mount point for a path
 
 Args:
 
       FileName(str):File/dir for which to return volume mount point
-      BufferLength(int):Optional parm to allocate extra space for returned stringCommentsApi gives no indication of how much memory is needed, so function assumes returned path will not be longer that length of input path + 1. Use GetFullPathName first for relative paths, or GetLongPathName for 8.3 paths. Optional second parm can also be used to override the buffer size for returned pathAccepts keyword args.
+      BufferLength(typing.Any):Optional parm to allocate extra space for returned stringCommentsApi gives no indication of how much memory is needed, so function assumes returned path will not be longer that length of input path + 1. Use GetFullPathName first for relative paths, or GetLongPathName for 8.3 paths. Optional second parm can also be used to override the buffer size for returned pathAccepts keyword args.
 
 Returns:
 
@@ -1830,7 +1830,7 @@ Returns:
     pass
         
 
-def GetVolumePathNamesForVolumeName(VolumeName:'str') -> 'List[Any]':
+def GetVolumePathNamesForVolumeName(VolumeName:'str') -> 'typing.List[typing.Any]':
     """
     Returns mounted paths for a volume
 
@@ -1840,13 +1840,13 @@ Args:
 
 Returns:
 
-      List[Any]
+      typing.List[typing.Any]
         
     """
     pass
         
 
-def CreateHardLink(FileName:'str',ExistingFileName:'str',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'None':
+def CreateHardLink(FileName:'str',ExistingFileName:'str',SecurityAttributes:'win32typing.PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'None':
     """
     Establishes an NTFS hard link between an existing file and a new file.
 
@@ -1854,7 +1854,7 @@ Args:
 
       FileName(str):The name of the new directory entry to be created.
       ExistingFileName(str):The name of the existing file to which the new link will point.
-      SecurityAttributes(PySECURITY_ATTRIBUTES):Optional SECURITY_ATTRIBUTES object. MSDN describes this parameter as reserved, so use only None
+      SecurityAttributes(win32typing.PySECURITY_ATTRIBUTES):Optional SECURITY_ATTRIBUTES object. MSDN describes this parameter as reserved, so use only None
       Transaction(int):Handle to a transaction, as returned by win32transaction::CreateTransactionCommentsAn NTFS hard link is similar to a POSIX hard link. This function creates a second directory entry for an existing file, can be different name in same directory or any name in a different directory. Both file paths must be on the same NTFS volume.To remove the link, simply delete it and the original file will still remain.This method exists on Windows 2000 and later.  Otherwise NotImplementedError will be raised.Accepts keyword args.If the Transaction parameter is specified, CreateHardLinkTransacted will be called (requires Vista or later)ExampleUsageCreateHardLink('h:\\dir\\newfilename.txt','h:\\otherdir\\existingfile.txt')
 
 Returns:
@@ -1865,7 +1865,7 @@ Returns:
     pass
         
 
-def CreateSymbolicLink(SymlinkFileName:'str',TargetFileName:'str',Flags:'int'=0,Transaction:'int'=None) -> 'None':
+def CreateSymbolicLink(SymlinkFileName:'str',TargetFileName:'str',Flags:'typing.Any'=0,Transaction:'int'=None) -> 'None':
     """
     Creates a symbolic link (reparse point)
 
@@ -1873,7 +1873,7 @@ Args:
 
       SymlinkFileName(str):Path of the symbolic link to be created
       TargetFileName(str):The name of file to which link will point
-      Flags(int):SYMBOLIC_LINK_FLAG_DIRECTORY and SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE are the only defined flags
+      Flags(typing.Any):SYMBOLIC_LINK_FLAG_DIRECTORY and SYMBOLIC_LINK_FLAG_ALLOW_UNPRIVILEGED_CREATE are the only defined flags
       Transaction(int):Handle to a transaction, as returned by win32transaction::CreateTransactionCommentsThis method only exists on Vista and later.Accepts keyword args.Requires SeCreateSymbolicLink priv.If the Transaction parameter is passed in, CreateSymbolicLinkTransacted will be called
 
 Returns:
@@ -1884,13 +1884,13 @@ Returns:
     pass
         
 
-def EncryptFile(filename:'Union[Any, str]') -> 'None':
+def EncryptFile(filename:'typing.Union[str, typing.Any]') -> 'None':
     """
     Encrypts specified file (requires Win2k or higher and NTFS)
 
 Args:
 
-      filename(Union[Any, str]):File to encrypt
+      filename(typing.Union[str, typing.Any]):File to encrypt
 
 Returns:
 
@@ -1900,13 +1900,13 @@ Returns:
     pass
         
 
-def DecryptFile(filename:'Union[Any, str]') -> 'None':
+def DecryptFile(filename:'typing.Union[str, typing.Any]') -> 'None':
     """
     Decrypts specified file (requires Win2k or higher and NTFS)
 
 Args:
 
-      filename(Union[Any, str]):File to decrypt
+      filename(typing.Union[str, typing.Any]):File to decrypt
 
 Returns:
 
@@ -1916,14 +1916,14 @@ Returns:
     pass
         
 
-def EncryptionDisable(DirName:'Union[Any, str]',Disable:'Any') -> 'None':
+def EncryptionDisable(DirName:'typing.Union[str, typing.Any]',Disable:'typing.Any') -> 'None':
     """
     Enables/disables encryption for a directory (requires Win2k or higher and NTFS)
 
 Args:
 
-      DirName(Union[Any, str]):Directory to enable or disable
-      Disable(Any):Set to False to enable encryption
+      DirName(typing.Union[str, typing.Any]):Directory to enable or disable
+      Disable(typing.Any):Set to False to enable encryption
 
 Returns:
 
@@ -1933,17 +1933,17 @@ Returns:
     pass
         
 
-def FileEncryptionStatus(FileName:'Union[Any, str]') -> 'int':
+def FileEncryptionStatus(FileName:'typing.Union[str, typing.Any]') -> 'typing.Any':
     """
     retrieves the encryption status of the specified file.
 
 Args:
 
-      FileName(Union[Any, str]):file to queryCommentsRequires Windows 2000 or higher.Return ValueThe result is documented as being one of FILE_ENCRYPTABLE, FILE_IS_ENCRYPTED, FILE_SYSTEM_ATTR, FILE_ROOT_DIR, FILE_SYSTEM_DIR, FILE_UNKNOWN, FILE_SYSTEM_NOT_SUPPORT, FILE_USER_DISALLOWED, or FILE_READ_ONLY
+      FileName(typing.Union[str, typing.Any]):file to queryCommentsRequires Windows 2000 or higher.Return ValueThe result is documented as being one of FILE_ENCRYPTABLE, FILE_IS_ENCRYPTED, FILE_SYSTEM_ATTR, FILE_ROOT_DIR, FILE_SYSTEM_DIR, FILE_UNKNOWN, FILE_SYSTEM_NOT_SUPPORT, FILE_USER_DISALLOWED, or FILE_READ_ONLY
 
 Returns:
 
-      int:file to queryComments
+      typing.Any:file to queryComments
 
 Requires Windows 2000 or higher.
 Return ValueThe result is documented as being one of FILE_ENCRYPTABLE, 
@@ -1959,47 +1959,47 @@ or FILE_READ_ONLY
     pass
         
 
-def QueryUsersOnEncryptedFile(FileName:'Union[Any, str]') -> 'Tuple[PySID, str, Any]':
+def QueryUsersOnEncryptedFile(FileName:'typing.Union[str, typing.Any]') -> 'typing.Tuple[win32typing.PySID, str, typing.Any]':
     """
     Returns list of users for an encrypted file as tuples of (SID, certificate hash blob, display info)
 
 Args:
 
-      FileName(Union[Any, str]):file to query
+      FileName(typing.Union[str, typing.Any]):file to query
 
 Returns:
 
-      Tuple[PySID, str, Any]
+      typing.Tuple[win32typing.PySID, str, typing.Any]
         
     """
     pass
         
 
-def QueryRecoveryAgentsOnEncryptedFile(FileName:'Union[Any, str]') -> 'Tuple[PySID, str, Any]':
+def QueryRecoveryAgentsOnEncryptedFile(FileName:'typing.Union[str, typing.Any]') -> 'typing.Tuple[win32typing.PySID, str, typing.Any]':
     """
     Lists recovery agents for file as a tuple of tuples.
 
 Args:
 
-      FileName(Union[Any, str]):file to queryReturn ValueThe result is a tuple of tuples - ((SID, certificate hash blob, display info),....)
+      FileName(typing.Union[str, typing.Any]):file to queryReturn ValueThe result is a tuple of tuples - ((SID, certificate hash blob, display info),....)
 
 Returns:
 
-      Tuple[PySID, str, Any]:file to queryReturn ValueThe result is a tuple of tuples - ((SID, certificate hash blob, display info),....)
+      typing.Tuple[win32typing.PySID, str, typing.Any]:file to queryReturn ValueThe result is a tuple of tuples - ((SID, certificate hash blob, display info),....)
 
         
     """
     pass
         
 
-def RemoveUsersFromEncryptedFile(FileName:'Union[Any, str]',pHashes:'Tuple[Tuple[PySID, str, Any], ...]') -> 'None':
+def RemoveUsersFromEncryptedFile(FileName:'typing.Union[str, typing.Any]',pHashes:'typing.Tuple[typing.Tuple[win32typing.PySID, str, typing.Any], ...]') -> 'None':
     """
     Removes specified certificates from file - if certificate is not found, it is ignored
 
 Args:
 
-      FileName(Union[Any, str]):File from which to remove users
-      pHashes(Tuple[Tuple[PySID, str, Any], ...]):Sequence representing an ENCRYPTION_CERTIFICATE_HASH_LIST structure, as returned by QueryUsersOnEncryptedFile
+      FileName(typing.Union[str, typing.Any]):File from which to remove users
+      pHashes(typing.Tuple[typing.Tuple[win32typing.PySID, str, typing.Any], ...]):Sequence representing an ENCRYPTION_CERTIFICATE_HASH_LIST structure, as returned by QueryUsersOnEncryptedFile
 
 Returns:
 
@@ -2009,14 +2009,14 @@ Returns:
     pass
         
 
-def AddUsersToEncryptedFile(FileName:'Union[Any, str]',pUsers:'Tuple[Tuple[PySID, str, int], ...]') -> 'None':
+def AddUsersToEncryptedFile(FileName:'typing.Union[str, typing.Any]',pUsers:'typing.Tuple[typing.Tuple[win32typing.PySID, str, typing.Any], ...]') -> 'None':
     """
     Allows user identified by SID and EFS certificate access to decrypt specified file
 
 Args:
 
-      FileName(Union[Any, str]):File that additional users will be allowed to decrypt
-      pUsers(Tuple[Tuple[PySID, str, int], ...]):Sequence representing ENCRYPTION_CERTIFICATE_LIST - elements are sequences consisting of users' Sid, encoded EFS certficate (user must export a .cer to obtain this data), and encoding type (usually 1 for X509_ASN_ENCODING)
+      FileName(typing.Union[str, typing.Any]):File that additional users will be allowed to decrypt
+      pUsers(typing.Tuple[typing.Tuple[win32typing.PySID, str, typing.Any], ...]):Sequence representing ENCRYPTION_CERTIFICATE_LIST - elements are sequences consisting of users' Sid, encoded EFS certficate (user must export a .cer to obtain this data), and encoding type (usually 1 for X509_ASN_ENCODING)
 
 Returns:
 
@@ -2026,7 +2026,7 @@ Returns:
     pass
         
 
-def DuplicateEncryptionInfoFile(SrcFileName:'str',DstFileName:'str',CreationDisposition:'int',Attributes:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'None':
+def DuplicateEncryptionInfoFile(SrcFileName:'str',DstFileName:'str',CreationDisposition:'typing.Any',Attributes:'typing.Any',SecurityAttributes:'win32typing.PySECURITY_ATTRIBUTES'=None) -> 'None':
     """
     Duplicates EFS encryption from one file to another
 
@@ -2034,9 +2034,9 @@ Args:
 
       SrcFileName(str):Encrypted file to read EFS metadata from
       DstFileName(str):File to be encrypted using EFS data from source file
-      CreationDisposition(int):Specifies whether an existing file should be overwritten (CREATE_NEW or CREATE_ALWAYS)
-      Attributes(int):File attributes
-      SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies security for destination fileCommentsRequires Windows XP or laterAccepts keyword arguments.Win32 API References
+      CreationDisposition(typing.Any):Specifies whether an existing file should be overwritten (CREATE_NEW or CREATE_ALWAYS)
+      Attributes(typing.Any):File attributes
+      SecurityAttributes(win32typing.PySECURITY_ATTRIBUTES):Specifies security for destination fileCommentsRequires Windows XP or laterAccepts keyword arguments.Win32 API References
 
 Returns:
 
@@ -2046,74 +2046,74 @@ Returns:
     pass
         
 
-def BackupRead(hFile:'int',NumberOfBytesToRead:'int',Buffer:'Any',bAbort:'int',bProcessSecurity:'int',lpContext:'int') -> 'Tuple[int, Any, int]':
+def BackupRead(hFile:'int',NumberOfBytesToRead:'typing.Any',Buffer:'typing.Any',bAbort:'typing.Any',bProcessSecurity:'typing.Any',lpContext:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any, typing.Any]':
     """
     Reads streams of data from a file
 
 Args:
 
       hFile(int):File handle opened by CreateFile
-      NumberOfBytesToRead(int):Number of bytes to be read from file
-      Buffer(Any):Writeable buffer object that receives data read
-      bAbort(int):If true, ends read operation and frees backup context
-      bProcessSecurity(int):Indicates whether file's ACL stream should be read
-      lpContext(int):Pass 0 on first call, then pass back value returned from last call thereafterCommentsReturns number of bytes read, data buffer, and context pointer for next operation If Buffer is None, a new buffer will be created of size NbrOfBytesToRead that can be passed back in subsequent calls
+      NumberOfBytesToRead(typing.Any):Number of bytes to be read from file
+      Buffer(typing.Any):Writeable buffer object that receives data read
+      bAbort(typing.Any):If true, ends read operation and frees backup context
+      bProcessSecurity(typing.Any):Indicates whether file's ACL stream should be read
+      lpContext(typing.Any):Pass 0 on first call, then pass back value returned from last call thereafterCommentsReturns number of bytes read, data buffer, and context pointer for next operation If Buffer is None, a new buffer will be created of size NbrOfBytesToRead that can be passed back in subsequent calls
 
 Returns:
 
-      Tuple[int, Any, int]
+      typing.Tuple[typing.Any, typing.Any, typing.Any]
         
     """
     pass
         
 
-def BackupSeek(hFile:'int',NumberOfBytesToSeek:'Any',lpContext:'int') -> 'Any':
+def BackupSeek(hFile:'int',NumberOfBytesToSeek:'typing.Any',lpContext:'typing.Any') -> 'typing.Any':
     """
     Seeks forward in a file stream
 
 Args:
 
       hFile(int):File handle used by a BackupRead operation
-      NumberOfBytesToSeek(Any):Number of bytes to move forward in current stream
-      lpContext(int):Context pointer returned from a BackupRead operationCommentsFunction will only seek to end of current stream, used to seek past bad data or find beginning position for read of next stream Returns number of bytes actually moved
+      NumberOfBytesToSeek(typing.Any):Number of bytes to move forward in current stream
+      lpContext(typing.Any):Context pointer returned from a BackupRead operationCommentsFunction will only seek to end of current stream, used to seek past bad data or find beginning position for read of next stream Returns number of bytes actually moved
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def BackupWrite(hFile:'int',NumberOfBytesToWrite:'int',Buffer:'str',bAbort:'int',bProcessSecurity:'int',lpContext:'int') -> 'Tuple[int, int]':
+def BackupWrite(hFile:'int',NumberOfBytesToWrite:'typing.Any',Buffer:'str',bAbort:'typing.Any',bProcessSecurity:'typing.Any',lpContext:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Restores file data
 
 Args:
 
       hFile(int):File handle opened by CreateFile
-      NumberOfBytesToWrite(int):Length of data to be written to file
+      NumberOfBytesToWrite(typing.Any):Length of data to be written to file
       Buffer(str):A string or buffer object that contains the data to be written
-      bAbort(int):If true, ends write operation and frees backup context
-      bProcessSecurity(int):Indicates whether ACL's should be restored
-      lpContext(int):Pass 0 on first call, then pass back value returned from last call thereafterCommentsReturns number of bytes written and context pointer for next operation
+      bAbort(typing.Any):If true, ends write operation and frees backup context
+      bProcessSecurity(typing.Any):Indicates whether ACL's should be restored
+      lpContext(typing.Any):Pass 0 on first call, then pass back value returned from last call thereafterCommentsReturns number of bytes written and context pointer for next operation
 
 Returns:
 
-      Tuple[int, int]
+      typing.Tuple[typing.Any, typing.Any]
         
     """
     pass
         
 
-def SetFileShortName(hFile:'int',ShortName:'Any') -> 'None':
+def SetFileShortName(hFile:'int',ShortName:'typing.Any') -> 'None':
     """
     Set the 8.3 name of a file
 
 Args:
 
       hFile(int):Handle to a file or directory
-      ShortName(Any):The 8.3 name to be applied to the fileCommentsThis function is only available on WinXP and laterFile handle must be opened with FILE_FLAG_BACKUP_SEMANTICS, and SE_RESTORE_NAME privilege must be enabled
+      ShortName(typing.Any):The 8.3 name to be applied to the fileCommentsThis function is only available on WinXP and laterFile handle must be opened with FILE_FLAG_BACKUP_SEMANTICS, and SE_RESTORE_NAME privilege must be enabled
 
 Returns:
 
@@ -2123,18 +2123,18 @@ Returns:
     pass
         
 
-def CopyFileEx(ExistingFileName:'Any',NewFileName:'Any',ProgressRoutine:'CopyProgressRoutine'=None,Data:'Any'=None,Cancel:'Any'=False,CopyFlags:'int'=0,Transaction:'int'=None) -> 'None':
+def CopyFileEx(ExistingFileName:'typing.Any',NewFileName:'typing.Any',ProgressRoutine:'win32typing.CopyProgressRoutine'=None,Data:'typing.Any'=None,Cancel:'typing.Any'=False,CopyFlags:'typing.Any'=0,Transaction:'int'=None) -> 'None':
     """
     Restartable file copy with optional progress routine
 
 Args:
 
-      ExistingFileName(Any):File to be copied
-      NewFileName(Any):Place to which it will be copied
-      ProgressRoutine(CopyProgressRoutine):A python function that receives progress updates, can be None
-      Data(Any):An arbitrary object to be passed to the callback function
-      Cancel(Any):Pass True to cancel a restartable copy that was previously interrupted
-      CopyFlags(int):Combination of COPY_FILE_* flags
+      ExistingFileName(typing.Any):File to be copied
+      NewFileName(typing.Any):Place to which it will be copied
+      ProgressRoutine(win32typing.CopyProgressRoutine):A python function that receives progress updates, can be None
+      Data(typing.Any):An arbitrary object to be passed to the callback function
+      Cancel(typing.Any):Pass True to cancel a restartable copy that was previously interrupted
+      CopyFlags(typing.Any):Combination of COPY_FILE_* flags
       Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsAccepts keyword args.On Vista and later, the Transaction arg can be passed to invoke CopyFileTransactedWin32 API References
 
 Returns:
@@ -2145,17 +2145,17 @@ Returns:
     pass
         
 
-def MoveFileWithProgress(ExistingFileName:'Any',NewFileName:'Any',ProgressRoutine:'CopyProgressRoutine'=None,Data:'Any'=None,Flags:'int'=0,Transaction:'int'=None) -> 'None':
+def MoveFileWithProgress(ExistingFileName:'typing.Any',NewFileName:'typing.Any',ProgressRoutine:'win32typing.CopyProgressRoutine'=None,Data:'typing.Any'=None,Flags:'typing.Any'=0,Transaction:'int'=None) -> 'None':
     """
     Moves a file, and reports progress to a callback function
 
 Args:
 
-      ExistingFileName(Any):File or directory to be moved
-      NewFileName(Any):Destination, can be None if flags contain MOVEFILE_DELAY_UNTIL_REBOOT
-      ProgressRoutine(CopyProgressRoutine):A python function that receives progress updates, can be None
-      Data(Any):An arbitrary object to be passed to the callback function
-      Flags(int):Combination of MOVEFILE_* flags
+      ExistingFileName(typing.Any):File or directory to be moved
+      NewFileName(typing.Any):Destination, can be None if flags contain MOVEFILE_DELAY_UNTIL_REBOOT
+      ProgressRoutine(win32typing.CopyProgressRoutine):A python function that receives progress updates, can be None
+      Data(typing.Any):An arbitrary object to be passed to the callback function
+      Flags(typing.Any):Combination of MOVEFILE_* flags
       Transaction(int):Handle to a transaction (optional).  See win32transaction::CreateTransaction.CommentsOnly available on Windows 2000 or laterAccepts keyword arguments.On Vista and later, the Transaction arg can be passed to invoke MoveFileTransacted
 
 Returns:
@@ -2166,18 +2166,18 @@ Returns:
     pass
         
 
-def ReplaceFile(ReplacedFileName:'Any',ReplacementFileName:'Any',BackupFileName:'Any'=None,ReplaceFlags:'int'=0,Exclude:'None'=None,Reserved:'None'=None) -> 'None':
+def ReplaceFile(ReplacedFileName:'typing.Any',ReplacementFileName:'typing.Any',BackupFileName:'typing.Any'=None,ReplaceFlags:'typing.Any'=0,Exclude:'typing.Any'=None,Reserved:'typing.Any'=None) -> 'None':
     """
     Replaces one file with another
 
 Args:
 
-      ReplacedFileName(Any):File to be replaced
-      ReplacementFileName(Any):File that will replace it
-      BackupFileName(Any):Place at which to create a backup of the replaced file, can be None
-      ReplaceFlags(int):Combination of REPLACEFILE_* flags
-      Exclude(None):Reserved, use None if passed in
-      Reserved(None):Reserved, use None if passed inCommentsOnly available on Windows 2000 or later
+      ReplacedFileName(typing.Any):File to be replaced
+      ReplacementFileName(typing.Any):File that will replace it
+      BackupFileName(typing.Any):Place at which to create a backup of the replaced file, can be None
+      ReplaceFlags(typing.Any):Combination of REPLACEFILE_* flags
+      Exclude(typing.Any):Reserved, use None if passed in
+      Reserved(typing.Any):Reserved, use None if passed inCommentsOnly available on Windows 2000 or later
 
 Returns:
 
@@ -2187,18 +2187,18 @@ Returns:
     pass
         
 
-def OpenEncryptedFileRaw(FileName:'Any',Flags:'int') -> 'Any':
+def OpenEncryptedFileRaw(FileName:'typing.Any',Flags:'typing.Any') -> 'typing.Any':
     """
     Initiates a backup or restore operation on an encrypted file
 
 Args:
 
-      FileName(Any):Name of file on which to operate
-      Flags(int):CREATE_FOR_IMPORT, CREATE_FOR_DIR, OVERWRITE_HIDDEN, or 0 for exportCommentsOnly available on Windows 2000 or laterReturn ValueReturns a PyCObject containing an operation context that can be passed to win32file::ReadEncryptedFileRaw or win32file::WriteEncryptedFileRaw.  Context must be destroyed using win32file::CloseEncryptedFileRaw.
+      FileName(typing.Any):Name of file on which to operate
+      Flags(typing.Any):CREATE_FOR_IMPORT, CREATE_FOR_DIR, OVERWRITE_HIDDEN, or 0 for exportCommentsOnly available on Windows 2000 or laterReturn ValueReturns a PyCObject containing an operation context that can be passed to win32file::ReadEncryptedFileRaw or win32file::WriteEncryptedFileRaw.  Context must be destroyed using win32file::CloseEncryptedFileRaw.
 
 Returns:
 
-      Any:CREATE_FOR_IMPORT, CREATE_FOR_DIR, OVERWRITE_HIDDEN, or 0 for exportComments
+      typing.Any:CREATE_FOR_IMPORT, CREATE_FOR_DIR, OVERWRITE_HIDDEN, or 0 for exportComments
 
 Only available on Windows 2000 or later
 Return ValueReturns a PyCObject containing an operation context that can be passed to 
@@ -2212,15 +2212,15 @@ destroyed using win32file::CloseEncryptedFileRaw.
     pass
         
 
-def ReadEncryptedFileRaw(ExportCallback:'Any',CallbackContext:'Any',Context:'Any') -> 'None':
+def ReadEncryptedFileRaw(ExportCallback:'typing.Any',CallbackContext:'typing.Any',Context:'typing.Any') -> 'None':
     """
     Reads the encrypted bytes of a file for backup and restore purposes
 
 Args:
 
-      ExportCallback(Any):Python function that receives chunks of data as it is read
-      CallbackContext(Any):Arbitrary Python object to be passed to callback function
-      Context(Any):Context object returned from win32file::OpenEncryptedFileRawCommentsOnly available on Windows 2000 or later
+      ExportCallback(typing.Any):Python function that receives chunks of data as it is read
+      CallbackContext(typing.Any):Arbitrary Python object to be passed to callback function
+      Context(typing.Any):Context object returned from win32file::OpenEncryptedFileRawCommentsOnly available on Windows 2000 or later
 
 Returns:
 
@@ -2230,15 +2230,15 @@ Returns:
     pass
         
 
-def WriteEncryptedFileRaw(ImportCallback:'Any',CallbackContext:'Any',Context:'Any') -> 'None':
+def WriteEncryptedFileRaw(ImportCallback:'typing.Any',CallbackContext:'typing.Any',Context:'typing.Any') -> 'None':
     """
     Writes raw bytes to an encrypted file
 
 Args:
 
-      ImportCallback(Any):Python function that supplies data to be written
-      CallbackContext(Any):Arbitrary Python object to be passed to callback function
-      Context(Any):Context object returned from win32file::OpenEncryptedFileRawCommentsOnly available on Windows 2000 or later
+      ImportCallback(typing.Any):Python function that supplies data to be written
+      CallbackContext(typing.Any):Arbitrary Python object to be passed to callback function
+      Context(typing.Any):Context object returned from win32file::OpenEncryptedFileRawCommentsOnly available on Windows 2000 or later
 
 Returns:
 
@@ -2248,13 +2248,13 @@ Returns:
     pass
         
 
-def CloseEncryptedFileRaw(Context:'Any') -> 'None':
+def CloseEncryptedFileRaw(Context:'typing.Any') -> 'None':
     """
     None
 
 Args:
 
-      Context(Any):Context object returned from win32file::OpenEncryptedFileRawCommentsOnly available on Windows 2000 or later
+      Context(typing.Any):Context object returned from win32file::OpenEncryptedFileRawCommentsOnly available on Windows 2000 or later
 
 Returns:
 
@@ -2264,22 +2264,22 @@ Returns:
     pass
         
 
-def CreateFileW(FileName:'str',DesiredAccess:'int',ShareMode:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES',CreationDisposition:'int',FlagsAndAttributes:'int',TemplateFile:'int'=None,Transaction:'int'=None,MiniVersion:'int'=None,ExtendedParameter:'None'=None) -> 'int':
+def CreateFileW(FileName:'str',DesiredAccess:'typing.Any',ShareMode:'typing.Any',SecurityAttributes:'win32typing.PySECURITY_ATTRIBUTES',CreationDisposition:'typing.Any',FlagsAndAttributes:'typing.Any',TemplateFile:'int'=None,Transaction:'int'=None,MiniVersion:'typing.Any'=None,ExtendedParameter:'typing.Any'=None) -> 'int':
     """
     None
 
 Args:
 
       FileName(str):Name of file
-      DesiredAccess(int):Combination of access mode flags.  See MSDN docs.
-      ShareMode(int):Combination of FILE_SHARE_READ, FILE_SHARE_WRITE, FILE_SHARE_DELETE
-      SecurityAttributes(PySECURITY_ATTRIBUTES):Specifies security descriptor and handle inheritance, can be None
-      CreationDisposition(int):One of CREATE_ALWAYS,CREATE_NEW,OPEN_ALWAYS,OPEN_EXISTING or TRUNCATE_EXISTING
-      FlagsAndAttributes(int):Combination of FILE_ATTRIBUTE_* and FILE_FLAG_* flags
+      DesiredAccess(typing.Any):Combination of access mode flags.  See MSDN docs.
+      ShareMode(typing.Any):Combination of FILE_SHARE_READ, FILE_SHARE_WRITE, FILE_SHARE_DELETE
+      SecurityAttributes(win32typing.PySECURITY_ATTRIBUTES):Specifies security descriptor and handle inheritance, can be None
+      CreationDisposition(typing.Any):One of CREATE_ALWAYS,CREATE_NEW,OPEN_ALWAYS,OPEN_EXISTING or TRUNCATE_EXISTING
+      FlagsAndAttributes(typing.Any):Combination of FILE_ATTRIBUTE_* and FILE_FLAG_* flags
       TemplateFile(int):Handle to file to be used as template, can be None
       Transaction(int):Handle to the transaction as returned by win32transaction::CreateTransaction
-      MiniVersion(int):Transacted version of file to open, can be None
-      ExtendedParameter(None):Reserved, use only NoneCommentsIf Transaction is specified, CreateFileTransacted will be called (requires Vista or later)Accepts keyword arguments.Win32 API References
+      MiniVersion(typing.Any):Transacted version of file to open, can be None
+      ExtendedParameter(typing.Any):Reserved, use only NoneCommentsIf Transaction is specified, CreateFileTransacted will be called (requires Vista or later)Accepts keyword arguments.Win32 API References
 
 Returns:
 
@@ -2306,19 +2306,19 @@ Returns:
     pass
         
 
-def GetFileAttributesEx(FileName:'str',InfoLevelId:'int',Transaction:'int'=None) -> 'tuple':
+def GetFileAttributesEx(FileName:'str',InfoLevelId:'typing.Any',Transaction:'int'=None) -> 'typing.Any':
     """
     Retrieves attributes for a specified file or directory.
 
 Args:
 
       FileName(str):File or directory for which to retrieve information In the ANSI version of this function, the name is limited to MAX_PATH characters. To extend this limit to nearly 32,000 wide characters, call the Unicode version of the function (win32file::GetFileAttributesExW) and prepend r"\\?\\" to the path.
-      InfoLevelId(int):An integer that gives the set of attribute information to obtain. See the Win32 SDK documentation for more information.
+      InfoLevelId(typing.Any):An integer that gives the set of attribute information to obtain. See the Win32 SDK documentation for more information.
       Transaction(int):Handle to a transaction (optional).  See win32transaction::CreateTransaction. If this parameter is specified, GetFileAttributesTransacted will be called (requires Vista or later).CommentsNot all file systems can record creation and last access time and not all file systems record them in the same manner. For example, on Windows NT FAT, create time has a resolution of 10 milliseconds, write time has a resolution of 2 seconds, and access time has a resolution of 1 day (really, the access date). On NTFS, access time has a resolution of 1 hour. Furthermore, FAT records times on disk in local time, while NTFS records times on disk in UTC, so it is not affected by changes in time zone or daylight saving time.Accepts keyword arguments.InfoLevelIdInformation returnedGetFileExInfoStandardTuple representing a WIN32_FILE_ATTRIBUTE_DATA strucWin32 API References
 
 Returns:
 
-      tuple:Search for GetFileAttributesTransacted at msdn, google or google groups.
+      typing.Any:Search for GetFileAttributesTransacted at msdn, google or google groups.
 Return ValueThe result is a tuple of:
 Items
         
@@ -2326,14 +2326,14 @@ Items
     pass
         
 
-def SetFileAttributesW(FileName:'Any',FileAttributes:'int',Transaction:'int'=None) -> 'None':
+def SetFileAttributesW(FileName:'typing.Any',FileAttributes:'typing.Any',Transaction:'int'=None) -> 'None':
     """
     Sets a file's attributes
 
 Args:
 
-      FileName(Any):File or directory whose attributes are to be changed
-      FileAttributes(int):Combination of FILE_ATTRIBUTE_* flags
+      FileName(typing.Any):File or directory whose attributes are to be changed
+      FileAttributes(typing.Any):Combination of FILE_ATTRIBUTE_* flags
       Transaction(int):Handle to the transaction.  See win32transaction::CreateTransaction.CommentsIf Transaction is not None, SetFileAttributesTransacted will be called (requires Vista or later)Accepts keyword arguments.Win32 API References
 
 Returns:
@@ -2344,7 +2344,7 @@ Returns:
     pass
         
 
-def CreateDirectoryExW(TemplateDirectory:'str',NewDirectory:'str',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'None':
+def CreateDirectoryExW(TemplateDirectory:'str',NewDirectory:'str',SecurityAttributes:'win32typing.PySECURITY_ATTRIBUTES'=None,Transaction:'int'=None) -> 'None':
     """
     Creates a directory (Unicode version)
 
@@ -2352,7 +2352,7 @@ Args:
 
       TemplateDirectory(str):Directory to use as a template, can be None
       NewDirectory(str):Name of directory to be created
-      SecurityAttributes(PySECURITY_ATTRIBUTES):Security for new directory (optional)
+      SecurityAttributes(win32typing.PySECURITY_ATTRIBUTES):Security for new directory (optional)
       Transaction(int):Handle to a transaction (optional).  See win32transaction::CreateTransaction.CommentsIf a transaction handle is passed, CreateDirectoryTransacted will be called (requires Vista or later).Accepts keyword arguments.Win32 API References
 
 Returns:
@@ -2380,7 +2380,7 @@ Returns:
     pass
         
 
-def FindFilesW(FileName:'str',Transaction:'int'=None) -> 'list':
+def FindFilesW(FileName:'str',Transaction:'int'=None) -> 'typing.Any':
     """
     Retrieves a list of matching filenames, using the Windows Unicode API.  An interface to the API FindFirstFileW/FindNextFileW/Find close functions.
 
@@ -2391,7 +2391,7 @@ Args:
 
 Returns:
 
-      list:Search for FindClose at msdn, google or google groups.
+      typing.Any:Search for FindClose at msdn, google or google groups.
 Return ValueThe return value is a list of WIN32_FIND_DATA tuples.
 
         
@@ -2399,7 +2399,7 @@ Return ValueThe return value is a list of WIN32_FIND_DATA tuples.
     pass
         
 
-def FindFilesIterator(FileName:'str',Transaction:'int'=None) -> 'Any':
+def FindFilesIterator(FileName:'str',Transaction:'int'=None) -> 'typing.Any':
     """
     None
 
@@ -2410,7 +2410,7 @@ Args:
 
 Returns:
 
-      Any:Handle to a transaction, can be None. 
+      typing.Any:Handle to a transaction, can be None. 
 
 If this parameter is not None, FindFirstFileTransacted will be called to perform a transacted search
 Comments
@@ -2427,7 +2427,7 @@ returning a WIN32_FIND_DATA tuple.
     pass
         
 
-def FindStreams(FileName:'str',Transaction:'int'=None) -> 'List[Tuple[Any, str]]':
+def FindStreams(FileName:'str',Transaction:'int'=None) -> 'typing.List[typing.Tuple[typing.Any, str]]':
     """
     List the data streams for a file
 
@@ -2438,7 +2438,7 @@ Args:
 
 Returns:
 
-      List[Tuple[Any, str]]:Handle to a transaction, can be None
+      typing.List[typing.Tuple[typing.Any, str]]:Handle to a transaction, can be None
 Comments
 
 This uses the API functions FindFirstStreamW, FindNextStreamW and FindClose
@@ -2453,7 +2453,7 @@ Return ValueReturns a list of tuples containing each stream's size and name
     pass
         
 
-def FindFileNames(FileName:'str',Transaction:'int'=None) -> 'List[Any]':
+def FindFileNames(FileName:'str',Transaction:'int'=None) -> 'typing.List[typing.Any]':
     """
     Enumerates hard links that point to specified file
 
@@ -2464,20 +2464,20 @@ Args:
 
 Returns:
 
-      List[Any]
+      typing.List[typing.Any]
         
     """
     pass
         
 
-def GetFinalPathNameByHandle(File:'int',Flags:'int') -> 'str':
+def GetFinalPathNameByHandle(File:'int',Flags:'typing.Any') -> 'str':
     """
     Returns the file name for an open file handle
 
 Args:
 
       File(int):An open file handle
-      Flags(int):Specifies type of path to return. (win32con.FILE_NAME_NORMALIZED,FILE_NAME_OPENED,VOLUME_NAME_DOS,VOLUME_NAME_GUID,VOLUME_NAME_NONE,VOLUME_NAME_NT)CommentsExists on Windows Vista or later.Accepts keyword arguments.Win32 API References
+      Flags(typing.Any):Specifies type of path to return. (win32con.FILE_NAME_NORMALIZED,FILE_NAME_OPENED,VOLUME_NAME_DOS,VOLUME_NAME_GUID,VOLUME_NAME_NONE,VOLUME_NAME_NT)CommentsExists on Windows Vista or later.Accepts keyword arguments.Win32 API References
 
 Returns:
 
@@ -2487,7 +2487,7 @@ Returns:
     pass
         
 
-def SfcGetNextProtectedFile() -> 'List[Any]':
+def SfcGetNextProtectedFile() -> 'typing.List[typing.Any]':
     """
     Returns list of protected operating system files
 
@@ -2497,13 +2497,13 @@ Args:
 
 Returns:
 
-      List[Any]
+      typing.List[typing.Any]
         
     """
     pass
         
 
-def SfcIsFileProtected(ProtFileName:'str') -> 'Any':
+def SfcIsFileProtected(ProtFileName:'str') -> 'typing.Any':
     """
     Checks if a file is protected
 
@@ -2513,7 +2513,7 @@ Args:
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
@@ -2536,24 +2536,24 @@ Returns:
     pass
         
 
-def GetFullPathName(FileName:'Union[Any, str]',Transaction:'int'=None) -> 'Union[Any, str]':
+def GetFullPathName(FileName:'typing.Union[typing.Any]',Transaction:'int'=None) -> 'typing.Union[typing.Any]':
     """
     Returns full path for path passed in
 
 Args:
 
-      FileName(Union[Any, str]):Path on which to operate
+      FileName(typing.Union[typing.Any]):Path on which to operate
       Transaction(int):Handle to a transaction as returned by win32transaction::CreateTransactionCommentsThis function takes either a plain string or a unicode string, and returns the same type If unicode is passed in, GetFullPathNameW is called, which supports filenames longer than MAX_PATHIf Transaction parameter is specified, GetFullPathNameTransacted is called (requires Vista or later)
 
 Returns:
 
-      Union[Any, str]
+      typing.Union[typing.Any]
         
     """
     pass
         
 
-def Wow64DisableWow64FsRedirection() -> 'int':
+def Wow64DisableWow64FsRedirection() -> 'typing.Any':
     """
     Disables file system redirection for 32-bit processes running on a 64-bit system
 
@@ -2563,7 +2563,7 @@ Args:
 
 Returns:
 
-      int:win32file.Wow64DisableWow64FsRedirection
+      typing.Any:win32file.Wow64DisableWow64FsRedirection
 
 int = Wow64DisableWow64FsRedirection()Disables file system redirection for 32-bit processes running on a 64-bit system
 Comments
@@ -2576,13 +2576,13 @@ Return ValueReturns a state value to be passed to win32file::Wow64RevertWow64FsR
     pass
         
 
-def Wow64RevertWow64FsRedirection(OldValue:'int') -> 'None':
+def Wow64RevertWow64FsRedirection(OldValue:'typing.Any') -> 'None':
     """
     Reenables file system redirection for 32-bit processes running on a 64-bit system
 
 Args:
 
-      OldValue(int):State returned from Wow64DisableWow64FsRedirectionCommentsRequires 64-bit XP or later
+      OldValue(typing.Any):State returned from Wow64DisableWow64FsRedirectionCommentsRequires 64-bit XP or later
 
 Returns:
 
@@ -2592,18 +2592,18 @@ Returns:
     pass
         
 
-def GetFileInformationByHandleEx(File:'int',FileInformationClass:'int') -> 'Any':
+def GetFileInformationByHandleEx(File:'int',FileInformationClass:'typing.Any') -> 'typing.Any':
     """
     Retrieves extended file information for an open file handle.
 
 Args:
 
       File(int):Handle to a file or directory.  Do not pass a pipe handle.
-      FileInformationClass(int):Type of data to return, one of win32file.File*Info valuesCommentsAvailable on Vista and later.Accepts keyword args.Return ValueType of returned object is determined by the requested information classClassReturned infoFileBasicInfoDict representing a FILE_BASIC_INFO structFileStandardInfoDict representing a FILE_STANDARD_INFO structFileNameInfoString containing the file name, without the drive letterFileCompressionInfoDict representing a FILE_COMPRESSION_INFO structFileAttributeTagInfoDict representing a FILE_ATTRIBUTE_TAG_INFO structFileIdBothDirectoryInfoSequence of dicts representing FILE_ID_BOTH_DIR_INFO structs.  Call in loop until no more files are returned.FileIdBothDirectoryRestartInfoSequence of dicts representing FILE_ID_BOTH_DIR_INFO structs.FileStreamInfoSequence of dicts representing FILE_STREAM_INFO structs
+      FileInformationClass(typing.Any):Type of data to return, one of win32file.File*Info valuesCommentsAvailable on Vista and later.Accepts keyword args.Return ValueType of returned object is determined by the requested information classClassReturned infoFileBasicInfoDict representing a FILE_BASIC_INFO structFileStandardInfoDict representing a FILE_STANDARD_INFO structFileNameInfoString containing the file name, without the drive letterFileCompressionInfoDict representing a FILE_COMPRESSION_INFO structFileAttributeTagInfoDict representing a FILE_ATTRIBUTE_TAG_INFO structFileIdBothDirectoryInfoSequence of dicts representing FILE_ID_BOTH_DIR_INFO structs.  Call in loop until no more files are returned.FileIdBothDirectoryRestartInfoSequence of dicts representing FILE_ID_BOTH_DIR_INFO structs.FileStreamInfoSequence of dicts representing FILE_STREAM_INFO structs
 
 Returns:
 
-      Any:Type of data to return, one of win32file.File*Info valuesComments
+      typing.Any:Type of data to return, one of win32file.File*Info valuesComments
 
 Available on Vista and later.
 
@@ -2633,15 +2633,15 @@ FileStreamInfoSequence of dicts representing FILE_STREAM_INFO structs
     pass
         
 
-def SetFileInformationByHandle(File:'int',FileInformationClass:'int',Information:'Any') -> 'None':
+def SetFileInformationByHandle(File:'int',FileInformationClass:'typing.Any',Information:'typing.Any') -> 'None':
     """
     Changes file characteristics by file handle
 
 Args:
 
       File(int):Handle to a file or directory.  Do not pass a pipe handle.
-      FileInformationClass(int):Type of data, one of win32file.File*Info values
-      Information(Any):Type is dependent on the class to be changedClassType of inputFileBasicInfoDict representing a FILE_BASIC_INFO struct, containing {"CreationTime":PyTime, "LastAccessTime":PyTime,  "LastWriteTime":PyTime, "ChangeTime":PyTime, "FileAttributes":int}FileRenameInfoDict representing a FILE_RENAME_INFO struct, containing {"ReplaceIfExists":boolean, "RootDirectory":PyHANDLE, "FileName":str} MSDN says the RootDirectory is "A handle to the root directory in which the file to be renamed is located". However, this is actually the destination dir, can be None to stay in same dir.FileDispositionInfoBoolean indicating if file should be deleted when handle is closedFileAllocationInfoInt giving the allocation size.FileEndOfFileInfoInt giving the EOF position, cannot be greater than allocated size.FileIoPriorityHintInfoInt containing the IO priority (IoPriorityHint*)CommentsAvailable on Vista and later.Accepts keyword args.
+      FileInformationClass(typing.Any):Type of data, one of win32file.File*Info values
+      Information(typing.Any):Type is dependent on the class to be changedClassType of inputFileBasicInfoDict representing a FILE_BASIC_INFO struct, containing {"CreationTime":PyTime, "LastAccessTime":PyTime,  "LastWriteTime":PyTime, "ChangeTime":PyTime, "FileAttributes":int}FileRenameInfoDict representing a FILE_RENAME_INFO struct, containing {"ReplaceIfExists":boolean, "RootDirectory":PyHANDLE, "FileName":str} MSDN says the RootDirectory is "A handle to the root directory in which the file to be renamed is located". However, this is actually the destination dir, can be None to stay in same dir.FileDispositionInfoBoolean indicating if file should be deleted when handle is closedFileAllocationInfoInt giving the allocation size.FileEndOfFileInfoInt giving the EOF position, cannot be greater than allocated size.FileIoPriorityHintInfoInt containing the IO priority (IoPriorityHint*)CommentsAvailable on Vista and later.Accepts keyword args.
 
 Returns:
 
@@ -2651,16 +2651,16 @@ Returns:
     pass
         
 
-def ReOpenFile(OriginalFile:'int',DesiredAccess:'int',ShareMode:'int',Flags:'int') -> 'int':
+def ReOpenFile(OriginalFile:'int',DesiredAccess:'typing.Any',ShareMode:'typing.Any',Flags:'typing.Any') -> 'int':
     """
     Creates a new handle to an open file
 
 Args:
 
       OriginalFile(int):An open file handle
-      DesiredAccess(int):Access mode, cannot conflict with original access mode
-      ShareMode(int):Sharing mode (FILE_SHARE_*), cannot conflict with original share mode
-      Flags(int):Combination of FILE_FLAG_* flagsCommentsAvailable on Vista and later.Accepts keyword args.
+      DesiredAccess(typing.Any):Access mode, cannot conflict with original access mode
+      ShareMode(typing.Any):Sharing mode (FILE_SHARE_*), cannot conflict with original share mode
+      Flags(typing.Any):Combination of FILE_FLAG_* flagsCommentsAvailable on Vista and later.Accepts keyword args.
 
 Returns:
 
@@ -2670,18 +2670,18 @@ Returns:
     pass
         
 
-def OpenFileById(File:'int',FileId:'Union[PyIID, int]',DesiredAccess:'int',ShareMode:'int',Flags:'int',SecurityAttributes:'PySECURITY_ATTRIBUTES'=None) -> 'int':
+def OpenFileById(File:'int',FileId:'typing.Union[typing.Any, win32typing.PyIID]',DesiredAccess:'typing.Any',ShareMode:'typing.Any',Flags:'typing.Any',SecurityAttributes:'win32typing.PySECURITY_ATTRIBUTES'=None) -> 'int':
     """
     Opens a file by File Id or Object Id
 
 Args:
 
       File(int):Handle to a file on the volume that contains the file to open
-      FileId(Union[PyIID, int]):File Id or Object Id of the file to open
-      DesiredAccess(int):Access mode
-      ShareMode(int):Sharing mode (FILE_SHARE_*)
-      Flags(int):Combination of FILE_FLAG_* flags
-      SecurityAttributes(PySECURITY_ATTRIBUTES):Reserved, use only NoneCommentsAvailable on Vista and later.Accepts keyword args.
+      FileId(typing.Union[typing.Any, win32typing.PyIID]):File Id or Object Id of the file to open
+      DesiredAccess(typing.Any):Access mode
+      ShareMode(typing.Any):Sharing mode (FILE_SHARE_*)
+      Flags(typing.Any):Combination of FILE_FLAG_* flags
+      SecurityAttributes(win32typing.PySECURITY_ATTRIBUTES):Reserved, use only NoneCommentsAvailable on Vista and later.Accepts keyword args.
 
 Returns:
 

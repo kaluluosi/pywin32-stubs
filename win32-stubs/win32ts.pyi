@@ -1,6 +1,6 @@
 __all__=['', 'WTSOpenServer', 'WTSCloseServer', 'WTSQueryUserConfig', 'WTSSetUserConfig', 'WTSEnumerateServers', 'WTSEnumerateSessions', 'WTSLogoffSession', 'WTSDisconnectSession', 'WTSQuerySessionInformation', 'WTSEnumerateProcesses', 'WTSQueryUserToken', 'WTSShutdownSystem', 'WTSTerminateProcess', 'ProcessIdToSessionId', 'WTSGetActiveConsoleSessionId', 'WTSRegisterSessionNotification', 'WTSUnRegisterSessionNotification', 'WTSWaitSystemEvent', 'WTSSendMessage']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """Interface to the Terminal Services Api 
 
 All functions in this module accept keyword arguments"""
@@ -38,7 +38,7 @@ Returns:
     pass
         
 
-def WTSQueryUserConfig(ServerName:'str',UserName:'str',ConfigClass:'int') -> 'Any':
+def WTSQueryUserConfig(ServerName:'str',UserName:'str',ConfigClass:'typing.Any') -> 'typing.Any':
     """
     Returns user configuration
 
@@ -46,11 +46,11 @@ Args:
 
       ServerName(str):Name ot terminal server
       UserName(str):Name of user
-      ConfigClass(int):Type of information to be returned, win32ts.WTSUserConfig*ConfigClassReturned valueWTSUserConfigInitialProgramUnicode string, program to be run when user logs onWTSUserConfigWorkingDirectoryUnicode string, working dir for initial programWTSUserConfigModemCallbackPhoneNumberUnicode stringWTSUserConfigTerminalServerProfilePathUnicode stringWTSUserConfigTerminalServerHomeDirUnicode stringWTSUserConfigTerminalServerHomeDirDriveUnicode stringWTSUserConfigfInheritInitialProgramIntWTSUserConfigfAllowLogonTerminalServerInt, 1 if user can log on thru Terminal ServiceWTSUserConfigTimeoutSettingsConnectionsInt, max connection time (ms)WTSUserConfigTimeoutSettingsDisconnectionsIntWTSUserConfigTimeoutSettingsIdleInt, max idle time (ms)WTSUserConfigfDeviceClientDrivesIntWTSUserConfigfDeviceClientPrintersIntWTSUserConfigfDeviceClientDefaultPrinterIntWTSUserConfigBrokenTimeoutSettingsIntWTSUserConfigReconnectSettingsIntWTSUserConfigModemCallbackSettingsIntWTSUserConfigShadowingSettingsInt, indicates if user's session my be monitoredWTSUserConfigfTerminalServerRemoteHomeDirInt,Return ValueThe type of the returned value is dependent on the config class requested
+      ConfigClass(typing.Any):Type of information to be returned, win32ts.WTSUserConfig*ConfigClassReturned valueWTSUserConfigInitialProgramUnicode string, program to be run when user logs onWTSUserConfigWorkingDirectoryUnicode string, working dir for initial programWTSUserConfigModemCallbackPhoneNumberUnicode stringWTSUserConfigTerminalServerProfilePathUnicode stringWTSUserConfigTerminalServerHomeDirUnicode stringWTSUserConfigTerminalServerHomeDirDriveUnicode stringWTSUserConfigfInheritInitialProgramIntWTSUserConfigfAllowLogonTerminalServerInt, 1 if user can log on thru Terminal ServiceWTSUserConfigTimeoutSettingsConnectionsInt, max connection time (ms)WTSUserConfigTimeoutSettingsDisconnectionsIntWTSUserConfigTimeoutSettingsIdleInt, max idle time (ms)WTSUserConfigfDeviceClientDrivesIntWTSUserConfigfDeviceClientPrintersIntWTSUserConfigfDeviceClientDefaultPrinterIntWTSUserConfigBrokenTimeoutSettingsIntWTSUserConfigReconnectSettingsIntWTSUserConfigModemCallbackSettingsIntWTSUserConfigShadowingSettingsInt, indicates if user's session my be monitoredWTSUserConfigfTerminalServerRemoteHomeDirInt,Return ValueThe type of the returned value is dependent on the config class requested
 
 Returns:
 
-      Any:Type of information to be returned, win32ts.WTSUserConfig*
+      typing.Any:Type of information to be returned, win32ts.WTSUserConfig*
 
 
 ConfigClass
@@ -104,7 +104,7 @@ Return ValueThe type of the returned value is dependent on the config class requ
     pass
         
 
-def WTSSetUserConfig(ServerName:'str',UserName:'str',ConfigClass:'int') -> 'None':
+def WTSSetUserConfig(ServerName:'str',UserName:'str',ConfigClass:'typing.Any') -> 'None':
     """
     Changes user configuration
 
@@ -112,7 +112,7 @@ Args:
 
       ServerName(str):Name ot terminal server
       UserName(str):Name of user
-      ConfigClass(int):Type of information to be set, win32ts.WTSUserConfig*ConfigClassType of data requiredWTSUserConfigInitialProgramUnicode string, program to be run when user logs onWTSUserConfigWorkingDirectoryUnicode string, working dir for initial programWTSUserConfigModemCallbackPhoneNumberUnicode stringWTSUserConfigTerminalServerProfilePathUnicode stringWTSUserConfigTerminalServerHomeDirUnicode stringWTSUserConfigTerminalServerHomeDirDriveUnicode stringWTSUserConfigfInheritInitialProgramIntWTSUserConfigfAllowLogonTerminalServerInt, 1 if user can log on thru Terminal ServiceWTSUserConfigTimeoutSettingsConnectionsInt, max connection time (ms)WTSUserConfigTimeoutSettingsDisconnectionsIntWTSUserConfigTimeoutSettingsIdleInt, max idle time (ms)WTSUserConfigfDeviceClientDrivesIntWTSUserConfigfDeviceClientPrintersIntWTSUserConfigfDeviceClientDefaultPrinterIntWTSUserConfigBrokenTimeoutSettingsIntWTSUserConfigReconnectSettingsIntWTSUserConfigModemCallbackSettingsIntWTSUserConfigShadowingSettingsInt, indicates if user's session my be monitoredWTSUserConfigfTerminalServerRemoteHomeDirInt,
+      ConfigClass(typing.Any):Type of information to be set, win32ts.WTSUserConfig*ConfigClassType of data requiredWTSUserConfigInitialProgramUnicode string, program to be run when user logs onWTSUserConfigWorkingDirectoryUnicode string, working dir for initial programWTSUserConfigModemCallbackPhoneNumberUnicode stringWTSUserConfigTerminalServerProfilePathUnicode stringWTSUserConfigTerminalServerHomeDirUnicode stringWTSUserConfigTerminalServerHomeDirDriveUnicode stringWTSUserConfigfInheritInitialProgramIntWTSUserConfigfAllowLogonTerminalServerInt, 1 if user can log on thru Terminal ServiceWTSUserConfigTimeoutSettingsConnectionsInt, max connection time (ms)WTSUserConfigTimeoutSettingsDisconnectionsIntWTSUserConfigTimeoutSettingsIdleInt, max idle time (ms)WTSUserConfigfDeviceClientDrivesIntWTSUserConfigfDeviceClientPrintersIntWTSUserConfigfDeviceClientDefaultPrinterIntWTSUserConfigBrokenTimeoutSettingsIntWTSUserConfigReconnectSettingsIntWTSUserConfigModemCallbackSettingsIntWTSUserConfigShadowingSettingsInt, indicates if user's session my be monitoredWTSUserConfigfTerminalServerRemoteHomeDirInt,
 
 Returns:
 
@@ -122,37 +122,37 @@ Returns:
     pass
         
 
-def WTSEnumerateServers(DomainName:'str'=None,Version:'int'=1,Reserved:'int'=0) -> 'Tuple[str, ...]':
+def WTSEnumerateServers(DomainName:'str'=None,Version:'typing.Any'=1,Reserved:'typing.Any'=0) -> 'typing.Tuple[str, ...]':
     """
     Lists terminal servers in a domain
 
 Args:
 
       DomainName(str):Use None for current domain
-      Version(int):Version of request, currently 1 is only valid value
-      Reserved(int):Reserved, use 0 if passed in
+      Version(typing.Any):Version of request, currently 1 is only valid value
+      Reserved(typing.Any):Reserved, use 0 if passed in
 
 Returns:
 
-      Tuple[str, ...]
+      typing.Tuple[str, ...]
         
     """
     pass
         
 
-def WTSEnumerateSessions(Server:'int',Version:'int'=1,Reserved:'int'=0) -> 'Tuple[dict, ...]':
+def WTSEnumerateSessions(Server:'int',Version:'typing.Any'=1,Reserved:'typing.Any'=0) -> 'typing.Tuple[typing.Any, ...]':
     """
     Lists sessions on a server
 
 Args:
 
       Server(int):Handle to a terminal server
-      Version(int):Version of request, currently 1 is only valid value
-      Reserved(int):Reserved, use 0 if passed inReturn ValueReturns a sequence of dictionaries representing WTS_SESSION_INFO structs, containing {SessionId:int, WinStationName:str, State:int}
+      Version(typing.Any):Version of request, currently 1 is only valid value
+      Reserved(typing.Any):Reserved, use 0 if passed inReturn ValueReturns a sequence of dictionaries representing WTS_SESSION_INFO structs, containing {SessionId:int, WinStationName:str, State:int}
 
 Returns:
 
-      Tuple[dict, ...]:Reserved, use 0 if passed in
+      typing.Tuple[typing.Any, ...]:Reserved, use 0 if passed in
 Return ValueReturns a sequence of dictionaries representing WTS_SESSION_INFO structs, containing {SessionId:int, 
 
 WinStationName:str, State:int}
@@ -162,15 +162,15 @@ WinStationName:str, State:int}
     pass
         
 
-def WTSLogoffSession(Server:'int',SessionId:'int',Wait:'Any') -> 'None':
+def WTSLogoffSession(Server:'int',SessionId:'typing.Any',Wait:'typing.Any') -> 'None':
     """
     Logs off a user logged in through Terminal Services
 
 Args:
 
       Server(int):Handle to a terminal server
-      SessionId(int):Terminal services session id as returned by win32ts::WTSEnumerateSessions
-      Wait(Any):Indicates whether operation should be performed asynchronously
+      SessionId(typing.Any):Terminal services session id as returned by win32ts::WTSEnumerateSessions
+      Wait(typing.Any):Indicates whether operation should be performed asynchronously
 
 Returns:
 
@@ -180,15 +180,15 @@ Returns:
     pass
         
 
-def WTSDisconnectSession(Server:'int',SessionId:'int',Wait:'Any') -> 'None':
+def WTSDisconnectSession(Server:'int',SessionId:'typing.Any',Wait:'typing.Any') -> 'None':
     """
     Disconnects a session without logging it off
 
 Args:
 
       Server(int):Handle to a terminal server
-      SessionId(int):Terminal services session id as returned by win32ts::WTSEnumerateSessions
-      Wait(Any):Indicates whether operation should be performed asynchronously
+      SessionId(typing.Any):Terminal services session id as returned by win32ts::WTSEnumerateSessions
+      Wait(typing.Any):Indicates whether operation should be performed asynchronously
 
 Returns:
 
@@ -198,15 +198,15 @@ Returns:
     pass
         
 
-def WTSQuerySessionInformation(Server:'int',SessionId:'int',WTSInfoClass:'int') -> 'None':
+def WTSQuerySessionInformation(Server:'int',SessionId:'typing.Any',WTSInfoClass:'typing.Any') -> 'None':
     """
     Returns information about a terminal services session
 
 Args:
 
       Server(int):Handle to a terminal server as returned by win32ts::WTSOpenServer
-      SessionId(int):Terminal services session id as returned by win32ts::WTSEnumerateSessions
-      WTSInfoClass(int):Type of information requested, from WTS_INFO_CLASS enumInfoClassReturned valueWTSApplicationNameUnicode stringWTSClientDirectoryUnicode stringWTSClientNameUnicode stringWTSDomainNameUnicode stringWTSInitialProgramUnicode stringWTSOEMIdUnicode stringWTSUserNameUnicode stringWTSWinStationNameUnicode stringWTSWorkingDirectoryUnicode stringWTSClientProtocolTypeInt, one of WTS_PROTOCOL_TYPE_CONSOLE,WTS_PROTOCOL_TYPE_ICA,WTS_PROTOCOL_TYPE_RDPWTSClientProductIdIntWTSClientBuildNumberIntWTSClientHardwareIdIntWTSSessionIdIntWTSConnectStateInt, from WTS_CONNECTSTATE_CLASSWTSClientDisplayDict containing client's display settingsWTSClientAddressDict containing type and value of client's IP address (None if console session) IPV6 addresses may not be returned correctly on Windows versions earlier than Windows Server 2012 (see http://sourceforge.net/p/pywin32/bugs/664/ for details)
+      SessionId(typing.Any):Terminal services session id as returned by win32ts::WTSEnumerateSessions
+      WTSInfoClass(typing.Any):Type of information requested, from WTS_INFO_CLASS enumInfoClassReturned valueWTSApplicationNameUnicode stringWTSClientDirectoryUnicode stringWTSClientNameUnicode stringWTSDomainNameUnicode stringWTSInitialProgramUnicode stringWTSOEMIdUnicode stringWTSUserNameUnicode stringWTSWinStationNameUnicode stringWTSWorkingDirectoryUnicode stringWTSClientProtocolTypeInt, one of WTS_PROTOCOL_TYPE_CONSOLE,WTS_PROTOCOL_TYPE_ICA,WTS_PROTOCOL_TYPE_RDPWTSClientProductIdIntWTSClientBuildNumberIntWTSClientHardwareIdIntWTSSessionIdIntWTSConnectStateInt, from WTS_CONNECTSTATE_CLASSWTSClientDisplayDict containing client's display settingsWTSClientAddressDict containing type and value of client's IP address (None if console session) IPV6 addresses may not be returned correctly on Windows versions earlier than Windows Server 2012 (see http://sourceforge.net/p/pywin32/bugs/664/ for details)
 
 Returns:
 
@@ -216,31 +216,31 @@ Returns:
     pass
         
 
-def WTSEnumerateProcesses(Server:'int',Version:'int'=1,Reserved:'int'=0) -> 'Tuple[str, ...]':
+def WTSEnumerateProcesses(Server:'int',Version:'typing.Any'=1,Reserved:'typing.Any'=0) -> 'typing.Tuple[str, ...]':
     """
     Lists processes on a terminal server
 
 Args:
 
       Server(int):Handle to a terminal server
-      Version(int):Version of request, currently 1 is only valid value
-      Reserved(int):Reserved, use 0 if passed in
+      Version(typing.Any):Version of request, currently 1 is only valid value
+      Reserved(typing.Any):Reserved, use 0 if passed in
 
 Returns:
 
-      Tuple[str, ...]
+      typing.Tuple[str, ...]
         
     """
     pass
         
 
-def WTSQueryUserToken(SessionId:'int') -> 'int':
+def WTSQueryUserToken(SessionId:'typing.Any') -> 'int':
     """
     Retrieves the access token for a session
 
 Args:
 
-      SessionId(int):Terminal services session idCommentsThis function is intended only for use by trusted processes that have SE_TCB_PRIVILEGE enabled
+      SessionId(typing.Any):Terminal services session idCommentsThis function is intended only for use by trusted processes that have SE_TCB_PRIVILEGE enabled
 
 Returns:
 
@@ -250,14 +250,14 @@ Returns:
     pass
         
 
-def WTSShutdownSystem(Server:'int',ShutdownFlag:'int') -> 'None':
+def WTSShutdownSystem(Server:'int',ShutdownFlag:'typing.Any') -> 'None':
     """
     Issues a shutdown request to a terminal server
 
 Args:
 
       Server(int):Handle to a terminal server
-      ShutdownFlag(int):One of the win32ts.WTS_WSD_* values
+      ShutdownFlag(typing.Any):One of the win32ts.WTS_WSD_* values
 
 Returns:
 
@@ -267,15 +267,15 @@ Returns:
     pass
         
 
-def WTSTerminateProcess(Server:'int',ProcessId:'int',ExitCode:'int') -> 'None':
+def WTSTerminateProcess(Server:'int',ProcessId:'typing.Any',ExitCode:'typing.Any') -> 'None':
     """
     Kills a process on a terminal server
 
 Args:
 
       Server(int):Handle to a terminal server
-      ProcessId(int):Id of a process as returned by win32ts::WTSEnumerateProcesses
-      ExitCode(int):Exit code for the process
+      ProcessId(typing.Any):Id of a process as returned by win32ts::WTSEnumerateProcesses
+      ExitCode(typing.Any):Exit code for the process
 
 Returns:
 
@@ -285,23 +285,23 @@ Returns:
     pass
         
 
-def ProcessIdToSessionId(ProcessId:'int') -> 'int':
+def ProcessIdToSessionId(ProcessId:'typing.Any') -> 'typing.Any':
     """
     Finds the session under which a process is running
 
 Args:
 
-      ProcessId(int):Id of a process as returned by win32ts::WTSEnumerateProcesses
+      ProcessId(typing.Any):Id of a process as returned by win32ts::WTSEnumerateProcesses
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def WTSGetActiveConsoleSessionId() -> 'int':
+def WTSGetActiveConsoleSessionId() -> 'typing.Any':
     """
     Returns the id of the console session
 
@@ -311,20 +311,20 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def WTSRegisterSessionNotification(Wnd:'int',Flags:'int') -> 'None':
+def WTSRegisterSessionNotification(Wnd:'int',Flags:'typing.Any') -> 'None':
     """
     Registers a window to receive terminal service notifications
 
 Args:
 
       Wnd(int):Window handle to receive terminal service messages
-      Flags(int):NOTIFY_FOR_THIS_SESSION or NOTIFY_FOR_ALL_SESSIONS
+      Flags(typing.Any):NOTIFY_FOR_THIS_SESSION or NOTIFY_FOR_ALL_SESSIONS
 
 Returns:
 
@@ -350,18 +350,18 @@ Returns:
     pass
         
 
-def WTSWaitSystemEvent(Server:'int',EventMask:'int') -> 'int':
+def WTSWaitSystemEvent(Server:'int',EventMask:'typing.Any') -> 'typing.Any':
     """
     Waits for an event to occur
 
 Args:
 
       Server(int):Handle to a terminal server, or WTS_CURRENT_SERVER_HANDLE
-      EventMask(int):Combination of WTS_EVENT_* valuesReturn ValueReturns a bitmask of WTS_EVENT_* flags indication which event(s) occurred
+      EventMask(typing.Any):Combination of WTS_EVENT_* valuesReturn ValueReturns a bitmask of WTS_EVENT_* flags indication which event(s) occurred
 
 Returns:
 
-      int:Combination of WTS_EVENT_* values
+      typing.Any:Combination of WTS_EVENT_* values
 Return ValueReturns a bitmask of WTS_EVENT_* flags indication which event(s) occurred
 
         
@@ -369,23 +369,23 @@ Return ValueReturns a bitmask of WTS_EVENT_* flags indication which event(s) occ
     pass
         
 
-def WTSSendMessage(Server:'int',SessionId:'int',Title:'str',Message:'str',Style:'int',Timeout:'int',Wait:'Any') -> 'int':
+def WTSSendMessage(Server:'int',SessionId:'typing.Any',Title:'str',Message:'str',Style:'typing.Any',Timeout:'typing.Any',Wait:'typing.Any') -> 'typing.Any':
     """
     Sends a popup message to a terminal services session
 
 Args:
 
       Server(int):Handle to a terminal server, or WTS_CURRENT_SERVER_HANDLE
-      SessionId(int):Terminal services session id
+      SessionId(typing.Any):Terminal services session id
       Title(str):Title of dialog
       Message(str):Message to be displayed
-      Style(int):Usually MB_OK
-      Timeout(int):Seconds to wait before returning (only used if Wait is True)
-      Wait(Any):Specifies if function should wait for user input before returningReturn ValueReturns one of IDABORT,IDCANCEL,IDIGNORE,IDNO,IDOK,IDRETRY,IDYES,IDASYNC,IDTIMEOUT,
+      Style(typing.Any):Usually MB_OK
+      Timeout(typing.Any):Seconds to wait before returning (only used if Wait is True)
+      Wait(typing.Any):Specifies if function should wait for user input before returningReturn ValueReturns one of IDABORT,IDCANCEL,IDIGNORE,IDNO,IDOK,IDRETRY,IDYES,IDASYNC,IDTIMEOUT,
 
 Returns:
 
-      int:Specifies if function should wait for user input before returningReturn ValueReturns one of IDABORT,IDCANCEL,IDIGNORE,IDNO,IDOK,IDRETRY,IDYES,IDASYNC,IDTIMEOUT,
+      typing.Any:Specifies if function should wait for user input before returningReturn ValueReturns one of IDABORT,IDCANCEL,IDIGNORE,IDNO,IDOK,IDRETRY,IDYES,IDASYNC,IDTIMEOUT,
 
         
     """

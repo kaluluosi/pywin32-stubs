@@ -1,4 +1,4 @@
 __all__=['']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """Module containing support for authorization COM interfaces"""

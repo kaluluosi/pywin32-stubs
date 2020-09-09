@@ -1,6 +1,6 @@
 __all__=['', 'CancelWaitableTimer', 'CreateEvent', 'CreateMutex', 'CreateSemaphore', 'CreateWaitableTimer', 'MsgWaitForMultipleObjects', 'MsgWaitForMultipleObjectsEx', 'OpenEvent', 'OpenMutex', 'OpenSemaphore', 'OpenWaitableTimer', 'PulseEvent', 'ReleaseMutex', 'ReleaseSemaphore', 'ResetEvent', 'SetEvent', 'SetWaitableTimer', 'WaitForMultipleObjects', 'WaitForMultipleObjectsEx', 'WaitForSingleObject', 'WaitForSingleObjectEx', 'WaitForInputIdle', 'EVENT_ALL_ACCESS', 'EVENT_MODIFY_STATE', 'INFINITE', 'MAXIMUM_WAIT_OBJECTS', 'QS_ALLEVENTS', 'QS_ALLINPUT', 'QS_HOTKEY', 'QS_INPUT', 'QS_KEY', 'QS_MOUSE', 'QS_MOUSEBUTTON', 'QS_MOUSEMOVE', 'QS_PAINT', 'QS_POSTMESSAGE', 'QS_SENDMESSAGE', 'QS_TIMER', 'SYNCHRONIZE', 'WAIT_ABANDONED', 'WAIT_ABANDONED_0', 'WAIT_FAILED', 'WAIT_IO_COMPLETION', 'WAIT_OBJECT_0', 'WAIT_TIMEOUT']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A module which provides an interface to the win32 event/wait API"""
 
 
@@ -20,15 +20,15 @@ Returns:
     pass
         
 
-def CreateEvent(EventAttributes:'PySECURITY_ATTRIBUTES',bManualReset:'bool',bInitialState:'bool',Name:'str') -> 'int':
+def CreateEvent(EventAttributes:'win32typing.PySECURITY_ATTRIBUTES',bManualReset:'typing.Any',bInitialState:'typing.Any',Name:'str') -> 'int':
     """
     Creates a waitable event
 
 Args:
 
-      EventAttributes(PySECURITY_ATTRIBUTES):The security attributes, or None
-      bManualReset(bool):flag for manual-reset event
-      bInitialState(bool):flag for initial state
+      EventAttributes(win32typing.PySECURITY_ATTRIBUTES):The security attributes, or None
+      bManualReset(typing.Any):flag for manual-reset event
+      bInitialState(typing.Any):flag for initial state
       Name(str):event-object name, or NoneReturn ValueThe result is a handle to the created object
 
 Returns:
@@ -40,14 +40,14 @@ Returns:
     pass
         
 
-def CreateMutex(MutexAttributes:'PySECURITY_ATTRIBUTES',InitialOwner:'bool',Name:'str') -> 'int':
+def CreateMutex(MutexAttributes:'win32typing.PySECURITY_ATTRIBUTES',InitialOwner:'typing.Any',Name:'str') -> 'int':
     """
     Creates a mutex
 
 Args:
 
-      MutexAttributes(PySECURITY_ATTRIBUTES):Specifies inheritance and security descriptor for object, or None for defaults
-      InitialOwner(bool):flag for initial ownership
+      MutexAttributes(win32typing.PySECURITY_ATTRIBUTES):Specifies inheritance and security descriptor for object, or None for defaults
+      InitialOwner(typing.Any):flag for initial ownership
       Name(str):Mutex-object name, or NoneReturn ValueThe result is a handle to the created object
 
 Returns:
@@ -59,16 +59,16 @@ Returns:
     pass
         
 
-def CreateSemaphore(SemaphoreAttributes:'PySECURITY_ATTRIBUTES',InitialCount:'int',MaximumCount:'int',SemaphoreName:'str') -> 'int':
+def CreateSemaphore(SemaphoreAttributes:'win32typing.PySECURITY_ATTRIBUTES',InitialCount:'typing.Any',MaximumCount:'typing.Any',SemaphoreName:'typing.Any') -> 'int':
     """
     Creates a semaphore, or opens an existing one
 
 Args:
 
-      SemaphoreAttributes(PySECURITY_ATTRIBUTES):Specifies inheritance and security descriptor for object, or None for defaults
-      InitialCount(int):Initial count
-      MaximumCount(int):Maximum count
-      SemaphoreName(str):Semaphore-object name, or NoneWin32 API References
+      SemaphoreAttributes(win32typing.PySECURITY_ATTRIBUTES):Specifies inheritance and security descriptor for object, or None for defaults
+      InitialCount(typing.Any):Initial count
+      MaximumCount(typing.Any):Maximum count
+      SemaphoreName(typing.Any):Semaphore-object name, or NoneWin32 API References
 
 Returns:
 
@@ -80,15 +80,15 @@ Return ValueThe result is a handle to the object
     pass
         
 
-def CreateWaitableTimer(TimerAttributes:'PySECURITY_ATTRIBUTES',ManualReset:'bool',TimerName:'str') -> 'int':
+def CreateWaitableTimer(TimerAttributes:'win32typing.PySECURITY_ATTRIBUTES',ManualReset:'typing.Any',TimerName:'typing.Any') -> 'int':
     """
     Creates a waitable timer, or opens an existing one
 
 Args:
 
-      TimerAttributes(PySECURITY_ATTRIBUTES):Specifies inheritance and security descriptor for object, or None for defaults
-      ManualReset(bool):True for manual reset timer, or False to create a synchronization timer
-      TimerName(str):Timer object name, or NoneWin32 API References
+      TimerAttributes(win32typing.PySECURITY_ATTRIBUTES):Specifies inheritance and security descriptor for object, or None for defaults
+      ManualReset(typing.Any):True for manual reset timer, or False to create a synchronization timer
+      TimerName(typing.Any):Timer object name, or NoneWin32 API References
 
 Returns:
 
@@ -100,52 +100,52 @@ Return ValueThe result is a handle to the object
     pass
         
 
-def MsgWaitForMultipleObjects(handleList:'List[int]',bWaitAll:'bool',milliseconds:'int',wakeMask:'int') -> 'int':
+def MsgWaitForMultipleObjects(handleList:'typing.List[int]',bWaitAll:'typing.Any',milliseconds:'typing.Any',wakeMask:'typing.Any') -> 'typing.Any':
     """
     Returns when a message arrives of an event is signalled
 
 Args:
 
-      handleList(List[int]):A sequence of handles to wait on.
-      bWaitAll(bool):If true, waits for all handles in the list.
-      milliseconds(int):time-out interval in milliseconds
-      wakeMask(int):type of input events to wait for.  One of the win32event.QS_ constants.CommentsNote that if bWaitAll is TRUE, the function will return when there is input in the queue, and all events are signalled.  This is rarely what you want! If input is waiting, the result is win32event.WAIT_OBJECT_0+len(handles))
+      handleList(typing.List[int]):A sequence of handles to wait on.
+      bWaitAll(typing.Any):If true, waits for all handles in the list.
+      milliseconds(typing.Any):time-out interval in milliseconds
+      wakeMask(typing.Any):type of input events to wait for.  One of the win32event.QS_ constants.CommentsNote that if bWaitAll is TRUE, the function will return when there is input in the queue, and all events are signalled.  This is rarely what you want! If input is waiting, the result is win32event.WAIT_OBJECT_0+len(handles))
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def MsgWaitForMultipleObjectsEx(handleList:'List[int]',milliseconds:'int',wakeMask:'int',waitFlags:'int') -> 'int':
+def MsgWaitForMultipleObjectsEx(handleList:'typing.List[int]',milliseconds:'typing.Any',wakeMask:'typing.Any',waitFlags:'typing.Any') -> 'typing.Any':
     """
     Returns when a message arrives of an event is signalled
 
 Args:
 
-      handleList(List[int]):A sequence of handles to wait on.
-      milliseconds(int):time-out interval in milliseconds
-      wakeMask(int):type of input events to wait for
-      waitFlags(int):wait flagsCommentsThis method will no longer raise a COM E_NOTIMPL exception as it is no longer dynamically loaded.
+      handleList(typing.List[int]):A sequence of handles to wait on.
+      milliseconds(typing.Any):time-out interval in milliseconds
+      wakeMask(typing.Any):type of input events to wait for
+      waitFlags(typing.Any):wait flagsCommentsThis method will no longer raise a COM E_NOTIMPL exception as it is no longer dynamically loaded.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def OpenEvent(desiredAccess:'int',bInheritHandle:'bool',name:'str') -> 'int':
+def OpenEvent(desiredAccess:'typing.Any',bInheritHandle:'typing.Any',name:'str') -> 'int':
     """
     Returns a handle of an existing named event object.
 
 Args:
 
-      desiredAccess(int):access flag - one of win32event::EVENT_ALL_ACCESS, win32event::EVENT_MODIFY_STATE, or (NT only) win32event::SYNCHRONIZE
-      bInheritHandle(bool):inherit flag
+      desiredAccess(typing.Any):access flag - one of win32event::EVENT_ALL_ACCESS, win32event::EVENT_MODIFY_STATE, or (NT only) win32event::SYNCHRONIZE
+      bInheritHandle(typing.Any):inherit flag
       name(str):name of event to open.
 
 Returns:
@@ -156,14 +156,14 @@ Returns:
     pass
         
 
-def OpenMutex(desiredAccess:'int',bInheritHandle:'bool',name:'str') -> 'int':
+def OpenMutex(desiredAccess:'typing.Any',bInheritHandle:'typing.Any',name:'str') -> 'int':
     """
     Returns a handle of an existing named mutex object.
 
 Args:
 
-      desiredAccess(int):access flag
-      bInheritHandle(bool):inherit flag
+      desiredAccess(typing.Any):access flag
+      bInheritHandle(typing.Any):inherit flag
       name(str):name of mutex to open.
 
 Returns:
@@ -174,14 +174,14 @@ Returns:
     pass
         
 
-def OpenSemaphore(desiredAccess:'int',bInheritHandle:'bool',name:'str') -> 'int':
+def OpenSemaphore(desiredAccess:'typing.Any',bInheritHandle:'typing.Any',name:'str') -> 'int':
     """
     Returns a handle of an existing named semaphore object.
 
 Args:
 
-      desiredAccess(int):access flag
-      bInheritHandle(bool):inherit flag
+      desiredAccess(typing.Any):access flag
+      bInheritHandle(typing.Any):inherit flag
       name(str):name of semaphore to open.
 
 Returns:
@@ -192,15 +192,15 @@ Returns:
     pass
         
 
-def OpenWaitableTimer(desiredAccess:'int',bInheritHandle:'bool',timerName:'str') -> 'int':
+def OpenWaitableTimer(desiredAccess:'typing.Any',bInheritHandle:'typing.Any',timerName:'typing.Any') -> 'int':
     """
     Opens an existing named waitable timer object
 
 Args:
 
-      desiredAccess(int):access flag
-      bInheritHandle(bool):inherit flag
-      timerName(str):pointer to timer object name
+      desiredAccess(typing.Any):access flag
+      bInheritHandle(typing.Any):inherit flag
+      timerName(typing.Any):pointer to timer object name
 
 Returns:
 
@@ -242,18 +242,18 @@ Returns:
     pass
         
 
-def ReleaseSemaphore(hEvent:'int',lReleaseCount:'int') -> 'int':
+def ReleaseSemaphore(hEvent:'int',lReleaseCount:'typing.Any') -> 'typing.Any':
     """
     Releases a semaphore.
 
 Args:
 
       hEvent(int):handle of the semaphore object
-      lReleaseCount(int):amount to add to current countReturn ValueThe result is the previous count of the semaphore.
+      lReleaseCount(typing.Any):amount to add to current countReturn ValueThe result is the previous count of the semaphore.
 
 Returns:
 
-      int:amount to add to current countReturn ValueThe result is the previous count of the semaphore.
+      typing.Any:amount to add to current countReturn ValueThe result is the previous count of the semaphore.
 
         
     """
@@ -292,18 +292,18 @@ Returns:
     pass
         
 
-def SetWaitableTimer(handle:'int',dueTime:'Any',period:'int',func:'Any',param:'Any',resume_state:'bool') -> 'None':
+def SetWaitableTimer(handle:'int',dueTime:'typing.Any',period:'typing.Any',func:'typing.Any',param:'typing.Any',resume_state:'typing.Any') -> 'None':
     """
     Sets a waitable timer.
 
 Args:
 
       handle(int):handle to timer
-      dueTime(Any):timer due time
-      period(int):timer interval
-      func(Any):completion routine - must be None
-      param(Any):completion routine parameter - must be None
-      resume_state(bool):resume state
+      dueTime(typing.Any):timer due time
+      period(typing.Any):timer interval
+      func(typing.Any):completion routine - must be None
+      param(typing.Any):completion routine parameter - must be None
+      resume_state(typing.Any):resume state
 
 Returns:
 
@@ -313,55 +313,55 @@ Returns:
     pass
         
 
-def WaitForMultipleObjects(handleList:'List[int]',bWaitAll:'bool',milliseconds:'int') -> 'int':
+def WaitForMultipleObjects(handleList:'typing.List[int]',bWaitAll:'typing.Any',milliseconds:'typing.Any') -> 'typing.Any':
     """
     Returns when an event is signalled
 
 Args:
 
-      handleList(List[int]):A sequence of handles to wait on.
-      bWaitAll(bool):wait flag
-      milliseconds(int):time-out interval in milliseconds
+      handleList(typing.List[int]):A sequence of handles to wait on.
+      bWaitAll(typing.Any):wait flag
+      milliseconds(typing.Any):time-out interval in milliseconds
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def WaitForMultipleObjectsEx(handleList:'List[int]',bWaitAll:'bool',milliseconds:'int',bAlertable:'bool') -> 'int':
+def WaitForMultipleObjectsEx(handleList:'typing.List[int]',bWaitAll:'typing.Any',milliseconds:'typing.Any',bAlertable:'typing.Any') -> 'typing.Any':
     """
     Returns when an event is signalled
 
 Args:
 
-      handleList(List[int]):A sequence of handles to wait on.
-      bWaitAll(bool):wait flag
-      milliseconds(int):time-out interval in milliseconds
-      bAlertable(bool):alertable wait flag.
+      handleList(typing.List[int]):A sequence of handles to wait on.
+      bWaitAll(typing.Any):wait flag
+      milliseconds(typing.Any):time-out interval in milliseconds
+      bAlertable(typing.Any):alertable wait flag.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def WaitForSingleObject(hHandle:'int',milliseconds:'int') -> 'int':
+def WaitForSingleObject(hHandle:'int',milliseconds:'typing.Any') -> 'typing.Any':
     """
     Returns when an event is signalled
 
 Args:
 
       hHandle(int):handle of object to wait for
-      milliseconds(int):time-out interval in millisecondsReturn ValueIf the function succeeds, the return value indicates the event that caused the function to return. This value can be one of the following.ValueMeaningWAIT_ABANDONEDThe specified object is a mutex object that was not released by the thread that owned the mutex object before the owning thread terminated. Ownership of the mutex object is granted to the calling thread, and the mutex is set to nonsignaled.WAIT_OBJECT_0The state of the specified object is signaled.WAIT_TIMEOUTThe time-out interval elapsed, and the object's state is nonsignaled.
+      milliseconds(typing.Any):time-out interval in millisecondsReturn ValueIf the function succeeds, the return value indicates the event that caused the function to return. This value can be one of the following.ValueMeaningWAIT_ABANDONEDThe specified object is a mutex object that was not released by the thread that owned the mutex object before the owning thread terminated. Ownership of the mutex object is granted to the calling thread, and the mutex is set to nonsignaled.WAIT_OBJECT_0The state of the specified object is signaled.WAIT_TIMEOUTThe time-out interval elapsed, and the object's state is nonsignaled.
 
 Returns:
 
-      int:time-out interval in millisecondsReturn ValueIf the function succeeds, the return value indicates the event that caused the function to return. This value can be one of the following.
+      typing.Any:time-out interval in millisecondsReturn ValueIf the function succeeds, the return value indicates the event that caused the function to return. This value can be one of the following.
 
 
 
@@ -381,37 +381,37 @@ WAIT_TIMEOUTThe time-out interval elapsed, and the object's state is nonsignaled
     pass
         
 
-def WaitForSingleObjectEx(hHandle:'int',milliseconds:'int',bAlertable:'bool') -> 'int':
+def WaitForSingleObjectEx(hHandle:'int',milliseconds:'typing.Any',bAlertable:'typing.Any') -> 'typing.Any':
     """
     Returns when an event is signalled
 
 Args:
 
       hHandle(int):handle of object to wait for
-      milliseconds(int):time-out interval in milliseconds
-      bAlertable(bool):alertable wait flag.Return ValueSee win32event::WaitForSingleObject for return values.
+      milliseconds(typing.Any):time-out interval in milliseconds
+      bAlertable(typing.Any):alertable wait flag.Return ValueSee win32event::WaitForSingleObject for return values.
 
 Returns:
 
-      int:alertable wait flag.Return ValueSee win32event::WaitForSingleObject for return values.
+      typing.Any:alertable wait flag.Return ValueSee win32event::WaitForSingleObject for return values.
 
         
     """
     pass
         
 
-def WaitForInputIdle(hProcess:'int',milliseconds:'int') -> 'int':
+def WaitForInputIdle(hProcess:'int',milliseconds:'typing.Any') -> 'typing.Any':
     """
     Waits until the given process is waiting for user input with no input pending, or until the time-out interval has elapsed
 
 Args:
 
       hProcess(int):handle of process to wait for
-      milliseconds(int):time-out interval in millisecondsReturn ValueThe return value indicates wether the process is ready or wether it timed out. This value can be one of the following.ValueMeaning0The process is ready.WAIT_TIMEOUTThe time-out interval elapsed, and the process is not ready.
+      milliseconds(typing.Any):time-out interval in millisecondsReturn ValueThe return value indicates wether the process is ready or wether it timed out. This value can be one of the following.ValueMeaning0The process is ready.WAIT_TIMEOUTThe time-out interval elapsed, and the process is not ready.
 
 Returns:
 
-      int:time-out interval in millisecondsReturn ValueThe return value indicates wether the process is ready or wether it timed out. This value can be one of the following.
+      typing.Any:time-out interval in millisecondsReturn ValueThe return value indicates wether the process is ready or wether it timed out. This value can be one of the following.
 
 
 

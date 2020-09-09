@@ -1,21 +1,21 @@
 __all__=['', 'CreateEnvironmentBlock', 'DeleteProfile', 'ExpandEnvironmentStringsForUser', 'GetAllUsersProfileDirectory', 'GetDefaultUserProfileDirectory', 'GetEnvironmentStrings', 'GetProfilesDirectory', 'GetProfileType', 'GetUserProfileDirectory', 'LoadUserProfile', 'UnloadUserProfile']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """Wraps functions for dealing with user profiles"""
 
 
-def CreateEnvironmentBlock(Token:'int',Inherit:'Any') -> 'dict':
+def CreateEnvironmentBlock(Token:'int',Inherit:'typing.Any') -> 'typing.Any':
     """
     Retrieves environment variables for a user
 
 Args:
 
       Token(int):User token as returned by win32security::LogonUser, use None to retrieve system variables only
-      Inherit(Any):Indicates if environment of current process should be inherited
+      Inherit(typing.Any):Indicates if environment of current process should be inherited
 
 Returns:
 
-      dict
+      typing.Any
         
     """
     pass
@@ -90,7 +90,7 @@ Returns:
     pass
         
 
-def GetEnvironmentStrings() -> 'dict':
+def GetEnvironmentStrings() -> 'typing.Any':
     """
     Retrieves environment variables for current process
 
@@ -100,7 +100,7 @@ Args:
 
 Returns:
 
-      dict
+      typing.Any
         
     """
     pass
@@ -122,7 +122,7 @@ Returns:
     pass
         
 
-def GetProfileType() -> 'int':
+def GetProfileType() -> 'typing.Any':
     """
     Returns type of current user's profile
 
@@ -132,7 +132,7 @@ Args:
 
 Returns:
 
-      int:win32profile.GetProfileType
+      typing.Any:win32profile.GetProfileType
 
 int = GetProfileType()Returns type of current user's profile
 Return ValueReturns a combination of PT_* flags
@@ -158,18 +158,18 @@ Returns:
     pass
         
 
-def LoadUserProfile(hToken:'int',ProfileInfo:'PyPROFILEINFO') -> 'PyHKEY':
+def LoadUserProfile(hToken:'int',ProfileInfo:'win32typing.PyPROFILEINFO') -> 'win32typing.PyHKEY':
     """
     Loads user settings into registry
 
 Args:
 
       hToken(int):Logon token as returned by win32security::LogonUser, win32security::OpenThreadToken, etc
-      ProfileInfo(PyPROFILEINFO):Dictionary representing a PROFILEINFO structureCommentsSE_BACKUP_NAME and SE_RESTORE_NAME privs are required, but do not have to be enabledReturn ValueReturns a handle to user's registry key.
+      ProfileInfo(win32typing.PyPROFILEINFO):Dictionary representing a PROFILEINFO structureCommentsSE_BACKUP_NAME and SE_RESTORE_NAME privs are required, but do not have to be enabledReturn ValueReturns a handle to user's registry key.
 
 Returns:
 
-      PyHKEY:Dictionary representing a PROFILEINFO structureComments
+      win32typing.PyHKEY:Dictionary representing a PROFILEINFO structureComments
 
 SE_BACKUP_NAME and SE_RESTORE_NAME privs are required, but do not have to be enabled
 Return ValueReturns a handle to user's registry key.
@@ -179,14 +179,14 @@ Return ValueReturns a handle to user's registry key.
     pass
         
 
-def UnloadUserProfile(Token:'int',Profile:'PyHKEY') -> 'None':
+def UnloadUserProfile(Token:'int',Profile:'win32typing.PyHKEY') -> 'None':
     """
     None
 
 Args:
 
       Token(int):Logon token as returned by win32security::LogonUser, win32security::OpenProcessToken, etc
-      Profile(PyHKEY):Registry handle as returned by win32profile::LoadUserProfile
+      Profile(win32typing.PyHKEY):Registry handle as returned by win32profile::LoadUserProfile
 
 Returns:
 

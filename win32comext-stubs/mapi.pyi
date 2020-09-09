@@ -1,6 +1,6 @@
 __all__=['', 'HexFromBin', 'BinFromHex', 'MAPIUninitialize', 'MAPIInitialize', 'MAPILogonEx', 'MAPIAdminProfiles', 'HrQueryAllRows', 'RTFSync', 'WrapCompressedRTFStream', 'WrapCompressedRTFStreamEx', 'OpenIMsgSession', 'CloseIMsgSession', 'OpenIMsgOnIStg', 'RTFStreamToHTML', 'OpenStreamOnFile', 'OpenStreamOnFileW', 'HrGetOneProp', 'HrSetOneProp', 'HrAllocAdviseSink', 'HrThisThreadAdviseSink', 'AB_NO_DIALOG', 'ATTACH_BY_REF_ONLY', 'ATTACH_BY_REF_RESOLVE', 'ATTACH_BY_REFERENCE', 'ATTACH_BY_VALUE', 'ATTACH_EMBEDDED_MSG', 'ATTACH_OLE', 'BMR_EQZ', 'BMR_NEZ', 'BOOKMARK_BEGINNING', 'BOOKMARK_CURRENT', 'BOOKMARK_END', 'CCSF_8BITHEADERS', 'CCSF_EMBEDDED_MESSAGE', 'CCSF_INCLUDE_BCC', 'CCSF_NO_MSGID', 'CCSF_NOHEADERS', 'CCSF_PLAIN_TEXT_ONLY', 'CCSF_PRESERVE_SOURCE', 'CCSF_SMTP', 'CCSF_USE_RTF', 'CCSF_USE_TNEF', 'CLEAR_NRN_PENDING', 'CLEAR_READ_FLAG', 'CLEAR_RN_PENDING', 'CONVENIENT_DEPTH', 'DEL_FOLDERS', 'DEL_MESSAGES', 'DELETE_HARD_DELETE', 'DIR_BACKWARD', 'FL_FULLSTRING', 'FL_IGNORECASE', 'FL_IGNORENONSPACE', 'FL_LOOSE', 'FL_PREFIX', 'FL_SUBSTRING', 'FLUSH_ASYNC_OK', 'FLUSH_DOWNLOAD', 'FLUSH_FORCE', 'FLUSH_NO_UI', 'FLUSH_UPLOAD', 'fnevCriticalError', 'fnevExtended', 'fnevNewMail', 'fnevObjectCopied', 'fnevObjectCreated', 'fnevObjectDeleted', 'fnevObjectModified', 'fnevObjectMoved', 'fnevReservedForMapi', 'fnevSearchComplete', 'fnevStatusObjectModified', 'fnevTableModified', 'FOLDER_DIALOG', 'FOLDER_GENERIC', 'FOLDER_SEARCH', 'FORCE_SAVE', 'GENERATE_RECEIPT_ONLY', 'KEEP_OPEN_READONLY', 'KEEP_OPEN_READWRITE', 'MAIL_E_NAMENOTFOUND', 'MAPI_ABCONT', 'MAPI_ADDRBOOK', 'MAPI_ALLOW_OTHERS', 'MAPI_ASSOCIATED', 'MAPI_ATTACH', 'MAPI_BCC', 'MAPI_BEST_ACCESS', 'MAPI_CC', 'MAPI_CREATE', 'MAPI_DEFAULT_SERVICES', 'MAPI_DEFERRED_ERRORS', 'MAPI_DIALOG', 'MAPI_DISTLIST', 'MAPI_E_ACCOUNT_DISABLED', 'MAPI_E_AMBIGUOUS_RECIP', 'MAPI_E_BAD_CHARWIDTH', 'MAPI_E_BAD_COLUMN', 'MAPI_E_BAD_VALUE', 'MAPI_E_BUSY', 'MAPI_E_CALL_FAILED', 'MAPI_E_CANCEL', 'MAPI_E_COLLISION', 'MAPI_E_COMPUTED', 'MAPI_E_CORRUPT_DATA', 'MAPI_E_CORRUPT_STORE', 'MAPI_E_DECLINE_COPY', 'MAPI_E_DISK_ERROR', 'MAPI_E_END_OF_SESSION', 'MAPI_E_EXTENDED_ERROR', 'MAPI_E_FAILONEPROVIDER', 'MAPI_E_FOLDER_CYCLE', 'MAPI_E_HAS_FOLDERS', 'MAPI_E_HAS_MESSAGES', 'MAPI_E_INTERFACE_NOT_SUPPORTED', 'MAPI_E_INVALID_ACCESS_TIME', 'MAPI_E_INVALID_BOOKMARK', 'MAPI_E_INVALID_ENTRYID', 'MAPI_E_INVALID_OBJECT', 'MAPI_E_INVALID_PARAMETER', 'MAPI_E_INVALID_TYPE', 'MAPI_E_INVALID_WORKSTATION_ACCOUNT', 'MAPI_E_LOCKID_LIMIT', 'MAPI_E_LOGON_FAILED', 'MAPI_E_MISSING_REQUIRED_COLUMN', 'MAPI_E_NAMED_PROP_QUOTA_EXCEEDED', 'MAPI_E_NETWORK_ERROR', 'MAPI_E_NO_ACCESS', 'MAPI_E_NO_RECIPIENTS', 'MAPI_E_NO_SUPPORT', 'MAPI_E_NO_SUPPRESS', 'MAPI_E_NON_STANDARD', 'MAPI_E_NOT_ENOUGH_DISK', 'MAPI_E_NOT_ENOUGH_MEMORY', 'MAPI_E_NOT_ENOUGH_RESOURCES', 'MAPI_E_NOT_FOUND', 'MAPI_E_NOT_IN_QUEUE', 'MAPI_E_NOT_INITIALIZED', 'MAPI_E_NOT_ME', 'MAPI_E_OBJECT_CHANGED', 'MAPI_E_OBJECT_DELETED', 'MAPI_E_OFFLINE', 'MAPI_E_PASSWORD_CHANGE_REQUIRED', 'MAPI_E_PASSWORD_EXPIRED', 'MAPI_E_PROFILE_DELETED', 'MAPI_E_RECONNECTED', 'MAPI_E_SESSION_LIMIT', 'MAPI_E_STORE_FULL', 'MAPI_E_STRING_TOO_LONG', 'MAPI_E_SUBMITTED', 'MAPI_E_TABLE_EMPTY', 'MAPI_E_TABLE_TOO_BIG', 'MAPI_E_TIMEOUT', 'MAPI_E_TOO_BIG', 'MAPI_E_TOO_COMPLEX', 'MAPI_E_TYPE_NO_SUPPORT', 'MAPI_E_UNABLE_TO_ABORT', 'MAPI_E_UNABLE_TO_COMPLETE', 'MAPI_E_UNCONFIGURED', 'MAPI_E_UNEXPECTED_ID', 'MAPI_E_UNEXPECTED_TYPE', 'MAPI_E_UNKNOWN_CPID', 'MAPI_E_UNKNOWN_ENTRYID', 'MAPI_E_UNKNOWN_FLAGS', 'MAPI_E_UNKNOWN_LCID', 'MAPI_E_USER_CANCEL', 'MAPI_E_VERSION', 'MAPI_E_WAIT', 'MAPI_EXPLICIT_PROFILE', 'MAPI_EXTENDED', 'MAPI_FOLDER', 'MAPI_FORCE_ACCESS', 'MAPI_FORCE_DOWNLOAD', 'MAPI_FORMINFO', 'MAPI_INIT_VERSION', 'MAPI_LOGON_UI', 'MAPI_MAILUSER', 'MAPI_MESSAGE', 'MAPI_MODIFY', 'MAPI_MOVE', 'MAPI_MULTITHREAD_NOTIFICATIONS', 'MAPI_NATIVE_BODY', 'MAPI_NATIVE_BODY_TYPE_HTML', 'MAPI_NATIVE_BODY_TYPE_PLAINTEXT', 'MAPI_NATIVE_BODY_TYPE_RTF', 'MAPI_NEW_SESSION', 'MAPI_NO_IDS', 'MAPI_NO_MAIL', 'MAPI_NO_STRINGS', 'MAPI_NOREPLACE', 'MAPI_NT_SERVICE', 'MAPI_P1', 'MAPI_PASSWORD_UI', 'MAPI_PROFSECT', 'MAPI_SERVICE_UI_ALWAYS', 'MAPI_SESSION', 'MAPI_STATUS', 'MAPI_STORE', 'MAPI_SUBMITTED', 'MAPI_TIMEOUT_SHORT', 'MAPI_TO', 'MAPI_UNICODE', 'MAPI_USE_DEFAULT', 'MAPI_W_APPROX_COUNT', 'MAPI_W_CANCEL_MESSAGE', 'MAPI_W_ERRORS_RETURNED', 'MAPI_W_NO_SERVICE', 'MAPI_W_PARTIAL_COMPLETION', 'MAPI_W_POSITION_CHANGED', 'MDB_NO_DIALOG', 'MDB_NO_MAIL', 'MDB_TEMPORARY', 'MDB_WRITE', 'MESSAGE_DIALOG', 'MODRECIP_ADD', 'MODRECIP_MODIFY', 'MODRECIP_REMOVE', 'NO_ATTACHMENT', 'OPEN_IF_EXISTS', 'PSTF_BEST_ENCRYPTION', 'PSTF_COMPRESSABLE_ENCRYPTION', 'PSTF_NO_ENCRYPTION', 'RELOP_EQ', 'RELOP_GE', 'RELOP_GT', 'RELOP_LE', 'RELOP_LT', 'RELOP_NE', 'RELOP_RE', 'RES_AND', 'RES_BITMASK', 'RES_COMMENT', 'RES_COMPAREPROPS', 'RES_CONTENT', 'RES_EXIST', 'RES_NOT', 'RES_OR', 'RES_PROPERTY', 'RES_SIZE', 'RES_SUBRESTRICTION', 'RTF_SYNC_BODY_CHANGED', 'RTF_SYNC_RTF_CHANGED', 'SERVICE_UI_ALLOWED', 'SERVICE_UI_ALWAYS', 'SHOW_SOFT_DELETES', 'SOF_UNIQUEFILENAME', 'STATUS_DEFAULT_STORE', 'STATUS_FLUSH_QUEUES', 'STATUS_INBOUND_FLUSH', 'STATUS_OUTBOUND_FLUSH', 'SUPPRESS_RECEIPT', 'TABLE_CHANGED', 'TABLE_ERROR', 'TABLE_RELOAD', 'TABLE_RESTRICT_DONE', 'TABLE_ROW_ADDED', 'TABLE_ROW_DELETED', 'TABLE_ROW_MODIFIED', 'TABLE_SETCOL_DONE', 'TABLE_SORT_ASCEND', 'TABLE_SORT_COMBINE', 'TABLE_SORT_DESCEND', 'TABLE_SORT_DONE', 'TBL_ALL_COLUMNS', 'TBL_ASYNC', 'TBL_BATCH']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A COM interface to MAPI"""
 
 
@@ -20,13 +20,13 @@ Returns:
     pass
         
 
-def BinFromHex(val:'Union[str]') -> 'str':
+def BinFromHex(val:'typing.Union[str]') -> 'str':
     """
     converts a hexadecimal number into a binary string
 
 Args:
 
-      val(Union[str]):The string to be converted.
+      val(typing.Union[str]):The string to be converted.
 
 Returns:
 
@@ -52,13 +52,13 @@ Returns:
     pass
         
 
-def MAPIInitialize(init:'MAPIINIT_0') -> 'None':
+def MAPIInitialize(init:'win32typing.MAPIINIT_0') -> 'None':
     """
     Increments the MAPI subsystem reference count and initializes global data for the MAPI DLL.
 
 Args:
 
-      init(MAPIINIT_0):MAPI Initialization flags.
+      init(win32typing.MAPIINIT_0):MAPI Initialization flags.
 
 Returns:
 
@@ -68,96 +68,96 @@ Returns:
     pass
         
 
-def MAPILogonEx(uiParam:'int',profileName:'str',password:'str'=None,flags:'int'=0) -> 'PyIMAPISession':
+def MAPILogonEx(uiParam:'typing.Any',profileName:'str',password:'str'=None,flags:'typing.Any'=0) -> 'win32typing.PyIMAPISession':
     """
     None
 
 Args:
 
-      uiParam(int):Handle to the window to which the logon dialog box is modal. If no dialog box appears during the call, the uiParam parameter is ignored. This parameter can be zero.
+      uiParam(typing.Any):Handle to the window to which the logon dialog box is modal. If no dialog box appears during the call, the uiParam parameter is ignored. This parameter can be zero.
       profileName(str):A string that contains the name of the profile to use when the user logs on. This string is limited to 64 characters.
       password(str):A string that contains the password of the profile. The password parameter must be None.
-      flags(int):
+      flags(typing.Any):
 
 Returns:
 
-      PyIMAPISession
+      win32typing.PyIMAPISession
         
     """
     pass
         
 
-def MAPIAdminProfiles(fFlags:'int') -> 'PyIProfAdmin':
+def MAPIAdminProfiles(fFlags:'typing.Any') -> 'win32typing.PyIProfAdmin':
     """
     None
 
 Args:
 
-      fFlags(int):
+      fFlags(typing.Any):
 
 Returns:
 
-      PyIProfAdmin
+      win32typing.PyIProfAdmin
         
     """
     pass
         
 
-def HrQueryAllRows(table:'PyIMAPITable',properties:'PySPropTagArray',restrictions:'PySRestriction',sortOrderSet:'PySSortOrderSet',rowsMax:'int') -> 'Any':
+def HrQueryAllRows(table:'win32typing.PyIMAPITable',properties:'win32typing.PySPropTagArray',restrictions:'win32typing.PySRestriction',sortOrderSet:'win32typing.PySSortOrderSet',rowsMax:'typing.Any') -> 'typing.Any':
     """
     None
 
 Args:
 
-      table(PyIMAPITable):
-      properties(PySPropTagArray):A sequence of property tags indicating table columns. These tags are used to select the specific columns to be retrieved. If this parameter is None, HrQueryAllRows retrieves the entire column set of the current table view passed in the table parameter.
-      restrictions(PySRestriction):Defines the retrieval restrictions. If this parameter is None, HrQueryAllRows makes no restrictions.
-      sortOrderSet(PySSortOrderSet):Identifies the sort order of the columns to be retrieved. If this parameter is None, the default sort order for the table is used.
-      rowsMax(int):Maximum number of rows to be retrieved. If the value of the rowsMax parameter is zero, no limit on the number of rows retrieved is set.
+      table(win32typing.PyIMAPITable):
+      properties(win32typing.PySPropTagArray):A sequence of property tags indicating table columns. These tags are used to select the specific columns to be retrieved. If this parameter is None, HrQueryAllRows retrieves the entire column set of the current table view passed in the table parameter.
+      restrictions(win32typing.PySRestriction):Defines the retrieval restrictions. If this parameter is None, HrQueryAllRows makes no restrictions.
+      sortOrderSet(win32typing.PySSortOrderSet):Identifies the sort order of the columns to be retrieved. If this parameter is None, the default sort order for the table is used.
+      rowsMax(typing.Any):Maximum number of rows to be retrieved. If the value of the rowsMax parameter is zero, no limit on the number of rows retrieved is set.
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def RTFSync(message:'PyIMessage',flags:'int') -> 'int':
+def RTFSync(message:'win32typing.PyIMessage',flags:'typing.Any') -> 'typing.Any':
     """
     None
 
 Args:
 
-      message(PyIMessage):The message.
-      flags(int):
+      message(win32typing.PyIMessage):The message.
+      flags(typing.Any):
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def WrapCompressedRTFStream(stream:'PyIStream',flags:'int') -> 'PyIStream':
+def WrapCompressedRTFStream(stream:'win32typing.PyIStream',flags:'typing.Any') -> 'win32typing.PyIStream':
     """
     None
 
 Args:
 
-      stream(PyIStream):Message stream
-      flags(int):
+      stream(win32typing.PyIStream):Message stream
+      flags(typing.Any):
 
 Returns:
 
-      PyIStream
+      win32typing.PyIStream
         
     """
     pass
         
 
-def WrapCompressedRTFStreamEx() -> 'Tuple[PyIStream, Any]':
+def WrapCompressedRTFStreamEx() -> 'typing.Tuple[win32typing.PyIStream, typing.Any]':
     """
     None
 
@@ -167,7 +167,7 @@ Args:
 
 Returns:
 
-      Tuple[PyIStream, Any]:mapi.WrapCompressedRTFStreamEx
+      typing.Tuple[win32typing.PyIStream, typing.Any]:mapi.WrapCompressedRTFStreamEx
 
 (PyIStream, ULONG) = WrapCompressedRTFStreamEx()
 Return ValueResult is a tuple of (bodyStream, bodyType);
@@ -177,7 +177,7 @@ Return ValueResult is a tuple of (bodyStream, bodyType);
     pass
         
 
-def OpenIMsgSession() -> 'Any':
+def OpenIMsgSession() -> 'typing.Any':
     """
     None
 
@@ -187,7 +187,7 @@ Args:
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
@@ -209,34 +209,34 @@ Returns:
     pass
         
 
-def OpenIMsgOnIStg(session:'Any',support:'Any',storage:'PyIStorage',callback:'Any'=None,callbackData:'int'=0,flags:'int'=0) -> 'PyIMessage':
+def OpenIMsgOnIStg(session:'typing.Any',support:'typing.Any',storage:'win32typing.PyIStorage',callback:'typing.Any'=None,callbackData:'typing.Any'=0,flags:'typing.Any'=0) -> 'win32typing.PyIMessage':
     """
     Builds a new IMessage object on top of an existing OLE IStorage object, to be used within a message session.
 
 Args:
 
-      session(Any):
-      support(Any):May be None
-      storage(PyIStorage):A PyIStorage object that is open and has read-only or read/write access. Because IMessage does not support write-only access, OpenIMsgOnIStg does not accept a storage object opened in write-only mode.
-      callback(Any):Only None is supported.
-      callbackData(int):
-      flags(int):
+      session(typing.Any):
+      support(typing.Any):May be None
+      storage(win32typing.PyIStorage):A PyIStorage object that is open and has read-only or read/write access. Because IMessage does not support write-only access, OpenIMsgOnIStg does not accept a storage object opened in write-only mode.
+      callback(typing.Any):Only None is supported.
+      callbackData(typing.Any):
+      flags(typing.Any):
 
 Returns:
 
-      PyIMessage
+      win32typing.PyIMessage
         
     """
     pass
         
 
-def RTFStreamToHTML(The_stream_to_read_the_uncompressed_RTF_from:'PyIStream') -> 'None':
+def RTFStreamToHTML(The_stream_to_read_the_uncompressed_RTF_from:'win32typing.PyIStream') -> 'None':
     """
     None
 
 Args:
 
-      The_stream_to_read_the_uncompressed_RTF_from(PyIStream):
+      The_stream_to_read_the_uncompressed_RTF_from(win32typing.PyIStream):
 
 Returns:
 
@@ -246,104 +246,104 @@ Returns:
     pass
         
 
-def OpenStreamOnFile(filename:'str',flags:'int'=0,prefix:'str'=None) -> 'PyIStream':
+def OpenStreamOnFile(filename:'str',flags:'typing.Any'=0,prefix:'str'=None) -> 'win32typing.PyIStream':
     """
     Allocates and initializes an OLE IStream object to access the contents of a file.
 
 Args:
 
       filename(str):
-      flags(int):
+      flags(typing.Any):
       prefix(str):
 
 Returns:
 
-      PyIStream
+      win32typing.PyIStream
         
     """
     pass
         
 
-def OpenStreamOnFileW(filename:'Any',flags:'int'=0,prefix:'Any'=None) -> 'PyIStream':
+def OpenStreamOnFileW(filename:'typing.Any',flags:'typing.Any'=0,prefix:'typing.Any'=None) -> 'win32typing.PyIStream':
     """
     Allocates and initializes an OLE IStream object to access the contents of a file.
 
 Args:
 
-      filename(Any):
-      flags(int):
-      prefix(Any):
+      filename(typing.Any):
+      flags(typing.Any):
+      prefix(typing.Any):
 
 Returns:
 
-      PyIStream
+      win32typing.PyIStream
         
     """
     pass
         
 
-def HrGetOneProp(prop:'PyIMAPIProp',propTag:'Any') -> 'Any':
+def HrGetOneProp(prop:'win32typing.PyIMAPIProp',propTag:'typing.Any') -> 'typing.Any':
     """
     Retrieves the value of a single property from an IMAPIProp object.
 
 Args:
 
-      prop(PyIMAPIProp):Object to retrieve property value from.
-      propTag(Any):The property tag to open.
+      prop(win32typing.PyIMAPIProp):Object to retrieve property value from.
+      propTag(typing.Any):The property tag to open.
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def HrSetOneProp(prop:'PyIMAPIProp',propValue:'PySPropValue') -> 'Any':
+def HrSetOneProp(prop:'win32typing.PyIMAPIProp',propValue:'win32typing.PySPropValue') -> 'typing.Any':
     """
     Sets the value of a single property on a IMAPIProp object.
 
 Args:
 
-      prop(PyIMAPIProp):Object to set property value on.
-      propValue(PySPropValue):Property value to set.
+      prop(win32typing.PyIMAPIProp):Object to set property value on.
+      propValue(win32typing.PySPropValue):Property value to set.
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def HrAllocAdviseSink(callback:'Any',context:'Any') -> 'Any':
+def HrAllocAdviseSink(callback:'typing.Any',context:'typing.Any') -> 'typing.Any':
     """
     Creates an advise sink object, given a context specified by the calling implementation and a callback function to be triggered by an event notification.
 
 Args:
 
-      callback(Any):OnNotify callback function
-      context(Any):Context data to be passed to the callback
+      callback(typing.Any):OnNotify callback function
+      context(typing.Any):Context data to be passed to the callback
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def HrThisThreadAdviseSink(_object:'Any') -> 'Any':
+def HrThisThreadAdviseSink(_object:'typing.Any') -> 'typing.Any':
     """
     Creates an advise sink that wraps an existing advise sink for thread safety.
 
 Args:
 
-      _object(Any):The advise sink to be wrapped.
+      _object(typing.Any):The advise sink to be wrapped.
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass

@@ -1,16 +1,16 @@
 __all__=['', 'AfxOleInit', 'CreateInsertDialog', 'CreateOleClientItem', 'CreateOleDocument', 'DaoGetEngine', 'GetIDispatchForWindow', 'OleGetUserCtrl', 'OleSetUserCtrl', 'SetMessagePendingDelay', 'EnableNotRespondingDialog', 'EnableNotRespondingDialog', 'COleClientItem_activeState', 'COleClientItem_activeUIState', 'COleClientItem_emptyState', 'COleClientItem_loadedState', 'COleClientItem_openState', 'OLE_CHANGED', 'OLE_CHANGED_ASPECT', 'OLE_CHANGED_STATE', 'OLE_CLOSED', 'OLE_RENAMED', 'OLE_SAVED']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A module, encapsulating the Microsoft Foundation Classes OLE functionality."""
 
 
-def AfxOleInit(enabled:'bool') -> 'None':
+def AfxOleInit(enabled:'typing.Any') -> 'None':
     """
     None
 
 Args:
 
-      enabled(bool):
+      enabled(typing.Any):
 
 Returns:
 
@@ -20,7 +20,7 @@ Returns:
     pass
         
 
-def CreateInsertDialog() -> 'PyCOleInsertDialog':
+def CreateInsertDialog() -> 'win32typing.PyCOleInsertDialog':
     """
     Creates a InsertObject dialog. 
 
@@ -32,13 +32,13 @@ Args:
 
 Returns:
 
-      PyCOleInsertDialog
+      win32typing.PyCOleInsertDialog
         
     """
     pass
         
 
-def CreateOleClientItem() -> 'PyCOleClientItem':
+def CreateOleClientItem() -> 'win32typing.PyCOleClientItem':
     """
     None
 
@@ -48,30 +48,30 @@ Args:
 
 Returns:
 
-      PyCOleClientItem
+      win32typing.PyCOleClientItem
         
     """
     pass
         
 
-def CreateOleDocument(template:'PyCDocTemplate',fileName:'str'=None) -> 'PyCOleDocument':
+def CreateOleDocument(template:'win32typing.PyCDocTemplate',fileName:'str'=None) -> 'win32typing.PyCOleDocument':
     """
     Creates an OLE document.
 
 Args:
 
-      template(PyCDocTemplate):The template to be attached to this document.
+      template(win32typing.PyCDocTemplate):The template to be attached to this document.
       fileName(str):The filename for the document.
 
 Returns:
 
-      PyCOleDocument
+      win32typing.PyCOleDocument
         
     """
     pass
         
 
-def DaoGetEngine() -> 'PyIDispatch':
+def DaoGetEngine() -> 'win32typing.PyIDispatch':
     """
     None
 
@@ -81,13 +81,13 @@ Args:
 
 Returns:
 
-      PyIDispatch
+      win32typing.PyIDispatch
         
     """
     pass
         
 
-def GetIDispatchForWindow() -> 'PyIDispatch':
+def GetIDispatchForWindow() -> 'win32typing.PyIDispatch':
     """
     Gets an OCX IDispatch pointer, if the window has one!
 
@@ -97,13 +97,13 @@ Args:
 
 Returns:
 
-      PyIDispatch
+      win32typing.PyIDispatch
         
     """
     pass
         
 
-def OleGetUserCtrl() -> 'int':
+def OleGetUserCtrl() -> 'typing.Any':
     """
     Returns the application name.
 
@@ -113,51 +113,35 @@ Args:
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def OleSetUserCtrl(bUserCtrl:'int') -> 'int':
+def OleSetUserCtrl(bUserCtrl:'typing.Any') -> 'typing.Any':
     """
     Sets or clears the user control flag.
 
 Args:
 
-      bUserCtrl(int):Specifies whether the user-control flag is to be set or cleared.
+      bUserCtrl(typing.Any):Specifies whether the user-control flag is to be set or cleared.
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass
         
 
-def SetMessagePendingDelay(delay:'int') -> 'None':
+def SetMessagePendingDelay(delay:'typing.Any') -> 'None':
     """
     None
 
 Args:
 
-      delay(int):
-
-Returns:
-
-      None
-        
-    """
-    pass
-        
-
-def EnableNotRespondingDialog(enabled:'bool') -> 'None':
-    """
-    None
-
-Args:
-
-      enabled(bool):
+      delay(typing.Any):
 
 Returns:
 
@@ -167,13 +151,29 @@ Returns:
     pass
         
 
-def EnableNotRespondingDialog(enabled:'bool') -> 'None':
+def EnableNotRespondingDialog(enabled:'typing.Any') -> 'None':
     """
     None
 
 Args:
 
-      enabled(bool):
+      enabled(typing.Any):
+
+Returns:
+
+      None
+        
+    """
+    pass
+        
+
+def EnableNotRespondingDialog(enabled:'typing.Any') -> 'None':
+    """
+    None
+
+Args:
+
+      enabled(typing.Any):
 
 Returns:
 

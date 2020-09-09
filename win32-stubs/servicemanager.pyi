@@ -1,6 +1,6 @@
 __all__=['', 'CoInitializeEx', 'CoUninitialize', 'RegisterServiceCtrlHandler', 'LogMsg', 'LogInfoMsg', 'LogErrorMsg', 'LogWarningMsg', 'PumpWaitingMessages', 'Debugging', 'Initialize', 'Finalize', 'PrepareToHostSingle', 'PrepareToHostMultiple', 'RunningAsService', 'SetEventSourceName']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """"""
 
 
@@ -36,19 +36,19 @@ Returns:
     pass
         
 
-def RegisterServiceCtrlHandler(serviceName:'str',callback:'Any',extra_args:'bool'=False) -> 'Union[int, None]':
+def RegisterServiceCtrlHandler(serviceName:'str',callback:'typing.Any',extra_args:'typing.Any'=False) -> 'typing.Union[typing.Any]':
     """
     Registers the Python service control handler function.
 
 Args:
 
       serviceName(str):The name of the service.  This is provided in args[0] of the service class __init__ method.
-      callback(Any):The Python function that performs as the control function.  This will be called with an integer status argument.
-      extra_args(bool):Is this callback expecting the additional 2 args passed by HandlerEx?Return ValueIf the service manager is in debug mode, this returns None, indicating there is no service control manager handle, otherwise the handle to the Win32 service manager.
+      callback(typing.Any):The Python function that performs as the control function.  This will be called with an integer status argument.
+      extra_args(typing.Any):Is this callback expecting the additional 2 args passed by HandlerEx?Return ValueIf the service manager is in debug mode, this returns None, indicating there is no service control manager handle, otherwise the handle to the Win32 service manager.
 
 Returns:
 
-      Union[int, None]:Is this callback expecting the additional 2 args passed by HandlerEx?
+      typing.Union[typing.Any]:Is this callback expecting the additional 2 args passed by HandlerEx?
 Return ValueIf the service manager is in debug mode, this returns None, indicating 
 
 there is no service control manager handle, otherwise the handle to the Win32 service manager.
@@ -58,15 +58,15 @@ there is no service control manager handle, otherwise the handle to the Win32 se
     pass
         
 
-def LogMsg(errorType:'int',eventId:'int',inserts:'Tuple[str, Any]'=None) -> 'None':
+def LogMsg(errorType:'typing.Any',eventId:'typing.Any',inserts:'typing.Tuple[str, typing.Any]'=None) -> 'None':
     """
     Logs a specific message
 
 Args:
 
-      errorType(int):
-      eventId(int):
-      inserts(Tuple[str, Any]):
+      errorType(typing.Any):
+      eventId(typing.Any):
+      inserts(typing.Tuple[str, typing.Any]):
 
 Returns:
 
@@ -124,7 +124,7 @@ Returns:
     pass
         
 
-def PumpWaitingMessages() -> 'int':
+def PumpWaitingMessages() -> 'typing.Any':
     """
     Pumps all waiting messages.
 
@@ -134,7 +134,7 @@ Args:
 
 Returns:
 
-      int:servicemanager.PumpWaitingMessages
+      typing.Any:servicemanager.PumpWaitingMessages
 
 int = PumpWaitingMessages()Pumps all waiting messages.
 Return ValueReturns 1 if a WM_QUIT message was received, else 0
@@ -144,7 +144,7 @@ Return ValueReturns 1 if a WM_QUIT message was received, else 0
     pass
         
 
-def Debugging(newVal:'int'=-1) -> 'Union[True, False]':
+def Debugging(newVal:'typing.Any'=-1) -> 'typing.Union[typing.Any]':
     """
     Indicates if the service is running in debug mode 
 
@@ -152,11 +152,11 @@ and optionally toggles the debug flag.
 
 Args:
 
-      newVal(int):If not -1, a new value for the debugging flag. The result is the value of the flag before it is changed.
+      newVal(typing.Any):If not -1, a new value for the debugging flag. The result is the value of the flag before it is changed.
 
 Returns:
 
-      Union[True, False]
+      typing.Union[typing.Any]
         
     """
     pass
@@ -197,13 +197,13 @@ Returns:
     pass
         
 
-def PrepareToHostSingle(klass:'Any'=None) -> 'None':
+def PrepareToHostSingle(klass:'typing.Any'=None) -> 'None':
     """
     Prepare for hosting a single service in this EXE
 
 Args:
 
-      klass(Any):The Python class to host.  If not specified, the service name is looked up in the registry and the specified class instantiated.
+      klass(typing.Any):The Python class to host.  If not specified, the service name is looked up in the registry and the specified class instantiated.
 
 Returns:
 
@@ -213,14 +213,14 @@ Returns:
     pass
         
 
-def PrepareToHostMultiple(service_name:'Union[Any, str]',klass:'Any') -> 'None':
+def PrepareToHostMultiple(service_name:'typing.Union[str, typing.Any]',klass:'typing.Any') -> 'None':
     """
     Prepare for hosting a multiple services in this EXE
 
 Args:
 
-      service_name(Union[Any, str]):The name of the service hosted by the class
-      klass(Any):The Python class to host.
+      service_name(typing.Union[str, typing.Any]):The name of the service hosted by the class
+      klass(typing.Any):The Python class to host.
 
 Returns:
 
@@ -230,7 +230,7 @@ Returns:
     pass
         
 
-def RunningAsService() -> 'Union[True, False]':
+def RunningAsService() -> 'typing.Union[typing.Any]':
     """
     Indicates if the code is 
 
@@ -242,13 +242,13 @@ Args:
 
 Returns:
 
-      Union[True, False]
+      typing.Union[typing.Any]
         
     """
     pass
         
 
-def SetEventSourceName(sourceName:'str',registerNow:'bool'=False) -> 'None':
+def SetEventSourceName(sourceName:'str',registerNow:'typing.Any'=False) -> 'None':
     """
     Sets the event source name 
 
@@ -257,7 +257,7 @@ for event log entries written by the service.
 Args:
 
       sourceName(str):The event source name
-      registerNow(bool):If True, the event source name in the registry will be updated immediately. If False, the name will be registered the first time an event log entry is written via any pythonservice methods (or possibly never if no record if written). Note that in some cases, the service itself will not have permission to write the event source in the registry.  Therefore, it would be prudent for your installation program to call this function with registerNow=True, to ensure your services can write useful entries.
+      registerNow(typing.Any):If True, the event source name in the registry will be updated immediately. If False, the name will be registered the first time an event log entry is written via any pythonservice methods (or possibly never if no record if written). Note that in some cases, the service itself will not have permission to write the event source in the registry.  Therefore, it would be prudent for your installation program to call this function with registerNow=True, to ensure your services can write useful entries.
 
 Returns:
 

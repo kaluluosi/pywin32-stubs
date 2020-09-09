@@ -1,67 +1,67 @@
 __all__=['', 'PSGetItemPropertyHandler', 'PSGetPropertyDescription', 'PSGetPropertySystem', 'PSGetNameFromPropertyKey', 'PSGetPropertyKeyFromName', 'PSRegisterPropertySchema', 'PSUnregisterPropertySchema', 'SHGetPropertyStoreFromParsingName', 'StgSerializePropVariant', 'StgDeserializePropVariant', 'PSCreateMemoryPropertyStore', 'PSCreatePropertyStoreFromPropertySetStorage', 'PSLookupPropertyHandlerCLSID', 'SHGetPropertyStoreForWindow', 'PSGetPropertyFromPropertyStorage', 'PSGetNamedPropertyFromPropertyStorage', 'PSCreateSimplePropertyChange', 'PSCreatePropertyChangeArray', 'SHSetDefaultProperties']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A module, encapsulating the Vista Property System interfaces"""
 
 
-def PSGetItemPropertyHandler(Item:'PyIShellItem',riid:'PyIID',ReadWrite:'bool'=False) -> 'PyIPropertyStore':
+def PSGetItemPropertyHandler(Item:'win32typing.PyIShellItem',riid:'win32typing.PyIID',ReadWrite:'typing.Any'=False) -> 'win32typing.PyIPropertyStore':
     """
     Retrieves the property store for a shell item
 
 Args:
 
-      Item(PyIShellItem):A shell item
-      riid(PyIID):Interface to return
-      ReadWrite(bool):Pass True for a writeable property store
+      Item(win32typing.PyIShellItem):A shell item
+      riid(win32typing.PyIID):Interface to return
+      ReadWrite(typing.Any):Pass True for a writeable property store
 
 Returns:
 
-      PyIPropertyStore
+      win32typing.PyIPropertyStore
         
     """
     pass
         
 
-def PSGetPropertyDescription(Key:'PyPROPERTYKEY',riid:'PyIID') -> 'PyIPropertyDescription':
+def PSGetPropertyDescription(Key:'win32typing.PyPROPERTYKEY',riid:'win32typing.PyIID') -> 'win32typing.PyIPropertyDescription':
     """
     Gets a description interface for a property
 
 Args:
 
-      Key(PyPROPERTYKEY):A property key identifier
-      riid(PyIID):The interface to returnCommentsPossible interfaces include IPropertyDescription, IPropertyDescriptionAliasInfo, and IPropertyDescriptionSearchInfo
+      Key(win32typing.PyPROPERTYKEY):A property key identifier
+      riid(win32typing.PyIID):The interface to returnCommentsPossible interfaces include IPropertyDescription, IPropertyDescriptionAliasInfo, and IPropertyDescriptionSearchInfo
 
 Returns:
 
-      PyIPropertyDescription
+      win32typing.PyIPropertyDescription
         
     """
     pass
         
 
-def PSGetPropertySystem(riid:'PyIID') -> 'PyIPropertySystem':
+def PSGetPropertySystem(riid:'win32typing.PyIID') -> 'win32typing.PyIPropertySystem':
     """
     Creates an IPropertySystem interface
 
 Args:
 
-      riid(PyIID):The interface to return
+      riid(win32typing.PyIID):The interface to return
 
 Returns:
 
-      PyIPropertySystem
+      win32typing.PyIPropertySystem
         
     """
     pass
         
 
-def PSGetNameFromPropertyKey(Key:'PyPROPERTYKEY') -> 'str':
+def PSGetNameFromPropertyKey(Key:'win32typing.PyPROPERTYKEY') -> 'str':
     """
     Retrieves the canonical name of a property
 
 Args:
 
-      Key(PyPROPERTYKEY):A property key
+      Key(win32typing.PyPROPERTYKEY):A property key
 
 Returns:
 
@@ -71,29 +71,29 @@ Returns:
     pass
         
 
-def PSGetPropertyKeyFromName(Name:'str') -> 'PyPROPERTYKEY':
+def PSGetPropertyKeyFromName(Name:'typing.Any') -> 'win32typing.PyPROPERTYKEY':
     """
     Retrieves the property key by canonical name
 
 Args:
 
-      Name(str):The canonical name of a property (eg System.Author)
+      Name(typing.Any):The canonical name of a property (eg System.Author)
 
 Returns:
 
-      PyPROPERTYKEY
+      win32typing.PyPROPERTYKEY
         
     """
     pass
         
 
-def PSRegisterPropertySchema(filename:'Any') -> 'None':
+def PSRegisterPropertySchema(filename:'typing.Any') -> 'None':
     """
     Registers a group of properties described in a schema file
 
 Args:
 
-      filename(Any):An XML file that defines a property schema (*.propdesc)
+      filename(typing.Any):An XML file that defines a property schema (*.propdesc)
 
 Returns:
 
@@ -103,13 +103,13 @@ Returns:
     pass
         
 
-def PSUnregisterPropertySchema(filename:'Any') -> 'None':
+def PSUnregisterPropertySchema(filename:'typing.Any') -> 'None':
     """
     Removes a property schema definition
 
 Args:
 
-      filename(Any):A previously registered schema definition file
+      filename(typing.Any):A previously registered schema definition file
 
 Returns:
 
@@ -119,7 +119,7 @@ Returns:
     pass
         
 
-def SHGetPropertyStoreFromParsingName(Path:'str',Flags:'int',riid:'PyIID',BindCtx:'PyIBindCtx'=None) -> 'PyIPropertyStore':
+def SHGetPropertyStoreFromParsingName(Path:'str',Flags:'typing.Any',riid:'win32typing.PyIID',BindCtx:'win32typing.PyIBindCtx'=None) -> 'win32typing.PyIPropertyStore':
     """
     Retrieves the property store for an item by 
 
@@ -128,51 +128,51 @@ path
 Args:
 
       Path(str):Path to file
-      Flags(int):Combination of GETPROPERTYSTOREFLAGS values (shellcon.GPS_*)
-      riid(PyIID):The interface to returnCommentsThis function does not exist on XP, even with Desktop Search installed
-      BindCtx(PyIBindCtx):Bind context, or None
+      Flags(typing.Any):Combination of GETPROPERTYSTOREFLAGS values (shellcon.GPS_*)
+      riid(win32typing.PyIID):The interface to returnCommentsThis function does not exist on XP, even with Desktop Search installed
+      BindCtx(win32typing.PyIBindCtx):Bind context, or None
 
 Returns:
 
-      PyIPropertyStore
+      win32typing.PyIPropertyStore
         
     """
     pass
         
 
-def StgSerializePropVariant(propvar:'PyPROPVARIANT') -> 'bytes':
+def StgSerializePropVariant(propvar:'win32typing.PyPROPVARIANT') -> 'typing.Any':
     """
     None
 
 Args:
 
-      propvar(PyPROPVARIANT):The value to serialize
+      propvar(win32typing.PyPROPVARIANT):The value to serialize
 
 Returns:
 
-      bytes
+      typing.Any
         
     """
     pass
         
 
-def StgDeserializePropVariant(prop:'bytes') -> 'PyPROPVARIANT':
+def StgDeserializePropVariant(prop:'typing.Any') -> 'win32typing.PyPROPVARIANT':
     """
     None
 
 Args:
 
-      prop(bytes):Buffer or bytes object (or str in Python 2) containing a serialized value
+      prop(typing.Any):Buffer or bytes object (or str in Python 2) containing a serialized value
 
 Returns:
 
-      PyPROPVARIANT
+      win32typing.PyPROPVARIANT
         
     """
     pass
         
 
-def PSCreateMemoryPropertyStore(riid:'PyIID') -> 'PyIPropertyStore':
+def PSCreateMemoryPropertyStore(riid:'win32typing.PyIID') -> 'win32typing.PyIPropertyStore':
     """
     Creates a temporary property store that is not 
 
@@ -180,62 +180,62 @@ connected to any backing storage
 
 Args:
 
-      riid(PyIID):The interface to createCommentsMay also be used to create PyINamedPropertyStore, PyIPropertyStoreCache, PyIPersistStream, or PyIPropertyBag
+      riid(win32typing.PyIID):The interface to createCommentsMay also be used to create PyINamedPropertyStore, PyIPropertyStoreCache, PyIPersistStream, or PyIPropertyBag
 
 Returns:
 
-      PyIPropertyStore
+      win32typing.PyIPropertyStore
         
     """
     pass
         
 
-def PSCreatePropertyStoreFromPropertySetStorage(pss:'PyIPropertySetStorage',Mode:'int',riid:'PyIID') -> 'PyIPropertyStore':
+def PSCreatePropertyStoreFromPropertySetStorage(pss:'win32typing.PyIPropertySetStorage',Mode:'typing.Any',riid:'win32typing.PyIID') -> 'win32typing.PyIPropertyStore':
     """
     None
 
 Args:
 
-      pss(PyIPropertySetStorage):Property container to be adapted
-      Mode(int):Read or write mode, shellcon.STGM_*.  Must match mode used to open input interface.
-      riid(PyIID):The interface to createCommentsThis function does not work for the NTFS property storage implementation based on alternate data streams.
+      pss(win32typing.PyIPropertySetStorage):Property container to be adapted
+      Mode(typing.Any):Read or write mode, shellcon.STGM_*.  Must match mode used to open input interface.
+      riid(win32typing.PyIID):The interface to createCommentsThis function does not work for the NTFS property storage implementation based on alternate data streams.
 
 Returns:
 
-      PyIPropertyStore
+      win32typing.PyIPropertyStore
         
     """
     pass
         
 
-def PSLookupPropertyHandlerCLSID(FilePath:'str') -> 'PyIID':
+def PSLookupPropertyHandlerCLSID(FilePath:'typing.Any') -> 'win32typing.PyIID':
     """
     Returns the GUID of the property handler for a file
 
 Args:
 
-      FilePath(str):Name of fileCommentsIf no handler is found, the returned error code can be deceptive as it seems to indicate that the file itself was not found
+      FilePath(typing.Any):Name of fileCommentsIf no handler is found, the returned error code can be deceptive as it seems to indicate that the file itself was not found
 
 Returns:
 
-      PyIID
+      win32typing.PyIID
         
     """
     pass
         
 
-def SHGetPropertyStoreForWindow(hwnd:'int',riid:'PyIID') -> 'PyIPropertyStore':
+def SHGetPropertyStoreForWindow(hwnd:'int',riid:'win32typing.PyIID') -> 'win32typing.PyIPropertyStore':
     """
     Retrieves a collection of a window's properties
 
 Args:
 
       hwnd(int):Handle to a window
-      riid(PyIID):The interface to createCommentsRequires Windows 7 or later.Return ValueThe returned store can be used to set the System.AppUserModel.ID property that determines how windows are grouped on the taskbar
+      riid(win32typing.PyIID):The interface to createCommentsRequires Windows 7 or later.Return ValueThe returned store can be used to set the System.AppUserModel.ID property that determines how windows are grouped on the taskbar
 
 Returns:
 
-      PyIPropertyStore:The interface to create
+      win32typing.PyIPropertyStore:The interface to create
 Comments
 
 Requires Windows 7 or later.
@@ -248,7 +248,7 @@ are grouped on the taskbar
     pass
         
 
-def PSGetPropertyFromPropertyStorage(ps:'Any',key:'PyPROPERTYKEY') -> 'PyPROPVARIANT':
+def PSGetPropertyFromPropertyStorage(ps:'typing.Any',key:'win32typing.PyPROPERTYKEY') -> 'win32typing.PyPROPVARIANT':
     """
     Extracts a property value from a serialized 
 
@@ -256,18 +256,18 @@ buffer by key
 
 Args:
 
-      ps(Any):Bytes or buffer (or str in python 2) containing a serialized property set (see PyIPersistSerializedPropStorage::GetPropertyStorage)
-      key(PyPROPERTYKEY):Property to return
+      ps(typing.Any):Bytes or buffer (or str in python 2) containing a serialized property set (see PyIPersistSerializedPropStorage::GetPropertyStorage)
+      key(win32typing.PyPROPERTYKEY):Property to return
 
 Returns:
 
-      PyPROPVARIANT
+      win32typing.PyPROPVARIANT
         
     """
     pass
         
 
-def PSGetNamedPropertyFromPropertyStorage(ps:'Any',name:'str') -> 'PyPROPVARIANT':
+def PSGetNamedPropertyFromPropertyStorage(ps:'typing.Any',name:'typing.Any') -> 'win32typing.PyPROPVARIANT':
     """
     Extracts a property value from a serialized 
 
@@ -275,37 +275,37 @@ buffer by name
 
 Args:
 
-      ps(Any):Bytes or buffer (or str in python 2) containing a serialized property set (see PyIPersistSerializedPropStorage::GetPropertyStorage)
-      name(str):Property to return
+      ps(typing.Any):Bytes or buffer (or str in python 2) containing a serialized property set (see PyIPersistSerializedPropStorage::GetPropertyStorage)
+      name(typing.Any):Property to return
 
 Returns:
 
-      PyPROPVARIANT
+      win32typing.PyPROPVARIANT
         
     """
     pass
         
 
-def PSCreateSimplePropertyChange(flags:'int',key:'PyPROPERTYKEY',val:'PyPROPVARIANT',riid:'PyIID') -> 'PyIPropertyChange':
+def PSCreateSimplePropertyChange(flags:'typing.Any',key:'win32typing.PyPROPERTYKEY',val:'win32typing.PyPROPVARIANT',riid:'win32typing.PyIID') -> 'win32typing.PyIPropertyChange':
     """
     None
 
 Args:
 
-      flags(int):The change operation, pscon.PKA_*
-      key(PyPROPERTYKEY):The property key
-      val(PyPROPVARIANT):The value that the change operation will apply
-      riid(PyIID):The interface to return.
+      flags(typing.Any):The change operation, pscon.PKA_*
+      key(win32typing.PyPROPERTYKEY):The property key
+      val(win32typing.PyPROPVARIANT):The value that the change operation will apply
+      riid(win32typing.PyIID):The interface to return.
 
 Returns:
 
-      PyIPropertyChange
+      win32typing.PyIPropertyChange
         
     """
     pass
         
 
-def PSCreatePropertyChangeArray() -> 'PyIPropertyChangeArray':
+def PSCreatePropertyChangeArray() -> 'win32typing.PyIPropertyChangeArray':
     """
     None
 
@@ -315,22 +315,22 @@ Args:
 
 Returns:
 
-      PyIPropertyChangeArray
+      win32typing.PyIPropertyChangeArray
         
     """
     pass
         
 
-def SHSetDefaultProperties(hwnd:'int',Item:'PyIShellItem',FileOpFlags:'int'=0,Sink:'PyGFileOperationProgressSink'=None) -> 'None':
+def SHSetDefaultProperties(hwnd:'int',Item:'win32typing.PyIShellItem',FileOpFlags:'typing.Any'=0,Sink:'win32typing.PyGFileOperationProgressSink'=None) -> 'None':
     """
     Sets the default properties for a file.
 
 Args:
 
       hwnd(int):Parent window for any notifications, can be None
-      Item(PyIShellItem):Shell item whose defaults are to be set
-      FileOpFlags(int):File operation flags, as used with PyIFileOperation::SetOperationFlags
-      Sink(PyGFileOperationProgressSink):Event sink to receive notificationsCommentsDefault properties are registered by filetype under SetDefaultsFor value.
+      Item(win32typing.PyIShellItem):Shell item whose defaults are to be set
+      FileOpFlags(typing.Any):File operation flags, as used with PyIFileOperation::SetOperationFlags
+      Sink(win32typing.PyGFileOperationProgressSink):Event sink to receive notificationsCommentsDefault properties are registered by filetype under SetDefaultsFor value.
 
 Returns:
 

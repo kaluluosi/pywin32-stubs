@@ -1,10 +1,10 @@
 __all__=['', 'odbc', 'SQLDataSources']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A Python wrapper around the ODBC API."""
 
 
-def odbc(connectionString:'str') -> 'connection':
+def odbc(connectionString:'str') -> 'win32typing.connection':
     """
     Creates an ODBC connection
 
@@ -14,23 +14,23 @@ Args:
 
 Returns:
 
-      connection
+      win32typing.connection
         
     """
     pass
         
 
-def SQLDataSources(direction:'int') -> 'Tuple[Any, Union[None, Any]]':
+def SQLDataSources(direction:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Union[typing.Any]]':
     """
     Enumerates ODBC data sources
 
 Args:
 
-      direction(int):One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
+      direction(typing.Any):One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
 
 Returns:
 
-      Tuple[Any, Union[None, Any]]:One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
+      typing.Tuple[typing.Any, typing.Union[typing.Any]]:One of SQL_FETCH_* flags indicating how to retrieve data sourcesReturn ValueThe result is None when SQL_NO_DATA is returned from ODBC.
 
         
     """

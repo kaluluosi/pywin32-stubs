@@ -1,74 +1,74 @@
 __all__=['', 'ADsOpenObject', 'ADsGetObject', 'ADsBuildEnumerator', 'ADsEnumerateNext', 'ADsGetLastError', 'StringAsDS_SELECTION_LIST', 'DSOP_SCOPE_INIT_INFOs']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A COM interface to ADSI"""
 
 
-def ADsOpenObject(path:'Any',username:'Any',password:'Any',iid:'PyIID',reserved:'int'=0) -> 'Any':
+def ADsOpenObject(path:'typing.Any',username:'typing.Any',password:'typing.Any',iid:'win32typing.PyIID',reserved:'typing.Any'=0) -> 'typing.Any':
     """
     Binds to an ADSI object using explicit username and password credentials.
 
 Args:
 
-      path(Any):
-      username(Any):
-      password(Any):
-      iid(PyIID):The requested interface
-      reserved(int):
+      path(typing.Any):
+      username(typing.Any):
+      password(typing.Any):
+      iid(win32typing.PyIID):The requested interface
+      reserved(typing.Any):
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def ADsGetObject(path:'Any',iid:'PyIID') -> 'Any':
+def ADsGetObject(path:'typing.Any',iid:'win32typing.PyIID') -> 'typing.Any':
     """
     Binds to an object given its path and a specified interface identifier (IID).
 
 Args:
 
-      path(Any):
-      iid(PyIID):The requested interface
+      path(typing.Any):
+      iid(win32typing.PyIID):The requested interface
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def ADsBuildEnumerator(container:'PyIADsContainer') -> 'Any':
+def ADsBuildEnumerator(container:'win32typing.PyIADsContainer') -> 'typing.Any':
     """
     Builds an enumerator object for the specified ADSI container object.
 
 Args:
 
-      container(PyIADsContainer):
+      container(win32typing.PyIADsContainer):
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def ADsEnumerateNext(enum:'Any',num:'int'=1) -> 'Any':
+def ADsEnumerateNext(enum:'typing.Any',num:'typing.Any'=1) -> 'typing.Any':
     """
     None
 
 Args:
 
-      enum(Any):The enumerator.
-      num(int):Number of items to retrieve.Return ValueThe result is a tuple of Python objects converted from Variants, one for each element returned.  Note that if zero elements are returned, it is not considered an error condition - an empty tuple is simply returned.
+      enum(typing.Any):The enumerator.
+      num(typing.Any):Number of items to retrieve.Return ValueThe result is a tuple of Python objects converted from Variants, one for each element returned.  Note that if zero elements are returned, it is not considered an error condition - an empty tuple is simply returned.
 
 Returns:
 
-      Any:Number of items to retrieve.
+      typing.Any:Number of items to retrieve.
 Return ValueThe result is a tuple of Python objects converted from Variants, 
 
 one for each element returned.  Note that if zero elements are returned, it is not considered 
@@ -80,7 +80,7 @@ an error condition - an empty tuple is simply returned.
     pass
         
 
-def ADsGetLastError() -> 'Tuple[int, Any, Any]':
+def ADsGetLastError() -> 'typing.Tuple[typing.Any, typing.Any, typing.Any]':
     """
     None
 
@@ -90,39 +90,39 @@ Args:
 
 Returns:
 
-      Tuple[int, Any, Any]
+      typing.Tuple[typing.Any, typing.Any, typing.Any]
         
     """
     pass
         
 
-def StringAsDS_SELECTION_LIST(buf:'str') -> 'Any':
+def StringAsDS_SELECTION_LIST(buf:'typing.Any') -> 'typing.Any':
     """
     None
 
 Args:
 
-      buf(str):The raw buffer
+      buf(typing.Any):The raw buffer
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass
         
 
-def DSOP_SCOPE_INIT_INFOs(size:'int') -> 'Any':
+def DSOP_SCOPE_INIT_INFOs(size:'typing.Any') -> 'typing.Any':
     """
     None
 
 Args:
 
-      size(int):The number of PyDSOP_SCOPE_INIT_INFO objects to create in the array.
+      size(typing.Any):The number of PyDSOP_SCOPE_INIT_INFO objects to create in the array.
 
 Returns:
 
-      Any
+      typing.Any
         
     """
     pass

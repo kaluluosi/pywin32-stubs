@@ -27,7 +27,7 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
 
         if type_name.startswith("[") and type_name.endswith("...]"):
 
-            return f"List[{type_cvt(type_name[1:-6])}]"
+            return f"typing.List[{type_cvt(type_name[1:-6])}]"
         elif ',' in type_name:
             type_name = type_name.replace(r"(", "").replace(r")", "")
             type_names = type_name.replace(' ', '').split(',')
@@ -38,35 +38,36 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
             
             if more:
                 _types = type_cvt(','.join(type_names))
-                return f"Tuple[{list2str(_types)}, ...]"
+                return f"typing.Tuple[{list2str(_types)}, ...]"
             else:
                 types = [type_cvt(type_name.strip()) for type_name in type_names]
-                return f"Tuple{list2str(types)}"
+                return f"typing.Tuple{list2str(types)}"
         elif '/' in type_name:
             return type_cvt(type_name.split('/'))
 
         type_map: Dict[str, Any] = {}
         type_map.update(builtins.__dict__)
-        type_map.update(typing.__dict__)
-        type_map.update(win32typing.__dict__)
 
         custom_cvt = {
             "string": "str",
             "float":"float",
-            "object": "Any",
+            "object": "typing.Any",
             "PyHANDLE": "int",
             "PyUnicode": "str",
-            "int tuple": "Tuple[int]",
+            "int tuple": "typing.Tuple[int]",
             "integer":"int",
             "character":"str",
-            "any":"Any",
+            "any":"typing.Any",
         }
+        
         if type_name in custom_cvt:
             return custom_cvt[type_name]
-        elif type_name in type_map:
-            return type_name
+        elif type_name in typing.__dict__:
+            return "typing."+type_name
+        elif type_name in win32typing.__dict__:
+            return "win32typing."+type_name
 
-        return "Any"
+        return "typing.Any"
     elif isinstance(type_name, Iterable):
         if len(type_name) > 1:
             types = []
@@ -74,8 +75,8 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
                 types.append(type_cvt(name))
             # 去个重
             types = list(set(types))
-            return f"Union{list2str(types)}"
+            return f"typing.Union{list2str(types)}"
         else:
             return type_cvt(type_name[0])
 
-    return "Any"
+    return "typing.Any"

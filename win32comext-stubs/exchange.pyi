@@ -1,33 +1,33 @@
 __all__=['', 'HrGetExchangeStatus', 'HrGetMailboxDN', 'HrGetServerDN', 'HrMAPIFindDefaultMsgStore', 'HrMAPIFindIPMSubtree', 'HrMAPIFindInbox', 'HrMAPIFindSubfolderEx', 'HrMAPIFindFolder', 'HrMAPIFindFolderEx', 'HrMAPIFindStore', 'HrCreateProfileName', 'HrCreateDirEntryIdEx', 'HrFindExchangeGlobalAddressList', 'HrMailboxLogon', 'HrMailboxLogoff', 'HrMAPIOpenFolderEx', 'HrMAPISetPropBoolean', 'HrMAPISetPropLong', 'HrOpenExchangePublicStore', 'HrOpenExchangePrivateStore', 'HrOpenExchangePublicFolders', 'HrOpenSessionObject', 'HrOpenSiteContainer', 'HrOpenSiteContainerAddressing', 'OPENSTORE_HOME_LOGON', 'OPENSTORE_OVERRIDE_HOME_MDB', 'OPENSTORE_PUBLIC', 'OPENSTORE_TAKE_OWNERSHIP', 'OPENSTORE_USE_ADMIN_PRIVILEGE']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A COM interface to Exchange's API"""
 
 
-def HrGetExchangeStatus(server:'Union[str]') -> 'Tuple[int, int]':
+def HrGetExchangeStatus(server:'typing.Union[str]') -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Obtains the current state of the server on a computer.
 
 Args:
 
-      server(Union[str]):The name of the server to query.Return ValueThe result is a tuple of serviceState, serverState
+      server(typing.Union[str]):The name of the server to query.Return ValueThe result is a tuple of serviceState, serverState
 
 Returns:
 
-      Tuple[int, int]:The name of the server to query.Return ValueThe result is a tuple of serviceState, serverState
+      typing.Tuple[typing.Any, typing.Any]:The name of the server to query.Return ValueThe result is a tuple of serviceState, serverState
 
         
     """
     pass
         
 
-def HrGetMailboxDN(session:'Any') -> 'str':
+def HrGetMailboxDN(session:'typing.Any') -> 'str':
     """
     Retrieves the distinguished name (DN) for a mailbox
 
 Args:
 
-      session(Any):The root folder.
+      session(typing.Any):The root folder.
 
 Returns:
 
@@ -37,13 +37,13 @@ Returns:
     pass
         
 
-def HrGetServerDN(session:'Any') -> 'str':
+def HrGetServerDN(session:'typing.Any') -> 'str':
     """
     Retrieves the distinguished name (DN) for a server
 
 Args:
 
-      session(Any):The root folder.
+      session(typing.Any):The root folder.
 
 Returns:
 
@@ -53,13 +53,13 @@ Returns:
     pass
         
 
-def HrMAPIFindDefaultMsgStore(session:'PyIMAPISession') -> 'str':
+def HrMAPIFindDefaultMsgStore(session:'win32typing.PyIMAPISession') -> 'str':
     """
     Retrieves the entry identifier of the default information store.
 
 Args:
 
-      session(PyIMAPISession):
+      session(win32typing.PyIMAPISession):
 
 Returns:
 
@@ -69,13 +69,13 @@ Returns:
     pass
         
 
-def HrMAPIFindIPMSubtree(msgStore:'PyIMsgStore') -> 'str':
+def HrMAPIFindIPMSubtree(msgStore:'win32typing.PyIMsgStore') -> 'str':
     """
     Retrieves the entry ID of the IPM (interpersonal message) subtree folder
 
 Args:
 
-      msgStore(PyIMsgStore):
+      msgStore(win32typing.PyIMsgStore):
 
 Returns:
 
@@ -85,13 +85,13 @@ Returns:
     pass
         
 
-def HrMAPIFindInbox(msgStore:'PyIMsgStore') -> 'str':
+def HrMAPIFindInbox(msgStore:'win32typing.PyIMsgStore') -> 'str':
     """
     Retrieves the Entry ID of the IPM inbox folder
 
 Args:
 
-      msgStore(PyIMsgStore):
+      msgStore(win32typing.PyIMsgStore):
 
 Returns:
 
@@ -101,31 +101,31 @@ Returns:
     pass
         
 
-def HrMAPIFindSubfolderEx(rootFolder:'PyIMAPIFolder',sep:'Union[str]',name:'Union[str]') -> 'PyIMsgStore':
+def HrMAPIFindSubfolderEx(rootFolder:'win32typing.PyIMAPIFolder',sep:'typing.Union[str]',name:'typing.Union[str]') -> 'win32typing.PyIMsgStore':
     """
     Retrieves a subfolder in an information store using the hierarchical path name of the folder.
 
 Args:
 
-      rootFolder(PyIMAPIFolder):The root folder.
-      sep(Union[str]):The folder seperator character.
-      name(Union[str]):The folder name
+      rootFolder(win32typing.PyIMAPIFolder):The root folder.
+      sep(typing.Union[str]):The folder seperator character.
+      name(typing.Union[str]):The folder name
 
 Returns:
 
-      PyIMsgStore
+      win32typing.PyIMsgStore
         
     """
     pass
         
 
-def HrMAPIFindFolder(folder:'PyIMAPIFolder',name:'str') -> 'str':
+def HrMAPIFindFolder(folder:'win32typing.PyIMAPIFolder',name:'str') -> 'str':
     """
     Retrieves the entry ID for a folder in an information store using the hierarchical path name of the folder.
 
 Args:
 
-      folder(PyIMAPIFolder):The folder to search
+      folder(win32typing.PyIMAPIFolder):The folder to search
       name(str):Name of the folder
 
 Returns:
@@ -136,13 +136,13 @@ Returns:
     pass
         
 
-def HrMAPIFindFolderEx(msgStore:'PyIMsgStore',sepString:'str',path:'str') -> 'str':
+def HrMAPIFindFolderEx(msgStore:'win32typing.PyIMsgStore',sepString:'str',path:'str') -> 'str':
     """
     Retrieves the entry ID of a folder in an information store using the hierarchical path name of the folder.
 
 Args:
 
-      msgStore(PyIMsgStore):The folder to search
+      msgStore(win32typing.PyIMsgStore):The folder to search
       sepString(str):The character seperating the folder names - eg '\\'
       path(str):Path to the folder
 
@@ -154,30 +154,30 @@ Returns:
     pass
         
 
-def HrMAPIFindStore(session:'PyIMAPISession',name:'str') -> 'PyIMsgStore':
+def HrMAPIFindStore(session:'win32typing.PyIMAPISession',name:'str') -> 'win32typing.PyIMsgStore':
     """
     Retrieves a pointer to the entry identifier of an information store from the display name of the store.
 
 Args:
 
-      session(PyIMAPISession):
+      session(win32typing.PyIMAPISession):
       name(str):
 
 Returns:
 
-      PyIMsgStore
+      win32typing.PyIMsgStore
         
     """
     pass
         
 
-def HrCreateProfileName(profPrefix:'Union[str]') -> 'str':
+def HrCreateProfileName(profPrefix:'typing.Union[str]') -> 'str':
     """
     Creates a profile with the specified name
 
 Args:
 
-      profPrefix(Union[str]):A prefix for the new profile.
+      profPrefix(typing.Union[str]):A prefix for the new profile.
 
 Returns:
 
@@ -187,13 +187,13 @@ Returns:
     pass
         
 
-def HrCreateDirEntryIdEx(addrBook:'PyIAddrBook',distinguishedName:'str') -> 'str':
+def HrCreateDirEntryIdEx(addrBook:'win32typing.PyIAddrBook',distinguishedName:'str') -> 'str':
     """
     Creates a directory identifier for a MAPI object, given the address of the object in the directory
 
 Args:
 
-      addrBook(PyIAddrBook):The address book interface
+      addrBook(win32typing.PyIAddrBook):The address book interface
       distinguishedName(str):The dn of the object to obtain the entry ID for.
 
 Returns:
@@ -204,13 +204,13 @@ Returns:
     pass
         
 
-def HrFindExchangeGlobalAddressList(addrBook:'PyIAddrBook') -> 'str':
+def HrFindExchangeGlobalAddressList(addrBook:'win32typing.PyIAddrBook') -> 'str':
     """
     Retrieves the entry identifier of the global address list (GAL) container in the address book.
 
 Args:
 
-      addrBook(PyIAddrBook):The interface containing the address book
+      addrBook(win32typing.PyIAddrBook):The interface containing the address book
 
 Returns:
 
@@ -220,32 +220,32 @@ Returns:
     pass
         
 
-def HrMailboxLogon(session:'PyIMAPISession',msgStore:'PyIMsgStore',msgStoreDN:'Union[str]',mailboxDN:'Union[str]') -> 'PyIMsgStore':
+def HrMailboxLogon(session:'win32typing.PyIMAPISession',msgStore:'win32typing.PyIMsgStore',msgStoreDN:'typing.Union[str]',mailboxDN:'typing.Union[str]') -> 'win32typing.PyIMsgStore':
     """
     Logs on a server and mailbox.
 
 Args:
 
-      session(PyIMAPISession):The session object
-      msgStore(PyIMsgStore):
-      msgStoreDN(Union[str]):
-      mailboxDN(Union[str]):
+      session(win32typing.PyIMAPISession):The session object
+      msgStore(win32typing.PyIMsgStore):
+      msgStoreDN(typing.Union[str]):
+      mailboxDN(typing.Union[str]):
 
 Returns:
 
-      PyIMsgStore
+      win32typing.PyIMsgStore
         
     """
     pass
         
 
-def HrMailboxLogoff(inbox:'PyIMsgStore') -> 'None':
+def HrMailboxLogoff(inbox:'win32typing.PyIMsgStore') -> 'None':
     """
     Logs off a server and mailbox.
 
 Args:
 
-      inbox(PyIMsgStore):The open inbox.
+      inbox(win32typing.PyIMsgStore):The open inbox.
 
 Returns:
 
@@ -255,32 +255,32 @@ Returns:
     pass
         
 
-def HrMAPIOpenFolderEx(msgStore:'PyIMsgStore',sep:'Union[str]',name:'Union[str]') -> 'PyIMAPIFolder':
+def HrMAPIOpenFolderEx(msgStore:'win32typing.PyIMsgStore',sep:'typing.Union[str]',name:'typing.Union[str]') -> 'win32typing.PyIMAPIFolder':
     """
     Opens a folder in the information store from the hierarchical path name of the folder.
 
 Args:
 
-      msgStore(PyIMsgStore):
-      sep(Union[str]):The folder seperator character.
-      name(Union[str]):The folder name
+      msgStore(win32typing.PyIMsgStore):
+      sep(typing.Union[str]):The folder seperator character.
+      name(typing.Union[str]):The folder name
 
 Returns:
 
-      PyIMAPIFolder
+      win32typing.PyIMAPIFolder
         
     """
     pass
         
 
-def HrMAPISetPropBoolean(obj:'PyIMAPIProp',tag:'int') -> 'None':
+def HrMAPISetPropBoolean(obj:'win32typing.PyIMAPIProp',tag:'typing.Any') -> 'None':
     """
     Sets a boolean property.
 
 Args:
 
-      obj(PyIMAPIProp):The object to set
-      tag(int):The property tag
+      obj(win32typing.PyIMAPIProp):The object to set
+      tag(typing.Any):The property tag
 
 Returns:
 
@@ -290,14 +290,14 @@ Returns:
     pass
         
 
-def HrMAPISetPropLong(obj:'PyIMAPIProp',tag:'int') -> 'None':
+def HrMAPISetPropLong(obj:'win32typing.PyIMAPIProp',tag:'typing.Any') -> 'None':
     """
     Sets a long property.
 
 Args:
 
-      obj(PyIMAPIProp):The object to set
-      tag(int):The property tag
+      obj(win32typing.PyIMAPIProp):The object to set
+      tag(typing.Any):The property tag
 
 Returns:
 
@@ -307,97 +307,97 @@ Returns:
     pass
         
 
-def HrOpenExchangePublicStore(session:'PyIMAPISession') -> 'PyIMsgStore':
+def HrOpenExchangePublicStore(session:'win32typing.PyIMAPISession') -> 'win32typing.PyIMsgStore':
     """
     Retrieves an interface to the public information store provider.
 
 Args:
 
-      session(PyIMAPISession):The MAPI session object
+      session(win32typing.PyIMAPISession):The MAPI session object
 
 Returns:
 
-      PyIMsgStore
+      win32typing.PyIMsgStore
         
     """
     pass
         
 
-def HrOpenExchangePrivateStore(session:'PyIMAPISession') -> 'PyIMsgStore':
+def HrOpenExchangePrivateStore(session:'win32typing.PyIMAPISession') -> 'win32typing.PyIMsgStore':
     """
     Locates the primary user information store provider.
 
 Args:
 
-      session(PyIMAPISession):The MAPI session object
+      session(win32typing.PyIMAPISession):The MAPI session object
 
 Returns:
 
-      PyIMsgStore
+      win32typing.PyIMsgStore
         
     """
     pass
         
 
-def HrOpenExchangePublicFolders(store:'PyIMsgStore') -> 'PyIMAPIFolder':
+def HrOpenExchangePublicFolders(store:'win32typing.PyIMsgStore') -> 'win32typing.PyIMAPIFolder':
     """
     Opens the root of the public folder hierarchy in the public information store.
 
 Args:
 
-      store(PyIMsgStore):
+      store(win32typing.PyIMsgStore):
 
 Returns:
 
-      PyIMAPIFolder
+      win32typing.PyIMAPIFolder
         
     """
     pass
         
 
-def HrOpenSessionObject(session:'PyIMAPISession') -> 'PyIMAPIProp':
+def HrOpenSessionObject(session:'win32typing.PyIMAPISession') -> 'win32typing.PyIMAPIProp':
     """
     None
 
 Args:
 
-      session(PyIMAPISession):The MAPI session object
+      session(win32typing.PyIMAPISession):The MAPI session object
 
 Returns:
 
-      PyIMAPIProp
+      win32typing.PyIMAPIProp
         
     """
     pass
         
 
-def HrOpenSiteContainer(session:'PyIMAPISession') -> 'PyIMAPIProp':
+def HrOpenSiteContainer(session:'win32typing.PyIMAPISession') -> 'win32typing.PyIMAPIProp':
     """
     None
 
 Args:
 
-      session(PyIMAPISession):The MAPI session object
+      session(win32typing.PyIMAPISession):The MAPI session object
 
 Returns:
 
-      PyIMAPIProp
+      win32typing.PyIMAPIProp
         
     """
     pass
         
 
-def HrOpenSiteContainerAddressing(session:'PyIMAPISession') -> 'PyIMAPIProp':
+def HrOpenSiteContainerAddressing(session:'win32typing.PyIMAPISession') -> 'win32typing.PyIMAPIProp':
     """
     None
 
 Args:
 
-      session(PyIMAPISession):The MAPI session object
+      session(win32typing.PyIMAPISession):The MAPI session object
 
 Returns:
 
-      PyIMAPIProp
+      win32typing.PyIMAPIProp
         
     """
     pass

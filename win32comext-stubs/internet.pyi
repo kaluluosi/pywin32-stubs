@@ -1,36 +1,36 @@
 __all__=['', 'CoInternetCreateSecurityManager', 'CoInternetIsFeatureEnabled', 'CoInternetSetFeatureEnabled', 'FEATURE_ADDON_MANAGEMENT', 'FEATURE_BEHAVIORS', 'FEATURE_DISABLE_MK_PROTOCOL', 'FEATURE_ENTRY_COUNT', 'FEATURE_GET_URL_DOM_FILEPATH_UNENCODED', 'FEATURE_HTTP_USERNAME_PASSWORD_DISABLE', 'FEATURE_LOCALMACHINE_LOCKDOWN', 'FEATURE_MIME_HANDLING', 'FEATURE_MIME_SNIFFING', 'FEATURE_OBJECT_CACHING', 'FEATURE_PROTOCOL_LOCKDOWN', 'FEATURE_RESTRICT_ACTIVEXINSTALL', 'FEATURE_RESTRICT_FILEDOWNLOAD', 'FEATURE_SAFE_BINDTOOBJECT', 'FEATURE_SECURITYBAND', 'FEATURE_UNC_SAVEDFILECHECK', 'FEATURE_VALIDATE_NAVIGATE_URL', 'FEATURE_WEBOC_POPUPMANAGEMENT', 'FEATURE_WINDOW_RESTRICTIONS', 'FEATURE_ZONE_ELEVATION', 'GET_FEATURE_FROM_PROCESS', 'GET_FEATURE_FROM_REGISTRY', 'GET_FEATURE_FROM_THREAD', 'GET_FEATURE_FROM_THREAD_INTERNET', 'GET_FEATURE_FROM_THREAD_INTRANET', 'GET_FEATURE_FROM_THREAD_LOCALMACHINE', 'GET_FEATURE_FROM_THREAD_RESTRICTED', 'GET_FEATURE_FROM_THREAD_TRUSTED', 'SET_FEATURE_IN_REGISTRY', 'SET_FEATURE_ON_PROCESS', 'SET_FEATURE_ON_THREAD', 'SET_FEATURE_ON_THREAD_INTERNET', 'SET_FEATURE_ON_THREAD_INTRANET', 'SET_FEATURE_ON_THREAD_LOCALMACHINE', 'SET_FEATURE_ON_THREAD_RESTRICTED', 'SET_FEATURE_ON_THREAD_TRUSTED']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """A module, encapsulating the ActiveX Internet interfaces"""
 
 
-def CoInternetCreateSecurityManager(reserved:'int') -> 'PyIInternetSecurityManager':
+def CoInternetCreateSecurityManager(reserved:'typing.Any') -> 'win32typing.PyIInternetSecurityManager':
     """
     None
 
 Args:
 
-      reserved(int):
+      reserved(typing.Any):
 
 Returns:
 
-      PyIInternetSecurityManager
+      win32typing.PyIInternetSecurityManager
         
     """
     pass
         
 
-def CoInternetIsFeatureEnabled(flags:'int') -> 'bool':
+def CoInternetIsFeatureEnabled(flags:'typing.Any') -> 'typing.Any':
     """
     None
 
 Args:
 
-      flags(int):Return ValueReturns true for S_OK, False for other non-error hresults, or raises a com_error.
+      flags(typing.Any):Return ValueReturns true for S_OK, False for other non-error hresults, or raises a com_error.
 
 Returns:
 
-      bool:Return ValueReturns true for S_OK, False for other non-error hresults, or 
+      typing.Any:Return ValueReturns true for S_OK, False for other non-error hresults, or 
 
 raises a com_error.
 
@@ -39,18 +39,18 @@ raises a com_error.
     pass
         
 
-def CoInternetSetFeatureEnabled(flags:'int',enable:'bool') -> 'int':
+def CoInternetSetFeatureEnabled(flags:'typing.Any',enable:'typing.Any') -> 'typing.Any':
     """
     None
 
 Args:
 
-      flags(int):
-      enable(bool):
+      flags(typing.Any):
+      enable(typing.Any):
 
 Returns:
 
-      int
+      typing.Any
         
     """
     pass

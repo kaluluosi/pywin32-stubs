@@ -13,7 +13,7 @@ isapi_objects = ObjectList("isapi_objects.html")
 objects_file = os.path.join("stub_generator","win32typing.py")
 with open(objects_file, 'w', encoding='utf-8') as f:
     lines = []
-    lines.append("from typing import *")
+    lines.append("import typing")
     _all = ['']
     for _class in win32_objects:
         if not _class.name.endswith("*"):

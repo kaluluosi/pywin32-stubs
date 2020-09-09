@@ -1,6 +1,6 @@
 __all__=['', 'HrInstallService', 'HrInstallMailboxAgent', 'HrCreateMailboxAgentProfile', 'HrCreateGatewayProfile', 'HrMailboxAgentExists', 'HrAdminProgramExists', 'HrRemoveMailboxAgent', 'HrRemoveProfile', 'HrEnumOrganizations', 'HrEnumSites', 'HrEnumContainers', 'HrEnumSiteAdmins', 'HrGetServiceAccountName']
-from typing import *
-from win32helper.win32typing import *
+import typing
+from win32helper import win32typing
 """An COM interface to Exchange's DAPI"""
 
 
@@ -138,7 +138,7 @@ Returns:
     pass
         
 
-def HrEnumOrganizations(rootDN:'str',server:'str') -> 'List[str]':
+def HrEnumOrganizations(rootDN:'str',server:'str') -> 'typing.List[str]':
     """
     Lists the names of the organizations on the server.
 
@@ -149,13 +149,13 @@ Args:
 
 Returns:
 
-      List[str]
+      typing.List[str]
         
     """
     pass
         
 
-def HrEnumSites(server:'str',organizationDN:'str') -> 'List[str]':
+def HrEnumSites(server:'str',organizationDN:'str') -> 'typing.List[str]':
     """
     Lists the names of the sites in an organization.
 
@@ -166,13 +166,13 @@ Args:
 
 Returns:
 
-      List[str]
+      typing.List[str]
         
     """
     pass
         
 
-def HrEnumContainers(server:'str',siteDN:'str',fSubtree:'int') -> 'List[str]':
+def HrEnumContainers(server:'str',siteDN:'str',fSubtree:'typing.Any') -> 'typing.List[str]':
     """
     Lists the names of the containers on the server
 
@@ -180,17 +180,17 @@ Args:
 
       server(str):The name of the server
       siteDN(str):Distinguished name (DN) of the site.
-      fSubtree(int):
+      fSubtree(typing.Any):
 
 Returns:
 
-      List[str]
+      typing.List[str]
         
     """
     pass
         
 
-def HrEnumSiteAdmins(server:'str',siteDN:'str') -> 'List[str]':
+def HrEnumSiteAdmins(server:'str',siteDN:'str') -> 'typing.List[str]':
     """
     Lists the administrators for a site.
 
@@ -201,7 +201,7 @@ Args:
 
 Returns:
 
-      List[str]
+      typing.List[str]
         
     """
     pass
