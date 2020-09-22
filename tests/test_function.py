@@ -28,12 +28,12 @@ class FunctionTest(TestCase):
         param_results = [
             {
                 "name":"exceptionHandler",
-                "type":"Any",
+                "type":"typing.Any",
                 "desc":"An object which will be called when a win32 \n\nexception occurs."
             },
             {
                 "name":"func",
-                "type":"Any",
+                "type":"typing.Any",
                 "desc":"The function call call under the protection of the Win32 \n\nexception handler."
             },
             {
@@ -80,7 +80,7 @@ class FunctionTest(TestCase):
 
     def test_return_type(self):
 
-        self.assertEqual(self.method.return_type, "Any", '返回类型')
+        self.assertEqual(self.method.return_type, "typing.Any", '返回类型')
 
     def test_no_return(self):
         method = Function("win32api__AbortSystemShutdown_meth.html")

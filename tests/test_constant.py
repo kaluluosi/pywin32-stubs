@@ -1,7 +1,6 @@
-from unittest import TestCase
+from unittest import TestCase, skip
 from stub_generator.constant import Constant, ConstantList
-from stub_generator.function import Function
-from stub_generator.module import Module, ModuleList
+
 
 class ConstantTest(TestCase):
 

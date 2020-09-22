@@ -50,7 +50,6 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
 
         custom_cvt = {
             "string": "str",
-            "float":"float",
             "object": "typing.Any",
             "PyHANDLE": "int",
             "PyUnicode": "str",
@@ -66,6 +65,8 @@ def type_cvt(type_name: Union[str, Sequence[str]]) -> str:
             return "typing."+type_name
         elif type_name in win32typing.__dict__:
             return "win32typing."+type_name
+        elif type_name in builtins.__dict__:
+            return type_name
 
         return "typing.Any"
     elif isinstance(type_name, Iterable):

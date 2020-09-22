@@ -64,7 +64,7 @@ class MethodTest(unittest.TestCase):
         self.assertEqual(len(list(self.method.parameters)), 1, "参数不匹配")
 
     def test_method_return_type(self):
-        self.assertEqual(self.method.return_type, "Tuple[int, PyCRYPTPROV]", "返回类型不正确")
+        self.assertEqual(self.method.return_type, "typing.Tuple[int, win32typing.PyCRYPTPROV]", "返回类型不正确")
 
     def test_multi_paramter_type(self):
         method = Method("win32file__ReadFile_meth.html")
@@ -85,7 +85,7 @@ class MethodTest(unittest.TestCase):
         paramters = list(method.parameters)
         self.assertEqual(len(paramters), 1)
         self.assertEqual(paramters[0].name, 'arg')
-        self.assertEqual(paramters[0].type, 'List[Tuple[PyIID, int, str]]')
+        self.assertEqual(paramters[0].type, 'typing.List[typing.Tuple[win32typing.PyIID, int, str]]')
 
 class ObjectListTest(unittest.TestCase):
 
