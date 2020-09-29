@@ -19,7 +19,7 @@ pywin32-stubs is generated from pywin32.chm, it contains:
 import win32gui
 import win32helper.win32con as con
 
-win32gui.MessageBox(0, "hello", 'shit', con.MB_OK)
+win32gui.MessageBox(0, "hello", 'world', con.MB_OK)
 
 ```
 
