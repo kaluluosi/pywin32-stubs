@@ -40,5 +40,5 @@ with open(objects_file, 'w', encoding='utf-8') as f:
     f.writelines(lines)
 
 
-shutil.copy(objects_file, os.path.join("win32helper", "win32typing.py"))
+shutil.copy(objects_file, os.path.join("win32helper", "win32typing.pyi"))
 
