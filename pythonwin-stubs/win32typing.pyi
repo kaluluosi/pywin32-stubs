@@ -10507,7 +10507,7 @@ class FUNCDESC(object):
 
 
       @property
-      def args(self)->'Tuple[Any, ...]':
+      def args(self)->'Tuple[ELEMDESC, ...]':
          """"""
          pass
 
@@ -10543,7 +10543,7 @@ class FUNCDESC(object):
 
 
       @property
-      def rettype(self)->'Any':
+      def rettype(self)->'ELEMDESC':
          """"""
          pass
 
@@ -11121,7 +11121,7 @@ class PyDSOP_FILTER_FLAGS(object):
 
 
       @property
-      def uplevel(self)->'Any':
+      def uplevel(self)->'PyDSOP_UPLEVEL_FILTER_FLAGS':
          """"""
          pass
 
@@ -11164,7 +11164,7 @@ class PyDSOP_SCOPE_INIT_INFO(object):
 
 
       @property
-      def filterFlags(self)->'Any':
+      def filterFlags(self)->'PyDSOP_FILTER_FLAGS':
          """"""
          pass
 
@@ -11247,14 +11247,14 @@ Returns:
          pass
 
 
-      def PreRenameItem(self,Flags:'Any',Item:'Any',NewName:'Any') -> 'None':
+      def PreRenameItem(self,Flags:'Any',Item:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each file rename
 
 Args:
 
       Flags(Any):Flags specifying copy behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Shell interface of the copied item
+      Item(PyIShellItem):Shell interface of the copied item
       NewName(Any):New display name of the item
 
 Returns:
@@ -11265,17 +11265,17 @@ Returns:
          pass
 
 
-      def PostRenameItem(self,Flags:'Any',Item:'Any',NewName:'Any',hrRename:'Any',NewlyCreated:'Any') -> 'None':
+      def PostRenameItem(self,Flags:'Any',Item:'PyIShellItem',NewName:'Any',hrRename:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each file rename
 
 Args:
 
       Flags(Any):Flags specifying rename behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Shell interface of item before rename
+      Item(PyIShellItem):Shell interface of item before rename
       NewName(Any):The new name of the item, may be mangled to resolve filename conflicts
       hrRename(Any):HRESULT of the rename operation
-      NewlyCreated(Any):Shell interface of the item after rename
+      NewlyCreated(PyIShellItem):Shell interface of the item after rename
 
 Returns:
 
@@ -11285,15 +11285,15 @@ Returns:
          pass
 
 
-      def PreMoveItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any') -> 'None':
+      def PreMoveItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each move operation
 
 Args:
 
       Flags(Any):Flags specifying move behaviour, combination of shellcon.TSF_* flags
-      Item(Any):The item to be moved
-      DestinationFolder(Any):The folder into which it will be moved
+      Item(PyIShellItem):The item to be moved
+      DestinationFolder(PyIShellItem):The folder into which it will be moved
       NewName(Any):Name of moved item, may be None if not to be changed
 
 Returns:
@@ -11304,18 +11304,18 @@ Returns:
          pass
 
 
-      def PostMoveItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any',hrMove:'Any',NewlyCreated:'Any') -> 'None':
+      def PostMoveItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any',hrMove:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each move operation
 
 Args:
 
       Flags(Any):Flags specifying move behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Interface of the item before it was moved
-      DestinationFolder(Any):The folder into which it was moved
+      Item(PyIShellItem):Interface of the item before it was moved
+      DestinationFolder(PyIShellItem):The folder into which it was moved
       NewName(Any):Name of item in its new location, may be mangled in case of conflict
       hrMove(Any):HRESULT of the move operation
-      NewlyCreated(Any):Shell interface of the item in its new location
+      NewlyCreated(PyIShellItem):Shell interface of the item in its new location
 
 Returns:
 
@@ -11325,15 +11325,15 @@ Returns:
          pass
 
 
-      def PreCopyItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any') -> 'None':
+      def PreCopyItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each copy operation
 
 Args:
 
       Flags(Any):Flags specifying copy behaviour, combination of shellcon.TSF_* flags
-      Item(Any):The item to be copied
-      DestinationFolder(Any):Folder into which it will be copied
+      Item(PyIShellItem):The item to be copied
+      DestinationFolder(PyIShellItem):Folder into which it will be copied
       NewName(Any):Name to be given to the copy, will be None if keeping original name
 
 Returns:
@@ -11344,18 +11344,18 @@ Returns:
          pass
 
 
-      def PostCopyItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any',hrCopy:'Any',NewlyCreated:'Any') -> 'None':
+      def PostCopyItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any',hrCopy:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each copy operation
 
 Args:
 
       Flags(Any):Flags specifying copy behaviour, combination of shellcon.TSF_* flags
-      Item(Any):The original item
-      DestinationFolder(Any):Folder into which it was copied
+      Item(PyIShellItem):The original item
+      DestinationFolder(PyIShellItem):Folder into which it was copied
       NewName(Any):Name of item after copy, may be mangled in case of name conflict
       hrCopy(Any):HRESULT of the copy operation
-      NewlyCreated(Any):Shell interface of the copy
+      NewlyCreated(PyIShellItem):Shell interface of the copy
 
 Returns:
 
@@ -11365,14 +11365,14 @@ Returns:
          pass
 
 
-      def PreDeleteItem(self,Flags:'Any',Item:'Any') -> 'None':
+      def PreDeleteItem(self,Flags:'Any',Item:'PyIShellItem') -> 'None':
          """
          Called before each delete operation
 
 Args:
 
       Flags(Any):Flags specifying delete behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Item to be deleted
+      Item(PyIShellItem):Item to be deleted
 
 Returns:
 
@@ -11382,16 +11382,16 @@ Returns:
          pass
 
 
-      def PostDeleteItem(self,Flags:'Any',Item:'Any',hrDelete:'Any',NewlyCreated:'Any') -> 'None':
+      def PostDeleteItem(self,Flags:'Any',Item:'PyIShellItem',hrDelete:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each delete operation
 
 Args:
 
       Flags(Any):Flags specifying delete behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Item that was deleted
+      Item(PyIShellItem):Item that was deleted
       hrDelete(Any):HRESULT of the delete operation
-      NewlyCreated(Any):Item in the recycle bin, or None if deleted without recycling
+      NewlyCreated(PyIShellItem):Item in the recycle bin, or None if deleted without recycling
 
 Returns:
 
@@ -11401,14 +11401,14 @@ Returns:
          pass
 
 
-      def PreNewItem(self,Flags:'Any',DestinationFolder:'Any',NewName:'Any') -> 'None':
+      def PreNewItem(self,Flags:'Any',DestinationFolder:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each new file is created
 
 Args:
 
       Flags(Any):Flags specifying creation behaviour, combination of shellcon.TSF_* flags
-      DestinationFolder(Any):Folder where item will be created
+      DestinationFolder(PyIShellItem):Folder where item will be created
       NewName(Any):Name of item to be created
 
 Returns:
@@ -11419,19 +11419,19 @@ Returns:
          pass
 
 
-      def PostNewItem(self,Flags:'Any',DestinationFolder:'Any',NewName:'Any',TemplateName:'Any',FileAttributes:'Any',hrNew:'Any',NewItem:'Any') -> 'None':
+      def PostNewItem(self,Flags:'Any',DestinationFolder:'PyIShellItem',NewName:'Any',TemplateName:'Any',FileAttributes:'Any',hrNew:'Any',NewItem:'PyIShellItem') -> 'None':
          """
          Called after each new file is created
 
 Args:
 
       Flags(Any):Flags specifying creation behaviour, combination of shellcon.TSF_* flags
-      DestinationFolder(Any):Folder in which item was created
+      DestinationFolder(PyIShellItem):Folder in which item was created
       NewName(Any):Name of created item, may be mangled if file name conflicts occurred
       TemplateName(Any):Template file used to initialize new item
       FileAttributes(Any):File attributes of new item
       hrNew(Any):HRESULT of the create operation
-      NewItem(Any):Shell interface of created item
+      NewItem(PyIShellItem):Shell interface of created item
 
 Returns:
 
@@ -11513,7 +11513,7 @@ class PyGSecurityInformation(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetObjectInformation(self,) -> 'Any':
+      def GetObjectInformation(self,) -> 'SI_OBJECT_INFO':
          """
          Returns information identifying the object 
 
@@ -11525,7 +11525,7 @@ Args:
 
 Returns:
 
-      Any:PyGSecurityInformation.GetObjectInformation
+      SI_OBJECT_INFO:PyGSecurityInformation.GetObjectInformation
 SI_OBJECT_INFO = GetObjectInformation()Returns information identifying the object 
 
 whose security is to be editted, and which pages are to appear in the property sheet
@@ -11580,7 +11580,7 @@ Returns:
          pass
 
 
-      def GetAccessRights(self,ObjectType:'PyIID',Flags:'Any') -> 'Tuple[Any, Any]':
+      def GetAccessRights(self,ObjectType:'PyIID',Flags:'Any') -> 'Tuple[SI_ACCESS, Any]':
          """
          Retrieves permission that can be set
 
@@ -11591,7 +11591,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]:Indicates which page is requesting the access rights (SI_ADVANCED, SI_EDIT_AUDITS, 
+      Tuple[SI_ACCESS, Any]:Indicates which page is requesting the access rights (SI_ADVANCED, SI_EDIT_AUDITS, 
 
 SI_EDIT_PROPERTIES)Return ValueThis method should return a 2-tuple containing a sequence of SI_ACCESS tuples, 
 
@@ -11624,7 +11624,7 @@ Return ValueThis method should return the input bitmask will all generic rights 
          pass
 
 
-      def GetInheritTypes(self,) -> 'Tuple[Any, ...]':
+      def GetInheritTypes(self,) -> 'Tuple[SI_INHERIT_TYPE, ...]':
          """
          Requests types of inheritance that your 
 
@@ -11636,7 +11636,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]:PyGSecurityInformation.GetInheritTypes
+      Tuple[SI_INHERIT_TYPE, ...]:PyGSecurityInformation.GetInheritTypes
 
 (SI_INHERIT_TYPE,...) = GetInheritTypes()Requests types of inheritance that your 
 
@@ -11648,7 +11648,7 @@ Return ValueReturns a sequence of SI_INHERIT_TYPE tuples
          pass
 
 
-      def PropertySheetPageCallback(self,hwnd:'Any',Msg:'Any',Page:'Any') -> 'None':
+      def PropertySheetPageCallback(self,hwnd:'int',Msg:'Any',Page:'Any') -> 'None':
          """
          Called by each page as it is created and destroyed
 
@@ -11856,7 +11856,7 @@ class PyIADsContainer(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetObject(self,_class:'str',relativeName:'str') -> 'Any':
+      def GetObject(self,_class:'str',relativeName:'str') -> 'PyIDispatch':
          """
          None
 
@@ -11867,7 +11867,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDispatch
         
          """
          pass
@@ -14481,7 +14481,7 @@ class PyICopyHookA(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CopyCallback(self,hwnd:'Any',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
+      def CopyCallback(self,hwnd:'int',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
          """
          Description of CopyCallback.
 
@@ -14510,7 +14510,7 @@ class PyICopyHookW(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CopyCallback(self,hwnd:'Any',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
+      def CopyCallback(self,hwnd:'int',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
          """
          Description of CopyCallback.
 
@@ -17666,7 +17666,7 @@ Returns:
          pass
 
 
-      def SetCooperativeLevel(self,hwnd:'Any',level:'Any') -> 'None':
+      def SetCooperativeLevel(self,hwnd:'int',level:'Any') -> 'None':
          """
          The IDirectSound::SetCooperativeLevel method sets the cooperative level 
 
@@ -19016,7 +19016,7 @@ Returns:
          pass
 
 
-      def DragOver(self,hwnd:'Any',pt:'Tuple[Any, Any]',pdwEffect:'Any') -> 'None':
+      def DragOver(self,hwnd:'int',pt:'Tuple[Any, Any]',pdwEffect:'Any') -> 'None':
          """
          Description of DragOver.
 
@@ -19094,7 +19094,7 @@ Returns:
          pass
 
 
-      def InvokeDialog(self,hwnd:'Any') -> 'Any':
+      def InvokeDialog(self,hwnd:'int') -> 'PyIDataObject':
          """
          Displays a modal object picker dialog box and returns the user's selections.
 
@@ -32524,7 +32524,7 @@ Returns:
          pass
 
 
-      def Resolve(self,hwnd:'Any',fFlags:'Any') -> 'None':
+      def Resolve(self,hwnd:'int',fFlags:'Any') -> 'None':
          """
          Resolves a shell link by searching for the shell link object and updating the 
 
@@ -35508,7 +35508,7 @@ Returns:
          pass
 
 
-      def GetHandle(self,) -> 'Any':
+      def GetHandle(self,) -> 'PyGdiHANDLE':
          """
          Returns the HBITMAP for a bitmap object
 
@@ -42347,22 +42347,6 @@ Args:
 
       _id(Any):Specifies the command ID of the menu item. This parameter can specify pop-up menu items as well as standard menu items.
       flags(Any):Specifies the action to take. It can be a combination of MF_DISABLED, MF_ENABLED, or MF_GRAYED, with MF_BYCOMMAND or MF_BYPOSITIONCommentsThe PyCMenu::CreateMenu, PyCMenu::InsertMenu, PyCMenu::ModifyMenu, and PyCMenu::LoadMenuIndirect member functions can also set the state (enabled, disabled, or dimmed) of a menu item.
-
-Returns:
-
-      Any
-        
-         """
-         pass
-
-
-      def GetHandle(self,) -> 'Any':
-         """
-         Returns the menu object's underlying hMenu.
-
-Args:
-
-
 
 Returns:
 

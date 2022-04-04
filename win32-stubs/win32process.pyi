@@ -226,7 +226,7 @@ Returns:
     pass
         
 
-def GetWindowThreadProcessId(hwnd:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any]':
+def GetWindowThreadProcessId(hwnd:'int') -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Retrieves the identifier of the thread and process that created the specified window.
 

@@ -3449,7 +3449,7 @@ Returns:
     pass
         
 
-def SetClassWord(hwnd:'typing.Any',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
+def SetClassWord(hwnd:'int',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
     """
     None
 
@@ -3638,7 +3638,7 @@ Returns:
     pass
         
 
-def SetWindowLong(hwnd:'typing.Any',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
+def SetWindowLong(hwnd:'int',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
     """
     Places a long value at the specified offset into the extra window memory of the 
 
@@ -3846,7 +3846,7 @@ Returns:
     pass
         
 
-def WinHelp(hwnd:'typing.Any',hlpFile:'str',cmd:'typing.Any',data:'typing.Union[str, typing.Any]'=0) -> 'None':
+def WinHelp(hwnd:'int',hlpFile:'str',cmd:'typing.Any',data:'typing.Union[str, typing.Any]'=0) -> 'None':
     """
     Invokes the Windows Help system.
 

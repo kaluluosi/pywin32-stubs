@@ -1402,7 +1402,7 @@ Returns:
     pass
         
 
-def WSAAsyncSelect(socket:'typing.Any',hwnd:'typing.Any',_int:'typing.Any',networkEvents:'typing.Any') -> 'None':
+def WSAAsyncSelect(socket:'typing.Any',hwnd:'int',_int:'typing.Any',networkEvents:'typing.Any') -> 'None':
     """
     Request windows message notification for the supplied set of FD_XXXX network events.
 

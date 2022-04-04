@@ -4,7 +4,7 @@ from win32helper import win32typing
 """"""
 
 
-def OpenThemeData(hwnd:'typing.Any',pszClassList:'str') -> 'win32typing.PyHTHEME':
+def OpenThemeData(hwnd:'int',pszClassList:'str') -> 'win32typing.PyHTHEME':
     """
     None
 
@@ -178,7 +178,7 @@ Returns:
     pass
         
 
-def GetWindowTheme(hwnd:'typing.Any') -> 'win32typing.PyHTHEME':
+def GetWindowTheme(hwnd:'int') -> 'win32typing.PyHTHEME':
     """
     If window is themed, returns its most recent 
 
@@ -273,7 +273,7 @@ Returns:
     pass
         
 
-def SetWindowTheme(hwnd:'typing.Any',pszSubAppName:'typing.Union[str, typing.Any]',pszSubIdList:'typing.Union[str, typing.Any]') -> 'None':
+def SetWindowTheme(hwnd:'int',pszSubAppName:'typing.Union[str, typing.Any]',pszSubIdList:'typing.Union[str, typing.Any]') -> 'None':
     """
     Rredirects an existing Window to use a different 
 

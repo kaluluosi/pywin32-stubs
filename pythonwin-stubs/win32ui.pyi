@@ -84,7 +84,7 @@ Return ValueThe window object created.  An exception is raised if an error occur
     pass
         
 
-def CreateBitmap() -> 'typing.Any':
+def CreateBitmap() -> 'win32typing.PyCBitmap':
     """
     Creates a bitmap object.
 
@@ -244,7 +244,7 @@ Returns:
     pass
         
 
-def CreateDCFromHandle() -> 'None':
+def CreateDCFromHandle(hwnd: 'int') -> 'win32typing.PyCDC':
     """
     Creates a DC object from an integer handle.
 
@@ -928,7 +928,7 @@ Returns:
     pass
         
 
-def CreateWindowFromHandle(hwnd:'typing.Any') -> 'win32typing.PyCWnd':
+def CreateWindowFromHandle(hwnd:'int') -> 'win32typing.PyCWnd':
     """
     None
 

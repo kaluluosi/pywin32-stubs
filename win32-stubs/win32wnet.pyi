@@ -57,7 +57,7 @@ Returns:
     pass
         
 
-def WNetAddConnection3(hwnd:'typing.Any',NetResource:'win32typing.PyNETRESOURCE',Password:'typing.Any'=None,UserName:'typing.Any'=None,Flags:'typing.Any'=0) -> 'None':
+def WNetAddConnection3(hwnd:'int',NetResource:'win32typing.PyNETRESOURCE',Password:'typing.Any'=None,UserName:'typing.Any'=None,Flags:'typing.Any'=0) -> 'None':
     """
     Creates a connection to a network resource.
 

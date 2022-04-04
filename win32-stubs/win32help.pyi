@@ -4,7 +4,7 @@ from win32helper import win32typing
 """A module, encapsulating the Win32 help API's."""
 
 
-def WinHelp(hwnd:'typing.Any',hlpFile:'str',cmd:'typing.Any',data:'typing.Union[str, typing.Any]'=None) -> 'None':
+def WinHelp(hwnd:'int',hlpFile:'str',cmd:'typing.Any',data:'typing.Union[str, typing.Any]'=None) -> 'None':
     """
     Invokes the Windows Help system.
 
@@ -137,7 +137,7 @@ Returns:
     pass
         
 
-def HtmlHelp(hwnd:'typing.Any',file:'typing.Union[str, typing.Any]',cmd:'typing.Any',data:'typing.Union[str, typing.Tuple[int], typing.Any]'=0) -> 'typing.Any':
+def HtmlHelp(hwnd:'int',file:'typing.Union[str, typing.Any]',cmd:'typing.Any',data:'typing.Union[str, typing.Tuple[int], typing.Any]'=0) -> 'typing.Any':
     """
     Invokes the Windows Html Help system.
 
