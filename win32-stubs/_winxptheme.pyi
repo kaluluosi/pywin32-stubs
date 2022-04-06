@@ -1,6 +1,6 @@
 __all__=['', 'OpenThemeData', 'CloseThemeData', 'DrawThemeBackground', 'DrawThemeText', 'GetThemeBackgroundContentRect', 'GetThemeBackgroundExtent', 'IsThemeActive', 'IsAppThemed', 'GetWindowTheme', 'EnableThemeDialogTexture', 'IsThemeDialogTextureEnabled', 'GetThemeAppProperties', 'EnableTheming', 'SetWindowTheme', 'GetCurrentThemeName', 'ETDT_DISABLE', 'ETDT_ENABLE', 'ETDT_ENABLETAB', 'ETDT_USETABTEXTURE']
 import typing
-from win32helper import win32typing
+import win32typing
 """"""
 
 

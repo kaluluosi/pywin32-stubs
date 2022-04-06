@@ -1,6 +1,6 @@
 __all__=['', 'GetNamedPipeHandleState', 'SetNamedPipeHandleState', 'ConnectNamedPipe', 'TransactNamedPipe', 'CallNamedPipe', 'CreatePipe', 'FdCreatePipe', 'CreateNamedPipe', 'DisconnectNamedPipe', 'GetOverlappedResult', 'WaitNamedPipe', 'GetNamedPipeInfo', 'PeekNamedPipe', 'GetNamedPipeClientProcessId', 'GetNamedPipeServerProcessId', 'GetNamedPipeClientSessionId', 'GetNamedPipeServerSessionId', 'popen', 'NMPWAIT_NOWAIT', 'NMPWAIT_USE_DEFAULT_WAIT', 'NMPWAIT_WAIT_FOREVER', 'PIPE_ACCESS_DUPLEX', 'PIPE_ACCESS_INBOUND', 'PIPE_ACCESS_OUTBOUND', 'PIPE_NOWAIT', 'PIPE_READMODE_BYTE', 'PIPE_READMODE_MESSAGE', 'PIPE_TYPE_BYTE', 'PIPE_TYPE_MESSAGE', 'PIPE_UNLIMITED_INSTANCES', 'PIPE_WAIT']
 import typing
-from win32helper import win32typing
+import win32typing
 """An interface to the win32 pipe API's"""
 
 

@@ -1,6 +1,6 @@
 __all__=['', 'CreatePhonebookEntry', 'Dial', 'EditPhonebookEntry', 'EnumConnections', 'EnumEntries', 'GetConnectStatus', 'GetEntryDialParams', 'GetErrorString', 'HangUp', 'IsHandleValid', 'SetEntryDialParams', 'RASCS_AllDevicesConnected', 'RASCS_AuthAck', 'RASCS_AuthCallback', 'RASCS_AuthChangePassword', 'RASCS_Authenticate', 'RASCS_Authenticated', 'RASCS_AuthLinkSpeed', 'RASCS_AuthNotify', 'RASCS_AuthProject', 'RASCS_AuthRetry', 'RASCS_CallbackComplete', 'RASCS_CallbackSetByCaller', 'RASCS_ConnectDevice', 'RASCS_Connected', 'RASCS_DeviceConnected', 'RASCS_Disconnected', 'RASCS_Interactive', 'RASCS_LogonNetwork', 'RASCS_OpenPort', 'RASCS_PasswordExpired', 'RASCS_PortOpened', 'RASCS_PrepareForCallback', 'RASCS_Projected', 'RASCS_ReAuthenticate', 'RASCS_RetryAuthentication', 'RASCS_StartAuthentication', 'RASCS_WaitForCallback', 'RASCS_WaitForModemReset']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module encapsulating the Windows Remote Access Service (RAS) API."""
 
 

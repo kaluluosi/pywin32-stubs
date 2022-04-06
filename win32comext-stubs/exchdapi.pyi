@@ -1,6 +1,6 @@
 __all__=['', 'HrInstallService', 'HrInstallMailboxAgent', 'HrCreateMailboxAgentProfile', 'HrCreateGatewayProfile', 'HrMailboxAgentExists', 'HrAdminProgramExists', 'HrRemoveMailboxAgent', 'HrRemoveProfile', 'HrEnumOrganizations', 'HrEnumSites', 'HrEnumContainers', 'HrEnumSiteAdmins', 'HrGetServiceAccountName']
 import typing
-from win32helper import win32typing
+import win32typing
 """An COM interface to Exchange's DAPI"""
 
 

@@ -1,6 +1,6 @@
 __all__=['', 'AddCounter', 'AddEnglishCounter', 'RemoveCounter', 'EnumObjectItems', 'EnumObjects', 'OpenQuery', 'CloseQuery', 'MakeCounterPath', 'GetCounterInfo', 'GetFormattedCounterValue', 'CollectQueryData', 'ValidatePath', 'ExpandCounterPath', 'ParseCounterPath', 'ParseInstanceName', 'SetCounterScaleFactor', 'BrowseCounters', 'ConnectMachine', 'LookupPerfIndexByName', 'LookupPerfNameByIndex']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module, encapsulating the Windows Performance Data Helpers API"""
 
 

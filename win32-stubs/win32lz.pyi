@@ -1,6 +1,6 @@
 __all__=['', 'GetExpandedName', 'Close', 'Copy', 'Init', 'OpenFile']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module encapsulating the Windows LZ compression routines."""
 
 

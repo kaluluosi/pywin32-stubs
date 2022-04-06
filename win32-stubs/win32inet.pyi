@@ -1,6 +1,6 @@
 __all__=['', 'InternetSetCookie', 'InternetGetCookie', 'InternetAttemptConnect', 'InternetCheckConnection', 'InternetGoOnline', 'InternetCloseHandle', 'InternetConnect', 'InternetOpen', 'InternetOpenUrl', 'InternetCanonicalizeUrl', 'InternetGetLastResponseInfo', 'InternetReadFile', 'InternetWriteFile', 'FtpOpenFile', 'FtpCommand', 'InternetQueryOption', 'InternetSetOption', 'FindFirstUrlCacheEntry', 'FindNextUrlCacheEntry', 'FindFirstUrlCacheEntryEx', 'FindNextUrlCacheEntryEx', 'FindCloseUrlCache', 'FindFirstUrlCacheGroup', 'FindNextUrlCacheGroup', 'GetUrlCacheEntryInfo', 'DeleteUrlCacheGroup', 'CreateUrlCacheGroup', 'CreateUrlCacheEntry', 'CommitUrlCacheEntry', 'SetUrlCacheEntryGroup', 'GetUrlCacheGroupAttribute', 'SetUrlCacheGroupAttribute', 'DeleteUrlCacheEntry']
 import typing
-from win32helper import win32typing
+import win32typing
 """An interface to the Windows internet (wininet) API"""
 
 

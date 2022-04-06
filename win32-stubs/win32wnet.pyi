@@ -1,6 +1,6 @@
 __all__=['', 'NCBBuffer', 'Netbios', 'WNetAddConnection2', 'WNetAddConnection3', 'WNetCancelConnection2', 'WNetOpenEnum', 'WNetCloseEnum', 'WNetEnumResource', 'WNetGetUser', 'WNetGetUniversalName', 'WNetGetResourceInformation', 'WNetGetLastError', 'WNetGetResourceParent', 'WNetGetConnection']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module that exposes the Windows Networking API."""
 
 

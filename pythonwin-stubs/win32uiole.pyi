@@ -1,6 +1,6 @@
 __all__=['', 'AfxOleInit', 'CreateInsertDialog', 'CreateOleClientItem', 'CreateOleDocument', 'DaoGetEngine', 'GetIDispatchForWindow', 'OleGetUserCtrl', 'OleSetUserCtrl', 'SetMessagePendingDelay', 'EnableNotRespondingDialog', 'EnableNotRespondingDialog', 'COleClientItem_activeState', 'COleClientItem_activeUIState', 'COleClientItem_emptyState', 'COleClientItem_loadedState', 'COleClientItem_openState', 'OLE_CHANGED', 'OLE_CHANGED_ASPECT', 'OLE_CHANGED_STATE', 'OLE_CLOSED', 'OLE_RENAMED', 'OLE_SAVED']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module, encapsulating the Microsoft Foundation Classes OLE functionality."""
 
 

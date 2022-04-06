@@ -1,6 +1,6 @@
 __all__=['', 'CeRapiInit', 'CeRapiUninit', 'CreateProcess', 'CeRapiInitEx', 'CeCopyFile', 'CeCheckPassword', 'CeCreateFile', 'CeDeleteFile', 'CeMoveFile', 'CeCreateDirectory', 'CeRemoveDirectory', 'CeGetTempPath', 'CeGetSystemInfo', 'CeGetDesktopDeviceCaps', 'CeGetSystemMetrics', 'CeGetSpecialFolderPath', 'CeGetStoreInformation', 'CeGetSystemPowerStatusEx', 'CeSHCreateShortcut', 'CeSHGetShortcutTarget', 'CeGetVersionEx', 'CeGlobalMemoryStatus', 'FindFiles', 'CeGetFileAttributes', 'CeSetFileAttributes', 'CeGetFileSize', 'CeReadFile', 'WriteFile', 'CSIDL_BITBUCKET', 'CSIDL_COMMON_DESKTOPDIRECTORY', 'CSIDL_COMMON_PROGRAMS', 'CSIDL_COMMON_STARTMENU', 'CSIDL_COMMON_STARTUP', 'CSIDL_CONTROLS', 'CSIDL_DESKTOP', 'CSIDL_DESKTOPDIRECTORY', 'CSIDL_DRIVES', 'CSIDL_FONTS', 'CSIDL_NETHOOD', 'CSIDL_NETWORK', 'CSIDL_PERSONAL', 'CSIDL_PRINTERS', 'CSIDL_PROGRAMS', 'CSIDL_RECENT', 'CSIDL_SENDTO', 'CSIDL_STARTMENU', 'CSIDL_STARTUP', 'CSIDL_TEMPLATES']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module which provides an interface to the win32 CE Remote API"""
 
 

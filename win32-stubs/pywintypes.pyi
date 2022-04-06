@@ -1,6 +1,6 @@
 __all__=['', 'DosDateTimeToTime', 'Unicode', 'UnicodeFromRaw', 'IsTextUnicode', 'OVERLAPPED', 'IID', 'Time', 'Time', 'CreateGuid', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'HANDLE', 'HKEY', 'WAVEFORMATEX']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module which supports common Windows types."""
 
 

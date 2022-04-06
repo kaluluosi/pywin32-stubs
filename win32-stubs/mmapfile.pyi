@@ -1,6 +1,6 @@
 __all__=['', 'mmapfile']
 import typing
-from win32helper import win32typing
+import win32typing
 """Compiled extension module that provides access to the memory mapped file API"""
 
 

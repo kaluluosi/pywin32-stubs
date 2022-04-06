@@ -1,6 +1,6 @@
 __all__=['', 'ChangeClipboardChain', 'CloseClipboard', 'CountClipboardFormats', 'EmptyClipboard', 'EnumClipboardFormats', 'GetClipboardData', 'GetClipboardDataHandle', 'GetClipboardFormatName', 'GetClipboardOwner', 'GetClipboardSequenceNumber', 'GetClipboardViewer', 'GetGlobalMemory', 'GetOpenClipboardWindow', 'GetPriorityClipboardFormat', 'IsClipboardFormatAvailable', 'OpenClipboard', 'RegisterClipboardFormat', 'SetClipboardData', 'SetClipboardText', 'SetClipboardViewer']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module which supports the Windows Clipboard API."""
 
 
