@@ -1,6 +1,6 @@
 __all__=['', 'CryptProtectData', 'CryptUnprotectData', 'CryptEnumProviders', 'CryptEnumProviderTypes', 'CryptGetDefaultProvider', 'CryptSetProviderEx', 'CryptAcquireContext', 'CryptFindLocalizedName', 'CertEnumSystemStore', 'CertEnumSystemStoreLocation', 'CertEnumPhysicalStore', 'CertRegisterSystemStore', 'CertUnregisterSystemStore', 'CertOpenStore', 'CertOpenSystemStore', 'CryptFindOIDInfo', 'CertAlgIdToOID', 'CertOIDToAlgId', 'CryptGetKeyIdentifierProperty', 'CryptEnumKeyIdentifierProperties', 'CryptEnumOIDInfo', 'CertAddSerializedElementToStore', 'CryptQueryObject', 'CryptDecodeMessage', 'CryptEncryptMessage', 'CryptDecryptMessage', 'CryptSignAndEncryptMessage', 'CryptVerifyMessageSignature', 'CryptGetMessageCertificates', 'CryptGetMessageSignerCount', 'CryptSignMessage', 'CryptVerifyDetachedMessageSignature', 'CryptDecryptAndVerifyMessageSignature', 'CryptEncodeObjectEx', 'CryptDecodeObjectEx', 'CertNameToStr', 'CryptFormatObject', 'PFXImportCertStore', 'PFXVerifyPassword', 'PFXIsPFXBlob', 'CryptBinaryToString', 'CryptStringToBinary']
 import typing
-from win32helper import win32typing
+import win32typing
 """An interface to the win32 Cryptography API"""
 
 

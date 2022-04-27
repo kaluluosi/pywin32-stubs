@@ -1,6 +1,6 @@
 __all__=['', 'AbortSystemShutdown', 'InitiateSystemShutdown', 'Apply', 'Beep', 'BeginUpdateResource', 'ChangeDisplaySettings', 'ChangeDisplaySettingsEx', 'ClipCursor', 'CloseHandle', 'CopyFile', 'DebugBreak', 'DeleteFile', 'DragQueryFile', 'DragFinish', 'DuplicateHandle', 'EndUpdateResource', 'EnumDisplayDevices', 'EnumDisplayMonitors', 'EnumDisplaySettings', 'EnumDisplaySettingsEx', 'EnumResourceLanguages', 'EnumResourceNames', 'EnumResourceTypes', 'ExpandEnvironmentStrings', 'ExitWindows', 'ExitWindowsEx', 'FindFiles', 'FindFirstChangeNotification', 'FindNextChangeNotification', 'FindCloseChangeNotification', 'FindExecutable', 'FormatMessage', 'FormatMessageW', 'FreeLibrary', 'GenerateConsoleCtrlEvent', 'GetAsyncKeyState', 'GetCommandLine', 'GetComputerName', 'GetComputerNameEx', 'GetComputerObjectName', 'GetMonitorInfo', 'GetUserName', 'GetUserNameEx', 'GetCursorPos', 'GetCurrentThread', 'GetCurrentThreadId', 'GetCurrentProcessId', 'GetCurrentProcess', 'GetConsoleTitle', 'GetDateFormat', 'GetDiskFreeSpace', 'GetDiskFreeSpaceEx', 'GetDllDirectory', 'GetDomainName', 'GetEnvironmentVariable', 'GetEnvironmentVariableW', 'GetFileAttributes', 'GetFileVersionInfo', 'GetFocus', 'GetFullPathName', 'GetHandleInformation', 'GetKeyboardLayout', 'GetKeyboardLayoutList', 'GetKeyboardLayoutName', 'GetKeyboardState', 'GetKeyState', 'GetLastError', 'GetLastInputInfo', 'GetLocalTime', 'GetLongPathName', 'GetLongPathNameW', 'GetLogicalDrives', 'GetLogicalDriveStrings', 'GetModuleFileName', 'GetModuleFileNameW', 'GetModuleHandle', 'GetPwrCapabilities', 'GetProfileSection', 'GetProcAddress', 'GetProfileVal', 'GetShortPathName', 'GetStdHandle', 'GetSysColor', 'GetSystemDefaultLangID', 'GetSystemDefaultLCID', 'GetSystemDirectory', 'GetSystemFileCacheSize', 'SetSystemFileCacheSize', 'GetSystemInfo', 'GetNativeSystemInfo', 'GetSystemMetrics', 'GetSystemTime', 'GetTempFileName', 'GetTempPath', 'GetThreadLocale', 'GetTickCount', 'GetTimeFormat', 'GetTimeZoneInformation', 'GetVersion', 'GetVersionEx', 'GetVolumeInformation', 'GetWindowsDirectory', 'GetWindowLong', 'GetUserDefaultLangID', 'GetUserDefaultLCID', 'GlobalMemoryStatus', 'GlobalMemoryStatusEx', 'keybd_event', 'mouse_event', 'LoadCursor', 'LoadKeyboardLayout', 'LoadLibrary', 'LoadLibraryEx', 'LoadResource', 'LoadString', 'MessageBeep', 'MessageBox', 'MonitorFromPoint', 'MonitorFromRect', 'MonitorFromWindow', 'MoveFile', 'MoveFileEx', 'OpenProcess', 'OutputDebugString', 'PostMessage', 'PostQuitMessage', 'PostThreadMessage', 'RegCloseKey', 'RegConnectRegistry', 'RegCopyTree', 'RegCreateKey', 'RegCreateKeyEx', 'RegDeleteKey', 'RegDeleteKeyEx', 'RegDeleteTree', 'RegDeleteValue', 'RegEnumKey', 'RegEnumKeyEx', 'RegEnumKeyExW', 'RegEnumValue', 'RegFlushKey', 'RegGetKeySecurity', 'RegLoadKey', 'RegOpenCurrentUser', 'RegOpenKey', 'RegOpenKeyEx', 'RegOpenKeyTransacted', 'RegOverridePredefKey', 'RegQueryValue', 'RegQueryValueEx', 'RegQueryInfoKey', 'RegQueryInfoKeyW', 'RegRestoreKey', 'RegSaveKey', 'RegSaveKeyEx', 'RegSetKeySecurity', 'RegSetValue', 'RegSetValueEx', 'RegUnLoadKey', 'RegisterWindowMessage', 'RegNotifyChangeKeyValue', 'SearchPath', 'SendMessage', 'SetConsoleCtrlHandler', 'SetConsoleTitle', 'SetCursorPos', 'SetDllDirectory', 'SetErrorMode', 'SetFileAttributes', 'SetLastError', 'SetSysColors', 'SetLocalTime', 'SetSystemTime', 'SetClassLong', 'SetClassWord', 'SetWindowWord', 'SetCursor', 'SetEnvironmentVariable', 'SetEnvironmentVariable', 'SetEnvironmentVariableW', 'SetHandleInformation', 'SetStdHandle', 'SetSystemPowerState', 'SetThreadLocale', 'SetTimeZoneInformation', 'SetWindowLong', 'ShellExecute', 'ShowCursor', 'Sleep', 'TerminateProcess', 'ToAsciiEx', 'Unicode', 'UpdateResource', 'VkKeyScan', 'VkKeyScan', 'WinExec', 'WinHelp', 'WriteProfileSection', 'WriteProfileVal', 'HIBYTE', 'LOBYTE', 'HIWORD', 'LOWORD', 'RGB', 'MAKELANGID', 'MAKEWORD', 'MAKELONG']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module, encapsulating the Windows Win32 API."""
 
 
@@ -3449,7 +3449,7 @@ Returns:
     pass
         
 
-def SetClassWord(hwnd:'typing.Any',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
+def SetClassWord(hwnd:'int',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
     """
     None
 
@@ -3638,7 +3638,7 @@ Returns:
     pass
         
 
-def SetWindowLong(hwnd:'typing.Any',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
+def SetWindowLong(hwnd:'int',offset:'typing.Any',val:'typing.Any') -> 'typing.Any':
     """
     Places a long value at the specified offset into the extra window memory of the 
 
@@ -3846,7 +3846,7 @@ Returns:
     pass
         
 
-def WinHelp(hwnd:'typing.Any',hlpFile:'str',cmd:'typing.Any',data:'typing.Union[str, typing.Any]'=0) -> 'None':
+def WinHelp(hwnd:'int',hlpFile:'str',cmd:'typing.Any',data:'typing.Union[str, typing.Any]'=0) -> 'None':
     """
     Invokes the Windows Help system.
 

@@ -1,6 +1,6 @@
 __all__=['', 'PSGetItemPropertyHandler', 'PSGetPropertyDescription', 'PSGetPropertySystem', 'PSGetNameFromPropertyKey', 'PSGetPropertyKeyFromName', 'PSRegisterPropertySchema', 'PSUnregisterPropertySchema', 'SHGetPropertyStoreFromParsingName', 'StgSerializePropVariant', 'StgDeserializePropVariant', 'PSCreateMemoryPropertyStore', 'PSCreatePropertyStoreFromPropertySetStorage', 'PSLookupPropertyHandlerCLSID', 'SHGetPropertyStoreForWindow', 'PSGetPropertyFromPropertyStorage', 'PSGetNamedPropertyFromPropertyStorage', 'PSCreateSimplePropertyChange', 'PSCreatePropertyChangeArray', 'SHSetDefaultProperties']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module, encapsulating the Vista Property System interfaces"""
 
 

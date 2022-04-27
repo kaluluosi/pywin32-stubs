@@ -670,7 +670,7 @@ Returns:
          pass
 
 
-      def CertEnumCertificatesInStore(self,) -> 'typing.List[typing.Any]':
+      def CertEnumCertificatesInStore(self,) -> 'typing.List[PyCERT_CONTEXT]':
          """
          Lists all certificates in the store
 
@@ -680,13 +680,13 @@ Args:
 
 Returns:
 
-      typing.List[typing.Any]
+      typing.List[PyCERT_CONTEXT]
         
          """
          pass
 
 
-      def CertEnumCTLsInStore(self,) -> 'typing.List[typing.Any]':
+      def CertEnumCTLsInStore(self,) -> 'typing.List[PyCTL_CONTEXT]':
          """
          Finds all Certificate Trust Lists in store
 
@@ -696,7 +696,7 @@ Args:
 
 Returns:
 
-      typing.List[typing.Any]
+      typing.List[PyCTL_CONTEXT]
         
          """
          pass
@@ -11648,7 +11648,7 @@ Return ValueReturns a sequence of SI_INHERIT_TYPE tuples
          pass
 
 
-      def PropertySheetPageCallback(self,hwnd:'typing.Any',Msg:'typing.Any',Page:'typing.Any') -> 'None':
+      def PropertySheetPageCallback(self,hwnd:'int',Msg:'typing.Any',Page:'typing.Any') -> 'None':
          """
          Called by each page as it is created and destroyed
 
@@ -14481,7 +14481,7 @@ class PyICopyHookA(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CopyCallback(self,hwnd:'typing.Any',wFunc:'typing.Any',wFlags:'typing.Any',srcFile:'typing.Union[str, typing.Any]',srcAttribs:'typing.Any',destFile:'typing.Union[str, typing.Any]',destAttribs:'typing.Any') -> 'None':
+      def CopyCallback(self,hwnd:'int',wFunc:'typing.Any',wFlags:'typing.Any',srcFile:'typing.Union[str, typing.Any]',srcAttribs:'typing.Any',destFile:'typing.Union[str, typing.Any]',destAttribs:'typing.Any') -> 'None':
          """
          Description of CopyCallback.
 
@@ -14510,7 +14510,7 @@ class PyICopyHookW(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CopyCallback(self,hwnd:'typing.Any',wFunc:'typing.Any',wFlags:'typing.Any',srcFile:'typing.Union[str, typing.Any]',srcAttribs:'typing.Any',destFile:'typing.Union[str, typing.Any]',destAttribs:'typing.Any') -> 'None':
+      def CopyCallback(self,hwnd:'int',wFunc:'typing.Any',wFlags:'typing.Any',srcFile:'typing.Union[str, typing.Any]',srcAttribs:'typing.Any',destFile:'typing.Union[str, typing.Any]',destAttribs:'typing.Any') -> 'None':
          """
          Description of CopyCallback.
 
@@ -17666,7 +17666,7 @@ Returns:
          pass
 
 
-      def SetCooperativeLevel(self,hwnd:'typing.Any',level:'typing.Any') -> 'None':
+      def SetCooperativeLevel(self,hwnd:'int',level:'typing.Any') -> 'None':
          """
          The IDirectSound::SetCooperativeLevel method sets the cooperative level 
 
@@ -19016,7 +19016,7 @@ Returns:
          pass
 
 
-      def DragOver(self,hwnd:'typing.Any',pt:'typing.Tuple[typing.Any, typing.Any]',pdwEffect:'typing.Any') -> 'None':
+      def DragOver(self,hwnd:'int',pt:'typing.Tuple[typing.Any, typing.Any]',pdwEffect:'typing.Any') -> 'None':
          """
          Description of DragOver.
 
@@ -19094,7 +19094,7 @@ Returns:
          pass
 
 
-      def InvokeDialog(self,hwnd:'typing.Any') -> 'PyIDataObject':
+      def InvokeDialog(self,hwnd:'int') -> 'PyIDataObject':
          """
          Displays a modal object picker dialog box and returns the user's selections.
 
@@ -32524,7 +32524,7 @@ Returns:
          pass
 
 
-      def Resolve(self,hwnd:'typing.Any',fFlags:'typing.Any') -> 'None':
+      def Resolve(self,hwnd:'int',fFlags:'typing.Any') -> 'None':
          """
          Resolves a shell link by searching for the shell link object and updating the 
 
@@ -35508,7 +35508,7 @@ Returns:
          pass
 
 
-      def GetHandle(self,) -> 'typing.Any':
+      def GetHandle(self,) -> 'PyGdiHANDLE':
          """
          Returns the HBITMAP for a bitmap object
 
@@ -37000,7 +37000,7 @@ Return ValueAlways none.  If the function fails, an exception is raised.
          pass
 
 
-      def CreateCompatibleDC(self,dcFrom:'PyCDC'=None) -> 'None':
+      def CreateCompatibleDC(self,dcFrom:'PyCDC'=None) -> 'PyCDC':
          """
          Creates a memory device context that is compatible with this DC.
 
@@ -42347,22 +42347,6 @@ Args:
 
       _id(typing.Any):Specifies the command ID of the menu item. This parameter can specify pop-up menu items as well as standard menu items.
       flags(typing.Any):Specifies the action to take. It can be a combination of MF_DISABLED, MF_ENABLED, or MF_GRAYED, with MF_BYCOMMAND or MF_BYPOSITIONCommentsThe PyCMenu::CreateMenu, PyCMenu::InsertMenu, PyCMenu::ModifyMenu, and PyCMenu::LoadMenuIndirect member functions can also set the state (enabled, disabled, or dimmed) of a menu item.
-
-Returns:
-
-      typing.Any
-        
-         """
-         pass
-
-
-      def GetHandle(self,) -> 'typing.Any':
-         """
-         Returns the menu object's underlying hMenu.
-
-Args:
-
-
 
 Returns:
 

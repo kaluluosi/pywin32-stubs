@@ -1,6 +1,6 @@
 __all__=['', 'STARTUPINFO', 'beginthreadex', 'CreateRemoteThread', 'CreateProcess', 'CreateProcessAsUser', 'GetCurrentProcess', 'GetProcessVersion', 'GetCurrentProcessId', 'GetStartupInfo', 'GetPriorityClass', 'GetExitCodeThread', 'GetExitCodeProcess', 'GetWindowThreadProcessId', 'SetThreadPriority', 'GetThreadPriority', 'GetProcessPriorityBoost', 'SetProcessPriorityBoost', 'GetThreadPriorityBoost', 'SetThreadPriorityBoost', 'GetThreadIOPendingFlag', 'GetThreadTimes', 'GetProcessId', 'SetPriorityClass', 'AttachThreadInput', 'SetThreadIdealProcessor', 'GetProcessAffinityMask', 'SetProcessAffinityMask', 'SetThreadAffinityMask', 'SuspendThread', 'ResumeThread', 'TerminateProcess', 'ExitProcess', 'EnumProcesses', 'EnumProcessModules', 'EnumProcessModulesEx', 'GetModuleFileNameEx', 'GetProcessMemoryInfo', 'GetProcessTimes', 'GetProcessIoCounters', 'GetProcessWindowStation', 'GetProcessWorkingSetSize', 'SetProcessWorkingSetSize', 'GetProcessShutdownParameters', 'SetProcessShutdownParameters', 'GetGuiResources', 'IsWow64Process', 'ABOVE_NORMAL_PRIORITY_CLASS', 'BELOW_NORMAL_PRIORITY_CLASS', 'CREATE_BREAKAWAY_FROM_JOB', 'CREATE_DEFAULT_ERROR_MODE', 'CREATE_NEW_CONSOLE', 'CREATE_NEW_PROCESS_GROUP', 'CREATE_NO_WINDOW', 'CREATE_PRESERVE_CODE_AUTHZ_LEVEL', 'CREATE_SEPARATE_WOW_VDM', 'CREATE_SHARED_WOW_VDM', 'CREATE_SUSPENDED', 'CREATE_UNICODE_ENVIRONMENT', 'DEBUG_ONLY_THIS_PROCESS', 'DEBUG_PROCESS', 'DETACHED_PROCESS', 'HIGH_PRIORITY_CLASS', 'IDLE_PRIORITY_CLASS', 'LIST_MODULES_32BIT', 'LIST_MODULES_64BIT', 'LIST_MODULES_ALL', 'LIST_MODULES_DEFAULT', 'MAXIMUM_PROCESSORS', 'NORMAL_PRIORITY_CLASS', 'REALTIME_PRIORITY_CLASS', 'STARTF_FORCEOFFFEEDBACK', 'STARTF_FORCEONFEEDBACK', 'STARTF_RUNFULLSCREEN', 'STARTF_USECOUNTCHARS', 'STARTF_USEFILLATTRIBUTE', 'STARTF_USEPOSITION', 'STARTF_USESHOWWINDOW', 'STARTF_USESIZE', 'STARTF_USESTDHANDLES', 'THREAD_MODE_BACKGROUND_BEGIN', 'THREAD_MODE_BACKGROUND_BEGIN', 'THREAD_MODE_BACKGROUND_END', 'THREAD_MODE_BACKGROUND_END', 'THREAD_PRIORITY_ABOVE_NORMAL', 'THREAD_PRIORITY_BELOW_NORMAL', 'THREAD_PRIORITY_HIGHEST', 'THREAD_PRIORITY_IDLE', 'THREAD_PRIORITY_LOWEST', 'THREAD_PRIORITY_NORMAL', 'THREAD_PRIORITY_TIME_CRITICAL']
 import typing
-from win32helper import win32typing
+import win32typing
 """An interface to the win32 Process and Thread API's"""
 
 
@@ -226,7 +226,7 @@ Returns:
     pass
         
 
-def GetWindowThreadProcessId(hwnd:'typing.Any') -> 'typing.Tuple[typing.Any, typing.Any]':
+def GetWindowThreadProcessId(hwnd:'int') -> 'typing.Tuple[typing.Any, typing.Any]':
     """
     Retrieves the identifier of the thread and process that created the specified window.
 

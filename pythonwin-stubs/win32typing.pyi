@@ -670,7 +670,7 @@ Returns:
          pass
 
 
-      def CertEnumCertificatesInStore(self,) -> 'List[PyCERT_CONTEXT]':
+    def CertEnumCertificatesInStore(self,) -> 'List[PyCERT_CONTEXT]':
          """
          Lists all certificates in the store
 
@@ -686,7 +686,7 @@ Returns:
          pass
 
 
-      def CertEnumCTLsInStore(self,) -> 'List[PyCTL_CONTEXT]':
+    def CertEnumCTLsInStore(self,) -> 'List[PyCTL_CONTEXT]':
          """
          Finds all Certificate Trust Lists in store
 
@@ -10507,7 +10507,7 @@ class FUNCDESC(object):
 
 
       @property
-      def args(self)->'Tuple[Any, ...]':
+      def args(self)->'Tuple[ELEMDESC, ...]':
          """"""
          pass
 
@@ -10543,7 +10543,7 @@ class FUNCDESC(object):
 
 
       @property
-      def rettype(self)->'Any':
+      def rettype(self)->'ELEMDESC':
          """"""
          pass
 
@@ -11121,7 +11121,7 @@ class PyDSOP_FILTER_FLAGS(object):
 
 
       @property
-      def uplevel(self)->'Any':
+      def uplevel(self)->'PyDSOP_UPLEVEL_FILTER_FLAGS':
          """"""
          pass
 
@@ -11164,7 +11164,7 @@ class PyDSOP_SCOPE_INIT_INFO(object):
 
 
       @property
-      def filterFlags(self)->'Any':
+      def filterFlags(self)->'PyDSOP_FILTER_FLAGS':
          """"""
          pass
 
@@ -11247,14 +11247,14 @@ Returns:
          pass
 
 
-      def PreRenameItem(self,Flags:'Any',Item:'Any',NewName:'Any') -> 'None':
+      def PreRenameItem(self,Flags:'Any',Item:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each file rename
 
 Args:
 
       Flags(Any):Flags specifying copy behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Shell interface of the copied item
+      Item(PyIShellItem):Shell interface of the copied item
       NewName(Any):New display name of the item
 
 Returns:
@@ -11265,17 +11265,17 @@ Returns:
          pass
 
 
-      def PostRenameItem(self,Flags:'Any',Item:'Any',NewName:'Any',hrRename:'Any',NewlyCreated:'Any') -> 'None':
+      def PostRenameItem(self,Flags:'Any',Item:'PyIShellItem',NewName:'Any',hrRename:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each file rename
 
 Args:
 
       Flags(Any):Flags specifying rename behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Shell interface of item before rename
+      Item(PyIShellItem):Shell interface of item before rename
       NewName(Any):The new name of the item, may be mangled to resolve filename conflicts
       hrRename(Any):HRESULT of the rename operation
-      NewlyCreated(Any):Shell interface of the item after rename
+      NewlyCreated(PyIShellItem):Shell interface of the item after rename
 
 Returns:
 
@@ -11285,15 +11285,15 @@ Returns:
          pass
 
 
-      def PreMoveItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any') -> 'None':
+      def PreMoveItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each move operation
 
 Args:
 
       Flags(Any):Flags specifying move behaviour, combination of shellcon.TSF_* flags
-      Item(Any):The item to be moved
-      DestinationFolder(Any):The folder into which it will be moved
+      Item(PyIShellItem):The item to be moved
+      DestinationFolder(PyIShellItem):The folder into which it will be moved
       NewName(Any):Name of moved item, may be None if not to be changed
 
 Returns:
@@ -11304,18 +11304,18 @@ Returns:
          pass
 
 
-      def PostMoveItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any',hrMove:'Any',NewlyCreated:'Any') -> 'None':
+      def PostMoveItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any',hrMove:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each move operation
 
 Args:
 
       Flags(Any):Flags specifying move behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Interface of the item before it was moved
-      DestinationFolder(Any):The folder into which it was moved
+      Item(PyIShellItem):Interface of the item before it was moved
+      DestinationFolder(PyIShellItem):The folder into which it was moved
       NewName(Any):Name of item in its new location, may be mangled in case of conflict
       hrMove(Any):HRESULT of the move operation
-      NewlyCreated(Any):Shell interface of the item in its new location
+      NewlyCreated(PyIShellItem):Shell interface of the item in its new location
 
 Returns:
 
@@ -11325,15 +11325,15 @@ Returns:
          pass
 
 
-      def PreCopyItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any') -> 'None':
+      def PreCopyItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each copy operation
 
 Args:
 
       Flags(Any):Flags specifying copy behaviour, combination of shellcon.TSF_* flags
-      Item(Any):The item to be copied
-      DestinationFolder(Any):Folder into which it will be copied
+      Item(PyIShellItem):The item to be copied
+      DestinationFolder(PyIShellItem):Folder into which it will be copied
       NewName(Any):Name to be given to the copy, will be None if keeping original name
 
 Returns:
@@ -11344,18 +11344,18 @@ Returns:
          pass
 
 
-      def PostCopyItem(self,Flags:'Any',Item:'Any',DestinationFolder:'Any',NewName:'Any',hrCopy:'Any',NewlyCreated:'Any') -> 'None':
+      def PostCopyItem(self,Flags:'Any',Item:'PyIShellItem',DestinationFolder:'PyIShellItem',NewName:'Any',hrCopy:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each copy operation
 
 Args:
 
       Flags(Any):Flags specifying copy behaviour, combination of shellcon.TSF_* flags
-      Item(Any):The original item
-      DestinationFolder(Any):Folder into which it was copied
+      Item(PyIShellItem):The original item
+      DestinationFolder(PyIShellItem):Folder into which it was copied
       NewName(Any):Name of item after copy, may be mangled in case of name conflict
       hrCopy(Any):HRESULT of the copy operation
-      NewlyCreated(Any):Shell interface of the copy
+      NewlyCreated(PyIShellItem):Shell interface of the copy
 
 Returns:
 
@@ -11365,14 +11365,14 @@ Returns:
          pass
 
 
-      def PreDeleteItem(self,Flags:'Any',Item:'Any') -> 'None':
+      def PreDeleteItem(self,Flags:'Any',Item:'PyIShellItem') -> 'None':
          """
          Called before each delete operation
 
 Args:
 
       Flags(Any):Flags specifying delete behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Item to be deleted
+      Item(PyIShellItem):Item to be deleted
 
 Returns:
 
@@ -11382,16 +11382,16 @@ Returns:
          pass
 
 
-      def PostDeleteItem(self,Flags:'Any',Item:'Any',hrDelete:'Any',NewlyCreated:'Any') -> 'None':
+      def PostDeleteItem(self,Flags:'Any',Item:'PyIShellItem',hrDelete:'Any',NewlyCreated:'PyIShellItem') -> 'None':
          """
          Called after each delete operation
 
 Args:
 
       Flags(Any):Flags specifying delete behaviour, combination of shellcon.TSF_* flags
-      Item(Any):Item that was deleted
+      Item(PyIShellItem):Item that was deleted
       hrDelete(Any):HRESULT of the delete operation
-      NewlyCreated(Any):Item in the recycle bin, or None if deleted without recycling
+      NewlyCreated(PyIShellItem):Item in the recycle bin, or None if deleted without recycling
 
 Returns:
 
@@ -11401,14 +11401,14 @@ Returns:
          pass
 
 
-      def PreNewItem(self,Flags:'Any',DestinationFolder:'Any',NewName:'Any') -> 'None':
+      def PreNewItem(self,Flags:'Any',DestinationFolder:'PyIShellItem',NewName:'Any') -> 'None':
          """
          Called before each new file is created
 
 Args:
 
       Flags(Any):Flags specifying creation behaviour, combination of shellcon.TSF_* flags
-      DestinationFolder(Any):Folder where item will be created
+      DestinationFolder(PyIShellItem):Folder where item will be created
       NewName(Any):Name of item to be created
 
 Returns:
@@ -11419,19 +11419,19 @@ Returns:
          pass
 
 
-      def PostNewItem(self,Flags:'Any',DestinationFolder:'Any',NewName:'Any',TemplateName:'Any',FileAttributes:'Any',hrNew:'Any',NewItem:'Any') -> 'None':
+      def PostNewItem(self,Flags:'Any',DestinationFolder:'PyIShellItem',NewName:'Any',TemplateName:'Any',FileAttributes:'Any',hrNew:'Any',NewItem:'PyIShellItem') -> 'None':
          """
          Called after each new file is created
 
 Args:
 
       Flags(Any):Flags specifying creation behaviour, combination of shellcon.TSF_* flags
-      DestinationFolder(Any):Folder in which item was created
+      DestinationFolder(PyIShellItem):Folder in which item was created
       NewName(Any):Name of created item, may be mangled if file name conflicts occurred
       TemplateName(Any):Template file used to initialize new item
       FileAttributes(Any):File attributes of new item
       hrNew(Any):HRESULT of the create operation
-      NewItem(Any):Shell interface of created item
+      NewItem(PyIShellItem):Shell interface of created item
 
 Returns:
 
@@ -11513,7 +11513,7 @@ class PyGSecurityInformation(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetObjectInformation(self,) -> 'Any':
+      def GetObjectInformation(self,) -> 'SI_OBJECT_INFO':
          """
          Returns information identifying the object 
 
@@ -11525,7 +11525,7 @@ Args:
 
 Returns:
 
-      Any:PyGSecurityInformation.GetObjectInformation
+      SI_OBJECT_INFO:PyGSecurityInformation.GetObjectInformation
 SI_OBJECT_INFO = GetObjectInformation()Returns information identifying the object 
 
 whose security is to be editted, and which pages are to appear in the property sheet
@@ -11580,7 +11580,7 @@ Returns:
          pass
 
 
-      def GetAccessRights(self,ObjectType:'PyIID',Flags:'Any') -> 'Tuple[Any, Any]':
+      def GetAccessRights(self,ObjectType:'PyIID',Flags:'Any') -> 'Tuple[SI_ACCESS, Any]':
          """
          Retrieves permission that can be set
 
@@ -11591,7 +11591,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]:Indicates which page is requesting the access rights (SI_ADVANCED, SI_EDIT_AUDITS, 
+      Tuple[SI_ACCESS, Any]:Indicates which page is requesting the access rights (SI_ADVANCED, SI_EDIT_AUDITS, 
 
 SI_EDIT_PROPERTIES)Return ValueThis method should return a 2-tuple containing a sequence of SI_ACCESS tuples, 
 
@@ -11624,7 +11624,7 @@ Return ValueThis method should return the input bitmask will all generic rights 
          pass
 
 
-      def GetInheritTypes(self,) -> 'Tuple[Any, ...]':
+      def GetInheritTypes(self,) -> 'Tuple[SI_INHERIT_TYPE, ...]':
          """
          Requests types of inheritance that your 
 
@@ -11636,7 +11636,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]:PyGSecurityInformation.GetInheritTypes
+      Tuple[SI_INHERIT_TYPE, ...]:PyGSecurityInformation.GetInheritTypes
 
 (SI_INHERIT_TYPE,...) = GetInheritTypes()Requests types of inheritance that your 
 
@@ -11648,7 +11648,7 @@ Return ValueReturns a sequence of SI_INHERIT_TYPE tuples
          pass
 
 
-      def PropertySheetPageCallback(self,hwnd:'Any',Msg:'Any',Page:'Any') -> 'None':
+      def PropertySheetPageCallback(self,hwnd:'int',Msg:'Any',Page:'Any') -> 'None':
          """
          Called by each page as it is created and destroyed
 
@@ -11856,7 +11856,7 @@ class PyIADsContainer(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetObject(self,_class:'str',relativeName:'str') -> 'Any':
+      def GetObject(self,_class:'str',relativeName:'str') -> 'PyIDispatch':
          """
          None
 
@@ -11867,7 +11867,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDispatch
         
          """
          pass
@@ -12940,7 +12940,7 @@ class PyIActiveScriptParseProcedure(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def ParseProcedureText(self,pstrCode:'Any',pstrFormalParams:'Any',pstrProcedureName:'Any',pstrItemName:'Any',punkContext:'Any',pstrDelimiter:'Any',dwSourceContextCookie:'Any',ulStartingLineNumber:'Any',dwFlags:'Any') -> 'None':
+      def ParseProcedureText(self,pstrCode:'Any',pstrFormalParams:'Any',pstrProcedureName:'Any',pstrItemName:'Any',punkContext:'PyIUnknown',pstrDelimiter:'Any',dwSourceContextCookie:'Any',ulStartingLineNumber:'Any',dwFlags:'Any') -> 'None':
          """
          Description of ParseProcedureText.
 
@@ -12950,7 +12950,7 @@ Args:
       pstrFormalParams(Any):Description for pstrFormalParams
       pstrProcedureName(Any):Description for pstrProcedureName
       pstrItemName(Any):Description for pstrItemName
-      punkContext(Any):Description for punkContext
+      punkContext(PyIUnknown):Description for punkContext
       pstrDelimiter(Any):Description for pstrDelimiter
       dwSourceContextCookie(Any):Description for dwSourceContextCookie
       ulStartingLineNumber(Any):Description for ulStartingLineNumber
@@ -13267,14 +13267,14 @@ Returns:
          pass
 
 
-      def CreateInstanceAtDebugger(self,rclsid:'PyIID',pUnkOuter:'Any',dwClsContext:'Any',riid:'PyIID') -> 'None':
+      def CreateInstanceAtDebugger(self,rclsid:'PyIID',pUnkOuter:'PyIUnknown',dwClsContext:'Any',riid:'PyIID') -> 'None':
          """
          Create objects in the application process address space.
 
 Args:
 
       rclsid(PyIID):Description for rclsid
-      pUnkOuter(Any):Description for pUnkOuter
+      pUnkOuter(PyIUnknown):Description for pUnkOuter
       dwClsContext(Any):Description for dwClsContext
       riid(PyIID):Description for riidCommentsProvides a mechanism for the debugger IDE, running out-of-process to the application, to create objects in the application process. This method simply delegates to CoCreateInstance.
 
@@ -13302,13 +13302,13 @@ Returns:
          pass
 
 
-      def onHandleBreakPoint(self,prpt:'Any',br:'Any',pError:'Any') -> 'None':
+      def onHandleBreakPoint(self,prpt:'PyIRemoteDebugApplicationThread',br:'Any',pError:'Any') -> 'None':
          """
          Called when a breakpoint is hit.
 
 Args:
 
-      prpt(Any):Description for prpt
+      prpt(PyIRemoteDebugApplicationThread):Description for prpt
       br(Any):Description for br
       pError(Any):Description for pErrorCommentsThe application will remain suspended until the debugger IDE calls PyIDebugApplication::ResumeFromBreakPoint.
 
@@ -13336,14 +13336,14 @@ Returns:
          pass
 
 
-      def onDebuggerEvent(self,guid:'PyIID',uUnknown:'Any') -> 'None':
+      def onDebuggerEvent(self,guid:'PyIID',uUnknown:'PyIUnknown') -> 'None':
          """
          Description of onDebuggerEvent.
 
 Args:
 
       guid(PyIID):
-      uUnknown(Any):CommentsThe semantics of guid and unknown are entirely application/debugger defined This method may return E_NOTIMPL.
+      uUnknown(PyIUnknown):CommentsThe semantics of guid and unknown are entirely application/debugger defined This method may return E_NOTIMPL.
 
 Returns:
 
@@ -13376,13 +13376,13 @@ Returns:
          pass
 
 
-      def RemoveDestination(self,punk:'Any') -> 'None':
+      def RemoveDestination(self,punk:'PyIUnknown') -> 'None':
          """
          Removes a single entry from the jump lists
 
 Args:
 
-      punk(Any):IShellItem or IShellLink representing an item in the application's jump listCommentsDoes not remove pinned items
+      punk(PyIUnknown):IShellItem or IShellLink representing an item in the application's jump listCommentsDoes not remove pinned items
 
 Returns:
 
@@ -13431,7 +13431,7 @@ Returns:
          pass
 
 
-      def GetList(self,ListType:'Any',riid:'PyIID',ItemsDesired:'Any'=0) -> 'Any':
+      def GetList(self,ListType:'Any',riid:'PyIID',ItemsDesired:'Any'=0) -> 'PyIEnumObjects':
          """
          Retrieves a list of items in a jump list
 
@@ -13443,7 +13443,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumObjects
         
          """
          pass
@@ -13488,13 +13488,13 @@ Returns:
          pass
 
 
-      def StartOperation(self,pbcReserved:'Any') -> 'None':
+      def StartOperation(self,pbcReserved:'PyIBindCtx') -> 'None':
          """
          Description of StartOperation.
 
 Args:
 
-      pbcReserved(Any):Description for pbcReserved
+      pbcReserved(PyIBindCtx):Description for pbcReserved
 
 Returns:
 
@@ -13520,14 +13520,14 @@ Returns:
          pass
 
 
-      def EndOperation(self,hResult:'Any',pbcReserved:'Any',dwEffects:'Any') -> 'None':
+      def EndOperation(self,hResult:'Any',pbcReserved:'PyIBindCtx',dwEffects:'Any') -> 'None':
          """
          Description of EndOperation.
 
 Args:
 
       hResult(Any):Description for hResult
-      pbcReserved(Any):Description for pbcReserved
+      pbcReserved(PyIBindCtx):Description for pbcReserved
       dwEffects(Any):Description for dwEffects
 
 Returns:
@@ -13569,7 +13569,7 @@ class PyIBindCtx(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetRunningObjectTable(self,) -> 'Any':
+      def GetRunningObjectTable(self,) -> 'PyIRunningObjectTable':
          """
          Retrieves an object interfacing to the Running 
 
@@ -13581,13 +13581,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIRunningObjectTable
         
          """
          pass
 
 
-      def GetBindOptions(self,) -> 'Any':
+      def GetBindOptions(self,) -> 'PyBIND_OPTS':
          """
          Retrieves the bind options for the bind context
 
@@ -13597,7 +13597,7 @@ Args:
 
 Returns:
 
-      Any
+      PyBIND_OPTS
         
          """
          pass
@@ -13619,14 +13619,14 @@ Returns:
          pass
 
 
-      def RegisterObjectParam(self,Key:'str',punk:'Any') -> 'None':
+      def RegisterObjectParam(self,Key:'str',punk:'PyIUnknown') -> 'None':
          """
          Adds an object to the context's keyed table of associated objects
 
 Args:
 
       Key(str):The string key for the object to be registered
-      punk(Any):COM object to be registered with the bind context
+      punk(PyIUnknown):COM object to be registered with the bind context
 
 Returns:
 
@@ -13652,7 +13652,7 @@ Returns:
          pass
 
 
-      def GetObjectParam(self,Key:'str') -> 'Any':
+      def GetObjectParam(self,Key:'str') -> 'PyIUnknown':
          """
          Returns one of the bind context's associated objects
 
@@ -13662,13 +13662,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
 
 
-      def EnumObjectParam(self,) -> 'Any':
+      def EnumObjectParam(self,) -> 'PyIEnumString':
          """
          Creates an enumerator to list context's string keys
 
@@ -13678,7 +13678,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumString
         
          """
          pass
@@ -13757,7 +13757,7 @@ class PyICatInformation(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def EnumCategories(self,lcid:'Any'=0) -> 'Any':
+      def EnumCategories(self,lcid:'Any'=0) -> 'PyIEnumCATEGORYINFO':
          """
          Returns an enumerator for the component categories 
 
@@ -13769,7 +13769,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumCATEGORYINFO
         
          """
          pass
@@ -13793,7 +13793,7 @@ Returns:
          pass
 
 
-      def EnumClassesOfCategories(self,listIIdImplemented:'List[PyIID]'=None,listIIdRequired:'Any'=None) -> 'Any':
+      def EnumClassesOfCategories(self,listIIdImplemented:'List[PyIID]'=None,listIIdRequired:'Any'=None) -> 'PyIEnumGUID':
          """
          Returns an enumerator over the classes that 
 
@@ -13806,7 +13806,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumGUID
         
          """
          pass
@@ -13819,7 +13819,7 @@ class PyICatRegister(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def RegisterCategories(self,arg:'List[Any]') -> 'None':
+      def RegisterCategories(self,arg:'List[Tuple[PyIID, Any, str]]') -> 'None':
          """
          Registers one or more component categories. Each component category 
 
@@ -13827,7 +13827,7 @@ consists of a CATID and a list of locale-dependent description strings.
 
 Args:
 
-      arg(List[Any]):A sequence of category descriptions.
+      arg(List[Tuple[PyIID, Any, str]]):A sequence of category descriptions.
 
 Returns:
 
@@ -14040,18 +14040,18 @@ class PyIClassFactory(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateInstance(self,outerUnknown:'Any',iid:'PyIID') -> 'Any':
+      def CreateInstance(self,outerUnknown:'PyIUnknown',iid:'PyIID') -> 'PyIUnknown':
          """
          Creates an uninitialized object.
 
 Args:
 
-      outerUnknown(Any):Usually None, otherwise the outer unknown if the object is being created as part of an aggregate.
+      outerUnknown(PyIUnknown):Usually None, otherwise the outer unknown if the object is being created as part of an aggregate.
       iid(PyIID):The IID of the resultant object.Return ValueThe result object will always be derived from PyIUnknown, but will be of the type specified by iid.
 
 Returns:
 
-      Any:The IID of the resultant object.Return ValueThe result object will always be derived from PyIUnknown, but will be of the 
+      PyIUnknown:The IID of the resultant object.Return ValueThe result object will always be derived from PyIUnknown, but will be of the 
 
 type specified by iid.
 
@@ -14085,13 +14085,13 @@ class PyIClientSecurity(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def QueryBlanket(self,Proxy:'Any') -> 'Any':
+      def QueryBlanket(self,Proxy:'PyIUnknown') -> 'Any':
          """
          Retrieves the authentication settings for an interface
 
 Args:
 
-      Proxy(Any):An interface created through a proxy
+      Proxy(PyIUnknown):An interface created through a proxy
 
 Returns:
 
@@ -14101,13 +14101,13 @@ Returns:
          pass
 
 
-      def SetBlanket(self,Proxy:'Any',AuthnSvc:'Any',AuthzSvc:'Any',ServerPrincipalName:'str',AuthnLevel:'Any',ImpLevel:'Any',AuthInfo:'Any',Capabilities:'Any') -> 'None':
+      def SetBlanket(self,Proxy:'PyIUnknown',AuthnSvc:'Any',AuthzSvc:'Any',ServerPrincipalName:'str',AuthnLevel:'Any',ImpLevel:'Any',AuthInfo:'Any',Capabilities:'Any') -> 'None':
          """
          Changes the authentication options used with an interface
 
 Args:
 
-      Proxy(Any):The proxy interface for which to set security options
+      Proxy(PyIUnknown):The proxy interface for which to set security options
       AuthnSvc(Any):Authentication service identifier, pythoncom.RPC_C_AUTHN_* (but not RPC_C_AUTHN_LEVEL_*)
       AuthzSvc(Any):Authorization service identifier, pythoncom.RPC_C_AUTHZ_*
       ServerPrincipalName(str):SPN that identifies the server, can be None
@@ -14124,17 +14124,17 @@ Returns:
          pass
 
 
-      def CopyProxy(self,Proxy:'Any') -> 'Any':
+      def CopyProxy(self,Proxy:'PyIUnknown') -> 'PyIUnknown':
          """
          Makes a private copy of a proxy interface
 
 Args:
 
-      Proxy(Any):The remote interface to be copied
+      Proxy(PyIUnknown):The remote interface to be copied
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -14221,7 +14221,7 @@ Returns:
          pass
 
 
-      def GetConnectionPointContainer(self,) -> 'Any':
+      def GetConnectionPointContainer(self,) -> 'PyIConnectionPointContainer':
          """
          Gets the connection point 
 
@@ -14233,13 +14233,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIConnectionPointContainer
         
          """
          pass
 
 
-      def Advise(self,unk:'Any') -> 'Any':
+      def Advise(self,unk:'PyIUnknown') -> 'Any':
          """
          Establishes a connection between the connection point object and the client's 
 
@@ -14247,7 +14247,7 @@ sink.
 
 Args:
 
-      unk(Any):The client's advise sinkReturn ValueThe result is the connection point identifier used by PyIConnectionPoint::Unadvise
+      unk(PyIUnknown):The client's advise sinkReturn ValueThe result is the connection point identifier used by PyIConnectionPoint::Unadvise
 
 Returns:
 
@@ -14276,7 +14276,7 @@ Returns:
          pass
 
 
-      def EnumConnections(self,) -> 'Any':
+      def EnumConnections(self,) -> 'PyIEnumConnections':
          """
          Creates an enumerator to iterate through the 
 
@@ -14288,7 +14288,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumConnections
         
          """
          pass
@@ -14301,7 +14301,7 @@ class PyIConnectionPointContainer(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def EnumConnectionPoints(self,) -> 'Any':
+      def EnumConnectionPoints(self,) -> 'PyIEnumConnectionPoints':
          """
          Creates an enumerator object 
 
@@ -14315,13 +14315,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumConnectionPoints
         
          """
          pass
 
 
-      def FindConnectionPoint(self,iid:'PyIID') -> 'Any':
+      def FindConnectionPoint(self,iid:'PyIID') -> 'PyIConnectionPoint':
          """
          Finds a connection point for the 
 
@@ -14333,7 +14333,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIConnectionPoint
         
          """
          pass
@@ -14346,7 +14346,7 @@ class PyIContext(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def SetProperty(self,rpolicyId:'PyIID',flags:'Any',pUnk:'Any') -> 'None':
+      def SetProperty(self,rpolicyId:'PyIID',flags:'Any',pUnk:'PyIUnknown') -> 'None':
          """
          Sets a property on the context
 
@@ -14354,7 +14354,7 @@ Args:
 
       rpolicyId(PyIID):GUID identifying the property to be set
       flags(Any):Reserved, use only 0
-      pUnk(Any):The property value
+      pUnk(PyIUnknown):The property value
 
 Returns:
 
@@ -14380,7 +14380,7 @@ Returns:
          pass
 
 
-      def GetProperty(self,rGuid:'PyIID') -> 'Tuple[Any, Any]':
+      def GetProperty(self,rGuid:'PyIID') -> 'Tuple[Any, PyIUnknown]':
          """
          Retrieves a context property
 
@@ -14390,14 +14390,14 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]:GUID that identifies a context propertyReturn ValueReturns flags (CPFLAGS is reserved, no defined values) and the IUnknown interface set for the property
+      Tuple[Any, PyIUnknown]:GUID that identifies a context propertyReturn ValueReturns flags (CPFLAGS is reserved, no defined values) and the IUnknown interface set for the property
 
         
          """
          pass
 
 
-      def EnumContextProps(self,) -> 'Any':
+      def EnumContextProps(self,) -> 'PyIEnumContextProps':
          """
          Returns an enumerator for the context properties
 
@@ -14407,7 +14407,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumContextProps
         
          """
          pass
@@ -14440,13 +14440,13 @@ Returns:
          pass
 
 
-      def InvokeCommand(self,pici:'Any') -> 'None':
+      def InvokeCommand(self,pici:'PyCMINVOKECOMMANDINFO') -> 'None':
          """
          Executes a context menu option
 
 Args:
 
-      pici(Any):Tuple of parameters representing a CMINVOKECOMMANDINFO struct
+      pici(PyCMINVOKECOMMANDINFO):Tuple of parameters representing a CMINVOKECOMMANDINFO struct
 
 Returns:
 
@@ -14481,7 +14481,7 @@ class PyICopyHookA(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CopyCallback(self,hwnd:'Any',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
+      def CopyCallback(self,hwnd:'int',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
          """
          Description of CopyCallback.
 
@@ -14510,7 +14510,7 @@ class PyICopyHookW(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CopyCallback(self,hwnd:'Any',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
+      def CopyCallback(self,hwnd:'int',wFunc:'Any',wFlags:'Any',srcFile:'Union[Any, str]',srcAttribs:'Any',destFile:'Union[Any, str]',destAttribs:'Any') -> 'None':
          """
          Description of CopyCallback.
 
@@ -14620,13 +14620,13 @@ Returns:
          pass
 
 
-      def AddRefTypeInfo(self,pTInfo:'Any') -> 'None':
+      def AddRefTypeInfo(self,pTInfo:'PyITypeInfo') -> 'None':
          """
          Description of AddRefTypeInfo.
 
 Args:
 
-      pTInfo(Any):Description for pTInfo
+      pTInfo(PyITypeInfo):Description for pTInfo
 
 Returns:
 
@@ -15269,7 +15269,7 @@ Returns:
          pass
 
 
-      def BeginList(self,riid:'PyIID') -> 'Tuple[Any, Any]':
+      def BeginList(self,riid:'PyIID') -> 'Tuple[Any, PyIObjectArray]':
          """
          Clears the jump list and prepares it to be 
 
@@ -15281,7 +15281,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]:The interface to return
+      Tuple[Any, PyIObjectArray]:The interface to return
 Return ValueReturns the number of slots and a collection of all destinations removed from the jump list
 
         
@@ -15289,14 +15289,14 @@ Return ValueReturns the number of slots and a collection of all destinations rem
          pass
 
 
-      def AppendCategory(self,Category:'Any',Items:'Any') -> 'None':
+      def AppendCategory(self,Category:'Any',Items:'PyIObjectArray') -> 'None':
          """
          Adds a custom category to the jump list
 
 Args:
 
       Category(Any):Display name of the category, can also be a dll and resource id for localization
-      Items(Any):Collection of IShellItem and/or IShellLink interfaces
+      Items(PyIObjectArray):Collection of IShellItem and/or IShellLink interfaces
 
 Returns:
 
@@ -15322,13 +15322,13 @@ Returns:
          pass
 
 
-      def AddUserTasks(self,Items:'Any') -> 'None':
+      def AddUserTasks(self,Items:'PyIObjectArray') -> 'None':
          """
          Sets the entries shown in the Tasks category
 
 Args:
 
-      Items(Any):Collection of PyIShellItem and/or PyIShellLink interfaces
+      Items(PyIObjectArray):Collection of PyIShellItem and/or PyIShellLink interfaces
 
 Returns:
 
@@ -15354,7 +15354,7 @@ Returns:
          pass
 
 
-      def GetRemovedDestinations(self,riid:'PyIID') -> 'Any':
+      def GetRemovedDestinations(self,riid:'PyIID') -> 'PyIObjectArray':
          """
          Returns all the items removed from the 
 
@@ -15366,7 +15366,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIObjectArray
         
          """
          pass
@@ -15422,45 +15422,45 @@ class PyIDataObject(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetData(self,pformatetcIn:'Any') -> 'Any':
+      def GetData(self,pformatetcIn:'PyFORMATETC') -> 'PySTGMEDIUM':
          """
          Retrieves data from the object in specified format
 
 Args:
 
-      pformatetcIn(Any):Tuple representing a FORMATETC struct describing how the data should be returned
+      pformatetcIn(PyFORMATETC):Tuple representing a FORMATETC struct describing how the data should be returned
 
 Returns:
 
-      Any
+      PySTGMEDIUM
         
          """
          pass
 
 
-      def GetDataHere(self,pformatetcIn:'Any') -> 'Any':
+      def GetDataHere(self,pformatetcIn:'PyFORMATETC') -> 'PySTGMEDIUM':
          """
          Retunrs a copy of the object's data in specified format
 
 Args:
 
-      pformatetcIn(Any):Tuple representing a FORMATETC struct describing how the data should be returned
+      pformatetcIn(PyFORMATETC):Tuple representing a FORMATETC struct describing how the data should be returned
 
 Returns:
 
-      Any
+      PySTGMEDIUM
         
          """
          pass
 
 
-      def QueryGetData(self,pformatetc:'Any') -> 'None':
+      def QueryGetData(self,pformatetc:'PyFORMATETC') -> 'None':
          """
          Checks if the objects supports returning data in a particular format.
 
 Args:
 
-      pformatetc(Any):Tuple representing a FORMATETC struct describing how the data should be returnedReturn ValueReturns None if the object supports the specified format, otherwise an error is raised.
+      pformatetc(PyFORMATETC):Tuple representing a FORMATETC struct describing how the data should be returnedReturn ValueReturns None if the object supports the specified format, otherwise an error is raised.
 
 Returns:
 
@@ -15473,7 +15473,7 @@ returnedReturn ValueReturns None if the object supports the specified format, ot
          pass
 
 
-      def GetCanonicalFormatEtc(self,pformatectIn:'Any') -> 'Any':
+      def GetCanonicalFormatEtc(self,pformatectIn:'PyFORMATETC') -> 'PyFORMATETC':
          """
          Transforms a FORMATECT data description into a general 
 
@@ -15481,24 +15481,24 @@ format that the object supports
 
 Args:
 
-      pformatectIn(Any):Tuple representing a FORMATETC struct describing how the data should be returned
+      pformatectIn(PyFORMATETC):Tuple representing a FORMATETC struct describing how the data should be returned
 
 Returns:
 
-      Any
+      PyFORMATETC
         
          """
          pass
 
 
-      def SetData(self,pformatetc:'Any',pmedium:'Any',fRelease:'Any') -> 'None':
+      def SetData(self,pformatetc:'PyFORMATETC',pmedium:'PySTGMEDIUM',fRelease:'Any') -> 'None':
          """
          Sets the data that the object will return.
 
 Args:
 
-      pformatetc(Any):Tuple representing a FORMATETC struct describing the type of data to be set
-      pmedium(Any):The data to be placed in the object
+      pformatetc(PyFORMATETC):Tuple representing a FORMATETC struct describing the type of data to be set
+      pmedium(PySTGMEDIUM):The data to be placed in the object
       fRelease(Any):If True, transfers ownership of the data to the object.  If False, caller is responsible for releasing the STGMEDIUM.
 
 Returns:
@@ -15509,7 +15509,7 @@ Returns:
          pass
 
 
-      def EnumFormatEtc(self,dwDirection:'Any') -> 'Any':
+      def EnumFormatEtc(self,dwDirection:'Any') -> 'PyIEnumFORMATETC':
          """
          Returns an enumerator to list the data formats that the 
 
@@ -15521,13 +15521,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumFORMATETC
         
          """
          pass
 
 
-      def DAdvise(self,pformatetc:'Any',advf:'Any',pAdvSink:'Any') -> 'Any':
+      def DAdvise(self,pformatetc:'PyFORMATETC',advf:'Any',pAdvSink:'Any') -> 'Any':
          """
          Connects the object to an interface that will receive notifications when its data 
 
@@ -15535,7 +15535,7 @@ changes
 
 Args:
 
-      pformatetc(Any):Defines the type of data for which the sink will receive notifications.
+      pformatetc(PyFORMATETC):Defines the type of data for which the sink will receive notifications.
       advf(Any):Combination of values from ADVF enum. (which currently do not appear in any of the constants modules!)
       pAdvSink(Any):Currently this interface is not wrapped.Return ValueReturns a unique number that is used to identify the connection
 
@@ -15719,7 +15719,7 @@ Returns:
          pass
 
 
-      def GetCurrentThread(self,) -> 'Any':
+      def GetCurrentThread(self,) -> 'PyIDebugApplicationThread':
          """
          Returns the application thread object 
 
@@ -15731,19 +15731,19 @@ Args:
 
 Returns:
 
-      Any
+      PyIDebugApplicationThread
         
          """
          pass
 
 
-      def CreateAsyncDebugOperation(self,psdo:'Any') -> 'None':
+      def CreateAsyncDebugOperation(self,psdo:'PyIDebugSyncOperation') -> 'None':
          """
          None
 
 Args:
 
-      psdo(Any):Description for psdoCommentsThis provides a mechanism for language engines to implement asynchronous expression and evaluation, etc. without having to know the details of synchronization with the debugger thread. See the descriptions for PyIDebugSyncOperation and PyIDebugAsyncOperation for more details.
+      psdo(PyIDebugSyncOperation):Description for psdoCommentsThis provides a mechanism for language engines to implement asynchronous expression and evaluation, etc. without having to know the details of synchronization with the debugger thread. See the descriptions for PyIDebugSyncOperation and PyIDebugAsyncOperation for more details.
 
 Returns:
 
@@ -15753,13 +15753,13 @@ Returns:
          pass
 
 
-      def AddStackFrameSniffer(self,pdsfs:'Any') -> 'Any':
+      def AddStackFrameSniffer(self,pdsfs:'PyIDebugStackFrameSniffer') -> 'Any':
          """
          Adds a stack frame sniffer to this application.
 
 Args:
 
-      pdsfs(Any):Description for pdsfsCommentsGenerally called by a language engine to expose its stack frames to the debugger. It is possible for other entities to expose stack frames.Return ValueThe result is an integer cookie, to be passed to PyIDebugApplication::RemoveStackFrameSniffer
+      pdsfs(PyIDebugStackFrameSniffer):Description for pdsfsCommentsGenerally called by a language engine to expose its stack frames to the debugger. It is possible for other entities to expose stack frames.Return ValueThe result is an integer cookie, to be passed to PyIDebugApplication::RemoveStackFrameSniffer
 
 Returns:
 
@@ -15839,7 +15839,7 @@ Returns:
          pass
 
 
-      def CreateApplicationNode(self,) -> 'Any':
+      def CreateApplicationNode(self,) -> 'PyIDebugApplicationNode':
          """
          Creates a new application node which 
 
@@ -15851,20 +15851,20 @@ Args:
 
 Returns:
 
-      Any
+      PyIDebugApplicationNode
         
          """
          pass
 
 
-      def FireDebuggerEvent(self,guid:'Any',unknown:'Any') -> 'None':
+      def FireDebuggerEvent(self,guid:'Any',unknown:'PyIUnknown') -> 'None':
          """
          Fire a generic event to the IApplicationDebugger (if any)
 
 Args:
 
       guid(Any):A GUID.
-      unknown(Any):An unknown object.
+      unknown(PyIUnknown):An unknown object.
 
 Returns:
 
@@ -15874,14 +15874,14 @@ Returns:
          pass
 
 
-      def HandleRuntimeError(self,pErrorDebug:'Any',pScriptSite:'Any') -> 'None':
+      def HandleRuntimeError(self,pErrorDebug:'PyIActiveScriptErrorDebug',pScriptSite:'PyIActiveScriptSite') -> 'None':
          """
          Description of HandleRuntimeError.
 
 Args:
 
-      pErrorDebug(Any):Description for pErrorDebug
-      pScriptSite(Any):Description for pScriptSite
+      pErrorDebug(PyIActiveScriptErrorDebug):Description for pErrorDebug
+      pScriptSite(PyIActiveScriptSite):Description for pScriptSite
 
 Returns:
 
@@ -15923,13 +15923,13 @@ Returns:
          pass
 
 
-      def AddGlobalExpressionContextProvider(self,pdsfs:'Any') -> 'None':
+      def AddGlobalExpressionContextProvider(self,pdsfs:'PyIProvideExpressionContexts') -> 'None':
          """
          Description of AddGlobalExpressionContextProvider.
 
 Args:
 
-      pdsfs(Any):Description for pdsfs
+      pdsfs(PyIProvideExpressionContexts):Description for pdsfs
 
 Returns:
 
@@ -15980,7 +15980,7 @@ Returns:
          pass
 
 
-      def GetParent(self,) -> 'Any':
+      def GetParent(self,) -> 'PyIDebugApplicationNode':
          """
          Returns the parent node.
 
@@ -15990,19 +15990,19 @@ Args:
 
 Returns:
 
-      Any
+      PyIDebugApplicationNode
         
          """
          pass
 
 
-      def SetDocumentProvider(self,pddp:'Any') -> 'None':
+      def SetDocumentProvider(self,pddp:'PyIDebugDocumentProvider') -> 'None':
          """
          Description of SetDocumentProvider.
 
 Args:
 
-      pddp(Any):Description for pddp
+      pddp(PyIDebugDocumentProvider):Description for pddp
 
 Returns:
 
@@ -16028,13 +16028,13 @@ Returns:
          pass
 
 
-      def Attach(self,pdanParent:'Any') -> 'None':
+      def Attach(self,pdanParent:'PyIDebugApplicationNode') -> 'None':
          """
          Attach a node to its parent.
 
 Args:
 
-      pdanParent(Any):The parent node.  None is not acceptable.
+      pdanParent(PyIDebugApplicationNode):The parent node.  None is not acceptable.
 
 Returns:
 
@@ -16067,13 +16067,13 @@ class PyIDebugApplicationNodeEvents(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def onAddChild(self,prddpChild:'Any') -> 'None':
+      def onAddChild(self,prddpChild:'PyIDebugApplicationNode') -> 'None':
          """
          Description of onAddChild.
 
 Args:
 
-      prddpChild(Any):Description for prddpChild
+      prddpChild(PyIDebugApplicationNode):Description for prddpChild
 
 Returns:
 
@@ -16083,13 +16083,13 @@ Returns:
          pass
 
 
-      def onRemoveChild(self,prddpChild:'Any') -> 'None':
+      def onRemoveChild(self,prddpChild:'PyIDebugApplicationNode') -> 'None':
          """
          Description of onRemoveChild.
 
 Args:
 
-      prddpChild(Any):Description for prddpChild
+      prddpChild(PyIDebugApplicationNode):Description for prddpChild
 
 Returns:
 
@@ -16115,13 +16115,13 @@ Returns:
          pass
 
 
-      def onAttach(self,prddpParent:'Any') -> 'None':
+      def onAttach(self,prddpParent:'PyIDebugApplicationNode') -> 'None':
          """
          Description of onAttach.
 
 Args:
 
-      prddpParent(Any):Description for prddpParent
+      prddpParent(PyIDebugApplicationNode):Description for prddpParent
 
 Returns:
 
@@ -16281,13 +16281,13 @@ class PyIDebugDocumentHelper(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Init(self,pda:'Any',pszShortName:'Any',pszLongName:'Any',docAttr:'Any') -> 'None':
+      def Init(self,pda:'PyIDebugApplication',pszShortName:'Any',pszLongName:'Any',docAttr:'Any') -> 'None':
          """
          Description of Init.
 
 Args:
 
-      pda(Any):Description for pda
+      pda(PyIDebugApplication):Description for pda
       pszShortName(Any):Description for pszShortName
       pszLongName(Any):Description for pszLongName
       docAttr(Any):Description for docAttr
@@ -16300,13 +16300,13 @@ Returns:
          pass
 
 
-      def Attach(self,pddhParent:'Any') -> 'None':
+      def Attach(self,pddhParent:'PyIDebugDocumentHelper') -> 'None':
          """
          Add the document to the doc tree
 
 Args:
 
-      pddhParent(Any):Parent item.  If none, this item is top level.
+      pddhParent(PyIDebugDocumentHelper):Parent item.  If none, this item is top level.
 
 Returns:
 
@@ -16364,13 +16364,13 @@ Returns:
          pass
 
 
-      def SetDebugDocumentHost(self,pddh:'Any') -> 'None':
+      def SetDebugDocumentHost(self,pddh:'PyIDebugDocumentHost') -> 'None':
          """
          Description of SetDebugDocumentHost.
 
 Args:
 
-      pddh(Any):Description for pddh
+      pddh(PyIDebugDocumentHost):Description for pddh
 
 Returns:
 
@@ -16562,13 +16562,13 @@ Returns:
          pass
 
 
-      def BringDocumentContextToTop(self,pddc:'Any') -> 'None':
+      def BringDocumentContextToTop(self,pddc:'PyIDebugDocumentContext') -> 'None':
          """
          Description of BringDocumentContextToTop.
 
 Args:
 
-      pddc(Any):Description for pddc
+      pddc(PyIDebugDocumentContext):Description for pddc
 
 Returns:
 
@@ -16730,7 +16730,7 @@ class PyIDebugDocumentProvider(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetDocument(self,) -> 'Any':
+      def GetDocument(self,) -> 'PyIDebugDocument':
          """
          Causes the document to be instantiated if it does 
 
@@ -16742,7 +16742,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDebugDocument
         
          """
          pass
@@ -16837,13 +16837,13 @@ Returns:
          pass
 
 
-      def GetPositionOfContext(self,psc:'Any') -> 'None':
+      def GetPositionOfContext(self,psc:'PyIDebugDocumentContext') -> 'None':
          """
          Description of GetPositionOfContext.
 
 Args:
 
-      psc(Any):Description for psc
+      psc(PyIDebugDocumentContext):Description for psc
 
 Returns:
 
@@ -17099,13 +17099,13 @@ class PyIDebugExpression(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Start(self,pdecb:'Any') -> 'None':
+      def Start(self,pdecb:'PyIDebugExpressionCallBack') -> 'None':
          """
          Description of Start.
 
 Args:
 
-      pdecb(Any):Description for pdecb
+      pdecb(PyIDebugExpressionCallBack):Description for pdecb
 
 Returns:
 
@@ -17342,13 +17342,13 @@ class PyIDebugSessionProvider(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def StartDebugSession(self,pda:'Any') -> 'None':
+      def StartDebugSession(self,pda:'PyIRemoteDebugApplication') -> 'None':
          """
          Description of StartDebugSession.
 
 Args:
 
-      pda(Any):Description for pda
+      pda(PyIRemoteDebugApplication):Description for pda
 
 Returns:
 
@@ -17417,7 +17417,7 @@ Returns:
          pass
 
 
-      def GetThread(self,) -> 'Any':
+      def GetThread(self,) -> 'PyIDebugApplicationThread':
          """
          Returns the thread associated with this stack 
 
@@ -17429,7 +17429,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDebugApplicationThread
         
          """
          pass
@@ -17666,7 +17666,7 @@ Returns:
          pass
 
 
-      def SetCooperativeLevel(self,hwnd:'Any',level:'Any') -> 'None':
+      def SetCooperativeLevel(self,hwnd:'int',level:'Any') -> 'None':
          """
          The IDirectSound::SetCooperativeLevel method sets the cooperative level 
 
@@ -17685,7 +17685,7 @@ Returns:
          pass
 
 
-      def CreateSoundBuffer(self,lpDSCBufferDesc:'Any',unk:'Any'=None) -> 'None':
+      def CreateSoundBuffer(self,lpDSCBufferDesc:'PyDSCBUFFERDESC',unk:'Any'=None) -> 'None':
          """
          The IDirectSound::CreateSoundBuffer method creates a DirectSoundBuffer 
 
@@ -17693,7 +17693,7 @@ object to hold a sequence of audio samples.
 
 Args:
 
-      lpDSCBufferDesc(Any):a DSBUFFERDESC structure containing values for the sound buffer being created.
+      lpDSCBufferDesc(PyDSCBUFFERDESC):a DSBUFFERDESC structure containing values for the sound buffer being created.
       unk(Any):The IUnknown for COM aggregation.
 
 Returns:
@@ -18113,7 +18113,7 @@ class PyIDirectoryObject(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetObjectInformation(self,) -> 'Any':
+      def GetObjectInformation(self,) -> 'PyADS_OBJECT_INFO':
          """
          None
 
@@ -18123,13 +18123,13 @@ Args:
 
 Returns:
 
-      Any
+      PyADS_OBJECT_INFO
         
          """
          pass
 
 
-      def GetObjectAttributes(self,names:'Tuple[str, ...]') -> 'Tuple[Any, ...]':
+      def GetObjectAttributes(self,names:'Tuple[str, ...]') -> 'Tuple[PyADS_ATTR_INFO, ...]':
          """
          None
 
@@ -18139,19 +18139,19 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]
+      Tuple[PyADS_ATTR_INFO, ...]
         
          """
          pass
 
 
-      def SetObjectAttributes(self,attrs:'Tuple[Any, ...]') -> 'Any':
+      def SetObjectAttributes(self,attrs:'Tuple[PyADS_ATTR_INFO, ...]') -> 'Any':
          """
          None
 
 Args:
 
-      attrs(Tuple[Any, ...]):The attributes to set
+      attrs(Tuple[PyADS_ATTR_INFO, ...]):The attributes to set
 
 Returns:
 
@@ -18161,18 +18161,18 @@ Returns:
          pass
 
 
-      def CreateDSObject(self,rdn:'str',attrs:'Tuple[Any, ...]') -> 'Any':
+      def CreateDSObject(self,rdn:'str',attrs:'Tuple[PyADS_ATTR_INFO, ...]') -> 'PyIDispatch':
          """
          None
 
 Args:
 
       rdn(str):The relative distinguished name (relative path) of the object to be created.
-      attrs(Tuple[Any, ...]):The attributes to set.
+      attrs(Tuple[PyADS_ATTR_INFO, ...]):The attributes to set.
 
 Returns:
 
-      Any
+      PyIDispatch
         
          """
          pass
@@ -18436,7 +18436,7 @@ is a single integer with the ID of requested item.
          pass
 
 
-      def GetTypeInfo(self,locale:'Any',index:'Any'=0) -> 'Any':
+      def GetTypeInfo(self,locale:'Any',index:'Any'=0) -> 'PyITypeInfo':
          """
          Get type information for the object.
 
@@ -18447,7 +18447,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeInfo
         
          """
          pass
@@ -18493,7 +18493,7 @@ Returns:
          pass
 
 
-      def InvokeEx(self,dispid:'Any',lcid:'Any',flags:'Any',args:'List[Any]',types:'List[Any]'=None,returnDesc:'Any'=1,serviceProvider:'Any'=None) -> 'Any':
+      def InvokeEx(self,dispid:'Any',lcid:'Any',flags:'Any',args:'List[Any]',types:'List[Any]'=None,returnDesc:'Any'=1,serviceProvider:'PyIServiceProvider'=None) -> 'Any':
          """
          None
 
@@ -18505,7 +18505,7 @@ Args:
       args(List[Any]):The arguments.
       types(List[Any]):A tuple of type description object, or None if type descriptions are not available.
       returnDesc(Any):If types==None, should be a BOOL indicating if the result is needed.  If types is a tuple, then should a be type description.
-      serviceProvider(Any):A service provider object supplied by the caller which allows the object to obtain services from the caller. Can be None.
+      serviceProvider(PyIServiceProvider):A service provider object supplied by the caller which allows the object to obtain services from the caller. Can be None.
 
 Returns:
 
@@ -18612,7 +18612,7 @@ class PyIDocHostUIHandler(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def ShowContextMenu(self,dwID:'Any',pt:'Tuple[Any, Any]',pcmdtReserved:'Any',pdispReserved:'Any') -> 'None':
+      def ShowContextMenu(self,dwID:'Any',pt:'Tuple[Any, Any]',pcmdtReserved:'PyIUnknown',pdispReserved:'PyIDispatch') -> 'None':
          """
          Description of ShowContextMenu.
 
@@ -18620,8 +18620,8 @@ Args:
 
       dwID(Any):Description for dwID
       pt(Tuple[Any, Any]):Description for ppt
-      pcmdtReserved(Any):Description for pcmdtReserved
-      pdispReserved(Any):Description for pdispReserved
+      pcmdtReserved(PyIUnknown):Description for pcmdtReserved
+      pdispReserved(PyIDispatch):Description for pdispReserved
 
 Returns:
 
@@ -18647,17 +18647,17 @@ Returns:
          pass
 
 
-      def ShowUI(self,dwID:'Any',pActiveObject:'Any',pCommandTarget:'Any',pFrame:'Any',pDoc:'Any') -> 'None':
+      def ShowUI(self,dwID:'Any',pActiveObject:'PyIOleInPlaceActiveObject',pCommandTarget:'PyIOleCommandTarget',pFrame:'PyIOleInPlaceFrame',pDoc:'PyIOleInPlaceUIWindow') -> 'None':
          """
          Description of ShowUI.
 
 Args:
 
       dwID(Any):Description for dwID
-      pActiveObject(Any):Description for pActiveObject
-      pCommandTarget(Any):Description for pCommandTarget
-      pFrame(Any):Description for pFrame
-      pDoc(Any):Description for pDoc
+      pActiveObject(PyIOleInPlaceActiveObject):Description for pActiveObject
+      pCommandTarget(PyIOleCommandTarget):Description for pCommandTarget
+      pFrame(PyIOleInPlaceFrame):Description for pFrame
+      pDoc(PyIOleInPlaceUIWindow):Description for pDoc
 
 Returns:
 
@@ -18747,14 +18747,14 @@ Returns:
          pass
 
 
-      def ResizeBorder(self,prcBorder:'Tuple[Any, Any, Any, Any]',pUIWindow:'Any',fRameWindow:'Any') -> 'None':
+      def ResizeBorder(self,prcBorder:'Tuple[Any, Any, Any, Any]',pUIWindow:'PyIOleInPlaceUIWindow',fRameWindow:'Any') -> 'None':
          """
          Description of ResizeBorder.
 
 Args:
 
       prcBorder(Tuple[Any, Any, Any, Any]):Description for prcBorder
-      pUIWindow(Any):Description for pUIWindow
+      pUIWindow(PyIOleInPlaceUIWindow):Description for pUIWindow
       fRameWindow(Any):Description for fRameWindow
 
 Returns:
@@ -18799,13 +18799,13 @@ Returns:
          pass
 
 
-      def GetDropTarget(self,pDropTarget:'Any') -> 'None':
+      def GetDropTarget(self,pDropTarget:'PyIDropTarget') -> 'None':
          """
          Description of GetDropTarget.
 
 Args:
 
-      pDropTarget(Any):Description for pDropTarget
+      pDropTarget(PyIDropTarget):Description for pDropTarget
 
 Returns:
 
@@ -18848,13 +18848,13 @@ Returns:
          pass
 
 
-      def FilterDataObject(self,pDO:'Any') -> 'None':
+      def FilterDataObject(self,pDO:'PyIDataObject') -> 'None':
          """
          Description of FilterDataObject.
 
 Args:
 
-      pDO(Any):Description for pDO
+      pDO(PyIDataObject):Description for pDO
 
 Returns:
 
@@ -18911,13 +18911,13 @@ class PyIDropTarget(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def DragEnter(self,pDataObj:'Any',grfKeyState:'Any',pt:'Tuple[Any, Any]',pdwEffect:'Any') -> 'Any':
+      def DragEnter(self,pDataObj:'PyIDataObject',grfKeyState:'Any',pt:'Tuple[Any, Any]',pdwEffect:'Any') -> 'Any':
          """
          Called when an object is initially dragged into a window
 
 Args:
 
-      pDataObj(Any):IDataObject interface that contains the object being dragged
+      pDataObj(PyIDataObject):IDataObject interface that contains the object being dragged
       grfKeyState(Any):Combination of win32con.MK_* flags containing keyboard modifier state
       pt(Tuple[Any, Any]):(x,y) Screen coordinates of cursor
       pdwEffect(Any):shellcon.DROPEFFECT_* valueReturn ValueYour implementation of this function should return a shellcon.DROPEFFECT_* value indicating if the object can be accepted
@@ -18970,13 +18970,13 @@ Returns:
          pass
 
 
-      def Drop(self,pDataObj:'Any',grfKeyState:'Any',pt:'Tuple[Any, Any]',dwEffect:'Any') -> 'Any':
+      def Drop(self,pDataObj:'PyIDataObject',grfKeyState:'Any',pt:'Tuple[Any, Any]',dwEffect:'Any') -> 'Any':
          """
          Called when the object is dropped onto the window
 
 Args:
 
-      pDataObj(Any):IDataObject interface containing the dropped object
+      pDataObj(PyIDataObject):IDataObject interface containing the dropped object
       grfKeyState(Any):Combination of win32con.MK_* flags containing keyboard modifier state
       pt(Tuple[Any, Any]):(x,y) Screen coordinates of cursor
       dwEffect(Any):shellcon.DROPEFFECT_* valueReturn ValueYour implementation of this function should return one of the shellcon.DROPEFFECT_* values
@@ -18997,14 +18997,14 @@ class PyIDropTargetHelper(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def DragEnter(self,hwnd:'int',pDataObj:'Any',pt:'Tuple[Any, Any]',dwEffect:'Any') -> 'None':
+      def DragEnter(self,hwnd:'int',pDataObj:'PyIDataObject',pt:'Tuple[Any, Any]',dwEffect:'Any') -> 'None':
          """
          Description of DragEnter.
 
 Args:
 
       hwnd(int):Handle to target window
-      pDataObj(Any):Object that is dragged onto the window
+      pDataObj(PyIDataObject):Object that is dragged onto the window
       pt(Tuple[Any, Any]):Coordinates where drag operation entered the window
       dwEffect(Any):One of shellcon.DROPEFFECT_* values
 
@@ -19016,7 +19016,7 @@ Returns:
          pass
 
 
-      def DragOver(self,hwnd:'Any',pt:'Tuple[Any, Any]',pdwEffect:'Any') -> 'None':
+      def DragOver(self,hwnd:'int',pt:'Tuple[Any, Any]',pdwEffect:'Any') -> 'None':
          """
          Description of DragOver.
 
@@ -19050,13 +19050,13 @@ Returns:
          pass
 
 
-      def Drop(self,pDataObj:'Any',pt:'Tuple[Any, Any]',dwEffect:'Any') -> 'None':
+      def Drop(self,pDataObj:'PyIDataObject',pt:'Tuple[Any, Any]',dwEffect:'Any') -> 'None':
          """
          Description of Drop.
 
 Args:
 
-      pDataObj(Any):Description for pDataObj
+      pDataObj(PyIDataObject):Description for pDataObj
       pt(Tuple[Any, Any]):Description for pt
       dwEffect(Any):Description for dwEffect
 
@@ -19075,14 +19075,14 @@ class PyIDsObjectPicker(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Initialize(self,targetComputer:'str',scopeInfos:'Any',options:'Any'=0,attrNames:'List[str]'=None) -> 'None':
+      def Initialize(self,targetComputer:'str',scopeInfos:'PyDSOP_SCOPE_INIT_INFOs',options:'Any'=0,attrNames:'List[str]'=None) -> 'None':
          """
          Initializes the IDsObjectPicker interface with information about the scopes, filters, and options used by the object picker dialog box.
 
 Args:
 
       targetComputer(str):
-      scopeInfos(Any):
+      scopeInfos(PyDSOP_SCOPE_INIT_INFOs):
       options(Any):
       attrNames(List[str]):
 
@@ -19094,7 +19094,7 @@ Returns:
          pass
 
 
-      def InvokeDialog(self,hwnd:'Any') -> 'Any':
+      def InvokeDialog(self,hwnd:'int') -> 'PyIDataObject':
          """
          Displays a modal object picker dialog box and returns the user's selections.
 
@@ -19104,7 +19104,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDataObject
         
          """
          pass
@@ -19230,7 +19230,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumCATEGORYINFO':
          """
          Creates another enumerator that contains the same 
 
@@ -19242,7 +19242,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumCATEGORYINFO
         
          """
          pass
@@ -19255,7 +19255,7 @@ class PyIEnumConnectionPoints(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Next(self,num:'Any'=1) -> 'Tuple[Any, ...]':
+      def Next(self,num:'Any'=1) -> 'Tuple[PyIConnectionPoint, ...]':
          """
          Retrieves a specified number of items in the 
 
@@ -19267,7 +19267,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]
+      Tuple[PyIConnectionPoint, ...]
         
          """
          pass
@@ -19305,7 +19305,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumConnectionPoints':
          """
          Creates another enumerator that contains the same 
 
@@ -19317,7 +19317,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumConnectionPoints
         
          """
          pass
@@ -19378,7 +19378,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumConnections':
          """
          Creates another enumerator that contains the same 
 
@@ -19390,7 +19390,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumConnections
         
          """
          pass
@@ -19403,7 +19403,7 @@ class PyIEnumContextProps(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Next(self,num:'Any'=1) -> 'Tuple[Tuple[PyIID, Any, Any], ...]':
+      def Next(self,num:'Any'=1) -> 'Tuple[Tuple[PyIID, Any, PyIUnknown], ...]':
          """
          Retrieves a specified number of items in 
 
@@ -19415,7 +19415,7 @@ Args:
 
 Returns:
 
-      Tuple[Tuple[PyIID, Any, Any], ...]:Number of items to retrieve.
+      Tuple[Tuple[PyIID, Any, PyIUnknown], ...]:Number of items to retrieve.
 Return ValueReturns a tuple of 3-tuples representing ContextProperty structs: 
 
  First item is GUID identifying the property, second is Flags (reserved), third is the interface set as the 
@@ -19459,7 +19459,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumContextProps':
          """
          Creates another enumerator that contains the same 
 
@@ -19471,7 +19471,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumContextProps
         
          """
          pass
@@ -19532,7 +19532,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumDebugApplicationNodes':
          """
          Creates another enumerator that 
 
@@ -19544,7 +19544,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumDebugApplicationNodes
         
          """
          pass
@@ -19605,7 +19605,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumDebugCodeContexts':
          """
          Creates another enumerator that contains the 
 
@@ -19617,7 +19617,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumDebugCodeContexts
         
          """
          pass
@@ -19680,7 +19680,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumDebugExpressionContexts':
          """
          Creates another enumerator that 
 
@@ -19692,7 +19692,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumDebugExpressionContexts
         
          """
          pass
@@ -19753,7 +19753,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumDebugPropertyInfo':
          """
          Creates another enumerator that contains the 
 
@@ -19765,7 +19765,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumDebugPropertyInfo
         
          """
          pass
@@ -19842,7 +19842,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumDebugStackFrames':
          """
          Creates another enumerator that contains the same 
 
@@ -19854,7 +19854,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumDebugStackFrames
         
          """
          pass
@@ -19915,7 +19915,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumExplorerCommand':
          """
          Creates another enumerator that contains the same 
 
@@ -19927,7 +19927,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumExplorerCommand
         
          """
          pass
@@ -19988,7 +19988,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumFORMATETC':
          """
          Creates another enumerator that contains the same enumeration 
 
@@ -20000,7 +20000,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumFORMATETC
         
          """
          pass
@@ -20067,7 +20067,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumGUID':
          """
          Creates another enumerator that contains the same enumeration state as 
 
@@ -20079,7 +20079,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumGUID
         
          """
          pass
@@ -20140,7 +20140,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumIDList':
          """
          Creates another enumerator that contains the same enumeration state 
 
@@ -20152,7 +20152,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumIDList
         
          """
          pass
@@ -20165,7 +20165,7 @@ class PyIEnumMoniker(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Next(self,num:'Any'=1) -> 'Any':
+      def Next(self,num:'Any'=1) -> 'PyIMoniker':
          """
          Retrieves a specified number of items in the enumeration sequence.
 
@@ -20175,7 +20175,7 @@ Args:
 
 Returns:
 
-      Any:Number of items to retrieve.
+      PyIMoniker:Number of items to retrieve.
 Return ValueThe result is a tuple of PyIID objects, 
 
 one for each element returned.  Note that if zero elements are returned, it is not considered 
@@ -20219,7 +20219,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumMoniker':
          """
          Creates another enumerator that contains the same enumeration state 
 
@@ -20231,7 +20231,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumMoniker
         
          """
          pass
@@ -20244,7 +20244,7 @@ class PyIEnumObjects(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Next(self,riid:'PyIID',num:'Any'=1) -> 'Tuple[Any, ...]':
+      def Next(self,riid:'PyIID',num:'Any'=1) -> 'Tuple[PyIUnknown, ...]':
          """
          Retrieves a specified number of items in the enumeration sequence.
 
@@ -20255,7 +20255,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]
+      Tuple[PyIUnknown, ...]
         
          """
          pass
@@ -20293,7 +20293,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumObjects':
          """
          Creates another enumerator that contains the same enumeration state 
 
@@ -20305,7 +20305,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumObjects
         
          """
          pass
@@ -20368,7 +20368,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumRemoteDebugApplicationThreads':
          """
          Creates another 
 
@@ -20380,7 +20380,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumRemoteDebugApplicationThreads
         
          """
          pass
@@ -20443,7 +20443,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumRemoteDebugApplications':
          """
          Creates another enumerator that 
 
@@ -20455,7 +20455,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumRemoteDebugApplications
         
          """
          pass
@@ -20516,7 +20516,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumResources':
          """
          Creates another enumerator that contains the same enumeration 
 
@@ -20528,7 +20528,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumResources
         
          """
          pass
@@ -20589,7 +20589,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumSTATPROPSETSTG':
          """
          Creates another enumerator that contains the same 
 
@@ -20601,7 +20601,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumSTATPROPSETSTG
         
          """
          pass
@@ -20662,7 +20662,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumSTATPROPSTG':
          """
          Creates another enumerator that contains the same 
 
@@ -20674,7 +20674,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumSTATPROPSTG
         
          """
          pass
@@ -20687,7 +20687,7 @@ class PyIEnumSTATSTG(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Next(self,num:'Any'=1) -> 'Tuple[Any, ...]':
+      def Next(self,num:'Any'=1) -> 'Tuple[STATSTG, ...]':
          """
          Retrieves a specified number of items in the enumeration sequence.
 
@@ -20697,7 +20697,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]
+      Tuple[STATSTG, ...]
         
          """
          pass
@@ -20735,7 +20735,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumSTATSTG':
          """
          Creates another enumerator that contains the same enumeration state 
 
@@ -20747,7 +20747,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumSTATSTG
         
          """
          pass
@@ -20760,7 +20760,7 @@ class PyIEnumShellItems(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Next(self,num:'Any'=1) -> 'Tuple[Any, ...]':
+      def Next(self,num:'Any'=1) -> 'Tuple[PyIShellItem, ...]':
          """
          Retrieves a specified number of items in the enumeration 
 
@@ -20772,7 +20772,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, ...]
+      Tuple[PyIShellItem, ...]
         
          """
          pass
@@ -20810,7 +20810,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumShellItems':
          """
          Creates another enumerator that contains the same enumeration 
 
@@ -20822,7 +20822,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumShellItems
         
          """
          pass
@@ -20883,7 +20883,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIEnumString':
          """
          Creates another enumerator that contains the same enumeration state 
 
@@ -20895,7 +20895,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumString
         
          """
          pass
@@ -21031,13 +21031,13 @@ Returns:
          pass
 
 
-      def Advise(self,psbe:'Any') -> 'Any':
+      def Advise(self,psbe:'PyIExplorerBrowserEvents') -> 'Any':
          """
          Description of Advise.
 
 Args:
 
-      psbe(Any):Description for psbe
+      psbe(PyIExplorerBrowserEvents):Description for psbe
 
 Returns:
 
@@ -21112,13 +21112,13 @@ Returns:
          pass
 
 
-      def BrowseToObject(self,punk:'Any',uFlags:'Any') -> 'None':
+      def BrowseToObject(self,punk:'PyIUnknown',uFlags:'Any') -> 'None':
          """
          Description of BrowseToObject.
 
 Args:
 
-      punk(Any):Description for punk
+      punk(PyIUnknown):Description for punk
       uFlags(Any):Description for uFlags
 
 Returns:
@@ -21129,13 +21129,13 @@ Returns:
          pass
 
 
-      def FillFromObject(self,punk:'Any',dwFlags:'Any') -> 'None':
+      def FillFromObject(self,punk:'PyIUnknown',dwFlags:'Any') -> 'None':
          """
          Description of FillFromObject.
 
 Args:
 
-      punk(Any):Description for punk
+      punk(PyIUnknown):Description for punk
       dwFlags(Any):Description for dwFlags
 
 Returns:
@@ -21162,7 +21162,7 @@ Returns:
          pass
 
 
-      def GetCurrentView(self,riid:'PyIID') -> 'Any':
+      def GetCurrentView(self,riid:'PyIID') -> 'PyIUnknown':
          """
          Description of GetCurrentView.
 
@@ -21172,7 +21172,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -21201,13 +21201,13 @@ Returns:
          pass
 
 
-      def OnViewCreated(self,psv:'Any') -> 'None':
+      def OnViewCreated(self,psv:'PyIShellView') -> 'None':
          """
          Description of OnViewCreated.
 
 Args:
 
-      psv(Any):Description for psv
+      psv(PyIShellView):Description for psv
 
 Returns:
 
@@ -21256,13 +21256,13 @@ class PyIExplorerCommand(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetTitle(self,psiItemArray:'Any') -> 'Any':
+      def GetTitle(self,psiItemArray:'PyIShellItemArray') -> 'Any':
          """
          Description of GetTitle.
 
 Args:
 
-      psiItemArray(Any):Description for psiItemArray
+      psiItemArray(PyIShellItemArray):Description for psiItemArray
 
 Returns:
 
@@ -21272,13 +21272,13 @@ Returns:
          pass
 
 
-      def GetIcon(self,psiItemArray:'Any') -> 'Any':
+      def GetIcon(self,psiItemArray:'PyIShellItemArray') -> 'Any':
          """
          Description of GetIcon.
 
 Args:
 
-      psiItemArray(Any):Description for psiItemArray
+      psiItemArray(PyIShellItemArray):Description for psiItemArray
 
 Returns:
 
@@ -21288,13 +21288,13 @@ Returns:
          pass
 
 
-      def GetToolTip(self,psiItemArray:'Any') -> 'Any':
+      def GetToolTip(self,psiItemArray:'PyIShellItemArray') -> 'Any':
          """
          Description of GetToolTip.
 
 Args:
 
-      psiItemArray(Any):Description for psiItemArray
+      psiItemArray(PyIShellItemArray):Description for psiItemArray
 
 Returns:
 
@@ -21320,13 +21320,13 @@ Returns:
          pass
 
 
-      def GetState(self,psiItemArray:'Any',fOkToBeSlow:'Any') -> 'Any':
+      def GetState(self,psiItemArray:'PyIShellItemArray',fOkToBeSlow:'Any') -> 'Any':
          """
          Description of GetState.
 
 Args:
 
-      psiItemArray(Any):Description for psiItemArray
+      psiItemArray(PyIShellItemArray):Description for psiItemArray
       fOkToBeSlow(Any):Description for fOkToBeSlow
 
 Returns:
@@ -21337,14 +21337,14 @@ Returns:
          pass
 
 
-      def Invoke(self,psiItemArray:'Any',pbc:'Any') -> 'None':
+      def Invoke(self,psiItemArray:'PyIShellItemArray',pbc:'PyIBindCtx') -> 'None':
          """
          Description of Invoke.
 
 Args:
 
-      psiItemArray(Any):Description for psiItemArray
-      pbc(Any):Description for pbc
+      psiItemArray(PyIShellItemArray):Description for psiItemArray
+      pbc(PyIBindCtx):Description for pbc
 
 Returns:
 
@@ -21370,7 +21370,7 @@ Returns:
          pass
 
 
-      def EnumSubCommands(self,) -> 'Any':
+      def EnumSubCommands(self,) -> 'PyIEnumExplorerCommand':
          """
          Description of EnumSubCommands.
 
@@ -21380,7 +21380,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumExplorerCommand
         
          """
          pass
@@ -21596,13 +21596,13 @@ class PyIFileOperation(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Advise(self,Sink:'Any') -> 'Any':
+      def Advise(self,Sink:'PyGFileOperationProgressSink') -> 'Any':
          """
          Connects an event sink to receive updates
 
 Args:
 
-      Sink(Any):Interface that receives progress updatesReturn ValueReturns a cookie to be passed to PyIFileOperation::Unadvise to disconnect
+      Sink(PyGFileOperationProgressSink):Interface that receives progress updatesReturn ValueReturns a cookie to be passed to PyIFileOperation::Unadvise to disconnect
 
 Returns:
 
@@ -21677,13 +21677,13 @@ Returns:
          pass
 
 
-      def SetProperties(self,proparray:'Any') -> 'None':
+      def SetProperties(self,proparray:'PyIPropertyChangeArray') -> 'None':
          """
          Specifies a set of properties to be changed.
 
 Args:
 
-      proparray(Any):Sequence of property changes to be performed (see propsys::PSCreatePropertyChangeArray)CommentsNote that these properties will be set for *any* files created by the operation, not just items passed to ApplyPropertiesToItem(s).  New items created as the result of a rename, copy, or move must have a property handler, or the operation fails with the vague com_error: (-2147467259, 'Unspecified error', None, None) (E_FAIL, or 0x80004005 in hex) even though the given file operation was actually performed.
+      proparray(PyIPropertyChangeArray):Sequence of property changes to be performed (see propsys::PSCreatePropertyChangeArray)CommentsNote that these properties will be set for *any* files created by the operation, not just items passed to ApplyPropertiesToItem(s).  New items created as the result of a rename, copy, or move must have a property handler, or the operation fails with the vague com_error: (-2147467259, 'Unspecified error', None, None) (E_FAIL, or 0x80004005 in hex) even though the given file operation was actually performed.
 
 Returns:
 
@@ -21709,13 +21709,13 @@ Returns:
          pass
 
 
-      def ApplyPropertiesToItem(self,Item:'Any') -> 'None':
+      def ApplyPropertiesToItem(self,Item:'PyIShellItem') -> 'None':
          """
          Specifies the item that will receive property changes
 
 Args:
 
-      Item(Any):The item to which property changes will be applied
+      Item(PyIShellItem):The item to which property changes will be applied
 
 Returns:
 
@@ -21725,13 +21725,13 @@ Returns:
          pass
 
 
-      def ApplyPropertiesToItems(self,Items:'Any') -> 'None':
+      def ApplyPropertiesToItems(self,Items:'PyIUnknown') -> 'None':
          """
          Specifies multiple items that will receive property changes
 
 Args:
 
-      Items(Any):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing the target items
+      Items(PyIUnknown):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing the target items
 
 Returns:
 
@@ -21741,15 +21741,15 @@ Returns:
          pass
 
 
-      def RenameItem(self,Item:'Any',NewName:'Any',Sink:'Any'=None) -> 'None':
+      def RenameItem(self,Item:'PyIShellItem',NewName:'Any',Sink:'PyGFileOperationProgressSink'=None) -> 'None':
          """
          Adds a rename to the operation sequence
 
 Args:
 
-      Item(Any):The item to be renamed
+      Item(PyIShellItem):The item to be renamed
       NewName(Any):The new name
-      Sink(Any):Progress sink for this operation only.
+      Sink(PyGFileOperationProgressSink):Progress sink for this operation only.
 
 Returns:
 
@@ -21759,13 +21759,13 @@ Returns:
          pass
 
 
-      def RenameItems(self,pUnkItems:'Any',NewName:'Any') -> 'None':
+      def RenameItems(self,pUnkItems:'PyIUnknown',NewName:'Any') -> 'None':
          """
          Adds multiple renames to the operation sequence
 
 Args:
 
-      pUnkItems(Any):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing items to be renamed
+      pUnkItems(PyIUnknown):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing items to be renamed
       NewName(Any):New name for all items.  Collisions handled automatically.
 
 Returns:
@@ -21776,16 +21776,16 @@ Returns:
          pass
 
 
-      def MoveItem(self,Item:'Any',DestinationFolder:'Any',pszNewName:'Any'=None,Sink:'Any'=None) -> 'None':
+      def MoveItem(self,Item:'PyIShellItem',DestinationFolder:'PyIShellItem',pszNewName:'Any'=None,Sink:'PyGFileOperationProgressSink'=None) -> 'None':
          """
          Adds a move operation to the configuration
 
 Args:
 
-      Item(Any):The item to be moved
-      DestinationFolder(Any):The folder into which it will be moved
+      Item(PyIShellItem):The item to be moved
+      DestinationFolder(PyIShellItem):The folder into which it will be moved
       pszNewName(Any):Name to be given to moved item, use None to keep original name
-      Sink(Any):Progress sink to receive notification for just this operation
+      Sink(PyGFileOperationProgressSink):Progress sink to receive notification for just this operation
 
 Returns:
 
@@ -21795,14 +21795,14 @@ Returns:
          pass
 
 
-      def MoveItems(self,Items:'Any',DestinationFolder:'Any') -> 'None':
+      def MoveItems(self,Items:'PyIUnknown',DestinationFolder:'PyIShellItem') -> 'None':
          """
          Adds multiple move operations to the configuration
 
 Args:
 
-      Items(Any):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing the items to be moved
-      DestinationFolder(Any):Folder into which all items will be moved
+      Items(PyIUnknown):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing the items to be moved
+      DestinationFolder(PyIShellItem):Folder into which all items will be moved
 
 Returns:
 
@@ -21812,16 +21812,16 @@ Returns:
          pass
 
 
-      def CopyItem(self,Item:'Any',DestinationFolder:'Any',CopyName:'Any'=None,Sink:'Any'=None) -> 'None':
+      def CopyItem(self,Item:'PyIShellItem',DestinationFolder:'PyIShellItem',CopyName:'Any'=None,Sink:'PyGFileOperationProgressSink'=None) -> 'None':
          """
          Adds a copy operation to the configuration
 
 Args:
 
-      Item(Any):Item to be copied
-      DestinationFolder(Any):Folder into which it will be copied
+      Item(PyIShellItem):Item to be copied
+      DestinationFolder(PyIShellItem):Folder into which it will be copied
       CopyName(Any):New name for the copied file, use None to keep original name
-      Sink(Any):Progress sink for just this operation
+      Sink(PyGFileOperationProgressSink):Progress sink for just this operation
 
 Returns:
 
@@ -21831,14 +21831,14 @@ Returns:
          pass
 
 
-      def CopyItems(self,Items:'Any',DestinationFolder:'Any') -> 'None':
+      def CopyItems(self,Items:'PyIUnknown',DestinationFolder:'PyIShellItem') -> 'None':
          """
          Adds multiple copy operations to the configuration
 
 Args:
 
-      Items(Any):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing items to be copied
-      DestinationFolder(Any):Folder into which they will be copied
+      Items(PyIUnknown):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing items to be copied
+      DestinationFolder(PyIShellItem):Folder into which they will be copied
 
 Returns:
 
@@ -21848,14 +21848,14 @@ Returns:
          pass
 
 
-      def DeleteItem(self,Item:'Any',Sink:'Any'=None) -> 'None':
+      def DeleteItem(self,Item:'PyIShellItem',Sink:'PyGFileOperationProgressSink'=None) -> 'None':
          """
          Adds a delete operation to the configuration
 
 Args:
 
-      Item(Any):Description for psiItem
-      Sink(Any):Progress sink for just this operation
+      Item(PyIShellItem):Description for psiItem
+      Sink(PyGFileOperationProgressSink):Progress sink for just this operation
 
 Returns:
 
@@ -21865,13 +21865,13 @@ Returns:
          pass
 
 
-      def DeleteItems(self,Items:'Any') -> 'None':
+      def DeleteItems(self,Items:'PyIUnknown') -> 'None':
          """
          Adds multiple delete operations to the configuration
 
 Args:
 
-      Items(Any):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing the items to be deleted
+      Items(PyIUnknown):PyIShellItemArray, PyIDataObject, or PyIEnumShellItems containing the items to be deleted
 
 Returns:
 
@@ -21881,17 +21881,17 @@ Returns:
          pass
 
 
-      def NewItem(self,DestinationFolder:'Any',FileAttributes:'Any',Name:'Any',TemplateName:'Any'=None,Sink:'Any'=None) -> 'None':
+      def NewItem(self,DestinationFolder:'PyIShellItem',FileAttributes:'Any',Name:'Any',TemplateName:'Any'=None,Sink:'PyGFileOperationProgressSink'=None) -> 'None':
          """
          Creates a new file as part of the operation
 
 Args:
 
-      DestinationFolder(Any):Folder in which to create the file
+      DestinationFolder(PyIShellItem):Folder in which to create the file
       FileAttributes(Any):Combination of win32con.FILE_ATTRIBUTE_* flags
       Name(Any):Name of the new file
       TemplateName(Any):Template file used to initialize the new file
-      Sink(Any):Progress sink for just this operation
+      Sink(PyGFileOperationProgressSink):Progress sink for just this operation
 
 Returns:
 
@@ -21971,13 +21971,13 @@ class PyIInitializeWithStream(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Initialize(self,Stream:'Any',Mode:'Any') -> 'None':
+      def Initialize(self,Stream:'PyIStream',Mode:'Any') -> 'None':
          """
          Initializes a property handler with a stream
 
 Args:
 
-      Stream(Any):Stream containing the contents from which to extract properties
+      Stream(PyIStream):Stream containing the contents from which to extract properties
       Mode(Any):Indicates if stream is writable, STGM_READ or STGM_READWRITE
 
 Returns:
@@ -22285,15 +22285,15 @@ class PyIInternetProtocolRoot(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Start(self,szUrl:'Any',pOIProtSink:'Any',pOIBindInfo:'Any',grfPI:'Any',dwReserved:'Any') -> 'None':
+      def Start(self,szUrl:'Any',pOIProtSink:'PyIInternetProtocolSink',pOIBindInfo:'PyIInternetBindInfo',grfPI:'Any',dwReserved:'Any') -> 'None':
          """
          Description of Start.
 
 Args:
 
       szUrl(Any):Description for szUrl
-      pOIProtSink(Any):Description for pOIProtSink
-      pOIBindInfo(Any):Description for pOIBindInfo
+      pOIProtSink(PyIInternetProtocolSink):Description for pOIProtSink
+      pOIBindInfo(PyIInternetBindInfo):Description for pOIBindInfo
       grfPI(Any):Description for grfPI
       dwReserved(Any):Description for dwReserved
 
@@ -22632,7 +22632,7 @@ Returns:
          pass
 
 
-      def GetShellItem(self,riid:'PyIID',Flags:'Any'=0) -> 'Any':
+      def GetShellItem(self,riid:'PyIID',Flags:'Any'=0) -> 'PyIShellItem':
          """
          Returns a shell interface for the folder
 
@@ -22643,7 +22643,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
@@ -22682,7 +22682,7 @@ Returns:
          pass
 
 
-      def GetIDList(self,Flags:'Any') -> 'Any':
+      def GetIDList(self,Flags:'Any') -> 'PyIDL':
          """
          Returns the folder's location as an item id list.
 
@@ -22692,7 +22692,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDL
         
          """
          pass
@@ -22812,7 +22812,7 @@ Returns:
          pass
 
 
-      def GetFolder(self,_id:'PyIID') -> 'Any':
+      def GetFolder(self,_id:'PyIID') -> 'PyIKnownFolder':
          """
          Returns a folder by its id.
 
@@ -22822,13 +22822,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIKnownFolder
         
          """
          pass
 
 
-      def GetFolderByName(self,Name:'Any') -> 'Any':
+      def GetFolderByName(self,Name:'Any') -> 'PyIKnownFolder':
          """
          Returns a folder by canonical name
 
@@ -22838,7 +22838,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIKnownFolder
         
          """
          pass
@@ -22877,7 +22877,7 @@ Returns:
          pass
 
 
-      def FindFolderFromPath(self,Path:'Any',Mode:'Any') -> 'Any':
+      def FindFolderFromPath(self,Path:'Any',Mode:'Any') -> 'PyIKnownFolder':
          """
          Retrieves a known folder by path
 
@@ -22888,13 +22888,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIKnownFolder
         
          """
          pass
 
 
-      def FindFolderFromIDList(self,pidl:'Any') -> 'Any':
+      def FindFolderFromIDList(self,pidl:'PyIDL') -> 'PyIKnownFolder':
          """
          Retrieves a known folder using its item id 
 
@@ -22902,11 +22902,11 @@ list.
 
 Args:
 
-      pidl(Any):Item id list of the folder
+      pidl(PyIDL):Item id list of the folder
 
 Returns:
 
-      Any
+      PyIKnownFolder
         
          """
          pass
@@ -23048,7 +23048,7 @@ Returns:
          pass
 
 
-      def Stat(self,grfStatFlag:'Any') -> 'Any':
+      def Stat(self,grfStatFlag:'Any') -> 'STATSTG':
          """
          None
 
@@ -23058,7 +23058,7 @@ Args:
 
 Returns:
 
-      Any
+      STATSTG
         
          """
          pass
@@ -23089,7 +23089,7 @@ Returns:
          pass
 
 
-      def GetContentsTable(self,flags:'Any') -> 'Any':
+      def GetContentsTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Returns an object representing the container's contents table.
 
@@ -23099,13 +23099,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
 
 
-      def GetHierarchyTable(self,flags:'Any') -> 'Any':
+      def GetHierarchyTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Returns an object representing the container's hierarchy table.
 
@@ -23115,7 +23115,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
@@ -23145,7 +23145,7 @@ Returns:
          pass
 
 
-      def CreateFolder(self,folderType:'Any',folderName:'str',folderComment:'str'=None,iid:'PyIID'=None,flags:'Any'=0) -> 'Any':
+      def CreateFolder(self,folderType:'Any',folderName:'str',folderComment:'str'=None,iid:'PyIID'=None,flags:'Any'=0) -> 'PyIMAPIFolder':
          """
          Creates a folder object.
 
@@ -23159,13 +23159,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPIFolder
         
          """
          pass
 
 
-      def CreateMessage(self,iid:'PyIID',flags:'Any') -> 'Any':
+      def CreateMessage(self,iid:'PyIID',flags:'Any') -> 'PyIMessage':
          """
          Creates a message in a folder
 
@@ -23176,21 +23176,21 @@ Args:
 
 Returns:
 
-      Any
+      PyIMessage
         
          """
          pass
 
 
-      def CopyMessages(self,msgs:'Any',iid:'PyIID',folder:'Any',ulUIParam:'Any',progress:'Any',flags:'Any') -> 'Any':
+      def CopyMessages(self,msgs:'PySBinaryArray',iid:'PyIID',folder:'PyIMAPIFolder',ulUIParam:'Any',progress:'Any',flags:'Any') -> 'Any':
          """
          Copies the specified messages
 
 Args:
 
-      msgs(Any):
+      msgs(PySBinaryArray):
       iid(PyIID):IID representing the interface to be used to access the destination folder.  Should usually be None.
-      folder(Any):The destination folder
+      folder(PyIMAPIFolder):The destination folder
       ulUIParam(Any):Handle of the parent window for any dialog boxes or windows this method displays.
       progress(Any):A progress object, or None
       flags(Any):A bitmask ofMaskDescriptionMAPI_DECLINE_OKInforms the message store provider to immediately return MAPI_E_DECLINE_COPY if it implements CopyMessage by calling the support object's IMAPISupport::DoCopyTo or IMAPISupport::DoCopyProps method.MESSAGE_DIALOGDisplays a progress indicator as the operation proceeds.MESSAGE_MOVEThe message or messages are to be moved rather than copied. If MESSAGE_MOVE is not set, the messages are copied.
@@ -23221,13 +23221,13 @@ Returns:
          pass
 
 
-      def DeleteMessages(self,msgs:'Any',uiParam:'Any',progress:'Any',flags:'Any') -> 'Any':
+      def DeleteMessages(self,msgs:'PySBinaryArray',uiParam:'Any',progress:'Any',flags:'Any') -> 'Any':
          """
          Deletes the specified messages.
 
 Args:
 
-      msgs(Any):
+      msgs(PySBinaryArray):
       uiParam(Any):A HWND for the progress
       progress(Any):A progress object, or None
       flags(Any):
@@ -23258,13 +23258,13 @@ Returns:
          pass
 
 
-      def SetReadFlags(self,msgs:'Any',uiParam:'Any',progress:'Any',flag:'Any') -> 'None':
+      def SetReadFlags(self,msgs:'PySBinaryArray',uiParam:'Any',progress:'Any',flag:'Any') -> 'None':
          """
          Sets or clears the MSGFLAG_READ flag in the PR_MESSAGE_FLAGS (PidTagMessageFlags) property of one or more of the folder's messages, and manages the sending of read reports.
 
 Args:
 
-      msgs(Any):
+      msgs(PySBinaryArray):
       uiParam(Any):A HWND for the progress
       progress(Any):A progress object, or None
       flag(Any):Bitmask of flags that controls the setting of a message's read flag - that is, the message's MSGFLAG_READ flag in its PR_MESSAGE_FLAGS property and the processing of read reports.
@@ -23284,13 +23284,13 @@ class PyIMAPIProp(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetProps(self,propList:'Any',flags:'Any'=0) -> 'Tuple[Any, Any, Any]':
+      def GetProps(self,propList:'PySPropTagArray',flags:'Any'=0) -> 'Tuple[Any, Any, Any]':
          """
          Returns a list of property values.
 
 Args:
 
-      propList(Any):The list of properties
+      propList(PySPropTagArray):The list of properties
       flags(Any):
 
 Returns:
@@ -23301,13 +23301,13 @@ Returns:
          pass
 
 
-      def DeleteProps(self,propList:'Any',wantProblems:'Any'=False) -> 'Tuple[Any, Any, Any]':
+      def DeleteProps(self,propList:'PySPropTagArray',wantProblems:'Any'=False) -> 'Tuple[Any, Any, Any]':
          """
          Deletes a set of properties.
 
 Args:
 
-      propList(Any):The list of properties
+      propList(PySPropTagArray):The list of properties
       wantProblems(Any):Return detailed error information
 
 Returns:
@@ -23335,18 +23335,18 @@ Returns:
          pass
 
 
-      def CopyTo(self,IIDExcludeList:'Tuple[Any, Any]',propTags:'Any',uiParam:'Any',progress:'Any',resultIID:'PyIID',dest:'Any',flags:'Any',wantProblems:'Any'=False) -> 'Tuple[Any, Any, Any]':
+      def CopyTo(self,IIDExcludeList:'Tuple[Any, Any]',propTags:'PySPropTagArray',uiParam:'Any',progress:'Any',resultIID:'PyIID',dest:'PyIMAPIProp',flags:'Any',wantProblems:'Any'=False) -> 'Tuple[Any, Any, Any]':
          """
          Copies an object to another
 
 Args:
 
       IIDExcludeList(Tuple[Any, Any]):A sequence of IIDs to exclude.
-      propTags(Any):The property tags to exclude.
+      propTags(PySPropTagArray):The property tags to exclude.
       uiParam(Any):Handle to the parent window of the progress object
       progress(Any):Reserved - must pass None
       resultIID(PyIID):IID of the destination object
-      dest(Any):The destination object
+      dest(PyIMAPIProp):The destination object
       flags(Any):flags
       wantProblems(Any):Return detailed error information
 
@@ -23358,17 +23358,17 @@ Returns:
          pass
 
 
-      def CopyProps(self,propTags:'Any',uiParam:'Any',progress:'Any',resultIID:'PyIID',dest:'Any',flags:'Any',wantProblems:'Any'=False) -> 'Tuple[Any, Any, Any]':
+      def CopyProps(self,propTags:'PySPropTagArray',uiParam:'Any',progress:'Any',resultIID:'PyIID',dest:'PyIMAPIProp',flags:'Any',wantProblems:'Any'=False) -> 'Tuple[Any, Any, Any]':
          """
          Copies a set of properties to another object
 
 Args:
 
-      propTags(Any):The property tags to copy
+      propTags(PySPropTagArray):The property tags to copy
       uiParam(Any):Handle to the parent window of the progress object
       progress(Any):Reserved - must pass None
       resultIID(PyIID):IID of the destination object
-      dest(Any):The destination object
+      dest(PyIMAPIProp):The destination object
       flags(Any):flags
       wantProblems(Any):Return detailed error information
 
@@ -23380,7 +23380,7 @@ Returns:
          pass
 
 
-      def OpenProperty(self,propTag:'Any',iid:'PyIID',interfaceOptions:'Any',flags:'Any') -> 'Any':
+      def OpenProperty(self,propTag:'Any',iid:'PyIID',interfaceOptions:'Any',flags:'Any') -> 'PyIUnknown':
          """
          Returns an interface object to be used to access a property.
 
@@ -23393,42 +23393,42 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
 
 
-      def GetIDsFromNames(self,nameIds:'Any',flags:'Any'=0) -> 'Any':
+      def GetIDsFromNames(self,nameIds:'PyMAPINAMEIDArray',flags:'Any'=0) -> 'PySPropTagArray':
          """
          Determines property IDs
 
 Args:
 
-      nameIds(Any):Sequence of name ids
+      nameIds(PyMAPINAMEIDArray):Sequence of name ids
       flags(Any):
 
 Returns:
 
-      Any
+      PySPropTagArray
         
          """
          pass
 
 
-      def GetNamesFromIDs(self,propTags:'Any',propSetGuid:'PyIID'=None,flags:'Any'=0) -> 'Tuple[Any, Any, Any]':
+      def GetNamesFromIDs(self,propTags:'PySPropTagArray',propSetGuid:'PyIID'=None,flags:'Any'=0) -> 'Tuple[Any, PySPropTagArray, PyMAPINAMEIDArray]':
          """
          Determines property names
 
 Args:
 
-      propTags(Any):Sequence of property tags, or None
+      propTags(PySPropTagArray):Sequence of property tags, or None
       propSetGuid(PyIID):a globally unique identifier, identifying a property set, or None
       flags(Any):
 
 Returns:
 
-      Tuple[Any, Any, Any]
+      Tuple[Any, PySPropTagArray, PyMAPINAMEIDArray]
         
          """
          pass
@@ -23467,7 +23467,7 @@ Returns:
          pass
 
 
-      def GetPropList(self,flags:'Any') -> 'Any':
+      def GetPropList(self,flags:'Any') -> 'PySPropTagArray':
          """
          Gets a list of properties
 
@@ -23477,7 +23477,7 @@ Args:
 
 Returns:
 
-      Any
+      PySPropTagArray
         
          """
          pass
@@ -23508,7 +23508,7 @@ Returns:
          pass
 
 
-      def OpenMsgStore(self,uiParam:'Any',entryId:'str',iid:'PyIID',flags:'Any') -> 'Any':
+      def OpenMsgStore(self,uiParam:'Any',entryId:'str',iid:'PyIID',flags:'Any') -> 'PyIUnknown':
          """
          Opens a message store.
 
@@ -23521,7 +23521,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -23617,7 +23617,7 @@ Returns:
          pass
 
 
-      def GetMsgStoresTable(self,flags:'Any') -> 'Any':
+      def GetMsgStoresTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Provides access to the message store table - a table with information about all of the message stores in the session profile.
 
@@ -23627,13 +23627,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
 
 
-      def GetStatusTable(self,flags:'Any') -> 'Any':
+      def GetStatusTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Provides access to the status table - a table with information about all of the MAPI resources in the session.
 
@@ -23643,7 +23643,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
@@ -23667,7 +23667,7 @@ Returns:
          pass
 
 
-      def OpenAddressBook(self,uiParm:'Any',iid:'PyIID',flags:'Any') -> 'Any':
+      def OpenAddressBook(self,uiParm:'Any',iid:'PyIID',flags:'Any') -> 'PyIAddrBook':
          """
          Opens the integrated address book.
 
@@ -23679,7 +23679,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIAddrBook
         
          """
          pass
@@ -23703,7 +23703,7 @@ Returns:
          pass
 
 
-      def AdminServices(self,flags:'Any'=0) -> 'Any':
+      def AdminServices(self,flags:'Any'=0) -> 'PyIMsgServiceAdmin':
          """
          Provides access to a message service administration object for making changes to the message services.
 
@@ -23713,7 +23713,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIMsgServiceAdmin
         
          """
          pass
@@ -24024,13 +24024,13 @@ Returns:
          pass
 
 
-      def Restrict(self,restriction:'Any',flags:'Any') -> 'None':
+      def Restrict(self,restriction:'PySRestriction',flags:'Any') -> 'None':
          """
          Applies a filter to a table, reducing the row set to only those rows matching the specified criteria.
 
 Args:
 
-      restriction(Any):
+      restriction(PySRestriction):
       flags(Any):
 
 Returns:
@@ -24041,13 +24041,13 @@ Returns:
          pass
 
 
-      def FindRow(self,restriction:'Any',bookmarkOrigin:'Any',flags:'Any') -> 'None':
+      def FindRow(self,restriction:'PySRestriction',bookmarkOrigin:'Any',flags:'Any') -> 'None':
          """
          Finds the next row in a table that matches specific search criteria.
 
 Args:
 
-      restriction(Any):
+      restriction(PySRestriction):
       bookmarkOrigin(Any):
       flags(Any):
 
@@ -24059,13 +24059,13 @@ Returns:
          pass
 
 
-      def SortTable(self,sortOrderSet:'Any',flags:'Any') -> 'None':
+      def SortTable(self,sortOrderSet:'PySSortOrderSet',flags:'Any') -> 'None':
          """
          Orders the rows of the table based on sort criteria.
 
 Args:
 
-      sortOrderSet(Any):
+      sortOrderSet(PySSortOrderSet):
       flags(Any):
 
 Returns:
@@ -24099,13 +24099,13 @@ class PyIMachineDebugManager(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def AddApplication(self,pda:'Any') -> 'None':
+      def AddApplication(self,pda:'PyIRemoteDebugApplication') -> 'None':
          """
          Description of AddApplication.
 
 Args:
 
-      pda(Any):Description for pda
+      pda(PyIRemoteDebugApplication):Description for pda
 
 Returns:
 
@@ -24154,13 +24154,13 @@ class PyIMachineDebugManagerEvents(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def onAddApplication(self,pda:'Any',dwAppCookie:'Any') -> 'None':
+      def onAddApplication(self,pda:'PyIRemoteDebugApplication',dwAppCookie:'Any') -> 'None':
          """
          Description of onAddApplication.
 
 Args:
 
-      pda(Any):Description for pda
+      pda(PyIRemoteDebugApplication):Description for pda
       dwAppCookie(Any):Description for dwAppCookie
 
 Returns:
@@ -24171,13 +24171,13 @@ Returns:
          pass
 
 
-      def onRemoveApplication(self,pda:'Any',dwAppCookie:'Any') -> 'None':
+      def onRemoveApplication(self,pda:'PyIRemoteDebugApplication',dwAppCookie:'Any') -> 'None':
          """
          Description of onRemoveApplication.
 
 Args:
 
-      pda(Any):Description for pda
+      pda(PyIRemoteDebugApplication):Description for pda
       dwAppCookie(Any):Description for dwAppCookie
 
 Returns:
@@ -24211,7 +24211,7 @@ Returns:
          pass
 
 
-      def GetAttachmentTable(self,flags:'Any') -> 'Any':
+      def GetAttachmentTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Returns the message's attachment table.
 
@@ -24221,13 +24221,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
 
 
-      def OpenAttach(self,attachmentNum:'Any',interface:'PyIID',flags:'Any') -> 'Any':
+      def OpenAttach(self,attachmentNum:'Any',interface:'PyIID',flags:'Any') -> 'PyIAttach':
          """
          Opens an attachment
 
@@ -24239,13 +24239,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIAttach
         
          """
          pass
 
 
-      def CreateAttach(self,interface:'PyIID',flags:'Any') -> 'Tuple[Any, Any]':
+      def CreateAttach(self,interface:'PyIID',flags:'Any') -> 'Tuple[Any, PyIAttach]':
          """
          Creates an attachment
 
@@ -24256,7 +24256,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]:Bitmask of flags that controls how the attachment is created.Return ValueThe result is a tuple of (attachmentNum, attachmentObject)
+      Tuple[Any, PyIAttach]:Bitmask of flags that controls how the attachment is created.Return ValueThe result is a tuple of (attachmentNum, attachmentObject)
 
         
          """
@@ -24299,7 +24299,7 @@ Returns:
          pass
 
 
-      def GetRecipientTable(self,flags:'Any') -> 'Any':
+      def GetRecipientTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Returns the message's recipient table.
 
@@ -24309,7 +24309,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
@@ -24338,25 +24338,25 @@ class PyIMoniker(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def BindToObject(self,bindCtx:'Any',moniker:'Any',iidResult:'Any') -> 'Any':
+      def BindToObject(self,bindCtx:'PyIBindCtx',moniker:'PyIMoniker',iidResult:'Any') -> 'PyIUnknown':
          """
          Uses the moniker to bind to the object it identifies.
 
 Args:
 
-      bindCtx(Any):bind context object to be used.
-      moniker(Any):If the moniker is part of a composite moniker, otherwise None
+      bindCtx(PyIBindCtx):bind context object to be used.
+      moniker(PyIMoniker):If the moniker is part of a composite moniker, otherwise None
       iidResult(Any):IID of the result object.
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
 
 
-      def BindToStorage(self,bindCtx:'Any',moniker:'Any',iidResult:'Any') -> 'Any':
+      def BindToStorage(self,bindCtx:'PyIBindCtx',moniker:'PyIMoniker',iidResult:'Any') -> 'PyIUnknown':
          """
          Retrieves an interface object to the storage that contains the 
 
@@ -24364,19 +24364,19 @@ object identified by the moniker.
 
 Args:
 
-      bindCtx(Any):bind context object to be used.
-      moniker(Any):If the moniker is part of a composite moniker, otherwise None
+      bindCtx(PyIBindCtx):bind context object to be used.
+      moniker(PyIMoniker):If the moniker is part of a composite moniker, otherwise None
       iidResult(Any):IID of the result object.
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
 
 
-      def GetDisplayName(self,bindCtx:'Any',moniker:'Any') -> 'str':
+      def GetDisplayName(self,bindCtx:'PyIBindCtx',moniker:'PyIMoniker') -> 'str':
          """
          Gets the display name , which is a user-readable representation of this 
 
@@ -24384,8 +24384,8 @@ moniker.
 
 Args:
 
-      bindCtx(Any):bind context object to be used.
-      moniker(Any):If the moniker is part of a composite moniker, otherwise None
+      bindCtx(PyIBindCtx):bind context object to be used.
+      moniker(PyIMoniker):If the moniker is part of a composite moniker, otherwise None
 
 Returns:
 
@@ -24395,7 +24395,7 @@ Returns:
          pass
 
 
-      def ComposeWith(self,mkRight:'Any',fOnlyIfNotGeneric:'Any') -> 'Any':
+      def ComposeWith(self,mkRight:'PyIMoniker',fOnlyIfNotGeneric:'Any') -> 'PyIMoniker':
          """
          Combines the current moniker with another moniker, creating a new 
 
@@ -24403,18 +24403,18 @@ composite moniker.
 
 Args:
 
-      mkRight(Any):The IMoniker interface on the moniker to compose onto the end of this moniker.
+      mkRight(PyIMoniker):The IMoniker interface on the moniker to compose onto the end of this moniker.
       fOnlyIfNotGeneric(Any):If TRUE, the caller requires a non-generic composition, so the operation should proceed only if pmkRight is a moniker class that this moniker can compose with in some way other than forming a generic composite. If FALSE, the method can create a generic composite if necessary.
 
 Returns:
 
-      Any
+      PyIMoniker
         
          """
          pass
 
 
-      def Enum(self,fForward:'Any'=True) -> 'Any':
+      def Enum(self,fForward:'Any'=True) -> 'PyIEnumMoniker':
          """
          Supplies an enumerator that can enumerate the components of a composite 
 
@@ -24426,13 +24426,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumMoniker
         
          """
          pass
 
 
-      def IsEqual(self,other:'Any') -> 'Any':
+      def IsEqual(self,other:'PyIMoniker') -> 'Any':
          """
          Compares this moniker with a specified moniker and indicates whether they are 
 
@@ -24440,7 +24440,7 @@ identical.
 
 Args:
 
-      other(Any):The moniker to compare
+      other(PyIMoniker):The moniker to compare
 
 Returns:
 
@@ -24546,7 +24546,7 @@ Returns:
          pass
 
 
-      def GetMsgServiceTable(self,flags:'Any') -> 'Any':
+      def GetMsgServiceTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Retrieves a table of services.
 
@@ -24556,13 +24556,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
 
 
-      def GetProviderTable(self,flags:'Any') -> 'Any':
+      def GetProviderTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          Retrieves a table of service providers.
 
@@ -24572,7 +24572,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
@@ -24691,7 +24691,7 @@ Returns:
          pass
 
 
-      def GetReceiveFolderTable(self,flags:'Any') -> 'Any':
+      def GetReceiveFolderTable(self,flags:'Any') -> 'PyIMAPITable':
          """
          provides access to the receive folder table, a table that includes information about all of the receive folders for the message store.
 
@@ -24701,7 +24701,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIMAPITable
         
          """
          pass
@@ -24820,13 +24820,13 @@ Returns:
          pass
 
 
-      def TreeAdvise(self,punk:'Any') -> 'None':
+      def TreeAdvise(self,punk:'PyIUnknown') -> 'None':
          """
          Description of TreeAdvise.
 
 Args:
 
-      punk(Any):Description for punk
+      punk(PyIUnknown):Description for punk
 
 Returns:
 
@@ -24852,13 +24852,13 @@ Returns:
          pass
 
 
-      def AppendRoot(self,psiRoot:'Any',grfEnumFlags:'Any',grfRootStyle:'Any',pif:'Any') -> 'None':
+      def AppendRoot(self,psiRoot:'PyIShellItem',grfEnumFlags:'Any',grfRootStyle:'Any',pif:'Any') -> 'None':
          """
          Description of AppendRoot.
 
 Args:
 
-      psiRoot(Any):Description for psiRoot
+      psiRoot(PyIShellItem):Description for psiRoot
       grfEnumFlags(Any):Description for grfEnumFlags
       grfRootStyle(Any):Description for grfRootStyle
       pif(Any):Description for pif
@@ -24871,14 +24871,14 @@ Returns:
          pass
 
 
-      def InsertRoot(self,iIndex:'Any',psiRoot:'Any',grfEnumFlags:'Any',grfRootStyle:'Any',pif:'Any') -> 'None':
+      def InsertRoot(self,iIndex:'Any',psiRoot:'PyIShellItem',grfEnumFlags:'Any',grfRootStyle:'Any',pif:'Any') -> 'None':
          """
          Description of InsertRoot.
 
 Args:
 
       iIndex(Any):Description for iIndex
-      psiRoot(Any):Description for psiRoot
+      psiRoot(PyIShellItem):Description for psiRoot
       grfEnumFlags(Any):Description for grfEnumFlags
       grfRootStyle(Any):Description for grfRootStyle
       pif(Any):Description for pif
@@ -24891,13 +24891,13 @@ Returns:
          pass
 
 
-      def RemoveRoot(self,psiRoot:'Any') -> 'None':
+      def RemoveRoot(self,psiRoot:'PyIShellItem') -> 'None':
          """
          Description of RemoveRoot.
 
 Args:
 
-      psiRoot(Any):Description for psiRoot
+      psiRoot(PyIShellItem):Description for psiRoot
 
 Returns:
 
@@ -24939,13 +24939,13 @@ Returns:
          pass
 
 
-      def SetItemState(self,psi:'Any',nstcisMask:'Any',nstcisFlags:'Any') -> 'None':
+      def SetItemState(self,psi:'PyIShellItem',nstcisMask:'Any',nstcisFlags:'Any') -> 'None':
          """
          Description of SetItemState.
 
 Args:
 
-      psi(Any):Description for psi
+      psi(PyIShellItem):Description for psi
       nstcisMask(Any):Description for nstcisMask
       nstcisFlags(Any):Description for nstcisFlags
 
@@ -24957,13 +24957,13 @@ Returns:
          pass
 
 
-      def GetItemState(self,psi:'Any',nstcisMask:'Any') -> 'None':
+      def GetItemState(self,psi:'PyIShellItem',nstcisMask:'Any') -> 'None':
          """
          Description of GetItemState.
 
 Args:
 
-      psi(Any):Description for psi
+      psi(PyIShellItem):Description for psi
       nstcisMask(Any):Description for nstcisMask
 
 Returns:
@@ -24990,13 +24990,13 @@ Returns:
          pass
 
 
-      def GetItemCustomState(self,psi:'Any') -> 'None':
+      def GetItemCustomState(self,psi:'PyIShellItem') -> 'None':
          """
          Description of GetItemCustomState.
 
 Args:
 
-      psi(Any):Description for psi
+      psi(PyIShellItem):Description for psi
 
 Returns:
 
@@ -25006,13 +25006,13 @@ Returns:
          pass
 
 
-      def SetItemCustomState(self,psi:'Any',iStateNumber:'Any') -> 'None':
+      def SetItemCustomState(self,psi:'PyIShellItem',iStateNumber:'Any') -> 'None':
          """
          Description of SetItemCustomState.
 
 Args:
 
-      psi(Any):Description for psi
+      psi(PyIShellItem):Description for psi
       iStateNumber(Any):Description for iStateNumber
 
 Returns:
@@ -25023,13 +25023,13 @@ Returns:
          pass
 
 
-      def EnsureItemVisible(self,psi:'Any') -> 'None':
+      def EnsureItemVisible(self,psi:'PyIShellItem') -> 'None':
          """
          Description of EnsureItemVisible.
 
 Args:
 
-      psi(Any):Description for psi
+      psi(PyIShellItem):Description for psi
 
 Returns:
 
@@ -25055,13 +25055,13 @@ Returns:
          pass
 
 
-      def GetNextItem(self,psi:'Any',nstcgi:'Any') -> 'None':
+      def GetNextItem(self,psi:'PyIShellItem',nstcgi:'Any') -> 'None':
          """
          Description of GetNextItem.
 
 Args:
 
-      psi(Any):Description for psi
+      psi(PyIShellItem):Description for psi
       nstcgi(Any):Description for nstcgi
 
 Returns:
@@ -25127,7 +25127,7 @@ class PyINamedPropertyStore(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetNamedValue(self,Name:'Any') -> 'Any':
+      def GetNamedValue(self,Name:'Any') -> 'PyPROPVARIANT':
          """
          Retrieves a property value by name
 
@@ -25137,7 +25137,7 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
@@ -25214,7 +25214,7 @@ Returns:
          pass
 
 
-      def GetAt(self,Index:'Any',riid:'PyIID') -> 'Any':
+      def GetAt(self,Index:'Any',riid:'PyIID') -> 'PyIUnknown':
          """
          Retrieves an item  by zero-based index
 
@@ -25225,7 +25225,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -25238,13 +25238,13 @@ class PyIObjectCollection(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def AddObject(self,punk:'Any') -> 'None':
+      def AddObject(self,punk:'PyIUnknown') -> 'None':
          """
          Adds a single object to the collection
 
 Args:
 
-      punk(Any):Object to be added
+      punk(PyIUnknown):Object to be added
 
 Returns:
 
@@ -25254,13 +25254,13 @@ Returns:
          pass
 
 
-      def AddFromArray(self,Source:'Any') -> 'None':
+      def AddFromArray(self,Source:'PyIObjectArray') -> 'None':
          """
          None
 
 Args:
 
-      Source(Any):Objects to be added to the collection
+      Source(PyIObjectArray):Objects to be added to the collection
 
 Returns:
 
@@ -25309,13 +25309,13 @@ class PyIObjectWithPropertyKey(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def SetPropertyKey(self,key:'Any') -> 'None':
+      def SetPropertyKey(self,key:'PyPROPERTYKEY') -> 'None':
          """
          Sets the property id
 
 Args:
 
-      key(Any):The identifier of the property
+      key(PyPROPERTYKEY):The identifier of the property
 
 Returns:
 
@@ -25325,7 +25325,7 @@ Returns:
          pass
 
 
-      def GetPropertyKey(self,) -> 'Any':
+      def GetPropertyKey(self,) -> 'PyPROPERTYKEY':
          """
          Returns the property id
 
@@ -25335,7 +25335,7 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPERTYKEY
         
          """
          pass
@@ -25774,14 +25774,14 @@ Returns:
          pass
 
 
-      def ResizeBorder(self,rcBorder:'Tuple[Any, Any, Any, Any]',pUIWindow:'Any',fFrameWindow:'Any') -> 'None':
+      def ResizeBorder(self,rcBorder:'Tuple[Any, Any, Any, Any]',pUIWindow:'PyIOleInPlaceUIWindow',fFrameWindow:'Any') -> 'None':
          """
          Description of ResizeBorder.
 
 Args:
 
       rcBorder(Tuple[Any, Any, Any, Any]):Description for prcBorder
-      pUIWindow(Any):Description for pUIWindow
+      pUIWindow(PyIOleInPlaceUIWindow):Description for pUIWindow
       fFrameWindow(Any):Description for fFrameWindow
 
 Returns:
@@ -25815,14 +25815,14 @@ class PyIOleInPlaceFrame(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def InsertMenus(self,hmenuShared:'Union[Any]',menuWidths:'Any') -> 'None':
+      def InsertMenus(self,hmenuShared:'Union[Any]',menuWidths:'PyOLEMENUGROUPWIDTHS') -> 'None':
          """
          Description of InsertMenus.
 
 Args:
 
       hmenuShared(Union[Any]):Description for hmenuShared
-      menuWidths(Any):
+      menuWidths(PyOLEMENUGROUPWIDTHS):
 
 Returns:
 
@@ -26468,13 +26468,13 @@ Returns:
          pass
 
 
-      def SetActiveObject(self,pActiveObject:'Any',pszObjName:'Any') -> 'None':
+      def SetActiveObject(self,pActiveObject:'PyIOleInPlaceActiveObject',pszObjName:'Any') -> 'None':
          """
          Description of SetActiveObject.
 
 Args:
 
-      pActiveObject(Any):Description for pActiveObject
+      pActiveObject(PyIOleInPlaceActiveObject):Description for pActiveObject
       pszObjName(Any):Description for pszObjName
 
 Returns:
@@ -26492,13 +26492,13 @@ class PyIOleObject(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def SetClientSite(self,pClientSite:'Any') -> 'None':
+      def SetClientSite(self,pClientSite:'PyIOleClientSite') -> 'None':
          """
          Description of SetClientSite.
 
 Args:
 
-      pClientSite(Any):Description for pClientSite
+      pClientSite(PyIOleClientSite):Description for pClientSite
 
 Returns:
 
@@ -26557,14 +26557,14 @@ Returns:
          pass
 
 
-      def SetMoniker(self,dwWhichMoniker:'Any',pmk:'Any') -> 'None':
+      def SetMoniker(self,dwWhichMoniker:'Any',pmk:'PyIMoniker') -> 'None':
          """
          Description of SetMoniker.
 
 Args:
 
       dwWhichMoniker(Any):Description for dwWhichMoniker
-      pmk(Any):Description for pmk
+      pmk(PyIMoniker):Description for pmk
 
 Returns:
 
@@ -26591,13 +26591,13 @@ Returns:
          pass
 
 
-      def InitFromData(self,pDataObject:'Any',fCreation:'Any',dwReserved:'Any') -> 'None':
+      def InitFromData(self,pDataObject:'PyIDataObject',fCreation:'Any',dwReserved:'Any') -> 'None':
          """
          Description of InitFromData.
 
 Args:
 
-      pDataObject(Any):Description for pDataObject
+      pDataObject(PyIDataObject):Description for pDataObject
       fCreation(Any):Description for fCreation
       dwReserved(Any):Description for dwReserved
 
@@ -26625,7 +26625,7 @@ Returns:
          pass
 
 
-      def DoVerb(self,iVerb:'Any',msg:'PyMSG',pActiveSite:'Any',lindex:'Any',hwndParent:'Any',rect:'Tuple[Any, Any, Any, Any]') -> 'None':
+      def DoVerb(self,iVerb:'Any',msg:'PyMSG',pActiveSite:'PyIOleClientSite',lindex:'Any',hwndParent:'Any',rect:'Tuple[Any, Any, Any, Any]') -> 'None':
          """
          Description of DoVerb.
 
@@ -26633,7 +26633,7 @@ Args:
 
       iVerb(Any):Description for iVerb
       msg(PyMSG):MSG tuple, a-la win32gui etc.
-      pActiveSite(Any):Description for pActiveSite
+      pActiveSite(PyIOleClientSite):Description for pActiveSite
       lindex(Any):Description for lindex
       hwndParent(Any):Description for hwndParent
       rect(Tuple[Any, Any, Any, Any]):
@@ -27005,13 +27005,13 @@ class PyIPersistFolder(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Initialize(self,pidl:'Any') -> 'None':
+      def Initialize(self,pidl:'PyIDL') -> 'None':
          """
          Description of Initialize.
 
 Args:
 
-      pidl(Any):Description for pidl
+      pidl(PyIDL):Description for pidl
 
 Returns:
 
@@ -27069,14 +27069,14 @@ Returns:
          pass
 
 
-      def Load(self,bag:'Any',log:'Any'=None) -> 'None':
+      def Load(self,bag:'PyIPropertyBag',log:'PyIErrorLog'=None) -> 'None':
          """
          Called by the container to load the control's properties.
 
 Args:
 
-      bag(Any):the caller's property bag.
-      log(Any):the caller's error log, or None
+      bag(PyIPropertyBag):the caller's property bag.
+      log(PyIErrorLog):the caller's error log, or None
 
 Returns:
 
@@ -27086,13 +27086,13 @@ Returns:
          pass
 
 
-      def Save(self,bag:'Any',clearDirty:'Any',saveProperties:'Any') -> 'None':
+      def Save(self,bag:'PyIPropertyBag',clearDirty:'Any',saveProperties:'Any') -> 'None':
          """
          Called by the container to save the object's properties.
 
 Args:
 
-      bag(Any):the caller's property bag.
+      bag(PyIPropertyBag):the caller's property bag.
       clearDirty(Any):Specifies whether to clear the dirty flag.
       saveProperties(Any):Specifies whether to save all properties or just those that have changed
 
@@ -27184,13 +27184,13 @@ Returns:
          pass
 
 
-      def InitNew(self,PyIStorage:'Any') -> 'None':
+      def InitNew(self,PyIStorage:'PyIStorage') -> 'None':
          """
          Initializes a new object, providing a storage object to be used for the object.
 
 Args:
 
-      PyIStorage(Any):PyIStorage for the new storage object to be initialized. The container creates a nested storage object in its storage object (see PyIStorage::CreateStorage). Then, the container calls the PyIPersistStorage::WriteClassStg function to initialize the new storage object with the object class identifier (CLSID).
+      PyIStorage(PyIStorage):PyIStorage for the new storage object to be initialized. The container creates a nested storage object in its storage object (see PyIStorage::CreateStorage). Then, the container calls the PyIPersistStorage::WriteClassStg function to initialize the new storage object with the object class identifier (CLSID).
 
 Returns:
 
@@ -27200,13 +27200,13 @@ Returns:
          pass
 
 
-      def Load(self,storage:'Any') -> 'None':
+      def Load(self,storage:'PyIStorage') -> 'None':
          """
          Loads an object from its existing storage.
 
 Args:
 
-      storage(Any):Existing storage for the object.
+      storage(PyIStorage):Existing storage for the object.
 
 Returns:
 
@@ -27216,13 +27216,13 @@ Returns:
          pass
 
 
-      def Save(self,PyIStorage:'Any',_int:'Any') -> 'None':
+      def Save(self,PyIStorage:'PyIStorage',_int:'Any') -> 'None':
          """
          None
 
 Args:
 
-      PyIStorage(Any):Storage for the object
+      PyIStorage(PyIStorage):Storage for the object
       _int(Any):Indicates whether the specified storage object is the current one. This parameter is set to FALSE when performing a Save As or Save A Copy To operation or when performing a full save. In the latter case, this method saves to a temporary file, deletes the original file, and renames the temporary file. This parameter is set to TRUE to perform a full save in a low-memory situation or to perform a fast incremental save in which only the dirty components are saved.
 
 Returns:
@@ -27233,13 +27233,13 @@ Returns:
          pass
 
 
-      def SaveCompleted(self,PyIStorage:'Any') -> 'None':
+      def SaveCompleted(self,PyIStorage:'PyIStorage') -> 'None':
          """
          None
 
 Args:
 
-      PyIStorage(Any):The current storage object
+      PyIStorage(PyIStorage):The current storage object
 
 Returns:
 
@@ -27292,13 +27292,13 @@ Returns:
          pass
 
 
-      def Load(self,stream:'Any') -> 'None':
+      def Load(self,stream:'PyIStream') -> 'None':
          """
          Initializes an object from the stream where it was previously saved.
 
 Args:
 
-      stream(Any):Stream object to load from.CommentsThis method loads an object from its associated stream. The seek pointer is set as it was in the most recent PyIPersistStream::Save method. This method can seek and read from the stream, but cannot write to it.On exit, the seek pointer must be in the same position it was in on entry, immediately past the end of the data.
+      stream(PyIStream):Stream object to load from.CommentsThis method loads an object from its associated stream. The seek pointer is set as it was in the most recent PyIPersistStream::Save method. This method can seek and read from the stream, but cannot write to it.On exit, the seek pointer must be in the same position it was in on entry, immediately past the end of the data.
 
 Returns:
 
@@ -27308,13 +27308,13 @@ Returns:
          pass
 
 
-      def Save(self,stream:'Any',bClearDirty:'Any') -> 'None':
+      def Save(self,stream:'PyIStream',bClearDirty:'Any') -> 'None':
          """
          Saves an object to the specified stream.
 
 Args:
 
-      stream(Any):The stream to save to.
+      stream(PyIStream):The stream to save to.
       bClearDirty(Any):Indicates whether to clear the dirty flag after the save is complete
 
 Returns:
@@ -27405,13 +27405,13 @@ Returns:
          pass
 
 
-      def AddApplication(self,pda:'Any') -> 'None':
+      def AddApplication(self,pda:'PyIDebugApplication') -> 'None':
          """
          Description of AddApplication.
 
 Args:
 
-      pda(Any):Description for pda
+      pda(PyIDebugApplication):Description for pda
 
 Returns:
 
@@ -27570,7 +27570,7 @@ Returns:
          pass
 
 
-      def AdminServices(self,profileName:'str',Password:'str'=None,uiParam:'Any'=0,flags:'Any'=0) -> 'Any':
+      def AdminServices(self,profileName:'str',Password:'str'=None,uiParam:'Any'=0,flags:'Any'=0) -> 'PyIProfAdmin':
          """
          Provides access to a message service administration object for making changes to the message services in a profile.
 
@@ -27583,7 +27583,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIProfAdmin
         
          """
          pass
@@ -27596,7 +27596,7 @@ class PyIPropertyBag(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Read(self,propName:'Any',propType:'Any',errorLog:'Any'=None) -> 'Any':
+      def Read(self,propName:'Any',propType:'Any',errorLog:'PyIErrorLog'=None) -> 'Any':
          """
          Called by the control to read a property from the storage provided by the 
 
@@ -27606,7 +27606,7 @@ Args:
 
       propName(Any):Name of the property to read.
       propType(Any):The type of the object to read.  Must be a VT_* Variant Type constant.
-      errorLog(Any):The caller's PyIErrorLog object in which the property bag stores any errors that occur during reads. Can be None in which case the caller is not interested in errors.CommentsThe result is a Python object, mapped from a COM VARIANT of type as specified in the propType parameter.
+      errorLog(PyIErrorLog):The caller's PyIErrorLog object in which the property bag stores any errors that occur during reads. Can be None in which case the caller is not interested in errors.CommentsThe result is a Python object, mapped from a COM VARIANT of type as specified in the propType parameter.
 
 Returns:
 
@@ -27642,17 +27642,17 @@ class PyIPropertyChange(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def ApplyToPropVariant(self,OrigVal:'Any') -> 'Any':
+      def ApplyToPropVariant(self,OrigVal:'PyPROPVARIANT') -> 'PyPROPVARIANT':
          """
          Applies the change to a variant value
 
 Args:
 
-      OrigVal(Any):The value to be modified
+      OrigVal(PyPROPVARIANT):The value to be modified
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
@@ -27681,7 +27681,7 @@ Returns:
          pass
 
 
-      def GetAt(self,Index:'Any',riid:'PyIID') -> 'Any':
+      def GetAt(self,Index:'Any',riid:'PyIID') -> 'PyIPropertyChange':
          """
          Retrieves a change by zero-based index
 
@@ -27692,20 +27692,20 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyChange
         
          """
          pass
 
 
-      def InsertAt(self,Index:'Any',PropChange:'Any') -> 'None':
+      def InsertAt(self,Index:'Any',PropChange:'PyIPropertyChange') -> 'None':
          """
          Inserts a change at a specific position
 
 Args:
 
       Index(Any):Position at which to place the change
-      PropChange(Any):The change to be added
+      PropChange(PyIPropertyChange):The change to be added
 
 Returns:
 
@@ -27715,13 +27715,13 @@ Returns:
          pass
 
 
-      def Append(self,PropChange:'Any') -> 'None':
+      def Append(self,PropChange:'PyIPropertyChange') -> 'None':
          """
          Adds a change to the end of the array
 
 Args:
 
-      PropChange(Any):The change to be added
+      PropChange(PyIPropertyChange):The change to be added
 
 Returns:
 
@@ -27731,7 +27731,7 @@ Returns:
          pass
 
 
-      def AppendOrReplace(self,PropChange:'Any') -> 'None':
+      def AppendOrReplace(self,PropChange:'PyIPropertyChange') -> 'None':
          """
          Adds a change, or replaces if an identical property key is already 
 
@@ -27739,7 +27739,7 @@ in container
 
 Args:
 
-      PropChange(Any):The change to be added or replaced
+      PropChange(PyIPropertyChange):The change to be added or replaced
 
 Returns:
 
@@ -27765,13 +27765,13 @@ Returns:
          pass
 
 
-      def IsKeyInArray(self,key:'Any') -> 'Any':
+      def IsKeyInArray(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Checks if array contains a change to a property
 
 Args:
 
-      key(Any):Property key to look for
+      key(PyPROPERTYKEY):Property key to look for
 
 Returns:
 
@@ -27788,7 +27788,7 @@ class PyIPropertyDescription(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetPropertyKey(self,) -> 'Any':
+      def GetPropertyKey(self,) -> 'PyPROPERTYKEY':
          """
          Returns the unique identifier for a property
 
@@ -27798,7 +27798,7 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPERTYKEY
         
          """
          pass
@@ -27984,14 +27984,14 @@ Returns:
          pass
 
 
-      def GetRelativeDescription(self,var1:'Any',var2:'Any') -> 'Tuple[Any, Any]':
+      def GetRelativeDescription(self,var1:'PyPROPVARIANT',var2:'PyPROPVARIANT') -> 'Tuple[Any, Any]':
          """
          Compares two values
 
 Args:
 
-      var1(Any):The first value
-      var2(Any):The second value
+      var1(PyPROPVARIANT):The first value
+      var2(PyPROPVARIANT):The second value
 
 Returns:
 
@@ -28077,7 +28077,7 @@ Return ValueReturns the condition type (PDCOT_*) and default operation (COP_*)
          pass
 
 
-      def GetEnumTypeList(self,riid:'PyIID') -> 'Any':
+      def GetEnumTypeList(self,riid:'PyIID') -> 'PyIPropertyEnumTypeList':
          """
          Returns an interface used for querying 
 
@@ -28089,13 +28089,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyEnumTypeList
         
          """
          pass
 
 
-      def CoerceToCanonicalValue(self,Value:'Any') -> 'Any':
+      def CoerceToCanonicalValue(self,Value:'PyPROPVARIANT') -> 'Any':
          """
          Converts a variant value to the exact type expected by 
 
@@ -28103,7 +28103,7 @@ the property
 
 Args:
 
-      Value(Any):The property value to be convertedCommentsThis method mutates the PyPROPVARIANT in place.  It may be cleared on failure.Return ValueReturns the HRESULT from the operation on success.
+      Value(PyPROPVARIANT):The property value to be convertedCommentsThis method mutates the PyPROPVARIANT in place.  It may be cleared on failure.Return ValueReturns the HRESULT from the operation on success.
 
 Returns:
 
@@ -28117,13 +28117,13 @@ Return ValueReturns the HRESULT from the operation on success.
          pass
 
 
-      def FormatForDisplay(self,Value:'Any',Flags:'Any') -> 'Any':
+      def FormatForDisplay(self,Value:'PyPROPVARIANT',Flags:'Any') -> 'Any':
          """
          Converts a value to its string representation
 
 Args:
 
-      Value(Any):The value to be formatted
+      Value(PyPROPVARIANT):The value to be formatted
       Flags(Any):Combination of PROPDESC_FORMAT_FLAGS (PDFF_*)
 
 Returns:
@@ -28159,7 +28159,7 @@ class PyIPropertyDescriptionAliasInfo(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetSortByAlias(self,riid:'PyIID') -> 'Any':
+      def GetSortByAlias(self,riid:'PyIID') -> 'PyIPropertyDescription':
          """
          Returns the primary column used 
 
@@ -28171,13 +28171,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyDescription
         
          """
          pass
 
 
-      def GetAdditionalSortByAliases(self,riid:'PyIID') -> 'Any':
+      def GetAdditionalSortByAliases(self,riid:'PyIID') -> 'PyIPropertyDescriptionList':
          """
          Returns secondary 
 
@@ -28189,7 +28189,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyDescriptionList
         
          """
          pass
@@ -28218,7 +28218,7 @@ Returns:
          pass
 
 
-      def GetAt(self,Elem:'Any',riid:'PyIID') -> 'Any':
+      def GetAt(self,Elem:'Any',riid:'PyIID') -> 'PyIPropertyDescription':
          """
          Retrieves a description from the list
 
@@ -28229,7 +28229,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyDescription
         
          """
          pass
@@ -28341,7 +28341,7 @@ Return Valuepscon.PET_*
          pass
 
 
-      def GetValue(self,) -> 'Any':
+      def GetValue(self,) -> 'PyPROPVARIANT':
          """
          Retrieves the defined value
 
@@ -28351,13 +28351,13 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
 
 
-      def GetRangeMinValue(self,) -> 'Any':
+      def GetRangeMinValue(self,) -> 'PyPROPVARIANT':
          """
          Returns the minimum allowed value for the property
 
@@ -28367,13 +28367,13 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
 
 
-      def GetRangeSetValue(self,) -> 'Any':
+      def GetRangeSetValue(self,) -> 'PyPROPVARIANT':
          """
          Returns a fixed value defined for the property
 
@@ -28383,7 +28383,7 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
@@ -28428,7 +28428,7 @@ Returns:
          pass
 
 
-      def GetAt(self,itype:'Any',riid:'PyIID') -> 'Any':
+      def GetAt(self,itype:'Any',riid:'PyIID') -> 'PyIPropertyEnumType':
          """
          Retrieves an item by index
 
@@ -28439,13 +28439,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyEnumType
         
          """
          pass
 
 
-      def FindMatchingIndex(self,Cmp:'Any') -> 'Any':
+      def FindMatchingIndex(self,Cmp:'PyPROPVARIANT') -> 'Any':
          """
          Attempts to match the specified value to one of the allowable 
 
@@ -28453,7 +28453,7 @@ values for the property
 
 Args:
 
-      Cmp(Any):A value to match against the defined values of the property
+      Cmp(PyPROPVARIANT):A value to match against the defined values of the property
 
 Returns:
 
@@ -28472,7 +28472,7 @@ Can be iterated over to enumerate property sets."""
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Create(self,fmtid:'PyIID',clsid:'PyIID',Flags:'Any',Mode:'Any') -> 'Any':
+      def Create(self,fmtid:'PyIID',clsid:'PyIID',Flags:'Any',Mode:'Any') -> 'PyIPropertyStorage':
          """
          Creates a new property set in the storage object
 
@@ -28485,13 +28485,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyStorage
         
          """
          pass
 
 
-      def Open(self,fmtid:'PyIID',Mode:'Any') -> 'Any':
+      def Open(self,fmtid:'PyIID',Mode:'Any') -> 'PyIPropertyStorage':
          """
          Opens an existing property set
 
@@ -28502,7 +28502,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyStorage
         
          """
          pass
@@ -28524,7 +28524,7 @@ Returns:
          pass
 
 
-      def Enum(self,) -> 'Any':
+      def Enum(self,) -> 'PyIEnumSTATPROPSETSTG':
          """
          Creates an iterator to enumerate contained property 
 
@@ -28536,7 +28536,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumSTATPROPSETSTG
         
          """
          pass
@@ -28551,13 +28551,13 @@ Supports iteration to list properties."""
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def ReadMultiple(self,props:'Tuple[Any, ...]') -> 'Tuple[Any, ...]':
+      def ReadMultiple(self,props:'Tuple[PROPSPEC, ...]') -> 'Tuple[Any, ...]':
          """
          Reads specified properties from the current property set.
 
 Args:
 
-      props(Tuple[Any, ...]):Sequence of property IDs or names.Return ValueReturned values are automatically converted to an appropriate python type
+      props(Tuple[PROPSPEC, ...]):Sequence of property IDs or names.Return ValueReturned values are automatically converted to an appropriate python type
 
 Returns:
 
@@ -28568,13 +28568,13 @@ Returns:
          pass
 
 
-      def WriteMultiple(self,props:'Tuple[Any, ...]',values:'Tuple[Any, ...]',propidNameFirst:'Any'=2) -> 'None':
+      def WriteMultiple(self,props:'Tuple[PROPSPEC, ...]',values:'Tuple[Any, ...]',propidNameFirst:'Any'=2) -> 'None':
          """
          Creates or modifies properties in the property set
 
 Args:
 
-      props(Tuple[Any, ...]):Sequence containing names or integer ids of properties to write
+      props(Tuple[PROPSPEC, ...]):Sequence containing names or integer ids of properties to write
       values(Tuple[Any, ...]):The values for the properties.
       propidNameFirst(Any):Minimum property id to be assigned to new properties specified by name
 
@@ -28586,13 +28586,13 @@ Returns:
          pass
 
 
-      def DeleteMultiple(self,props:'Tuple[Any, ...]') -> 'None':
+      def DeleteMultiple(self,props:'Tuple[PROPSPEC, ...]') -> 'None':
          """
          Deletes properties from the property set
 
 Args:
 
-      props(Tuple[Any, ...]):Sequence containing names or IDs of properties to be deleted
+      props(Tuple[PROPSPEC, ...]):Sequence containing names or IDs of properties to be deleted
 
 Returns:
 
@@ -28687,7 +28687,7 @@ Returns:
          pass
 
 
-      def Enum(self,) -> 'Any':
+      def Enum(self,) -> 'PyIEnumSTATPROPSTG':
          """
          Creates an enumerator for properties in the property set
 
@@ -28697,7 +28697,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumSTATPROPSTG
         
          """
          pass
@@ -28780,7 +28780,7 @@ Returns:
          pass
 
 
-      def GetAt(self,iProp:'Any') -> 'Any':
+      def GetAt(self,iProp:'Any') -> 'PyPROPERTYKEY':
          """
          Returns the property key for the specified property
 
@@ -28790,36 +28790,36 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPERTYKEY
         
          """
          pass
 
 
-      def GetValue(self,Key:'Any') -> 'Any':
+      def GetValue(self,Key:'PyPROPERTYKEY') -> 'PyPROPVARIANT':
          """
          Retrieves the value of a property
 
 Args:
 
-      Key(Any):Property key as returned by PyIPropertyStore::GetAt
+      Key(PyPROPERTYKEY):Property key as returned by PyIPropertyStore::GetAt
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
 
 
-      def SetValue(self,Key:'Any',Value:'Any') -> 'None':
+      def SetValue(self,Key:'PyPROPERTYKEY',Value:'PyPROPVARIANT') -> 'None':
          """
          Sets the value of a property
 
 Args:
 
-      Key(Any):Property key (see PyIPropertyStore::GetAt)
-      Value(Any):Variant value which can be converted to the appropriate variant type for the property Pass a VT_EMPTY variant to indicate that the property should be removed.
+      Key(PyPROPERTYKEY):Property key (see PyIPropertyStore::GetAt)
+      Value(PyPROPVARIANT):Variant value which can be converted to the appropriate variant type for the property Pass a VT_EMPTY variant to indicate that the property should be removed.
 
 Returns:
 
@@ -28852,13 +28852,13 @@ class PyIPropertyStoreCache(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetState(self,key:'Any') -> 'Any':
+      def GetState(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Retrieves the current state of a property
 
 Args:
 
-      key(Any):Property identifierReturn ValueA value from the PSC_STATE enum (PSC_NORMAL, PSC_NOTINSOURCE. PSC_DIRTY)
+      key(PyPROPERTYKEY):Property identifierReturn ValueA value from the PSC_STATE enum (PSC_NORMAL, PSC_NOTINSOURCE. PSC_DIRTY)
 
 Returns:
 
@@ -28869,7 +28869,7 @@ Returns:
          pass
 
 
-      def GetValueAndState(self,key:'Any') -> 'Tuple[Any, Any]':
+      def GetValueAndState(self,key:'PyPROPERTYKEY') -> 'Tuple[PyPROPVARIANT, Any]':
          """
          Retrieves the current value and state of a 
 
@@ -28877,23 +28877,23 @@ property
 
 Args:
 
-      key(Any):Property identifier
+      key(PyPROPERTYKEY):Property identifier
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[PyPROPVARIANT, Any]
         
          """
          pass
 
 
-      def SetState(self,key:'Any',state:'Any') -> 'None':
+      def SetState(self,key:'PyPROPERTYKEY',state:'Any') -> 'None':
          """
          Sets the state of a property
 
 Args:
 
-      key(Any):Property identifier
+      key(PyPROPERTYKEY):Property identifier
       state(Any):Value from the PSC_STATE enum (pscon.PSC_*)
 
 Returns:
@@ -28904,14 +28904,14 @@ Returns:
          pass
 
 
-      def SetValueAndState(self,key:'Any',value:'Any',state:'Any') -> 'None':
+      def SetValueAndState(self,key:'PyPROPERTYKEY',value:'PyPROPVARIANT',state:'Any') -> 'None':
          """
          Sets the value and state of a property
 
 Args:
 
-      key(Any):Property identifier
-      value(Any):The new value
+      key(PyPROPERTYKEY):Property identifier
+      value(PyPROPVARIANT):The new value
       state(Any):The new state (pscon.PSC_*)
 
 Returns:
@@ -28931,13 +28931,13 @@ writeable."""
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def IsPropertyWritable(self,key:'Any') -> 'Any':
+      def IsPropertyWritable(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Asks provider if a property can be editted.
 
 Args:
 
-      key(Any):Property identifier
+      key(PyPROPERTYKEY):Property identifier
 
 Returns:
 
@@ -28954,7 +28954,7 @@ class PyIPropertySystem(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetPropertyDescription(self,Key:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyDescription(self,Key:'PyPROPERTYKEY',riid:'PyIID') -> 'PyIPropertyDescription':
          """
          Returns an interface used to describe a 
 
@@ -28962,18 +28962,18 @@ property
 
 Args:
 
-      Key(Any):Fmtid and propertyid that uniquely identifies a property
+      Key(PyPROPERTYKEY):Fmtid and propertyid that uniquely identifies a property
       riid(PyIID):The interface to return
 
 Returns:
 
-      Any
+      PyIPropertyDescription
         
          """
          pass
 
 
-      def GetPropertyDescriptionByName(self,CanonicalName:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyDescriptionByName(self,CanonicalName:'Any',riid:'PyIID') -> 'PyIPropertyDescription':
          """
          Returns an interface used to 
 
@@ -28986,13 +28986,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyDescription
         
          """
          pass
 
 
-      def GetPropertyDescriptionListFromString(self,PropList:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyDescriptionListFromString(self,PropList:'Any',riid:'PyIID') -> 'PyIPropertyDescriptionList':
          """
          Retrieves property 
 
@@ -29005,13 +29005,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyDescriptionList
         
          """
          pass
 
 
-      def EnumeratePropertyDescriptions(self,Filter:'Any',riid:'PyIID') -> 'Any':
+      def EnumeratePropertyDescriptions(self,Filter:'Any',riid:'PyIID') -> 'PyIPropertyDescriptionList':
          """
          Returns an interface used to 
 
@@ -29024,20 +29024,20 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyDescriptionList
         
          """
          pass
 
 
-      def FormatForDisplay(self,Key:'Any',Value:'Any',Flags:'Any') -> 'Any':
+      def FormatForDisplay(self,Key:'PyPROPERTYKEY',Value:'PyPROPVARIANT',Flags:'Any') -> 'Any':
          """
          Formats a property into a string
 
 Args:
 
-      Key(Any):Fmtid and property id that identifies the property
-      Value(Any):The value to format
+      Key(PyPROPERTYKEY):Fmtid and property id that identifies the property
+      Value(PyPROPVARIANT):The value to format
       Flags(Any):Combination of PROPDESC_FORMAT_FLAGS (pscon.PDFF_*) indicating formatting options
 
 Returns:
@@ -29103,7 +29103,7 @@ class PyIProvideClassInfo(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetClassInfo(self,) -> 'Any':
+      def GetClassInfo(self,) -> 'PyITypeInfo':
          """
          Gets information about the CO_CLASS.
 
@@ -29113,7 +29113,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeInfo
         
          """
          pass
@@ -29268,7 +29268,7 @@ class PyIRelatedItem(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetItemIDList(self,) -> 'Any':
+      def GetItemIDList(self,) -> 'PyIDL':
          """
          Returns the ID list of the related item
 
@@ -29278,13 +29278,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIDL
         
          """
          pass
 
 
-      def GetItem(self,) -> 'Any':
+      def GetItem(self,) -> 'PyIShellItem':
          """
          Returns the related item
 
@@ -29294,7 +29294,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
@@ -29307,13 +29307,13 @@ class PyIRemoteDebugApplication(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def ResumeFromBreakPoint(self,prptFocus:'Any',bra:'Any',era:'Any') -> 'None':
+      def ResumeFromBreakPoint(self,prptFocus:'PyIRemoteDebugApplicationThread',bra:'Any',era:'Any') -> 'None':
          """
          Continue an application which is currently in a breakpoint.
 
 Args:
 
-      prptFocus(Any):Description for prptFocus
+      prptFocus(PyIRemoteDebugApplicationThread):Description for prptFocus
       bra(Any):Break resume action
       era(Any):Error resume action
 
@@ -29343,13 +29343,13 @@ Returns:
          pass
 
 
-      def ConnectDebugger(self,pad:'Any') -> 'None':
+      def ConnectDebugger(self,pad:'PyIApplicationDebugger') -> 'None':
          """
          Connects a debugger to the application.
 
 Args:
 
-      pad(Any):Description for padCommentsOnly one debugger may be connected at a time; this method fails if there is already a debugger connected.
+      pad(PyIApplicationDebugger):Description for padCommentsOnly one debugger may be connected at a time; this method fails if there is already a debugger connected.
 
 Returns:
 
@@ -29375,7 +29375,7 @@ Returns:
          pass
 
 
-      def GetDebugger(self,) -> 'Any':
+      def GetDebugger(self,) -> 'PyIApplicationDebugger':
          """
          Returns the current debugger connected to 
 
@@ -29387,13 +29387,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIApplicationDebugger
         
          """
          pass
 
 
-      def CreateInstanceAtApplication(self,rclsid:'PyIID',pUnkOuter:'Any',dwClsContext:'Any',riid:'PyIID') -> 'Any':
+      def CreateInstanceAtApplication(self,rclsid:'PyIID',pUnkOuter:'PyIUnknown',dwClsContext:'Any',riid:'PyIID') -> 'PyIUnknown':
          """
          Create objects in the application 
 
@@ -29402,13 +29402,13 @@ process address space.
 Args:
 
       rclsid(PyIID):Description for rclsid
-      pUnkOuter(Any):Description for pUnkOuter
+      pUnkOuter(PyIUnknown):Description for pUnkOuter
       dwClsContext(Any):Description for dwClsContext
       riid(PyIID):Description for riidCommentsProvides a mechanism for the debugger IDE, running out-of-process to the application, to create objects in the application process. This method simply delegates to CoCreateInstance.
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -29430,7 +29430,7 @@ Returns:
          pass
 
 
-      def EnumThreads(self,) -> 'Any':
+      def EnumThreads(self,) -> 'PyIEnumRemoteDebugApplicationThreads':
          """
          Enumerates all threads known 
 
@@ -29442,7 +29442,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumRemoteDebugApplicationThreads
         
          """
          pass
@@ -29464,7 +29464,7 @@ Returns:
          pass
 
 
-      def GetRootNode(self,) -> 'Any':
+      def GetRootNode(self,) -> 'PyIDebugApplicationNode':
          """
          Returns the application node under which 
 
@@ -29476,7 +29476,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIDebugApplicationNode
         
          """
          pass
@@ -29507,13 +29507,13 @@ class PyIRemoteDebugApplicationEvents(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def OnConnectDebugger(self,pad:'Any') -> 'None':
+      def OnConnectDebugger(self,pad:'PyIApplicationDebugger') -> 'None':
          """
          Description of OnConnectDebugger.
 
 Args:
 
-      pad(Any):Description for pad
+      pad(PyIApplicationDebugger):Description for pad
 
 Returns:
 
@@ -29587,13 +29587,13 @@ Returns:
          pass
 
 
-      def OnEnterBreakPoint(self,prdat:'Any') -> 'None':
+      def OnEnterBreakPoint(self,prdat:'PyIRemoteDebugApplicationThread') -> 'None':
          """
          Description of OnEnterBreakPoint.
 
 Args:
 
-      prdat(Any):Description for prdat
+      prdat(PyIRemoteDebugApplicationThread):Description for prdat
 
 Returns:
 
@@ -29603,13 +29603,13 @@ Returns:
          pass
 
 
-      def OnLeaveBreakPoint(self,prdat:'Any') -> 'None':
+      def OnLeaveBreakPoint(self,prdat:'PyIRemoteDebugApplicationThread') -> 'None':
          """
          Description of OnLeaveBreakPoint.
 
 Args:
 
-      prdat(Any):Description for prdat
+      prdat(PyIRemoteDebugApplicationThread):Description for prdat
 
 Returns:
 
@@ -29619,13 +29619,13 @@ Returns:
          pass
 
 
-      def OnCreateThread(self,prdat:'Any') -> 'None':
+      def OnCreateThread(self,prdat:'PyIRemoteDebugApplicationThread') -> 'None':
          """
          Description of OnCreateThread.
 
 Args:
 
-      prdat(Any):Description for prdat
+      prdat(PyIRemoteDebugApplicationThread):Description for prdat
 
 Returns:
 
@@ -29635,13 +29635,13 @@ Returns:
          pass
 
 
-      def OnDestroyThread(self,prdat:'Any') -> 'None':
+      def OnDestroyThread(self,prdat:'PyIRemoteDebugApplicationThread') -> 'None':
          """
          Description of OnDestroyThread.
 
 Args:
 
-      prdat(Any):Description for prdat
+      prdat(PyIRemoteDebugApplicationThread):Description for prdat
 
 Returns:
 
@@ -29651,14 +29651,14 @@ Returns:
          pass
 
 
-      def OnBreakFlagChange(self,abf:'Any',prdatSteppingThread:'Any') -> 'None':
+      def OnBreakFlagChange(self,abf:'Any',prdatSteppingThread:'PyIRemoteDebugApplicationThread') -> 'None':
          """
          Description of OnBreakFlagChange.
 
 Args:
 
       abf(Any):Description for abf
-      prdatSteppingThread(Any):Description for prdatSteppingThread
+      prdatSteppingThread(PyIRemoteDebugApplicationThread):Description for prdatSteppingThread
 
 Returns:
 
@@ -29739,14 +29739,14 @@ Returns:
          pass
 
 
-      def SetNextStatement(self,pStackFrame:'Any',pCodeContext:'Any') -> 'None':
+      def SetNextStatement(self,pStackFrame:'PyIDebugStackFrame',pCodeContext:'PyIDebugCodeContext') -> 'None':
          """
          Description of SetNextStatement.
 
 Args:
 
-      pStackFrame(Any):Description for pStackFrame
-      pCodeContext(Any):Description for pCodeContext
+      pStackFrame(PyIDebugStackFrame):Description for pStackFrame
+      pCodeContext(PyIDebugCodeContext):Description for pCodeContext
 
 Returns:
 
@@ -29861,13 +29861,13 @@ Returns:
          pass
 
 
-      def IsRunning(self,objectName:'Any') -> 'Any':
+      def IsRunning(self,objectName:'PyIMoniker') -> 'Any':
          """
          Checks whether an object is running.
 
 Args:
 
-      objectName(Any):The PyIMoniker interface on the moniker to search for in the Running Object Table.Return ValueDescriptionS_OK (ie, 0)The object identified by objectName is running.S_FALSE (ie, 1)There is no entry for objectName in the ROT, or that the object it identifies is no longer running (in which case, the entry is revoked).
+      objectName(PyIMoniker):The PyIMoniker interface on the moniker to search for in the Running Object Table.Return ValueDescriptionS_OK (ie, 0)The object identified by objectName is running.S_FALSE (ie, 1)There is no entry for objectName in the ROT, or that the object it identifies is no longer running (in which case, the entry is revoked).
 
 Returns:
 
@@ -29877,23 +29877,23 @@ Returns:
          pass
 
 
-      def GetObject(self,objectName:'Any') -> 'Any':
+      def GetObject(self,objectName:'PyIMoniker') -> 'PyIUnknown':
          """
          Checks whether an object is running.
 
 Args:
 
-      objectName(Any):The PyIMoniker interface on the moniker to search for in the Running Object Table.
+      objectName(PyIMoniker):The PyIMoniker interface on the moniker to search for in the Running Object Table.
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
 
 
-      def EnumRunning(self,) -> 'Any':
+      def EnumRunning(self,) -> 'PyIEnumMoniker':
          """
          Creates an enumerator that can list the monikers of 
 
@@ -29905,7 +29905,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumMoniker
         
          """
          pass
@@ -29918,7 +29918,7 @@ class PyIScheduledWorkItem(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateTrigger(self,) -> 'Tuple[Any, Any]':
+      def CreateTrigger(self,) -> 'Tuple[Any, PyITaskTrigger]':
          """
          Creates a new trigger for a task, returns index and 
 
@@ -29930,7 +29930,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[Any, PyITaskTrigger]
         
          """
          pass
@@ -29968,7 +29968,7 @@ Returns:
          pass
 
 
-      def GetTrigger(self,iTrigger:'Any') -> 'Any':
+      def GetTrigger(self,iTrigger:'Any') -> 'PyITaskTrigger':
          """
          Retrieves ITaskTrigger interface for specified trigger 
 
@@ -29980,7 +29980,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITaskTrigger
         
          """
          pass
@@ -30483,7 +30483,7 @@ class PyIServiceProvider(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def QueryService(self,clsid:'PyIID',iid:'PyIID') -> 'Any':
+      def QueryService(self,clsid:'PyIID',iid:'PyIID') -> 'PyIUnknown':
          """
          Creates or accesses the specified service and returns an 
 
@@ -30496,7 +30496,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -30511,18 +30511,18 @@ namespace extensions."""
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def InsertMenusSB(self,hmenuShared:'int',lpMenuWidths:'Any') -> 'Any':
+      def InsertMenusSB(self,hmenuShared:'int',lpMenuWidths:'PyOLEMENUGROUPWIDTHS') -> 'PyOLEMENUGROUPWIDTHS':
          """
          Updates a composite menu with container's options
 
 Args:
 
       hmenuShared(int):Newly created menu that contains no items
-      lpMenuWidths(Any):Tuple of 6 ints.  Items 0,2,and 4 are updated when the tuple is returned.
+      lpMenuWidths(PyOLEMENUGROUPWIDTHS):Tuple of 6 ints.  Items 0,2,and 4 are updated when the tuple is returned.
 
 Returns:
 
-      Any
+      PyOLEMENUGROUPWIDTHS
         
          """
          pass
@@ -30611,13 +30611,13 @@ Returns:
          pass
 
 
-      def BrowseObject(self,pidl:'Any',wFlags:'Any') -> 'None':
+      def BrowseObject(self,pidl:'PyIDL',wFlags:'Any') -> 'None':
          """
          Navigates to a different location
 
 Args:
 
-      pidl(Any):Item id list that specifies the new browse location, can be None
+      pidl(PyIDL):Item id list that specifies the new browse location, can be None
       wFlags(Any):Combination of shellcon.SBSP_* flags
 
 Returns:
@@ -30628,7 +30628,7 @@ Returns:
          pass
 
 
-      def GetViewStateStream(self,grfMode:'Any') -> 'Any':
+      def GetViewStateStream(self,grfMode:'Any') -> 'PyIStream':
          """
          Returns a stream that can be used to access view state 
 
@@ -30640,7 +30640,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIStream
         
          """
          pass
@@ -30681,7 +30681,7 @@ Returns:
          pass
 
 
-      def QueryActiveShellView(self,) -> 'Any':
+      def QueryActiveShellView(self,) -> 'PyIShellView':
          """
          Returns the currently displayed view
 
@@ -30691,19 +30691,19 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellView
         
          """
          pass
 
 
-      def OnViewWindowActive(self,pshv:'Any') -> 'None':
+      def OnViewWindowActive(self,pshv:'PyIShellView') -> 'None':
          """
          Callback triggered when a view window is activated
 
 Args:
 
-      pshv(Any):The activated view object
+      pshv(PyIShellView):The activated view object
 
 Returns:
 
@@ -30737,14 +30737,14 @@ class PyIShellExtInit(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Initialize(self,pFolder:'Any',pDataObject:'Any',hkey:'int') -> 'None':
+      def Initialize(self,pFolder:'PyIDL',pDataObject:'PyIDataObject',hkey:'int') -> 'None':
          """
          Description of Initialize.
 
 Args:
 
-      pFolder(Any):Description for pFolder
-      pDataObject(Any):Description for pDataObject
+      pFolder(PyIDL):Description for pFolder
+      pDataObject(PyIDataObject):Description for pDataObject
       hkey(int):Description for hkey
 
 Returns:
@@ -30762,14 +30762,14 @@ class PyIShellFolder(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def ParseDisplayName(self,hwndOwner:'int',pbc:'Any',DisplayName:'Any',Attributes:'Any'=0) -> 'Any':
+      def ParseDisplayName(self,hwndOwner:'int',pbc:'PyIBindCtx',DisplayName:'Any',Attributes:'Any'=0) -> 'Any':
          """
          Returns the PIDL of an item in a shell folder
 
 Args:
 
       hwndOwner(int):Window in which to display any dialogs or message boxes, can be 0
-      pbc(Any):Bind context that affects how parsing is performed, can be None
+      pbc(PyIBindCtx):Bind context that affects how parsing is performed, can be None
       DisplayName(Any):Display name to parse, format is dependent on the shell folder. Desktop folder will accept a file path, as well as guids of the form ::{guid} Example: '::%s\\::%s' %(shell.CLSID_MyComputer,shell.CLSID_ControlPanel)
       Attributes(Any):Combination of shellcon.SFGAO_* constants specifying which attributes should be returnedReturn ValueThe result is a tuple of cchEaten, pidl, attrItems[0] int : cchEatenthe number of characters of the input name that were parsed[1] PyIDL : pidlspecifies the relative path from the parsing folder to the object[2] int : Attributesreturns any requested attributes
 
@@ -30789,7 +30789,7 @@ returns any requested attributes
          pass
 
 
-      def EnumObjects(self,grfFlags:'Any',hwndOwner:'int'=None) -> 'Any':
+      def EnumObjects(self,grfFlags:'Any',hwndOwner:'int'=None) -> 'PyIEnumIDList':
          """
          Creates an enumerator to list the contents of the shell folder
 
@@ -30800,38 +30800,38 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumIDList
         
          """
          pass
 
 
-      def BindToObject(self,pidl:'Any',pbc:'Any',riid:'PyIID') -> 'Any':
+      def BindToObject(self,pidl:'PyIDL',pbc:'PyIBindCtx',riid:'PyIID') -> 'PyIShellFolder':
          """
          Returns an IShellFolder interface for a subfolder
 
 Args:
 
-      pidl(Any):Relative item id list that identifies the subfolder, can be multi-level
-      pbc(Any):Bind context to be used, can be None
+      pidl(PyIDL):Relative item id list that identifies the subfolder, can be multi-level
+      pbc(PyIBindCtx):Bind context to be used, can be None
       riid(PyIID):IID of the desired interface, usually IID_IShellFolder
 
 Returns:
 
-      Any
+      PyIShellFolder
         
          """
          pass
 
 
-      def BindToStorage(self,pidl:'Any',pbc:'Any',riid:'PyIID') -> 'Any':
+      def BindToStorage(self,pidl:'PyIDL',pbc:'PyIBindCtx',riid:'PyIID') -> 'Any':
          """
          Returns an interface to a storage object in a shell folder
 
 Args:
 
-      pidl(Any):Relative pidl for the folder item, must be a single item id
-      pbc(Any):Bind context that affects how binding is performed, can be None
+      pidl(PyIDL):Relative pidl for the folder item, must be a single item id
+      pbc(PyIBindCtx):Bind context that affects how binding is performed, can be None
       riid(PyIID):IID of the desired interface, one of IID_IStream, IID_IStorage, IID_IPropertySetStorageReturn ValueReturns PyIStream, PyIStorage or PyIPropertySetStorage depending on the riid passed in
 
 Returns:
@@ -30843,15 +30843,15 @@ Returns:
          pass
 
 
-      def CompareIDs(self,lparam:'Any',pidl1:'Any',pidl2:'Any') -> 'Any':
+      def CompareIDs(self,lparam:'Any',pidl1:'PyIDL',pidl2:'PyIDL') -> 'Any':
          """
          Determines the sorting order of 2 items in shell folder
 
 Args:
 
       lparam(Any):Lower 16 bits specify folder-dependent sorting rules, 0 means to sort by display name. System folder view uses these as a column number. Upper sixteen bits is used for flags SHCIDS_ALLFIELDS or SHCIDS_CANONICALONLY
-      pidl1(Any):Item id list that idenfies an object relative to the folder
-      pidl2(Any):Item id list that idenfies an object relative to the folderReturn ValueReturns 0 if items compare equal, -1 if the pidl1 comes first, or 1 if pidl2 comes first
+      pidl1(PyIDL):Item id list that idenfies an object relative to the folder
+      pidl2(PyIDL):Item id list that idenfies an object relative to the folderReturn ValueReturns 0 if items compare equal, -1 if the pidl1 comes first, or 1 if pidl2 comes first
 
 Returns:
 
@@ -30862,7 +30862,7 @@ Returns:
          pass
 
 
-      def CreateViewObject(self,hwndOwner:'Any',riid:'PyIID') -> 'Any':
+      def CreateViewObject(self,hwndOwner:'Any',riid:'PyIID') -> 'PyIShellView':
          """
          Creates a view object for a shell folder.
 
@@ -30873,19 +30873,19 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellView
         
          """
          pass
 
 
-      def GetAttributesOf(self,pidl:'Tuple[Any, ...]',rgfInOut:'Any') -> 'Any':
+      def GetAttributesOf(self,pidl:'Tuple[PyIDL, ...]',rgfInOut:'Any') -> 'Any':
          """
          Queries attributes of items within the shell folder
 
 Args:
 
-      pidl(Tuple[Any, ...]):A sequence of single-level pidls identifying items directly contained by the folder
+      pidl(Tuple[PyIDL, ...]):A sequence of single-level pidls identifying items directly contained by the folder
       rgfInOut(Any):Combination of shellcon.SFGAO_* constantsReturn ValueThe requested attributes are only returned if they are common to all of the specified items
 
 Returns:
@@ -30897,7 +30897,7 @@ Returns:
          pass
 
 
-      def GetUIObjectOf(self,hwndOwner:'int',pidl:'Tuple[Any, ...]',riid:'PyIID',iidout:'PyIID',Reserved:'Any'=0) -> 'Tuple[Any, Any]':
+      def GetUIObjectOf(self,hwndOwner:'int',pidl:'Tuple[PyIDL, ...]',riid:'PyIID',iidout:'PyIID',Reserved:'Any'=0) -> 'Tuple[Any, PyIUnknown]':
          """
          Creates an interface to one or more items in a shell 
 
@@ -30906,14 +30906,14 @@ folder
 Args:
 
       hwndOwner(int):Specifies a window in which to display any required dialogs or errors, can be 0
-      pidl(Tuple[Any, ...]):A sequence of single-level pidls identifying items in the folder
+      pidl(Tuple[PyIDL, ...]):A sequence of single-level pidls identifying items in the folder
       riid(PyIID):The interface to create, one of IID_IContextMenu, IID_IContextMenu2, IID_IDataObject, IID_IDropTarget, IID_IExtractIcon, IID_IQueryInfo
       iidout(PyIID):The interface to return.  Can be used in the case where there is not a python wrapper for the desired interface.  You must make certain that the interface identified by riid actually supports the iidout interface, or Bad Things Will Happen. It should always be safe to return PyIUnknown, which is the base for all interfaces.Return ValueReturns the Reserved parameter and the requested interface
       Reserved(Any):Reserved, use 0 if passed in
 
 Returns:
 
-      Tuple[Any, Any]:The interface to return.  Can be used in the case where there is not a 
+      Tuple[Any, PyIUnknown]:The interface to return.  Can be used in the case where there is not a 
 
 python wrapper for the desired interface.  You must make certain that the interface identified by riid 
 
@@ -30927,13 +30927,13 @@ Return ValueReturns the Reserved parameter and the requested interface
          pass
 
 
-      def GetDisplayNameOf(self,pidl:'Any',uFlags:'Any') -> 'Any':
+      def GetDisplayNameOf(self,pidl:'PyIDL',uFlags:'Any') -> 'Any':
          """
          Returns the display name of an item within this shell folder
 
 Args:
 
-      pidl(Any):PIDL that identifies the item relative to the parent folder
+      pidl(PyIDL):PIDL that identifies the item relative to the parent folder
       uFlags(Any):Combination of shellcon.SHGDN_* flags
 
 Returns:
@@ -30944,20 +30944,20 @@ Returns:
          pass
 
 
-      def SetNameOf(self,hwndOwner:'Any',pidl:'Any',Name:'Any',Flags:'Any') -> 'Any':
+      def SetNameOf(self,hwndOwner:'Any',pidl:'PyIDL',Name:'Any',Flags:'Any') -> 'PyIDL':
          """
          Sets the display name of an item and changes its PIDL
 
 Args:
 
       hwndOwner(Any):Window in which to display any message boxes or dialogs, can be 0
-      pidl(Any):PIDL that identifies the item relative to the parent folder
+      pidl(PyIDL):PIDL that identifies the item relative to the parent folder
       Name(Any):New name for the item
       Flags(Any):Combination of shellcon.SHGDM_* valuesReturn ValueReturns the new PIDL for item
 
 Returns:
 
-      Any:Combination of shellcon.SHGDM_* valuesReturn ValueReturns the new PIDL for item
+      PyIDL:Combination of shellcon.SHGDM_* valuesReturn ValueReturns the new PIDL for item
 
         
          """
@@ -31038,13 +31038,13 @@ Returns:
          pass
 
 
-      def GetDetailsEx(self,pidl:'Any',pscid:'Any') -> 'Any':
+      def GetDetailsEx(self,pidl:'PyIDL',pscid:'Any') -> 'Any':
          """
          Returns the details of an item by Column ID
 
 Args:
 
-      pidl(Any):Relative id list of an item in the folder
+      pidl(PyIDL):Relative id list of an item in the folder
       pscid(Any):The Column id/property key of a column in the folder's Details viewReturn ValueThe type of returned object is determined by the variant type of the requested column
 
 Returns:
@@ -31056,7 +31056,7 @@ Returns:
          pass
 
 
-      def GetDetailsOf(self,pidl:'Any',iColumn:'Any') -> 'Tuple[Any, Any, Any]':
+      def GetDetailsOf(self,pidl:'PyIDL',iColumn:'Any') -> 'Tuple[Any, Any, Any]':
          """
          Returns the value or title of a column in the folder's Details 
 
@@ -31064,7 +31064,7 @@ view.
 
 Args:
 
-      pidl(Any):The relative idl of an item in the folder.  Use None to retrieve column title.
+      pidl(PyIDL):The relative idl of an item in the folder.  Use None to retrieve column title.
       iColumn(Any):Zero based index of columnReturn ValueReturns a tuple representing a SHELLDETAILS struct, containing the formst (LVCFMT_*), column width in characters, and string representation of the requested value
 
 Returns:
@@ -31106,13 +31106,13 @@ class PyIShellIcon(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetIconOf(self,pidl:'Any') -> 'None':
+      def GetIconOf(self,pidl:'PyIDL') -> 'None':
          """
          Description of GetIconOf.
 
 Args:
 
-      pidl(Any):Description for pidl
+      pidl(PyIDL):Description for pidl
 
 Returns:
 
@@ -31129,13 +31129,13 @@ class PyIShellIconOverlay(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetOverlayIndex(self,pidl:'Any') -> 'None':
+      def GetOverlayIndex(self,pidl:'PyIDL') -> 'None':
          """
          Description of GetOverlayIndex.
 
 Args:
 
-      pidl(Any):Description for pidl
+      pidl(PyIDL):Description for pidl
 
 Returns:
 
@@ -31145,13 +31145,13 @@ Returns:
          pass
 
 
-      def GetOverlayIconIndex(self,pidl:'Any') -> 'None':
+      def GetOverlayIconIndex(self,pidl:'PyIDL') -> 'None':
          """
          Description of GetOverlayIconIndex.
 
 Args:
 
-      pidl(Any):Description for pidl
+      pidl(PyIDL):Description for pidl
 
 Returns:
 
@@ -31340,13 +31340,13 @@ class PyIShellItem(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def BindToHandler(self,pbc:'Any',bhid:'PyIID',riid:'PyIID') -> 'Any':
+      def BindToHandler(self,pbc:'PyIBindCtx',bhid:'PyIID',riid:'PyIID') -> 'Any':
          """
          Creates an instance of one of the item's handlers
 
 Args:
 
-      pbc(Any):Used to pass parameters that influence the binding operation, can be None
+      pbc(PyIBindCtx):Used to pass parameters that influence the binding operation, can be None
       bhid(PyIID):GUID that identifies a handler (shell.BHID_*)
       riid(PyIID):The interface to return
 
@@ -31358,7 +31358,7 @@ Returns:
          pass
 
 
-      def GetParent(self,) -> 'Any':
+      def GetParent(self,) -> 'PyIShellItem':
          """
          Retrieves the parent of this item
 
@@ -31368,7 +31368,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
@@ -31407,13 +31407,13 @@ Returns:
          pass
 
 
-      def Compare(self,psi:'Any',hint:'Any') -> 'Any':
+      def Compare(self,psi:'PyIShellItem',hint:'Any') -> 'Any':
          """
          Compares another shell item with this item
 
 Args:
 
-      psi(Any):A shell item to be compared with this item
+      psi(PyIShellItem):A shell item to be compared with this item
       hint(Any):shellcon.SICHINT_* value indicating how the comparison is to be performedReturn ValueReturns 0 if items compare as equal, nonzero otherwise
 
 Returns:
@@ -31432,7 +31432,7 @@ class PyIShellItem2(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetPropertyStore(self,Flags:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyStore(self,Flags:'Any',riid:'PyIID') -> 'PyIPropertyStore':
          """
          Returns a collection of the item's properties
 
@@ -31443,13 +31443,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyStore
         
          """
          pass
 
 
-      def GetPropertyStoreForKeys(self,Keys:'Tuple[Any, ...]',Flags:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyStoreForKeys(self,Keys:'Tuple[Any, ...]',Flags:'Any',riid:'PyIID') -> 'PyIPropertyStore':
          """
          Creates a property store containing just the 
 
@@ -31463,13 +31463,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyStore
         
          """
          pass
 
 
-      def GetPropertyStoreWithCreateObject(self,Flags:'Any',CreateObject:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyStoreWithCreateObject(self,Flags:'Any',CreateObject:'PyIUnknown',riid:'PyIID') -> 'PyIPropertyStore':
          """
          Returns the property store for the 
 
@@ -31478,18 +31478,18 @@ item, with alternate handler instantiation
 Args:
 
       Flags(Any):Combination of GETPROPERTYSTOREFLAGS values (shellcon.GPS_*)
-      CreateObject(Any):An interface that implements ICreateObject, used to create the property handler
+      CreateObject(PyIUnknown):An interface that implements ICreateObject, used to create the property handler
       riid(PyIID):The interface to be createdCommentsPrimarily used to create a handler in a separate process with reduced privileges
 
 Returns:
 
-      Any
+      PyIPropertyStore
         
          """
          pass
 
 
-      def GetPropertyDescriptionList(self,Type:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyDescriptionList(self,Type:'PyPROPERTYKEY',riid:'PyIID') -> 'PyIPropertyDescriptionList':
          """
          Retrieves descriptions of 
 
@@ -31497,12 +31497,12 @@ properties in a particular group
 
 Args:
 
-      Type(Any):Property list identifier (pscon.PKEY_PropList_*)
+      Type(PyPROPERTYKEY):Property list identifier (pscon.PKEY_PropList_*)
       riid(PyIID):The interface to return
 
 Returns:
 
-      Any
+      PyIPropertyDescriptionList
         
          """
          pass
@@ -31524,13 +31524,13 @@ Returns:
          pass
 
 
-      def GetProperty(self,key:'Any') -> 'Any':
+      def GetProperty(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Retrieves the value of a property, converted to an appropriate python type
 
 Args:
 
-      key(Any):The id of the property to retrieveReturn ValueType of returned object is determined by the variant type of the property
+      key(PyPROPERTYKEY):The id of the property to retrieveReturn ValueType of returned object is determined by the variant type of the property
 
 Returns:
 
@@ -31541,13 +31541,13 @@ Returns:
          pass
 
 
-      def GetCLSID(self,key:'Any') -> 'PyIID':
+      def GetCLSID(self,key:'PyPROPERTYKEY') -> 'PyIID':
          """
          Retrieves the value of a property as a CLSID (VT_CLSID)
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31557,13 +31557,13 @@ Returns:
          pass
 
 
-      def GetFileTime(self,key:'Any') -> 'PyTime':
+      def GetFileTime(self,key:'PyPROPERTYKEY') -> 'PyTime':
          """
          Retrieves the value of a property as a FILETIME
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31573,13 +31573,13 @@ Returns:
          pass
 
 
-      def GetInt32(self,key:'Any') -> 'Any':
+      def GetInt32(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Retrieves the value of a property as a 32 bit int.
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31589,13 +31589,13 @@ Returns:
          pass
 
 
-      def GetString(self,key:'Any') -> 'Any':
+      def GetString(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Retrieves the value of a property as a string
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31605,13 +31605,13 @@ Returns:
          pass
 
 
-      def GetUInt32(self,key:'Any') -> 'Any':
+      def GetUInt32(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Returns the value of a property as a 32 bit unsigned int
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31621,13 +31621,13 @@ Returns:
          pass
 
 
-      def GetUInt64(self,key:'Any') -> 'Any':
+      def GetUInt64(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Returns the value of a property as an unsigned 64-bit int
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31637,13 +31637,13 @@ Returns:
          pass
 
 
-      def GetBool(self,key:'Any') -> 'Any':
+      def GetBool(self,key:'PyPROPERTYKEY') -> 'Any':
          """
          Returns the value of a property as a boolean
 
 Args:
 
-      key(Any):The id of the property to retrieve
+      key(PyPROPERTYKEY):The id of the property to retrieve
 
 Returns:
 
@@ -31660,13 +31660,13 @@ class PyIShellItemArray(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def BindToHandler(self,pbc:'Any',rbhid:'PyIID',riid:'PyIID') -> 'Any':
+      def BindToHandler(self,pbc:'PyIBindCtx',rbhid:'PyIID',riid:'PyIID') -> 'Any':
          """
          Creates an instance of a handler for the items in the container
 
 Args:
 
-      pbc(Any):Bind context, can be None
+      pbc(PyIBindCtx):Bind context, can be None
       rbhid(PyIID):Bind handler GUID (shell.BHID_*)
       riid(PyIID):The interface to return
 
@@ -31678,7 +31678,7 @@ Returns:
          pass
 
 
-      def GetPropertyStore(self,flags:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyStore(self,flags:'Any',riid:'PyIID') -> 'PyIPropertyStore':
          """
          Retrieves a store containing consolidated 
 
@@ -31691,13 +31691,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIPropertyStore
         
          """
          pass
 
 
-      def GetPropertyDescriptionList(self,Type:'Any',riid:'PyIID') -> 'Any':
+      def GetPropertyDescriptionList(self,Type:'PyPROPERTYKEY',riid:'PyIID') -> 'PyIPropertyDescriptionList':
          """
          Retrieves descriptions for a 
 
@@ -31705,12 +31705,12 @@ defined group of properties
 
 Args:
 
-      Type(Any):Property list identifier (pscon.PKEY_PropList_*)
+      Type(PyPROPERTYKEY):Property list identifier (pscon.PKEY_PropList_*)
       riid(PyIID):The interface to return
 
 Returns:
 
-      Any
+      PyIPropertyDescriptionList
         
          """
          pass
@@ -31749,7 +31749,7 @@ Returns:
          pass
 
 
-      def GetItemAt(self,dwIndex:'Any') -> 'Any':
+      def GetItemAt(self,dwIndex:'Any') -> 'PyIShellItem':
          """
          Retrieves an item by index
 
@@ -31759,13 +31759,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
 
 
-      def EnumItems(self,) -> 'Any':
+      def EnumItems(self,) -> 'PyIEnumShellItems':
          """
          Returns an enumeration interface to list contained items
 
@@ -31775,7 +31775,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumShellItems
         
          """
          pass
@@ -31854,13 +31854,13 @@ Returns:
          pass
 
 
-      def GetResourceDescription(self,pcsir:'Any') -> 'None':
+      def GetResourceDescription(self,pcsir:'PySHELL_ITEM_RESOURCE') -> 'None':
          """
          Description of GetResourceDescription.
 
 Args:
 
-      pcsir(Any):Description for pcsir
+      pcsir(PySHELL_ITEM_RESOURCE):Description for pcsir
 
 Returns:
 
@@ -31870,7 +31870,7 @@ Returns:
          pass
 
 
-      def EnumResources(self,) -> 'Any':
+      def EnumResources(self,) -> 'PyIEnumResources':
          """
          Description of EnumResources.
 
@@ -31880,19 +31880,19 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumResources
         
          """
          pass
 
 
-      def SupportsResource(self,pcsir:'Any') -> 'Any':
+      def SupportsResource(self,pcsir:'PySHELL_ITEM_RESOURCE') -> 'Any':
          """
          Description of SupportsResource.
 
 Args:
 
-      pcsir(Any):Description for pcsir
+      pcsir(PySHELL_ITEM_RESOURCE):Description for pcsir
 
 Returns:
 
@@ -31902,30 +31902,30 @@ Returns:
          pass
 
 
-      def OpenResource(self,pcsir:'Any',riid:'PyIID') -> 'Any':
+      def OpenResource(self,pcsir:'PySHELL_ITEM_RESOURCE',riid:'PyIID') -> 'PyIUnknown':
          """
          Description of OpenResource.
 
 Args:
 
-      pcsir(Any):Description for pcsir
+      pcsir(PySHELL_ITEM_RESOURCE):Description for pcsir
       riid(PyIID):The interface to return
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
 
 
-      def CreateResource(self,sir:'Any',riid:'PyIID') -> 'Any':
+      def CreateResource(self,sir:'PySHELL_ITEM_RESOURCE',riid:'PyIID') -> 'Any':
          """
          Description of CreateResource.
 
 Args:
 
-      sir(Any):Resource identifier
+      sir(PySHELL_ITEM_RESOURCE):Resource identifier
       riid(PyIID):The interface to return
 
 Returns:
@@ -31959,13 +31959,13 @@ class PyIShellLibrary(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def LoadLibraryFromItem(self,Library:'Any',Mode:'Any') -> 'None':
+      def LoadLibraryFromItem(self,Library:'PyIShellItem',Mode:'Any') -> 'None':
          """
          Loads an existing library file
 
 Args:
 
-      Library(Any):Shell item interface representing the library file
+      Library(PyIShellItem):Shell item interface representing the library file
       Mode(Any):Access mode, combination of storagecon.STGM_* flags
 
 Returns:
@@ -31993,13 +31993,13 @@ Returns:
          pass
 
 
-      def AddFolder(self,Location:'Any') -> 'None':
+      def AddFolder(self,Location:'PyIShellItem') -> 'None':
          """
          Includes a folder
 
 Args:
 
-      Location(Any):Shell item interface representing the folder
+      Location(PyIShellItem):Shell item interface representing the folder
 
 Returns:
 
@@ -32009,13 +32009,13 @@ Returns:
          pass
 
 
-      def RemoveFolder(self,Location:'Any') -> 'None':
+      def RemoveFolder(self,Location:'PyIShellItem') -> 'None':
          """
          Removes a folder
 
 Args:
 
-      Location(Any):Shell item interface representing the folder
+      Location(PyIShellItem):Shell item interface representing the folder
 
 Returns:
 
@@ -32025,7 +32025,7 @@ Returns:
          pass
 
 
-      def GetFolders(self,Filter:'Any',riid:'PyIID') -> 'Any':
+      def GetFolders(self,Filter:'Any',riid:'PyIID') -> 'PyIShellItemArray':
          """
          Retrieves a collection of folders in the library
 
@@ -32036,31 +32036,31 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItemArray
         
          """
          pass
 
 
-      def ResolveFolder(self,FolderToResolve:'Any',Timeout:'Any',riid:'PyIID') -> 'Any':
+      def ResolveFolder(self,FolderToResolve:'PyIShellItem',Timeout:'Any',riid:'PyIID') -> 'PyIShellItem':
          """
          Attempts to locate a folder that has been moved or renamed
 
 Args:
 
-      FolderToResolve(Any):Library item whose location has changed
+      FolderToResolve(PyIShellItem):Library item whose location has changed
       Timeout(Any):Max search time, specified in milliseconds
       riid(PyIID):The interface to return
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
 
 
-      def GetDefaultSaveFolder(self,Type:'Any',riid:'PyIID') -> 'Any':
+      def GetDefaultSaveFolder(self,Type:'Any',riid:'PyIID') -> 'PyIShellItem':
          """
          Returns the default folder in which new items are 
 
@@ -32073,20 +32073,20 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
 
 
-      def SetDefaultSaveFolder(self,Type:'Any',SaveFolder:'Any') -> 'None':
+      def SetDefaultSaveFolder(self,Type:'Any',SaveFolder:'PyIShellItem') -> 'None':
          """
          Sets the default save location
 
 Args:
 
       Type(Any):Specifies public or private save location, shellcon.DSFT_*
-      SaveFolder(Any):New default location, must be in the library
+      SaveFolder(PyIShellItem):New default location, must be in the library
 
 Returns:
 
@@ -32217,26 +32217,26 @@ Returns:
          pass
 
 
-      def Save(self,FolderToSaveIn:'Any',LibraryName:'Any',Flags:'Any') -> 'Any':
+      def Save(self,FolderToSaveIn:'PyIShellItem',LibraryName:'Any',Flags:'Any') -> 'PyIShellItem':
          """
          Saves the library to a specific location
 
 Args:
 
-      FolderToSaveIn(Any):The destination folder, use None to save in current user's Libraries folder
+      FolderToSaveIn(PyIShellItem):The destination folder, use None to save in current user's Libraries folder
       LibraryName(Any):Filename for the new library, without file extension
       Flags(Any):Determines behaviour if file already exists, shellcon.LSF_*Return ValueReturns a shell item for the saved file.
 
 Returns:
 
-      Any:Determines behaviour if file already exists, shellcon.LSF_*Return ValueReturns a shell item for the saved file.
+      PyIShellItem:Determines behaviour if file already exists, shellcon.LSF_*Return ValueReturns a shell item for the saved file.
 
         
          """
          pass
 
 
-      def SaveInKnownFolder(self,FolderToSaveIn:'PyIID',LibraryName:'Any',Flags:'Any') -> 'Any':
+      def SaveInKnownFolder(self,FolderToSaveIn:'PyIID',LibraryName:'Any',Flags:'Any') -> 'PyIShellItem':
          """
          Saves the library in a known folder
 
@@ -32248,7 +32248,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
@@ -32280,7 +32280,7 @@ Returns:
          pass
 
 
-      def GetIDList(self,) -> 'Any':
+      def GetIDList(self,) -> 'PyIDL':
          """
          Retrieves the item id list that identifies the target of the shell link.
 
@@ -32290,19 +32290,19 @@ Args:
 
 Returns:
 
-      Any
+      PyIDL
         
          """
          pass
 
 
-      def SetIDList(self,pidl:'Any') -> 'None':
+      def SetIDList(self,pidl:'PyIDL') -> 'None':
          """
          Sets the target of the link using an item id list
 
 Args:
 
-      pidl(Any):Absolute item id list that identifies the target
+      pidl(PyIDL):Absolute item id list that identifies the target
 
 Returns:
 
@@ -32524,7 +32524,7 @@ Returns:
          pass
 
 
-      def Resolve(self,hwnd:'Any',fFlags:'Any') -> 'None':
+      def Resolve(self,hwnd:'int',fFlags:'Any') -> 'None':
          """
          Resolves a shell link by searching for the shell link object and updating the 
 
@@ -32723,15 +32723,15 @@ Returns:
          pass
 
 
-      def CreateViewWindow(self,psvPrevious:'Any',pfs:'Tuple[Any, Any]',psb:'Any',prcView:'Tuple[Any, Any, Any, Any]') -> 'Any':
+      def CreateViewWindow(self,psvPrevious:'PyIShellView',pfs:'Tuple[Any, Any]',psb:'PyIShellBrowser',prcView:'Tuple[Any, Any, Any, Any]') -> 'Any':
          """
          Description of CreateViewWindow.
 
 Args:
 
-      psvPrevious(Any):Description for psvPrevious
+      psvPrevious(PyIShellView):Description for psvPrevious
       pfs(Tuple[Any, Any]):Description for pfs
-      psb(Any):Description for psb
+      psb(PyIShellBrowser):Description for psb
       prcView(Tuple[Any, Any, Any, Any]):Description for prcViewReturn ValueThe result is an integer handle to the new window.
 
 Returns:
@@ -32791,13 +32791,13 @@ Returns:
          pass
 
 
-      def SelectItem(self,pidlItem:'Any',uFlags:'Any') -> 'None':
+      def SelectItem(self,pidlItem:'PyIDL',uFlags:'Any') -> 'None':
          """
          Description of SelectItem.
 
 Args:
 
-      pidlItem(Any):Description for pidlItem
+      pidlItem(PyIDL):Description for pidlItem
       uFlags(Any):Description for uFlags
 
 Returns:
@@ -32808,7 +32808,7 @@ Returns:
          pass
 
 
-      def GetItemObject(self,uItem:'Any',riid:'PyIID') -> 'Any':
+      def GetItemObject(self,uItem:'Any',riid:'PyIID') -> 'PyIUnknown':
          """
          Description of GetItemObject.
 
@@ -32819,7 +32819,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -32855,7 +32855,7 @@ class PyIStorage(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateStream(self,Name:'Any',Mode:'Any',reserved1:'Any'=0,reserved2:'Any'=0) -> 'Any':
+      def CreateStream(self,Name:'Any',Mode:'Any',reserved1:'Any'=0,reserved2:'Any'=0) -> 'PyIStream':
          """
          Creates and opens a stream object with the specified name contained 
 
@@ -32872,13 +32872,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIStream
         
          """
          pass
 
 
-      def OpenStream(self,Name:'Any',reserved1:'Any',Mode:'Any',reserved2:'Any'=0) -> 'Any':
+      def OpenStream(self,Name:'Any',reserved1:'Any',Mode:'Any',reserved2:'Any'=0) -> 'PyIStream':
          """
          Opens an existing stream object within this storage object in the 
 
@@ -32893,13 +32893,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIStream
         
          """
          pass
 
 
-      def CreateStorage(self,Name:'Any',Mode:'Any',StgFmt:'Any',reserved2:'Any'=0) -> 'Any':
+      def CreateStorage(self,Name:'Any',Mode:'Any',StgFmt:'Any',reserved2:'Any'=0) -> 'PyIStorage':
          """
          Creates and opens a new storage object nested within this storage 
 
@@ -32914,13 +32914,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIStorage
         
          """
          pass
 
 
-      def OpenStorage(self,Name:'Any',Priority:'Any',Mode:'Any',snbExclude:'Any',reserved:'Any'=0) -> 'Any':
+      def OpenStorage(self,Name:'Any',Priority:'PyIStorage',Mode:'Any',snbExclude:'Any',reserved:'Any'=0) -> 'PyIStorage':
          """
          Opens an existing storage object with the specified name in the 
 
@@ -32929,20 +32929,20 @@ specified access mode.
 Args:
 
       Name(Any):Name of the storage, or None.
-      Priority(Any):If the pstgPriority parameter is not None, it is a PyIStorage object to a previous opening of an element of the storage object, usually one that was opened in priority mode. The storage object should be closed and re-opened according to grfMode. When the PyIStorage::OpenStorage method returns, pstgPriority is no longer valid - use the result value. If the pstgPriority parameter is None, it is ignored.
+      Priority(PyIStorage):If the pstgPriority parameter is not None, it is a PyIStorage object to a previous opening of an element of the storage object, usually one that was opened in priority mode. The storage object should be closed and re-opened according to grfMode. When the PyIStorage::OpenStorage method returns, pstgPriority is no longer valid - use the result value. If the pstgPriority parameter is None, it is ignored.
       Mode(Any):Access mode - combination of storagecon.STGM_* flags (must include STGM_SHARE_EXCLUSIVE)
       snbExclude(Any):Reserved for later - Must be None
       reserved(Any):Reserved integer param.
 
 Returns:
 
-      Any
+      PyIStorage
         
          """
          pass
 
 
-      def CopyTo(self,rgiidExclude:'Tuple[Any, Any]',snbExclude:'Any',stgDest:'Any') -> 'None':
+      def CopyTo(self,rgiidExclude:'Tuple[Any, Any]',snbExclude:'Any',stgDest:'PyIStorage') -> 'None':
          """
          Copies the entire contents of an open storage object to another storage object.
 
@@ -32950,7 +32950,7 @@ Args:
 
       rgiidExclude(Tuple[Any, Any]):List of IID's to be excluded.  Use empty seq to exclude all objects, or None to indicate no excludes.
       snbExclude(Any):Reserved for later - Must be None
-      stgDest(Any):The open storage object into which this storage object is to be copied. The destination storage object can be a different implementation of the PyIStorage interface from the source storage object. Thus, IStorage::CopyTo can only use publicly available methods of the destination storage object. If stgDest is open in transacted mode, it can be reverted by calling its PyIStorage::Revert method.
+      stgDest(PyIStorage):The open storage object into which this storage object is to be copied. The destination storage object can be a different implementation of the PyIStorage interface from the source storage object. Thus, IStorage::CopyTo can only use publicly available methods of the destination storage object. If stgDest is open in transacted mode, it can be reverted by calling its PyIStorage::Revert method.
 
 Returns:
 
@@ -32960,7 +32960,7 @@ Returns:
          pass
 
 
-      def MoveElementTo(self,Name:'Any',stgDest:'Any',NewName:'Any',Flags:'Any') -> 'None':
+      def MoveElementTo(self,Name:'Any',stgDest:'PyIStorage',NewName:'Any',Flags:'Any') -> 'None':
          """
          Copies or moves a substorage or stream from this storage object to another 
 
@@ -32969,7 +32969,7 @@ storage object.
 Args:
 
       Name(Any):A string that contains the name of the element in this storage object to be moved or copied.
-      stgDest(Any):PyIStorage for the destination storage object.
+      stgDest(PyIStorage):PyIStorage for the destination storage object.
       NewName(Any):A string that contains the new name for the element in its new storage object.
       Flags(Any):Specifies whether to move or copy (storagecon.STGMOVE_MOVE or STGMOVE_COPY)
 
@@ -33019,7 +33019,7 @@ Returns:
          pass
 
 
-      def EnumElements(self,reserved1:'Any'=0,reserved2:'Any'=None,reserved3:'Any'=0) -> 'Any':
+      def EnumElements(self,reserved1:'Any'=0,reserved2:'Any'=None,reserved3:'Any'=0) -> 'PyIEnumSTATSTG':
          """
          Retrieves an enumerator object that can be used to enumerate the 
 
@@ -33033,7 +33033,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIEnumSTATSTG
         
          """
          pass
@@ -33126,7 +33126,7 @@ Returns:
          pass
 
 
-      def Stat(self,grfStatFlag:'Any') -> 'Any':
+      def Stat(self,grfStatFlag:'Any') -> 'STATSTG':
          """
          Retrieves the STATSTG structure for this open storage object.
 
@@ -33136,7 +33136,7 @@ Args:
 
 Returns:
 
-      Any
+      STATSTG
         
          """
          pass
@@ -33248,7 +33248,7 @@ Returns:
          pass
 
 
-      def CopyTo(self,stream:'Any',cb:'ULARGE_INTEGER') -> 'ULARGE_INTEGER':
+      def CopyTo(self,stream:'PyIStream',cb:'ULARGE_INTEGER') -> 'ULARGE_INTEGER':
          """
          Copies a specified number of bytes from the current seek pointer in the 
 
@@ -33256,7 +33256,7 @@ stream to the current seek pointer in another stream.
 
 Args:
 
-      stream(Any):The stream to write to.
+      stream(PyIStream):The stream to write to.
       cb(ULARGE_INTEGER):The number of bytes to write.Return ValueThe return value is the number of bytes actually written.
 
 Returns:
@@ -33338,7 +33338,7 @@ Returns:
          pass
 
 
-      def Clone(self,) -> 'Any':
+      def Clone(self,) -> 'PyIStream':
          """
          Creates a new stream object with its own seek pointer that references the 
 
@@ -33350,13 +33350,13 @@ Args:
 
 Returns:
 
-      Any
+      PyIStream
         
          """
          pass
 
 
-      def Stat(self,grfStatFlag:'Any'=0) -> 'Any':
+      def Stat(self,grfStatFlag:'Any'=0) -> 'STATSTG':
          """
          Returns information about the stream
 
@@ -33366,7 +33366,7 @@ Args:
 
 Returns:
 
-      Any
+      STATSTG
         
          """
          pass
@@ -33628,7 +33628,7 @@ Returns:
          pass
 
 
-      def Activate(self,Name:'Any',riid:'PyIID') -> 'Any':
+      def Activate(self,Name:'Any',riid:'PyIID') -> 'PyITask':
          """
          Opens the specified task and returns an ITask interface for it
 
@@ -33639,7 +33639,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITask
         
          """
          pass
@@ -33661,7 +33661,7 @@ Returns:
          pass
 
 
-      def NewWorkItem(self,TaskName:'Any',rclsid:'PyIID',riid:'PyIID') -> 'Any':
+      def NewWorkItem(self,TaskName:'Any',rclsid:'PyIID',riid:'PyIID') -> 'PyITask':
          """
          Creates a new task
 
@@ -33673,20 +33673,20 @@ Args:
 
 Returns:
 
-      Any
+      PyITask
         
          """
          pass
 
 
-      def AddWorkItem(self,TaskName:'Any',WorkItem:'Any') -> 'None':
+      def AddWorkItem(self,TaskName:'Any',WorkItem:'PyITask') -> 'None':
          """
          Create a new scheduled task from PyITask object
 
 Args:
 
       TaskName(Any):Name of task to be created
-      WorkItem(Any):Existing PyITask objectCommentsThe PyItask passed in is modified in place and on success is associated with the new task, not the old one
+      WorkItem(PyITask):Existing PyITask objectCommentsThe PyItask passed in is modified in place and on success is associated with the new task, not the old one
 
 Returns:
 
@@ -33720,13 +33720,13 @@ class PyITaskTrigger(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def SetTrigger(self,Trigger:'Any') -> 'None':
+      def SetTrigger(self,Trigger:'PyTASK_TRIGGER') -> 'None':
          """
          Set trigger parameters from a PyTASK_TRIGGER object
 
 Args:
 
-      Trigger(Any):Python object representing a TASK_TRIGGER struct
+      Trigger(PyTASK_TRIGGER):Python object representing a TASK_TRIGGER struct
 
 Returns:
 
@@ -33736,7 +33736,7 @@ Returns:
          pass
 
 
-      def GetTrigger(self,) -> 'Any':
+      def GetTrigger(self,) -> 'PyTASK_TRIGGER':
          """
          Retrieves trigger parms as a PyTASK_TRIGGER object
 
@@ -33746,7 +33746,7 @@ Args:
 
 Returns:
 
-      Any
+      PyTASK_TRIGGER
         
          """
          pass
@@ -33901,14 +33901,14 @@ Returns:
          pass
 
 
-      def ConfirmOverwrite(self,Source:'Any',DestParent:'Any',Name:'Any') -> 'Any':
+      def ConfirmOverwrite(self,Source:'PyIShellItem',DestParent:'PyIShellItem',Name:'Any') -> 'Any':
          """
          Asks user for permission to overwrite an existing item
 
 Args:
 
-      Source(Any):The item that will replace existing item
-      DestParent(Any):Folder into which item will be placed
+      Source(PyIShellItem):The item that will replace existing item
+      DestParent(PyIShellItem):Folder into which item will be placed
       Name(Any):New name for item, or None if item is to keep original name
 
 Returns:
@@ -33919,7 +33919,7 @@ Returns:
          pass
 
 
-      def ConfirmEncryptionLoss(self,Source:'Any') -> 'Any':
+      def ConfirmEncryptionLoss(self,Source:'PyIShellItem') -> 'Any':
          """
          Notifies user when an item can't be encrypted at 
 
@@ -33927,7 +33927,7 @@ destination
 
 Args:
 
-      Source(Any):Item that failed to be encrypted
+      Source(PyIShellItem):Item that failed to be encrypted
 
 Returns:
 
@@ -33937,13 +33937,13 @@ Returns:
          pass
 
 
-      def FileFailure(self,Item:'Any',ItemName:'Any',Error:'Any') -> 'Tuple[Any, Any]':
+      def FileFailure(self,Item:'PyIShellItem',ItemName:'Any',Error:'Any') -> 'Tuple[Any, Any]':
          """
          Notifies user of failure, and queries how to proceed
 
 Args:
 
-      Item(Any):The shell item that caused the failure
+      Item(PyIShellItem):The shell item that caused the failure
       ItemName(Any):Name of item if different than above, can be None
       Error(Any):HRESULT error code from operationReturn ValueReturns the HRESULT and new file name if renaming resolved the failure
 
@@ -33956,7 +33956,7 @@ Returns:
          pass
 
 
-      def SubStreamFailure(self,Item:'Any',StreamName:'Any',Error:'Any') -> 'Any':
+      def SubStreamFailure(self,Item:'PyIShellItem',StreamName:'Any',Error:'Any') -> 'Any':
          """
          Notifies user of failure on a substream, and queries how to 
 
@@ -33964,7 +33964,7 @@ proceed
 
 Args:
 
-      Item(Any):The item whose stream couldn't be created
+      Item(PyIShellItem):The item whose stream couldn't be created
       StreamName(Any):Name of the failed stream
       Error(Any):HRESULT failure code from operationReturn ValueReturns COPYENGINE_S_* if operation is to continue, or COPYENGINE_E_* HRESULT if cancelled
 
@@ -33977,14 +33977,14 @@ Returns:
          pass
 
 
-      def PropertyFailure(self,Item:'Any',key:'Any',Error:'Any') -> 'Any':
+      def PropertyFailure(self,Item:'PyIShellItem',key:'PyPROPERTYKEY',Error:'Any') -> 'Any':
          """
          Notifies user of failure to set an item's properties
 
 Args:
 
-      Item(Any):The item whose property could not be set
-      key(Any):Identifies the property that caused the error, or None if all properties failed
+      Item(PyIShellItem):The item whose property could not be set
+      key(PyPROPERTYKEY):Identifies the property that caused the error, or None if all properties failed
       Error(Any):HRESULT error code returned by the operationReturn ValueReturns COPYENGINE_S_* to indicate that the failure was handled, or COPYENGINE_E_USERCANCELLED to cancel pending operations
 
 Returns:
@@ -34005,13 +34005,13 @@ class PyITransferDestination(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Advise(self,Sink:'Any') -> 'Any':
+      def Advise(self,Sink:'PyITransferAdviseSink') -> 'Any':
          """
          Connects an advise sink
 
 Args:
 
-      Sink(Any):Event sink to receive notificationsReturn ValueReturns an id for the connection, to be passed to PyITransferDestination::Unadvise
+      Sink(PyITransferAdviseSink):Event sink to receive notificationsReturn ValueReturns an id for the connection, to be passed to PyITransferDestination::Unadvise
 
 Returns:
 
@@ -34077,13 +34077,13 @@ class PyITransferSource(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def Advise(self,Sink:'Any') -> 'Any':
+      def Advise(self,Sink:'PyITransferAdviseSink') -> 'Any':
          """
          Connects an advise sink to receive notifications
 
 Args:
 
-      Sink(Any):Event sink to respond to notifications
+      Sink(PyITransferAdviseSink):Event sink to respond to notifications
 
 Returns:
 
@@ -34109,13 +34109,13 @@ Returns:
          pass
 
 
-      def SetProperties(self,proparray:'Any') -> 'None':
+      def SetProperties(self,proparray:'PyIPropertyChangeArray') -> 'None':
          """
          Specifies changes to be applied to items' properties
 
 Args:
 
-      proparray(Any):Property changes to be applied by PyITransferSource::ApplyPropertiesToItem
+      proparray(PyIPropertyChangeArray):Property changes to be applied by PyITransferSource::ApplyPropertiesToItem
 
 Returns:
 
@@ -34125,38 +34125,38 @@ Returns:
          pass
 
 
-      def OpenItem(self,Item:'Any',flags:'Any',riid:'PyIID') -> 'Tuple[Any, Any]':
+      def OpenItem(self,Item:'PyIShellItem',flags:'Any',riid:'PyIID') -> 'Tuple[Any, PyIShellItemResources]':
          """
          Initiates the copying of an item
 
 Args:
 
-      Item(Any):The item to be copied.
+      Item(PyIShellItem):The item to be copied.
       flags(Any):Combination of shellcon.TSF_* flags
       riid(PyIID):The interface to return
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[Any, PyIShellItemResources]
         
          """
          pass
 
 
-      def MoveItem(self,Item:'Any',ParentDst:'Any',NameDst:'Any',flags:'Any') -> 'Tuple[Any, Any]':
+      def MoveItem(self,Item:'PyIShellItem',ParentDst:'PyIShellItem',NameDst:'Any',flags:'Any') -> 'Tuple[Any, PyIShellItem]':
          """
          Moves a shell item into another folder
 
 Args:
 
-      Item(Any):Item to be moved
-      ParentDst(Any):The folder into which it will be moved
+      Item(PyIShellItem):Item to be moved
+      ParentDst(PyIShellItem):The folder into which it will be moved
       NameDst(Any):New name for item after move, None to keep same name
       flags(Any):Combination of shellcon.TSF_* flagsReturn ValueReturns the HRESULT from the operation and the new shell item, which may be None when the code in one of the informational COPYENGINE_S_* values.  See MSDN for descriptions of expected actions for specific error codes.
 
 Returns:
 
-      Tuple[Any, Any]:Combination of shellcon.TSF_* flagsReturn ValueReturns the HRESULT from the operation and the new shell item, which may be None 
+      Tuple[Any, PyIShellItem]:Combination of shellcon.TSF_* flagsReturn ValueReturns the HRESULT from the operation and the new shell item, which may be None 
 
 when the code in one of the informational COPYENGINE_S_* values.  See MSDN for descriptions 
 
@@ -34167,31 +34167,31 @@ of expected actions for specific error codes.
          pass
 
 
-      def RecycleItem(self,Source:'Any',ParentDest:'Any',flags:'Any') -> 'Tuple[Any, Any]':
+      def RecycleItem(self,Source:'PyIShellItem',ParentDest:'PyIShellItem',flags:'Any') -> 'Tuple[Any, PyIShellItem]':
          """
          Moves an item to the recycle bin
 
 Args:
 
-      Source(Any):The item to be recycled
-      ParentDest(Any):Shell item representing the recycle bin
+      Source(PyIShellItem):The item to be recycled
+      ParentDest(PyIShellItem):Shell item representing the recycle bin
       flags(Any):Combination of shellcon.TSF_* flags
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[Any, PyIShellItem]
         
          """
          pass
 
 
-      def RemoveItem(self,Source:'Any',flags:'Any') -> 'Any':
+      def RemoveItem(self,Source:'PyIShellItem',flags:'Any') -> 'Any':
          """
          Deletes an item without recycling
 
 Args:
 
-      Source(Any):The item to be deleted
+      Source(PyIShellItem):The item to be deleted
       flags(Any):Combination of shellcon.TSF_* flagsReturn ValueReturns the HRESULT of the operation
 
 Returns:
@@ -34203,60 +34203,60 @@ Returns:
          pass
 
 
-      def RenameItem(self,Source:'Any',NewName:'Any',flags:'Any') -> 'Tuple[Any, Any]':
+      def RenameItem(self,Source:'PyIShellItem',NewName:'Any',flags:'Any') -> 'Tuple[Any, PyIShellItem]':
          """
          Renames a shell item
 
 Args:
 
-      Source(Any):Item to be renamed
+      Source(PyIShellItem):Item to be renamed
       NewName(Any):The name to be given to the item
       flags(Any):Combination of shellcon.TSF_* flags
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[Any, PyIShellItem]
         
          """
          pass
 
 
-      def LinkItem(self,Source:'Any',ParentDest:'Any',NewName:'Any',flags:'Any') -> 'Tuple[Any, Any]':
+      def LinkItem(self,Source:'PyIShellItem',ParentDest:'PyIShellItem',NewName:'Any',flags:'Any') -> 'Tuple[Any, PyIShellItem]':
          """
          Not implemented, according to MSDN
 
 Args:
 
-      Source(Any):Description for psiSource
-      ParentDest(Any):Description for psiParentDest
+      Source(PyIShellItem):Description for psiSource
+      ParentDest(PyIShellItem):Description for psiParentDest
       NewName(Any):Description for NewName
       flags(Any):Combination of shellcon.TSF_* flags
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[Any, PyIShellItem]
         
          """
          pass
 
 
-      def ApplyPropertiesToItem(self,Source:'Any') -> 'Any':
+      def ApplyPropertiesToItem(self,Source:'PyIShellItem') -> 'PyIShellItem':
          """
          None
 
 Args:
 
-      Source(Any):Item whose properties are to be changed
+      Source(PyIShellItem):Item whose properties are to be changed
 
 Returns:
 
-      Any
+      PyIShellItem
         
          """
          pass
 
 
-      def GetDefaultDestinationName(self,Source:'Any',ParentDest:'Any') -> 'Any':
+      def GetDefaultDestinationName(self,Source:'PyIShellItem',ParentDest:'PyIShellItem') -> 'Any':
          """
          Determines the name of an item as it would appear in a 
 
@@ -34264,8 +34264,8 @@ given folder
 
 Args:
 
-      Source(Any):The item whose name is wanted
-      ParentDest(Any):The destination folder
+      Source(PyIShellItem):The item whose name is wanted
+      ParentDest(PyIShellItem):The destination folder
 
 Returns:
 
@@ -34275,7 +34275,7 @@ Returns:
          pass
 
 
-      def EnterFolder(self,ChildFolderDest:'Any') -> 'Any':
+      def EnterFolder(self,ChildFolderDest:'PyIShellItem') -> 'Any':
          """
          Informs the copy engine that a folder will be the target of a file 
 
@@ -34283,7 +34283,7 @@ operation
 
 Args:
 
-      ChildFolderDest(Any):The destination folder for the operation
+      ChildFolderDest(PyIShellItem):The destination folder for the operation
 
 Returns:
 
@@ -34293,7 +34293,7 @@ Returns:
          pass
 
 
-      def LeaveFolder(self,ChildFolderDest:'Any') -> 'Any':
+      def LeaveFolder(self,ChildFolderDest:'PyIShellItem') -> 'Any':
          """
          Informs the copy engine that the operation on a destination folder is 
 
@@ -34301,7 +34301,7 @@ finished
 
 Args:
 
-      ChildFolderDest(Any):Destination folder
+      ChildFolderDest(PyIShellItem):Destination folder
 
 Returns:
 
@@ -34358,7 +34358,7 @@ class PyITypeInfo(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetContainingTypeLib(self,) -> 'Tuple[Any, Any]':
+      def GetContainingTypeLib(self,) -> 'Tuple[PyITypeLib, Any]':
          """
          Retrieves the containing type library and the index of 
 
@@ -34370,7 +34370,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[PyITypeLib, Any]
         
          """
          pass
@@ -34394,7 +34394,7 @@ Returns:
          pass
 
 
-      def GetFuncDesc(self,memberId:'Any') -> 'Any':
+      def GetFuncDesc(self,memberId:'Any') -> 'FUNCDESC':
          """
          None
 
@@ -34404,7 +34404,7 @@ Args:
 
 Returns:
 
-      Any
+      FUNCDESC
         
          """
          pass
@@ -34464,7 +34464,7 @@ Returns:
          pass
 
 
-      def GetTypeAttr(self,) -> 'Any':
+      def GetTypeAttr(self,) -> 'TYPEATTR':
          """
          None
 
@@ -34474,13 +34474,13 @@ Args:
 
 Returns:
 
-      Any
+      TYPEATTR
         
          """
          pass
 
 
-      def GetRefTypeInfo(self,hRefType:'Any') -> 'Any':
+      def GetRefTypeInfo(self,hRefType:'Any') -> 'PyITypeInfo':
          """
          If a type description references other type descriptions, it 
 
@@ -34492,7 +34492,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeInfo
         
          """
          pass
@@ -34514,7 +34514,7 @@ Returns:
          pass
 
 
-      def GetVarDesc(self,memberId:'Any') -> 'Any':
+      def GetVarDesc(self,memberId:'Any') -> 'VARDESC':
          """
          None
 
@@ -34524,13 +34524,13 @@ Args:
 
 Returns:
 
-      Any
+      VARDESC
         
          """
          pass
 
 
-      def GetTypeComp(self,) -> 'Any':
+      def GetTypeComp(self,) -> 'PyITypeComp':
          """
          None
 
@@ -34540,7 +34540,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeComp
         
          """
          pass
@@ -34570,7 +34570,7 @@ Returns:
          pass
 
 
-      def GetLibAttr(self,) -> 'Any':
+      def GetLibAttr(self,) -> 'TLIBATTR':
          """
          Retrieves the libraries attributes
 
@@ -34580,13 +34580,13 @@ Args:
 
 Returns:
 
-      Any
+      TLIBATTR
         
          """
          pass
 
 
-      def GetTypeComp(self,) -> 'Any':
+      def GetTypeComp(self,) -> 'PyITypeComp':
          """
          None
 
@@ -34596,13 +34596,13 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeComp
         
          """
          pass
 
 
-      def GetTypeInfo(self,index:'Any') -> 'Any':
+      def GetTypeInfo(self,index:'Any') -> 'PyITypeInfo':
          """
          Retrieves the specified type description in the library.
 
@@ -34612,7 +34612,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeInfo
         
          """
          pass
@@ -34634,7 +34634,7 @@ Returns:
          pass
 
 
-      def GetTypeInfoOfGuid(self,iid:'PyIID') -> 'Any':
+      def GetTypeInfoOfGuid(self,iid:'PyIID') -> 'PyITypeInfo':
          """
          Retrieves the type info of the specified GUID.
 
@@ -34644,7 +34644,7 @@ Args:
 
 Returns:
 
-      Any
+      PyITypeInfo
         
          """
          pass
@@ -34731,7 +34731,7 @@ class PyIUnknown(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def QueryInterface(self,iid:'Any',useIID:'Any'=None) -> 'Any':
+      def QueryInterface(self,iid:'Any',useIID:'Any'=None) -> 'PyIUnknown':
          """
          Queries an object for a specific interface.
 
@@ -34742,7 +34742,7 @@ Args:
 
 Returns:
 
-      Any:If provided and not None, will return an 
+      PyIUnknown:If provided and not None, will return an 
 
 interface for the specified IID if (and only if) a native interface can not be supported. 
 
@@ -34990,7 +34990,7 @@ Returns:
          pass
 
 
-      def ChangeType(self,Type:'Any',Flags:'Any'=0) -> 'Any':
+      def ChangeType(self,Type:'Any',Flags:'Any'=0) -> 'PyPROPVARIANT':
          """
          Coerce to a different variant type
 
@@ -35001,7 +35001,7 @@ Args:
 
 Returns:
 
-      Any
+      PyPROPVARIANT
         
          """
          pass
@@ -35327,13 +35327,13 @@ class TYPEATTR(object):
 
 
       @property
-      def tdescAlias(self)->'Any':
+      def tdescAlias(self)->'TYPEDESC':
          """If TypeKind == pythoncom.TKIND_ALIAS, specifies the type for which this type is an alias."""
          pass
 
 
       @property
-      def idldeskType(self)->'Any':
+      def idldeskType(self)->'IDLDESC':
          """IDL attributes of the described type."""
          pass
 
@@ -35369,7 +35369,7 @@ class VARDESC(object):
 
 
       @property
-      def elemdescVar(self)->'Any':
+      def elemdescVar(self)->'ELEMDESC':
          """Object describing the member."""
          pass
 
@@ -35474,13 +35474,13 @@ class PyCBitmap(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateCompatibleBitmap(self,dc:'Any',width:'Any',height:'Any') -> 'None':
+      def CreateCompatibleBitmap(self,dc:'PyCDC',width:'Any',height:'Any') -> 'None':
          """
          Creates a bitmap compatible with the specified device context.
 
 Args:
 
-      dc(Any):Specifies the device context.
+      dc(PyCDC):Specifies the device context.
       width(Any):The width (in bits) of the bitmap
       height(Any):The height (in bits) of the bitmap.
 
@@ -35508,7 +35508,7 @@ Returns:
          pass
 
 
-      def GetHandle(self,) -> 'Any':
+      def GetHandle(self,) -> 'PyGdiHANDLE':
          """
          Returns the HBITMAP for a bitmap object
 
@@ -35524,14 +35524,14 @@ Returns:
          pass
 
 
-      def LoadBitmap(self,idRes:'Any',obDLL:'Any'=None) -> 'None':
+      def LoadBitmap(self,idRes:'Any',obDLL:'PyDLL'=None) -> 'None':
          """
          Loads a bitmap from a DLL object.
 
 Args:
 
       idRes(Any):The resource ID of the bitmap
-      obDLL(Any):The DLL object to load from.
+      obDLL(PyDLL):The DLL object to load from.
 
 Returns:
 
@@ -35579,13 +35579,13 @@ Returns:
          pass
 
 
-      def Paint(self,dcObject:'Any',arg:'Tuple[Any, Any, Any, Any]',arg1:'Tuple[Any, Any, Any, Any]') -> 'None':
+      def Paint(self,dcObject:'PyCDC',arg:'Tuple[Any, Any, Any, Any]',arg1:'Tuple[Any, Any, Any, Any]') -> 'None':
          """
          Paint a bitmap.
 
 Args:
 
-      dcObject(Any):The DC object to paint the bitmap to.
+      dcObject(PyCDC):The DC object to paint the bitmap to.
       arg(Tuple[Any, Any, Any, Any]):The destination rectangle to paint to.
       arg1(Tuple[Any, Any, Any, Any]):The source rectangle to paint from.
 
@@ -35645,13 +35645,13 @@ Returns:
          pass
 
 
-      def SaveBitmapFile(self,dcObject:'Any',Filename:'str') -> 'Any':
+      def SaveBitmapFile(self,dcObject:'PyCDC',Filename:'str') -> 'Any':
          """
          Saves a bitmap to a file.
 
 Args:
 
-      dcObject(Any):The DC object that has rendered the bitmap.
+      dcObject(PyCDC):The DC object that has rendered the bitmap.
       Filename(str):The file to save the bitmap to
 
 Returns:
@@ -35708,7 +35708,7 @@ class PyCButton(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,caption:'str',style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,caption:'str',style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates the window for a new button object.
 
@@ -35717,7 +35717,7 @@ Args:
       caption(str):The caption (text) for the button.
       style(Any):The style for the button.  Use any of the win32con.BS_* constants.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the button.
-      parent(Any):The parent window of the button.  Usually a PyCDialog.
+      parent(PyCWnd):The parent window of the button.  Usually a PyCDialog.
       _id(Any):The buttons control ID.
 
 Returns:
@@ -36075,13 +36075,13 @@ class PyCCmdUI(object):
 
 
       @property
-      def m_pMenu(self)->'Any':
+      def m_pMenu(self)->'PyCMenu':
          """"""
          pass
 
 
       @property
-      def m_pSubMenu(self)->'Any':
+      def m_pSubMenu(self)->'PyCMenu':
          """"""
          pass
 
@@ -36671,19 +36671,19 @@ class PyCControlBar(object):
 
 
       @property
-      def dockSite(self)->'Any':
+      def dockSite(self)->'PyCFrameWnd':
          """Current dock site, if dockable"""
          pass
 
 
       @property
-      def dockBar(self)->'Any':
+      def dockBar(self)->'PyCWnd':
          """Current dock bar, if dockable"""
          pass
 
 
       @property
-      def dockContext(self)->'Any':
+      def dockContext(self)->'PyCDockContext':
          """Used during dragging"""
          pass
 
@@ -36802,7 +36802,7 @@ Returns:
          pass
 
 
-      def GetDockingFrame(self,) -> 'Any':
+      def GetDockingFrame(self,) -> 'PyCFrameWnd':
          """
          Returns the frame window to which a control bar is docked.
 
@@ -36812,7 +36812,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCFrameWnd
         
          """
          pass
@@ -36960,7 +36960,7 @@ Returns:
          pass
 
 
-      def BitBlt(self,destPos:'Tuple[Any, Any]',size:'Tuple[Any, Any]',dc:'Any',srcPos:'Tuple[Any, Any]',rop:'Any') -> 'None':
+      def BitBlt(self,destPos:'Tuple[Any, Any]',size:'Tuple[Any, Any]',dc:'PyCDC',srcPos:'Tuple[Any, Any]',rop:'Any') -> 'None':
          """
          Copies a bitmap from the source device context to this device context.
 
@@ -36968,7 +36968,7 @@ Args:
 
       destPos(Tuple[Any, Any]):The logical x,y coordinates of the upper-left corner of the destination rectangle.
       size(Tuple[Any, Any]):Specifies the width and height (in logical units) of the destination rectangle and source bitmap.
-      dc(Any):Specifies the PyCDC object from which the bitmap will be copied. It must be None if rop specifies a raster operation that does not include a source.
+      dc(PyCDC):Specifies the PyCDC object from which the bitmap will be copied. It must be None if rop specifies a raster operation that does not include a source.
       srcPos(Tuple[Any, Any]):Specifies the logical x,y coordinates of the upper-left corner of the source bitmap.
       rop(Any):Specifies the raster operation to be performed. See the win32 api documentation for details.MFC References
 
@@ -37000,13 +37000,13 @@ Return ValueAlways none.  If the function fails, an exception is raised.
          pass
 
 
-      def CreateCompatibleDC(self,dcFrom:'Any'=None) -> 'None':
+      def CreateCompatibleDC(self,dcFrom:'PyCDC'=None) -> 'PyCDC':
          """
          Creates a memory device context that is compatible with this DC.
 
 Args:
 
-      dcFrom(Any):The source DC, or None to make a screen compatible DC.CommentsNote that unlike the MFC version, this function calls the global CreateCompatibleDC function and returns a new PyCDC object.MFC References
+      dcFrom(PyCDC):The source DC, or None to make a screen compatible DC.CommentsNote that unlike the MFC version, this function calls the global CreateCompatibleDC function and returns a new PyCDC object.MFC References
 
 Returns:
 
@@ -37320,14 +37320,14 @@ Returns:
          pass
 
 
-      def FillRect(self,rect:'Tuple[Any, Any, Any, Any]',brush:'Any') -> 'None':
+      def FillRect(self,rect:'Tuple[Any, Any, Any, Any]',brush:'PyCBrush') -> 'None':
          """
          Fills a given rectangle with the specified brush
 
 Args:
 
       rect(Tuple[Any, Any, Any, Any]):Specifies the bounding rectangle, in logical units.
-      brush(Any):Specifies the brush to use.MFC References
+      brush(PyCBrush):Specifies the brush to use.MFC References
 
 Returns:
 
@@ -37354,14 +37354,14 @@ Returns:
          pass
 
 
-      def FrameRect(self,rect:'Tuple[Any, Any, Any, Any]',brush:'Any') -> 'None':
+      def FrameRect(self,rect:'Tuple[Any, Any, Any, Any]',brush:'PyCBrush') -> 'None':
          """
          Draws a border around the rectangle specified by rect
 
 Args:
 
       rect(Tuple[Any, Any, Any, Any]):Specifies the bounding rectangle, in logical units.
-      brush(Any):Specifies the brush to use.MFC References
+      brush(PyCBrush):Specifies the brush to use.MFC References
 
 Returns:
 
@@ -37922,13 +37922,13 @@ Returns:
          pass
 
 
-      def Polyline(self,points:'List[Any]') -> 'None':
+      def Polyline(self,points:'List[Tuple[Any, Any]]') -> 'None':
          """
          Draws a Polyline.
 
 Args:
 
-      points(List[Any]):A sequence of points
+      points(List[Tuple[Any, Any]]):A sequence of points
 
 Returns:
 
@@ -38411,7 +38411,7 @@ Returns:
          pass
 
 
-      def StretchBlt(self,destPos:'Tuple[Any, Any]',size:'Tuple[Any, Any]',dc:'Any',srcPos:'Tuple[Any, Any]',size1:'Tuple[Any, Any]',rop:'Any') -> 'None':
+      def StretchBlt(self,destPos:'Tuple[Any, Any]',size:'Tuple[Any, Any]',dc:'PyCDC',srcPos:'Tuple[Any, Any]',size1:'Tuple[Any, Any]',rop:'Any') -> 'None':
          """
          Copies a bitmap from the source device context to this device context.
 
@@ -38419,7 +38419,7 @@ Args:
 
       destPos(Tuple[Any, Any]):The logical x,y coordinates of the upper-left corner of the destination rectangle.
       size(Tuple[Any, Any]):Specifies the width and height (in logical units) of the destination rectangle and source bitmap.
-      dc(Any):Specifies the PyCDC object from which the bitmap will be copied. It must be None if rop specifies a raster operation that does not include a source.
+      dc(PyCDC):Specifies the PyCDC object from which the bitmap will be copied. It must be None if rop specifies a raster operation that does not include a source.
       srcPos(Tuple[Any, Any]):Specifies the logical x,y coordinates of the upper-left corner of the source bitmap.
       size1(Tuple[Any, Any]):Specifies the width and height (in logical units) of the destination rectangle and source bitmap.
       rop(Any):Specifies the raster operation to be performed. See the win32 api documentation for details.MFC References
@@ -38493,13 +38493,13 @@ class PyCDialog(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,obParent:'Any'=None) -> 'None':
+      def CreateWindow(self,obParent:'PyCWnd'=None) -> 'None':
          """
          Create a modeless window for the dialog box.
 
 Args:
 
-      obParent(Any):The parent window for the new windowMFC References
+      obParent(PyCWnd):The parent window for the new windowMFC References
 
 Returns:
 
@@ -38543,13 +38543,13 @@ Returns:
          pass
 
 
-      def GotoDlgCtrl(self,control:'Any') -> 'None':
+      def GotoDlgCtrl(self,control:'PyCWnd') -> 'None':
          """
          Moves the focus to the specified control in the dialog box.
 
 Args:
 
-      control(Any):The control to get the focus.
+      control(PyCWnd):The control to get the focus.
 
 Returns:
 
@@ -38632,13 +38632,13 @@ class PyCDialogBar(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,parent:'Any',template:'PyResourceId',style:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,parent:'PyCWnd',template:'PyResourceId',style:'Any',_id:'Any') -> 'None':
          """
          None
 
 Args:
 
-      parent(Any):The parent window
+      parent(PyCWnd):The parent window
       template(PyResourceId):Template name or integer resource id
       style(Any):The style for the window
       _id(Any):The ID of the window
@@ -38658,7 +38658,7 @@ class PyCDocTemplate(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def DoCreateDoc(self,fileName:'str'=None) -> 'Any':
+      def DoCreateDoc(self,fileName:'str'=None) -> 'PyCDocument':
          """
          Creates an underlying document object.
 
@@ -38668,13 +38668,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocument
         
          """
          pass
 
 
-      def FindOpenDocument(self,fileName:'str') -> 'Any':
+      def FindOpenDocument(self,fileName:'str') -> 'PyCDocument':
          """
          Returns an existing document with the specified file name.
 
@@ -38684,7 +38684,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocument
         
          """
          pass
@@ -38738,7 +38738,7 @@ Returns:
          pass
 
 
-      def GetSharedMenu(self,) -> 'Any':
+      def GetSharedMenu(self,) -> 'PyCMenu':
          """
          Returns the shared menu object for all frames using this template.
 
@@ -38748,20 +38748,20 @@ Args:
 
 Returns:
 
-      Any
+      PyCMenu
         
          """
          pass
 
 
-      def InitialUpdateFrame(self,frame:'Any'=None,doc:'Any'=None,bMakeVisible:'Any'=1) -> 'None':
+      def InitialUpdateFrame(self,frame:'PyCFrameWnd'=None,doc:'PyCDocument'=None,bMakeVisible:'Any'=1) -> 'None':
          """
          Calls the default OnInitialFrame handler.
 
 Args:
 
-      frame(Any):The frame window.
-      doc(Any):A document for the frame.
+      frame(PyCFrameWnd):The frame window.
+      doc(PyCDocument):A document for the frame.
       bMakeVisible(Any):Indicates of the frame should be shown.See Also
 
 Returns:
@@ -39087,7 +39087,7 @@ Returns:
          pass
 
 
-      def GetDocTemplate(self,) -> 'Any':
+      def GetDocTemplate(self,) -> 'PyCDocTemplate':
          """
          Returns the template for the document.
 
@@ -39097,7 +39097,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocTemplate
         
          """
          pass
@@ -39119,7 +39119,7 @@ Returns:
          pass
 
 
-      def GetFirstView(self,) -> 'Any':
+      def GetFirstView(self,) -> 'PyCView':
          """
          Returns the first view object attached to this document.
 
@@ -39129,7 +39129,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCView
         
          """
          pass
@@ -39351,13 +39351,13 @@ Returns:
          pass
 
 
-      def UpdateAllViews(self,sender:'Any',hint:'Any'=None) -> 'None':
+      def UpdateAllViews(self,sender:'PyCView',hint:'Any'=None) -> 'None':
          """
          Informs each view when a document changes.
 
 Args:
 
-      sender(Any):The view who initiated the update
+      sender(PyCView):The view who initiated the update
       hint(Any):A hint for the update.MFC References
 
 Returns:
@@ -39375,7 +39375,7 @@ class PyCEdit(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates the window for a new Edit object.
 
@@ -39383,7 +39383,7 @@ Args:
 
       style(Any):The style for the Edit.  Use any of the win32con.BS_* constants.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the Edit.
-      parent(Any):The parent window of the Edit.  Usually a PyCDialog.
+      parent(PyCWnd):The parent window of the Edit.  Usually a PyCDialog.
       _id(Any):The Edits control ID.
 
 Returns:
@@ -40240,13 +40240,13 @@ Returns:
          pass
 
 
-      def DockControlBar(self,controlBar:'Any',arg:'Tuple[Any, Any, Any, Any]',dockBarId:'Any'=0) -> 'None':
+      def DockControlBar(self,controlBar:'PyCControlBar',arg:'Tuple[Any, Any, Any, Any]',dockBarId:'Any'=0) -> 'None':
          """
          Docks a control bar.
 
 Args:
 
-      controlBar(Any):The control bar to dock.
+      controlBar(PyCControlBar):The control bar to dock.
       arg(Tuple[Any, Any, Any, Any]):Determines, in screen coordinates, where the control bar will be docked in the nonclient area of the destination frame window.MFC References
       dockBarId(Any):Determines which sides of the frame window to consider for docking.
 
@@ -40274,13 +40274,13 @@ Returns:
          pass
 
 
-      def FloatControlBar(self,controlBar:'Any',arg:'Tuple[Any, Any]',style:'Any') -> 'None':
+      def FloatControlBar(self,controlBar:'PyCControlBar',arg:'Tuple[Any, Any]',style:'Any') -> 'None':
          """
          Floats a control bar.
 
 Args:
 
-      controlBar(Any):The control bar to dock.
+      controlBar(PyCControlBar):The control bar to dock.
       arg(Tuple[Any, Any]):The location, in screen coordinates, where the top left corner of the control bar will be placed.
       style(Any):Determines which sides of the frame window to consider for docking.MFC References
 
@@ -40292,7 +40292,7 @@ Returns:
          pass
 
 
-      def GetActiveDocument(self,) -> 'Any':
+      def GetActiveDocument(self,) -> 'PyCDocument':
          """
          Gets the currently active document, else None
 
@@ -40302,13 +40302,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocument
         
          """
          pass
 
 
-      def GetControlBar(self,_id:'Any') -> 'Any':
+      def GetControlBar(self,_id:'Any') -> 'PyCControlBar':
          """
          Retrieves the specified control bar.
 
@@ -40318,7 +40318,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCControlBar
         
          """
          pass
@@ -40340,7 +40340,7 @@ Returns:
          pass
 
 
-      def GetMessageBar(self,) -> 'Any':
+      def GetMessageBar(self,) -> 'PyCWnd':
          """
          Retrieves the message bar for the frame.
 
@@ -40350,7 +40350,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCWnd
         
          """
          pass
@@ -40404,7 +40404,7 @@ Returns:
          pass
 
 
-      def LoadFrame(self,idResource:'Any',style:'Any'=-1,wndParent:'Any'=None,context:'Any'=None) -> 'None':
+      def LoadFrame(self,idResource:'Any',style:'Any'=-1,wndParent:'PyCWnd'=None,context:'Any'=None) -> 'None':
          """
          Loads a Windows frame window and associated resources
 
@@ -40412,7 +40412,7 @@ Args:
 
       idResource(Any):The Id of the resources (menu, icon, etc) for this window
       style(Any):The window style.  Note -1 implies win32con.WS_OVERLAPPEDWINDOW|win32con.FWS_ADDTOTITLE
-      wndParent(Any):The parent of the window, or None.
+      wndParent(PyCWnd):The parent of the window, or None.
       context(Any):An object passed to the OnCreateClient for the frame,MFC References
 
 Returns:
@@ -40471,13 +40471,13 @@ Returns:
          pass
 
 
-      def ShowControlBar(self,controlBar:'Any',bShow:'Any',bDelay:'Any') -> 'None':
+      def ShowControlBar(self,controlBar:'PyCControlBar',bShow:'Any',bDelay:'Any') -> 'None':
          """
          Shows a control bar.
 
 Args:
 
-      controlBar(Any):The control bar to dock.
+      controlBar(PyCControlBar):The control bar to dock.
       bShow(Any):Show or hide flag.
       bDelay(Any):If TRUE, delay showing the control bar. If FALSE, show the control bar immediately.MFC References
 
@@ -40507,7 +40507,7 @@ Returns:
          pass
 
 
-      def GetActiveView(self,) -> 'Any':
+      def GetActiveView(self,) -> 'PyCView':
          """
          Retrieves the active view.
 
@@ -40517,7 +40517,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCView
         
          """
          pass
@@ -40539,13 +40539,13 @@ Returns:
          pass
 
 
-      def OnUpdateControlBarMenu(self,cmdUI:'Any') -> 'Any':
+      def OnUpdateControlBarMenu(self,cmdUI:'PyCCmdUI') -> 'Any':
          """
          Checks the state of a menu item
 
 Args:
 
-      cmdUI(Any):A cmdui object
+      cmdUI(PyCCmdUI):A cmdui object
 
 Returns:
 
@@ -40555,13 +40555,13 @@ Returns:
          pass
 
 
-      def SetActiveView(self,view:'Any',bNotify:'Any'=1) -> 'None':
+      def SetActiveView(self,view:'PyCView',bNotify:'Any'=1) -> 'None':
          """
          Sets the active view for a frame.
 
 Args:
 
-      view(Any):The view to set active.
+      view(PyCView):The view to set active.
       bNotify(Any):Specifies whether the view is to be notified of activation. If TRUE, OnActivateView is called for the new view; if FALSE, it is not.
 
 Returns:
@@ -41319,7 +41319,7 @@ Returns:
          pass
 
 
-      def GetItem(self,item:'Any',sub:'Any') -> 'Any':
+      def GetItem(self,item:'Any',sub:'Any') -> 'LV_ITEM':
          """
          Retrieves the details of an items attributes.
 
@@ -41330,7 +41330,7 @@ Args:
 
 Returns:
 
-      Any
+      LV_ITEM
         
          """
          pass
@@ -41369,7 +41369,7 @@ Returns:
          pass
 
 
-      def GetEditControl(self,) -> 'Any':
+      def GetEditControl(self,) -> 'PyCEdit':
          """
          Retrieves the handle of the edit control used to edit the specified 
 
@@ -41381,13 +41381,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCEdit
         
          """
          pass
 
 
-      def EditLabel(self,item:'Any') -> 'Any':
+      def EditLabel(self,item:'Any') -> 'PyCEdit':
          """
          Edits a specified list view item in-place.
 
@@ -41397,7 +41397,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCEdit
         
          """
          pass
@@ -41420,7 +41420,7 @@ Returns:
          pass
 
 
-      def CreateDragImage(self,item:'Any') -> 'Tuple[Any, Any, Any]':
+      def CreateDragImage(self,item:'Any') -> 'Tuple[PyCImageList, Any, Any]':
          """
          Creates a dragging bitmap for the specified list view 
 
@@ -41432,13 +41432,13 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any, Any]
+      Tuple[PyCImageList, Any, Any]
         
          """
          pass
 
 
-      def GetImageList(self,nImageList:'Any') -> 'Any':
+      def GetImageList(self,nImageList:'Any') -> 'PyCImageList':
          """
          Retrieves the current image list.
 
@@ -41448,7 +41448,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCImageList
         
          """
          pass
@@ -41486,14 +41486,14 @@ next item.Return ValueReturns an integer index, or raises a win32ui.error except
          pass
 
 
-      def InsertColumn(self,colNo:'Any',item:'Any') -> 'Any':
+      def InsertColumn(self,colNo:'Any',item:'LV_COLUMN') -> 'Any':
          """
          Inserts a column into a list control when in report view.
 
 Args:
 
       colNo(Any):The new column number
-      item(Any):A tuple describing the new column.
+      item(LV_COLUMN):A tuple describing the new column.
 
 Returns:
 
@@ -41503,13 +41503,13 @@ Returns:
          pass
 
 
-      def InsertItem(self,item:'Any',item1:'Any',text:'Any',image:'Any',item2:'Any',text1:'Any') -> 'Any':
+      def InsertItem(self,item:'LV_ITEM',item1:'Any',text:'Any',image:'Any',item2:'Any',text1:'Any') -> 'Any':
          """
          Inserts an item into the list.
 
 Args:
 
-      item(Any):A tuple describing the new item.Alternative Parameters
+      item(LV_ITEM):A tuple describing the new item.Alternative Parameters
       item1(Any):The index of the item.
       text(Any):The text of the item.
       image(Any):The index of the image to use.Alternative Parameters
@@ -41524,13 +41524,13 @@ Returns:
          pass
 
 
-      def SetImageList(self,imageList:'Any',imageType:'Any') -> 'Any':
+      def SetImageList(self,imageList:'PyCImageList',imageType:'Any') -> 'Any':
          """
          Assigns an image list to a list view control.
 
 Args:
 
-      imageList(Any):The Image List to use.
+      imageList(PyCImageList):The Image List to use.
       imageType(Any):Type of image list. It can be one of (COMMCTRL.) LVSIL_NORMAL, LVSIL_SMALL or LVSIL_STATE
 
 Returns:
@@ -41541,7 +41541,7 @@ Returns:
          pass
 
 
-      def GetColumn(self,column:'Any') -> 'Any':
+      def GetColumn(self,column:'Any') -> 'LV_COLUMN':
          """
          Retrieves the details of a column in the control.
 
@@ -41551,7 +41551,7 @@ Args:
 
 Returns:
 
-      Any
+      LV_COLUMN
         
          """
          pass
@@ -41639,13 +41639,13 @@ Returns:
          pass
 
 
-      def SetItem(self,item:'Any') -> 'Any':
+      def SetItem(self,item:'LV_ITEM') -> 'Any':
          """
          Sets some of all of an items attributes.
 
 Args:
 
-      item(Any):A tuple describing the new item.
+      item(LV_ITEM):A tuple describing the new item.
 
 Returns:
 
@@ -41807,14 +41807,14 @@ Returns:
          pass
 
 
-      def SetColumn(self,colNo:'Any',item:'Any') -> 'Any':
+      def SetColumn(self,colNo:'Any',item:'LV_COLUMN') -> 'Any':
          """
          Changes column state in a list control when in report view.
 
 Args:
 
       colNo(Any):The to be modified column number
-      item(Any):A tuple describing the modified column.
+      item(LV_COLUMN):A tuple describing the modified column.
 
 Returns:
 
@@ -41967,7 +41967,7 @@ Returns:
          pass
 
 
-      def GetListCtrl(self,) -> 'Any':
+      def GetListCtrl(self,) -> 'PyCListCtrl':
          """
          Returns the underlying list control object.
 
@@ -41977,7 +41977,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCListCtrl
         
          """
          pass
@@ -42148,7 +42148,7 @@ class PyCMDIFrameWnd(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetMDIClient(self,) -> 'Any':
+      def GetMDIClient(self,) -> 'PyCMDIFrameWnd':
          """
          Returns the MDI client window
 
@@ -42158,13 +42158,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCMDIFrameWnd
         
          """
          pass
 
 
-      def MDIGetActive(self,) -> 'Tuple[Any, Any]':
+      def MDIGetActive(self,) -> 'Tuple[PyCMDIChildWnd, Any]':
          """
          Retrieves the current active MDI child window, along 
 
@@ -42176,23 +42176,23 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[PyCMDIChildWnd, Any]
         
          """
          pass
 
 
-      def MDIActivate(self,window:'Any') -> 'Any':
+      def MDIActivate(self,window:'PyCWnd') -> 'PyCMDIFrameWnd':
          """
          Activate an MDI child window
 
 Args:
 
-      window(Any):The window to activate.
+      window(PyCWnd):The window to activate.
 
 Returns:
 
-      Any
+      PyCMDIFrameWnd
         
          """
          pass
@@ -42356,22 +42356,6 @@ Returns:
          pass
 
 
-      def GetHandle(self,) -> 'Any':
-         """
-         Returns the menu object's underlying hMenu.
-
-Args:
-
-
-
-Returns:
-
-      Any
-        
-         """
-         pass
-
-
       def GetMenuItemCount(self,) -> 'Any':
          """
          Determines the number of items in a menu.
@@ -42425,7 +42409,7 @@ Returns:
          pass
 
 
-      def GetSubMenu(self,pos:'Any') -> 'Any':
+      def GetSubMenu(self,pos:'Any') -> 'PyCMenu':
          """
          Returns a submenu.
 
@@ -42435,13 +42419,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCMenu
         
          """
          pass
 
 
-      def InsertMenu(self,pos:'Any',flags:'Any',_id:'Union[Any]'=0,value:'Union[Any, str]'=None) -> 'None':
+      def InsertMenu(self,pos:'Any',flags:'Any',_id:'Union[PyCMenu, Any]'=0,value:'Union[Any, str]'=None) -> 'None':
          """
          Inserts an item into a menu.
 
@@ -42449,7 +42433,7 @@ Args:
 
       pos(Any):The position (zero-based) the item should be inserted.
       flags(Any):Flags for the new item.
-      _id(Union[Any]):The ID for a new menu item, or handle to a submenu
+      _id(Union[PyCMenu, Any]):The ID for a new menu item, or handle to a submenu
       value(Union[Any, str]):A string for the menu item.
 
 Returns:
@@ -42479,7 +42463,7 @@ Returns:
          pass
 
 
-      def TrackPopupMenu(self,arg:'Tuple[Any, Any]',arg1:'Any',arg2:'Any') -> 'None':
+      def TrackPopupMenu(self,arg:'Tuple[Any, Any]',arg1:'Any',arg2:'PyCWnd') -> 'None':
          """
          Creates a popup menu anywhere on the screen.
 
@@ -42487,7 +42471,7 @@ Args:
 
       arg(Tuple[Any, Any]):The position for the menu..
       arg1(Any):Flags for the menu.
-      arg2(Any):The owner of the menu.CommentsThe TrackPopupMenu function displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu. The floating pop-up menu can appear anywhere on the screen.Return ValueIf the underlying MFC function fails, but TPM_RETURNCMD is set in the flags parameter, then None is returned instead of the normal exception.
+      arg2(PyCWnd):The owner of the menu.CommentsThe TrackPopupMenu function displays a floating pop-up menu at the specified location and tracks the selection of items on the pop-up menu. The floating pop-up menu can appear anywhere on the screen.Return ValueIf the underlying MFC function fails, but TPM_RETURNCMD is set in the flags parameter, then None is returned instead of the normal exception.
 
 Returns:
 
@@ -42581,7 +42565,7 @@ Returns:
          pass
 
 
-      def GetActiveView(self,) -> 'Any':
+      def GetActiveView(self,) -> 'PyCView':
          """
          Obtains the active view for the item
 
@@ -42591,13 +42575,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCView
         
          """
          pass
 
 
-      def GetDocument(self,) -> 'Any':
+      def GetDocument(self,) -> 'PyCDocument':
          """
          Obtains the current document for the item
 
@@ -42607,13 +42591,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocument
         
          """
          pass
 
 
-      def GetInPlaceWindow(self,) -> 'Any':
+      def GetInPlaceWindow(self,) -> 'PyCWnd':
          """
          Obtains the window in which the item has been opened for 
 
@@ -42625,7 +42609,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCWnd
         
          """
          pass
@@ -42647,7 +42631,7 @@ Returns:
          pass
 
 
-      def GetObject(self,) -> 'Any':
+      def GetObject(self,) -> 'PyIUnknown':
          """
          Returns the COM object to the item.  This is the m_lpObject 
 
@@ -42659,7 +42643,7 @@ Args:
 
 Returns:
 
-      Any
+      PyIUnknown
         
          """
          pass
@@ -42829,7 +42813,7 @@ Returns:
          pass
 
 
-      def GetNextItem(self,pos:'Any') -> 'Tuple[Any, Any]':
+      def GetNextItem(self,pos:'Any') -> 'Tuple[Any, PyCOleClientItem]':
          """
          Call this function repeatedly to access each of 
 
@@ -42841,13 +42825,13 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]
+      Tuple[Any, PyCOleClientItem]
         
          """
          pass
 
 
-      def GetInPlaceActiveItem(self,wnd:'Any') -> 'Any':
+      def GetInPlaceActiveItem(self,wnd:'PyCWnd') -> 'PyCOleClientItem':
          """
          Obtains the OLE item that is currently activated 
 
@@ -42855,11 +42839,11 @@ in place in the frame window containing the view identified by obWnd.
 
 Args:
 
-      wnd(Any):The window.
+      wnd(PyCWnd):The window.
 
 Returns:
 
-      Any
+      PyCOleClientItem
         
          """
          pass
@@ -43919,7 +43903,7 @@ class PyCProgressCtrl(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates the actual control.
 
@@ -43927,7 +43911,7 @@ Args:
 
       style(Any):The style for the control.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the control.
-      parent(Any):The parent window of the control.  Usually a PyCDialog.
+      parent(PyCWnd):The parent window of the control.  Usually a PyCDialog.
       _id(Any):The control's ID.
 
 Returns:
@@ -44254,13 +44238,13 @@ class PyCPropertySheet(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def AddPage(self,page:'Any') -> 'None':
+      def AddPage(self,page:'PyCPropertyPage') -> 'None':
          """
          Adds the supplied page with the rightmost tab in the property sheet.
 
 Args:
 
-      page(Any):The page to be added.CommentsAdd pages to the property sheet in the left-to-right order you want them to appear.MFC References
+      page(PyCPropertyPage):The page to be added.CommentsAdd pages to the property sheet in the left-to-right order you want them to appear.MFC References
 
 Returns:
 
@@ -44270,7 +44254,7 @@ Returns:
          pass
 
 
-      def CreateWindow(self,style:'Any',exStyle:'Any',parent:'Any'=None) -> 'None':
+      def CreateWindow(self,style:'Any',exStyle:'Any',parent:'PyCWnd'=None) -> 'None':
          """
          Displays the property sheet as a modeless dialog.
 
@@ -44278,7 +44262,7 @@ Args:
 
       style(Any):The style for the window.
       exStyle(Any):The extended style for the window.
-      parent(Any):The parent of the dialog.
+      parent(PyCWnd):The parent of the dialog.
 
 Returns:
 
@@ -44304,7 +44288,7 @@ Returns:
          pass
 
 
-      def EnableStackedTabs(self,stacked:'Any') -> 'Any':
+      def EnableStackedTabs(self,stacked:'Any') -> 'PyCPropertyPage':
          """
          Enables or disables stacked tabs.
 
@@ -44314,7 +44298,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCPropertyPage
         
          """
          pass
@@ -44352,7 +44336,7 @@ Returns:
          pass
 
 
-      def GetActivePage(self,) -> 'Any':
+      def GetActivePage(self,) -> 'PyCPropertyPage':
          """
          Returns the currently active property page.
 
@@ -44362,13 +44346,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCPropertyPage
         
          """
          pass
 
 
-      def GetPage(self,pageNo:'Any') -> 'Any':
+      def GetPage(self,pageNo:'Any') -> 'PyCPropertyPage':
          """
          Returns the specified property page.
 
@@ -44378,19 +44362,19 @@ Args:
 
 Returns:
 
-      Any
+      PyCPropertyPage
         
          """
          pass
 
 
-      def GetPageIndex(self,page:'Any') -> 'Any':
+      def GetPageIndex(self,page:'PyCPropertyPage') -> 'Any':
          """
          Retrieves the index of the specified page of the property sheet.
 
 Args:
 
-      page(Any):The page.
+      page(PyCPropertyPage):The page.
 
 Returns:
 
@@ -44416,7 +44400,7 @@ Returns:
          pass
 
 
-      def GetTabCtrl(self,) -> 'Any':
+      def GetTabCtrl(self,) -> 'PyCTabCtrl':
          """
          Returns the tab control used by the sheet.
 
@@ -44426,7 +44410,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCTabCtrl
         
          """
          pass
@@ -44481,13 +44465,13 @@ Returns:
          pass
 
 
-      def SetActivePage(self,page:'Any') -> 'None':
+      def SetActivePage(self,page:'PyCPropertyPage') -> 'None':
          """
          Programmatically sets the active page object.
 
 Args:
 
-      page(Any):The page.
+      page(PyCPropertyPage):The page.
 
 Returns:
 
@@ -44631,7 +44615,7 @@ Returns:
          pass
 
 
-      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates a rich edit control window.
 
@@ -44639,7 +44623,7 @@ Args:
 
       style(Any):The control style
       rect(Tuple[Any, Any, Any, Any]):The position of the control
-      parent(Any):The parent window.  Must not be None
+      parent(PyCWnd):The parent window.  Must not be None
       _id(Any):The control ID
 
 Returns:
@@ -45175,13 +45159,13 @@ Returns:
          pass
 
 
-      def SetTargetDevice(self,dc:'Any',lineWidth:'Any') -> 'None':
+      def SetTargetDevice(self,dc:'PyCDC',lineWidth:'Any') -> 'None':
          """
          Sets the target device for the control
 
 Args:
 
-      dc(Any):The new DC - may be None
+      dc(PyCDC):The new DC - may be None
       lineWidth(Any):Line width to use for formatting.MFC References
 
 Returns:
@@ -45264,7 +45248,7 @@ class PyCRichEditDocTemplate(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def DoCreateRichEditDoc(self,fileName:'str'=None) -> 'Any':
+      def DoCreateRichEditDoc(self,fileName:'str'=None) -> 'PyCRichEditDoc':
          """
          Creates an underlying document object.
 
@@ -45274,7 +45258,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCRichEditDoc
         
          """
          pass
@@ -45287,7 +45271,7 @@ class PyCRichEditView(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetRichEditCtrl(self,) -> 'Any':
+      def GetRichEditCtrl(self,) -> 'PyCRichEditCtrl':
          """
          Returns the underlying rich edit control object.
 
@@ -45297,7 +45281,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCRichEditCtrl
         
          """
          pass
@@ -45374,7 +45358,7 @@ Returns:
          pass
 
 
-      def GetDC(self,) -> 'Any':
+      def GetDC(self,) -> 'PyCDC':
          """
          Gets the view's current DC.
 
@@ -45384,7 +45368,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCDC
         
          """
          pass
@@ -45529,7 +45513,7 @@ class PyCSliderCtrl(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates the actual control.
 
@@ -45537,7 +45521,7 @@ Args:
 
       style(Any):The style for the control.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the control.
-      parent(Any):The parent window of the control.  Usually a PyCDialog.
+      parent(PyCWnd):The parent window of the control.  Usually a PyCDialog.
       _id(Any):The control's ID.
 
 Returns:
@@ -45998,7 +45982,7 @@ class PyCSplitterWnd(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def GetPane(self,row:'Any',col:'Any') -> 'Any':
+      def GetPane(self,row:'Any',col:'Any') -> 'PyCWnd':
          """
          None
 
@@ -46009,19 +45993,19 @@ Args:
 
 Returns:
 
-      Any
+      PyCWnd
         
          """
          pass
 
 
-      def CreateView(self,view:'Any',row:'Any',col:'Any',arg:'Tuple[Any, Any]') -> 'None':
+      def CreateView(self,view:'PyCView',row:'Any',col:'Any',arg:'Tuple[Any, Any]') -> 'None':
          """
          Creates a view in a splitter window
 
 Args:
 
-      view(Any):The view to place in the splitter pane.
+      view(PyCView):The view to place in the splitter pane.
       row(Any):The row in the splitter to place the view.
       col(Any):The column in the splitter to place the view.
       arg(Tuple[Any, Any]):The initial size of the new view.MFC References
@@ -46148,7 +46132,7 @@ Returns:
          pass
 
 
-      def GetStatusBarCtrl(self,) -> 'Any':
+      def GetStatusBarCtrl(self,) -> 'PyCStatusBarCtrl':
          """
          Gets the statusbar control object for the statusbar.
 
@@ -46158,7 +46142,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCStatusBarCtrl
         
          """
          pass
@@ -46206,7 +46190,7 @@ class PyCStatusBarCtrl(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates the actual control.
 
@@ -46214,7 +46198,7 @@ Args:
 
       style(Any):The style for the control.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the control.
-      parent(Any):The parent window of the control.  Usually a PyCDialog.
+      parent(PyCWnd):The parent window of the control.  Usually a PyCDialog.
       _id(Any):The control's ID.
 
 Returns:
@@ -46532,7 +46516,7 @@ Returns:
          pass
 
 
-      def GetToolBarCtrl(self,) -> 'Any':
+      def GetToolBarCtrl(self,) -> 'PyCToolBarCtrl':
          """
          Gets the toolbar control object for the toolbar
 
@@ -46542,7 +46526,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCToolBarCtrl
         
          """
          pass
@@ -46786,7 +46770,7 @@ Returns:
          pass
 
 
-      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any') -> 'None':
+      def CreateWindow(self,style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any') -> 'None':
          """
          Creates the window for a new toolbar object
 
@@ -46794,7 +46778,7 @@ Args:
 
       style(Any):The style for the button.  Use any of the win32con.BS_* constants.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the button.
-      parent(Any):The parent window of the button.  Usually a PyCDialog.
+      parent(PyCWnd):The parent window of the button.  Usually a PyCDialog.
       _id(Any):The buttons control ID.MFC References
 
 Returns:
@@ -46972,14 +46956,14 @@ Returns:
          pass
 
 
-      def InsertButton(self,nID:'Any',button:'Any') -> 'Any':
+      def InsertButton(self,nID:'Any',button:'PyCToolBarCtrl') -> 'Any':
          """
          Insert a button in a toolbar control.
 
 Args:
 
       nID(Any):Zero-based index of a button. This function inserts the new button to the left of this button.
-      button(Any):Bitmap containing button to be insertedCommentsThe image and/or string whose index you provide must have previously been added to the toolbar control's list using PyCToolBarCtrl::AddBitmap, PyCToolBarCtrl::AddString, and/or PyCToolBarCtrl::AddStrings.MFC References
+      button(PyCToolBarCtrl):Bitmap containing button to be insertedCommentsThe image and/or string whose index you provide must have previously been added to the toolbar control's list using PyCToolBarCtrl::AddBitmap, PyCToolBarCtrl::AddString, and/or PyCToolBarCtrl::AddStrings.MFC References
 
 Returns:
 
@@ -47171,13 +47155,13 @@ class PyCToolTipCtrl(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,parent:'Any',style:'Any') -> 'None':
+      def CreateWindow(self,parent:'PyCWnd',style:'Any') -> 'None':
          """
          Creates the actual control.
 
 Args:
 
-      parent(Any):The parent window of the control.
+      parent(PyCWnd):The parent window of the control.
       style(Any):The style for the control.
 
 Returns:
@@ -47188,14 +47172,14 @@ Returns:
          pass
 
 
-      def UpdateTipText(self,text:'str',wnd:'Any',_id:'Any') -> 'None':
+      def UpdateTipText(self,text:'str',wnd:'PyCWnd',_id:'Any') -> 'None':
          """
          Update the tool tip text for a control's tools
 
 Args:
 
       text(str):The text for the tool.
-      wnd(Any):The window of the tool.
+      wnd(PyCWnd):The window of the tool.
       _id(Any):The id of the tool
 
 Returns:
@@ -47206,13 +47190,13 @@ Returns:
          pass
 
 
-      def AddTool(self,wnd:'Any',text:'str',_id:'Any',rect:'Tuple[Any, Any, Any, Any]'=None) -> 'None':
+      def AddTool(self,wnd:'PyCWnd',text:'str',_id:'Any',rect:'Tuple[Any, Any, Any, Any]'=None) -> 'None':
          """
          Adds a tool to tooltip control.
 
 Args:
 
-      wnd(Any):The window of the tool.
+      wnd(PyCWnd):The window of the tool.
       text(str):The text for the tool.
       _id(Any):The id of the tool
       rect(Tuple[Any, Any, Any, Any]):The default rectangle
@@ -47315,7 +47299,7 @@ Returns:
          pass
 
 
-      def GetImageList(self,nImageList:'Any') -> 'Any':
+      def GetImageList(self,nImageList:'Any') -> 'PyCImageList':
          """
          Retrieves the current image list.
 
@@ -47325,19 +47309,19 @@ Args:
 
 Returns:
 
-      Any
+      PyCImageList
         
          """
          pass
 
 
-      def SetImageList(self,imageList:'Any',imageType:'Any') -> 'Any':
+      def SetImageList(self,imageList:'PyCImageList',imageType:'Any') -> 'Any':
          """
          Assigns an image list to a list view control.
 
 Args:
 
-      imageList(Any):The Image List to use.
+      imageList(PyCImageList):The Image List to use.
       imageType(Any):Type of image list. It can be one of (COMMCTRL.) LVSIL_NORMAL, LVSIL_SMALL or LVSIL_STATE
 
 Returns:
@@ -47541,7 +47525,7 @@ Returns:
          pass
 
 
-      def GetItem(self,item:'Any',arg:'Any') -> 'Any':
+      def GetItem(self,item:'Any',arg:'Any') -> 'TV_ITEM':
          """
          Retrieves the details of an items attributes.
 
@@ -47552,19 +47536,19 @@ Args:
 
 Returns:
 
-      Any
+      TV_ITEM
         
          """
          pass
 
 
-      def SetItem(self,item:'Any') -> 'Any':
+      def SetItem(self,item:'TV_ITEM') -> 'Any':
          """
          Sets some of all of an items attributes.
 
 Args:
 
-      item(Any):A tuple describing the new item.
+      item(TV_ITEM):A tuple describing the new item.
 
 Returns:
 
@@ -47726,7 +47710,7 @@ Returns:
          pass
 
 
-      def GetEditControl(self,) -> 'Any':
+      def GetEditControl(self,) -> 'PyCEdit':
          """
          Retrieves the handle of the edit control used to edit the specified 
 
@@ -47738,7 +47722,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCEdit
         
          """
          pass
@@ -47762,7 +47746,7 @@ Returns:
          pass
 
 
-      def InsertItem(self,hParent:'Any',hInsertAfter:'Any',item:'Any',mask:'Any',text:'Any',image:'Any',selectedImage:'Any',state:'Any',stateMask:'Any',lParam:'Any',parent:'Any',parent1:'Any',text1:'Any',image1:'Any',selectedImage1:'Any',parent2:'Any',insertAfter:'Any',text2:'Any',parent3:'Any',parent4:'Any') -> 'Any':
+      def InsertItem(self,hParent:'Any',hInsertAfter:'Any',item:'TV_ITEM',mask:'Any',text:'Any',image:'Any',selectedImage:'Any',state:'Any',stateMask:'Any',lParam:'Any',parent:'Any',parent1:'Any',text1:'Any',image1:'Any',selectedImage1:'Any',parent2:'Any',insertAfter:'Any',text2:'Any',parent3:'Any',parent4:'Any') -> 'Any':
          """
          Inserts an item into the list.
 
@@ -47770,7 +47754,7 @@ Args:
 
       hParent(Any):The parent item.  If commctrl.TVI_ROOT or 0, it is added to the root.
       hInsertAfter(Any):The item to insert after.  Can be an item or TVI_FIRST, TVI_LAST or TVI_SORT
-      item(Any):A tuple describing the new item.Alternative Parameters
+      item(TV_ITEM):A tuple describing the new item.Alternative Parameters
       mask(Any):Integer specifying which attributes to set
       text(Any):The text of the item.
       image(Any):The index of the image to use.
@@ -47911,7 +47895,7 @@ Returns:
          pass
 
 
-      def EditLabel(self,item:'Any') -> 'Any':
+      def EditLabel(self,item:'Any') -> 'PyCEdit':
          """
          Edits a specified tree view item in-place.
 
@@ -47921,13 +47905,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCEdit
         
          """
          pass
 
 
-      def CreateDragImage(self,item:'Any') -> 'Any':
+      def CreateDragImage(self,item:'Any') -> 'PyCImageList':
          """
          Creates a dragging bitmap for the specified tree view item.
 
@@ -47937,7 +47921,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCImageList
         
          """
          pass
@@ -48039,7 +48023,7 @@ Returns:
          pass
 
 
-      def GetTreeCtrl(self,) -> 'Any':
+      def GetTreeCtrl(self,) -> 'PyCTreeCtrl':
          """
          Returns the underlying tree control object.
 
@@ -48049,7 +48033,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCTreeCtrl
         
          """
          pass
@@ -48079,13 +48063,13 @@ class PyCView(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def CreateWindow(self,parent:'Any',arg:'Any',arg1:'Any',arg2:'Tuple[Any, Any, Any, Any]') -> 'None':
+      def CreateWindow(self,parent:'PyCWnd',arg:'Any',arg1:'Any',arg2:'Tuple[Any, Any, Any, Any]') -> 'None':
          """
          Creates the window for a view.
 
 Args:
 
-      parent(Any):The parent window (usually a frame)
+      parent(PyCWnd):The parent window (usually a frame)
       arg(Any):The child ID for the view
       arg1(Any):The style for the view
       arg2(Tuple[Any, Any, Any, Any]):The default position of the window.
@@ -48098,7 +48082,7 @@ Returns:
          pass
 
 
-      def GetDocument(self,) -> 'Any':
+      def GetDocument(self,) -> 'PyCDocument':
          """
          Returns the document for a view.
 
@@ -48108,21 +48092,21 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocument
         
          """
          pass
 
 
-      def OnActivateView(self,activate:'Any',activateView:'Any',DeactivateView:'Any') -> 'Any':
+      def OnActivateView(self,activate:'Any',activateView:'PyCView',DeactivateView:'PyCView') -> 'Any':
          """
          Calls the underlying MFC OnActivateView method.
 
 Args:
 
       activate(Any):Indicates whether the view is being activated or deactivated.
-      activateView(Any):The view object that is being activated.
-      DeactivateView(Any):The view object that is being deactivated.See Also
+      activateView(PyCView):The view object that is being activated.
+      DeactivateView(PyCView):The view object that is being deactivated.See Also
 
 Returns:
 
@@ -48148,13 +48132,13 @@ Returns:
          pass
 
 
-      def OnMouseActivate(self,wnd:'Any',hittest:'Any',message:'Any') -> 'Any':
+      def OnMouseActivate(self,wnd:'PyCWnd',hittest:'Any',message:'Any') -> 'Any':
          """
          Calls the base MFC OnMouseActivate function.
 
 Args:
 
-      wnd(Any):
+      wnd(PyCWnd):
       hittest(Any):
       message(Any):See Also
 
@@ -48253,13 +48237,13 @@ class PyCWinApp(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def AddDocTemplate(self,template:'Any') -> 'None':
+      def AddDocTemplate(self,template:'PyCDocTemplate') -> 'None':
          """
          Adds a template to the application list.
 
 Args:
 
-      template(Any):The template to be added.
+      template(PyCDocTemplate):The template to be added.
 
 Returns:
 
@@ -48269,7 +48253,7 @@ Returns:
          pass
 
 
-      def FindOpenDocument(self,fileName:'str') -> 'Any':
+      def FindOpenDocument(self,fileName:'str') -> 'PyCDocument':
          """
          Returns an existing document with the specified file name.
 
@@ -48279,7 +48263,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCDocument
         
          """
          pass
@@ -48301,13 +48285,13 @@ Returns:
          pass
 
 
-      def InitDlgInstance(self,dialog:'Any') -> 'None':
+      def InitDlgInstance(self,dialog:'PyCDialog') -> 'None':
          """
          Calls critical InitInstance processing for a dialog based application.
 
 Args:
 
-      dialog(Any):The dialog object to be used as the main window for the application.
+      dialog(PyCDialog):The dialog object to be used as the main window for the application.
 
 Returns:
 
@@ -48445,13 +48429,13 @@ Returns:
          pass
 
 
-      def RemoveDocTemplate(self,template:'Any') -> 'None':
+      def RemoveDocTemplate(self,template:'PyCDocTemplate') -> 'None':
          """
          Removes a template to the application list.
 
 Args:
 
-      template(Any):The template to be removed.  Must have previously been added by PyCWinApp::AddDocTemplate.CommentsNote that MFC does not provide an equivilent function.
+      template(PyCDocTemplate):The template to be removed.  Must have previously been added by PyCWinApp::AddDocTemplate.CommentsNote that MFC does not provide an equivilent function.
 
 Returns:
 
@@ -48566,13 +48550,13 @@ Returns:
          pass
 
 
-      def SetMainFrame(self,mainFrame:'Any') -> 'None':
+      def SetMainFrame(self,mainFrame:'PyCWnd') -> 'None':
          """
          Sets the threads main frame
 
 Args:
 
-      mainFrame(Any):The applications main frame.CommentsYou can pass None to this function to reset the main frame. Should I free this?  I dont think so!
+      mainFrame(PyCWnd):The applications main frame.CommentsYou can pass None to this function to reset the main frame. Should I free this?  I dont think so!
 
 Returns:
 
@@ -48582,13 +48566,13 @@ Returns:
          pass
 
 
-      def SetThreadPriority(self,priority:'Any') -> 'None':
+      def SetThreadPriority(self,priority:'PyCWnd') -> 'None':
          """
          Sets the threads priority.  Returns TRUE if successful.
 
 Args:
 
-      priority(Any):The threads priority.
+      priority(PyCWnd):The threads priority.
 
 Returns:
 
@@ -48639,7 +48623,7 @@ Returns:
          pass
 
 
-      def BeginPaint(self,) -> 'Tuple[Any, Any]':
+      def BeginPaint(self,) -> 'Tuple[PyCDC, Any]':
          """
          Prepares a window for painting
 
@@ -48649,7 +48633,7 @@ Args:
 
 Returns:
 
-      Tuple[Any, Any]:PyCWnd.BeginPaint
+      Tuple[PyCDC, Any]:PyCWnd.BeginPaint
 PyCDC, PAINTSTRUCT
 
  = BeginPaint()Prepares a window for painting
@@ -48681,13 +48665,13 @@ Returns:
          pass
 
 
-      def CenterWindow(self,altwin:'Any'=None) -> 'None':
+      def CenterWindow(self,altwin:'PyCWnd'=None) -> 'None':
          """
          Centers a window relative to its parent.
 
 Args:
 
-      altwin(Any):alternate window relative to which it will be centered (other than the parent window).MFC References
+      altwin(PyCWnd):alternate window relative to which it will be centered (other than the parent window).MFC References
 
 Returns:
 
@@ -48717,7 +48701,7 @@ Returns:
          pass
 
 
-      def ChildWindowFromPoint(self,x:'Any',y:'Any',flag:'Any'=0) -> 'Any':
+      def ChildWindowFromPoint(self,x:'Any',y:'Any',flag:'Any'=0) -> 'PyCWnd':
          """
          Returns the child window that contains the point
 
@@ -48729,7 +48713,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCWnd
         
          """
          pass
@@ -48754,7 +48738,7 @@ Returns:
          pass
 
 
-      def CreateWindow(self,classId:'str',windowName:'str',style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any',context:'Any'=None) -> 'None':
+      def CreateWindow(self,classId:'str',windowName:'str',style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any',context:'Any'=None) -> 'None':
          """
          Creates the actual window
 
@@ -48764,7 +48748,7 @@ Args:
       windowName(str):The title for the window, or None
       style(Any):The style for the window.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the window.
-      parent(Any):The parent window of the new window..
+      parent(PyCWnd):The parent window of the new window..
       _id(Any):The control's ID.
       context(Any):A CreateContext object.MFC References
 
@@ -48776,7 +48760,7 @@ Returns:
          pass
 
 
-      def CreateWindowEx(self,styleEx:'Any',classId:'str',windowName:'str',style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'Any',_id:'Any',createStruct1:'Any',createStruct:'Any'=None) -> 'None':
+      def CreateWindowEx(self,styleEx:'Any',classId:'str',windowName:'str',style:'Any',rect:'Tuple[Any, Any, Any, Any]',parent:'PyCWnd',_id:'Any',createStruct1:'Any',createStruct:'CREATESTRUCT'=None) -> 'None':
          """
          Creates the actual window using extended capabilities.
 
@@ -48787,10 +48771,10 @@ Args:
       windowName(str):The title for the window, or None
       style(Any):The style for the window.
       rect(Tuple[Any, Any, Any, Any]):The size and position of the window.
-      parent(Any):The parent window of the new window..
+      parent(PyCWnd):The parent window of the new window..
       _id(Any):The control's ID.
       createStruct1(Any):A tuple representing a CREATESTRUCT structure.MFC References
-      createStruct(Any):A CreateStruct object (ie, a tuple)
+      createStruct(CREATESTRUCT):A CreateStruct object (ie, a tuple)
 
 Returns:
 
@@ -49018,7 +49002,7 @@ Returns:
          pass
 
 
-      def GetDC(self,) -> 'Any':
+      def GetDC(self,) -> 'PyCDC':
          """
          Gets the windows current DC object.
 
@@ -49028,7 +49012,7 @@ Args:
 
 Returns:
 
-      Any:PyCWnd.GetDC
+      PyCDC:PyCWnd.GetDC
 PyCDC = GetDC()Gets the windows current DC object.
 Return ValueThe result is a PyCDC, or a win32ui.error exception is raised.
 
@@ -49037,7 +49021,7 @@ Return ValueThe result is a PyCDC, or a win32ui.error exception is raised.
          pass
 
 
-      def GetDCEx(self,) -> 'Any':
+      def GetDCEx(self,) -> 'PyCDC':
          """
          Gets the windows current DC object with extended caps.
 
@@ -49047,7 +49031,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCDC
         
          """
          pass
@@ -49069,7 +49053,7 @@ Returns:
          pass
 
 
-      def GetDlgItem(self,idControl:'Any') -> 'Any':
+      def GetDlgItem(self,idControl:'Any') -> 'PyCWnd':
          """
          None
 
@@ -49079,7 +49063,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetDlgItem
+      PyCWnd:CWnd::GetDlgItem
 Return ValueThe result is a PyCWnd (or derived) object, or a win32ui.error exception is raised.
 
         
@@ -49122,7 +49106,7 @@ Returns:
          pass
 
 
-      def GetLastActivePopup(self,) -> 'Any':
+      def GetLastActivePopup(self,) -> 'PyCWnd':
          """
          Returns the last active popup Window, or the Window itself.
 
@@ -49132,7 +49116,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetLastActivePopup
+      PyCWnd:CWnd::GetLastActivePopup
 Return ValueThe result is a PyCWnd object, or None if no Window can be found.
 
         
@@ -49140,7 +49124,7 @@ Return ValueThe result is a PyCWnd object, or None if no Window can be found.
          pass
 
 
-      def GetMenu(self,) -> 'Any':
+      def GetMenu(self,) -> 'PyCMenu':
          """
          Returns the menu object for the window's menu.
 
@@ -49150,7 +49134,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetMenu
+      PyCMenu:CWnd::GetMenu
 Return ValueThe result is a PyMenu
 
  object, or an exception is thrown.
@@ -49160,7 +49144,7 @@ Return ValueThe result is a PyMenu
          pass
 
 
-      def GetParent(self,) -> 'Any':
+      def GetParent(self,) -> 'PyCWnd':
          """
          Returns the window's parent.
 
@@ -49170,7 +49154,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetParent
+      PyCWnd:CWnd::GetParent
 Return ValueThe result is a PyCWnd object, or None if no Window can be found.
 
         
@@ -49178,7 +49162,7 @@ Return ValueThe result is a PyCWnd object, or None if no Window can be found.
          pass
 
 
-      def GetParentFrame(self,) -> 'Any':
+      def GetParentFrame(self,) -> 'PyCWnd':
          """
          Returns the window's frame.
 
@@ -49188,7 +49172,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetParentFrame
+      PyCWnd:CWnd::GetParentFrame
 Return ValueThe result is a PyCWnd object, or None if no Window can be found.
 
         
@@ -49277,7 +49261,7 @@ Returns:
          pass
 
 
-      def GetSystemMenu(self,) -> 'Any':
+      def GetSystemMenu(self,) -> 'PyCMenu':
          """
          Returns the menu object for the window's system menu.
 
@@ -49287,13 +49271,13 @@ Args:
 
 Returns:
 
-      Any
+      PyCMenu
         
          """
          pass
 
 
-      def GetTopLevelFrame(self,) -> 'Any':
+      def GetTopLevelFrame(self,) -> 'PyCWnd':
          """
          Returns the top-level frame of the window.
 
@@ -49303,7 +49287,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetTopLevelFrame
+      PyCWnd:CWnd::GetTopLevelFrame
 Return ValueThe result is a PyCWnd object, or None if no Window can be found.
 
         
@@ -49311,7 +49295,7 @@ Return ValueThe result is a PyCWnd object, or None if no Window can be found.
          pass
 
 
-      def GetTopLevelOwner(self,) -> 'Any':
+      def GetTopLevelOwner(self,) -> 'PyCWnd':
          """
          Returns the top-level owner of the window.
 
@@ -49321,7 +49305,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetTopLevelOwner
+      PyCWnd:CWnd::GetTopLevelOwner
 Return ValueThe result is a PyCWnd object, or None if no Window can be found.
 
         
@@ -49329,7 +49313,7 @@ Return ValueThe result is a PyCWnd object, or None if no Window can be found.
          pass
 
 
-      def GetTopLevelParent(self,) -> 'Any':
+      def GetTopLevelParent(self,) -> 'PyCWnd':
          """
          Returns the top-level parent of the window.
 
@@ -49339,7 +49323,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetTopLevelParent
+      PyCWnd:CWnd::GetTopLevelParent
 Return ValueThe result is a PyCWnd object, or None if no Window can be found.
 
         
@@ -49347,7 +49331,7 @@ Return ValueThe result is a PyCWnd object, or None if no Window can be found.
          pass
 
 
-      def GetTopWindow(self,) -> 'Any':
+      def GetTopWindow(self,) -> 'PyCWnd':
          """
          Identifies the top-level child window in a linked list of child windows.
 
@@ -49357,7 +49341,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetTopWindow
+      PyCWnd:CWnd::GetTopWindow
 Return ValueIf no child windows exist, the value is None.
 
         
@@ -49365,7 +49349,7 @@ Return ValueIf no child windows exist, the value is None.
          pass
 
 
-      def GetWindow(self,_type:'Any') -> 'Any':
+      def GetWindow(self,_type:'Any') -> 'PyCWnd':
          """
          Returns a window, with the specified relationship to this window.
 
@@ -49375,7 +49359,7 @@ Args:
 
 Returns:
 
-      Any:CWnd::GetWindow
+      PyCWnd:CWnd::GetWindow
 Return ValueThe result is a PyCWnd or None if no Window can be found.
 
         
@@ -49383,7 +49367,7 @@ Return ValueThe result is a PyCWnd or None if no Window can be found.
          pass
 
 
-      def GetWindowDC(self,) -> 'Any':
+      def GetWindowDC(self,) -> 'PyCDC':
          """
          Gets the windows current DC object.
 
@@ -49393,7 +49377,7 @@ Args:
 
 Returns:
 
-      Any
+      PyCDC
         
          """
          pass
@@ -49595,13 +49579,13 @@ Returns:
          pass
 
 
-      def InvalidateRgn(self,region:'Any',bErase:'Any'=1) -> 'None':
+      def InvalidateRgn(self,region:'PyCRgn',bErase:'Any'=1) -> 'None':
          """
          Invalidates a region of the window
 
 Args:
 
-      region(Any):The region to erase.
+      region(PyCRgn):The region to erase.
       bErase(Any):Indicates if the region should be erased.
 
 Returns:
@@ -49612,13 +49596,13 @@ Returns:
          pass
 
 
-      def IsChild(self,obWnd:'Any') -> 'Any':
+      def IsChild(self,obWnd:'PyCWnd') -> 'Any':
          """
          Determines if a given window is a child of this window.
 
 Args:
 
-      obWnd(Any):The window to be checkedMFC References
+      obWnd(PyCWnd):The window to be checkedMFC References
 
 Returns:
 
@@ -49740,7 +49724,7 @@ Returns:
          pass
 
 
-      def MapWindowPoints(self,wnd:'Any',points:'List[Any]') -> 'None':
+      def MapWindowPoints(self,wnd:'PyCWnd',points:'List[Tuple[Any, Any]]') -> 'None':
          """
          Converts (maps) a set of points from the coordinate space of a window to the 
 
@@ -49748,8 +49732,8 @@ coordinate space of another window.
 
 Args:
 
-      wnd(Any):
-      points(List[Any]):The points to mapReturn ValueA list of the mapped points from the coordinate space of the CWnd to the coordinate space of another window.
+      wnd(PyCWnd):
+      points(List[Tuple[Any, Any]]):The points to mapReturn ValueA list of the mapped points from the coordinate space of the CWnd to the coordinate space of another window.
 
 Returns:
 
@@ -49875,13 +49859,13 @@ Returns:
          pass
 
 
-      def OnCtlColor(self,dc:'Any',control:'Any',_type:'Any') -> 'Any':
+      def OnCtlColor(self,dc:'PyCDC',control:'Any',_type:'Any') -> 'Any':
          """
          Calls the default MFC OnCtlColor handler.
 
 Args:
 
-      dc(Any):The dc
+      dc(PyCDC):The dc
       control(Any):The control that want's it's color changed
       _type(Any):Type of controlSee Also
 
@@ -49893,13 +49877,13 @@ Returns:
          pass
 
 
-      def OnEraseBkgnd(self,dc:'Any') -> 'Any':
+      def OnEraseBkgnd(self,dc:'PyCDC') -> 'Any':
          """
          Calls the default MFC OnEraseBkgnd handler.
 
 Args:
 
-      dc(Any):The dcSee Also
+      dc(PyCDC):The dcSee Also
 
 Returns:
 
@@ -49973,13 +49957,13 @@ Returns:
          pass
 
 
-      def OnSetCursor(self,wnd:'Any',hittest:'Any',message:'Any') -> 'Any':
+      def OnSetCursor(self,wnd:'PyCWnd',hittest:'Any',message:'Any') -> 'Any':
          """
          Calls the base MFC OnSetCursor function.
 
 Args:
 
-      wnd(Any):
+      wnd(PyCWnd):
       hittest(Any):
       message(Any):See Also
 
@@ -49991,13 +49975,13 @@ Returns:
          pass
 
 
-      def OnMouseActivate(self,wnd:'Any',hittest:'Any',message:'Any') -> 'Any':
+      def OnMouseActivate(self,wnd:'PyCWnd',hittest:'Any',message:'Any') -> 'Any':
          """
          Calls the base MFC OnMouseActivate function.
 
 Args:
 
-      wnd(Any):
+      wnd(PyCWnd):
       hittest(Any):
       message(Any):See Also
 
@@ -50066,13 +50050,13 @@ Returns:
          pass
 
 
-      def RedrawWindow(self,_object:'Any',flags:'Any',rect:'Tuple[Any, Any, Any, Any]'=None) -> 'None':
+      def RedrawWindow(self,_object:'PyCRgn',flags:'Any',rect:'Tuple[Any, Any, Any, Any]'=None) -> 'None':
          """
          Updates the specified rectangle or region in the given window's client area.
 
 Args:
 
-      _object(Any):A region
+      _object(PyCRgn):A region
       flags(Any):MFC References
       rect(Tuple[Any, Any, Any, Any]):A rect, or None
 
@@ -50100,13 +50084,13 @@ Returns:
          pass
 
 
-      def ReleaseDC(self,dc:'Any') -> 'None':
+      def ReleaseDC(self,dc:'PyCDC') -> 'None':
          """
          Releases a device context, freeing it for use by other applications.
 
 Args:
 
-      dc(Any):The DC to be released.
+      dc(PyCDC):The DC to be released.
 
 Returns:
 
@@ -50211,7 +50195,7 @@ Returns:
          pass
 
 
-      def SetActiveWindow(self,) -> 'Any':
+      def SetActiveWindow(self,) -> 'PyCWnd':
          """
          Sets the window active.  Returns the previously active window, or None.
 
@@ -50221,7 +50205,7 @@ Args:
 
 Returns:
 
-      Any:PyCWnd.SetActiveWindow
+      PyCWnd:PyCWnd.SetActiveWindow
 PyCWnd = SetActiveWindow()Sets the window active.  Returns the previously active window, or None.
 Return ValueThe result is the previous window with focus, or None.
 
@@ -50336,13 +50320,13 @@ Returns:
          pass
 
 
-      def SetFont(self,font:'Any',bRedraw:'Any'=1) -> 'None':
+      def SetFont(self,font:'PyCFont',bRedraw:'Any'=1) -> 'None':
          """
          Sets the window's current font to the specified font.
 
 Args:
 
-      font(Any):The new font to use.
+      font(PyCFont):The new font to use.
       bRedraw(Any):If TRUE, redraw the window.
 
 Returns:
@@ -50369,13 +50353,13 @@ Returns:
          pass
 
 
-      def SetMenu(self,menuObj:'Any') -> 'None':
+      def SetMenu(self,menuObj:'PyCMenu') -> 'None':
          """
          Sets the menu for a window.
 
 Args:
 
-      menuObj(Any):The menu object to set, or None to remove the window.
+      menuObj(PyCMenu):The menu object to set, or None to remove the window.
 
 Returns:
 
@@ -50575,13 +50559,13 @@ Returns:
          pass
 
 
-      def UpdateDialogControls(self,pTarget:'Any',disableIfNoHandler:'Any') -> 'Any':
+      def UpdateDialogControls(self,pTarget:'PyCCmdTarget',disableIfNoHandler:'Any') -> 'Any':
          """
          None
 
 Args:
 
-      pTarget(Any):The main frame window of the application, and is used for routing update messages.
+      pTarget(PyCCmdTarget):The main frame window of the application, and is used for routing update messages.
       disableIfNoHandler(Any):Flag that indicates whether a control that has no update handler should be automatically displayed as disabled.
 
 Returns:
@@ -50705,13 +50689,13 @@ class PyDDEServer(object):
          raise Exception('This class just for typing, can not be instanced!')
 
 
-      def AddTopic(self,topic:'Any') -> 'None':
+      def AddTopic(self,topic:'PyDDETopic') -> 'None':
          """
          None
 
 Args:
 
-      topic(Any):The topic to add.
+      topic(PyDDETopic):The topic to add.
 
 Returns:
 
@@ -51291,13 +51275,13 @@ Returns:
          pass
 
 
-      def IOCallback(self,ecb:'Any',arg:'Any',cbIO:'Any',dwError:'Any') -> 'Any':
+      def IOCallback(self,ecb:'EXTENSION_CONTROL_BLOCK',arg:'Any',cbIO:'Any',dwError:'Any') -> 'Any':
          """
          A placeholder for a user-supplied callback function.
 
 Args:
 
-      ecb(Any):The extension control block that is associated with the current, active request.
+      ecb(EXTENSION_CONTROL_BLOCK):The extension control block that is associated with the current, active request.
       arg(Any):The user-supplied argument supplied to the EXTENSION_CONTROL_BLOCK::IOCompletion function.
       cbIO(Any):An integer that contains the number of bytes of I/O in the last call.
       dwError(Any):The error code returned.CommentsThis is not a function you can call, it describes the signature of the callback function supplied to the EXTENSION_CONTROL_BLOCK::IOCompletion function.Return ValueThe result of this function is ignored.

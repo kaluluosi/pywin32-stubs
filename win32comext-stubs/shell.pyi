@@ -1,6 +1,6 @@
 __all__=['', 'AssocCreate', 'AssocCreateForClasses', 'DragQueryFile', 'DragQueryFileW', 'DragQueryPoint', 'IsUserAnAdmin', 'SHCreateDataObject', 'SHCreateDefaultContextMenu', 'SHCreateDefaultExtractIcon', 'SHCreateShellFolderView', 'SHCreateShellItemArray', 'SHCreateShellItemArrayFromDataObject', 'SHCreateShellItemArrayFromIDLists', 'SHCreateShellItemArrayFromShellItem', 'SHGetPathFromIDList', 'SHGetPathFromIDListW', 'SHBrowseForFolder', 'SHGetFileInfo', 'SHGetFolderPath', 'SHSetFolderPath', 'SHGetFolderLocation', 'SHGetNameFromIDList', 'SHGetSpecialFolderPath', 'SHGetSpecialFolderLocation', 'SHAddToRecentDocs', 'SHChangeNotify', 'SHEmptyRecycleBin', 'SHQueryRecycleBin', 'SHGetDesktopFolder', 'SHUpdateImage', 'SHChangeNotify', 'SHChangeNotifyRegister', 'SHChangeNotifyDeregister', 'SHCreateItemFromIDList', 'SHCreateItemFromParsingName', 'SHCreateItemFromRelativeName', 'SHCreateItemInKnownFolder', 'SHCreateItemWithParent', 'SHGetIDListFromObject', 'SHGetInstanceExplorer', 'SHFileOperation', 'StringAsCIDA', 'CIDAAsString', 'StringAsPIDL', 'AddressAsPIDL', 'PIDLAsString', 'SHGetSettings', 'FILEGROUPDESCRIPTORAsString', 'StringAsFILEGROUPDESCRIPTOR', 'ShellExecuteEx', 'SHGetViewStatePropertyBag', 'SHILCreateFromPath', 'SHCreateShellItem', 'SHOpenFolderAndSelectItems', 'SHCreateStreamOnFileEx', 'SetCurrentProcessExplicitAppUserModelID', 'GetCurrentProcessExplicitAppUserModelID', 'SHParseDisplayName']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module wrapping Windows Shell functions and interfaces"""
 
 

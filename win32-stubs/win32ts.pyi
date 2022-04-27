@@ -1,6 +1,6 @@
 __all__=['', 'WTSOpenServer', 'WTSCloseServer', 'WTSQueryUserConfig', 'WTSSetUserConfig', 'WTSEnumerateServers', 'WTSEnumerateSessions', 'WTSLogoffSession', 'WTSDisconnectSession', 'WTSQuerySessionInformation', 'WTSEnumerateProcesses', 'WTSQueryUserToken', 'WTSShutdownSystem', 'WTSTerminateProcess', 'ProcessIdToSessionId', 'WTSGetActiveConsoleSessionId', 'WTSRegisterSessionNotification', 'WTSUnRegisterSessionNotification', 'WTSWaitSystemEvent', 'WTSSendMessage']
 import typing
-from win32helper import win32typing
+import win32typing
 """Interface to the Terminal Services Api 
 
 All functions in this module accept keyword arguments"""

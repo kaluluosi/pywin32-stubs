@@ -49,7 +49,7 @@ class Module(Doc):
     def __str__(self):
         lines = []
         lines.append("import typing")
-        lines.append("from win32helper import win32typing")
+        lines.append("import win32typing")
         lines.append(f'"""{self.description}"""')
         lines.append("")
 

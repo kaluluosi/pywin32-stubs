@@ -1,6 +1,6 @@
 __all__=['', 'OpenPrinter', 'GetPrinter', 'SetPrinter', 'ClosePrinter', 'AddPrinterConnection', 'DeletePrinterConnection', 'EnumPrinters', 'GetDefaultPrinter', 'GetDefaultPrinterW', 'SetDefaultPrinter', 'SetDefaultPrinterW', 'StartDocPrinter', 'EndDocPrinter', 'AbortPrinter', 'StartPagePrinter', 'EndPagePrinter', 'StartDoc', 'EndDoc', 'AbortDoc', 'StartPage', 'EndPage', 'WritePrinter', 'EnumJobs', 'GetJob', 'SetJob', 'DocumentProperties', 'EnumPrintProcessors', 'EnumPrintProcessorDatatypes', 'EnumPrinterDrivers', 'EnumForms', 'AddForm', 'DeleteForm', 'GetForm', 'SetForm', 'AddJob', 'ScheduleJob', 'DeviceCapabilities', 'GetDeviceCaps', 'EnumMonitors', 'EnumPorts', 'GetPrintProcessorDirectory', 'GetPrinterDriverDirectory', 'AddPrinter', 'DeletePrinter', 'DeletePrinterDriver', 'DeletePrinterDriverEx', 'FlushPrinter']
 import typing
-from win32helper import win32typing
+import win32typing
 """A module encapsulating the Windows printing API."""
 
 

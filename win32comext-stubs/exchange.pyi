@@ -1,6 +1,6 @@
 __all__=['', 'HrGetExchangeStatus', 'HrGetMailboxDN', 'HrGetServerDN', 'HrMAPIFindDefaultMsgStore', 'HrMAPIFindIPMSubtree', 'HrMAPIFindInbox', 'HrMAPIFindSubfolderEx', 'HrMAPIFindFolder', 'HrMAPIFindFolderEx', 'HrMAPIFindStore', 'HrCreateProfileName', 'HrCreateDirEntryIdEx', 'HrFindExchangeGlobalAddressList', 'HrMailboxLogon', 'HrMailboxLogoff', 'HrMAPIOpenFolderEx', 'HrMAPISetPropBoolean', 'HrMAPISetPropLong', 'HrOpenExchangePublicStore', 'HrOpenExchangePrivateStore', 'HrOpenExchangePublicFolders', 'HrOpenSessionObject', 'HrOpenSiteContainer', 'HrOpenSiteContainerAddressing', 'OPENSTORE_HOME_LOGON', 'OPENSTORE_OVERRIDE_HOME_MDB', 'OPENSTORE_PUBLIC', 'OPENSTORE_TAKE_OWNERSHIP', 'OPENSTORE_USE_ADMIN_PRIVILEGE']
 import typing
-from win32helper import win32typing
+import win32typing
 """A COM interface to Exchange's API"""
 
 

@@ -1,6 +1,6 @@
 __all__=['', 'ADsOpenObject', 'ADsGetObject', 'ADsBuildEnumerator', 'ADsEnumerateNext', 'ADsGetLastError', 'StringAsDS_SELECTION_LIST', 'DSOP_SCOPE_INIT_INFOs']
 import typing
-from win32helper import win32typing
+import win32typing
 """A COM interface to ADSI"""
 
 
