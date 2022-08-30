@@ -1,7 +1,11 @@
-__all__=['', 'DosDateTimeToTime', 'Unicode', 'UnicodeFromRaw', 'IsTextUnicode', 'OVERLAPPED', 'IID', 'Time', 'Time', 'CreateGuid', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'HANDLE', 'HKEY', 'WAVEFORMATEX']
+__all__=['', 'error', 'DosDateTimeToTime', 'Unicode', 'UnicodeFromRaw', 'IsTextUnicode', 'OVERLAPPED', 'IID', 'Time', 'Time', 'CreateGuid', 'ACL', 'SID', 'SECURITY_ATTRIBUTES', 'SECURITY_DESCRIPTOR', 'HANDLE', 'HKEY', 'WAVEFORMATEX']
 import typing
 import win32typing
 """A module which supports common Windows types."""
+
+
+class error(Exception):
+    pass
 
 
 def DosDateTimeToTime() -> 'win32typing.PyTime':
