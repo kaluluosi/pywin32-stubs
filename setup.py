@@ -12,7 +12,7 @@ except IOError:
 
 setup(
     name="pywin32-stubs",
-    version="0.1.6",
+    version="1.0.7",
     description="stubs for pywin32",
     license="MIT",
     url=" https://pypi.org/project/pywin32-stubs/",
