@@ -16,8 +16,9 @@ vscode installed stubs
 
 
 # Installation
->pip install pywin32-stubs
-
+```shell
+pip install pywin32-stubs
+```
 
 
 # Usage
