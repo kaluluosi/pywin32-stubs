@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-import os
-from setuptools import setup, find_packages
-from distutils import sysconfig
-import sys
+from setuptools import setup
 
 try:
     long_description = open("README.rst").read()
@@ -12,8 +9,8 @@ except IOError:
 
 setup(
     name="pywin32-stubs",
-    version="1.0.7",
-    description="stubs for pywin32",
+    version="1.0.8",
+    description="DEPRECATED: use types-pywin32 instead (https://pypi.org/project/types-pywin32/)",
     license="MIT",
     url=" https://pypi.org/project/pywin32-stubs/",
     author="Carlos Teng",
@@ -31,7 +28,7 @@ setup(
     long_description=long_description,
     classifiers=[
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.6",
+        "Development Status :: 7 - Inactive",
     ],
     zip_safe=False
 )
